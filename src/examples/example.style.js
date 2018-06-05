@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { injectGlobal } from 'styled-components';
+
+// eslint-disable-next-line
+injectGlobal`
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Norms', sans-serif;
+  }
+`;
 
 const ExampleStyles = styled.div`
   .example-container {
