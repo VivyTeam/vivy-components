@@ -1,7 +1,11 @@
 {
-  "name": "app-skeleton",
+  "name": "vivy-components",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "storybook": "start-storybook -p 3006 -s ./public",
+    "build-storybook": "build-storybook"
+  },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.6",
     "@storybook/addon-console": "^1.0.0",
@@ -21,15 +25,6 @@
     "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
-  },
-  "scripts": {
-    "test": "jest",
-    "test:watch": "npm run test -- --watch",
-    "start": "webpack-dev-server --config webpack.config.dev.js",
-    "build:staging": "webpack --config webpack.config.staging.js",
-    "build:prod": "webpack --config webpack.config.prod.js",
-    "storybook": "start-storybook -p 3006 -s ./public",
-    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

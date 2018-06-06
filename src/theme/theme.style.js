@@ -1,17 +1,75 @@
 import styled from 'styled-components';
 
 const ThemeStyles = styled.div`
-  display: flex; 
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 17px;
+  h1 {
+    color: #575756;
+    font-size: 1.5em;
+  }
 
   h2 {
     color: #575756;
+    font-size: 1.25em;
+  }
+
+  h3 {
+    color: #575756;
+    font-size: 1em;
+  }
+
+  p {
+    color: #575756;
+    font-size: 0.93em;
+    font-weight: 600;
+  }
+
+  #alt {
+    font-weight: 100;
+  }
+
+  .caption {
+    font-size: 0.81em;
+    font-weight: 400;
+  }
+
+  .color-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .font-container {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .logo-container {
+    width: 60%;
+    margin: 0 auto;
+    padding:20px;
+  }
+
+  .logo-container .row {
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(151, 160, 191, 0.3) 0px 4px 6px 0px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    flex: 1 1 0%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 7px;
   }
 
   .color-box-container {
@@ -58,10 +116,6 @@ const ThemeStyles = styled.div`
   .color-box:hover #copy {
     visibility: visible;
     opacity: 1;
-  }
-
-  @media (max-width: 1300px) {
-    width: 80%;
   }
 `;
 
