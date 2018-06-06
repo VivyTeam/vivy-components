@@ -8,7 +8,7 @@ const WelcomePage = () => (
     <FlexGrid>
       <Col>
         <div className="container">
-          <h1>Vision</h1>
+          <h1>Vision &amp; Ethos</h1>
           <p>
             This guide and component library aims to bring
             engineering and design together. These components
@@ -17,8 +17,6 @@ const WelcomePage = () => (
             aim to have consistent and accessible design that unifies
             our features into a greater whole.
           </p>
-          <br />
-          <h1>Ethos</h1>
           <br />
           <h2 id="alt">
             Eat more fish, its healthy!

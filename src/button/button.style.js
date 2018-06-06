@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+const height = '45px';
+const borderRadius = '28px';
+
 const ButtonStyles = styled.div`
   .primary {
     display: flex;
@@ -9,8 +12,8 @@ const ButtonStyles = styled.div`
     color: #fff;
     background-color: #04D4BF;
     border: 0;
-    border-radius: 20px;
-    height: 40px;
+    border-radius: ${borderRadius};
+    height: ${height};
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
@@ -43,8 +46,8 @@ const ButtonStyles = styled.div`
     color: #575756;
     background-color: #fff;
     border: 1px solid #575756;
-    border-radius: 20px;
-    height: 40px;
+    border-radius: ${borderRadius};
+    height: ${height};
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
@@ -78,8 +81,8 @@ const ButtonStyles = styled.div`
     color: #fff;
     background-color: #e94119;
     border: 0;
-    border-radius: 20px;
-    height: 40px;
+    border-radius: ${borderRadius};
+    height: ${height};
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;

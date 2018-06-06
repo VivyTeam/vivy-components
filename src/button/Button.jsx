@@ -2,6 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonStyles from './button.style';
 
+/*
+ * Current Types
+ * primary
+ * primary-dark
+ * alt
+ * danger
+ */
+
 const Button = props => (
   <ButtonStyles>
     <button

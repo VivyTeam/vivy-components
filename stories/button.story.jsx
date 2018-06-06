@@ -8,9 +8,15 @@ setAddon(JSXAddon);
 
 const click = action('Button');
 
+const container = {
+  width: '80%',
+  margin: '0 auto',
+  paddingTop: '100px',
+};
+
 storiesOf('Button', module)
-  .addWithJSX('Primary button', () => (
-    <div>
+  .addWithJSX('Primary', () => (
+    <div style={container}>
       <div style={{ marginBottom: '10px' }}>
         <Button onClick={() => click('Primary click')}>Primary Button</Button>
       </div>
@@ -22,9 +28,9 @@ storiesOf('Button', module)
       </Button>
     </div>
   ))
-  .addWithJSX('Alt button', () =>
+  .addWithJSX('Alt', () =>
     (
-      <div>
+      <div style={container}>
         <div style={{ marginBottom: '10px' }}>
           <Button
             type="alt"
@@ -42,8 +48,8 @@ storiesOf('Button', module)
         </Button>
       </div>
     ))
-  .addWithJSX('Danger button', () => (
-    <div>
+  .addWithJSX('Danger', () => (
+    <div style={container}>
       <div style={{ marginBottom: '10px' }}>
         <Button
           type="danger"
