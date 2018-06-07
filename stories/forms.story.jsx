@@ -1,19 +1,31 @@
 import React from 'react';
 import { storiesOf, setAddon } from '@storybook/react';
 import JSXAddon from 'storybook-addon-jsx';
+import styled from 'styled-components';
+import Form from '../src/forms/Form';
+import FormItem from '../src/forms/FormItem';
 import Input from '../src/forms/Input';
+import Button from '../src/button/Button';
+import Row from '../src/grid/Row';
 
 setAddon(JSXAddon);
 
 const container = {
-  width: '60%',
-  margin: '0 auto',
-  paddingTop: '100px',
+  margin: '40px 30px',
 };
 
 const box = {
-  margin: '50px 10px',
+  margin: '40px 30px',
 };
+
+const FormContainer = styled.div`
+  margin: 50px 150px;
+
+  h2 {
+    color: #575756;
+    font-size: 1.25em;
+  }
+`;
 
 storiesOf('Forms', module)
   .addWithJSX('Input', () => (
@@ -25,23 +37,97 @@ storiesOf('Forms', module)
           label="Name"
         />
       </div>
-      <div style={box}>
-        <Input
-          id="Email"
-          placeholder="Your e-mail"
-          label="E-mail"
-          type="email"
-          isRequired
-        />
-      </div>
-      <div style={box}>
-        <Input
-          id="password"
-          placeholder="Your password"
-          label="Password"
-          type="password"
-          isRequired
-        />
-      </div>
     </div>
+  ))
+  .addWithJSX('Simple Form', () => (
+    <FormContainer>
+      <h2>Vertical form (default)</h2>
+      <Form>
+        <FormItem>
+          <Input
+            id="email"
+            placeholder="Your e-mail"
+            label="E-mail"
+            type="email"
+          />
+        </FormItem>
+        <FormItem>
+          <Input
+            id="password"
+            placeholder="Your password"
+            label="Password"
+            type="password"
+            isRequired
+          />
+        </FormItem>
+      </Form>
+      <h2>Horizontal form</h2>
+      <Form horizontal>
+        <FormItem>
+          <Input
+            id="email2"
+            placeholder="Your e-mail"
+            label="E-mail"
+            type="email"
+          />
+        </FormItem>
+        <FormItem>
+          <Input
+            id="password2"
+            placeholder="Your password"
+            label="Password"
+            type="password"
+            isRequired
+          />
+        </FormItem>
+      </Form>
+    </FormContainer>
+  )).addWithJSX('Form Validation', () => (
+    <FormContainer>
+      <Form>
+        <FormItem>
+          <Input
+            id="name"
+            placeholder="Your name"
+            label="Name"
+          />
+        </FormItem>
+        <FormItem>
+          <Input
+            id="phone"
+            placeholder="Your phone"
+            label="Phone"
+            type="phone"
+          />
+        </FormItem>
+        <FormItem>
+          <Input
+            id="email"
+            placeholder="Your e-mail"
+            label="E-mail"
+            type="email"
+            isRequired
+          />
+        </FormItem>
+        <FormItem>
+          <Input
+            id="password"
+            placeholder="Your password"
+            label="Password"
+            type="password"
+            isRequired
+          />
+        </FormItem>
+        <FormItem>
+          <Row>
+            <Button>
+            login
+            </Button>
+            <Button type="alt">
+            clear
+            </Button>
+          </Row>
+        </FormItem>
+      </Form>
+    </FormContainer>
   ));

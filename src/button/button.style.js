@@ -8,7 +8,7 @@ const ButtonStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 20px;
+    padding: 0px 30px;
     color: #fff;
     background-color: #04D4BF;
     border: 0;
@@ -17,10 +17,12 @@ const ButtonStyles = styled.div`
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
+    transition: background-color 0.2s ease;
   }
 
   .primary:hover {
     background-color: #05e6c8;
+    transition: background-color 0.2s ease;
   }
 
   .primary:focus {
@@ -42,20 +44,23 @@ const ButtonStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 20px;
-    color: #575756;
+    padding: 0px 30px;
+    margin: 0 10px;
+    color: #898988;
     background-color: #fff;
-    border: 1px solid #575756;
+    border: 1px solid #898988;
     border-radius: ${borderRadius};
     height: ${height};
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
   }
 
   .alt:hover {
     color: #05e6c8;
     border-color: #05e6c8;
+    transition: color 0.2s ease, border-color 0.2s ease;
   }
 
   .alt:focus {
@@ -77,7 +82,7 @@ const ButtonStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 20px;
+    padding: 0px 30px;
     color: #fff;
     background-color: #e94119;
     border: 0;
@@ -86,10 +91,12 @@ const ButtonStyles = styled.div`
     font-size: 16px;
     font-weight: 400;
     cursor: pointer;
+    transition: background-color 0.2s ease;
   }
 
   .danger:hover {
     background-color: #ff4b20;
+    transition: background-color 0.2s ease;
   }
 
   .danger:focus {
