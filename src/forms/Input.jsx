@@ -4,7 +4,7 @@ import { InputStyles } from './form.style';
 
 const Input = props => (
   <InputStyles>
-    <label htmlFor="name">
+    <label htmlFor={props.id}>
       <span>
         {props.label}
         {props.isRequired ?

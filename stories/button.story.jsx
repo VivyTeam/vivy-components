@@ -9,9 +9,8 @@ setAddon(JSXAddon);
 const click = action('Button');
 
 const container = {
-  width: '80%',
   margin: '0 auto',
-  paddingTop: '100px',
+  paddingTop: '25px',
 };
 
 storiesOf('Button', module)

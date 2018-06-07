@@ -16,7 +16,6 @@ Essentially all you need is to create your component and link it together with t
 
 * Storybook
 * React
-* React Router
-* CSS
+* Styled components
 * Webpack
 * Babel (ES6)

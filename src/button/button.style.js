@@ -1,20 +1,24 @@
 import styled from 'styled-components';
 
-const height = '45px';
+const height = '48px';
 const borderRadius = '28px';
+const padding = '0px 30px';
+const fontSize = '18px';
+const margin = '5px 5px';
 
 const ButtonStyles = styled.div`
   .primary {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 30px;
+    padding: ${padding};
+    margin: ${margin};
     color: #fff;
     background-color: #04D4BF;
     border: 0;
     border-radius: ${borderRadius};
     height: ${height};
-    font-size: 16px;
+    font-size: ${fontSize};
     font-weight: 400;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -44,14 +48,14 @@ const ButtonStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 30px;
-    margin: 0 10px;
+    padding: ${padding};
+    margin: ${margin};
     color: #898988;
     background-color: #fff;
     border: 1px solid #898988;
     border-radius: ${borderRadius};
     height: ${height};
-    font-size: 16px;
+    font-size: ${fontSize};
     font-weight: 400;
     cursor: pointer;
     transition: color 0.2s ease, border-color 0.2s ease;
@@ -82,13 +86,14 @@ const ButtonStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px 30px;
+    padding: ${padding};
+    margin: ${margin};
     color: #fff;
     background-color: #e94119;
     border: 0;
     border-radius: ${borderRadius};
     height: ${height};
-    font-size: 16px;
+    font-size: ${fontSize};
     font-weight: 400;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -112,6 +117,20 @@ const ButtonStyles = styled.div`
     cursor: not-allowed;
     background-color: #bfbfbf;
     color: rgba(255,255,255,0.8);
+  }
+
+  @media (max-width: 600px) {
+    .primary {
+      margin: 5px 0;
+    }
+
+    .alt {
+      margin: 5px 0;
+    }
+
+    .danger {
+      margin: 5px 0;
+    }
   }
 `;
 
