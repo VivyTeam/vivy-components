@@ -15,7 +15,7 @@ export const InputStyles = styled.div`
     outline: 0;
     resize: none;
     font-size: 1em;
-    color: #898988;
+    color: #575756;
     width: 100%;
     padding: 3px 7px;
     margin-top: 10px;
