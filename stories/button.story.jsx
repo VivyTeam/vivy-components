@@ -10,7 +10,7 @@ const click = action('Button');
 
 const container = {
   margin: '0 auto',
-  paddingTop: '25px',
+  paddingTop: '5px',
 };
 
 storiesOf('Button', module)
