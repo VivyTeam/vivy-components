@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 3006 -s ./public",
-    "build:storybook": "build-storybook",
-    "build:package": "babel --presets react ./src --out-dir ./dist",
+    "build:storybook": "build-storybook -o ./dist/web",
+    "build:package": "babel --presets react ./src --out-dir ./dist/build",
     "release": "release-it --dry-run"
   },
   "dependencies": {

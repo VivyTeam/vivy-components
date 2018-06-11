@@ -1,8 +1,9 @@
-echo "Compiling storybook static assets"
+echo "Compiling static and transpiled assets"
 npm run build:storybook
-
-echo "Compiling npm module"
 npm run build:package
-cp package.json dist/
-tar -zcvf dist/dist.tar.gz dist/
+
+echo "Bundling assests"
+cp package.json ./dist/build
+cd dist/
+tar -zcvf build.tar.gz build/
 

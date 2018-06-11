@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build:storybook && npm run build:package",
+  "buildCommand": "./build.sh",
   "requireCleanWorkingDir": false,
   "requireUpstream": false,
   "npm": {
@@ -7,6 +7,11 @@
   },
   "github": {
     "release": true,
-    "tokenRef": "GITHUB_ACCESS_TOKEN"
+    "tokenRef": "GITHUB_ACCESS_TOKEN",
+    "assets": "dist/*.tar.gz"
+  },
+  "dist": {
+    "repo": "git@github.com:UvitaTeam/vivy-components.git#gh-pages",
+    "files": "./web"
   }
 }
