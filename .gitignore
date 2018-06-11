@@ -14,7 +14,6 @@
 
 # dist files
 /dist/*
-/dist/*.tar.gz
 
 # misc
 .DS_Store

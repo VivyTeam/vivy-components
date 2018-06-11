@@ -2,38 +2,45 @@
 
 A collection of react components used for Vivy web apps.
 
-To add to your project add the following to your ```package.json```:
+# Quick Start
 
-```"vivy-components": "git+ssh://github.com/UvitaTeam/vivy-components.git"```. This will require you to have a valid ssh key and access to the Vivy github.
+You can install the component library in two ways: the tarball or from the repo.
 
-## Story Book
+Since the tarball is contained in a private repo (and access keys shouldn't be stored in version control), you'll need to download the tarball manually and place it somewhere in your project. Then you can add it to your package.json by:
 
-To serve the storybook just run ```npm run storybook```.
+`"vivy-components": "../folder/location/<tag>.tar.gz"`
+
+The main advantages of the tarball is that it is already transpiled to ES5 (making it plug and play) and it is available offline.
+
+Alternatively you can install the library directly from git itself which requires a valid ssh key and access to Vivy's github:
+
+`"vivy-components": "git+ssh://github.com/UvitaTeam/vivy-components.git"`.
+
+You will also need to transpile this library using babel since it is written in ES6 (and is not transpiled down to ES5).
+
+## Updates
+
+You can also follow the ```master``` branch to get latest updates or you can specify branches and tags. It is recommended to use a tag so that way new changes won't break your current layout until you're ready to upgrade.
+
+Use with a branch:
+`"vivy-components": "git+ssh://github.com/UvitaTeam/vivy-components.git#<branch>"`
+
+Use with a tag:
+`"vivy-components": "git+ssh://github.com/UvitaTeam/vivy-components.git#<tag>"`
+
+## Running story book locally
+
+To serve the storybook just run ```npm run storybook```. This will display the component library on `localhost:3006`.
 
 ## Component Development
 
 To get started developing components first read [the storybook quickstart](https://storybook.js.org/basics/quick-start-guide/).
 
-Essentially all you need is to create your component and link it together with the current stories.
+Essentially all you need is to create your component and link it together with the current stories in `stories/index.stories.js`.
 
-## Updating hosted Storybook
+## Automated deployment
 
-The component library runs on github pages and hosts a simple static site. To update this site after creating a new component all you need to do is run ```npm run build:storybook```. This will generate any new static assets that were created and allow the static website to display the components.
-
-After building the story book just commit the new changes and submit a PR.
-
-## Publishing Library
-
-To deploy new components for the library you first need to transpile the source folder from es6 to backwards compatible javascript. To do this run ```npm run build:package``` and increment the version number in ```package.json``` and create a new git tag. For example, if you're creating version 1, first change the ```package.json``` version to ```"version": "1.0.0"```. Next create a git tag by entering the commands:
-
-```
-git add new_file.txt && git commit -m "Add new_file.txt"
-git tag 1.0.0
-git push origin 1.0.0
-git push origin your_pr_branch
-```
-
-This will point the newest changes to the 1.0.0 tag and allow users to specify a tag to target in their ```package.json```.
+When changes are merged into master the deployment process on CircleCI will automatically increment the build number, add a tag, compile a transpiled tarball, and compile storybook static assets that are pushed to gh-pages branch of the vivy-component library repo. This will, in short, generate a usable libarary and viewable static website.
 
 ## Tech Used
 

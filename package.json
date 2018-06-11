@@ -7,7 +7,7 @@
     "build:storybook": "build-storybook -o ./dist/web",
     "build:package": "babel --presets react ./src --out-dir ./dist/build",
     "release:test": "release-it --dry-run",
-    "release": "release-it --dry-run"
+    "release": "release-it"
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.6",
