@@ -5,7 +5,8 @@
   "scripts": {
     "storybook": "start-storybook -p 3006 -s ./public",
     "build:storybook": "build-storybook",
-    "build:package": "babel --presets react ./src --out-dir ./build"
+    "build:package": "babel --presets react ./src --out-dir ./dist",
+    "release": "release-it --dry-run"
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.6",
@@ -44,6 +45,7 @@
     "file-loader": "^1.1.11",
     "jest": "^23.0.1",
     "react-test-renderer": "^16.4.0",
+    "release-it": "^7.4.7",
     "style-loader": "^0.20.1"
   }
 }

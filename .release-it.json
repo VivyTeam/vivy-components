@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build:storybook && npm run build:package",
+  "requireCleanWorkingDir": false,
+  "requireUpstream": false,
+  "npm": {
+    "publish": "false"
+  },
+  "github": {
+    "release": true,
+    "tokenRef": "GITHUB_ACCESS_TOKEN"
+  }
+}
