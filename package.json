@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 3006 -s ./public",
-    "build-storybook": "build-storybook"
+    "build:storybook": "build-storybook",
+    "build:package": "babel --presets react ./src --out-dir ./build"
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.6",
