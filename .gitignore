@@ -12,6 +12,9 @@
 /public/dist/*.js
 /public/dist/*.js.map
 
+# dist files
+/dist/*
+
 # misc
 .DS_Store
 .env.local
