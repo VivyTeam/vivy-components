@@ -1,6 +1,6 @@
 {
   "name": "vivy-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 3006 -s ./public",
