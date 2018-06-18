@@ -1,5 +1,11 @@
-import { configure } from '@storybook/react';
+import { addDecorator, configure } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
+import { setDefaults } from '@storybook/addon-info';
+
+setDefaults({
+  header: true,
+  inline: true,
+});
 
 setOptions({
   name: 'Vivy',
