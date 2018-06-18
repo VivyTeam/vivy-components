@@ -11,16 +11,20 @@ export default function Form(props) {
 
   return (
     <FormStyles>
-      <FlexGrid>{form}</FlexGrid>
+      <FlexGrid>
+        <form onSubmit={() => true}>{form}</form>
+      </FlexGrid>
     </FormStyles>
   );
 }
 
 Form.propTypes = {
   children: PropTypes.node.isRequired,
+  // submit: PropTypes.func,
   horizontal: PropTypes.bool,
 };
 
 Form.defaultProps = {
+  // submit: () => {},
   horizontal: false,
 };
