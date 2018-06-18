@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# testing
+/coverage
+
 # production
 /public/dist/*.png
 /public/dist/*.jpg
