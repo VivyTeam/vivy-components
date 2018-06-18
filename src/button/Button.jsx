@@ -2,20 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonStyles from './button.style';
 
-/*
- * Current Types
- * primary
- * primary-dark
- * alt
- * danger
- */
-
 const Button = props => (
   <ButtonStyles>
     <button
       disabled={props.disabled}
       onClick={props.onClick}
       className={props.type}
+      style={props.styles}
     >
       {props.children}
     </button>
@@ -27,6 +20,7 @@ Button.propTypes = {
   type: PropTypes.string,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
+  styles: PropTypes.shape({}),
 };
 
 Button.defaultProps = {
@@ -34,6 +28,7 @@ Button.defaultProps = {
   type: 'primary',
   onClick: () => {},
   disabled: false,
+  styles: {},
 };
 
 export default Button;

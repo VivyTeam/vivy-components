@@ -1,58 +1,65 @@
 import React from 'react';
 import { storiesOf, setAddon } from '@storybook/react';
+import { object, withKnobs } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import JSXAddon from 'storybook-addon-jsx';
 import Button from '../src/button/Button';
 
-setAddon(JSXAddon);
-
 const click = action('Button');
+const stories = storiesOf('Button', module);
+
+stories.addDecorator(withKnobs);
+setAddon(JSXAddon);
 
 const container = {
   margin: '0 auto',
   paddingTop: '5px',
 };
 
-storiesOf('Button', module)
-  .addWithJSX('Primary', () => (
-    <div style={container}>
-      <div style={{ marginBottom: '10px' }}>
-        <Button onClick={() => click('Primary click')}>Primary Button</Button>
-      </div>
+stories.addWithJSX('Primary', () => (
+  <div style={container}>
+    <div style={{ marginBottom: '10px' }}>
       <Button
-        onClick={() => {}}
-        disabled
+        onClick={() => click('Primary click')}
+        styles={object('Primary Button', {}, 'primary-button')}
       >
-          Primary Disabled
+        Primary Button
       </Button>
     </div>
-  ))
-  .addWithJSX('Alt', () =>
-    (
-      <div style={container}>
-        <div style={{ marginBottom: '10px' }}>
-          <Button
-            type="alt"
-            onClick={() => click('Alt click')}
-          >
-            Alt Button
-          </Button>
-        </div>
-        <Button
-          type="alt"
-          onClick={() => {}}
-          disabled
-        >
+    <Button
+      onClick={() => {}}
+      disabled
+    >
+      Primary Disabled
+    </Button>
+  </div>
+)).addWithJSX('Alt', () => (
+  <div style={container}>
+    <div style={{ marginBottom: '10px' }}>
+      <Button
+        type="alt"
+        onClick={() => click('Alt click')}
+        styles={object('Alt Button', {}, 'alt-button')}
+      >
+        Alt Button
+      </Button>
+    </div>
+    <Button
+      type="alt"
+      onClick={() => {}}
+      disabled
+    >
           Alt Disabled
-        </Button>
-      </div>
-    ))
+    </Button>
+  </div>
+))
   .addWithJSX('Danger', () => (
     <div style={container}>
       <div style={{ marginBottom: '10px' }}>
         <Button
           type="danger"
           onClick={() => click('Danger click')}
+          styles={object('Danger Button', {}, 'danger-button')}
         >
           Danger Button
         </Button>
