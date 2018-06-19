@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export const FormStyles = styled.div`
+  form {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
   .form-item {
     padding: 25px;
   }
@@ -23,6 +30,7 @@ export const InputStyles = styled.div`
     border-radius: 2px;
     background-color: #ffffff;
     border: solid 1px #cdcdcd;
+    box-sizing: border-box;
     font-size: 18px;
     font-weight: normal;
     font-style: normal;
