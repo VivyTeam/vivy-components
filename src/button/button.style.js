@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const height = '48px';
 const borderRadius = '28px';
-const padding = '0px 30px';
+const padding = '0 30px';
 const fontSize = '18px';
 const margin = '5px 5px';
 
