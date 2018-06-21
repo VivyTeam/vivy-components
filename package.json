@@ -3,11 +3,13 @@
   "version": "0.0.2",
   "private": true,
   "scripts": {
+    "linter:check": "eslint stories/**/* && eslint src/**/*",
     "storybook": "start-storybook -p 3006 -s ./public",
     "build:storybook": "build-storybook -o ./dist/web",
     "build:package": "babel --presets react ./src --out-dir ./dist/build",
     "release:test": "release-it --dry-run",
-    "release": "release-it"
+    "release": "release-it",
+    "code:format": "prettier --single-quote --write src/**/*"
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.6",
@@ -17,8 +19,12 @@
     "@storybook/addon-options": "^3.4.6",
     "@storybook/addons": "^3.4.6",
     "@storybook/react": "^3.4.6",
+    "babel-eslint": "^8.2.3",
     "copy-to-clipboard": "^3.0.8",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
     "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.13.5",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
