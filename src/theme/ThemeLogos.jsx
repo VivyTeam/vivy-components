@@ -17,18 +17,10 @@ const ThemeLogos = () => (
               <img src={logo} alt="Vivy logo" />
             </div>
             <div className="logo-box">
-              <img
-                src={letterHead}
-                alt="Vivy logo letterhead"
-                width="130"
-              />
+              <img src={letterHead} alt="Vivy logo letterhead" width="130" />
             </div>
             <div className="logo-box">
-              <img
-                src={logoComplete}
-                alt="Vivy complete logo"
-                width="80"
-              />
+              <img src={logoComplete} alt="Vivy complete logo" width="80" />
             </div>
           </Row>
         </Col>

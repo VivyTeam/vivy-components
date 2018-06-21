@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FormStyles = styled.div` 
+export const FormStyles = styled.div`
   .form-item {
     padding: 25px;
   }
@@ -39,7 +39,7 @@ export const InputStyles = styled.div`
 
   input:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(4, 212, 191, .2);
+    box-shadow: 0 0 0 2px rgba(4, 212, 191, 0.2);
     border-color: #04d4bf;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
@@ -54,4 +54,3 @@ export const InputStyles = styled.div`
     color: #e94119;
   }
 `;
-

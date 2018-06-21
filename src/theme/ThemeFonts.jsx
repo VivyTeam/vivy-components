@@ -6,8 +6,8 @@ const ThemeFonts = () => (
     <div className="font-container">
       <h1>Typography</h1>
       <p id="alt">
-        We use TT Norms, giving text in Vivy a fun and friendly
-        feel to match our illustrations.
+        We use TT Norms, giving text in Vivy a fun and friendly feel to match
+        our illustrations.
       </p>
       <br />
       <h1>&lt;h1&gt; Headline - 1.5em 600 bold</h1>

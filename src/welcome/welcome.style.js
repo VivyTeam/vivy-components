@@ -34,7 +34,7 @@ const WelcomeStyles = styled.div`
     font-size: 0.81em;
     font-weight: 400;
   }
-  
+
   .container {
     background-color: #fff;
     width: 50%;

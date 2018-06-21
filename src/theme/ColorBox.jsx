@@ -10,25 +10,17 @@ export default class ColorBox extends Component {
   }
 
   handleCopy() {
-    const {
-      gradient,
-      color,
-    } = this.props;
+    const { gradient, color } = this.props;
     const text = gradient || color;
 
     copy(text, {
       debug: true,
-      message: 'Copied',
+      message: 'Copied'
     });
   }
 
   render() {
-    const {
-      description,
-      color,
-      gradient,
-      dark,
-    } = this.props;
+    const { description, color, gradient, dark } = this.props;
     return (
       <div
         className="color-box-container"
@@ -40,12 +32,13 @@ export default class ColorBox extends Component {
           onClick={this.handleCopy}
           onKeyPress={() => {}}
           className="color-box"
-          style={gradient ? { backgroundImage: gradient } :
-          { backgroundColor: color }}
+          style={
+            gradient
+              ? { backgroundImage: gradient }
+              : { backgroundColor: color }
+          }
         >
-          <small>
-            {description}
-          </small>
+          <small>{description}</small>
           <br />
           <small>{gradient ? '' : color}</small>
           <h2 id="copy">copy</h2>
@@ -59,12 +52,11 @@ ColorBox.propTypes = {
   description: PropTypes.string.isRequired,
   color: PropTypes.string,
   gradient: PropTypes.string,
-  dark: PropTypes.bool,
+  dark: PropTypes.bool
 };
 
 ColorBox.defaultProps = {
   color: '#fff',
   gradient: null,
-  dark: false,
+  dark: false
 };
-

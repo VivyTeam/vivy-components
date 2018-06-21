@@ -14,7 +14,7 @@ const ButtonStyles = styled.div`
     padding: ${padding};
     margin: ${margin};
     color: #fff;
-    background-color: #04D4BF;
+    background-color: #04d4bf;
     border: 0;
     border-radius: ${borderRadius};
     height: ${height};
@@ -34,14 +34,14 @@ const ButtonStyles = styled.div`
   }
 
   .primary:active {
-    box-shadow: 0 0 4px 0 rgba(87,87,86,.5);
+    box-shadow: 0 0 4px 0 rgba(87, 87, 86, 0.5);
     background-color: #09cbb8;
   }
 
   .primary:disabled {
     cursor: not-allowed;
     background-color: #bfbfbf;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
   }
 
   .alt {
@@ -109,14 +109,14 @@ const ButtonStyles = styled.div`
   }
 
   .danger:active {
-    box-shadow: 0 0 4px 0 rgba(87,87,86,.5);
+    box-shadow: 0 0 4px 0 rgba(87, 87, 86, 0.5);
     background-color: #d43c18;
   }
 
   .danger:disabled {
     cursor: not-allowed;
     background-color: #bfbfbf;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
   }
 
   @media (max-width: 600px) {
