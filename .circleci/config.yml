@@ -15,6 +15,7 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
+      - run: npm run linter:check
       - run: npm run release:test
 
       - save_cache:
