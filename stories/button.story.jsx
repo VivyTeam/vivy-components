@@ -13,46 +13,41 @@ setAddon(JSXAddon);
 
 const container = {
   margin: '0 auto',
-  paddingTop: '5px',
+  paddingTop: '5px'
 };
 
-stories.addWithJSX('Primary', () => (
-  <div style={container}>
-    <div style={{ marginBottom: '10px' }}>
-      <Button
-        onClick={() => click('Primary click')}
-        styles={object('Primary Button', {}, 'primary-button')}
-      >
-        Primary Button
+stories
+  .addWithJSX('Primary', () => (
+    <div style={container}>
+      <div style={{ marginBottom: '10px' }}>
+        <Button
+          onClick={() => click('Primary click')}
+          styles={object('Primary Button', {}, 'primary-button')}
+        >
+          Primary Button
+        </Button>
+      </div>
+      <Button onClick={() => {}} disabled>
+        Primary Disabled
       </Button>
     </div>
-    <Button
-      onClick={() => {}}
-      disabled
-    >
-      Primary Disabled
-    </Button>
-  </div>
-)).addWithJSX('Alt', () => (
-  <div style={container}>
-    <div style={{ marginBottom: '10px' }}>
-      <Button
-        type="alt"
-        onClick={() => click('Alt click')}
-        styles={object('Alt Button', {}, 'alt-button')}
-      >
-        Alt Button
+  ))
+  .addWithJSX('Alt', () => (
+    <div style={container}>
+      <div style={{ marginBottom: '10px' }}>
+        <Button
+          type="alt"
+          onClick={() => click('Alt click')}
+          styles={object('Alt Button', {}, 'alt-button')}
+        >
+          Alt Button
+        </Button>
+      </div>
+      <Button type="alt" onClick={() => {}} disabled>
+        Alt Disabled
       </Button>
     </div>
-    <Button
-      type="alt"
-      onClick={() => {}}
-      disabled
-    >
-          Alt Disabled
-    </Button>
-  </div>
-))
+  ))
   .addWithJSX('Danger', () => (
     <div style={container}>
       <div style={{ marginBottom: '10px' }}>
@@ -64,12 +59,8 @@ stories.addWithJSX('Primary', () => (
           Danger Button
         </Button>
       </div>
-      <Button
-        type="danger"
-        onClick={() => {}}
-        disabled
-      >
-          Danger Disabled
+      <Button type="danger" onClick={() => {}} disabled>
+        Danger Disabled
       </Button>
     </div>
   ));

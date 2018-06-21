@@ -8,12 +8,11 @@ setAddon(JSXAddon);
 const container = {
   width: '80%',
   margin: '0 auto',
-  paddingTop: '100px',
+  paddingTop: '100px'
 };
 
-storiesOf('Animations', module)
-  .addWithJSX('Simple Loader', () => (
-    <div style={container}>
-      <SimpleLoader />
-    </div>
-  ));
+storiesOf('Animations', module).addWithJSX('Simple Loader', () => (
+  <div style={container}>
+    <SimpleLoader />
+  </div>
+));
