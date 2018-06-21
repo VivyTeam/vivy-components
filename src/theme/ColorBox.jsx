@@ -15,7 +15,7 @@ export default class ColorBox extends Component {
 
     copy(text, {
       debug: true,
-      message: 'Copied'
+      message: 'Copied',
     });
   }
 
@@ -52,11 +52,11 @@ ColorBox.propTypes = {
   description: PropTypes.string.isRequired,
   color: PropTypes.string,
   gradient: PropTypes.string,
-  dark: PropTypes.bool
+  dark: PropTypes.bool,
 };
 
 ColorBox.defaultProps = {
   color: '#fff',
   gradient: null,
-  dark: false
+  dark: false,
 };

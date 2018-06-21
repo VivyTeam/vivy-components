@@ -20,7 +20,7 @@ Button.propTypes = {
   type: PropTypes.string,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
-  styles: PropTypes.shape({})
+  styles: PropTypes.shape({}),
 };
 
 Button.defaultProps = {
@@ -28,7 +28,7 @@ Button.defaultProps = {
   type: 'primary',
   onClick: () => {},
   disabled: false,
-  styles: {}
+  styles: {},
 };
 
 export default Button;

@@ -11,11 +11,11 @@ import Row from '../src/grid/Row';
 setAddon(JSXAddon);
 
 const container = {
-  margin: '40px 30px'
+  margin: '40px 30px',
 };
 
 const box = {
-  margin: '40px 30px'
+  margin: '40px 30px',
 };
 
 const FormContainer = styled.div`

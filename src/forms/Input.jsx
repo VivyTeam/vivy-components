@@ -24,14 +24,14 @@ Input.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   label: PropTypes.string,
-  isRequired: PropTypes.bool
+  isRequired: PropTypes.bool,
 };
 
 Input.defaultProps = {
   type: '',
   placeholder: '',
   label: '',
-  isRequired: false
+  isRequired: false,
 };
 
 export default Input;

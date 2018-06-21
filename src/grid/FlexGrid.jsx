@@ -9,7 +9,7 @@ const FlexGrid = props => (
 );
 
 FlexGrid.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default FlexGrid;

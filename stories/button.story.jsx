@@ -13,7 +13,7 @@ setAddon(JSXAddon);
 
 const container = {
   margin: '0 auto',
-  paddingTop: '5px'
+  paddingTop: '5px',
 };
 
 stories
