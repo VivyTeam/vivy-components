@@ -20,7 +20,7 @@ You will also need to transpile this library using babel since it is written in 
 
 ## Updates
 
-You can also follow the ```master``` branch to get latest updates or you can specify branches and tags. It is recommended to use a tag so that way new changes won't break your current layout until you're ready to upgrade.
+You can also follow the `master` branch to get latest updates or you can specify branches and tags. It is recommended to use a tag so that way new changes won't break your current layout until you're ready to upgrade.
 
 Use with a branch:
 `"vivy-components": "git+ssh://github.com/UvitaTeam/vivy-components.git#<branch>"`
@@ -30,7 +30,7 @@ Use with a tag:
 
 ## Running story book locally
 
-To serve the storybook just run ```npm run storybook```. This will display the component library on `localhost:3006`.
+To serve the storybook just run `npm run storybook`. This will display the component library on `localhost:3006`.
 
 ## Component Development
 
@@ -44,8 +44,8 @@ When changes are merged into master the deployment process on CircleCI will auto
 
 ## Tech Used
 
-* Storybook
-* React
-* Styled components
-* Webpack
-* Babel (ES6)
+- Storybook
+- React
+- Styled components
+- Webpack
+- Babel (ES6)
