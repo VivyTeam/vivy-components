@@ -1,10 +1,10 @@
 const Console = console;
 
 const logger = {
-  record: (info) => {
+  record: info => {
     Console.log(info);
   },
-  error: (err) => {
+  error: err => {
     Console.error(err);
   },
 };

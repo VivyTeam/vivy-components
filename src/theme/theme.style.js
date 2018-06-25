@@ -32,7 +32,7 @@ const ThemeStyles = styled.div`
   }
 
   .color-container {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -48,7 +48,7 @@ const ThemeStyles = styled.div`
   .logo-container {
     width: 60%;
     margin: 0 auto;
-    padding:20px;
+    padding: 20px;
   }
 
   .logo-container .row {
@@ -85,12 +85,12 @@ const ThemeStyles = styled.div`
   }
 
   .color-box {
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     margin: 20px;
     padding: 30px;
     height: 100px;
     width: 100px;
-    box-shadow: 0 0 4px 0 rgba(0,0,0,.12)
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12);
   }
 
   .color-box:hover {
@@ -103,11 +103,11 @@ const ThemeStyles = styled.div`
 
   .color-box:active {
     border: none;
-    box-shadow: 0 0 4px 0 rgba(0,0,0,.12)
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12);
   }
 
   .color-box #copy {
-    color: rgba(0,0,0,0.4);
+    color: rgba(0, 0, 0, 0.4);
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.2s linear;

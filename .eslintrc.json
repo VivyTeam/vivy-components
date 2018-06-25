@@ -1,6 +1,7 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
   "globals": {
     "window": false,
     "document": false,
@@ -9,9 +10,12 @@
     "it": false
   },
   "rules": {
-    "jsx-a11y/anchor-is-valid": [ "error", {
-        "components": [ "Link"  ],
-        "specialLink": [ "to"  ]
-    }]
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ]
   }
 }

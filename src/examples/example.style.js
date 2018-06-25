@@ -46,7 +46,7 @@ const ExampleStyles = styled.div`
     padding: 30px;
     height: 50px;
     width: 50px;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
   }
 
   @media (max-width: 150px) {

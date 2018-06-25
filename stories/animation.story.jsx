@@ -11,9 +11,8 @@ const container = {
   paddingTop: '100px',
 };
 
-storiesOf('Animations', module)
-  .addWithJSX('Simple Loader', () => (
-    <div style={container}>
-      <SimpleLoader />
-    </div>
-  ));
+storiesOf('Animations', module).addWithJSX('Simple Loader', () => (
+  <div style={container}>
+    <SimpleLoader />
+  </div>
+));
