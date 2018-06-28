@@ -1,7 +1,10 @@
 {
-  "buildCommand": "./build.sh",
+  "buildCommand": "./build.sh -c ${src.tagName}",
   "requireCleanWorkingDir": false,
   "requireUpstream": false,
+  "src": {
+    "push": false
+  },
   "npm": {
     "publish": "false"
   },
