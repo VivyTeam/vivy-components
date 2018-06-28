@@ -1,6 +1,6 @@
 {
   "name": "vivy-components",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": true,
   "scripts": {
     "linter:format": "prettier --trailing-comma es5 --single-quote --write '{,!(node_modules|.git|storybook-static)/**/}*.{js,json,jsx,md}'",
