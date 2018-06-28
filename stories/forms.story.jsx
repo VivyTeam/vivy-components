@@ -31,11 +31,7 @@ storiesOf('Forms', module)
   .addWithJSX('Input', () => (
     <div style={container}>
       <div style={box}>
-        <Input
-          id="name"
-          placeholder="Your name"
-          label="Name"
-        />
+        <Input id="name" placeholder="Your name" label="Name" />
       </div>
     </div>
   ))
@@ -82,15 +78,12 @@ storiesOf('Forms', module)
         </FormItem>
       </Form>
     </FormContainer>
-  )).addWithJSX('Form Validation', () => (
+  ))
+  .addWithJSX('Form Validation', () => (
     <FormContainer>
       <Form>
         <FormItem>
-          <Input
-            id="name"
-            placeholder="Your name"
-            label="Name"
-          />
+          <Input id="name" placeholder="Your name" label="Name" />
         </FormItem>
         <FormItem>
           <Input
@@ -120,12 +113,8 @@ storiesOf('Forms', module)
         </FormItem>
         <FormItem>
           <Row>
-            <Button>
-            login
-            </Button>
-            <Button type="alt">
-            clear
-            </Button>
+            <Button>login</Button>
+            <Button type="alt">clear</Button>
           </Row>
         </FormItem>
       </Form>
