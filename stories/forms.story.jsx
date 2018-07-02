@@ -104,7 +104,7 @@ storiesOf('Forms', module)
               id="email"
               placeholder="Your e-mail"
               label="E-mail"
-              type="email"
+              validationmessage="Your email is required"
               isRequired
             />
           </FormItem>
@@ -114,13 +114,16 @@ storiesOf('Forms', module)
               placeholder="Your password"
               label="Password"
               type="password"
+              validationmessage="Your password is required"
               isRequired
             />
           </FormItem>
           <FormItem>
             <Row>
               <Button>login</Button>
-              <Button type="alt">clear</Button>
+              <Button type="alt" htmlType="reset">
+                clear
+              </Button>
             </Row>
           </FormItem>
         </Form>

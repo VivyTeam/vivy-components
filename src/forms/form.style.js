@@ -56,9 +56,19 @@ export const InputStyles = styled.div`
     color: #bfbfbf;
   }
 
+  .error-feedback {
+    color: #e94119;
+  }
+
+  .invalid {
+    border-color: #e94119;
+    transition: border-color 0.2s ease;
+  }
+
   #required {
     font-size: 0.9em;
-    padding-left: 10px;
+    font-weight: 400;
+    padding-left: 4px;
     color: #e94119;
   }
 `;
