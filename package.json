@@ -6,11 +6,16 @@
     "linter:format":
       "prettier --trailing-comma es5 --single-quote --write '{,!(node_modules|.git|storybook-static)/**/}*.{js,json,jsx,md}'",
     "linter:check": "eslint stories/**/* && eslint src/**/*",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "storybook": "start-storybook -p 3006 -s ./public",
     "build:storybook": "build-storybook -o ./dist/web",
     "build:package": "babel --presets react ./src --out-dir ./dist/build",
     "release:test": "release-it --dry-run",
     "release": "release-it"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./src/setupTests.js"
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.6",
@@ -41,25 +46,20 @@
     "webpack-dev-server": "^2.11.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-jest": "^23.0.1",
-    "babel-loader": "^7.1.2",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "babel-runtime": "^6.26.0",
-    "css-loader": "^0.28.9",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.17.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "file-loader": "^1.1.11",
-    "jest": "^23.0.1",
+    "jest": "^23.2.0",
     "react-test-renderer": "^16.4.0",
     "release-it": "^7.4.7",
+    "sinon": "^6.1.0",
     "style-loader": "^0.20.1"
   }
 }
