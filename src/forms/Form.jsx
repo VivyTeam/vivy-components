@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { rxConnect, ofActions } from 'rx-connect';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
+import { validateInput } from './formValidation';
 import FlexGrid from '../grid/FlexGrid';
 import Row from '../grid/Row';
 import Col from '../grid/Col';
@@ -13,18 +14,6 @@ import { FormStyles } from './form.style';
     onAuthenticate$: new Subject(),
   };
 
-  const validateField = (field, message) => {
-    const label = field.parentNode.querySelector('.error-feedback');
-
-    if (field.validity.valid) {
-      field.classList.remove('invalid');
-      label.textContent = '';
-    } else {
-      field.classList.add('invalid');
-      label.textContent = message;
-    }
-  };
-
   const authenticate = actions.onAuthenticate$
     .pluck(0)
     .map(e => {
@@ -32,12 +21,12 @@ import { FormStyles } from './form.style';
       const fields = [...e.target.elements];
       return fields.filter(field => field.nodeName.toLowerCase() !== 'button');
     })
-    .map(fields => {
-      fields.forEach(field => {
-        const { dataset, validationMessage } = field;
+    .map(inputFields => {
+      inputFields.forEach(input => {
+        const { dataset, validationMessage } = input;
         const message = dataset.validationmessage || validationMessage;
 
-        validateField(field, message);
+        validateInput(input, message);
       });
       return Observable.empty();
     });
