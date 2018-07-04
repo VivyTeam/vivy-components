@@ -1,5 +1,5 @@
 {
-  "buildCommand": "./build.sh -c ${src.tagName}",
+  "buildCommand": "node build.js ${version}",
   "requireCleanWorkingDir": false,
   "requireUpstream": false,
   "src": {
