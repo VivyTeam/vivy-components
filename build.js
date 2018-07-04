@@ -5,21 +5,20 @@ const version = process.argv[2];
 
 console.log(`Running build process for vivy-components ${version}`);
 
-const compileCmd = 'npm run build:storybook && npm run build:package';
-exec(compileCmd, (err, stdout) => {
+const build = 'npm run build:storybook && npm run build:package';
+exec(build, (err, stdout) => {
   if (err) {
-    console.log(`Compile command failed: ${err}`);
+    console.log(`Build command failed: ${err}`);
     return;
   }
-  console.log(`Compile successful: ${stdout}`);
+  console.log(`Build successful: ${stdout}`);
 });
 
-const cmd = `cp package.json ./dist/build && cd dist/ && tar -zcvf vivy-components-${version}.tar.gz build/`;
-exec(cmd, (err, stdout) => {
+const archive = `cp package.json ./dist/build && cd dist/ && tar -zcvf vivy-components-${version}.tar.gz build/`;
+exec(archive, (err, stdout) => {
   if (err) {
-    console.log(`Package command failed: ${err}`);
+    console.log(`Archive command failed: ${err}`);
     return;
   }
-
-  console.log(`Package command successful: ${stdout}`);
+  console.log(`Archive command successful: ${stdout}`);
 });
