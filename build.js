@@ -12,7 +12,7 @@ async function runCommand(command) {
   }
 }
 
-async function runBuildProcess() {
+(async function runBuildProcess() {
   const version = process.argv[2];
 
   console.log(`Running build process for vivy-components ${version}`);
@@ -21,6 +21,4 @@ async function runBuildProcess() {
   const archive = `cp package.json ./dist/build && cd dist/ && tar -zcvf vivy-components-${version}.tar.gz build/`;
   await runCommand(build);
   await runCommand(archive);
-}
-
-runBuildProcess();
+})();
