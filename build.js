@@ -8,8 +8,7 @@ console.log(`Running build process for vivy-components ${version}`);
 const build = 'npm run build:storybook && npm run build:package';
 exec(build, (err, stdout) => {
   if (err) {
-    console.log(`Build command failed: ${err}`);
-    return;
+    throw new Error(`Build command failed: ${err}`);
   }
   console.log(`Build successful: ${stdout}`);
 });
@@ -17,8 +16,7 @@ exec(build, (err, stdout) => {
 const archive = `cp package.json ./dist/build && cd dist/ && tar -zcvf vivy-components-${version}.tar.gz build/`;
 exec(archive, (err, stdout) => {
   if (err) {
-    console.log(`Archive command failed: ${err}`);
-    return;
+    throw new Error(`Archive command failed: ${err}`);
   }
   console.log(`Archive command successful: ${stdout}`);
 });
