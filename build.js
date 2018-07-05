@@ -5,10 +5,10 @@ const exec = util.promisify(require('child_process').exec);
 async function runCommand(command) {
   try {
     const { stdout, stderr } = await exec(command);
-    console.log(`Command completed: ${stdout}`);
+    console.log(`Command "${command}" completed. Output:\n${stdout}`);
     console.log(stderr);
   } catch (err) {
-    throw new Error(`Command failed: ${err}`);
+    throw Error(err);
   }
 }
 
