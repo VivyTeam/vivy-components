@@ -3,31 +3,35 @@ import PropTypes from 'prop-types';
 import { rxConnect, ofActions } from 'rx-connect';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
+import { filter } from 'rxjs/operators';
 import { validateInput } from './formValidation';
 import FlexGrid from '../grid/FlexGrid';
 import Row from '../grid/Row';
 import Col from '../grid/Col';
 import { FormStyles } from './form.style';
 
+export const filterElements = filter(
+  fields => fields.nodeName.toLowerCase() !== 'button'
+);
+
 @rxConnect(() => {
   const actions = {
     onAuthenticate$: new Subject(),
+    onTest$: new Observable(),
   };
 
   const authenticate = actions.onAuthenticate$
     .pluck(0)
-    .map(e => {
+    .flatMap(e => {
       e.preventDefault();
-      const fields = [...e.target.elements];
-      return fields.filter(field => field.nodeName.toLowerCase() !== 'button');
+      return [...e.target.elements];
     })
-    .map(inputFields => {
-      inputFields.forEach(input => {
-        const { dataset, validationMessage } = input;
-        const message = dataset.validationmessage || validationMessage;
+    .let(filterElements)
+    .map(input => {
+      const { dataset, validationMessage } = input;
+      const message = dataset.validationmessage || validationMessage;
 
-        validateInput(input, message);
-      });
+      validateInput(input, message);
       return Observable.empty();
     });
 
@@ -51,7 +55,7 @@ export default class Form extends Component {
     return (
       <FormStyles>
         <FlexGrid>
-          <form onSubmit={onAuthenticate} noValidate>
+          <form id="form" onSubmit={onAuthenticate} noValidate>
             {form}
           </form>
         </FlexGrid>

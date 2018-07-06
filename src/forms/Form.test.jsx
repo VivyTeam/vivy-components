@@ -1,9 +1,14 @@
 import React from 'react';
 import sinon from 'sinon';
+import { TestScheduler } from 'rxjs';
 import { shallow } from 'enzyme';
 import { DOMEventStub, DOMElementStub } from '../mocks/domMocks';
-import Form from './Form';
+import Form, { filterElements } from './Form';
 import FormItem from './FormItem';
+
+function assertDeepEqual(actual, expected) {
+  expect(actual).toEqual(expected);
+}
 
 describe('Form component', () => {
   it('renders form with items and elements', () => {
@@ -16,6 +21,25 @@ describe('Form component', () => {
     );
     expect(wrapper.find(FormItem).length).toBe(1);
     expect(wrapper.find('p').length).toBe(1);
+  });
+
+  it('Filter elements removes all buttons', () => {
+    const input = Object.assign({}, DOMElementStub);
+    const button = Object.assign({}, DOMElementStub);
+    button.nodeName = 'BUTTON';
+
+    const testScheduler = new TestScheduler(assertDeepEqual);
+
+    const marble = '-x-y';
+    const expectedValues = { x: button, y: input };
+    const hotTest = testScheduler.createHotObservable(marble, {
+      x: button,
+      y: input,
+    });
+    const actual = filterElements(hotTest);
+
+    testScheduler.expectObservable(actual).toBe('---y', expectedValues);
+    testScheduler.flush();
   });
 
   it('validates form input with custom messages', () => {
