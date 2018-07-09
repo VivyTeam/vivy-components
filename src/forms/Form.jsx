@@ -3,21 +3,15 @@ import PropTypes from 'prop-types';
 import { rxConnect, ofActions } from 'rx-connect';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
-import { filter } from 'rxjs/operators';
-import { validateInput } from './formValidation';
+import authenticateFormData from './formValidation';
 import FlexGrid from '../grid/FlexGrid';
 import Row from '../grid/Row';
 import Col from '../grid/Col';
 import { FormStyles } from './form.style';
 
-const filterElements = filter(
-  fields => fields.nodeName.toLowerCase() !== 'button'
-);
-
 @rxConnect(() => {
   const actions = {
     onAuthenticate$: new Subject(),
-    onTest$: new Observable(),
   };
 
   const authenticate = actions.onAuthenticate$
@@ -26,14 +20,7 @@ const filterElements = filter(
       e.preventDefault();
       return [...e.target.elements];
     })
-    .let(filterElements)
-    .map(input => {
-      const { dataset, validationMessage } = input;
-      const message = dataset.validationmessage || validationMessage;
-
-      validateInput(input, message);
-      return Observable.empty();
-    });
+    .let(authenticateFormData);
 
   return Observable.merge(Observable::ofActions(actions), authenticate);
 })

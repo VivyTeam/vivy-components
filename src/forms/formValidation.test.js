@@ -1,37 +1,62 @@
+/* eslint-disable no-underscore-dangle */
 import sinon from 'sinon';
-import { validateInput } from './formValidation';
+import { TestScheduler } from 'rxjs';
+import authenticateFormData, {
+  __RewireAPI__ as TestApi,
+} from './formValidation';
+import { DOMElementStub } from '../mocks/domMocks';
+
+function assertDeepEqual(actual, expected) {
+  expect(actual).toEqual(expected);
+}
 
 describe('formValidation', () => {
-  const inputStub = {
-    parentNode: {
-      querySelector: sinon.stub(),
-    },
-    validity: {
-      valid: false,
-    },
-    classList: {
-      add: sinon.stub(),
-      remove: sinon.stub(),
-    },
-  };
-
   it('invalidates wrong user input', () => {
+    const input = Object.assign({}, DOMElementStub);
     const mockError = 'mock error message';
 
-    inputStub.parentNode.querySelector.returns({ textContent: '' });
-    validateInput(inputStub, mockError);
+    input.parentNode.querySelector.returns({ textContent: '' });
 
-    sinon.assert.calledWith(inputStub.classList.add, 'invalid');
-    expect(inputStub.parentNode.querySelector().textContent).toEqual(mockError);
+    const validateInput = TestApi.__get__('validateInput');
+    validateInput(input, mockError);
+
+    sinon.assert.calledWith(input.classList.add, 'invalid');
+    expect(input.parentNode.querySelector().textContent).toEqual(mockError);
   });
 
   it('validates correct user input', () => {
+    const input = Object.assign({}, DOMElementStub);
     const mockError = 'mock error message';
-    inputStub.validity.valid = true;
-    inputStub.parentNode.querySelector.returns({ textContent: mockError });
-    validateInput(inputStub, mockError);
+    input.validity.valid = true;
+    input.parentNode.querySelector.returns({ textContent: mockError });
 
-    sinon.assert.calledWith(inputStub.classList.add, 'invalid');
-    expect(inputStub.parentNode.querySelector().textContent).toEqual('');
+    const validateInput = TestApi.__get__('validateInput');
+    validateInput(input, mockError);
+
+    sinon.assert.calledWith(input.classList.add, 'invalid');
+
+    sinon.assert.calledWith(input.classList.remove, 'invalid');
+    expect(input.parentNode.querySelector().textContent).toEqual('');
+  });
+
+  it('Filters out all buttons', () => {
+    const input = Object.assign({}, DOMElementStub);
+    const button = Object.assign({}, DOMElementStub);
+
+    input.parentNode.querySelector.returns({ textContent: '' });
+    button.nodeName = 'BUTTON';
+
+    const testScheduler = new TestScheduler(assertDeepEqual);
+
+    const marble = '-x-y';
+    const expectedValues = { x: button, y: input };
+    const hotTest = testScheduler.createHotObservable(marble, {
+      x: button,
+      y: input,
+    });
+    const actual = authenticateFormData(hotTest);
+
+    testScheduler.expectObservable(actual).toBe('---y', expectedValues);
+    testScheduler.flush();
   });
 });
