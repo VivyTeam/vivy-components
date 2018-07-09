@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import { TestScheduler } from 'rxjs';
 import { shallow } from 'enzyme';
 import { DOMEventStub, DOMElementStub } from '../mocks/domMocks';
-import Form, { filterElements } from './Form';
+import Form, { __RewireAPI__ as TestApi } from './Form';
 import FormItem from './FormItem';
 
 function assertDeepEqual(actual, expected) {
@@ -36,6 +36,9 @@ describe('Form component', () => {
       x: button,
       y: input,
     });
+
+    // eslint-disable-next-line no-underscore-dangle
+    const filterElements = TestApi.__get__('filterElements');
     const actual = filterElements(hotTest);
 
     testScheduler.expectObservable(actual).toBe('---y', expectedValues);

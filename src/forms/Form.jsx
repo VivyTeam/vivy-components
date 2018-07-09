@@ -10,7 +10,7 @@ import Row from '../grid/Row';
 import Col from '../grid/Col';
 import { FormStyles } from './form.style';
 
-export const filterElements = filter(
+const filterElements = filter(
   fields => fields.nodeName.toLowerCase() !== 'button'
 );
 
