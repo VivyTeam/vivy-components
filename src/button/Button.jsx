@@ -9,6 +9,7 @@ export default function Button(props) {
         disabled={props.disabled}
         onClick={props.onClick}
         className={props.type}
+        type={props.htmlType}
         style={props.styles}
       >
         {props.children}
@@ -20,6 +21,7 @@ export default function Button(props) {
 Button.propTypes = {
   children: PropTypes.string,
   type: PropTypes.string,
+  htmlType: PropTypes.string,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   styles: PropTypes.shape({}),
@@ -28,6 +30,7 @@ Button.propTypes = {
 Button.defaultProps = {
   children: '',
   type: 'primary',
+  htmlType: '',
   onClick: () => {},
   disabled: false,
   styles: {},

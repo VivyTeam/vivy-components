@@ -7,7 +7,10 @@
     "document": false,
     "URLSearchParams": false,
     "fetch": false,
-    "it": false
+    "it": false,
+    "describe": false,
+    "beforeEach": false,
+    "expect": false
   },
   "rules": {
     "prettier/prettier": [

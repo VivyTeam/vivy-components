@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
 export const FormStyles = styled.div`
+  form {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
   .form-item {
     padding: 25px;
   }
@@ -23,6 +30,7 @@ export const InputStyles = styled.div`
     border-radius: 2px;
     background-color: #ffffff;
     border: solid 1px #cdcdcd;
+    box-sizing: border-box;
     font-size: 18px;
     font-weight: normal;
     font-style: normal;
@@ -48,9 +56,19 @@ export const InputStyles = styled.div`
     color: #bfbfbf;
   }
 
+  .error-feedback {
+    color: #e94119;
+  }
+
+  .invalid {
+    border-color: #e94119;
+    transition: border-color 0.2s ease;
+  }
+
   #required {
     font-size: 0.9em;
-    padding-left: 10px;
+    font-weight: 400;
+    padding-left: 4px;
     color: #e94119;
   }
 `;
