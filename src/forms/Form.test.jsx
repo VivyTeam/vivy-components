@@ -6,41 +6,61 @@ import Form from './Form';
 import FormItem from './FormItem';
 
 describe('Form component', () => {
-  it('renders form with items and elements', () => {
-    const wrapper = shallow(
-      <Form>
-        <FormItem>
-          <p>Mock Text</p>
-        </FormItem>
-      </Form>
-    );
-    expect(wrapper.find(FormItem).length).toBe(1);
-    expect(wrapper.find('p').length).toBe(1);
-  });
+  let domStub = {};
+  let wrapper = null;
 
-  it('validates form input with custom messages', () => {
-    const domStub = DOMEventStub;
-    const input = Object.assign({}, DOMElementStub, {
-      dataset: {
-        validationmessage: 'Mock input required',
-      },
-    });
-    const button = Object.assign({}, DOMElementStub);
-
-    button.nodeName = 'BUTTON';
-
-    input.parentNode.querySelector.returns({
-      textContent: '',
-    });
-    domStub.target.elements = [input, button];
-
-    const wrapper = shallow(
+  beforeEach(() => {
+    domStub = DOMEventStub;
+    wrapper = shallow(
       <Form>
         <FormItem>
           <p>Example Form</p>
         </FormItem>
       </Form>
     );
+  });
+
+  it('renders form with items and elements', () => {
+    expect(wrapper.find(FormItem).length).toBe(1);
+    expect(wrapper.find('p').length).toBe(1);
+  });
+
+  it('Removes form errors when validation is verified', () => {
+    const input = Object.assign({}, DOMElementStub, {
+      dataset: {
+        validationmessage: 'Mock input required',
+      },
+      validity: {
+        valid: true,
+      },
+    });
+
+    input.parentNode.querySelector.returns({
+      textContent: '',
+    });
+
+    domStub.target.elements = [input];
+
+    wrapper.props().onAuthenticate(domStub);
+
+    sinon.assert.calledWith(input.classList.remove, 'invalid');
+    expect(input.parentNode.querySelector().textContent).toEqual('');
+  });
+
+  it('Displays form errors when validation fails', () => {
+    const input = Object.assign({}, DOMElementStub, {
+      dataset: {
+        validationmessage: 'Mock input required',
+      },
+      validity: {
+        valid: false,
+      },
+    });
+
+    input.parentNode.querySelector.returns({
+      textContent: '',
+    });
+    domStub.target.elements = [input];
 
     wrapper.props().onAuthenticate(domStub);
 

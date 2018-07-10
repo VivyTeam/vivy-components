@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { rxConnect, ofActions } from 'rx-connect';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
-import authenticateFormData from './formValidation';
 import FlexGrid from '../grid/FlexGrid';
 import Row from '../grid/Row';
 import Col from '../grid/Col';
@@ -14,13 +13,35 @@ import { FormStyles } from './form.style';
     onAuthenticate$: new Subject(),
   };
 
-  const authenticate = actions.onAuthenticate$
+  const getInputsToValidate = actions.onAuthenticate$
     .pluck(0)
-    .flatMap(e => {
+    .do(e => {
       e.preventDefault();
-      return [...e.target.elements];
     })
-    .let(authenticateFormData);
+    .flatMap(e => [...e.target.elements])
+    .filter(fields => fields.nodeName.toLowerCase() !== 'button');
+
+  const validate = getInputsToValidate
+    .filter(input => input.validity.valid)
+    .do(input => {
+      const label = input.parentNode.querySelector('.error-feedback');
+
+      input.classList.remove('invalid');
+      label.textContent = '';
+    });
+
+  const invalidate = getInputsToValidate
+    .filter(input => !input.validity.valid)
+    .do(input => {
+      const { dataset, validationMessage } = input;
+      const label = input.parentNode.querySelector('.error-feedback');
+      const message = dataset.validationmessage || validationMessage;
+
+      input.classList.add('invalid');
+      label.textContent = message;
+    });
+
+  const authenticate = getInputsToValidate.merge(validate, invalidate);
 
   return Observable.merge(Observable::ofActions(actions), authenticate);
 })
