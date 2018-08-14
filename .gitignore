@@ -13,7 +13,7 @@
 /public/dist/*.js.map
 
 # dist files
-/package/*
+/build/*
 /storybook-static/*
 
 # misc
