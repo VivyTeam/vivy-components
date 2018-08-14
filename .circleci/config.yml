@@ -16,13 +16,20 @@ jobs:
 
       - run: npm install
       - run: npm run linter:check
+      - run: npm run build:package
+      - run: npm run build:storybook
+      # check npm token
+      - run: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      - run: echo ~/repo/.npmrc
+      # preview what files will be packaged into npm
+      - run: ls ./build
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-  deploy:
+  deploy-package:
     docker:
       - image: circleci/node:8.11.1
 
@@ -38,7 +45,35 @@ jobs:
 
       - run: npm install
       - run: git config --global push.default simple
-      - run: npm run release
+      - run: npm run build:package
+      - run: cp package.json README.md index.js ./build && cd ./build
+      - run: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      - run: npm publish --access public
+      - run: node build.js
+
+  deploy-website:
+    docker:
+      - image: circleci/node:8.11.1
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: npm install
+      - run: git config --global push.default simple
+      - run: npm run build:storybook
+      - run: mkdir .static-website
+      - run: cd .static-website
+      - run: git clone -b gh-pages git@github.com:UvitaTeam/vivy-components .
+      - run: rm -R storybook-static && cp -R ../storybook-static .
+      - run: git add storybook-static/ && git commit -m "Update static website"
+      - run: git push origin master
 
 workflows:
   version: 2
@@ -49,7 +84,12 @@ workflows:
             branches:
               ignore:
                 - master
-      - deploy:
+      - deploy-package:
+          filters:
+            branches:
+              only:
+                - master
+      - deploy-website:
           filters:
             branches:
               only:
