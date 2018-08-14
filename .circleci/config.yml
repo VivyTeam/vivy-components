@@ -18,9 +18,8 @@ jobs:
       - run: npm run linter:check
       - run: npm run build:package
       - run: npm run build:storybook
-      # check npm token
+      # check npm token exists
       - run: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
-      - run: echo ~/repo/.npmrc
       # preview what files will be packaged into npm
       - run: ls ./build
 
@@ -49,6 +48,7 @@ jobs:
       - run: cd ./build
       - run: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
       - run: npm publish --access public
+      # build.js runs the git tagging process
       - run: node build.js
 
   deploy-website:
@@ -73,7 +73,7 @@ jobs:
       - run: git clone -b gh-pages git@github.com:UvitaTeam/vivy-components .
       - run: rm -R storybook-static && cp -R ../storybook-static .
       - run: git add storybook-static/ && git commit -m "Update static website"
-      - run: git push origin master
+      - run: git push origin gh-pages
 
 workflows:
   version: 2
