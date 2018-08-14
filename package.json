@@ -1,17 +1,18 @@
 {
   "name": "vivy-components",
-  "version": "0.0.5",
-  "private": true,
+  "version": "0.0.6",
+  "private": false,
   "scripts": {
     "linter:format":
       "prettier --trailing-comma es5 --single-quote --write '{,!(node_modules|.git|storybook-static)/**/}*.{js,json,jsx,md}'",
     "linter:check": "eslint stories/**/* && eslint src/**/*",
     "storybook": "start-storybook -p 3006 -s ./public",
-    "build:storybook": "build-storybook -o ./dist/web",
-    "build:package": "babel --presets react ./src --out-dir ./dist/build",
-    "release:test": "release-it --dry-run",
-    "release": "release-it"
+    "release": "node build.js",
+    "release:test": "node build.js test",
+    "build:storybook": "build-storybook -o ./storybook-static/",
+    "build:package": "babel --presets react ./src --out-dir ./package/"
   },
+  "files": ["./package/"],
   "dependencies": {
     "@storybook/addon-actions": "^3.4.6",
     "@storybook/addon-console": "^1.0.0",
@@ -54,7 +55,6 @@
     "file-loader": "^1.1.11",
     "jest": "^23.0.1",
     "react-test-renderer": "^16.4.0",
-    "release-it": "^7.4.7",
     "style-loader": "^0.20.1"
   }
 }

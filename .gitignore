@@ -13,7 +13,8 @@
 /public/dist/*.js.map
 
 # dist files
-/dist/*
+/package/*
+/storybook-static/*
 
 # misc
 .DS_Store
