@@ -18,6 +18,7 @@ jobs:
       - run: npm run linter:check
       - run: npm run build:package
       - run: npm run build:storybook
+      - run: echo $CIRCLE_TAG
       # preview what files will be packaged into npm
       - run: ls ./build
 
@@ -44,9 +45,8 @@ jobs:
       - run: git config --global push.default simple
       # Update package.json version
       - run: npm install json
-      - run: export PACKAGE_VERSION=$(git describe --abbrev=0 --tags)
-      - run: json -I -f package.json -e "this.version='$PACKAGE_VERSION'"
-      - run: git add package.json && git commit -m "Update package.json for $PACKAGE_VERSION release"
+      - run: json -I -f package.json -e "this.version='$CIRCLE_TAG'"
+      - run: git add package.json && git commit -m "Update package.json for $CIRCLE_TAG release"
       - run: git push origin master
       # Update the website branch
       - run: npm run build:storybook
@@ -72,3 +72,5 @@ workflows:
           filters:
             tags:
               only: /.*/
+            branches:
+              ignore: /.*/
