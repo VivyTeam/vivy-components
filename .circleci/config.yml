@@ -18,8 +18,6 @@ jobs:
       - run: npm run linter:check
       - run: npm run build:package
       - run: npm run build:storybook
-      # check npm token exists
-      - run: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
       # preview what files will be packaged into npm
       - run: ls ./build
 
@@ -28,7 +26,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-  deploy-package:
+  deploy:
     docker:
       - image: circleci/node:8.11.1
 
@@ -44,36 +42,22 @@ jobs:
 
       - run: npm install
       - run: git config --global push.default simple
-      - run: npm run build:package
-      - run: cd ./build
-      - run: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
-      - run: npm publish --access public
-      # build.js runs the git tagging process
-      - run: node build.js
-
-  deploy-website:
-    docker:
-      - image: circleci/node:8.11.1
-
-    working_directory: ~/repo
-
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run: npm install
-      - run: git config --global push.default simple
+      # Update package.json version
+      - run: npm install json
+      - run: export PACKAGE_VERSION=$(git describe --abbrev=0 --tags)
+      - run: json -I -f package.json -e "this.version='$PACKAGE_VERSION'"
+      - run: git add package.json && git commit -m "Update package.json for $PACKAGE_VERSION release"
+      - run: git push origin master
+      # Update the website branch
       - run: npm run build:storybook
-      - run: mkdir .static-website
-      - run: cd .static-website
-      - run: git clone -b gh-pages git@github.com:UvitaTeam/vivy-components .
-      - run: rm -R storybook-static && cp -R ../storybook-static .
       - run: git add storybook-static/ && git commit -m "Update static website"
-      - run: git push origin gh-pages
+      - run: git push origin gh-pages -f
+      # Update the npm package
+      - run: npm run build:package
+      - run: echo '//registry.npmjs.org/:_authToken=${npm_TOKEN}' > ~/repo/.npmrc
+      - run: cd ./build
+      - run: npm publish --access public
+      
 
 workflows:
   version: 2
@@ -84,13 +68,7 @@ workflows:
             branches:
               ignore:
                 - master
-      - deploy-package:
+      - deploy:
           filters:
-            branches:
-              only:
-                - master
-      - deploy-website:
-          filters:
-            branches:
-              only:
-                - master
+            tags:
+              only: /.*/
