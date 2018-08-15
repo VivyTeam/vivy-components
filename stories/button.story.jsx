@@ -21,46 +21,20 @@ stories
     <div style={container}>
       <div style={{ marginBottom: '10px' }}>
         <Button
-          onClick={() => click('Primary click')}
+          onClick={() => click('Button clicked!')}
           styles={object('Primary Button', {}, 'primary-button')}
         >
           Primary Button
         </Button>
       </div>
-      <Button onClick={() => {}} disabled>
-        Primary Disabled
-      </Button>
     </div>
   ))
-  .addWithJSX('Alt', () => (
+  .addWithJSX('Outline', () => (
     <div style={container}>
       <div style={{ marginBottom: '10px' }}>
-        <Button
-          type="alt"
-          onClick={() => click('Alt click')}
-          styles={object('Alt Button', {}, 'alt-button')}
-        >
-          Alt Button
+        <Button type="outline" onClick={() => click('Button clicked!')}>
+          Outline Button
         </Button>
       </div>
-      <Button type="alt" onClick={() => {}} disabled>
-        Alt Disabled
-      </Button>
-    </div>
-  ))
-  .addWithJSX('Danger', () => (
-    <div style={container}>
-      <div style={{ marginBottom: '10px' }}>
-        <Button
-          type="danger"
-          onClick={() => click('Danger click')}
-          styles={object('Danger Button', {}, 'danger-button')}
-        >
-          Danger Button
-        </Button>
-      </div>
-      <Button type="danger" onClick={() => {}} disabled>
-        Danger Disabled
-      </Button>
     </div>
   ));
