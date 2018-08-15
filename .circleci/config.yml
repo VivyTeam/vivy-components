@@ -16,8 +16,10 @@ jobs:
 
       - run: npm install
       - run: npm run linter:check
-      - run: npm run release:test
-      - run: node build.js '0.0.1'
+      - run: npm run build:package
+      - run: npm run build:storybook
+      # preview what files will be packaged into npm
+      - run: ls ./build
 
       - save_cache:
           paths:
@@ -40,7 +42,20 @@ jobs:
 
       - run: npm install
       - run: git config --global push.default simple
-      - run: npm run release
+      # Update package.json version
+      - run: npm install -g json
+      - run: json -I -f package.json -e "this.version='$CIRCLE_TAG'"
+      - run: git add package.json && git commit -m "Update package.json for $CIRCLE_TAG release"
+      - run: git push origin master
+      # Update the website branch
+      - run: npm run build:storybook
+      - run: git add storybook-static/ && git commit -m "Update static website"
+      - run: git push origin gh-pages -f
+      # Update the npm package
+      - run: npm run build:package
+      - run: echo '//registry.npmjs.org/:_authToken=${npm_TOKEN}' > ~/repo/.npmrc
+      - run: cd ./build
+      - run: npm publish --access public
 
 workflows:
   version: 2
@@ -53,6 +68,7 @@ workflows:
                 - master
       - deploy:
           filters:
+            tags:
+              only: /.*/
             branches:
-              only:
-                - master
+              ignore: /.*/
