@@ -54,14 +54,20 @@ storiesOf('Buttons', module).add(
       <h2>Primary Call to Action</h2>
       <div className="list">
         <Button onClick={() => click('button clicked!')}>Call to Action</Button>
-        <Button onClick={() => click('button clicked!')}>Call to Action</Button>
+        <Button onClick={() => click('button clicked!')} icon="call-contact">
+          Call to Action
+        </Button>
       </div>
       <h2>Secondary Call to Action</h2>
       <div className="list">
         <Button type="secondary" onClick={() => click('button clicked!')}>
           Call to Action
         </Button>
-        <Button type="secondary" onClick={() => click('button clicked!')}>
+        <Button
+          type="secondary"
+          onClick={() => click('button clicked!')}
+          icon="call-contact"
+        >
           Call to Action
         </Button>
       </div>
@@ -70,7 +76,11 @@ storiesOf('Buttons', module).add(
         <Button type="tertiary" onClick={() => click('button clicked!')}>
           Call to Action
         </Button>
-        <Button type="tertiary" onClick={() => click('button clicked!')}>
+        <Button
+          type="tertiary"
+          onClick={() => click('button clicked!')}
+          icon="call-contact"
+        >
           Call to Action
         </Button>
       </div>

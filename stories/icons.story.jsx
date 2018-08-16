@@ -7,14 +7,28 @@ import Icon from '../src/icons/Icon';
 const IconsStory = styled.div`
   .container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 100px;
+    margin-left: 66px;
+    flex-wrap: wrap;
+    height: 400px;
   }
 
   i {
     font-size: 2em;
     margin: 10px;
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+  .icon-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -23,21 +37,66 @@ storiesOf('Icons', module).add(
   withInfo('Impact')(() => (
     <IconsStory>
       <div className="container">
-        <Icon name="blood-type" />
-        <Icon name="call-contact" />
-        <Icon name="contact-info" />
-        <Icon name="doctor-info" />
-        <Icon name="gender-female" />
-        <Icon name="gender-male" />
-        <Icon name="gender-other" />
-        <Icon name="medical-health" />
-        <Icon name="medical-id" />
-        <Icon name="medication-info" />
-        <Icon name="organ-donor" />
-        <Icon name="warning-sign" />
-        <Icon name="weight-info" />
-        <Icon name="will-information" />
-        <Icon name="height-icon" />
+        <div className="icon-box">
+          <Icon name="blood-type" />
+          <h3>blood-type</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="call-contact" />
+          <h3>call-contact</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="contact-info" />
+          <h3>contact-info</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="doctor-info" />
+          <h3>doctor-info</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="gender-female" />
+          <h3>gender-female</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="gender-male" />
+          <h3>gender-male</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="gender-other" />
+          <h3>gender-other</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="medical-health" />
+          <h3>medical-health</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="medical-id" />
+          <h3>medical-id</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="medication-info" />
+          <h3>medication-info</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="organ-donor" />
+          <h3>organ-donor</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="warning-sign" />
+          <h3>warning-sign</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="weight-info" />
+          <h3>weight-info</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="will-information" />
+          <h3>will-information</h3>
+        </div>
+        <div className="icon-box">
+          <Icon name="height-icon" />
+          <h3>height-icon</h3>
+        </div>
       </div>
     </IconsStory>
   ))

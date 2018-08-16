@@ -3,22 +3,25 @@ import styled, { css } from 'styled-components';
 const baseButton = css`
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 18px;
+  justify-content: space-evenly;
+  font-size: 1.125em;
   border-radius: 24px;
-  font-size: 15px;
 `;
 
 const ButtonStyles = styled.div`
   .primary {
     ${baseButton} color: #fff;
-    width: 244px;
+    width: 212px;
     height: 48px;
     background-color: #04d4bf;
     border: 0;
     font-weight: 400;
     cursor: pointer;
     transition: box-shadow 0.2s ease, background-color 0.2s ease;
+
+    i {
+      font-size: 1.5em;
+    }
 
     &:hover:enabled {
       background-color: #03d4bf;
@@ -40,13 +43,18 @@ const ButtonStyles = styled.div`
 
   .secondary {
     ${baseButton} color: #fff;
-    width: 178px;
+    width: 166px;
     height: 40px;
     background-color: #03d4bf;
     border: 0;
     font-weight: 400;
+    font-size: 0.938em;
     cursor: pointer;
     transition: box-shadow 0.2s, background-color 0.2s ease;
+
+    i {
+      font-size: 1.4em;
+    }
 
     &:hover:enabled {
       background-color: #03d4bf;
@@ -57,7 +65,6 @@ const ButtonStyles = styled.div`
     &:active:enabled {
       background-color: #00bfac;
       box-shadow: 0 2px 4px 0 rgba(0, 160, 144, 0.2);
-      border: solid 2px #00bfac;
       transition: box-shadow 0.2s ease, background-color 0.2s ease;
     }
 
@@ -68,14 +75,19 @@ const ButtonStyles = styled.div`
   }
 
   .tertiary {
-    ${baseButton} width: 178px;
+    ${baseButton} width: 166px;
     height: 40px;
     background-color: #fff;
     border: solid 2px #00bfac;
     color: #00bfac;
     font-weight: 400;
+    font-size: 0.938em;
     cursor: pointer;
     transition: color 0.2s ease, background-color 0.2s ease;
+
+    i {
+      font-size: 1.4em;
+    }
 
     &:hover:enabled {
       color: #fff;

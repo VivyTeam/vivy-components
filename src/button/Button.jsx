@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonStyles from './button.style';
+import Icon from '../icons/Icon';
 
 export default function Button(props) {
   return (
@@ -9,8 +10,8 @@ export default function Button(props) {
         disabled={props.disabled}
         onClick={props.onClick}
         className={props.type}
-        style={props.styles}
       >
+        {props.icon ? <Icon name={props.icon} /> : null}
         {props.children}
       </button>
     </ButtonStyles>
@@ -22,7 +23,7 @@ Button.propTypes = {
   type: PropTypes.string,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
-  styles: PropTypes.shape({}),
+  icon: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -30,5 +31,5 @@ Button.defaultProps = {
   type: 'primary',
   onClick: () => {},
   disabled: false,
-  styles: {},
+  icon: '',
 };
