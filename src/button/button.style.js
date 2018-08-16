@@ -4,111 +4,97 @@ const baseButton = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 30px;
-  margin: 5px 5px;
   font-size: 18px;
-  height: 40px;
-  width: 176px;
-  border-radius: 20px;
+  border-radius: 24px;
   font-size: 15px;
 `;
 
 const ButtonStyles = styled.div`
   .primary {
     ${baseButton} color: #fff;
+    width: 244px;
+    height: 48px;
     background-color: #04d4bf;
     border: 0;
     font-weight: 400;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
 
-    &:hover {
-      background-color: #05e6c8;
-      transition: background-color 0.2s ease;
+    &:hover:enabled {
+      background-color: #03d4bf;
+      box-shadow: 0 4px 8px 0 rgba(0, 160, 144, 0.4);
+      transition: box-shadow 0.2s ease, background-color 0.2s ease;
     }
 
-    &:focus {
-      outline: none;
-    }
-
-    &:active {
-      box-shadow: 0 0 4px 0 rgba(87, 87, 86, 0.5);
-      background-color: #09cbb8;
+    &:active:enabled {
+      background-color: #00bfac;
+      box-shadow: 0 2px 4px 0 rgba(0, 160, 144, 0.2);
+      transition: box-shadow 0.2s ease, background-color 0.2s ease;
     }
 
     &:disabled {
       cursor: not-allowed;
-      background-color: #bfbfbf;
-      color: rgba(255, 255, 255, 0.8);
+      background-color: #cdcdcd;
     }
   }
 
-  .outline {
-    ${baseButton} background-color: #fff;
+  .secondary {
+    ${baseButton} color: #fff;
+    width: 178px;
+    height: 40px;
+    background-color: #03d4bf;
+    border: 0;
+    font-weight: 400;
+    cursor: pointer;
+    transition: box-shadow 0.2s, background-color 0.2s ease;
+
+    &:hover:enabled {
+      background-color: #03d4bf;
+      box-shadow: 0 4px 8px 0 rgba(0, 160, 144, 0.2);
+      transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    &:active:enabled {
+      background-color: #00bfac;
+      box-shadow: 0 2px 4px 0 rgba(0, 160, 144, 0.2);
+      border: solid 2px #00bfac;
+      transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #cdcdcd;
+    }
+  }
+
+  .tertiary {
+    ${baseButton} width: 178px;
+    height: 40px;
+    background-color: #fff;
     border: solid 2px #00bfac;
     color: #00bfac;
     font-weight: 400;
     cursor: pointer;
-    transition: color 0.2s ease, border-color 0.2s ease;
+    transition: color 0.2s ease, background-color 0.2s ease;
 
-    &:hover {
-      color: #05e6c8;
-      border-color: #05e6c8;
-      transition: color 0.2s ease, border-color 0.2s ease;
+    &:hover:enabled {
+      color: #fff;
+      background-color: #03d4bf;
+      border-color: #03d4bf;
+      transition: color 0.2s ease, background-color 0.2s ease;
     }
 
-    &:focus {
-      outline: none;
-    }
-
-    &:active {
-      color: #09cbb9;
-      border-color: #09cbb8;
-    }
-
-    &:disabled {
-      cursor: not-allowed;
-      border-color: #bfbfbf;
-      color: #898988;
-    }
-  }
-
-  .danger {
-    ${baseButton} color: #fff;
-    background-color: #e94119;
-    border: 0;
-    font-weight: 400;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-
-    &:hover {
-      background-color: #ff4b20;
-      transition: background-color 0.2s ease;
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    &:active {
-      box-shadow: 0 0 4px 0 rgba(87, 87, 86, 0.5);
-      background-color: #d43c18;
+    &:active:enabled {
+      color: #fff;
+      background-color: #00bfac;
+      border: solid 2px #00bfac;
+      transition: color 0.2s ease, background-color 0.2s ease;
     }
 
     &:disabled {
       cursor: not-allowed;
-      background-color: #bfbfbf;
-      color: rgba(255, 255, 255, 0.8);
-    }
-  }
-
-  @media (max-width: 600px) {
-    .primary {
-      margin: 5px 0;
-    }
-
-    .danger {
-      margin: 5px 0;
+      background-color: #cdcdcd;
+      box-shadow: none;
     }
   }
 `;
