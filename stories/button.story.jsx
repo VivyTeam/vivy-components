@@ -46,8 +46,8 @@ const ButtonStyles = styled.div`
 `;
 
 storiesOf('Buttons', module).add(
-  'Button List',
-  withInfo('Buttons used throughout web apps')(() => (
+  'Buttons Types',
+  withInfo('A list of primary, secondary, and tertiary buttons')(() => (
     <ButtonStyles>
       <h1>Buttons</h1>
 

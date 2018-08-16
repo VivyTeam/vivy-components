@@ -33,8 +33,8 @@ const IconsStory = styled.div`
 `;
 
 storiesOf('Icons', module).add(
-  'Vivy Icons',
-  withInfo('Impact')(() => (
+  'Vivy font icon pack',
+  withInfo('Simple icon set used for frontend apps')(() => (
     <IconsStory>
       <div className="container">
         <div className="icon-box">
