@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import mapping from './iconMapping.json';
+import mapping from '../../public/fonts/vivy-icons/iconMapping.json';
 
 const Icons = styled.div`
   font-family: 'vivy-icons';
