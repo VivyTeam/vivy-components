@@ -22,15 +22,15 @@ To get started developing components first read [the storybook quickstart](https
 
 Essentially all you need is to create your component and link it together with the current stories in `stories/index.stories.js`.
 
-## Automated deployment
+## Automated Deployment
 
 Deployment for the component library is an automated process requiring three separate tasks:
 
-- Deployment to Github
-- Building and deploying to NPM
-- Building and deploying to Github Pages
+- Testing: Building, linting, and unit testing code
+- Packaging: Deploying the npm package
+- Website: Deploying storybook static assets to Github pages
 
-These tasks are automatically ran using [Circle CI](https://circleci.com/gh/UvitaTeam/) whenever a PR is accepted into the master branch.
+All tasks are ran using [Circle CI](https://circleci.com/gh/UvitaTeam/) whenever any changes are detected (excluding the master branch). Both the packaging and website steps are only triggered when a new tag is added to the project. To handle releases we use Github's release interface which will automatically run the steps necessary to make new changes available.
 
 ## Tech Used
 

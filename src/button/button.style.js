@@ -1,135 +1,112 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const height = '48px';
-const borderRadius = '28px';
-const padding = '0 30px';
-const fontSize = '18px';
-const margin = '5px 5px';
+const baseButton = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.125em;
+  border-radius: 24px;
+`;
 
 const ButtonStyles = styled.div`
   .primary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: ${padding};
-    margin: ${margin};
-    color: #fff;
+    ${baseButton} color: #fff;
+    width: 212px;
+    height: 48px;
     background-color: #04d4bf;
     border: 0;
-    border-radius: ${borderRadius};
-    height: ${height};
-    font-size: ${fontSize};
     font-weight: 400;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+
+    i {
+      font-size: 1.5em;
+    }
+
+    &:hover:enabled {
+      background-color: #03d4bf;
+      box-shadow: 0 4px 8px 0 rgba(0, 160, 144, 0.4);
+      transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    &:active:enabled {
+      background-color: #00bfac;
+      box-shadow: 0 2px 4px 0 rgba(0, 160, 144, 0.2);
+      transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #cdcdcd;
+    }
   }
 
-  .primary:hover {
-    background-color: #05e6c8;
-    transition: background-color 0.2s ease;
-  }
-
-  .primary:focus {
-    outline: none;
-  }
-
-  .primary:active {
-    box-shadow: 0 0 4px 0 rgba(87, 87, 86, 0.5);
-    background-color: #09cbb8;
-  }
-
-  .primary:disabled {
-    cursor: not-allowed;
-    background-color: #bfbfbf;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .alt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: ${padding};
-    margin: ${margin};
-    color: #898988;
-    background-color: #fff;
-    border: 1px solid #898988;
-    border-radius: ${borderRadius};
-    height: ${height};
-    font-size: ${fontSize};
-    font-weight: 400;
-    cursor: pointer;
-    transition: color 0.2s ease, border-color 0.2s ease;
-  }
-
-  .alt:hover {
-    color: #05e6c8;
-    border-color: #05e6c8;
-    transition: color 0.2s ease, border-color 0.2s ease;
-  }
-
-  .alt:focus {
-    outline: none;
-  }
-
-  .alt:active {
-    color: #09cbb9;
-    border-color: #09cbb8;
-  }
-
-  .alt:disabled {
-    cursor: not-allowed;
-    border-color: #bfbfbf;
-    color: #898988;
-  }
-
-  .danger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: ${padding};
-    margin: ${margin};
-    color: #fff;
-    background-color: #e94119;
+  .secondary {
+    ${baseButton} color: #fff;
+    width: 166px;
+    height: 40px;
+    background-color: #03d4bf;
     border: 0;
-    border-radius: ${borderRadius};
-    height: ${height};
-    font-size: ${fontSize};
     font-weight: 400;
+    font-size: 0.938em;
     cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
+    transition: box-shadow 0.2s, background-color 0.2s ease;
 
-  .danger:hover {
-    background-color: #ff4b20;
-    transition: background-color 0.2s ease;
-  }
-
-  .danger:focus {
-    outline: none;
-  }
-
-  .danger:active {
-    box-shadow: 0 0 4px 0 rgba(87, 87, 86, 0.5);
-    background-color: #d43c18;
-  }
-
-  .danger:disabled {
-    cursor: not-allowed;
-    background-color: #bfbfbf;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  @media (max-width: 600px) {
-    .primary {
-      margin: 5px 0;
+    i {
+      font-size: 1.4em;
     }
 
-    .alt {
-      margin: 5px 0;
+    &:hover:enabled {
+      background-color: #03d4bf;
+      box-shadow: 0 4px 8px 0 rgba(0, 160, 144, 0.2);
+      transition: box-shadow 0.2s ease, background-color 0.2s ease;
     }
 
-    .danger {
-      margin: 5px 0;
+    &:active:enabled {
+      background-color: #00bfac;
+      box-shadow: 0 2px 4px 0 rgba(0, 160, 144, 0.2);
+      transition: box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #cdcdcd;
+    }
+  }
+
+  .tertiary {
+    ${baseButton} width: 166px;
+    height: 40px;
+    background-color: #fff;
+    border: solid 2px #00bfac;
+    color: #00bfac;
+    font-weight: 400;
+    font-size: 0.938em;
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    i {
+      font-size: 1.4em;
+    }
+
+    &:hover:enabled {
+      color: #fff;
+      background-color: #03d4bf;
+      border-color: #03d4bf;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    &:active:enabled {
+      color: #fff;
+      background-color: #00bfac;
+      border: solid 2px #00bfac;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #cdcdcd;
+      box-shadow: none;
     }
   }
 `;

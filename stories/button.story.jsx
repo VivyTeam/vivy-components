@@ -1,66 +1,95 @@
 import React from 'react';
-import { storiesOf, setAddon } from '@storybook/react';
-import { object, withKnobs } from '@storybook/addon-knobs';
+import styled from 'styled-components';
+import { storiesOf } from '@storybook/react';
+import { withInfo } from '@storybook/addon-info';
 import { action } from '@storybook/addon-actions';
-import JSXAddon from 'storybook-addon-jsx';
 import Button from '../src/button/Button';
 
 const click = action('Button');
-const stories = storiesOf('Button', module);
 
-stories.addDecorator(withKnobs);
-setAddon(JSXAddon);
+const ButtonStyles = styled.div`
+  margin: 0 auto;
+  padding: 40px 50px;
 
-const container = {
-  margin: '0 auto',
-  paddingTop: '5px',
-};
+  h1 {
+    margin-bottom: 66.6px;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.91;
+    letter-spacing: normal;
+    color: #898988;
+    text-transform: uppercase;
+  }
 
-stories
-  .addWithJSX('Primary', () => (
-    <div style={container}>
-      <div style={{ marginBottom: '10px' }}>
-        <Button
-          onClick={() => click('Primary click')}
-          styles={object('Primary Button', {}, 'primary-button')}
-        >
-          Primary Button
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.4;
+    letter-spacing: normal;
+    color: #575756;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    margin-top: 27px;
+    margin-bottom: 50px;
+  }
+
+  button {
+    margin-right: 25px;
+  }
+`;
+
+storiesOf('Buttons', module).add(
+  'Buttons Types',
+  withInfo('A list of primary, secondary, and tertiary buttons')(() => (
+    <ButtonStyles>
+      <h1>Buttons</h1>
+
+      <h2>Primary Call to Action</h2>
+      <div className="list">
+        <Button onClick={() => click('button clicked!')}>Call to Action</Button>
+        <Button onClick={() => click('button clicked!')} icon="call-contact">
+          Call to Action
         </Button>
       </div>
-      <Button onClick={() => {}} disabled>
-        Primary Disabled
-      </Button>
-    </div>
+      <h2>Secondary Call to Action</h2>
+      <div className="list">
+        <Button type="secondary" onClick={() => click('button clicked!')}>
+          Call to Action
+        </Button>
+        <Button
+          type="secondary"
+          onClick={() => click('button clicked!')}
+          icon="call-contact"
+        >
+          Call to Action
+        </Button>
+      </div>
+      <h2>Tertiary Call to Action</h2>
+      <div className="list">
+        <Button type="tertiary" onClick={() => click('button clicked!')}>
+          Call to Action
+        </Button>
+        <Button
+          type="tertiary"
+          onClick={() => click('button clicked!')}
+          icon="call-contact"
+        >
+          Call to Action
+        </Button>
+      </div>
+      <h2>Disabled</h2>
+      <div className="list">
+        <Button disabled type="secondary" onClick={() => click('disabled')}>
+          Disabled
+        </Button>
+      </div>
+    </ButtonStyles>
   ))
-  .addWithJSX('Alt', () => (
-    <div style={container}>
-      <div style={{ marginBottom: '10px' }}>
-        <Button
-          type="alt"
-          onClick={() => click('Alt click')}
-          styles={object('Alt Button', {}, 'alt-button')}
-        >
-          Alt Button
-        </Button>
-      </div>
-      <Button type="alt" onClick={() => {}} disabled>
-        Alt Disabled
-      </Button>
-    </div>
-  ))
-  .addWithJSX('Danger', () => (
-    <div style={container}>
-      <div style={{ marginBottom: '10px' }}>
-        <Button
-          type="danger"
-          onClick={() => click('Danger click')}
-          styles={object('Danger Button', {}, 'danger-button')}
-        >
-          Danger Button
-        </Button>
-      </div>
-      <Button type="danger" onClick={() => {}} disabled>
-        Danger Disabled
-      </Button>
-    </div>
-  ));
+);
