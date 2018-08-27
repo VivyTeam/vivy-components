@@ -84,6 +84,19 @@ storiesOf('Buttons', module).add(
           Call to Action
         </Button>
       </div>
+      <h2>Quarternary call to action</h2>
+      <div className="list">
+        <Button type="quarternary" onClick={() => click('button clicked!')}>
+          Call to Action
+        </Button>
+        <Button
+          type="quarternary"
+          onClick={() => click('button clicked!')}
+          icon="call-contact"
+        >
+          Call to Action
+        </Button>
+      </div>
       <h2>Disabled</h2>
       <div className="list">
         <Button disabled type="secondary" onClick={() => click('disabled')}>

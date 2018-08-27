@@ -109,6 +109,42 @@ const ButtonStyles = styled.div`
       box-shadow: none;
     }
   }
+
+  .quarternary {
+    ${baseButton} width: 178px;
+    height: 40px;
+    background-color: #fff;
+    border: solid 2px #898988;
+    color: #898988;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    i {
+      font-size: 1.4em;
+    }
+
+    &:hover:enabled {
+      color: #fff;
+      background-color: #03d4bf;
+      border-color: #03d4bf;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    &:active:enabled {
+      color: #fff;
+      background-color: #00bfac;
+      border: solid 2px #00bfac;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #cdcdcd;
+      box-shadow: none;
+    }
+  }
 `;
 
 export default ButtonStyles;
