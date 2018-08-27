@@ -1,36 +1,6 @@
 import styled from 'styled-components';
 
 const ThemeStyles = styled.div`
-  h1 {
-    color: #575756;
-    font-size: 1.5em;
-  }
-
-  h2 {
-    color: #575756;
-    font-size: 1.25em;
-  }
-
-  h3 {
-    color: #575756;
-    font-size: 1em;
-  }
-
-  p {
-    color: #575756;
-    font-size: 0.93em;
-    font-weight: 600;
-  }
-
-  #alt {
-    font-weight: 100;
-  }
-
-  .caption {
-    font-size: 0.81em;
-    font-weight: 400;
-  }
-
   .color-container {
     display: flex;
     justify-content: center;

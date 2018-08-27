@@ -8,8 +8,7 @@ import Button from '../src/button/Button';
 const click = action('Button');
 
 const ButtonStyles = styled.div`
-  margin: 0 auto;
-  padding: 40px 50px;
+  margin: 80px 0 50px 110px;
 
   h1 {
     margin-bottom: 66.6px;
@@ -45,6 +44,8 @@ const ButtonStyles = styled.div`
   }
 `;
 
+// Button styles are copied from the Vivy zeplin
+// WebUIs/Styleguide
 storiesOf('Buttons', module).add(
   'Buttons Types',
   withInfo('A list of primary, secondary, and tertiary buttons')(() => (
@@ -78,6 +79,19 @@ storiesOf('Buttons', module).add(
         </Button>
         <Button
           type="tertiary"
+          onClick={() => click('button clicked!')}
+          icon="call-contact"
+        >
+          Call to Action
+        </Button>
+      </div>
+      <h2>Quarternary call to action</h2>
+      <div className="list">
+        <Button type="quarternary" onClick={() => click('button clicked!')}>
+          Call to Action
+        </Button>
+        <Button
+          type="quarternary"
           onClick={() => click('button clicked!')}
           icon="call-contact"
         >
