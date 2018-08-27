@@ -44,6 +44,8 @@ const ButtonStyles = styled.div`
   }
 `;
 
+// Button styles are copied from the Vivy zeplin
+// WebUIs/Styleguide
 storiesOf('Buttons', module).add(
   'Buttons Types',
   withInfo('A list of primary, secondary, and tertiary buttons')(() => (

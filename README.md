@@ -16,6 +16,14 @@ or
 
 To serve the storybook just run `npm run storybook` which will serve locally on your machine via localhost.
 
+## Design
+
+For the most part all designs laid out in this component library are spearheaded by Vivy design - therefore we take
+a lot of our design cues directly from them. In case a design does not exist, grab a designer and talk over the implementation
+details with them. You can always create a quick placeholder - but official design must be signed off and accepted by the design team.
+
+You can find all current, updated, and new designs in the [Vivy zeplin Web UIs project](https://app.zeplin.io/)
+
 ## Component Development
 
 To get started developing components first read [the storybook quickstart](https://storybook.js.org/basics/quick-start-guide/).

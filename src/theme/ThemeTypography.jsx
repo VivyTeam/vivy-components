@@ -2,6 +2,8 @@ import React from 'react';
 import FontStyles from './typography.style';
 
 export default function ThemeTypography() {
+  // Text and styles are copied from
+  // the Vivy zeplin guide WebUIs / Styleguide
   return (
     <FontStyles>
       <div className="container">
