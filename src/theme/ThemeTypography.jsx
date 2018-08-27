@@ -1,7 +1,7 @@
 import React from 'react';
-import FontStyles from './font.style';
+import FontStyles from './typography.style';
 
-export default function ThemeFonts() {
+export default function ThemeTypography() {
   return (
     <FontStyles>
       <div className="container">

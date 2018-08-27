@@ -25,6 +25,10 @@ const FormContainer = styled.div`
     color: #575756;
     font-size: 1.25em;
   }
+
+  button {
+    margin-right: 10px;
+  }
 `;
 
 storiesOf('Forms', module)
@@ -113,8 +117,8 @@ storiesOf('Forms', module)
         </FormItem>
         <FormItem>
           <Row>
-            <Button>login</Button>
-            <Button type="alt">clear</Button>
+            <Button type="secondary">login</Button>
+            <Button type="tertiary">clear</Button>
           </Row>
         </FormItem>
       </Form>
