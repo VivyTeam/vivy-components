@@ -43,7 +43,7 @@ const ButtonStyles = styled.div`
 
   .secondary {
     ${baseButton} color: #fff;
-    width: 166px;
+    width: 178px;
     height: 40px;
     background-color: #03d4bf;
     border: 0;
@@ -75,7 +75,7 @@ const ButtonStyles = styled.div`
   }
 
   .tertiary {
-    ${baseButton} width: 166px;
+    ${baseButton} width: 178px;
     height: 40px;
     background-color: #fff;
     border: solid 2px #00bfac;

@@ -8,8 +8,7 @@ import Button from '../src/button/Button';
 const click = action('Button');
 
 const ButtonStyles = styled.div`
-  margin: 0 auto;
-  padding: 40px 50px;
+  margin: 80px 0 50px 110px;
 
   h1 {
     margin-bottom: 66.6px;
