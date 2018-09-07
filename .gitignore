@@ -34,7 +34,5 @@ yarn-error.log*
 
 # Semantic specific
  semantic/*
-!/semantic/dist/*
-!/semantic/src/themes/vivy/*
+!/semantic/src/*
 !/semantic/gulpfile.js
-!/semantic/src/theme.config
