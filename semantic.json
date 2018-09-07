@@ -1,4 +1,3 @@
-// at https://semantic-ui.com/introduction/build-tools.html here you can find an example of the semantic.json file
 {
   "base": "semantic/",
   "paths": {
