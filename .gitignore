@@ -32,7 +32,3 @@ yarn-error.log*
 # Editor specific
 .idea/
 
-# Semantic specific
- semantic/*
-!/semantic/src/*
-!/semantic/gulpfile.js
