@@ -31,3 +31,10 @@ yarn-error.log*
 
 # Editor specific
 .idea/
+
+# Semantic specific
+ semantic/*
+!/semantic/dist/*
+!/semantic/src/themes/vivy/*
+!/semantic/gulpfile.js
+!/semantic/src/theme.config
