@@ -8,15 +8,13 @@
   },
   "license": "MIT",
   "scripts": {
-    "linter:format":
-      "prettier --trailing-comma es5 --single-quote --write '{,!(node_modules|.git|storybook-static)/**/}*.{js,json,jsx,md}'",
+    "linter:format": "prettier --trailing-comma es5 --single-quote --write '{,!(node_modules|.git|storybook-static)/**/}*.{js,json,jsx,md}'",
     "linter:check": "eslint stories/ && eslint src/",
     "storybook": "start-storybook -p 3006 -s ./public",
     "release": "node build.js",
     "release:test": "node build.js test",
     "build:storybook": "build-storybook -o ./storybook-static/",
-    "build:package":
-      "babel --presets react ./src --out-dir ./build/src && cp -R public ./build/public && cp package.json README.md index.js ./build"
+    "build:package": "babel --presets react ./src --out-dir ./build/src && cp -R public ./build/public && cp package.json README.md index.js ./build"
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.6",
@@ -37,6 +35,8 @@
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "semantic-ui": "^2.3.3",
+    "semantic-ui-react": "^0.82.3",
     "storybook-addon-jsx": "^5.3.0",
     "styled-components": "^3.2.3",
     "uglifyjs-webpack-plugin": "^1.1.8",
