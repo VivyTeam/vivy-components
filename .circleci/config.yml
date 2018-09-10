@@ -42,10 +42,6 @@ jobs:
 
       - run: npm install
       - run: git config --global push.default simple
-      # Update package.json version
-      - run: json -I -f package.json -e "this.version='$CIRCLE_TAG'"
-      - run: git add package.json && git commit -m "Update package.json for $CIRCLE_TAG release"
-      - run: git push origin master
       # Update the website branch
       - run: npm run build:storybook
       - run: git add storybook-static/ && git commit -m "Update static website"
