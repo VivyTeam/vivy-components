@@ -42,6 +42,7 @@ jobs:
 
     # Update package.json version
     - run: npm version v$CIRCLE_TAG
+    - run: git push origin master
     # Update installs
     - run: npm install
     # Update the website branch
