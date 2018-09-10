@@ -55,14 +55,14 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-    - build:
-        filters:
-          branches:
-            ignore:
-            - master
-    - deploy:
-        filters:
-          tags:
-            only: /.*/
-        branches:
-          ignore: /.*/
+      - build:
+          filters:
+            branches:
+              ignore:
+                - master
+      - deploy:
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
