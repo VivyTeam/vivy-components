@@ -44,12 +44,11 @@ jobs:
     - run: npm version v$CIRCLE_TAG
     # Update installs
     - run: npm install
-    - run: git config --global push.default simple
-    - run: git push origin master
     # Update the website branch
     - run: npm run build:storybook
     - run: git add storybook-static/ && git commit --allow-empty -m "Update static website"
-    - run: git push origin master
+    - run: git chekcout gh-pages
+    - run: git push origin gh-pages
     # Update the npm package
     - run: npm run build:package
     - run: echo '//registry.npmjs.org/:_authToken=${npm_TOKEN}' > ~/repo/.npmrc
