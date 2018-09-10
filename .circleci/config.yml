@@ -26,7 +26,7 @@ jobs:
         - node_modules
         key: v1-dependencies-{{ checksum "package.json" }}
 
-  deploy:
+  release:
     docker:
     - image: circleci/node:8.11.1
 
@@ -49,7 +49,8 @@ jobs:
     # Builds package.
     - run: npm run build:package
     - run: echo '//registry.npmjs.org/:_authToken=${npm_TOKEN}' > ~/repo/.npmrc
-    - run: npm publish ./dist --access public
+    - run: cd ./dist
+    - run: npm publish --access public
 
 workflows:
   version: 2
@@ -60,9 +61,11 @@ workflows:
             branches:
               ignore:
                 - master
-      - deploy:
+      - release:
           filters:
             tags:
               only: /.*/
             branches:
               ignore: /.*/
+          requires:
+            - build
