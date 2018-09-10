@@ -41,7 +41,7 @@ jobs:
         - v1-dependencies-
 
     # Update package.json version
-    - run: npm version $CIRCLE_TAG
+    - run: npm version v$CIRCLE_TAG
     - run: git push origin master
     - run: npm install
     # Deploys static website of storybook.
