@@ -43,6 +43,7 @@ jobs:
     # Update installs
     - run: npm install
     - run: git config --global push.default simple
+    - run: git push origin master
     # Update package.json version
     - run: npm version from-git --allow-same-version -f
     # Update the website branch
