@@ -41,7 +41,7 @@ jobs:
         - v1-dependencies-
 
     # Update package.json version
-    - run: npm version from-git
+    - run: npm version from-git --allow-same-version
     # Update installs
     - run: npm install
     - run: git config --global push.default simple
