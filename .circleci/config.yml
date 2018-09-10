@@ -81,6 +81,12 @@ workflows:
           branches:
             ignore:
             - master
+    - deploy_website:
+        filters:
+          tags:
+            only: /.*/
+          branches:
+            ignore: /.*/
     - deploy:
         filters:
           tags:
