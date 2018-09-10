@@ -49,7 +49,7 @@ jobs:
     # Builds package.
     - run: npm run build:package
     - run: echo '//registry.npmjs.org/:_authToken=${npm_TOKEN}' > ~/repo/.npmrc
-    - run: cd ./build
+    - run: cd ./dist
     - run: npm publish --access public
 
 workflows:
@@ -61,10 +61,6 @@ workflows:
           branches:
             ignore:
             - master
-    - deploy_website:
-        filters:
-          tags:
-            only: /.*/
     - deploy:
         filters:
           tags:
