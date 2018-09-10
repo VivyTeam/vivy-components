@@ -44,7 +44,7 @@ jobs:
       - run: git config --global push.default simple
       # Update the website branch
       - run: npm run build:storybook
-      - run: git add storybook-static/ && git commit -m "Update static website"
+      - run: git add storybook-static/ && git commit --allow-empty -m "Update static website"
       - run: git push origin gh-pages -f
       # Update the npm package
       - run: npm run build:package
