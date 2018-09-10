@@ -2,68 +2,68 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.11.1
-      
+    - image: circleci/node:8.11.1
+
     working_directory: ~/repo
 
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-dependencies-{{ checksum "package.json" }}
+        # fallback to using the latest cache if no exact match is found
+        - v1-dependencies-
 
-      - run: npm install
-      - run: npm run linter:check
-      - run: npm run build:package
-      - run: npm run build:storybook
-      # preview what files will be packaged into npm
-      - run: ls ./build
+    - run: npm install
+    - run: npm run linter:check
+    - run: npm run build:package
+    - run: npm run build:storybook
+    # preview what files will be packaged into npm
+    - run: ls ./build
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+    - save_cache:
+        paths:
+        - node_modules
+        key: v1-dependencies-{{ checksum "package.json" }}
 
   deploy:
     docker:
-      - image: circleci/node:8.11.1
+    - image: circleci/node:8.11.1
 
     working_directory: ~/repo
 
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+    - checkout
+    - restore_cache:
+        keys:
+        - v1-dependencies-{{ checksum "package.json" }}
+        # fallback to using the latest cache if no exact match is found
+        - v1-dependencies-
 
-      - run: npm install
-      - run: git config --global push.default simple
-      # Update the website branch
-      - run: npm run build:storybook
-      - run: git add storybook-static/ && git commit --allow-empty -m "Update static website"
-      - run: git push origin gh-pages -f
-      # Update the npm package
-      - run: npm run build:package
-      - run: echo '//registry.npmjs.org/:_authToken=${npm_TOKEN}' > ~/repo/.npmrc
-      - run: cd ./build
-      - run: npm publish --access public
+    - run: npm install
+    - run: git config --global push.default simple
+    # Update the website branch
+    - run: npm run build:storybook
+    - run: git add storybook-static/ && git commit --allow-empty -m "Update static website"
+    - run: git push origin master
+    # Update the npm package
+    - run: npm run build:package
+    - run: echo '//registry.npmjs.org/:_authToken=${npm_TOKEN}' > ~/repo/.npmrc
+    - run: cd ./build
+    - run: npm publish --access public
 
 workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build:
-          filters:
-            branches:
-              ignore:
-                - master
-      - deploy:
-          filters:
-            tags:
-              only: /.*/
-            branches:
-              ignore: /.*/
+    - build:
+        filters:
+          branches:
+            ignore:
+            - master
+    - deploy:
+        filters:
+          tags:
+            only: /.*/
+          branches:
+            ignore: /.*/
