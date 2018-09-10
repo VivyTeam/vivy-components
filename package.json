@@ -13,7 +13,7 @@
     "storybook": "start-storybook -p 3006 -s ./public",
     "release": "node build.js",
     "release:test": "node build.js test",
-    "build:storybook": "build-storybook -o ./storybook-static/",
+    "build:storybook": "storybook-to-ghpages",
     "build:package": "babel --presets react ./src --out-dir ./build/src && cp -R public ./build/*"
   },
   "dependencies": {
@@ -42,6 +42,7 @@
     "webpack-dev-server": "^2.11.1"
   },
   "devDependencies": {
+    "@storybook/storybook-deployer": "^2.3.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-jest": "^23.0.1",

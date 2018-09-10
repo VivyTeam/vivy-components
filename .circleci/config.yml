@@ -41,34 +41,16 @@ jobs:
         - v1-dependencies-
 
     # Update package.json version
-    - run: npm version $CIRCLE_TAG
+    - run: npm version v$CIRCLE_TAG
     - run: git push origin master
     - run: npm install
+    # Deploys static website of storybook.
     - run: npm run build:storybook
+    # Builds package.
     - run: npm run build:package
     - run: echo '//registry.npmjs.org/:_authToken=${npm_TOKEN}' > ~/repo/.npmrc
     - run: cd ./build
     - run: npm publish --access public
-
-  deploy_website:
-    docker:
-    - image: circleci/node:8.11.1
-
-    working_directory: ~/repo
-
-    steps:
-    - checkout
-    - restore_cache:
-        keys:
-        - v1-dependencies-{{ checksum "package.json" }}
-        # fallback to using the latest cache if no exact match is found
-        - v1-dependencies-
-
-    - run: npm install
-    - run: npm run build:storybook
-    - run: git checkout gh-pages
-    - run: git add storybook-static/ && git commit --allow-empty -m "Update static website"
-    - run: git push origin gh-pages -f
 
 workflows:
   version: 2
