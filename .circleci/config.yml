@@ -64,9 +64,9 @@ jobs:
         # fallback to using the latest cache if no exact match is found
         - v1-dependencies-
 
-    - run: git checkout gh-pages
     - run: npm install
     - run: npm run build:storybook
+    - run: git checkout gh-pages
     - run: git add storybook-static/ && git commit --allow-empty -m "Update static website"
     - run: git push origin gh-pages -f
 
