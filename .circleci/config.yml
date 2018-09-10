@@ -22,7 +22,7 @@ jobs:
       - run: npm run build:storybook
       # Builds package.
       - run: npm run build:package
-      - run: echo '//registry.npmjs.org/:_authToken=${npm_TOKEN}' > ~/repo/.npmrc
+      - run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ~/repo/.npmrc
       - run: cd ./dist
       - run: npm publish --access public
 
@@ -36,4 +36,3 @@ workflows:
               only: /.*/
             branches:
               ignore: /.*/
-              
