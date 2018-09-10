@@ -83,11 +83,7 @@ workflows:
         filters:
           tags:
             only: /.*/
-          branches:
-            ignore: /.*/
     - deploy:
         filters:
           tags:
             only: /.*/
-          branches:
-            ignore: /.*/
