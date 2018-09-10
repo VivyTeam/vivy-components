@@ -47,7 +47,7 @@ jobs:
     # Update the website branch
     - run: npm run build:storybook
     - run: git add storybook-static/ && git commit --allow-empty -m "Update static website"
-    - run: git chekcout gh-pages
+    - run: git checkout gh-pages
     - run: git push origin gh-pages
     # Update the npm package
     - run: npm run build:package
