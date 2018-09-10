@@ -1,7 +1,7 @@
-import React from 'react';
-import FlexGrid from '../grid/FlexGrid';
-import Col from '../grid/Col';
-import WelcomeStyles from './welcome.style';
+import React from "react";
+import FlexGrid from "../grid/FlexGrid";
+import Col from "../grid/Col";
+import WelcomeStyles from "./welcome.style";
 
 export default function WelcomePage() {
   return (

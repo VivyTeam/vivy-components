@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { InputStyles } from './form.style';
+import React from "react";
+import PropTypes from "prop-types";
+import { InputStyles } from "./form.style";
 
 const Input = props => (
   <InputStyles>
@@ -24,14 +24,14 @@ Input.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   label: PropTypes.string,
-  isRequired: PropTypes.bool,
+  isRequired: PropTypes.bool
 };
 
 Input.defaultProps = {
-  type: '',
-  placeholder: '',
-  label: '',
-  isRequired: false,
+  type: "",
+  placeholder: "",
+  label: "",
+  isRequired: false
 };
 
 export default Input;

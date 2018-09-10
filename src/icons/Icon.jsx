@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import mapping from '../../public/fonts/vivy-icons/iconMapping.json';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import mapping from "../../public/fonts/vivy-icons/iconMapping.json";
 
 const Icons = styled.div`
-  font-family: 'vivy-icons';
+  font-family: "vivy-icons";
 
   i {
     font-weight: normal;
@@ -24,5 +24,5 @@ export default function Icon({ name }) {
 }
 
 Icon.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
 };

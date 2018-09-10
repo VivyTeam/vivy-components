@@ -1,9 +1,9 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import styled from 'styled-components';
-import ThemeColors from '../src/theme/ThemeColors';
-import ThemeTypography from '../src/theme/ThemeTypography';
-import ThemeLogos from '../src/theme/ThemeLogos';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import styled from "styled-components";
+import ThemeColors from "../src/theme/ThemeColors";
+import ThemeTypography from "../src/theme/ThemeTypography";
+import ThemeLogos from "../src/theme/ThemeLogos";
 
 const ThemeStyles = styled.div`
   .container {
@@ -23,18 +23,18 @@ const ThemeStyles = styled.div`
   }
 `;
 
-storiesOf('App Styles', module)
-  .add('Colors', () => (
+storiesOf("App Styles", module)
+  .add("Colors", () => (
     <ThemeStyles>
       <ThemeColors />
     </ThemeStyles>
   ))
-  .add('Typography', () => (
+  .add("Typography", () => (
     <ThemeStyles>
       <ThemeTypography />
     </ThemeStyles>
   ))
-  .add('Logos', () => (
+  .add("Logos", () => (
     <ThemeStyles>
       <ThemeLogos />
     </ThemeStyles>

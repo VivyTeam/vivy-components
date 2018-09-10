@@ -1,8 +1,8 @@
-import React from 'react';
-import FlexGrid from '../grid/FlexGrid';
-import Col from '../grid/Col';
-import WelcomeStyles from './welcome.style';
-import header from '../../public/images/header.png';
+import React from "react";
+import FlexGrid from "../grid/FlexGrid";
+import Col from "../grid/Col";
+import WelcomeStyles from "./welcome.style";
+import header from "../../public/images/header.png";
 
 export default function PrinciplesPage() {
   return (

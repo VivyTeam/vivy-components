@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ButtonStyles from './button.style';
-import Icon from '../icons/Icon';
+import React from "react";
+import PropTypes from "prop-types";
+import ButtonStyles from "./button.style";
+import Icon from "../icons/Icon";
 
 export default function Button(props) {
   return (
@@ -23,13 +23,13 @@ Button.propTypes = {
   type: PropTypes.string,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
-  icon: PropTypes.string,
+  icon: PropTypes.string
 };
 
 Button.defaultProps = {
-  children: '',
-  type: 'primary',
+  children: "",
+  type: "primary",
   onClick: () => {},
   disabled: false,
-  icon: '',
+  icon: ""
 };

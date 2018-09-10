@@ -1,8 +1,8 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
-import styled from 'styled-components';
-import Icon from '../src/icons/Icon';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import { withInfo } from "@storybook/addon-info";
+import styled from "styled-components";
+import Icon from "../src/icons/Icon";
 
 const IconsStory = styled.div`
   .container {
@@ -49,9 +49,9 @@ const IconsStory = styled.div`
   }
 `;
 
-storiesOf('Icons', module).add(
-  'Vivy font icon pack',
-  withInfo('Simple icon set used for frontend apps')(() => (
+storiesOf("Icons", module).add(
+  "Vivy font icon pack",
+  withInfo("Simple icon set used for frontend apps")(() => (
     <IconsStory>
       <div className="container">
         <div className="title">Icons</div>
