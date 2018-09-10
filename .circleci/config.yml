@@ -87,9 +87,3 @@ workflows:
             only: /.*/
           branches:
             ignore: /.*/
-    - deploy_website:
-      filters:
-        tags:
-          only: /.*/
-        branches:
-          ignore: /.*/
