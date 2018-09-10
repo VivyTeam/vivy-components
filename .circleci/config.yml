@@ -43,9 +43,7 @@ jobs:
     # Update package.json version
     - run: npm version v$CIRCLE_TAG
     - run: git push origin master
-    # Update installs
     - run: npm install
-    # Update the npm package
     - run: npm run build:storybook
     - run: npm run build:package
     - run: echo '//registry.npmjs.org/:_authToken=${npm_TOKEN}' > ~/repo/.npmrc
@@ -56,4 +54,14 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-    - deploy
+    - build:
+        filters:
+          branches:
+            ignore:
+            - master
+    - deploy:
+        filters:
+          tags:
+            only: /.*/
+          branches:
+            ignore: /.*/
