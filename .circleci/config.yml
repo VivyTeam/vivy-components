@@ -40,10 +40,11 @@ jobs:
         # fallback to using the latest cache if no exact match is found
         - v1-dependencies-
 
-    - run: npm install
-    - run: git config --global push.default simple
     # Update package.json version
     - run: npm version from-git
+    # Update installs
+    - run: npm install
+    - run: git config --global push.default simple
     # Update the website branch
     - run: npm run build:storybook
     - run: git add storybook-static/ && git commit --allow-empty -m "Update static website"
