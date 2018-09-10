@@ -14,7 +14,7 @@
     "release": "node build.js",
     "release:test": "node build.js test",
     "build:storybook": "storybook-to-ghpages",
-    "build:package": "babel --presets react ./src --out-dir ./build/src && cp -R public ./build/*"
+    "build:package": "babel --presets react --copy-files --out-dir dist --ignore node_modules ./"
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.6",
