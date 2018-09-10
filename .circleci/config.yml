@@ -49,9 +49,6 @@ jobs:
     - run: echo '//registry.npmjs.org/:_authToken=${npm_TOKEN}' > ~/repo/.npmrc
     - run: cd ./build
     - run: npm publish --access public
-    # Release the website
-    - run: git add storybook-static/ && git commit -m "Update static website"
-    - run: git push origin gh-pages -f
 
   deploy_website:
     docker:
