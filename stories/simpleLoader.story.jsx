@@ -12,7 +12,7 @@ const container = {
   paddingTop: "100px",
 };
 
-storiesOf("Spinner", module).addWithJSX("Spinner",
+storiesOf("Animations", module).addWithJSX("Spinner",
   withInfo("A Spinner")(() => (
     <div style={container}>
       <SimpleLoader />
