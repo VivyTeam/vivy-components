@@ -15,14 +15,15 @@ jobs:
           - v1-dependencies-
 
       # Update package.json version
-      - run: npm version v$CIRCLE_TAG
-      - run: git push origin master
+      - run: npm version v$CIRCLE_TAG && git push origin master
       - run: npm install
       # Deploys static website of storybook.
       - run: npm run build:storybook
       # Builds package.
-      - run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ~/repo/.npmrc
       - run: npm run build:package
+      - run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ~/repo/.npmrc
+      - run: cd ./dist
+      - run: npm publish --access public
 
 workflows:
   version: 2
