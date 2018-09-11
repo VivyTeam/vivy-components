@@ -7,15 +7,10 @@
     "url": "git://github.com/UvitaTeam/vivy-components"
   },
   "license": "MIT",
-  "files": [
-    "./dist",
-    "./public",
-    "index.js",
-    "README.md",
-    "LICENSE"
-  ],
+  "files": ["/dist", "/public", "index.js", "README.md", "LICENSE"],
   "scripts": {
-    "linter:format": "prettier --trailing-comma es5 --single-quote --write '{,!(node_modules|.git|storybook-static)/**/}*.{js,json,jsx,md}'",
+    "linter:format":
+      "prettier --trailing-comma es5 --single-quote --write '{,!(node_modules|.git|storybook-static)/**/}*.{js,json,jsx,md}'",
     "linter:check": "eslint stories/ && eslint src/",
     "storybook": "start-storybook -p 3006 -s ./public",
     "release": "node build.js",
