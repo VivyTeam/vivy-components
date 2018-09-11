@@ -9,10 +9,11 @@ setAddon(JSXAddon);
 const container = {
   width: "80%",
   margin: "0 auto",
-  paddingTop: "100px",
+  paddingTop: "100px"
 };
 
-storiesOf("Animations", module).addWithJSX("Spinner",
+storiesOf("Animations", module).addWithJSX(
+  "Spinner",
   withInfo("A Spinner")(() => (
     <div style={container}>
       <SimpleLoader />
