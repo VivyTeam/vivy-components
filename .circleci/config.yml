@@ -21,8 +21,7 @@ jobs:
       - run: npm run build:storybook
       # Builds package.
       - run: npm run build:package
-      - run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ~/repo/.npmrc
-      - run: cd ./dist && npm publish --access public
+      - run: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ~/repo/.npmrc && cd ./dist && npm publish --access public
 
 workflows:
   version: 2
