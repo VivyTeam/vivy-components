@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import copy from 'copy-to-clipboard';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import copy from "copy-to-clipboard";
 
 export default class ColorBox extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export default class ColorBox extends Component {
 
     copy(text, {
       debug: true,
-      message: 'Copied',
+      message: "Copied"
     });
   }
 
@@ -24,7 +24,7 @@ export default class ColorBox extends Component {
     return (
       <div
         className="color-box-container"
-        style={{ color: dark ? '#575756' : '#fff' }}
+        style={{ color: dark ? "#575756" : "#fff" }}
       >
         <div
           tabIndex="0"
@@ -40,7 +40,7 @@ export default class ColorBox extends Component {
         >
           <small>{description}</small>
           <br />
-          <small>{gradient ? '' : color}</small>
+          <small>{gradient ? "" : color}</small>
           <h2 id="copy">copy</h2>
         </div>
       </div>
@@ -52,11 +52,11 @@ ColorBox.propTypes = {
   description: PropTypes.string.isRequired,
   color: PropTypes.string,
   gradient: PropTypes.string,
-  dark: PropTypes.bool,
+  dark: PropTypes.bool
 };
 
 ColorBox.defaultProps = {
-  color: '#fff',
+  color: "#fff",
   gradient: null,
-  dark: false,
+  dark: false
 };

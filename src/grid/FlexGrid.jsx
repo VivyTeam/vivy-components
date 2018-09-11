@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import GridStyles from './grid.style';
+import React from "react";
+import PropTypes from "prop-types";
+import GridStyles from "./grid.style";
 
 export default function FlexGrid(props) {
   return (
@@ -11,5 +11,5 @@ export default function FlexGrid(props) {
 }
 
 FlexGrid.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };

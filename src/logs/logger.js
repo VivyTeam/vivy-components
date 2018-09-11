@@ -6,7 +6,7 @@ const logger = {
   },
   error: err => {
     Console.error(err);
-  },
+  }
 };
 
 export default logger;

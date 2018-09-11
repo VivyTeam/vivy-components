@@ -1,21 +1,21 @@
-import React from 'react';
-import { storiesOf, setAddon } from '@storybook/react';
-import JSXAddon from 'storybook-addon-jsx';
-import styled from 'styled-components';
-import Form from '../src/forms/Form';
-import FormItem from '../src/forms/FormItem';
-import Input from '../src/forms/Input';
-import Button from '../src/button/Button';
-import Row from '../src/grid/Row';
+import React from "react";
+import { storiesOf, setAddon } from "@storybook/react";
+import JSXAddon from "storybook-addon-jsx";
+import styled from "styled-components";
+import Form from "../src/forms/Form";
+import FormItem from "../src/forms/FormItem";
+import Input from "../src/forms/Input";
+import Button from "../src/button/Button";
+import Row from "../src/grid/Row";
 
 setAddon(JSXAddon);
 
 const container = {
-  margin: '40px 30px',
+  margin: "40px 30px"
 };
 
 const box = {
-  margin: '40px 30px',
+  margin: "40px 30px"
 };
 
 const FormContainer = styled.div`
@@ -31,15 +31,15 @@ const FormContainer = styled.div`
   }
 `;
 
-storiesOf('Forms', module)
-  .addWithJSX('Input', () => (
+storiesOf("Forms", module)
+  .addWithJSX("Input", () => (
     <div style={container}>
       <div style={box}>
         <Input id="name" placeholder="Your name" label="Name" />
       </div>
     </div>
   ))
-  .addWithJSX('Simple Form', () => (
+  .addWithJSX("Simple Form", () => (
     <FormContainer>
       <h2>Vertical form (default)</h2>
       <Form>
@@ -83,7 +83,7 @@ storiesOf('Forms', module)
       </Form>
     </FormContainer>
   ))
-  .addWithJSX('Form Validation', () => (
+  .addWithJSX("Form Validation", () => (
     <FormContainer>
       <Form>
         <FormItem>

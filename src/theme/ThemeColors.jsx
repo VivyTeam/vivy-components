@@ -1,9 +1,9 @@
-import React from 'react';
-import ThemeStyles from './theme.style';
-import ColorBox from './ColorBox';
-import FlexGrid from '../grid/FlexGrid';
-import Row from '../grid/Row';
-import Col from '../grid/Col';
+import React from "react";
+import ThemeStyles from "./theme.style";
+import ColorBox from "./ColorBox";
+import FlexGrid from "../grid/FlexGrid";
+import Row from "../grid/Row";
+import Col from "../grid/Col";
 
 export default function ThemeColors() {
   return (
