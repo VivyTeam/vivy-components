@@ -16,17 +16,28 @@ storiesOf("Footer", module).addWithJSX("Simple Vivy Footer", () => (
   <div style={container}>
     <Index>
       <Fragment>
-        <a className="link" href="https://www.vivy.com/impressum" target="_">
+        <a
+          className="link"
+          href="https://www.vivy.com/impressum"
+          target="_"
+          rel="noopener noreferrer"
+        >
           Impressum
         </a>
         <a
           className="link"
           href="https://www.vivy.com/nutzungsbedingungen"
           target="_"
+          rel="noopener noreferrer"
         >
           AGB
         </a>
-        <a className="link" href="https://www.vivy.com/datenschutz" target="_">
+        <a
+          className="link"
+          href="https://www.vivy.com/datenschutz"
+          target="_"
+          rel="noopener noreferrer"
+        >
           Datenschutz
         </a>
       </Fragment>
