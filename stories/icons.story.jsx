@@ -38,7 +38,7 @@ const IconsStory = styled.div`
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
-    height: 400px;
+    height: 500px;
   }
 
   .icon-box {
@@ -63,6 +63,10 @@ storiesOf("Icons", module).add(
           <div className="icon-box">
             <Icon name="call-contact" />
             <h3>call-contact</h3>
+          </div>
+          <div className="icon-box">
+            <Icon name="phone-number" />
+            <h3>phone-number</h3>
           </div>
           <div className="icon-box">
             <Icon name="contact-info" />
@@ -115,6 +119,14 @@ storiesOf("Icons", module).add(
           <div className="icon-box">
             <Icon name="height-icon" />
             <h3>height-icon</h3>
+          </div>
+          <div className="icon-box">
+            <Icon name="calendar-date" />
+            <h3>calendar-date</h3>
+          </div>
+          <div className="icon-box">
+            <Icon name="insurance-shield" />
+            <h3>insurance-shield</h3>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import IconsStory from "./icons.story";
 import Grid from "./grid.story";
 import ButtonStory from "./button.story";
 import FormsStory from "./forms.story";
-import FooterStory from "./footer.story";
+import LayoutStory from "./layout.story";
+import CollectionsStory from "./collections.story";
 import Fonts from "../src/fonts/fonts.style";
 /* eslint-enable */
