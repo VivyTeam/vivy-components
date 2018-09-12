@@ -1,6 +1,6 @@
 import React from "react";
-import PT from "prop-types";
-import FooterStyles from "./Footer.style";
+import PropTypes from "prop-types";
+import FooterStyles from "./footer.style";
 
 const Index = ({ children }) => (
   <FooterStyles className="footer">
@@ -9,7 +9,7 @@ const Index = ({ children }) => (
 );
 
 Index.propTypes = {
-  children: PT.node.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default Index;
