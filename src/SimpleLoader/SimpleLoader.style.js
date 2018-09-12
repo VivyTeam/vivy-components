@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   height: ${props => props.height}px;
 
   ${props =>
-    props.isCentered &&
+    props.centered &&
     css`
       display: flex;
       justify-content: center;
