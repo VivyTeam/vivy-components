@@ -22,8 +22,6 @@
     "beforeEach": false,
     "jest": false,
     "navigator": false,
-    "btoa": false,
-    "atob": false,
     "afterEach": false
   }
 }

@@ -1,23 +1,13 @@
 import React from "react";
-import { storiesOf, setAddon } from "@storybook/react";
-import JSXAddon from "storybook-addon-jsx";
-import SimpleLoader from "../src/SimpleLoader/index";
+import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
+import Spinner from "../src/SimpleLoader/SimpleLoader";
 
-setAddon(JSXAddon);
-
-const container = {
-  width: "80%",
-  margin: "0 auto",
-  paddingTop: "100px"
-};
-
-storiesOf("Animations", module).addWithJSX(
+storiesOf("Animations", module).add(
   "Spinner",
-  withInfo("A Spinner")(() => (
-    <div style={container}>
-      <SimpleLoader />
-      <SimpleLoader isCentered />
+  withInfo("A simple spinner for showing loading progress")(() => (
+    <div>
+      <Spinner centered />
     </div>
   ))
 );

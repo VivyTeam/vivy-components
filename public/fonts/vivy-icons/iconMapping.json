@@ -1,11 +1,13 @@
 {
   "icon-blood-type": "e800",
-  "icon-call-contact": "e801",
+  "icon-call-contact": "e80f",
+  "phone-number": "e811",
   "icon-contact-info": "e802",
   "icon-doctor-info": "e803",
   "icon-gender-female": "e804",
   "icon-gender-male": "e805",
   "icon-gender-other": "e806",
+  "icon-calendar-date": "e807",
   "icon-medical-health": "e808",
   "icon-medical-id": "e809",
   "icon-medication-info": "e80a",
@@ -13,5 +15,7 @@
   "icon-warning-sign": "e80c",
   "icon-weight-info": "e80d",
   "icon-will-information": "e80e",
-  "icon-height-icon": "e810"
+  "icon-height-icon": "e801",
+  "icon-insurance-shield": "e810",
+  "icon-phone-number": "e811"
 }
