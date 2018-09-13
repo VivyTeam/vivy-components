@@ -4,7 +4,7 @@ import SimpleIcon from "./SimpleIcon";
 import DetailedIcon from "./DetailedIcon";
 import missingAvatar from "../../public/images/empty-avatar.svg";
 import MedicalCardStyles from "./medicalCard.style";
-import dateFormat from "./dateFormat";
+import DateDisplay from "../dates/DateDisplay";
 
 export default function MedicalCard({ user, data }) {
   const {
@@ -19,9 +19,14 @@ export default function MedicalCard({ user, data }) {
     pregnancyDueDate && Object.keys(pregnancyDueDate).length > 0 ? (
       <SimpleIcon
         iconDetail={
-          pregnancyDueDate.data
-            ? `Schwangerschaft (erwartet ${dateFormat(pregnancyDueDate.data)})`
-            : "Schwanger"
+          pregnancyDueDate.data ? (
+            <span className="date-format">
+              Schwangerschaft (erwartet &nbsp;
+              <DateDisplay date={pregnancyDueDate.data} />)
+            </span>
+          ) : (
+            "Schwanger"
+          )
         }
         icon="warning-sign"
         iconColor="#f6be42"
@@ -35,10 +40,6 @@ export default function MedicalCard({ user, data }) {
     />
   ) : null;
   const name = "name" in user ? user.name : "Name unbekannt";
-  const birthDate =
-    "dateOfBirth" in user
-      ? dateFormat(user.dateOfBirth)
-      : "Geburtsdatum unbekannt";
   const picture =
     "pictureBase64" in user
       ? `data:image/png;base64, ${user.pictureBase64}`
@@ -50,7 +51,13 @@ export default function MedicalCard({ user, data }) {
         <img src={picture} alt="User Profile" />
         <div className="medical-data">
           <h2>{name}</h2>
-          <p>{birthDate}</p>
+          {"dateOfBirth" in user ? (
+            <div className="date-format">
+              <DateDisplay date={user.dateOfBirth} />
+            </div>
+          ) : (
+            "Geburtsdatum unbekannt"
+          )}
           <div className="basic-data">
             {gender ? (
               <SimpleIcon
@@ -99,6 +106,6 @@ MedicalCard.propTypes = {
     height: PropTypes.string,
     weight: PropTypes.string,
     bloodType: PropTypes.string,
-    gender: PropTypes.shape
+    gender: PropTypes.shape({})
   }).isRequired
 };

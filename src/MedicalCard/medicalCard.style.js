@@ -23,10 +23,7 @@ const MedicalCardStyles = styled.div`
     margin: 17px 15px 9px 15px;
   }
 
-  p {
-    font-size: 16px;
-    line-height: 1.25;
-    color: #575756;
+  .date-format {
     margin-top: 0;
     margin-bottom: 22px;
   }

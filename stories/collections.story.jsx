@@ -7,7 +7,6 @@ import MedicalCard from "../src/MedicalCard";
 const CollectionStyles = styled.div`
   width: 80%;
   margin: 0 auto;
-  padding-top: 100px;
 
   .layout-body {
     padding: 100px;
@@ -28,13 +27,17 @@ storiesOf("Collections", module).add(
             dateOfBirth: "1970-01-01"
           }}
           data={{
+            pregnancyDueDate: {
+              data: "1970-01-01"
+            },
             gender: {
-              text: "Other",
-              icon: "gender-other"
+              text: "Female",
+              icon: "gender-female"
             },
             weight: "82",
             height: "180",
-            bloodType: "A-"
+            bloodType: "A-",
+            organDonor: "yes"
           }}
           lastUpdatedAt="1970-01-01"
         />
