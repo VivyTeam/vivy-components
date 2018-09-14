@@ -22,14 +22,15 @@ function MedicalCard({ user, data, t }) {
         iconDetail={
           pregnancyDueDate.data ? (
             <span className="date-format">
-              {t("pregnancyStatus")} ({t("dueDate")} &nbsp;
+              {t("component.pregnancyStatus")}
+              &nbsp;({t("component.dueDate")}&nbsp;
               <DateDisplay
                 date={pregnancyDueDate.data}
-                monthNames={t("months")}
+                monthNames={t("component.months")}
               />)
             </span>
           ) : (
-            t("pregnant")
+            t("component.pregnant")
           )
         }
         icon="warning-sign"
@@ -40,7 +41,7 @@ function MedicalCard({ user, data, t }) {
     "name" in user ? (
       user.name
     ) : (
-      <Trans i18nKey="nameUnknown">Name unbekannt</Trans>
+      <Trans i18nKey="component.nameUnknown">Name unbekannt</Trans>
     );
   const picture =
     "pictureBase64" in user
@@ -59,11 +60,13 @@ function MedicalCard({ user, data, t }) {
                 <div className="date-format">
                   <DateDisplay
                     date={user.dateOfBirth}
-                    monthNames={t("months")}
+                    monthNames={t("component.months")}
                   />
                 </div>
               ) : (
-                <Trans i18nKey="dobUnknown">Geburtsdatum unbekannt</Trans>
+                <Trans i18nKey="component.dobUnknown">
+                  Geburtsdatum unbekannt
+                </Trans>
               )}
               <div className="basic-data">
                 {gender ? (
@@ -75,7 +78,7 @@ function MedicalCard({ user, data, t }) {
                 ) : null}
                 {organDonor ? (
                   <SimpleIcon
-                    iconDetail={t("organDonor")}
+                    iconDetail={t("component.organDonor")}
                     icon="organ-donor"
                     iconColor="#fe5533"
                   />
@@ -86,18 +89,18 @@ function MedicalCard({ user, data, t }) {
           </div>
           <div className="detailed-data">
             <DetailedIcon
-              title={t("weight")}
+              title={t("component.weight")}
               iconDetail={`${weight} kg`}
               icon="weight-info"
             />
             <DetailedIcon
-              title={t("height")}
+              title={t("component.height")}
               iconDetail={`${height} cm`}
               icon="height-icon"
             />
             <DetailedIcon
-              title={t("bloodType")}
-              iconDetail={bloodType || t("notAvailable")}
+              title={t("component.bloodType")}
+              iconDetail={bloodType || t("component.notAvailable")}
               icon="blood-type"
             />
           </div>

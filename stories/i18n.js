@@ -12,6 +12,7 @@ i18n
     ns: ["translations"],
     defaultNS: "translations",
     returnObjects: true,
+    debug: true,
     react: {
       wait: true
     }
