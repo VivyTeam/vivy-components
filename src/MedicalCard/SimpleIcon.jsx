@@ -13,7 +13,8 @@ export default function BasicInfoIcon({ icon, iconDetail, iconColor }) {
 }
 
 BasicInfoIcon.propTypes = {
-  iconDetail: PropTypes.string.isRequired,
+  iconDetail: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})])
+    .isRequired,
   icon: PropTypes.string.isRequired,
   iconColor: PropTypes.string
 };

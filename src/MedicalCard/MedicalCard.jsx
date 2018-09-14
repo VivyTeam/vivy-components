@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { I18n, Trans, translate } from "react-i18next";
 import SimpleIcon from "./SimpleIcon";
 import DetailedIcon from "./DetailedIcon";
 import missingAvatar from "../../public/images/empty-avatar.svg";
 import MedicalCardStyles from "./medicalCard.style";
-import dateFormat from "./dateFormat";
+import DateDisplay from "../dates/DateDisplay";
 
-export default function MedicalCard({ user, data }) {
+function MedicalCard({ user, data, t }) {
   const {
     pregnancyDueDate,
     organDonor,
@@ -19,69 +20,93 @@ export default function MedicalCard({ user, data }) {
     pregnancyDueDate && Object.keys(pregnancyDueDate).length > 0 ? (
       <SimpleIcon
         iconDetail={
-          pregnancyDueDate.data
-            ? `Schwangerschaft (erwartet ${dateFormat(pregnancyDueDate.data)})`
-            : "Schwanger"
+          pregnancyDueDate.data ? (
+            <span className="date-format">
+              {t("component.pregnancyStatus")}
+              &nbsp;({t("component.dueDate")}&nbsp;
+              <DateDisplay
+                date={pregnancyDueDate.data}
+                monthNames={t("component.months")}
+              />)
+            </span>
+          ) : (
+            t("component.pregnant")
+          )
         }
         icon="warning-sign"
         iconColor="#f6be42"
       />
     ) : null;
-  const donor = organDonor ? (
-    <SimpleIcon
-      iconDetail="Organspender"
-      icon="organ-donor"
-      iconColor="#fe5533"
-    />
-  ) : null;
-  const name = "name" in user ? user.name : "Name unbekannt";
-  const birthDate =
-    "dateOfBirth" in user
-      ? dateFormat(user.dateOfBirth)
-      : "Geburtsdatum unbekannt";
+  const name =
+    "name" in user ? (
+      user.name
+    ) : (
+      <Trans i18nKey="component.nameUnknown">Name unbekannt</Trans>
+    );
   const picture =
     "pictureBase64" in user
       ? `data:image/png;base64, ${user.pictureBase64}`
       : missingAvatar;
 
   return (
-    <MedicalCardStyles>
-      <div className="user-profile">
-        <img src={picture} alt="User Profile" />
-        <div className="medical-data">
-          <h2>{name}</h2>
-          <p>{birthDate}</p>
-          <div className="basic-data">
-            {gender ? (
-              <SimpleIcon
-                iconDetail={gender.text}
-                icon={gender.icon}
-                iconColor="#61d3c1"
-              />
-            ) : null}
-            {donor}
-            {pregnancyStatus}
+    <I18n ns="translations">
+      {() => (
+        <MedicalCardStyles>
+          <div className="user-profile">
+            <img src={picture} alt="User Profile" />
+            <div className="medical-data">
+              <h2>{name}</h2>
+              {"dateOfBirth" in user ? (
+                <div className="date-format">
+                  <DateDisplay
+                    date={user.dateOfBirth}
+                    monthNames={t("component.months")}
+                  />
+                </div>
+              ) : (
+                <Trans i18nKey="component.dobUnknown">
+                  Geburtsdatum unbekannt
+                </Trans>
+              )}
+              <div className="basic-data">
+                {gender ? (
+                  <SimpleIcon
+                    iconDetail={gender.text}
+                    icon={gender.icon}
+                    iconColor="#61d3c1"
+                  />
+                ) : null}
+                {organDonor ? (
+                  <SimpleIcon
+                    iconDetail={t("component.organDonor")}
+                    icon="organ-donor"
+                    iconColor="#fe5533"
+                  />
+                ) : null}
+                {pregnancyStatus}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="detailed-data">
-        <DetailedIcon
-          title="Gewicht"
-          iconDetail={`${weight} kg`}
-          icon="weight-info"
-        />
-        <DetailedIcon
-          title="Körpergröße"
-          iconDetail={`${height} cm`}
-          icon="height-icon"
-        />
-        <DetailedIcon
-          title="Blutgruppe"
-          iconDetail={bloodType || "N/A"}
-          icon="blood-type"
-        />
-      </div>
-    </MedicalCardStyles>
+          <div className="detailed-data">
+            <DetailedIcon
+              title={t("component.weight")}
+              iconDetail={`${weight} kg`}
+              icon="weight-info"
+            />
+            <DetailedIcon
+              title={t("component.height")}
+              iconDetail={`${height} cm`}
+              icon="height-icon"
+            />
+            <DetailedIcon
+              title={t("component.bloodType")}
+              iconDetail={bloodType || t("component.notAvailable")}
+              icon="blood-type"
+            />
+          </div>
+        </MedicalCardStyles>
+      )}
+    </I18n>
   );
 }
 
@@ -99,6 +124,9 @@ MedicalCard.propTypes = {
     height: PropTypes.string,
     weight: PropTypes.string,
     bloodType: PropTypes.string,
-    gender: PropTypes.shape
-  }).isRequired
+    gender: PropTypes.shape({})
+  }).isRequired,
+  t: PropTypes.func.isRequired
 };
+
+export default translate()(MedicalCard);

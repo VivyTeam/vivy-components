@@ -10,7 +10,6 @@ import logo from "../public/images/logo.svg";
 const LayoutStyles = styled.div`
   width: 80%;
   margin: 0 auto;
-  padding-top: 100px;
 
   .layout-body {
     padding: 100px;

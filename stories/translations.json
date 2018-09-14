@@ -1,0 +1,62 @@
+{
+  "en": {
+    "translations": {
+      "component": {
+        "notAvailable": "N/A",
+        "nameUnknown": "Name unknown",
+        "dobUnknown": "D.O.B Unknown",
+        "months": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ],
+        "weight": "Weight",
+        "height": "Height",
+        "bloodType": "Blood Type",
+        "organDonor": "Organ Donor",
+        "pregnancyStatus": "Pregnancy",
+        "pregnant": "Pregnant",
+        "dueDate": "due date"
+      }
+    }
+  },
+  "de": {
+    "translations": {
+      "component": {
+        "notAvailable": "nicht verfügbar",
+        "nameUnknown": "Name unbekannt",
+        "dobUnknown": "Geburtsdatum unbekannt",
+        "months": [
+          "Januar",
+          "Februar",
+          "März",
+          "April",
+          "Mai",
+          "Juni",
+          "Juli",
+          "August",
+          "September",
+          "Oktober",
+          "November",
+          "Dezember"
+        ],
+        "weight": "Gewicht",
+        "height": "Körpergröße",
+        "bloodType": "Blutgruppe",
+        "organDonor": "Organspender",
+        "pregnancyStatus": "Schwangerschaft",
+        "pregnant": "Schwanger",
+        "dueDate": "erwartet"
+      }
+    }
+  }
+}
