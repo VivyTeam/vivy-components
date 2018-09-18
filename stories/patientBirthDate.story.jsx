@@ -7,7 +7,7 @@ storiesOf("BirthDate", module).add(
   "BirthDate",
   withInfo("Simply shows the birthdate in form DD.MMM.YYYY")(() => (
     <div>
-      <BirthDate birthDate="1990-10-10" />
+      <BirthDate date="1990-10-10" />
     </div>
   ))
 );
