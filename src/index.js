@@ -4,3 +4,4 @@ export { default as Row } from "./grid/Row";
 export { default as Col } from "./grid/Col";
 export { default as Icon } from "./icons/Icon";
 export { default as Fonts } from "./fonts/fonts.style";
+export { default as BirthDate } from "./BirthDate";
