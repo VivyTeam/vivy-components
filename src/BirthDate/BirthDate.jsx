@@ -1,17 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function BirthDate({ birthDate, style }) {
-  if (birthDate)
+export default function BirthDate({ date, style }) {
+  if (date)
     return (
       <div style={style}>
-        {birthDate.split("-")[2]}.{birthDate.split("-")[1]}.
-        {birthDate.split("-")[0]}
+        {date.split("-")[2]}.{date.split("-")[1]}.{date.split("-")[0]}
       </div>
     );
 }
 BirthDate.propTypes = {
-  birthDate: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
   style: PropTypes.shape({})
 };
 
