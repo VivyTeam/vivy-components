@@ -7,5 +7,6 @@ import "./grid.story";
 import "./button.story";
 import "./forms.story";
 import "./layout.story";
+import "./birthDate.story";
 import "./collections.story";
 import "../src/fonts/fonts.style";
