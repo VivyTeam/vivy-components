@@ -5,7 +5,7 @@ import BirthDate from "../src/BirthDate";
 
 storiesOf("BirthDate", module).add(
   "BirthDate",
-  withInfo("Simply shows the birthdate in form DD.MMM.YYYY")(() => (
+  withInfo("Simply shows the birthdate in form DD.MM.YYYY")(() => (
     <div>
       <BirthDate date="1990-10-10" />
     </div>
