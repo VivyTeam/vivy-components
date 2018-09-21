@@ -5,3 +5,6 @@ export { default as Col } from "./grid/Col";
 export { default as Icon } from "./icons/Icon";
 export { default as Fonts } from "./fonts/fonts.style";
 export { default as BirthDate } from "./BirthDate";
+export { default as Textarea } from "./forms/Textarea";
+export { default as Input } from "./forms/Input";
+export { default as Colors } from "./theme/colors";
