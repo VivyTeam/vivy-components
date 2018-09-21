@@ -7,6 +7,7 @@ import FormItem from "../src/forms/FormItem";
 import Input from "../src/forms/Input";
 import Button from "../src/button/Button";
 import Row from "../src/grid/Row";
+import Textarea from "../src/forms/Textarea";
 
 setAddon(JSXAddon);
 
@@ -122,5 +123,24 @@ storiesOf("Forms", module)
           </Row>
         </FormItem>
       </Form>
+    </FormContainer>
+  ))
+  .addWithJSX("Textarea", () => (
+    <FormContainer>
+      <FormItem>
+        <Row>
+          <Textarea required label="Other reason" />
+        </Row>
+      </FormItem>
+      <FormItem>
+        <Row>
+          <Textarea label="Not Required" />
+        </Row>
+      </FormItem>
+      <FormItem>
+        <Row>
+          <Textarea disabled label="Disabled" />
+        </Row>
+      </FormItem>
     </FormContainer>
   ));
