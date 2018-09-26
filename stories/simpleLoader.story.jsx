@@ -1,13 +1,30 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import Spinner from "../src/SimpleLoader/SimpleLoader";
+import SimpleLoader from "../src/SimpleLoader";
 
-storiesOf("Animations", module).add(
-  "Spinner",
-  withInfo("A simple spinner for showing loading progress")(() => (
-    <div>
-      <Spinner centered />
-    </div>
-  ))
-);
+storiesOf("Animations", module)
+  .add(
+    "SimpleLoader",
+    withInfo("A simple loader")(() => (
+      <div>
+        <SimpleLoader />
+      </div>
+    ))
+  )
+  .add(
+    "SimpleLoader centered",
+    withInfo("A simple loader centered")(() => (
+      <div>
+        <SimpleLoader centered />
+      </div>
+    ))
+  )
+  .add(
+    "SimpleLoader with width and height",
+    withInfo("A simple loader")(() => (
+      <div>
+        <SimpleLoader width={100} height={100} />
+      </div>
+    ))
+  );
