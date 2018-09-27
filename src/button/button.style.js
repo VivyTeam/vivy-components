@@ -5,6 +5,9 @@ const baseButton = css`
   align-items: center;
   justify-content: space-evenly;
   cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 24px;
 `;
 const transitionBoxShadow = css`
   transition: box-shadow 0.2s ease, background-color 0.2s ease;
@@ -18,16 +21,15 @@ const ButtonStyles = styled.div`
     ${baseButton};
   }
 
+  button {
+    ${baseButton};
+    outline: none;
+  }
+
   a {
     border-radius: 24px;
     display: block;
     text-decoration: none;
-  }
-
-  button {
-    ${baseButton};
-    border-radius: 24px;
-    outline: none;
   }
 
   .primary .anchor-child,
@@ -81,7 +83,6 @@ const ButtonStyles = styled.div`
   }
 
   .secondary {
-    ${baseButton};
     ${transitionBoxShadow};
     color: #fff;
     min-width: 178px;
@@ -113,7 +114,6 @@ const ButtonStyles = styled.div`
   }
 
   .tertiary {
-    ${baseButton};
     ${transitionBackgroundColor};
     min-width: 178px;
     background-color: #fff;
@@ -147,7 +147,6 @@ const ButtonStyles = styled.div`
   }
 
   .quarternary {
-    ${baseButton};
     ${transitionBackgroundColor};
     min-width: 178px;
     background-color: #fff;
