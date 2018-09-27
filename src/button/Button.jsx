@@ -16,10 +16,9 @@ export default function Button({
     props.as === "button" ? (
       <button {...props}>{props.children}</button>
     ) : (
-      <a href={props.href} {...props}>
-        {props.children}
-      </a>
+      <a {...props}>{props.children}</a>
     );
+
   return (
     <ButtonStyles>
       <Base
