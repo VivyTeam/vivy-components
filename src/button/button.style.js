@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const baseButton = css`
+const baseStyles = css`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -8,6 +8,8 @@ const baseButton = css`
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 24px;
+  outline: none;
+  cursor: pointer;
 `;
 const transitionBoxShadow = css`
   transition: box-shadow 0.2s ease, background-color 0.2s ease;
@@ -18,12 +20,11 @@ const transitionBackgroundColor = css`
 
 const ButtonStyles = styled.div`
   .anchor-child {
-    ${baseButton};
+    ${baseStyles};
   }
 
   button {
-    ${baseButton};
-    outline: none;
+    ${baseStyles};
   }
 
   a {
@@ -35,27 +36,12 @@ const ButtonStyles = styled.div`
   .primary .anchor-child,
   .primary {
     height: 48px;
-  }
-
-  .secondary .anchor-child,
-  .secondary {
-    height: 40px;
-  }
-
-  .tertiary .anchor-child,
-  .tertiary {
-    height: 40px;
-  }
-
-  .quarternary .anchor-child,
-  .quarternary {
-    height: 40px;
+    font-size: 1.125em;
+    min-width: 230px;
   }
 
   .primary {
     ${transitionBoxShadow};
-    font-size: 1.125em;
-    min-width: 230px;
     color: #fff;
     background-color: #04d4bf;
     border: 0;
@@ -82,14 +68,18 @@ const ButtonStyles = styled.div`
     }
   }
 
+  .secondary .anchor-child,
+  .secondary {
+    height: 40px;
+    min-width: 178px;
+    font-size: 0.938em;
+  }
+
   .secondary {
     ${transitionBoxShadow};
     color: #fff;
-    min-width: 178px;
-    font-size: 0.938em;
     background-color: #03d4bf;
     border: 0;
-    cursor: pointer;
 
     i {
       font-size: 1.4em;
@@ -113,14 +103,18 @@ const ButtonStyles = styled.div`
     }
   }
 
+  .tertiary .anchor-child,
+  .tertiary {
+    height: 40px;
+    min-width: 178px;
+    font-size: 0.938em;
+  }
+
   .tertiary {
     ${transitionBackgroundColor};
-    min-width: 178px;
     background-color: #fff;
     border: solid 2px #00bfac;
     color: #00bfac;
-    font-size: 0.938em;
-    cursor: pointer;
     i {
       font-size: 1.4em;
     }
@@ -146,14 +140,17 @@ const ButtonStyles = styled.div`
     }
   }
 
+  .quarternary .anchor-child,
+  .quarternary {
+    height: 40px;
+    min-width: 178px;
+    font-size: 15px;
+  }
   .quarternary {
     ${transitionBackgroundColor};
-    min-width: 178px;
     background-color: #fff;
     border: solid 2px #898988;
     color: #898988;
-    font-size: 15px;
-    cursor: pointer;
 
     i {
       font-size: 1.4em;
