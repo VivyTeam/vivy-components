@@ -33,15 +33,15 @@ const ButtonStyles = styled.div`
     text-decoration: none;
   }
 
-  .primary .anchor-child,
-  .primary {
+  .primary,
+  .primary .anchor-child {
     height: 48px;
-    font-size: 1.125em;
-    min-width: 230px;
   }
 
   .primary {
     ${transitionBoxShadow};
+    min-width: 230px;
+    font-size: 1.125em;
     color: #fff;
     background-color: #04d4bf;
     border: 0;
@@ -71,12 +71,12 @@ const ButtonStyles = styled.div`
   .secondary .anchor-child,
   .secondary {
     height: 40px;
-    min-width: 178px;
-    font-size: 0.938em;
   }
 
   .secondary {
     ${transitionBoxShadow};
+    min-width: 178px;
+    font-size: 0.938em;
     color: #fff;
     background-color: #03d4bf;
     border: 0;
@@ -106,12 +106,12 @@ const ButtonStyles = styled.div`
   .tertiary .anchor-child,
   .tertiary {
     height: 40px;
-    min-width: 178px;
-    font-size: 0.938em;
   }
 
   .tertiary {
     ${transitionBackgroundColor};
+    min-width: 178px;
+    font-size: 0.938em;
     background-color: #fff;
     border: solid 2px #00bfac;
     color: #00bfac;
@@ -143,11 +143,11 @@ const ButtonStyles = styled.div`
   .quarternary .anchor-child,
   .quarternary {
     height: 40px;
-    min-width: 178px;
-    font-size: 15px;
   }
   .quarternary {
     ${transitionBackgroundColor};
+    min-width: 178px;
+    font-size: 15px;
     background-color: #fff;
     border: solid 2px #898988;
     color: #898988;
