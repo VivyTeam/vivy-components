@@ -17,5 +17,9 @@
   "icon-will-information": "e80e",
   "icon-height-icon": "e801",
   "icon-insurance-shield": "e810",
-  "icon-phone-number": "e811"
+  "icon-phone-number": "e811",
+  "icon-chevron-up": "e817",
+  "icon-chevron-down": "e815",
+  "icon-chevron-left": "e816",
+  "icon-chevron-right": "e818"
 }
