@@ -180,18 +180,6 @@ storiesOf("Buttons", module).add(
           Call to Action
         </AnchorButton>
       </div>
-      <h2>Disabled</h2>
-      <div className="list">
-        <AnchorButton
-          disabled
-          type="secondary"
-          onClick={() => click("disabled")}
-          href="https://www.vivy.com/"
-          target="_blank"
-        >
-          Disabled
-        </AnchorButton>
-      </div>
     </ButtonStyles>
   ))
 );
