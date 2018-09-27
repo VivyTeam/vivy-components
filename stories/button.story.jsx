@@ -106,14 +106,14 @@ storiesOf("Buttons", module).add(
       <div className="list">
         <AnchorButton
           onClick={() => click("button clicked!")}
-          href="https://www.google.com"
+          href="https://www.vivy.com/"
           target="_blank"
         >
           Call to Action
         </AnchorButton>
         <AnchorButton
           onClick={() => click("button clicked!")}
-          href="https://www.google.com"
+          href="https://www.vivy.com/"
           target="_blank"
         >
           <Icon name="call-contact" />
@@ -125,7 +125,7 @@ storiesOf("Buttons", module).add(
         <AnchorButton
           type="secondary"
           onClick={() => click("button clicked!")}
-          href="https://www.google.com"
+          href="https://www.vivy.com/"
           target="_blank"
         >
           Call to Action
@@ -133,7 +133,7 @@ storiesOf("Buttons", module).add(
         <AnchorButton
           type="secondary"
           onClick={() => click("button clicked!")}
-          href="https://www.google.com"
+          href="https://www.vivy.com/"
           target="_blank"
         >
           <Icon name="call-contact" />
@@ -145,7 +145,7 @@ storiesOf("Buttons", module).add(
         <AnchorButton
           type="tertiary"
           onClick={() => click("button clicked!")}
-          href="https://www.google.com"
+          href="https://www.vivy.com/"
           target="_blank"
         >
           Call to Action
@@ -153,7 +153,7 @@ storiesOf("Buttons", module).add(
         <AnchorButton
           type="tertiary"
           onClick={() => click("button clicked!")}
-          href="https://www.google.com"
+          href="https://www.vivy.com/"
           target="_blank"
         >
           <Icon name="call-contact" />
@@ -165,7 +165,7 @@ storiesOf("Buttons", module).add(
         <AnchorButton
           type="quarternary"
           onClick={() => click("button clicked!")}
-          href="https://www.google.com"
+          href="https://www.vivy.com/"
           target="_blank"
         >
           Call to Action
@@ -173,7 +173,7 @@ storiesOf("Buttons", module).add(
         <AnchorButton
           type="quarternary"
           onClick={() => click("button clicked!")}
-          href="https://www.google.com"
+          href="https://www.vivy.com/"
           target="_blank"
         >
           <Icon name="call-contact" />
@@ -186,7 +186,7 @@ storiesOf("Buttons", module).add(
           disabled
           type="secondary"
           onClick={() => click("disabled")}
-          href="https://www.google.com"
+          href="https://www.vivy.com/"
           target="_blank"
         >
           Disabled
