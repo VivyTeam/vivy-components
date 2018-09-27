@@ -128,6 +128,22 @@ storiesOf("Icons", module).add(
             <Icon name="insurance-shield" />
             <h3>insurance-shield</h3>
           </div>
+          <div className="icon-box">
+            <Icon name="chevron-up" />
+            <h3>chevron-up</h3>
+          </div>
+          <div className="icon-box">
+            <Icon name="chevron-down" />
+            <h3>chevron-down</h3>
+          </div>
+          <div className="icon-box">
+            <Icon name="chevron-left" />
+            <h3>chevron-left</h3>
+          </div>
+          <div className="icon-box">
+            <Icon name="chevron-right" />
+            <h3>chevron-right</h3>
+          </div>
         </div>
       </div>
     </IconsStory>
