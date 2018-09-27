@@ -4,6 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import Button from "../src/button/Button";
+import Icon from "../src/icons/Icon";
 
 const click = action("Button");
 
@@ -55,7 +56,8 @@ storiesOf("Buttons", module).add(
       <h2>Primary Call to Action</h2>
       <div className="list">
         <Button onClick={() => click("button clicked!")}>Call to Action</Button>
-        <Button onClick={() => click("button clicked!")} icon="call-contact">
+        <Button onClick={() => click("button clicked!")}>
+          <Icon name="call-contact" />
           Call to Action
         </Button>
       </div>
@@ -64,11 +66,8 @@ storiesOf("Buttons", module).add(
         <Button type="secondary" onClick={() => click("button clicked!")}>
           Call to Action
         </Button>
-        <Button
-          type="secondary"
-          onClick={() => click("button clicked!")}
-          icon="call-contact"
-        >
+        <Button type="secondary" onClick={() => click("button clicked!")}>
+          <Icon name="call-contact" />
           Call to Action
         </Button>
       </div>
@@ -77,11 +76,8 @@ storiesOf("Buttons", module).add(
         <Button type="tertiary" onClick={() => click("button clicked!")}>
           Call to Action
         </Button>
-        <Button
-          type="tertiary"
-          onClick={() => click("button clicked!")}
-          icon="call-contact"
-        >
+        <Button type="tertiary" onClick={() => click("button clicked!")}>
+          <Icon name="call-contact" />
           Call to Action
         </Button>
       </div>
@@ -90,11 +86,8 @@ storiesOf("Buttons", module).add(
         <Button type="quarternary" onClick={() => click("button clicked!")}>
           Call to Action
         </Button>
-        <Button
-          type="quarternary"
-          onClick={() => click("button clicked!")}
-          icon="call-contact"
-        >
+        <Button type="quarternary" onClick={() => click("button clicked!")}>
+          <Icon name="call-contact" />
           Call to Action
         </Button>
       </div>
