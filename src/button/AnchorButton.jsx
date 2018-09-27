@@ -13,13 +13,13 @@ export default function AnchorButton({
   return (
     <ButtonStyles>
       <a
-        onClick={onClick}
         className={type}
+        onClick={onClick}
         href={href}
         target={target}
         rel={rel}
       >
-        {children}
+        <div className="anchor-child">{children}</div>
       </a>
     </ButtonStyles>
   );

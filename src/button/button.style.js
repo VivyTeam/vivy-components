@@ -4,10 +4,6 @@ const baseButton = css`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 1.125em;
-  border-radius: 24px;
-  padding-left: 17px;
-  padding-right: 17px;
   cursor: pointer;
 `;
 const transitionBoxShadow = css`
@@ -18,20 +14,47 @@ const transitionBackgroundColor = css`
 `;
 
 const ButtonStyles = styled.div`
+  .anchor-child {
+    ${baseButton};
+  }
+
   a {
+    border-radius: 24px;
+    display: block;
     text-decoration: none;
   }
 
   button {
+    ${baseButton};
+    border-radius: 24px;
     outline: none;
+  }
+
+  .primary .anchor-child,
+  .primary {
+    height: 48px;
+  }
+
+  .secondary .anchor-child,
+  .secondary {
+    height: 40px;
+  }
+
+  .tertiary .anchor-child,
+  .tertiary {
+    height: 40px;
+  }
+
+  .quarternary .anchor-child,
+  .quarternary {
+    height: 40px;
   }
 
   .primary {
     ${transitionBoxShadow};
-    ${baseButton};
+    font-size: 1.125em;
     min-width: 230px;
     color: #fff;
-    height: 48px;
     background-color: #04d4bf;
     border: 0;
 
@@ -62,10 +85,9 @@ const ButtonStyles = styled.div`
     ${transitionBoxShadow};
     color: #fff;
     min-width: 178px;
-    height: 40px;
+    font-size: 0.938em;
     background-color: #03d4bf;
     border: 0;
-    font-size: 0.938em;
     cursor: pointer;
 
     i {
@@ -94,7 +116,6 @@ const ButtonStyles = styled.div`
     ${baseButton};
     ${transitionBackgroundColor};
     min-width: 178px;
-    height: 40px;
     background-color: #fff;
     border: solid 2px #00bfac;
     color: #00bfac;
@@ -129,7 +150,6 @@ const ButtonStyles = styled.div`
     ${baseButton};
     ${transitionBackgroundColor};
     min-width: 178px;
-    height: 40px;
     background-color: #fff;
     border: solid 2px #898988;
     color: #898988;
