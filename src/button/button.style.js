@@ -6,16 +6,24 @@ const baseButton = css`
   justify-content: space-evenly;
   font-size: 1.125em;
   border-radius: 24px;
+  padding-left: 21px;
+  padding-right: 21px;
+  min-width: 230px;
 `;
 
 const ButtonStyles = styled.div`
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    outline: none;
+  }
   .primary {
     ${baseButton} color: #fff;
-    width: 212px;
     height: 48px;
     background-color: #04d4bf;
     border: 0;
-    font-weight: 400;
     cursor: pointer;
     transition: box-shadow 0.2s ease, background-color 0.2s ease;
 
@@ -43,11 +51,9 @@ const ButtonStyles = styled.div`
 
   .secondary {
     ${baseButton} color: #fff;
-    width: 178px;
     height: 40px;
     background-color: #03d4bf;
     border: 0;
-    font-weight: 400;
     font-size: 0.938em;
     cursor: pointer;
     transition: box-shadow 0.2s, background-color 0.2s ease;
@@ -80,7 +86,6 @@ const ButtonStyles = styled.div`
     background-color: #fff;
     border: solid 2px #00bfac;
     color: #00bfac;
-    font-weight: 400;
     font-size: 0.938em;
     cursor: pointer;
     transition: color 0.2s ease, background-color 0.2s ease;
@@ -117,7 +122,6 @@ const ButtonStyles = styled.div`
     border: solid 2px #898988;
     color: #898988;
     font-size: 15px;
-    font-weight: 500;
     cursor: pointer;
     transition: color 0.2s ease, background-color 0.2s ease;
 

@@ -1,35 +1,60 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ButtonStyles from "./button.style";
-import Icon from "../icons/Icon";
 
-export default function Button(props) {
+export default function Button({
+  as,
+  disabled,
+  onClick,
+  type,
+  href,
+  target,
+  rel,
+  children
+}) {
+  const Base = props =>
+    props.as === "button" ? (
+      <button {...props}>{props.children}</button>
+    ) : (
+      <a href={props.href} {...props}>
+        {props.children}
+      </a>
+    );
   return (
     <ButtonStyles>
-      <button
-        disabled={props.disabled}
-        onClick={props.onClick}
-        className={props.type}
+      <Base
+        as={as}
+        disabled={disabled}
+        onClick={onClick}
+        className={type}
+        href={href}
+        target={target}
+        rel={rel}
       >
-        {props.icon ? <Icon name={props.icon} /> : null}
-        {props.children}
-      </button>
+        {children}
+      </Base>
     </ButtonStyles>
   );
 }
 
 Button.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   type: PropTypes.string,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
-  icon: PropTypes.string
+  as: PropTypes.string,
+  href: PropTypes.string,
+  target: PropTypes.string,
+  rel: PropTypes.string
 };
 
 Button.defaultProps = {
-  children: "",
+  children: <div />,
   type: "primary",
   onClick: () => {},
   disabled: false,
-  icon: ""
+  as: "button",
+  href: "",
+  target: "_self",
+  rel: ""
 };
