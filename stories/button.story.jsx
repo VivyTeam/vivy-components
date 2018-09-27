@@ -4,6 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import Button from "../src/button/Button";
+import AnchorButton from "../src/button/AnchorButton";
 import Icon from "../src/icons";
 
 const click = action("Button");
@@ -40,6 +41,7 @@ const ButtonStyles = styled.div`
     margin-bottom: 50px;
   }
 
+  a,
   button {
     margin-right: 25px;
   }
@@ -96,6 +98,99 @@ storiesOf("Buttons", module).add(
         <Button disabled type="secondary" onClick={() => click("disabled")}>
           Disabled
         </Button>
+      </div>
+
+      <h1>Anchor Buttons</h1>
+
+      <h2>Primary Call to Action</h2>
+      <div className="list">
+        <AnchorButton
+          onClick={() => click("button clicked!")}
+          href="https://www.google.com"
+          target="_blank"
+        >
+          Call to Action
+        </AnchorButton>
+        <AnchorButton
+          onClick={() => click("button clicked!")}
+          href="https://www.google.com"
+          target="_blank"
+        >
+          <Icon name="call-contact" />
+          Call to Action
+        </AnchorButton>
+      </div>
+      <h2>Secondary Call to Action</h2>
+      <div className="list">
+        <AnchorButton
+          type="secondary"
+          onClick={() => click("button clicked!")}
+          href="https://www.google.com"
+          target="_blank"
+        >
+          Call to Action
+        </AnchorButton>
+        <AnchorButton
+          type="secondary"
+          onClick={() => click("button clicked!")}
+          href="https://www.google.com"
+          target="_blank"
+        >
+          <Icon name="call-contact" />
+          Call to Action
+        </AnchorButton>
+      </div>
+      <h2>Tertiary Call to Action</h2>
+      <div className="list">
+        <AnchorButton
+          type="tertiary"
+          onClick={() => click("button clicked!")}
+          href="https://www.google.com"
+          target="_blank"
+        >
+          Call to Action
+        </AnchorButton>
+        <AnchorButton
+          type="tertiary"
+          onClick={() => click("button clicked!")}
+          href="https://www.google.com"
+          target="_blank"
+        >
+          <Icon name="call-contact" />
+          Call to Action
+        </AnchorButton>
+      </div>
+      <h2>Quarternary call to action</h2>
+      <div className="list">
+        <AnchorButton
+          type="quarternary"
+          onClick={() => click("button clicked!")}
+          href="https://www.google.com"
+          target="_blank"
+        >
+          Call to Action
+        </AnchorButton>
+        <AnchorButton
+          type="quarternary"
+          onClick={() => click("button clicked!")}
+          href="https://www.google.com"
+          target="_blank"
+        >
+          <Icon name="call-contact" />
+          Call to Action
+        </AnchorButton>
+      </div>
+      <h2>Disabled</h2>
+      <div className="list">
+        <AnchorButton
+          disabled
+          type="secondary"
+          onClick={() => click("disabled")}
+          href="https://www.google.com"
+          target="_blank"
+        >
+          Disabled
+        </AnchorButton>
       </div>
     </ButtonStyles>
   ))
