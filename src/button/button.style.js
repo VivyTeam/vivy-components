@@ -61,7 +61,7 @@ const ButtonStyles = styled.div`
     ${baseButton};
     ${transitionBoxShadow};
     color: #fff;
-    min-width: 200px;
+    min-width: 178px;
     height: 40px;
     background-color: #03d4bf;
     border: 0;
@@ -93,7 +93,7 @@ const ButtonStyles = styled.div`
   .tertiary {
     ${baseButton};
     ${transitionBackgroundColor};
-    min-width: 200px;
+    min-width: 178px;
     height: 40px;
     background-color: #fff;
     border: solid 2px #00bfac;
@@ -128,7 +128,7 @@ const ButtonStyles = styled.div`
   .quarternary {
     ${baseButton};
     ${transitionBackgroundColor};
-    min-width: 200px;
+    min-width: 178px;
     height: 40px;
     background-color: #fff;
     border: solid 2px #898988;
