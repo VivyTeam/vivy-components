@@ -114,7 +114,7 @@ const ButtonStyles = styled.div`
     min-width: 178px;
     font-size: 0.938em;
     background-color: #fff;
-    border: none;
+    border: solid 2px #00bfac;
     color: #00bfac;
     i {
       font-size: 1.4em;
@@ -130,7 +130,7 @@ const ButtonStyles = styled.div`
     &:active:enabled {
       ${transitionBackgroundColor};
       color: #fff;
-      background-color: #00bfac;
+      border: solid 2px #00bfac;
       border: none;
     }
 
