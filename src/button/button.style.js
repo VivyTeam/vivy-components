@@ -5,8 +5,6 @@ const baseStyles = css`
   align-items: center;
   justify-content: space-evenly;
   cursor: pointer;
-  padding-left: 10px;
-  padding-right: 10px;
   border-radius: 24px;
   cursor: pointer;
   font-family: "Norms", sans-serif;
