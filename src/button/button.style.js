@@ -28,13 +28,14 @@ const ButtonStyles = styled.div`
   }
 
   a {
+    font-family: system-ui;
     border-radius: 24px;
     display: block;
     text-decoration: none;
   }
 
-  .primary,
-  .primary .anchor-child {
+  .primary .anchor-child,
+  .primary {
     height: 48px;
   }
 
