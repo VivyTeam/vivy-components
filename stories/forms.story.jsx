@@ -119,7 +119,7 @@ storiesOf("Forms", module)
         <FormItem>
           <Row>
             <Button type="secondary">login</Button>
-            <Button type="quarternary">clear</Button>
+            <Button type="quaternary">clear</Button>
           </Row>
         </FormItem>
       </Form>

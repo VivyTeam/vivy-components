@@ -83,12 +83,12 @@ storiesOf("Buttons", module).add(
           Call to Action
         </Button>
       </div>
-      <h2>Quarternary call to action</h2>
+      <h2>quaternary call to action</h2>
       <div className="list">
-        <Button type="quarternary" onClick={() => click("button clicked!")}>
+        <Button type="quaternary" onClick={() => click("button clicked!")}>
           Call to Action
         </Button>
-        <Button type="quarternary" onClick={() => click("button clicked!")}>
+        <Button type="quaternary" onClick={() => click("button clicked!")}>
           <Icon name="call-contact" />
           Call to Action
         </Button>
@@ -160,10 +160,10 @@ storiesOf("Buttons", module).add(
           Call to Action
         </AnchorButton>
       </div>
-      <h2>Quarternary call to action</h2>
+      <h2>quaternary call to action</h2>
       <div className="list">
         <AnchorButton
-          type="quarternary"
+          type="quaternary"
           onClick={() => click("button clicked!")}
           href="https://www.vivy.com/"
           target="_blank"
@@ -171,13 +171,12 @@ storiesOf("Buttons", module).add(
           Call to Action
         </AnchorButton>
         <AnchorButton
-          type="quarternary"
+          type="quaternary"
           onClick={() => click("button clicked!")}
           href="https://www.vivy.com/"
           target="_blank"
         >
-          <Icon name="call-contact" />
-          Call to Action
+          <Icon name="call-contact" /> <span>If we have very long text some default padding helps</span>
         </AnchorButton>
       </div>
     </ButtonStyles>

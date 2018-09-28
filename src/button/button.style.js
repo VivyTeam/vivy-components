@@ -146,14 +146,14 @@ const ButtonStyles = styled.div`
     }
   }
 
-  .quarternary .component-child {
+  .quaternary .component-child {
     height: 34px;
   }
-  button.quarternary.component-child {
+  button.quaternary.component-child {
     height: 36px;
   }
 
-  .quarternary {
+  .quaternary {
     ${transitionBackgroundColor};
     min-width: 178px;
     font-size: 15px;
