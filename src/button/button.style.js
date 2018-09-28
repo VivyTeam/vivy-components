@@ -132,6 +132,7 @@ const ButtonStyles = styled.div`
     &:active:enabled {
       ${transitionBackgroundColor};
       color: #fff;
+      background-color: #00bfac;
       border: solid 2px #00bfac;
     }
 
