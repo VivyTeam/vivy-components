@@ -8,7 +8,8 @@ export default function AnchorButton({
   href,
   target,
   rel,
-  children
+  children,
+  customStyle
 }) {
   return (
     <ButtonStyles>
@@ -18,6 +19,7 @@ export default function AnchorButton({
         href={href}
         target={target}
         rel={rel}
+        style={customStyle}
       >
         <div className="anchor-child">{children}</div>
       </a>
@@ -31,12 +33,14 @@ AnchorButton.propTypes = {
   type: PropTypes.string,
   onClick: PropTypes.func,
   target: PropTypes.string,
-  rel: PropTypes.string
+  rel: PropTypes.string,
+  customStyle: PropTypes.shape({})
 };
 
 AnchorButton.defaultProps = {
   type: "primary",
   onClick: () => {},
   target: "_self",
-  rel: ""
+  rel: "",
+  customStyle: {}
 };
