@@ -12,6 +12,7 @@ const baseStyles = css`
   cursor: pointer;
   font-family: "Norms", sans-serif;
   padding-top: 2px;
+  line-height: 1em;
 `;
 const transitionBoxShadow = css`
   transition: box-shadow 0.2s ease, background-color 0.2s ease;
@@ -52,7 +53,6 @@ const ButtonStyles = styled.div`
     border: 0;
 
     i {
-      line-height: 0px;
       font-size: 1.5em;
     }
 
@@ -87,7 +87,6 @@ const ButtonStyles = styled.div`
     border: 0;
 
     i {
-      line-height: 0px;
       font-size: 1.4em;
     }
 
@@ -125,7 +124,6 @@ const ButtonStyles = styled.div`
     color: #00bfac;
 
     i {
-      line-height: 0px;
       font-size: 1.4em;
     }
 
@@ -166,7 +164,6 @@ const ButtonStyles = styled.div`
     color: #898988;
 
     i {
-      line-height: 0px;
       font-size: 1.4em;
     }
 

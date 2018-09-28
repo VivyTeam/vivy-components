@@ -59,7 +59,7 @@ storiesOf("Buttons", module).add(
       <div className="list">
         <Button onClick={() => click("button clicked!")}>Call to Action</Button>
         <Button onClick={() => click("button clicked!")}>
-          <Icon style={{ paddingTop: "4px" }} name="call-contact" />
+          <Icon name="call-contact" />
           Call to Action
         </Button>
       </div>
@@ -69,7 +69,7 @@ storiesOf("Buttons", module).add(
           Call to Action
         </Button>
         <Button type="secondary" onClick={() => click("button clicked!")}>
-          <Icon style={{ paddingTop: "4px" }} name="call-contact" />
+          <Icon name="call-contact" />
           Call to Action
         </Button>
       </div>
@@ -79,7 +79,7 @@ storiesOf("Buttons", module).add(
           Call to Action
         </Button>
         <Button type="tertiary" onClick={() => click("button clicked!")}>
-          <Icon style={{ paddingTop: "4px" }} name="call-contact" />
+          <Icon name="call-contact" />
           Call to Action
         </Button>
       </div>
@@ -89,7 +89,7 @@ storiesOf("Buttons", module).add(
           Call to Action
         </Button>
         <Button type="quarternary" onClick={() => click("button clicked!")}>
-          <Icon style={{ paddingTop: "4px" }} name="call-contact" />
+          <Icon name="call-contact" />
           Call to Action
         </Button>
       </div>
@@ -116,7 +116,7 @@ storiesOf("Buttons", module).add(
           href="https://www.vivy.com/"
           target="_blank"
         >
-          <Icon style={{ paddingTop: "2px" }} name="call-contact" />
+          <Icon name="call-contact" />
           Call to Action
         </AnchorButton>
       </div>
@@ -136,7 +136,7 @@ storiesOf("Buttons", module).add(
           href="https://www.vivy.com/"
           target="_blank"
         >
-          <Icon style={{ paddingTop: "2px" }} name="call-contact" />
+          <Icon name="call-contact" />
           Call to Action
         </AnchorButton>
       </div>
@@ -156,7 +156,7 @@ storiesOf("Buttons", module).add(
           href="https://www.vivy.com/"
           target="_blank"
         >
-          <Icon style={{ paddingTop: "2px" }} name="call-contact" />
+          <Icon name="call-contact" />
           Call to Action
         </AnchorButton>
       </div>
@@ -176,7 +176,7 @@ storiesOf("Buttons", module).add(
           href="https://www.vivy.com/"
           target="_blank"
         >
-          <Icon style={{ paddingTop: "2px" }} name="call-contact" />
+          <Icon name="call-contact" />
           Call to Action
         </AnchorButton>
       </div>
