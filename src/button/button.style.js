@@ -133,7 +133,6 @@ const ButtonStyles = styled.div`
       ${transitionBackgroundColor};
       color: #fff;
       border: solid 2px #00bfac;
-      border: none;
     }
 
     &:disabled {
@@ -143,7 +142,7 @@ const ButtonStyles = styled.div`
     }
   }
 
-  .quarternary .anchor-child{
+  .quarternary .anchor-child {
     height: 36px;
   }
   button.quarternary {
