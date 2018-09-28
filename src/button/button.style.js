@@ -8,7 +8,6 @@ const baseStyles = css`
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 24px;
-  outline: none;
   cursor: pointer;
   font-family: "Norms", sans-serif;
   padding-top: 2px;
@@ -31,6 +30,7 @@ const ButtonStyles = styled.div`
     border-radius: 24px;
     display: block;
     text-decoration: none;
+    outline: none;
   }
 
   a {
