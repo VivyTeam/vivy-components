@@ -11,8 +11,7 @@ const baseStyles = css`
   outline: none;
   cursor: pointer;
   font-family: "Norms", sans-serif;
-  line-height: 1.47;
-  padding-top: 4px;
+  padding-top: 2px;
 `;
 const transitionBoxShadow = css`
   transition: box-shadow 0.2s ease, background-color 0.2s ease;
@@ -22,13 +21,15 @@ const transitionBackgroundColor = css`
 `;
 
 const ButtonStyles = styled.div`
-  .anchor-child {
+  .component-child {
     ${baseStyles};
   }
 
   button {
     padding: 0;
-    ${baseStyles};
+    border-radius: 24px;
+    display: block;
+    text-decoration: none;
   }
 
   a {
@@ -38,9 +39,8 @@ const ButtonStyles = styled.div`
     text-decoration: none;
   }
 
-  .primary .anchor-child,
-  .primary {
-    height: 48px;
+  .primary .component-child {
+    height: 46px;
   }
 
   .primary {
@@ -74,9 +74,8 @@ const ButtonStyles = styled.div`
     }
   }
 
-  .secondary .anchor-child,
-  .secondary {
-    height: 40px;
+  .secondary .component-child {
+    height: 38px;
   }
 
   .secondary {
@@ -110,11 +109,11 @@ const ButtonStyles = styled.div`
     }
   }
 
-  .tertiary .anchor-child {
-    height: 36px;
+  .tertiary .component-child {
+    height: 34px;
   }
-  button.tertiary {
-    height: 40px;
+  button.tertiary.component-child {
+    height: 36px;
   }
 
   .tertiary {
@@ -151,11 +150,11 @@ const ButtonStyles = styled.div`
     }
   }
 
-  .quarternary .anchor-child {
-    height: 36px;
+  .quarternary .component-child {
+    height: 34px;
   }
-  button.quarternary {
-    height: 40px;
+  button.quarternary.component-child {
+    height: 36px;
   }
 
   .quarternary {

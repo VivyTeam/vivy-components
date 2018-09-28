@@ -17,7 +17,7 @@ export default function Button({
         className={type}
         style={{ customStyle }}
       >
-        {children}
+        <div className="component-child">{children}</div>
       </button>
     </ButtonStyles>
   );

@@ -21,7 +21,7 @@ export default function AnchorButton({
         rel={rel}
         style={customStyle}
       >
-        <div className="anchor-child">{children}</div>
+        <div className="component-child">{children}</div>
       </a>
     </ButtonStyles>
   );
