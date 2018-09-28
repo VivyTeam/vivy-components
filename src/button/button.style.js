@@ -104,8 +104,10 @@ const ButtonStyles = styled.div`
     }
   }
 
-  .tertiary .anchor-child,
-  .tertiary {
+  .tertiary .anchor-child {
+    height: 36px;
+  }
+  button.tertiary {
     height: 40px;
   }
 
@@ -141,10 +143,13 @@ const ButtonStyles = styled.div`
     }
   }
 
-  .quarternary .anchor-child,
-  .quarternary {
+  .quarternary .anchor-child{
+    height: 36px;
+  }
+  button.quarternary {
     height: 40px;
   }
+
   .quarternary {
     ${transitionBackgroundColor};
     min-width: 178px;
