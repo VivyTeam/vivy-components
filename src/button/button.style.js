@@ -10,6 +10,9 @@ const baseStyles = css`
   border-radius: 24px;
   outline: none;
   cursor: pointer;
+  font-family: "Norms", sans-serif;
+  line-height: 1.47;
+  padding-top: 4px;
 `;
 const transitionBoxShadow = css`
   transition: box-shadow 0.2s ease, background-color 0.2s ease;
@@ -24,6 +27,7 @@ const ButtonStyles = styled.div`
   }
 
   button {
+    padding: 0;
     ${baseStyles};
   }
 
@@ -48,6 +52,7 @@ const ButtonStyles = styled.div`
     border: 0;
 
     i {
+      line-height: 0px;
       font-size: 1.5em;
     }
 
@@ -83,6 +88,7 @@ const ButtonStyles = styled.div`
     border: 0;
 
     i {
+      line-height: 0px;
       font-size: 1.4em;
     }
 
@@ -118,7 +124,9 @@ const ButtonStyles = styled.div`
     background-color: #fff;
     border: solid 2px #00bfac;
     color: #00bfac;
+
     i {
+      line-height: 0px;
       font-size: 1.4em;
     }
 
@@ -159,6 +167,7 @@ const ButtonStyles = styled.div`
     color: #898988;
 
     i {
+      line-height: 0px;
       font-size: 1.4em;
     }
 
