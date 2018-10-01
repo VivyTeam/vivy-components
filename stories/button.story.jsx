@@ -95,6 +95,9 @@ storiesOf("Buttons", module).add(
       </div>
       <h2>Disabled</h2>
       <div className="list">
+        <Button disabled type="primary" onClick={() => click("disabled")}>
+          Disabled
+        </Button>
         <Button disabled type="secondary" onClick={() => click("disabled")}>
           Disabled
         </Button>
