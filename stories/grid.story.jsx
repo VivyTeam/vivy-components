@@ -3,8 +3,7 @@ import { storiesOf, setAddon } from "@storybook/react";
 import JSXAddon from "storybook-addon-jsx";
 import ExampleStyles from "../src/examples/example.style";
 import FlexGrid from "../src/grid/FlexGrid";
-import Row from "../src/grid/Row";
-import Col from "../src/grid/Col";
+import { FlexGrid, Row, Col } from "../src";
 
 setAddon(JSXAddon);
 

@@ -2,9 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import Topbar from "../src/topbar";
-import MedicalCard from "../src/MedicalCard";
-import Footer from "../src/footer";
+import { MedicalCard, Topbar, Footer } from "../src";
 import logo from "../public/images/logo.svg";
 
 const LayoutStyles = styled.div`

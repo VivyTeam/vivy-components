@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import SimpleLoader from "../src/SimpleLoader";
+import { SimpleLoader } from "../src";
 
 storiesOf("Animations", module)
   .add(

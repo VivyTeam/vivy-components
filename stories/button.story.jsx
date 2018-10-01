@@ -3,9 +3,7 @@ import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
-import Button from "../src/button/Button";
-import AnchorButton from "../src/button/AnchorButton";
-import Icon from "../src/icons";
+import { Button, AnchorButton, Icon } from "../src";
 
 const click = action("Button");
 
