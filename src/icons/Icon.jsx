@@ -12,17 +12,22 @@ const Icons = styled.div`
   }
 `;
 
-export default function Icon({ name }) {
+export default function Icon({ name, style }) {
   const iconName = `icon-${name}`;
   const icon = String.fromCharCode(parseInt(mapping[iconName], 16));
 
   return (
-    <Icons>
+    <Icons style={style}>
       <i>{icon}</i>
     </Icons>
   );
 }
 
 Icon.propTypes = {
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  style: PropTypes.shape({})
+};
+
+Icon.defaultProps = {
+  style: {}
 };

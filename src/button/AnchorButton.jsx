@@ -2,38 +2,45 @@ import React from "react";
 import PropTypes from "prop-types";
 import ButtonStyles from "./button.style";
 
-export default function Button({
-  disabled,
+export default function AnchorButton({
   onClick,
   type,
+  href,
+  target,
+  rel,
   children,
   customStyle
 }) {
   return (
     <ButtonStyles>
-      <button
-        disabled={disabled}
-        onClick={onClick}
+      <a
         className={type}
-        style={{ customStyle }}
+        onClick={onClick}
+        href={href}
+        target={target}
+        rel={rel}
+        style={customStyle}
       >
         <div className="component-child">{children}</div>
-      </button>
+      </a>
     </ButtonStyles>
   );
 }
 
-Button.propTypes = {
+AnchorButton.propTypes = {
   children: PropTypes.node.isRequired,
+  href: PropTypes.string.isRequired,
   type: PropTypes.string,
   onClick: PropTypes.func,
-  customStyle: PropTypes.shape({}),
-  disabled: PropTypes.bool
+  target: PropTypes.string,
+  rel: PropTypes.string,
+  customStyle: PropTypes.shape({})
 };
 
-Button.defaultProps = {
+AnchorButton.defaultProps = {
   type: "primary",
   onClick: () => {},
-  customStyle: {},
-  disabled: false
+  target: "_self",
+  rel: "",
+  customStyle: {}
 };
