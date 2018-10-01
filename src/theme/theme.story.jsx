@@ -1,9 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import styled from "styled-components";
-import ThemeColors from "../src/theme/ThemeColors";
-import ThemeTypography from "../src/theme/ThemeTypography";
-import ThemeLogos from "../src/theme/ThemeLogos";
+import ThemeColors from "./ThemeColors";
+import ThemeTypography from "./ThemeTypography";
+import ThemeLogos from "./ThemeLogos";
 
 const ThemeStyles = styled.div`
   .container {

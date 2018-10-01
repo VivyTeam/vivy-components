@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import FlexGrid from "../grid/FlexGrid";
-import Row from "../grid/Row";
-import Col from "../grid/Col";
+import { FlexGrid, Row, Col } from "../index";
 import { FormStyles } from "./form.style";
 
 export default function Form(props) {

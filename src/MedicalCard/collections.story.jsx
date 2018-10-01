@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { MedicalCard } from "../src";
+import { MedicalCard } from "../index";
 
 const CollectionStyles = styled.div`
   width: 80%;

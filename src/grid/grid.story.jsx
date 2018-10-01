@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf, setAddon } from "@storybook/react";
 import JSXAddon from "storybook-addon-jsx";
-import ExampleStyles from "../src/grid/example.style";
-import { FlexGrid, Row, Col } from "../src";
+import ExampleStyles from "./example.style";
+import { FlexGrid, Row, Col } from "../index";
 
 setAddon(JSXAddon);
 

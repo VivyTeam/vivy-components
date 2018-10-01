@@ -5,7 +5,7 @@ import SimpleIcon from "./SimpleIcon";
 import DetailedIcon from "./DetailedIcon";
 import missingAvatar from "../../public/images/empty-avatar.svg";
 import MedicalCardStyles from "./medicalCard.style";
-import DateDisplay from "../DateDisplay/DateDisplay";
+import { DateDisplay } from "../index";
 
 function MedicalCard({ user, data, t }) {
   const {
