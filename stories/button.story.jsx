@@ -160,7 +160,7 @@ storiesOf("Buttons", module).add(
           Call to Action
         </AnchorButton>
       </div>
-      <h2>quaternary call to action</h2>
+      <h2>Quaternary call to action</h2>
       <div className="list">
         <AnchorButton
           type="quaternary"
@@ -176,7 +176,7 @@ storiesOf("Buttons", module).add(
           href="https://www.vivy.com/"
           target="_blank"
         >
-          <Icon name="call-contact" /> <span>If we have very long text some default padding helps</span>
+          <Icon name="call-contact" /> <span>Call to Action</span>
         </AnchorButton>
       </div>
     </ButtonStyles>

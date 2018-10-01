@@ -6,7 +6,6 @@ const baseStyles = css`
   justify-content: space-evenly;
   cursor: pointer;
   border-radius: 24px;
-  cursor: pointer;
   font-family: "Norms", sans-serif;
   padding-top: 2px;
   line-height: 1em;
@@ -29,6 +28,7 @@ const ButtonStyles = styled.div`
     display: block;
     text-decoration: none;
     outline: none;
+    cursor: pointer;
   }
 
   a {
@@ -54,13 +54,13 @@ const ButtonStyles = styled.div`
       font-size: 1.5em;
     }
 
-    &:hover:enabled {
+    &:hover {
       ${transitionBoxShadow};
       background-color: #03d4bf;
       box-shadow: 0 4px 8px 0 rgba(0, 160, 144, 0.4);
     }
 
-    &:active:enabled {
+    &:active {
       ${transitionBoxShadow};
       background-color: #00bfac;
       box-shadow: 0 2px 4px 0 rgba(0, 160, 144, 0.2);
@@ -88,13 +88,13 @@ const ButtonStyles = styled.div`
       font-size: 1.4em;
     }
 
-    &:hover:enabled {
+    &:hover {
       ${transitionBoxShadow};
       background-color: #03d4bf;
       box-shadow: 0 4px 8px 0 rgba(0, 160, 144, 0.2);
     }
 
-    &:active:enabled {
+    &:active {
       ${transitionBoxShadow};
       background-color: #00bfac;
       box-shadow: 0 2px 4px 0 rgba(0, 160, 144, 0.2);
@@ -125,14 +125,14 @@ const ButtonStyles = styled.div`
       font-size: 1.4em;
     }
 
-    &:hover:enabled {
+    &:hover {
       ${transitionBackgroundColor};
       color: #fff;
       background-color: #03d4bf;
       border-color: #03d4bf;
     }
 
-    &:active:enabled {
+    &:active {
       ${transitionBackgroundColor};
       color: #fff;
       background-color: #00bfac;
@@ -165,14 +165,14 @@ const ButtonStyles = styled.div`
       font-size: 1.4em;
     }
 
-    &:hover:enabled {
+    &:hover {
       ${transitionBackgroundColor};
       color: #fff;
       background-color: #03d4bf;
       border-color: #03d4bf;
     }
 
-    &:active:enabled {
+    &:active {
       ${transitionBackgroundColor};
       color: #fff;
       background-color: #00bfac;
