@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf, setAddon } from "@storybook/react";
 import JSXAddon from "storybook-addon-jsx";
 import styled from "styled-components";
-import { Row, Button, Form, FormItem, Input, Textarea } from "../src";
+import { Row, Button, Form, FormItem, Input, Textarea } from "../index";
 
 setAddon(JSXAddon);
 

@@ -2,9 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import styled from "styled-components";
-import { Icon } from "../src";
+import { Icon } from "../index";
 
-const IconsStory = styled.div`
+const IndexStory = styled.div`
   .container {
     display: flex;
     margin: 80px 0 50px 110px;
@@ -52,7 +52,7 @@ const IconsStory = styled.div`
 storiesOf("Icons", module).add(
   "Vivy font icon pack",
   withInfo("Simple icon set used for frontend apps")(() => (
-    <IconsStory>
+    <IndexStory>
       <div className="container">
         <div className="title">Icons</div>
         <div className="icon-list">
@@ -146,6 +146,6 @@ storiesOf("Icons", module).add(
           </div>
         </div>
       </div>
-    </IconsStory>
+    </IndexStory>
   ))
 );

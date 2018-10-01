@@ -23,7 +23,7 @@ const ThemeStyles = styled.div`
   }
 `;
 
-storiesOf("App Styles", module)
+storiesOf("Theme", module)
   .add("Colors", () => (
     <ThemeStyles>
       <ThemeColors />
