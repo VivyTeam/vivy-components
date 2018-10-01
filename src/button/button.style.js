@@ -22,6 +22,11 @@ const ButtonStyles = styled.div`
     ${baseStyles};
   }
 
+  button:disabled,
+  button:disabled .component-child {
+    cursor: not-allowed !important;
+  }
+
   button {
     padding: 0;
     border-radius: 24px;
@@ -67,8 +72,8 @@ const ButtonStyles = styled.div`
     }
 
     &:disabled {
-      cursor: not-allowed;
       background-color: #cdcdcd;
+      box-shadow: none;
     }
   }
 
@@ -101,8 +106,8 @@ const ButtonStyles = styled.div`
     }
 
     &:disabled {
-      cursor: not-allowed;
       background-color: #cdcdcd;
+      box-shadow: none;
     }
   }
 
@@ -140,7 +145,6 @@ const ButtonStyles = styled.div`
     }
 
     &:disabled {
-      cursor: not-allowed;
       background-color: #cdcdcd;
       box-shadow: none;
     }
@@ -180,7 +184,6 @@ const ButtonStyles = styled.div`
     }
 
     &:disabled {
-      cursor: not-allowed;
       background-color: #cdcdcd;
       box-shadow: none;
     }
