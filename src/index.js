@@ -1,5 +1,4 @@
-export { default as Fonts } from "./Fonts/fonts.style";
-export { default as Colors } from "./Vivy Theme/colors";
+export { default as Colors } from "./VivyTheme/colors";
 export { default as Topbar } from "./Topbar";
 export { default as MedicalCard } from "./MedicalCard";
 export { default as Button } from "./Buttons/Button";
