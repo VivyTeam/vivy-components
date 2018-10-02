@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { MedicalCard } from "../index";
+import "../translations/i18n";
 
 const CollectionStyles = styled.div`
   width: 80%;
@@ -16,7 +17,7 @@ const CollectionStyles = styled.div`
   }
 `;
 
-storiesOf("Collections", module).add(
+storiesOf("MedicalCard", module).add(
   "Medical ID",
   withInfo("A simple page with topbar, body, footer")(() => (
     <CollectionStyles>

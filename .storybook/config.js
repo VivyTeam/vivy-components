@@ -8,7 +8,7 @@ setOptions({
   showAddonPanel: true
 });
 
-// automatically import all files ending in *.stories.js
+// automatically import all files ending in *.story.jsx
 const req = require.context("../src", true, /story\.jsx$/);
 
 function loadStories() {
