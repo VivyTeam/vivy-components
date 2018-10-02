@@ -4,7 +4,6 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import Button from "../src/button/Button";
-import AnchorButton from "../src/button/AnchorButton";
 import Icon from "../src/icons";
 
 const click = action("Button");
