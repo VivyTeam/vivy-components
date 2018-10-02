@@ -4,10 +4,8 @@ import { withInfo } from "@storybook/addon-info";
 import { BirthDate } from "../index";
 
 storiesOf("BirthDate", module).add(
-  "BirthDate",
+  "default",
   withInfo("Simply shows the birthdate in form DD.MM.YYYY")(() => (
-    <div>
-      <BirthDate date="1990-10-10" />
-    </div>
+    <BirthDate date="1990-10-10" />
   ))
 );

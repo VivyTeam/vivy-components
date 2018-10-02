@@ -18,7 +18,7 @@ const CollectionStyles = styled.div`
 `;
 
 storiesOf("MedicalCard", module).add(
-  "Medical ID",
+  "default",
   withInfo("A simple page with topbar, body, footer")(() => (
     <CollectionStyles>
       <div className="layout-body">
