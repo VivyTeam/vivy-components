@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FlexGrid, Row, Col } from "../index";
-import { FormStyles } from "./form.style";
+import { FormStyles } from "./input.style";
 
 export default function Form(props) {
   const { horizontal, children } = props;

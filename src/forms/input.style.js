@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
-const FormStyles = styled.div`
-  .form-item {
-    padding: 25px;
+const InputStyles = styled.div`
+  label {
+    color: #575756;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.3px;
+    line-height: 2.5;
   }
-`;
-
-export default FormStyles;
 
   input {
     width: 100%;
@@ -45,3 +48,5 @@ export default FormStyles;
     color: #e94119;
   }
 `;
+
+export default InputStyles;
