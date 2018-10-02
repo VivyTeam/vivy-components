@@ -3,9 +3,9 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { SimpleLoader } from "../index";
 
-storiesOf("Animations", module)
+storiesOf("SimpleLoader", module)
   .add(
-    "SimpleLoader",
+    "default",
     withInfo("A simple loader")(() => (
       <div>
         <SimpleLoader />
@@ -13,7 +13,7 @@ storiesOf("Animations", module)
     ))
   )
   .add(
-    "SimpleLoader centered",
+    "centered",
     withInfo("A simple loader centered")(() => (
       <div>
         <SimpleLoader centered />
@@ -21,7 +21,7 @@ storiesOf("Animations", module)
     ))
   )
   .add(
-    "SimpleLoader with width and height",
+    "with width and height",
     withInfo("A simple loader")(() => (
       <div>
         <SimpleLoader width={100} height={100} />
