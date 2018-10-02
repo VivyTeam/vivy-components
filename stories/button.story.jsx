@@ -108,6 +108,11 @@ storiesOf("Buttons", module).add(
       <div className="list">
         <GeneralButton>
           <a className="primary" href="https://www.vivy.com/">
+            <div className="component-child">Call to Action</div>
+          </a>
+        </GeneralButton>
+        <GeneralButton>
+          <a className="primary" href="https://www.vivy.com/">
             <div className="component-child">
               <Icon name="call-contact" />
               Call to Action
@@ -117,6 +122,11 @@ storiesOf("Buttons", module).add(
       </div>
       <h2>Secondary Call to Action</h2>
       <div className="list">
+        <GeneralButton>
+          <a className="secondary" href="https://www.vivy.com/">
+            <div className="component-child">Call to Action</div>
+          </a>
+        </GeneralButton>
         <GeneralButton>
           <a className="secondary" href="https://www.vivy.com/">
             <div className="component-child">
@@ -130,6 +140,11 @@ storiesOf("Buttons", module).add(
       <div className="list">
         <GeneralButton>
           <a className="tertiary" href="https://www.vivy.com/">
+            <div className="component-child">Call to Action</div>
+          </a>
+        </GeneralButton>
+        <GeneralButton>
+          <a className="tertiary" href="https://www.vivy.com/">
             <div className="component-child">
               <Icon name="call-contact" />
               Call to Action
@@ -139,6 +154,11 @@ storiesOf("Buttons", module).add(
       </div>
       <h2>Quaternary call to action</h2>
       <div className="list">
+        <GeneralButton>
+          <a className="quaternary" href="https://www.vivy.com/">
+            <div className="component-child">Call to Action</div>
+          </a>
+        </GeneralButton>
         <GeneralButton>
           <a className="quaternary" href="https://www.vivy.com/">
             <div className="component-child">
