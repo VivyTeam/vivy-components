@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TextareaStyles from "./textarea.style.js";
+import TextareaStyles from "./textarea.style";
 
 export function Textarea(props) {
   const { label, required, placeholder, onInput, disabled } = props;

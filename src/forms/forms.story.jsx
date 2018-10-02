@@ -3,6 +3,7 @@ import { storiesOf, setAddon } from "@storybook/react";
 import JSXAddon from "storybook-addon-jsx";
 import styled from "styled-components";
 import { Row, Button, Form, Input, Textarea } from "../index";
+
 setAddon(JSXAddon);
 
 const FormContainer = styled.div`

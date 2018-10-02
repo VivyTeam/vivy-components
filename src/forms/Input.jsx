@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { InputStyles } from "./input.style";
+import InputStyles from "./input.style";
 
 const Input = props => (
   <InputStyles>
