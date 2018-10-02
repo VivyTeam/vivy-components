@@ -4,6 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import Button from "../src/button/Button";
+import GeneralButton from "../src/button/GeneralButton";
 import Icon from "../src/icons";
 
 const click = action("Button");
@@ -56,117 +57,96 @@ storiesOf("Buttons", module).add(
 
       <h2>Primary Call to Action</h2>
       <div className="list">
-        <Button>
-          <button className="primary" onClick={() => click("button clicked!")}>
-            <div className="component-child">
-              <Icon name="call-contact" />
-              Call to Action
-            </div>
-          </button>
+        <Button onClick={() => click("button clicked!")}>Call to Action</Button>
+        <Button onClick={() => click("button clicked!")}>
+          <Icon name="call-contact" />
+          Call to Action
         </Button>
       </div>
       <h2>Secondary Call to Action</h2>
       <div className="list">
-        <Button>
-          <button
-            className="secondary"
-            onClick={() => click("button clicked!")}
-          >
-            <div className="component-child">
-              <Icon name="call-contact" />
-              Call to Action
-            </div>
-          </button>
+        <Button type="secondary" onClick={() => click("button clicked!")}>
+          Call to Action
+        </Button>
+        <Button type="secondary" onClick={() => click("button clicked!")}>
+          <Icon name="call-contact" />
+          Call to Action
         </Button>
       </div>
       <h2>Tertiary Call to Action</h2>
       <div className="list">
-        <Button type="tertiary">
-          <button className="tertiary" onClick={() => click("button clicked!")}>
-            <div className="component-child">
-              <Icon name="call-contact" />
-              Call to Action
-            </div>
-          </button>
+        <Button type="tertiary" onClick={() => click("button clicked!")}>
+          Call to Action
+        </Button>
+        <Button type="tertiary" onClick={() => click("button clicked!")}>
+          <Icon name="call-contact" />
+          Call to Action
         </Button>
       </div>
       <h2>quaternary call to action</h2>
       <div className="list">
-        <Button>
-          <button className="tertiary" onClick={() => click("button clicked!")}>
-            <div className="component-child">
-              <Icon name="call-contact" />
-              Call to Action
-            </div>
-          </button>
+        <Button type="quaternary" onClick={() => click("button clicked!")}>
+          Call to Action
+        </Button>
+        <Button type="quaternary" onClick={() => click("button clicked!")}>
+          <Icon name="call-contact" />
+          Call to Action
         </Button>
       </div>
       <h2>Disabled</h2>
       <div className="list">
-        <Button>
-          <button
-            disabled
-            className="primary"
-            onClick={() => click("button clicked!")}
-          >
-            <div className="component-child">Disabled</div>
-          </button>
+        <Button disabled type="primary" onClick={() => click("disabled")}>
+          Disabled
         </Button>
-        <Button>
-          <button
-            disabled
-            className="secondary"
-            onClick={() => click("button clicked!")}
-          >
-            <div className="component-child">Disabled</div>
-          </button>
+        <Button disabled type="secondary" onClick={() => click("disabled")}>
+          Disabled
         </Button>
       </div>
 
       <h1>Anchor Buttons</h1>
       <h2>Primary Call to Action</h2>
       <div className="list">
-        <Button>
+        <GeneralButton>
           <a className="primary" href="https://www.vivy.com/">
             <div className="component-child">
               <Icon name="call-contact" />
               Call to Action
             </div>
           </a>
-        </Button>
+        </GeneralButton>
       </div>
       <h2>Secondary Call to Action</h2>
       <div className="list">
-        <Button>
+        <GeneralButton>
           <a className="secondary" href="https://www.vivy.com/">
             <div className="component-child">
               <Icon name="call-contact" />
               Call to Action
             </div>
           </a>
-        </Button>
+        </GeneralButton>
       </div>
       <h2>Tertiary Call to Action</h2>
       <div className="list">
-        <Button>
+        <GeneralButton>
           <a className="tertiary" href="https://www.vivy.com/">
             <div className="component-child">
               <Icon name="call-contact" />
               Call to Action
             </div>
           </a>
-        </Button>
+        </GeneralButton>
       </div>
       <h2>Quaternary call to action</h2>
       <div className="list">
-        <Button>
+        <GeneralButton>
           <a className="quaternary" href="https://www.vivy.com/">
             <div className="component-child">
               <Icon name="call-contact" />
               Call to Action
             </div>
           </a>
-        </Button>
+        </GeneralButton>
       </div>
     </ButtonStyles>
   ))
