@@ -56,7 +56,7 @@ storiesOf("Buttons", module).add(
 
       <h2>Primary Call to Action</h2>
       <div className="list">
-        <Button type="primary">
+        <Button>
           <button className="primary" onClick={() => click("button clicked!")}>
             <div className="component-child">
               <Icon name="call-contact" />
