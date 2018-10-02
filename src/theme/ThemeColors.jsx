@@ -1,5 +1,5 @@
 import React from "react";
-import ThemeStyles from "./theme.style";
+import ThemeStyles from "./themeColors.style";
 import ColorBox from "./ColorBox";
 import FlexGrid from "../grid/FlexGrid";
 import Row from "../grid/Row";

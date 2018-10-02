@@ -1,5 +1,5 @@
 import React from "react";
-import FontStyles from "./typography.style";
+import FontStyles from "./themeTypography.style";
 
 export default function ThemeTypography() {
   return (
