@@ -23,7 +23,7 @@ const ThemeStyles = styled.div`
   }
 `;
 
-storiesOf("Theme", module)
+storiesOf("Vivy Theme", module)
   .add("Colors", () => (
     <ThemeStyles>
       <ThemeColors />
