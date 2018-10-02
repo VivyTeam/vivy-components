@@ -5,9 +5,7 @@ import ButtonStyles from "./button.style";
 export default function Button({ children, type, ...rest }) {
   return (
     <ButtonStyles>
-      <button className={type} {...rest}>
-        <div className="component-child">{children}</div>
-      </button>
+      {children}
     </ButtonStyles>
   );
 }
