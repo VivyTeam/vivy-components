@@ -21,6 +21,7 @@ export default function AnchorButton({
         target={target}
         rel={rel}
         style={customStyle}
+        download={download}
       >
         <div className="component-child">{children}</div>
       </a>
