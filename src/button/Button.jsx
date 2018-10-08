@@ -15,7 +15,7 @@ export default function Button({
         disabled={disabled}
         onClick={onClick}
         className={type}
-        style={{ customStyle }}
+        style={customStyle}
       >
         <div className="component-child">{children}</div>
       </button>

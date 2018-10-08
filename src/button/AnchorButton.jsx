@@ -8,6 +8,7 @@ export default function AnchorButton({
   href,
   target,
   rel,
+  download,
   children,
   customStyle
 }) {
@@ -34,6 +35,7 @@ AnchorButton.propTypes = {
   onClick: PropTypes.func,
   target: PropTypes.string,
   rel: PropTypes.string,
+  download: PropTypes.string,
   customStyle: PropTypes.shape({})
 };
 
@@ -42,5 +44,6 @@ AnchorButton.defaultProps = {
   onClick: () => {},
   target: "_self",
   rel: "",
+  download: "",
   customStyle: {}
 };
