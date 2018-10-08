@@ -1,5 +1,5 @@
-export { default as GeneralButton } from "./button/GeneralButton";
 export { default as Button } from "./button/Button";
+export { default as AnchorButton } from "./button/AnchorButton";
 export { default as FlexGrid } from "./grid/FlexGrid";
 export { default as Row } from "./grid/Row";
 export { default as Col } from "./grid/Col";
