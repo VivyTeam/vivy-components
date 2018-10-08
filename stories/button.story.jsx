@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import Button from "../src/button/Button";
-import GeneralButton from "../src/button/GeneralButton";
+import AnchorButton from "../src/button/AnchorButton";
 import Icon from "../src/icons";
 
 const click = action("Button");
@@ -104,69 +104,83 @@ storiesOf("Buttons", module).add(
       </div>
 
       <h1>Anchor Buttons</h1>
+
       <h2>Primary Call to Action</h2>
       <div className="list">
-        <GeneralButton>
-          <a className="primary" href="https://www.vivy.com/">
-            <div className="component-child">Call to Action</div>
-          </a>
-        </GeneralButton>
-        <GeneralButton>
-          <a className="primary" href="https://www.vivy.com/">
-            <div className="component-child">
-              <Icon name="call-contact" />
-              Call to Action
-            </div>
-          </a>
-        </GeneralButton>
+        <AnchorButton
+          onClick={() => click("button clicked!")}
+          href="https://www.vivy.com/"
+          target="_blank"
+        >
+          Call to Action
+        </AnchorButton>
+        <AnchorButton
+          onClick={() => click("button clicked!")}
+          href="https://www.vivy.com/"
+          target="_blank"
+        >
+          <Icon name="call-contact" />
+          Call to Action
+        </AnchorButton>
       </div>
       <h2>Secondary Call to Action</h2>
       <div className="list">
-        <GeneralButton>
-          <a className="secondary" href="https://www.vivy.com/">
-            <div className="component-child">Call to Action</div>
-          </a>
-        </GeneralButton>
-        <GeneralButton>
-          <a className="secondary" href="https://www.vivy.com/">
-            <div className="component-child">
-              <Icon name="call-contact" />
-              Call to Action
-            </div>
-          </a>
-        </GeneralButton>
+        <AnchorButton
+          type="secondary"
+          onClick={() => click("button clicked!")}
+          href="https://www.vivy.com/"
+          target="_blank"
+        >
+          Call to Action
+        </AnchorButton>
+        <AnchorButton
+          type="secondary"
+          onClick={() => click("button clicked!")}
+          href="https://www.vivy.com/"
+          target="_blank"
+        >
+          <Icon name="call-contact" />
+          Call to Action
+        </AnchorButton>
       </div>
       <h2>Tertiary Call to Action</h2>
       <div className="list">
-        <GeneralButton>
-          <a className="tertiary" href="https://www.vivy.com/">
-            <div className="component-child">Call to Action</div>
-          </a>
-        </GeneralButton>
-        <GeneralButton>
-          <a className="tertiary" href="https://www.vivy.com/">
-            <div className="component-child">
-              <Icon name="call-contact" />
-              Call to Action
-            </div>
-          </a>
-        </GeneralButton>
+        <AnchorButton
+          type="tertiary"
+          onClick={() => click("button clicked!")}
+          href="https://www.vivy.com/"
+          target="_blank"
+        >
+          Call to Action
+        </AnchorButton>
+        <AnchorButton
+          type="tertiary"
+          onClick={() => click("button clicked!")}
+          href="https://www.vivy.com/"
+          target="_blank"
+        >
+          <Icon name="call-contact" />
+          Call to Action
+        </AnchorButton>
       </div>
       <h2>Quaternary call to action</h2>
       <div className="list">
-        <GeneralButton>
-          <a className="quaternary" href="https://www.vivy.com/">
-            <div className="component-child">Call to Action</div>
-          </a>
-        </GeneralButton>
-        <GeneralButton>
-          <a className="quaternary" href="https://www.vivy.com/">
-            <div className="component-child">
-              <Icon name="call-contact" />
-              Call to Action
-            </div>
-          </a>
-        </GeneralButton>
+        <AnchorButton
+          type="quaternary"
+          onClick={() => click("button clicked!")}
+          href="https://www.vivy.com/"
+          target="_blank"
+        >
+          Call to Action
+        </AnchorButton>
+        <AnchorButton
+          type="quaternary"
+          onClick={() => click("button clicked!")}
+          href="https://www.vivy.com/"
+          target="_blank"
+        >
+          <Icon name="call-contact" /> <span>Call to Action</span>
+        </AnchorButton>
       </div>
     </ButtonStyles>
   ))
