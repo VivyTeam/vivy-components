@@ -40,6 +40,16 @@ Deployment for the component library is an automated process requiring three sep
 
 All tasks are ran using [Circle CI](https://circleci.com/gh/UvitaTeam/) whenever any changes are detected (excluding the master branch). Both the packaging and website steps are only triggered when a new tag is added to the project. To handle releases we use Github's release interface which will automatically run the steps necessary to make new changes available.
 
+#### To specify a target branch and serve your storybook with rawgit instead of gh-pages:
+
+1.  run the command
+
+```
+npm run build:storybook -- --branch={{branch-name}}
+```
+
+2.  visit https://rawgit.com/UvitaTeam/vivy-components/{{branch-name}}/
+
 ## Tech Used
 
 - Storybook
