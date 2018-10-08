@@ -2,10 +2,26 @@ import React from "react";
 import PropTypes from "prop-types";
 import ButtonStyles from "./button.style";
 
-export default function AnchorButton({ children, type, ...rest }) {
+export default function AnchorButton({
+  onClick,
+  type,
+  href,
+  target,
+  rel,
+  download,
+  children,
+  customStyle
+}) {
   return (
     <ButtonStyles>
-      <a {...rest} className={type}>
+      <a
+        className={type}
+        onClick={onClick}
+        href={href}
+        target={target}
+        rel={rel}
+        style={customStyle}
+      >
         <div className="component-child">{children}</div>
       </a>
     </ButtonStyles>
@@ -14,9 +30,20 @@ export default function AnchorButton({ children, type, ...rest }) {
 
 AnchorButton.propTypes = {
   children: PropTypes.node.isRequired,
-  type: PropTypes.string
+  href: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  onClick: PropTypes.func,
+  target: PropTypes.string,
+  rel: PropTypes.string,
+  download: PropTypes.string,
+  customStyle: PropTypes.shape({})
 };
 
 AnchorButton.defaultProps = {
-  type: "primary"
+  type: "primary",
+  onClick: () => {},
+  target: "_self",
+  rel: "",
+  download: "",
+  customStyle: {}
 };
