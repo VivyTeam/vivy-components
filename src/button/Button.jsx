@@ -2,10 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import ButtonStyles from "./button.style";
 
-export default function Button({ children, type, ...rest }) {
+export default function Button({
+  disabled,
+  onClick,
+  type,
+  children,
+  customStyle
+}) {
   return (
     <ButtonStyles>
-      <button className={type} {...rest}>
+      <button
+        disabled={disabled}
+        onClick={onClick}
+        className={type}
+        style={{ customStyle }}
+      >
         <div className="component-child">{children}</div>
       </button>
     </ButtonStyles>
@@ -14,9 +25,15 @@ export default function Button({ children, type, ...rest }) {
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  type: PropTypes.string
+  type: PropTypes.string,
+  onClick: PropTypes.func,
+  customStyle: PropTypes.shape({}),
+  disabled: PropTypes.bool
 };
 
 Button.defaultProps = {
-  type: "primary"
+  type: "primary",
+  onClick: () => {},
+  customStyle: {},
+  disabled: false
 };
