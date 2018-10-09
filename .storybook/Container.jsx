@@ -8,6 +8,8 @@ export default class Container extends Component {
       <React.StrictMode>
         <div
           style={{
+            backgroundColor: '#fafafa',
+            margin: 20,
             display: "flex",
             justifyContent: "center",
             flexDirection: "column"
