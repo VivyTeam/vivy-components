@@ -2,7 +2,8 @@ import React from "react";
 import { storiesOf, setAddon } from "@storybook/react";
 import JSXAddon from "storybook-addon-jsx";
 import styled from "styled-components";
-import { Row, Button, Form, Input, Textarea } from "../index";
+import { Row, Button, Form, Input } from "../index";
+import { withKnobs } from "@storybook/addon-knobs";
 
 setAddon(JSXAddon);
 
@@ -20,6 +21,7 @@ const FormContainer = styled.div`
 `;
 
 storiesOf("Forms", module)
+  .addDecorator(withKnobs)
   .addWithJSX("Input", () => (
     <FormContainer>
       <Input id="name" placeholder="Your name" label="Name" />
@@ -88,18 +90,5 @@ storiesOf("Forms", module)
           <Button type="quaternary">clear</Button>
         </Row>
       </Form>
-    </FormContainer>
-  ))
-  .addWithJSX("Textarea", () => (
-    <FormContainer>
-      <Row>
-        <Textarea required label="Other reason" />
-      </Row>
-      <Row>
-        <Textarea label="Not Required" />
-      </Row>
-      <Row>
-        <Textarea disabled label="Disabled" />
-      </Row>
     </FormContainer>
   ));

@@ -2,9 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import TextareaStyles from "./textarea.style";
 
-export function Textarea(props) {
-  const { label, required, placeholder, onInput, disabled } = props;
-
+export function Textarea({
+  label,
+  required,
+  placeholder,
+  onInput,
+  disabled,
+  style
+}) {
   return (
     <TextareaStyles>
       {label}
@@ -13,6 +18,7 @@ export function Textarea(props) {
         disabled={disabled}
         onInput={onInput}
         placeholder={placeholder}
+        style={style}
       />
     </TextareaStyles>
   );
@@ -23,7 +29,8 @@ Textarea.propTypes = {
   placeholder: PropTypes.string,
   label: PropTypes.string,
   required: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  style: PropTypes.shape({})
 };
 
 Textarea.defaultProps = {
@@ -31,7 +38,8 @@ Textarea.defaultProps = {
   placeholder: "",
   label: "",
   required: false,
-  disabled: false
+  disabled: false,
+  style: {}
 };
 
 export default Textarea;
