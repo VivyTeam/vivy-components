@@ -1,18 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function BirthDate({ date, style }) {
+export default function DateDisplayMinimal({ date, style }) {
   return (
     <div style={style}>
       {date.split("-")[2]}.{date.split("-")[1]}.{date.split("-")[0]}
     </div>
   );
 }
-BirthDate.propTypes = {
+DateDisplayMinimal.propTypes = {
   date: PropTypes.string.isRequired,
   style: PropTypes.shape({})
 };
 
-BirthDate.defaultProps = {
+DateDisplayMinimal.defaultProps = {
   style: {}
 };
