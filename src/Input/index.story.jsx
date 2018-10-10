@@ -3,10 +3,21 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { Input } from "../index";
 
-storiesOf("Forms", module)
+storiesOf("Input", module)
   .add(
     "default",
     withInfo()(() => <Input id="name" placeholder="Your name" label="Name" />)
+  )
+  .add(
+    "required",
+    withInfo()(() => (
+      <Input
+        id="required"
+        placeholder="Required"
+        label="Required"
+        isRequired
+      />
+    ))
   )
   .add(
     "email",
@@ -22,7 +33,6 @@ storiesOf("Forms", module)
         placeholder="Your password"
         label="Password"
         type="password"
-        isRequired
       />
     ))
   );
