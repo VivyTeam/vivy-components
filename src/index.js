@@ -11,6 +11,5 @@ export { default as DateDisplay } from "./DateDisplay";
 export { default as DateDisplayMinimal } from "./DateDisplayMinimal";
 export { default as Textarea } from "./Textarea";
 export { default as Input } from "./Input/Input";
-export { default as Form } from "./Input/Form";
 export { default as SimpleLoader } from "./SimpleLoader";
 export { default as Footer } from "./Footer";

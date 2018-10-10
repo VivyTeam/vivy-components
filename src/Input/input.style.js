@@ -22,24 +22,24 @@ const InputStyles = styled.div`
     font-style: normal;
     font-stretch: normal;
     color: #898988;
-    padding: 2px 16px;
+    padding-left: 16px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  }
 
-  input:hover {
-    border-color: #04d4bf;
-    transition: border-color 0.2s ease;
-  }
+    &:hover {
+      border-color: #04d4bf;
+      transition: border-color 0.2s ease;
+    }
 
-  input:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(4, 212, 191, 0.2);
-    border-color: #04d4bf;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(4, 212, 191, 0.2);
+      border-color: #04d4bf;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
 
-  input::placeholder {
-    color: #bfbfbf;
+    &::placeholder {
+      color: #bfbfbf;
+    }
   }
 
   #required {
