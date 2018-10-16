@@ -10,4 +10,5 @@ export { default as Textarea } from "./forms/Textarea";
 export { default as Input } from "./forms/Input";
 export { default as Colors } from "./theme/colors";
 export { default as SimpleLoader } from "./SimpleLoader";
+export { default as Topbar } from "./topbar";
 export { default as Footer } from "./footer";
