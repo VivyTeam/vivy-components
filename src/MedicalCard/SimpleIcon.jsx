@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Icon from "../Icon";
 import SimpleIconStyles from "./simpleIcon.style";
+import { Icon } from "../index";
 
 export default function BasicInfoIcon({ icon, iconDetail, iconColor }) {
   return (
