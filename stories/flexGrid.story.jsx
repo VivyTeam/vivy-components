@@ -1,9 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { withInfo } from "@storybook/addon-info";
 import styled from "styled-components";
 import Row from "../src/FlexRow/index";
 import Col from "../src/FlexColumn/index";
-import { withInfo } from "@storybook/addon-info";
 
 const Box = styled.div`
   background-color: #04d4bf;

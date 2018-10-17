@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import RowStyles from './index.style';
+import React from "react";
+import PropTypes from "prop-types";
+import RowStyles from "./index.style";
 
 export default function Row({
   children,
@@ -12,26 +12,40 @@ export default function Row({
   start,
   center,
   end,
+  reverse
 }) {
-  const classAround = around && 'around-xs';
-  const classBetween = around && 'between-xs';
+
+  const classAround = around && "around-xs";
+  const classBetween = between && "between-xs";
+  const classBottom = bottom && "bottom-xs";
+  const classMiddle = middle && "middle-xs";
+  const classTop = top && "top-xs";
+  const classStart = start && "start-xs";
+  const classCenter = center && "center-xs";
+  const classEnd = end && "end-xs";
+  const classReverse = reverse && "reverse";
 
   return (
-    <RowStyles className={`${classAround} ${classBetween}  row`}>
-      {children}
+    <RowStyles>
+      <div
+        className={`row ${classAround} ${classBetween} ${classBottom} ${classMiddle} ${classTop} ${classStart} ${classCenter} ${classEnd} ${classReverse}`}
+      >
+        {children}
+      </div>
     </RowStyles>
   );
 }
 
 Row.propTypes = {
-  around: PropTypes.bool, // space-around
-  between: PropTypes.bool, // space in between
-  bottom: PropTypes.bool, // bottom
-  middle: PropTypes.bool, // middle
-  top: PropTypes.bool, // top
+  around: PropTypes.bool,
+  between: PropTypes.bool,
+  bottom: PropTypes.bool,
+  middle: PropTypes.bool,
+  top: PropTypes.bool,
   start: PropTypes.bool,
   center: PropTypes.bool,
   end: PropTypes.bool,
+  reverse: PropTypes.bool,
 };
 
 Row.defaultProps = {
@@ -43,4 +57,5 @@ Row.defaultProps = {
   start: false,
   center: false,
   end: false,
+  reverse: false
 };

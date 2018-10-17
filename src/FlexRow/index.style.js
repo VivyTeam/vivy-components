@@ -1,34 +1,14 @@
 import styled from "styled-components";
 
 const RowStyles = styled.div`
-  :root {
-    --gutter-width: 1rem;
-    --outer-margin: 2rem;
-    --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
-    --half-gutter-width: calc((var(--gutter-width) * 0.5));
-    --xs-min: 30;
-    --screen-xs-min: var(--xs-min) em;
-  }
-
-  .container-fluid,
-  .container {
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .container-fluid {
-    padding-right: var(--outer-margin, 2rem);
-    padding-left: var(--outer-margin, 2rem);
-  }
-
   .row {
     box-sizing: border-box;
     display: flex;
     flex: 0 1 auto;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-right: var(--gutter-compensation, -0.5rem);
-    margin-left: var(--gutter-compensation, -0.5rem);
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
   }
 
   .row.reverse {
@@ -38,6 +18,7 @@ const RowStyles = styled.div`
   .col.reverse {
     flex-direction: column-reverse;
   }
+  
   .col-xs,
   .col-xs-1,
   .col-xs-2,
