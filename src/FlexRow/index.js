@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import RowStyles from "./index.style";
+import React from 'react';
+import PropTypes from 'prop-types';
+import RowStyles from './index.style';
 
 export default function Row({
   children,
@@ -11,10 +11,10 @@ export default function Row({
   top,
   start,
   center,
-  end
+  end,
 }) {
-  const classAround = around && "around-xs";
-  const classBetween = around && "between-xs";
+  const classAround = around && 'around-xs';
+  const classBetween = around && 'between-xs';
 
   return (
     <RowStyles className={`${classAround} ${classBetween}  row`}>
@@ -31,7 +31,7 @@ Row.propTypes = {
   top: PropTypes.bool, // top
   start: PropTypes.bool,
   center: PropTypes.bool,
-  end: PropTypes.bool
+  end: PropTypes.bool,
 };
 
 Row.defaultProps = {
@@ -42,5 +42,5 @@ Row.defaultProps = {
   top: false,
   start: false,
   center: false,
-  end: false
+  end: false,
 };
