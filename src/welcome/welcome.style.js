@@ -2,24 +2,25 @@ import styled from "styled-components";
 
 const WelcomeStyles = styled.div`
   h1 {
-    color: #575756;
+    color: #353f41;
     font-size: 1.5em;
   }
 
   h2 {
-    color: #575756;
+    color: #353f41;
     font-size: 1.25em;
   }
 
   h3 {
-    color: #575756;
+    color: #353f41;
     font-size: 1em;
   }
 
   p {
-    color: #575756;
-    font-size: 0.93em;
-    font-weight: 100;
+    color: #353f41;
+    font-size: 1em;
+    line-height: 1.38;
+    font-weight: 400;
   }
 
   #alt {
@@ -42,7 +43,7 @@ const WelcomeStyles = styled.div`
   }
 
   .box {
-    margin: 60px 10px;
+    margin: 60px 0px;
   }
 `;
 
