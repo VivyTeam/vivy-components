@@ -2,22 +2,22 @@ import styled from "styled-components";
 
 const WelcomeStyles = styled.div`
   h1 {
-    color: #353F41;
+    color: #353f41;
     font-size: 1.5em;
   }
 
   h2 {
-    color: #353F41;
+    color: #353f41;
     font-size: 1.25em;
   }
 
   h3 {
-    color: #353F41;
+    color: #353f41;
     font-size: 1em;
   }
 
   p {
-    color: #353F41;
+    color: #353f41;
     font-size: 1em;
     line-height: 1.38;
     font-weight: 400;

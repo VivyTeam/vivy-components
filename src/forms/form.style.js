@@ -41,7 +41,6 @@ export const InputStyles = styled.div`
     color: #cdcdcd;
   }
 
-
   #required {
     font-size: 0.9em;
     padding-left: 10px;

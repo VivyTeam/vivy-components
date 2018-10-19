@@ -45,7 +45,7 @@ const FontStyles = styled.div`
   }
 
   h5 {
-   font-size: 1rem;
+    font-size: 1rem;
     font-weight: 500;
     font-stretch: normal;
     line-height: 1.38;
@@ -53,7 +53,6 @@ const FontStyles = styled.div`
     color: #353f41;
     margin: 6px 0;
   }
-
 
   p {
     font-size: 1rem;
@@ -64,7 +63,6 @@ const FontStyles = styled.div`
     letter-spacing: normal;
     color: #575756;
   }
-
 
   br {
     margin-bottom: 32px;
@@ -86,7 +84,7 @@ const FontStyles = styled.div`
     font-weight: 500;
     font-stretch: normal;
     letter-spacing: normal;
-  
+
     color: #00bfac;
     padding: 16px;
   }
