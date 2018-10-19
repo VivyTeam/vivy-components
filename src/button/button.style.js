@@ -50,7 +50,8 @@ const ButtonStyles = styled.div`
   .primary {
     ${transitionBoxShadow};
     min-width: 230px;
-    font-size: 1.125em;
+    font-size: 1em;
+    font-weight: 500;
     color: #fff;
     background-color: #04d4bf;
     border: 0;
@@ -72,7 +73,7 @@ const ButtonStyles = styled.div`
     }
 
     &:disabled {
-      background-color: #cdcdcd;
+      opacity: 0.4;
       box-shadow: none;
     }
   }
@@ -84,7 +85,8 @@ const ButtonStyles = styled.div`
   .secondary {
     ${transitionBoxShadow};
     min-width: 178px;
-    font-size: 0.938em;
+    font-size: 1em;
+    font-weight: 500;
     color: #fff;
     background-color: #03d4bf;
     border: 0;
@@ -106,7 +108,7 @@ const ButtonStyles = styled.div`
     }
 
     &:disabled {
-      background-color: #cdcdcd;
+      opacity: 0.4;
       box-shadow: none;
     }
   }
@@ -121,7 +123,8 @@ const ButtonStyles = styled.div`
   .tertiary {
     ${transitionBackgroundColor};
     min-width: 178px;
-    font-size: 0.938em;
+    font-size: 1em;
+    font-weight: 500;
     background-color: #fff;
     border: solid 2px #00bfac;
     color: #00bfac;
@@ -160,7 +163,8 @@ const ButtonStyles = styled.div`
   .quaternary {
     ${transitionBackgroundColor};
     min-width: 178px;
-    font-size: 15px;
+    font-size: 1em;
+    font-weight: 500;
     background-color: #fff;
     border: solid 2px #898988;
     color: #898988;
