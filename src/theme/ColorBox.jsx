@@ -41,7 +41,7 @@ export default class ColorBox extends Component {
           <small>{description}</small>
           <br />
           <small>{gradient ? "" : color}</small>
-          <h2 id="copy">copy</h2>
+          <h2 id="copy">Copy</h2>
         </div>
       </div>
     );

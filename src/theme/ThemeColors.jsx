@@ -19,8 +19,8 @@ export default function ThemeColors() {
                 <ColorBox description="Actionable text" color="#09cbb8" />
                 <ColorBox description="Alert" color="#e94119" />
                 <ColorBox description="Background" color="#f5f5f5" dark />
-                <ColorBox description="Primary" color="#575756" />
-                <ColorBox description="Secondary" color="#898988" />
+                <ColorBox description="Primary" color="#353f41" />
+                <ColorBox description="Secondary" color="#7b7b7b" />
                 <ColorBox description="Hint" color="#bfbfbf" />
                 <ColorBox description="Divider" color="#e0e0e0" dark />
               </Row>

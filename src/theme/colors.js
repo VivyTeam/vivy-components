@@ -1,4 +1,4 @@
-const primary = "#03d4bf";
+const primary = "#353F41";
 const primaryHover = "#05e6c8";
 const error = "#fe5533";
 const gray = "#cdcdcd";
