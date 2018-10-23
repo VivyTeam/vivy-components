@@ -9,6 +9,7 @@ const InputStyles = styled.div`
     font-stretch: normal;
     line-height: 2.5;
   }
+
   input {
     width: 100%;
     height: 48px;
@@ -23,14 +24,17 @@ const InputStyles = styled.div`
     padding: 2px 16px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
+
   input:focus {
     outline: none;
     border-color: #00bfac;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
+
   input::placeholder {
     color: #cdcdcd;
   }
+
   #required {
     font-size: 0.9em;
     padding-left: 10px;
