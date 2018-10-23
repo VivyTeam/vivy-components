@@ -1,9 +1,11 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import styled from "styled-components";
-import ThemeColors from "./ThemeColors";
-import ThemeTypography from "./ThemeTypography";
-import ThemeLogos from "./ThemeLogos";
+import { storiesOf } from "@storybook/react";
+import PrinciplesPage from "../src/Welcome/PrinciplesPage";
+import EthosPage from "../src/Welcome/EthosPage";
+import ThemeColors from "../src/Welcome/ThemeColors";
+import ThemeTypography from "../src/Welcome/ThemeTypography";
+import ThemeLogos from "../src/Welcome/ThemeLogos";
 
 const ThemeStyles = styled.div`
   .container {
@@ -23,7 +25,9 @@ const ThemeStyles = styled.div`
   }
 `;
 
-storiesOf("Vivy Theme", module)
+storiesOf("Welcome", module)
+  .add("Principles", () => <PrinciplesPage />)
+  .add("Vision & Ethos", () => <EthosPage />)
   .add("Colors", () => (
     <ThemeStyles>
       <ThemeColors />

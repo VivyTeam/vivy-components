@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { Topbar } from "../index";
-import logo from "../../public/images/logo.svg";
+import { Topbar } from "../src/index";
+import logo from "../public/images/logo.svg";
 
 const LayoutStyles = styled.div`
   width: 80%;

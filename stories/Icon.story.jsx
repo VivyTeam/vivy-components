@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import styled from "styled-components";
-import { Icon } from "../index";
+import { Icon } from "../src/index";
 
 const IconsStory = styled.div`
   .container {

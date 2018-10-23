@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { error } from "../VivyTheme/colors";
+import { error } from "../Colors/index";
 
 const TextareaStyles = styled.div`
   label {

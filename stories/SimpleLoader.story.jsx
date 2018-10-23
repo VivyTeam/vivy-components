@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { SimpleLoader } from "../index";
+import { SimpleLoader } from "../src/index";
 
 storiesOf("SimpleLoader", module)
   .add("default", withInfo("A simple loader")(() => <SimpleLoader />))

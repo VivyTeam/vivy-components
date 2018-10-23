@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { Input } from "../index";
+import { Input } from "../src/index";
 
 storiesOf("Input", module)
   .add(

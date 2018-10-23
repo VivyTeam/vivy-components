@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { DateDisplayMinimal } from "../index";
+import { DateDisplayMinimal } from "../src/index";
 
 storiesOf("DateDisplayMinimal", module).add(
   "default",

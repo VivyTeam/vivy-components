@@ -18,7 +18,6 @@
     "linter:fix": "prettier --write '{,!(node_modules|.git|storybook-static)/**/}*.{js,json,jsx,md}'",
     "linter:check": "eslint stories/ && eslint src/",
     "storybook": "start-storybook -p 3006 -s ./public",
-    "release:test": "node build.js test",
     "build:storybook": "storybook-to-ghpages",
     "build:package": "babel --presets react ./src --out-dir ./dist --ignore *.story.jsx"
   },

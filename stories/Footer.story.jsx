@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { Footer } from "../index";
+import { Footer } from "../src/index";
 
 const LayoutStyles = styled.div`
   width: 80%;

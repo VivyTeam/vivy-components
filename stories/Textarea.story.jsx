@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf, setAddon } from "@storybook/react";
 import JSXAddon from "storybook-addon-jsx";
-import { Textarea } from "../index";
+import { Textarea } from "../src/index";
 import { withInfo } from "@storybook/addon-info";
 
 setAddon(JSXAddon);
