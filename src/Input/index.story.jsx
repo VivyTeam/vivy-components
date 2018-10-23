@@ -11,12 +11,7 @@ storiesOf("Input", module)
   .add(
     "required",
     withInfo()(() => (
-      <Input
-        id="required"
-        placeholder="Required"
-        label="Required"
-        isRequired
-      />
+      <Input id="required" placeholder="Required" label="Required" isRequired />
     ))
   )
   .add(
