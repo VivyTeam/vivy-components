@@ -1,4 +1,5 @@
-export { default as Colors } from "./Colors/colors";
+export { default as Colors } from "./Colors/index";
+export { default as Fonts } from "./Fonts/fonts.style";
 export { default as Topbar } from "./Topbar";
 export { default as MedicalCard } from "./MedicalCard";
 export { default as Button } from "./Buttons/Button";
@@ -13,4 +14,3 @@ export { default as Textarea } from "./Textarea";
 export { default as Input } from "./Input/Input";
 export { default as SimpleLoader } from "./SimpleLoader";
 export { default as Footer } from "./Footer";
-export { default as Fonts } from "./Fonts/fonts.style";
