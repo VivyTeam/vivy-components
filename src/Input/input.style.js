@@ -17,11 +17,11 @@ const InputStyles = styled.div`
     border-radius: 2px;
     background-color: #ffffff;
     border: solid 1px #cdcdcd;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    color: #898988;
+    color: #353f41;
     padding-left: 16px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
