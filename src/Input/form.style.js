@@ -4,9 +4,6 @@ const FormStyles = styled.div`
   .form-item {
     padding: 25px;
   }
-`;
-
-export default FormStyles;
 
   input {
     width: 100%;
@@ -45,3 +42,5 @@ export default FormStyles;
     color: #e94119;
   }
 `;
+
+export default FormStyles;
