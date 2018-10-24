@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Icon from "../icons";
 import DetailedIconStyles from "./detailedIcon.style";
+import Icon from "../Icon";
 
 export default function DetailedProfileIcon(props) {
   const { title, icon, iconDetail, iconSize } = props;

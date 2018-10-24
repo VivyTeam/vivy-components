@@ -2,9 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { MedicalCard, Topbar, Footer } from "../src/index";
-import logo from "../public/images/logo.svg";
-import "../public/translations/i18n";
+import { Footer } from "../src/index";
 
 const LayoutStyles = styled.div`
   width: 80%;
@@ -47,38 +45,10 @@ const footerChildren = (
   </Fragment>
 );
 
-storiesOf("Page Layout", module).add(
-  "Simple Page",
-  withInfo("A simple page with topbar, body, footer")(() => (
+storiesOf("Footer", module).add(
+  "default",
+  withInfo("The raw footer component")(() => (
     <LayoutStyles>
-      <Topbar>
-        <a
-          className="link"
-          href="https://www.vivy.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className="logo" src={logo} alt="Vivy Logo" />
-        </a>
-      </Topbar>
-      <div className="layout-body">
-        <MedicalCard
-          user={{
-            name: "Demo User",
-            dateOfBirth: "1970-01-01"
-          }}
-          data={{
-            gender: {
-              text: "Other",
-              icon: "gender-other"
-            },
-            weight: "82",
-            height: "180",
-            bloodType: "A-"
-          }}
-          lastUpdatedAt="1970-01-01"
-        />
-      </div>
       <Footer>{footerChildren}</Footer>
     </LayoutStyles>
   ))
