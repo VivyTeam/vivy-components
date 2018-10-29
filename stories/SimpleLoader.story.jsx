@@ -3,13 +3,20 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { SimpleLoader } from "../src/index";
 
-storiesOf("SimpleLoader", module)
-  .add("default", withInfo("A simple loader")(() => <SimpleLoader />))
+storiesOf("Loaders", module)
   .add(
-    "centered",
-    withInfo("A simple loader centered")(() => <SimpleLoader centered />)
+    "Basic loader",
+    withInfo("A simple loader without any frills")(() => <SimpleLoader />)
   )
   .add(
-    "with width and height",
-    withInfo("A simple loader")(() => <SimpleLoader width={100} height={100} />)
+    "Centered",
+    withInfo("A loader that is centered in the page")(() => (
+      <SimpleLoader centered />
+    ))
+  )
+  .add(
+    "Loader with custom size",
+    withInfo("Loader with a set width and height")(() => (
+      <SimpleLoader width={100} height={100} />
+    ))
   );
