@@ -8,6 +8,7 @@ export { default as Fonts } from "./Fonts/fonts.style";
 export { default as BirthDate } from "./DateDisplayMinimal";
 export { default as Textarea } from "./Textarea";
 export { default as Input } from "./Input/Input";
+export { default as Modal } from "./Modal";
 export { default as Colors } from "./Colors/index";
 export { default as SimpleLoader } from "./SimpleLoader";
 export { default as Topbar } from "./Topbar";

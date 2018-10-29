@@ -6,6 +6,7 @@ import "./Footer.story";
 import "./grid.story";
 import "./Icon.story";
 import "./Input.story";
+import "./Modal.story";
 import "./layout.story";
 import "./MedicalCard.story";
 import "./SimpleLoader.story";

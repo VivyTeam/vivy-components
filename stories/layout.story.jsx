@@ -47,7 +47,7 @@ const footerChildren = (
   </Fragment>
 );
 
-storiesOf("Page Layout", module).add(
+storiesOf("Layout", module).add(
   "Simple Page",
   withInfo("A simple page with topbar, body, footer")(() => (
     <LayoutStyles>
