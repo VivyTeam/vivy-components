@@ -5,11 +5,11 @@ import ModalStyles from "./modal.style";
 export default function Modal({ open, children }) {
   return (
     <ModalStyles>
-      {open && (
+      {open ? (
         <div className="container">
           <div className="modal-body">{children}</div>
         </div>
-      )}
+      ) : null}
     </ModalStyles>
   );
 }
