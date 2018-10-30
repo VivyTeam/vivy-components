@@ -9,6 +9,7 @@ import "./Input.story";
 import "./Modal.story";
 import "./layout.story";
 import "./MedicalCard.story";
+import "./ErrorPage.story";
 import "./SimpleLoader.story";
 import "./Textarea.story";
 import "./Topbar.story";

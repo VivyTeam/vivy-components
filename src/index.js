@@ -14,4 +14,5 @@ export { default as SimpleLoader } from "./SimpleLoader";
 export { default as Topbar } from "./Topbar";
 export { default as Footer } from "./Footer";
 export { default as MedicalCard } from "./MedicalCard";
+export { default as NotFoundPage } from "./NotFoundPage";
 export { default as DateDisplay } from "./DateDisplay";
