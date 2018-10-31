@@ -15,14 +15,14 @@ export default function Row({
   reverse
 }) {
 
-  const classAround = around && "around-xs";
-  const classBetween = between && "between-xs";
-  const classBottom = bottom && "bottom-xs";
-  const classMiddle = middle && "middle-xs";
-  const classTop = top && "top-xs";
-  const classStart = start && "start-xs";
-  const classCenter = center && "center-xs";
-  const classEnd = end && "end-xs";
+  const classAround = around && "around-default";
+  const classBetween = between && "between-default";
+  const classBottom = bottom && "bottom-default";
+  const classMiddle = middle && "middle-default";
+  const classTop = top && "top-default";
+  const classStart = start && "start-default";
+  const classCenter = center && "center-default";
+  const classEnd = end && "end-default";
   const classReverse = reverse && "reverse";
 
   return (
