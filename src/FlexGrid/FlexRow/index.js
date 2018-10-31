@@ -38,6 +38,7 @@ export default function Row({
 }
 
 Row.propTypes = {
+  children: PropTypes.any,
   around: PropTypes.bool,
   between: PropTypes.bool,
   bottom: PropTypes.bool,
