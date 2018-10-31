@@ -70,7 +70,7 @@ storiesOf("Layout", module).add(
           data={{
             gender: {
               text: "Other",
-              icon: "gender-other"
+              icon: "gender-other-16"
             },
             weight: "82",
             height: "180",
