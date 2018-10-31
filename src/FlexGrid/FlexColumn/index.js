@@ -13,12 +13,14 @@ export default function Col({ children, col, offset, style }) {
 }
 
 Col.propTypes = {
+  style: PropTypes.shape({}),
   children: PropTypes.node.isRequired,
   col: PropTypes.number,
   offset: PropTypes.number
 };
 
 Col.defaultProps = {
+  style: {},
   col: 12,
   offset: 0
 };
