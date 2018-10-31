@@ -217,4 +217,27 @@ storiesOf("FlexGrid", module)
         </Col>
       </Row>
     ))
+  )
+  .addWithJSX(
+    "column",
+    withInfo()(() => (
+      <Row center>
+        <Col col={3}>
+          <Row column center>
+            <Col>
+              <Box>1</Box>
+            </Col>
+            <Col>
+              <Box>2</Box>
+            </Col>
+            <Col>
+              <Box>3</Box>
+            </Col>
+            <Col>
+              <Box>4</Box>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    ))
   );

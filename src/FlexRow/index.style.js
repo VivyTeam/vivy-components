@@ -19,6 +19,10 @@ const RowStyles = styled.div`
     flex-direction: column-reverse;
   }
 
+  .row.column {
+    flex-direction: column;
+  }
+
   .col-default,
   .col-default-1,
   .col-default-2,

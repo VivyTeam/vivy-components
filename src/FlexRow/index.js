@@ -12,9 +12,9 @@ export default function Row({
   start,
   center,
   end,
-  reverse
+  reverse,
+  column
 }) {
-
   const classAround = around && "around-default";
   const classBetween = between && "between-default";
   const classBottom = bottom && "bottom-default";
@@ -24,11 +24,12 @@ export default function Row({
   const classCenter = center && "center-default";
   const classEnd = end && "end-default";
   const classReverse = reverse && "reverse";
+  const classColumn = column && "column";
 
   return (
     <RowStyles>
       <div
-        className={`row ${classAround} ${classBetween} ${classBottom} ${classMiddle} ${classTop} ${classStart} ${classCenter} ${classEnd} ${classReverse}`}
+        className={`row ${classAround} ${classBetween} ${classBottom} ${classMiddle} ${classTop} ${classStart} ${classCenter} ${classEnd} ${classReverse} ${classColumn}`}
       >
         {children}
       </div>
@@ -46,6 +47,7 @@ Row.propTypes = {
   center: PropTypes.bool,
   end: PropTypes.bool,
   reverse: PropTypes.bool,
+  column: PropTypes.bool
 };
 
 Row.defaultProps = {
@@ -57,5 +59,6 @@ Row.defaultProps = {
   start: false,
   center: false,
   end: false,
-  reverse: false
+  reverse: false,
+  column: false
 };
