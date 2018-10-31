@@ -27,8 +27,8 @@ export default function Button({
 }
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
   type: PropTypes.string,
   htmlType: PropTypes.oneOf(["button", "submit", "reset"]),
   customStyle: PropTypes.shape({}),
@@ -36,6 +36,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  onClick: () => {},
   type: "primary",
   htmlType: "button",
   customStyle: {},
