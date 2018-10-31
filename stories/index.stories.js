@@ -15,4 +15,4 @@ import "./ErrorPage.story";
 import "./SimpleLoader.story";
 import "./Textarea.story";
 import "./Topbar.story";
-import "./flexGrid.story";
+import "./FlexGrid.story";
