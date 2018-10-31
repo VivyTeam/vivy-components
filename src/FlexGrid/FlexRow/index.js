@@ -38,7 +38,10 @@ export default function Row({
 }
 
 Row.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
   around: PropTypes.bool,
   between: PropTypes.bool,
   bottom: PropTypes.bool,
@@ -52,6 +55,7 @@ Row.propTypes = {
 };
 
 Row.defaultProps = {
+  children: null,
   around: false,
   between: false,
   bottom: false,

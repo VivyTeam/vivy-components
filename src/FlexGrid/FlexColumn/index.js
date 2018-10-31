@@ -13,8 +13,8 @@ export default function Col({ children, col, offset, style }) {
 }
 
 Col.propTypes = {
-  style: PropTypes.shape({}),
   children: PropTypes.node.isRequired,
+  style: PropTypes.shape({}),
   col: PropTypes.number,
   offset: PropTypes.number
 };
