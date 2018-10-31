@@ -79,7 +79,7 @@ function MedicalCard({ user, data, t }) {
                 {organDonor ? (
                   <SimpleIcon
                     iconDetail={t("component.organDonor")}
-                    icon="organ-donor-16"
+                    icon="organ-donor"
                     iconColor="#fe5533"
                   />
                 ) : null}

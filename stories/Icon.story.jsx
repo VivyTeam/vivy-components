@@ -317,8 +317,8 @@ storiesOf("Icons", module).add(
             <h3>gender-male</h3>
           </div>
           <div className="icon-box">
-            <Icon name="gender-other-16" />
-            <h3>gender-other-16</h3>
+            <Icon name="gender-other" />
+            <h3>gender-other</h3>
           </div>
           <div className="icon-box">
             <Icon name="happy" />
@@ -481,8 +481,8 @@ storiesOf("Icons", module).add(
             <h3>ophthalmologist</h3>
           </div>
           <div className="icon-box">
-            <Icon name="organ-donor-16" />
-            <h3>organ-donor-16</h3>
+            <Icon name="organ-donor" />
+            <h3>organ-donor</h3>
           </div>
           <div className="icon-box">
             <Icon name="other-document" />
