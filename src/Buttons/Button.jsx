@@ -3,18 +3,21 @@ import PropTypes from "prop-types";
 import ButtonStyles from "./button.style";
 
 export default function Button({
-  disabled,
-  onClick,
   type,
+  htmlType,
+  onClick,
   children,
+  disabled,
   customStyle
 }) {
   return (
     <ButtonStyles>
+      {/* eslint-disable-next-line */}
       <button
         disabled={disabled}
         onClick={onClick}
         className={type}
+        type={htmlType}
         style={customStyle}
       >
         <div className="component-child">{children}</div>
@@ -24,16 +27,17 @@ export default function Button({
 }
 
 Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
   type: PropTypes.string,
-  onClick: PropTypes.func,
+  htmlType: PropTypes.oneOf(["button", "submit", "reset"]),
   customStyle: PropTypes.shape({}),
   disabled: PropTypes.bool
 };
 
 Button.defaultProps = {
   type: "primary",
-  onClick: () => {},
+  htmlType: "button",
   customStyle: {},
   disabled: false
 };

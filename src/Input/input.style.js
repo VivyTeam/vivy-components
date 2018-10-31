@@ -23,16 +23,19 @@ const InputStyles = styled.div`
     color: #353f41;
     padding: 2px 16px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
     &:hover {
       border-color: #04d4bf;
       transition: border-color 0.2s ease;
     }
+
     &:focus {
       outline: none;
       box-shadow: 0 0 0 2px rgba(4, 212, 191, 0.2);
       border-color: #04d4bf;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
+
     &::placeholder {
       color: #bfbfbf;
     }
@@ -43,6 +46,7 @@ const InputStyles = styled.div`
       outline: none;
       box-shadow: none;
     }
+
     &:checked {
       border: 5px solid #0dff92;
     }
