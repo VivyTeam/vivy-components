@@ -1,33 +1,45 @@
 import React from "react";
+import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { Input } from "../src/index";
 
+const PageLayout = styled.div`
+  padding: 50px 100px;
+  display: flex;
+`;
+
 storiesOf("Input", module)
   .add(
-    "default",
-    withInfo()(() => <Input id="name" placeholder="Your name" label="Name" />)
-  )
-  .add(
-    "required",
+    "basic",
     withInfo()(() => (
-      <Input id="required" placeholder="Required" label="Required" isRequired />
+      <PageLayout>
+        <Input
+          id="name"
+          placeholder="Please add your name"
+          label="First name"
+        />
+      </PageLayout>
     ))
   )
   .add(
-    "email",
+    "optional",
     withInfo()(() => (
-      <Input id="email" placeholder="Your e-mail" label="E-mail" type="email" />
+      <PageLayout>
+        <Input placeholder="Your last name" label="Last name" optional />
+      </PageLayout>
     ))
   )
   .add(
     "password",
     withInfo()(() => (
-      <Input
-        id="password"
-        placeholder="Your password"
-        label="Password"
-        type="password"
-      />
+      <PageLayout>
+        <Input
+          id="password"
+          placeholder="Your password"
+          label="Password"
+          type="password"
+        />
+      </PageLayout>
     ))
   );
