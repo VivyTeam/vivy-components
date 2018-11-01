@@ -9,13 +9,15 @@ export default class Form extends Component {
     submit: PropTypes.func.isRequired,
     select: PropTypes.func,
     rules: PropTypes.shape({}),
+    ignoredFields: PropTypes.arrayOf(PropTypes.string),
     horizontal: PropTypes.bool
   };
 
   static defaultProps = {
     rules: {},
     horizontal: false,
-    select: () => {}
+    select: () => {},
+    ignoredFields: ["button", "submit", "reset"]
   };
 
   constructor(props) {
@@ -26,26 +28,20 @@ export default class Form extends Component {
 
   formValidator(e) {
     e.preventDefault();
-    const { submit, rules } = this.props;
+    const { submit, rules, ignoredFields } = this.props;
     const elements = Array.from(e.target.elements);
-    const ignoredElements = ["button", "submit", "reset"];
-    const validated = [];
+    const schema = new Schema(rules);
+    const fields = {};
 
     elements
-      .filter(element => !ignoredElements.includes(element.type))
+      .filter(element => !ignoredFields.includes(element.type))
       .forEach(element => {
         const { value, id } = element;
-        const field = { [id]: value };
-        const rule = rules[id] ? rules[id] : {};
-        const validator = new Schema({ [id]: rule });
 
-        validator.validate(field, errors => {
-          const error = errors ? errors[0] : null;
-          validated.push({ id, error });
-        });
+        fields[id] = value;
       });
 
-    submit(validated);
+    schema.validate(fields, (errors, validated) => submit(fields, validated));
   }
 
   render() {

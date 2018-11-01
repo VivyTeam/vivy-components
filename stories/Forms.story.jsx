@@ -24,15 +24,17 @@ class FormWithValidation extends Component {
     this.validateForms = this.validateForms.bind(this);
   }
 
-  validateForms(validated) {
-    validated.forEach(field => {
-      const { id, error } = field;
+  validateForms(fields, errors) {
+    Object.keys(fields).forEach(id => {
       const input = document.getElementById(id);
       const label = input.parentNode.querySelector(".error-feedback");
+      const error = errors ? errors[id] : null;
 
       if (error) {
+        const { message } = error[0];
+
         input.classList.add("invalid");
-        label.textContent = error.message;
+        label.textContent = message;
         return;
       }
       input.classList.remove("invalid");
@@ -42,7 +44,7 @@ class FormWithValidation extends Component {
 
   render() {
     const rules = {
-      name: { type: "string", required: true },
+      name: { type: "string", required: true, whitespace: true },
       email: { type: "email", required: true }
     };
 
