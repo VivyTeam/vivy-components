@@ -9,6 +9,7 @@ export { default as BirthDate } from "./DateDisplayMinimal";
 export { default as Textarea } from "./Textarea";
 export { default as Input } from "./Input";
 export { default as Form } from "./Forms";
+export { default as FormItem } from "./Forms/FormItem";
 export { default as Modal } from "./Modal";
 export { default as Colors } from "./Colors/index";
 export { default as SimpleLoader } from "./SimpleLoader";

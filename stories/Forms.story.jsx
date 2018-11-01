@@ -2,11 +2,19 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { Input, Button, Form } from "../src/index";
+import { Input, Button, Form, FormItem } from "../src/index";
 
 const PageLayout = styled.div`
   padding: 50px 100px;
   display: flex;
+
+  form {
+    width: 100%;
+  }
+
+  .form-item {
+    padding: 15px;
+  }
 `;
 
 class FormWithValidation extends Component {
@@ -41,17 +49,23 @@ class FormWithValidation extends Component {
     return (
       <PageLayout>
         <Form submit={this.validateForms} rules={rules}>
-          <Input
-            id="name"
-            placeholder="Please add your name"
-            label="First name"
-          />
-          <Input
-            id="email"
-            placeholder="Your preferred e-mail"
-            label="E-mail"
-          />
-          <Button htmlType="submit">Submit</Button>
+          <FormItem>
+            <Input
+              id="name"
+              placeholder="Please add your name"
+              label="First name"
+            />
+          </FormItem>
+          <FormItem>
+            <Input
+              id="email"
+              placeholder="Your preferred e-mail"
+              label="E-mail"
+            />
+          </FormItem>
+          <FormItem>
+            <Button htmlType="submit">Submit</Button>
+          </FormItem>
         </Form>
       </PageLayout>
     );
