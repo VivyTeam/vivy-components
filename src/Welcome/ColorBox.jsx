@@ -38,10 +38,11 @@ export default class ColorBox extends Component {
               : { backgroundColor: color }
           }
         >
-          <small>{description}</small>
-          <br />
+          <p style={{ margin: ".5rem", fontWeight: "500" }}>{description}</p>
           <small>{gradient ? "" : color}</small>
-          <h2 id="copy">Copy</h2>
+          <h3 style={{ color: "white" }} id="copy">
+            Copy
+          </h3>
         </div>
       </div>
     );

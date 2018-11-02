@@ -33,7 +33,7 @@ function MedicalCard({ user, data, t }) {
             t("component.pregnant")
           )
         }
-        icon="warning-sign"
+        icon="warning-triangle-outline"
         iconColor="#f6be42"
       />
     ) : null;
@@ -91,17 +91,17 @@ function MedicalCard({ user, data, t }) {
             <DetailedIcon
               title={t("component.weight")}
               iconDetail={`${weight} kg`}
-              icon="weight-info"
+              icon="weight"
             />
             <DetailedIcon
               title={t("component.height")}
               iconDetail={`${height} cm`}
-              icon="height-icon"
+              icon="height"
             />
             <DetailedIcon
               title={t("component.bloodType")}
               iconDetail={bloodType || t("component.notAvailable")}
-              icon="blood-type"
+              icon="blood-test"
             />
           </div>
         </MedicalCardStyles>

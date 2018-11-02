@@ -14,7 +14,7 @@ or
 
 ## Running story book locally
 
-To serve the storybook just run `npm run storybook` which will serve locally on your machine via localhost.
+To serve the storybook just run `npm run serve` which will serve locally on your machine via localhost.
 
 ## Design
 

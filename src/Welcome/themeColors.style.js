@@ -28,12 +28,11 @@ const ThemeStyles = styled.div`
   }
 
   .color-box {
-    border-radius: 0.25rem;
+    border-radius: 99%;
     margin: 20px;
     padding: 30px;
     height: 100px;
     width: 100px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12);
   }
 
   .color-box:hover {
@@ -46,7 +45,6 @@ const ThemeStyles = styled.div`
 
   .color-box:active {
     border: none;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12);
   }
 
   .color-box #copy {
