@@ -10,6 +10,7 @@ export default function Checkbox({ id, children, value, name, optional }) {
       <label id={id} htmlFor={id} />
       <div className="content">{children}</div>
       {optional ? <span className="optional">*optional</span> : null}
+      <span className="error-feedback" />
     </CheckboxStyle>
   );
 }
@@ -23,7 +24,7 @@ Checkbox.propTypes = {
 };
 
 Checkbox.defaultProps = {
-  optional: true,
+  optional: false,
   value: "",
   name: ""
 };

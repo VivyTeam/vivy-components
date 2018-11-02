@@ -5,7 +5,6 @@ const CheckboxStyle = styled.div`
   align-items: center;
 
   label {
-    font-family: "vivy-icons";
     padding: 0;
     font-size: 24px;
     font-weight: normal;
@@ -21,27 +20,37 @@ const CheckboxStyle = styled.div`
   }
 
   input[type="checkbox"] + label:after {
+    font-family: "vivy-icons";
     content: "\\e80f";
   }
 
   input[type="checkbox"]:checked + label:after {
+    font-family: "vivy-icons";
     content: "\\e810";
   }
 
   .content {
-    font-family: "Norms", sans-serif;
     font-size: 16px;
     line-height: 1.38;
     letter-spacing: normal;
   }
 
   .optional {
-    font-family: "Norms", sans-serif;
     font-size: 14px;
     font-weight: normal;
     line-height: 1.29;
     letter-spacing: normal;
     color: #7b7b7b;
+    padding-left: 3px;
+    padding-bottom: 14px;
+  }
+
+  .error-feedback {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #e94119;
     padding-left: 3px;
     padding-bottom: 14px;
   }

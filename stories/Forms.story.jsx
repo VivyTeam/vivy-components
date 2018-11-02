@@ -27,16 +27,17 @@ class FormWithValidation extends Component {
   validateForms(fields, errors) {
     Object.keys(fields).forEach(id => {
       const input = document.getElementById(id);
-      const label = input.parentNode.querySelector(".error-feedback");
       const error = errors ? errors[id] : null;
+      const label = input.parentNode.querySelector(".error-feedback");
 
       if (error) {
         const { message } = error[0];
-
         input.classList.add("invalid");
+
         label.textContent = message;
         return;
       }
+
       input.classList.remove("invalid");
       label.textContent = "";
     });
@@ -67,7 +68,7 @@ class FormWithValidation extends Component {
           </FormItem>
           <Checkbox id="newsletter" name="Newsletter">
             <div className="select-box">
-              <p>Ich möchte den Newsletter erhalten</p>
+              <p>Newletter sign up</p>
             </div>
           </Checkbox>
           <FormItem>
