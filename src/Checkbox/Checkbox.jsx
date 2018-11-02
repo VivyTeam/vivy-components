@@ -1,31 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SelectStyles from "./select.style";
+import CheckboxStyle from "./checkbox.style";
 
-export default function Select({ id, children, value, name, type, optional }) {
+export default function Checkbox({ id, children, value, name, optional }) {
   return (
-    <SelectStyles>
-      <input id={id} name={name} type={type} value={value} />
+    <CheckboxStyle>
+      <input id={id} name={name} type="checkbox" value={value} />
       {/* eslint-disable-next-line */}
       <label id={id} htmlFor={id} />
-      <p>{children}</p>
+      <div className="content">{children}</div>
       {optional ? <span className="optional">*optional</span> : null}
-    </SelectStyles>
+    </CheckboxStyle>
   );
 }
 
-Select.propTypes = {
+Checkbox.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   optional: PropTypes.bool,
   value: PropTypes.string,
-  name: PropTypes.string,
-  type: PropTypes.string
+  name: PropTypes.string
 };
 
-Select.defaultProps = {
+Checkbox.defaultProps = {
   optional: true,
   value: "",
-  name: "",
-  type: "checkbox"
+  name: ""
 };

@@ -6,7 +6,7 @@ import "./Footer.story";
 import "./grid.story";
 import "./Icon.story";
 import "./Input.story";
-import "./Select.story";
+import "./Checkbox.story";
 import "./Forms.story";
 import "./Modal.story";
 import "./layout.story";
