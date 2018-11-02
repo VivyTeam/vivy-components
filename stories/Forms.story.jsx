@@ -66,9 +66,9 @@ class FormWithValidation extends Component {
               label="E-mail"
             />
           </FormItem>
-          <Checkbox id="newsletter" name="Newsletter">
+          <Checkbox id="newsletter" name="Newsletter" optional>
             <div className="select-box">
-              <p>Newletter sign up</p>
+              <p>Newsletter sign up</p>
             </div>
           </Checkbox>
           <FormItem>
