@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { Input, Button, Form, FormItem } from "../src/index";
+import { Input, Button, Checkbox, Form, FormItem } from "../src/index";
 
 const PageLayout = styled.div`
   padding: 50px 100px;
@@ -65,6 +65,11 @@ class FormWithValidation extends Component {
               label="E-mail"
             />
           </FormItem>
+          <Checkbox type="checkbox" id="newsletter" name="Newsletter">
+            <div className="select-box">
+              <p>Ich möchte den Newsletter erhalten</p>
+            </div>
+          </Checkbox>
           <FormItem>
             <Button htmlType="submit">Submit</Button>
           </FormItem>

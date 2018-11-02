@@ -41,27 +41,6 @@ const InputStyles = styled.div`
     }
   }
 
-  input[type="checkbox"] {
-    &:focus {
-      outline: none;
-      box-shadow: none;
-    }
-
-    &:checked {
-      border: 5px solid #0dff92;
-    }
-  }
-
-  input[type="radio"] {
-    &:focus {
-      outline: none;
-      box-shadow: none;
-    }
-    &:checked {
-      border: 5px solid #0dff92;
-    }
-  }
-
   .invalid {
     border-color: #e94119;
   }
