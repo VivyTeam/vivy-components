@@ -37,7 +37,6 @@ export default class Form extends Component {
       .filter(element => !ignoredFields.includes(element.type))
       .forEach(element => {
         const { value, id } = element;
-
         fields[id] = value;
       });
 
