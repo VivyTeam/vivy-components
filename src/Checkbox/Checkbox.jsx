@@ -9,6 +9,7 @@ export default function Checkbox({ id, children, value, name, optional }) {
       {/* eslint-disable-next-line */}
       <label id={id} htmlFor={id} />
       <div className="content">{children}</div>
+
       {optional ? <span className="optional">*optional</span> : null}
       <span className="error-feedback" />
     </CheckboxStyle>
