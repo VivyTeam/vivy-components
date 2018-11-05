@@ -54,9 +54,17 @@ class FormWithValidation extends Component {
         <Form submit={this.validateForms} rules={rules}>
           <FormItem>
             <Input
-              id="name"
-              placeholder="Please add your name"
+              id="firstName"
+              placeholder="Please add your first name"
               label="First name"
+            />
+          </FormItem>
+          <FormItem>
+            <Input
+              id="lastName"
+              placeholder="Please add your last name"
+              label="Last name"
+              optional
             />
           </FormItem>
           <FormItem>

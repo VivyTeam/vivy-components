@@ -54,10 +54,10 @@ const InputStyles = styled.div`
     margin-top: 4px;
   }
 
-  #optional {
-    vertical-align: super;
+  .optional {
+    padding-left: 3px;
     font-size: 14px;
-    line-height: 1.29;
+    line-height: 0.5;
     letter-spacing: normal;
     color: #7b7b7b;
   }
@@ -66,7 +66,6 @@ const InputStyles = styled.div`
     padding-top: 8px;
     padding-bottom: 10px;
     display: flex;
-    justify-content: space-between;
   }
 `;
 
