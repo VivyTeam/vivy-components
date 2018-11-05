@@ -45,7 +45,12 @@ class FormWithValidation extends Component {
 
   render() {
     const rules = {
-      name: { type: "string", required: true, whitespace: true },
+      firstName: {
+        type: "string",
+        required: true,
+        whitespace: true,
+        message: "first name is required"
+      },
       email: { type: "email", required: true }
     };
 
