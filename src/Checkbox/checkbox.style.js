@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { error } from "../Colors";
 
 const CheckboxStyle = styled.div`
   display: flex;
@@ -50,7 +51,7 @@ const CheckboxStyle = styled.div`
     font-weight: normal;
     line-height: 1.29;
     letter-spacing: normal;
-    color: #e94119;
+    color: ${error};
     padding-left: 3px;
     padding-bottom: 14px;
   }

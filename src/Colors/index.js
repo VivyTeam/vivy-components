@@ -1,6 +1,6 @@
 const primary = "#353F41";
 const primaryHover = "#05e6c8";
-const error = "#fe5533";
+const error = "#e94119";
 const gray = "#cdcdcd";
 const darkgray = "#4c4c4c";
 const headerColor = "#575756";

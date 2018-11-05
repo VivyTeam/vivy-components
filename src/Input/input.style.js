@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { error } from "../Colors";
 
 const InputStyles = styled.div`
   width: 100%;
@@ -42,7 +43,7 @@ const InputStyles = styled.div`
   }
 
   .invalid {
-    border-color: #e94119;
+    border-color: ${error};
   }
 
   .error-feedback {
@@ -50,7 +51,7 @@ const InputStyles = styled.div`
     font-weight: normal;
     line-height: 1.29;
     letter-spacing: normal;
-    color: #e94119;
+    color: ${error};
     margin-top: 4px;
   }
 
