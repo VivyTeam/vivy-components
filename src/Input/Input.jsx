@@ -2,36 +2,36 @@ import React from "react";
 import PropTypes from "prop-types";
 import InputStyles from "./input.style";
 
-const Input = props => (
-  <InputStyles>
-    <label htmlFor={props.id}>
-      <span>
-        {props.label}
-        {props.isRequired ? <span id="required">(required)</span> : null}
+export default function Input(props) {
+  const { id, label, optional, type, placeholder, name } = props;
+
+  return (
+    <InputStyles>
+      <span className="label">
+        {label}
+        {optional ? <span className="optional">*optional</span> : null}
       </span>
-      <input
-        id={props.id}
-        name={props.id}
-        type={props.type}
-        placeholder={props.placeholder}
-      />
-    </label>
-  </InputStyles>
-);
+      <label htmlFor={id}>
+        <input id={id} name={name} type={type} placeholder={placeholder} />
+        <span className="error-feedback" />
+      </label>
+    </InputStyles>
+  );
+}
 
 Input.propTypes = {
   id: PropTypes.string.isRequired,
+  name: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
   label: PropTypes.string,
-  isRequired: PropTypes.bool
+  optional: PropTypes.bool
 };
 
 Input.defaultProps = {
   type: "",
+  name: "default",
   placeholder: "",
   label: "",
-  isRequired: false
+  optional: false
 };
-
-export default Input;

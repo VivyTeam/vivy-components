@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
 const GridStyles = styled.div`
-  .flex-grid {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 
   .col {
     flex: 1;
@@ -20,9 +19,7 @@ const GridStyles = styled.div`
   }
 
   @media (max-width: 600px) {
-    .flex-grid {
-      flex-direction: column;
-    }
+    flex-direction: column;
 
     .row {
       flex-direction: column;
