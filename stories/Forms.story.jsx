@@ -12,6 +12,13 @@ const PageLayout = styled.div`
     width: 100%;
   }
 
+  .documentation {
+    li {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
   .form-item {
     padding: 15px;
   }
@@ -104,7 +111,40 @@ class FormWithValidation extends Component {
   }
 }
 
-storiesOf("Forms", module).add(
-  "Form with validation",
-  withInfo()(() => <FormWithValidation />)
-);
+storiesOf("Forms", module)
+  .add(
+    "documentation",
+    withInfo()(() => (
+      <PageLayout>
+        <div className="documentation">
+          <h2>Official Documentation</h2>
+          <p>
+            The validation used in Vivy forms takes advantage of the library
+            async-validator. The full documentation can be found in the &nbsp;
+            <a href="https://github.com/yiminghe/async-validator#api">here.</a>
+          </p>
+          <h2>Quick Start</h2>
+          <ul>
+            <li>
+              All that is required for validation is to pass a{" "}
+              <b>rules object</b> to the
+              <b> Form </b> component. This allows the validation to verify each
+              rule that belongs to a specific input element.
+            </li>
+            <li>
+              The keys in the rules object match the id of the input elements in
+              the html form.
+            </li>
+            <li>
+              All rules can be added within the rules object and there is a
+              large standard list of rules built in. For example rules for
+              whitespace, email, required, and min/max length are already built
+              in. A full list of rules and how to build custom validation can be
+              found in the official documentation.
+            </li>
+          </ul>
+        </div>
+      </PageLayout>
+    ))
+  )
+  .add("form with validation", withInfo()(() => <FormWithValidation />));
