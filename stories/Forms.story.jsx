@@ -45,13 +45,19 @@ class FormWithValidation extends Component {
 
   render() {
     const rules = {
-      firstName: {
+      name: {
         type: "string",
         required: true,
-        whitespace: true,
-        message: "first name is required"
+        whitespace: true
       },
-      email: { type: "email", required: true }
+      email: { type: "email", required: true },
+      terms: {
+        type: "enum",
+        enum: ["true"],
+        required: true,
+        message: "*You must agree to terms",
+        transform: value => value.toString()
+      }
     };
 
     return (
@@ -59,7 +65,7 @@ class FormWithValidation extends Component {
         <Form submit={this.validateForms} rules={rules}>
           <FormItem>
             <Input
-              id="firstName"
+              id="name"
               placeholder="Please add your first name"
               label="First name"
             />
@@ -78,6 +84,11 @@ class FormWithValidation extends Component {
               placeholder="Your preferred e-mail"
               label="E-mail"
             />
+          </FormItem>
+          <FormItem>
+            <Checkbox id="terms" name="Terms and Conditions">
+              <p>Terms and conditions</p>
+            </Checkbox>
           </FormItem>
           <FormItem>
             <Checkbox id="newsletter" name="Newsletter" optional>

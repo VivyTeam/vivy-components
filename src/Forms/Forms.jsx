@@ -36,9 +36,15 @@ export default class Form extends Component {
     elements
       .filter(element => !ignoredFields.includes(element.type))
       .forEach(element => {
-        const { value, checked, id } = element;
+        const { type, id, value, checked } = element;
 
-        fields[id] = { value, checked };
+        switch (type) {
+          case "checkbox":
+            fields[id] = checked;
+            break;
+          default:
+            fields[id] = value;
+        }
       });
 
     schema.validate(fields, (errors, validated) => submit(fields, validated));
