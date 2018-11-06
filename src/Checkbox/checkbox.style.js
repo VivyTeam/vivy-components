@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { error } from "../Colors";
+import mapping from "../../public/fonts/vivy-icons/iconMapping.json";
+
+const checkboxEmpty = mapping["icon-checkbox-empty"];
+const checkboxFilled = mapping["icon-checkbox-filled"];
 
 const CheckboxStyle = styled.div`
   display: flex;
@@ -22,12 +26,12 @@ const CheckboxStyle = styled.div`
 
   input[type="checkbox"] + label:after {
     font-family: "vivy-icons";
-    content: "\\e80f";
+    content: "\\${checkboxEmpty}";
   }
 
   input[type="checkbox"]:checked + label:after {
     font-family: "vivy-icons";
-    content: "\\e810";
+    content: "\\${checkboxFilled}";
   }
 
   .content {
