@@ -31,7 +31,7 @@ Row.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  space: PropTypes.oneOf(["normal", "around", "between","evenly"]),
+  space: PropTypes.oneOf(["normal", "around", "between", "evenly"]),
   verticalAlign: PropTypes.oneOf(["top", "middle", "bottom"]),
   position: PropTypes.oneOf(["start", "center", "end"]),
   reverse: PropTypes.bool
