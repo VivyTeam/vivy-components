@@ -12,7 +12,7 @@ export { default as Checkbox } from "./Checkbox";
 export { default as Form } from "./Forms";
 export { default as FormItem } from "./Forms/FormItem";
 export { default as Modal } from "./Modal";
-export { default as Colors } from "./Colors/index";
+export { default as Colors } from "./Colors";
 export { default as SimpleLoader } from "./SimpleLoader";
 export { default as Topbar } from "./Topbar";
 export { default as Footer } from "./Footer";
