@@ -4,34 +4,19 @@ import RowStyles from "./index.style";
 
 export default function Row({
   children,
-  around,
-  between,
-  bottom,
-  middle,
-  top,
-  start,
-  center,
-  end,
-  reverse,
-  column
+  space,
+  position,
+  verticalAlign,
+  reverse
 }) {
-  const classAround = around && "around";
-  const classBetween = between && "between";
-  const classBottom = bottom && "bottom";
-  const classMiddle = middle && "middle";
-  const classTop = top && "top";
-  const classStart = start && "start";
-  const classCenter = center && "center";
-  const classEnd = end && "end";
-  const classReverse = reverse && "reverse";
-  const classColumn = column && "column";
+  const classReverse = reverse ? "reverse" : "";
 
   return (
     <RowStyles>
       <div className="grid center">
         <div className="max-grid-width">
           <div
-            className={`row ${classAround} ${classBetween} ${classBottom} ${classMiddle} ${classTop} ${classStart} ${classCenter} ${classEnd} ${classReverse} ${classColumn}`}
+            className={`row ${space} ${position} ${verticalAlign} ${classReverse}`}
           >
             {children}
           </div>
@@ -46,28 +31,16 @@ Row.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
-  around: PropTypes.bool,
-  between: PropTypes.bool,
-  bottom: PropTypes.bool,
-  middle: PropTypes.bool,
-  top: PropTypes.bool,
-  start: PropTypes.bool,
-  center: PropTypes.bool,
-  end: PropTypes.bool,
-  reverse: PropTypes.bool,
-  column: PropTypes.bool
+  space: PropTypes.oneOf(["normal", "around", "between","evenly"]),
+  verticalAlign: PropTypes.oneOf(["top", "middle", "bottom"]),
+  position: PropTypes.oneOf(["start", "center", "end"]),
+  reverse: PropTypes.bool
 };
 
 Row.defaultProps = {
   children: null,
-  around: false,
-  between: false,
-  bottom: false,
-  middle: false,
-  top: false,
-  start: false,
-  center: false,
-  end: false,
-  reverse: false,
-  column: false
+  space: "normal",
+  verticalAlign: "top",
+  position: "start",
+  reverse: false
 };

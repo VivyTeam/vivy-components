@@ -205,17 +205,12 @@ const RowStyles = styled.div`
   .around {
     justify-content: space-around;
   }
+  .evenly {
+    justify-content: space-evenly;
+  }
 
   .between {
     justify-content: space-between;
-  }
-
-  .first {
-    order: -1;
-  }
-
-  .last {
-    order: 1;
   }
 `;
 

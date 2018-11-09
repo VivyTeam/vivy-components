@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import styled from "styled-components";
-import {FlexRow, FlexColumn} from "../src/index";
+import { FlexRow, FlexColumn } from "../src/index";
 
 const Box = styled.div`
   background-color: #04d4bf;
@@ -29,7 +29,23 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "around",
     withInfo()(() => (
-      <FlexRow around>
+      <FlexRow space="around">
+        <FlexColumn col={3}>
+          <Box />
+        </FlexColumn>
+        <FlexColumn col={3}>
+          <Box />
+        </FlexColumn>
+        <FlexColumn col={3}>
+          <Box />
+        </FlexColumn>
+      </FlexRow>
+    ))
+  )
+  .addWithJSX(
+    "evenly",
+    withInfo()(() => (
+      <FlexRow space="evenly">
         <FlexColumn col={3}>
           <Box />
         </FlexColumn>
@@ -45,7 +61,7 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "between",
     withInfo()(() => (
-      <FlexRow between>
+      <FlexRow space="between">
         <FlexColumn col={3}>
           <Box />
         </FlexColumn>
@@ -61,7 +77,7 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "start",
     withInfo()(() => (
-      <FlexRow start>
+      <FlexRow position="start">
         <FlexColumn col={3}>
           <Box />
         </FlexColumn>
@@ -74,7 +90,7 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "center",
     withInfo()(() => (
-      <FlexRow center>
+      <FlexRow position="center">
         <FlexColumn col={3}>
           <Box />
         </FlexColumn>
@@ -87,7 +103,7 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "end",
     withInfo()(() => (
-      <FlexRow end>
+      <FlexRow position="end">
         <FlexColumn col={3}>
           <Box />
         </FlexColumn>
@@ -101,57 +117,57 @@ storiesOf("FlexGrid", module)
     "offset",
     withInfo()(() => (
       <div>
-        <FlexRow around style={{ marginBottom: 10 }}>
+        <FlexRow space="around" style={{ marginBottom: 10 }}>
           <FlexColumn col={1} offset={11}>
             <Box />
           </FlexColumn>
         </FlexRow>
-        <FlexRow around style={{ marginBottom: 10 }}>
+        <FlexRow space="around" style={{ marginBottom: 10 }}>
           <FlexColumn col={2} offset={10}>
             <Box />
           </FlexColumn>
         </FlexRow>
-        <FlexRow around style={{ marginBottom: 10 }}>
+        <FlexRow space="around" style={{ marginBottom: 10 }}>
           <FlexColumn col={3} offset={9}>
             <Box />
           </FlexColumn>
         </FlexRow>
-        <FlexRow around style={{ marginBottom: 10 }}>
+        <FlexRow space="around" style={{ marginBottom: 10 }}>
           <FlexColumn col={4} offset={8}>
             <Box />
           </FlexColumn>
         </FlexRow>
-        <FlexRow around style={{ marginBottom: 10 }}>
+        <FlexRow space="around" style={{ marginBottom: 10 }}>
           <FlexColumn col={5} offset={7}>
             <Box />
           </FlexColumn>
         </FlexRow>
-        <FlexRow around style={{ marginBottom: 10 }}>
+        <FlexRow space="around" style={{ marginBottom: 10 }}>
           <FlexColumn col={6} offset={6}>
             <Box />
           </FlexColumn>
         </FlexRow>
-        <FlexRow around style={{ marginBottom: 10 }}>
+        <FlexRow space="around" style={{ marginBottom: 10 }}>
           <FlexColumn col={7} offset={5}>
             <Box />
           </FlexColumn>
         </FlexRow>
-        <FlexRow around style={{ marginBottom: 10 }}>
+        <FlexRow space="around" style={{ marginBottom: 10 }}>
           <FlexColumn col={8} offset={4}>
             <Box />
           </FlexColumn>
         </FlexRow>
-        <FlexRow around style={{ marginBottom: 10 }}>
+        <FlexRow space="around" style={{ marginBottom: 10 }}>
           <FlexColumn col={9} offset={3}>
             <Box />
           </FlexColumn>
         </FlexRow>
-        <FlexRow around style={{ marginBottom: 10 }}>
+        <FlexRow space="around" style={{ marginBottom: 10 }}>
           <FlexColumn col={10} offset={2}>
             <Box />
           </FlexColumn>
         </FlexRow>
-        <FlexRow around style={{ marginBottom: 10 }}>
+        <FlexRow space="around" style={{ marginBottom: 10 }}>
           <FlexColumn col={11} offset={1}>
             <Box />
           </FlexColumn>
@@ -162,7 +178,7 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "top",
     withInfo()(() => (
-      <FlexRow top>
+      <FlexRow verticalAlign="top">
         <FlexColumn col={6}>
           <Box style={{ height: 200 }} />
         </FlexColumn>
@@ -175,7 +191,7 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "middle",
     withInfo()(() => (
-      <FlexRow middle>
+      <FlexRow verticalAlign="middle">
         <FlexColumn col={6}>
           <Box style={{ height: 200 }} />
         </FlexColumn>
@@ -188,7 +204,7 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "bottom",
     withInfo()(() => (
-      <FlexRow bottom>
+      <FlexRow verticalAlign="bottom">
         <FlexColumn col={6}>
           <Box style={{ height: 200 }} />
         </FlexColumn>
@@ -201,7 +217,7 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "reverse",
     withInfo()(() => (
-      <FlexRow reverse center>
+      <FlexRow reverse position="center">
         <FlexColumn col={3}>
           <Box>1</Box>
         </FlexColumn>
@@ -220,9 +236,9 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "column",
     withInfo()(() => (
-      <FlexRow center>
+      <FlexRow position="center">
         <FlexColumn col={3}>
-          <FlexRow column center>
+          <FlexRow column position="center">
             <FlexColumn>
               <Box>1</Box>
             </FlexColumn>
