@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 const RowStyles = styled.div`
+  .grid {
+    display: flex;
+  }
+
   .row {
     box-sizing: border-box;
     display: flex;
     flex: 0 1 auto;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-right: 0.2rem;
-    margin-left: 0.2rem;
   }
 
   .row.reverse {
@@ -21,6 +23,10 @@ const RowStyles = styled.div`
 
   .row.column {
     flex-direction: column;
+  }
+
+  .max-grid-width {
+    width: 960px;
   }
 
   .col,
@@ -51,8 +57,8 @@ const RowStyles = styled.div`
   .col-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: var(--half-gutter-width, 0.5rem);
-    padding-left: var(--half-gutter-width, 0.5rem);
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .col {

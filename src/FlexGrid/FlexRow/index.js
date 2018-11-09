@@ -28,10 +28,14 @@ export default function Row({
 
   return (
     <RowStyles>
-      <div
-        className={`row ${classAround} ${classBetween} ${classBottom} ${classMiddle} ${classTop} ${classStart} ${classCenter} ${classEnd} ${classReverse} ${classColumn}`}
-      >
-        {children}
+      <div className="grid center">
+        <div className="max-grid-width">
+          <div
+            className={`row ${classAround} ${classBetween} ${classBottom} ${classMiddle} ${classTop} ${classStart} ${classCenter} ${classEnd} ${classReverse} ${classColumn}`}
+          >
+            {children}
+          </div>
+        </div>
       </div>
     </RowStyles>
   );
