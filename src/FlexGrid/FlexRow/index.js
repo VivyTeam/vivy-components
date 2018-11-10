@@ -7,12 +7,13 @@ export default function Row({
   space,
   position,
   verticalAlign,
-  reverse
+  reverse,
+  style
 }) {
   const classReverse = reverse ? "reverse" : "";
 
   return (
-    <RowStyles>
+    <RowStyles style={style}>
       <div className="grid center">
         <div className="max-grid-width">
           <div
