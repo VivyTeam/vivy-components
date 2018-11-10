@@ -34,7 +34,6 @@ export default function ThemeColors() {
         <Col col={3}>
           <ColorBox description="Hint" color="#bfbfbf" />
         </Col>
-
         <Col col={3}>
           <ColorBox description="Divider" color="#e0e0e0" dark />
         </Col>
