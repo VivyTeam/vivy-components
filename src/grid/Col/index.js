@@ -2,11 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export default function Col({ children, col, offset, style }) {
-  const classCol = col && `col-${col}`;
-  const classOffset = offset && `col-offset-${offset}`;
-
   return (
-    <div style={style} className={`${classCol} ${classOffset}`}>
+    <div style={style} className={`col-${col} col-offset-${offset}`}>
       {children}
     </div>
   );
