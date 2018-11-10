@@ -6,7 +6,7 @@ export default function PrinciplesPage() {
   return (
     <WelcomeStyles>
       <Row>
-        <Col col={12}>
+        <Col>
           <div className="container">
             <h1>Principles</h1>
             <div className="box">

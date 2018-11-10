@@ -6,7 +6,7 @@ export default function WelcomePage() {
   return (
     <WelcomeStyles>
       <Row>
-        <Col col={12}>
+        <Col>
           <div className="container">
             <h1>Vision &amp; Ethos</h1>
             <p style={{ marginTop: "4rem" }}>
