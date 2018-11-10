@@ -18,295 +18,333 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "default",
     withInfo()(() => (
-      <FlexRow>
-        <FlexColumn col={3}>
+      <Row>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "around",
     withInfo()(() => (
-      <FlexRow space="around">
-        <FlexColumn col={3}>
+      <Row space="around">
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "evenly",
     withInfo()(() => (
-      <FlexRow space="evenly">
-        <FlexColumn col={3}>
+      <Row space="evenly">
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "between",
     withInfo()(() => (
-      <FlexRow space="between">
-        <FlexColumn col={3}>
+      <Row space="between">
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "start",
     withInfo()(() => (
-      <FlexRow position="start">
-        <FlexColumn col={3}>
+      <Row position="start">
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "center",
     withInfo()(() => (
-      <FlexRow position="center">
-        <FlexColumn col={3}>
+      <Row position="center">
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "end",
     withInfo()(() => (
-      <FlexRow position="end">
-        <FlexColumn col={3}>
+      <Row position="end">
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box />
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "offset",
     withInfo()(() => (
       <div>
-        <FlexRow space="around" style={{ marginBottom: 10 }}>
-          <FlexColumn col={1} offset={11}>
+        <Row space="around" style={{ marginBottom: 10 }}>
+          <Col col={1} offset={11}>
             <Box />
-          </FlexColumn>
-        </FlexRow>
-        <FlexRow space="around" style={{ marginBottom: 10 }}>
-          <FlexColumn col={2} offset={10}>
+          </Col>
+        </Row>
+        <Row space="around" style={{ marginBottom: 10 }}>
+          <Col col={2} offset={10}>
             <Box />
-          </FlexColumn>
-        </FlexRow>
-        <FlexRow space="around" style={{ marginBottom: 10 }}>
-          <FlexColumn col={3} offset={9}>
+          </Col>
+        </Row>
+        <Row space="around" style={{ marginBottom: 10 }}>
+          <Col col={3} offset={9}>
             <Box />
-          </FlexColumn>
-        </FlexRow>
-        <FlexRow space="around" style={{ marginBottom: 10 }}>
-          <FlexColumn col={4} offset={8}>
+          </Col>
+        </Row>
+        <Row space="around" style={{ marginBottom: 10 }}>
+          <Col col={4} offset={8}>
             <Box />
-          </FlexColumn>
-        </FlexRow>
-        <FlexRow space="around" style={{ marginBottom: 10 }}>
-          <FlexColumn col={5} offset={7}>
+          </Col>
+        </Row>
+        <Row space="around" style={{ marginBottom: 10 }}>
+          <Col col={5} offset={7}>
             <Box />
-          </FlexColumn>
-        </FlexRow>
-        <FlexRow space="around" style={{ marginBottom: 10 }}>
-          <FlexColumn col={6} offset={6}>
+          </Col>
+        </Row>
+        <Row space="around" style={{ marginBottom: 10 }}>
+          <Col col={6} offset={6}>
             <Box />
-          </FlexColumn>
-        </FlexRow>
-        <FlexRow space="around" style={{ marginBottom: 10 }}>
-          <FlexColumn col={7} offset={5}>
+          </Col>
+        </Row>
+        <Row space="around" style={{ marginBottom: 10 }}>
+          <Col col={7} offset={5}>
             <Box />
-          </FlexColumn>
-        </FlexRow>
-        <FlexRow space="around" style={{ marginBottom: 10 }}>
-          <FlexColumn col={8} offset={4}>
+          </Col>
+        </Row>
+        <Row space="around" style={{ marginBottom: 10 }}>
+          <Col col={8} offset={4}>
             <Box />
-          </FlexColumn>
-        </FlexRow>
-        <FlexRow space="around" style={{ marginBottom: 10 }}>
-          <FlexColumn col={9} offset={3}>
+          </Col>
+        </Row>
+        <Row space="around" style={{ marginBottom: 10 }}>
+          <Col col={9} offset={3}>
             <Box />
-          </FlexColumn>
-        </FlexRow>
-        <FlexRow space="around" style={{ marginBottom: 10 }}>
-          <FlexColumn col={10} offset={2}>
+          </Col>
+        </Row>
+        <Row space="around" style={{ marginBottom: 10 }}>
+          <Col col={10} offset={2}>
             <Box />
-          </FlexColumn>
-        </FlexRow>
-        <FlexRow space="around" style={{ marginBottom: 10 }}>
-          <FlexColumn col={11} offset={1}>
+          </Col>
+        </Row>
+        <Row space="around" style={{ marginBottom: 10 }}>
+          <Col col={11} offset={1}>
             <Box />
-          </FlexColumn>
-        </FlexRow>
+          </Col>
+        </Row>
       </div>
     ))
   )
   .addWithJSX(
     "top",
     withInfo()(() => (
-      <FlexRow verticalAlign="top">
-        <FlexColumn col={6}>
+      <Row verticalAlign="top">
+        <Col col={6}>
           <Box style={{ height: 200 }} />
-        </FlexColumn>
-        <FlexColumn col={6}>
+        </Col>
+        <Col col={6}>
           <Box />
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "middle",
     withInfo()(() => (
-      <FlexRow verticalAlign="middle">
-        <FlexColumn col={6}>
+      <Row verticalAlign="middle">
+        <Col col={6}>
           <Box style={{ height: 200 }} />
-        </FlexColumn>
-        <FlexColumn col={6}>
+        </Col>
+        <Col col={6}>
           <Box />
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "bottom",
     withInfo()(() => (
-      <FlexRow verticalAlign="bottom">
-        <FlexColumn col={6}>
+      <Row verticalAlign="bottom">
+        <Col col={6}>
           <Box style={{ height: 200 }} />
-        </FlexColumn>
-        <FlexColumn col={6}>
+        </Col>
+        <Col col={6}>
           <Box />
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "reverse",
     withInfo()(() => (
-      <FlexRow reverse position="center">
-        <FlexColumn col={3}>
+      <Row reverse position="center">
+        <Col col={3}>
           <Box>1</Box>
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box>2</Box>
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box>3</Box>
-        </FlexColumn>
-        <FlexColumn col={3}>
+        </Col>
+        <Col col={3}>
           <Box>4</Box>
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
+    "vertical align items inside the row to middle",
+    withInfo()(() => (
+      <Row position="center">
+        <Col col={3} verticalAlign="middle" style={{ height: 500 }}>
+          1
+        </Col>
+        <Col col={3}>
+          <Box style={{ height: 500 }}>2</Box>
+        </Col>
+        <Col col={3}>
+          <Box style={{ height: 500 }}>3</Box>
+        </Col>
+        <Col col={3}>
+          <Box style={{ height: 500 }}>4</Box>
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
+    "vertical align items inside the row to bottom",
+    withInfo()(() => (
+      <Row position="center">
+        <Col col={3} verticalAlign="bottom">
+          <Box style={{ height: 500 }}>1</Box>
+        </Col>
+        <Col col={3}>
+          <Box style={{ height: 500 }}>2</Box>
+        </Col>
+        <Col col={3}>
+          <Box style={{ height: 500 }}>3</Box>
+        </Col>
+        <Col col={3}>
+          <Box style={{ height: 500 }}>4</Box>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "column",
     withInfo()(() => (
-      <FlexRow position="center">
-        <FlexColumn col={3}>
-          <FlexRow column position="center">
-            <FlexColumn>
+      <Row position="center">
+        <Col col={3}>
+          <Row column position="center">
+            <Col>
               <Box>1</Box>
-            </FlexColumn>
-            <FlexColumn>
+            </Col>
+            <Col>
               <Box>2</Box>
-            </FlexColumn>
-            <FlexColumn>
+            </Col>
+            <Col>
               <Box>3</Box>
-            </FlexColumn>
-            <FlexColumn>
+            </Col>
+            <Col>
               <Box>4</Box>
-            </FlexColumn>
-          </FlexRow>
-        </FlexColumn>
-      </FlexRow>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
     ))
   )
   .addWithJSX(
     "nested",
     withInfo()(() => (
-      <FlexRow position="center">
-        <FlexColumn center col={6}>
+      <Row position="center">
+        <Col center col={6}>
           <BoxYellow>
-            <FlexRow position="center">
-              <FlexColumn col={1}>
+            <Row position="center">
+              <Col col={1}>
                 <Box>1</Box>
-              </FlexColumn>
-              <FlexColumn col={1}>
+              </Col>
+              <Col col={1}>
                 <Box>2</Box>
-              </FlexColumn>
-              <FlexColumn col={1}>
+              </Col>
+              <Col col={1}>
                 <Box>3</Box>
-              </FlexColumn>
-              <FlexColumn col={1}>
+              </Col>
+              <Col col={1}>
                 <Box>4</Box>
-              </FlexColumn>
-              <FlexColumn col={1}>
+              </Col>
+              <Col col={1}>
                 <Box>5</Box>
-              </FlexColumn>
-              <FlexColumn col={1}>
+              </Col>
+              <Col col={1}>
                 <Box>6</Box>
-              </FlexColumn>
-              <FlexColumn col={1}>
+              </Col>
+              <Col col={1}>
                 <Box>7</Box>
-              </FlexColumn>
-              <FlexColumn col={1}>
+              </Col>
+              <Col col={1}>
                 <Box>8</Box>
-              </FlexColumn>
-              <FlexColumn col={1}>
+              </Col>
+              <Col col={1}>
                 <Box>9</Box>
-              </FlexColumn>
-              <FlexColumn col={1}>
+              </Col>
+              <Col col={1}>
                 <Box>10</Box>
-              </FlexColumn>
-              <FlexColumn col={1}>
+              </Col>
+              <Col col={1}>
                 <Box>11</Box>
-              </FlexColumn>
-              <FlexColumn col={1}>
+              </Col>
+              <Col col={1}>
                 <Box>12</Box>
-              </FlexColumn>
-            </FlexRow>
+              </Col>
+            </Row>
           </BoxYellow>
-        </FlexColumn>
-      </FlexRow>
+        </Col>
+      </Row>
     ))
   );
