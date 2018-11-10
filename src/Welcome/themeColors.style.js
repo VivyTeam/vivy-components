@@ -16,6 +16,7 @@ const ThemeStyles = styled.div`
   }
 
   .color-box-container {
+    color: #359dff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,14 +48,14 @@ const ThemeStyles = styled.div`
     border: none;
   }
 
-  .color-box #copy {
-    color: rgba(0, 0, 0, 0.4);
+  .color-box .copy {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.2s linear;
   }
 
-  .color-box:hover #copy {
+  .color-box:hover .copy {
+    color: #359dff;
     visibility: visible;
     opacity: 1;
   }

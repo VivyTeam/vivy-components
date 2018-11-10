@@ -28,6 +28,7 @@ export default function Row({
 }
 
 Row.propTypes = {
+  style: PropTypes.shape({}),
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
@@ -39,6 +40,7 @@ Row.propTypes = {
 };
 
 Row.defaultProps = {
+  style: {},
   children: null,
   space: "normal",
   verticalAlign: "top",

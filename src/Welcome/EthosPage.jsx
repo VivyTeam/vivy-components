@@ -1,13 +1,12 @@
 import React from "react";
-import FlexGrid from "../grid/FlexGrid";
-import Col from "../grid/Col";
+import { Row, Col } from "../../src/index";
 import WelcomeStyles from "./welcome.style";
 
 export default function WelcomePage() {
   return (
     <WelcomeStyles>
-      <FlexGrid>
-        <Col>
+      <Row>
+        <Col col={12}>
           <div className="container">
             <h1>Vision &amp; Ethos</h1>
             <p style={{ marginTop: "4rem" }}>
@@ -22,7 +21,7 @@ export default function WelcomePage() {
             </p>
           </div>
         </Col>
-      </FlexGrid>
+      </Row>
     </WelcomeStyles>
   );
 }

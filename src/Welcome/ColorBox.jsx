@@ -20,12 +20,9 @@ export default class ColorBox extends Component {
   }
 
   render() {
-    const { description, color, gradient, dark } = this.props;
+    const { description, color, gradient } = this.props;
     return (
-      <div
-        className="color-box-container"
-        style={{ color: dark ? "#575756" : "#fff" }}
-      >
+      <div className="color-box-container">
         <div
           tabIndex="0"
           role="button"
@@ -40,9 +37,7 @@ export default class ColorBox extends Component {
         >
           <p style={{ margin: ".5rem", fontWeight: "500" }}>{description}</p>
           <small>{gradient ? "" : color}</small>
-          <h3 style={{ color: "white" }} id="copy">
-            Copy
-          </h3>
+          <h3 className="copy">Copy</h3>
         </div>
       </div>
     );
@@ -52,12 +47,10 @@ export default class ColorBox extends Component {
 ColorBox.propTypes = {
   description: PropTypes.string.isRequired,
   color: PropTypes.string,
-  gradient: PropTypes.string,
-  dark: PropTypes.bool
+  gradient: PropTypes.string
 };
 
 ColorBox.defaultProps = {
   color: "#fff",
-  gradient: null,
-  dark: false
+  gradient: null
 };
