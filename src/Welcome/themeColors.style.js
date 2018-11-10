@@ -22,7 +22,7 @@ const ThemeStyles = styled.div`
   }
 
   .color-box .copy {
-    color: rgba(0, 0, 0, 0.4);
+    color: white;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.2s linear;
