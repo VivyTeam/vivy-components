@@ -239,44 +239,6 @@ storiesOf("FlexGrid", module)
     ))
   )
   .addWithJSX(
-    "vertical align items inside the row to middle",
-    withInfo()(() => (
-      <Row position="center">
-        <Col col={3} verticalAlign="middle" style={{ height: 500 }}>
-          1
-        </Col>
-        <Col col={3}>
-          <Box style={{ height: 500 }}>2</Box>
-        </Col>
-        <Col col={3}>
-          <Box style={{ height: 500 }}>3</Box>
-        </Col>
-        <Col col={3}>
-          <Box style={{ height: 500 }}>4</Box>
-        </Col>
-      </Row>
-    ))
-  )
-  .addWithJSX(
-    "vertical align items inside the row to bottom",
-    withInfo()(() => (
-      <Row position="center">
-        <Col col={3} verticalAlign="bottom">
-          <Box style={{ height: 500 }}>1</Box>
-        </Col>
-        <Col col={3}>
-          <Box style={{ height: 500 }}>2</Box>
-        </Col>
-        <Col col={3}>
-          <Box style={{ height: 500 }}>3</Box>
-        </Col>
-        <Col col={3}>
-          <Box style={{ height: 500 }}>4</Box>
-        </Col>
-      </Row>
-    ))
-  )
-  .addWithJSX(
     "column",
     withInfo()(() => (
       <Row position="center">
