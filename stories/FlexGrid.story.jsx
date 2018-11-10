@@ -9,6 +9,11 @@ const Box = styled.div`
   height: 50px;
 `;
 
+const BoxYellow = styled.div`
+  background-color: #ffff19;
+  height: 50px;
+`;
+
 storiesOf("FlexGrid", module)
   .addWithJSX(
     "default",
@@ -252,6 +257,55 @@ storiesOf("FlexGrid", module)
               <Box>4</Box>
             </FlexColumn>
           </FlexRow>
+        </FlexColumn>
+      </FlexRow>
+    ))
+  )
+  .addWithJSX(
+    "nested",
+    withInfo()(() => (
+      <FlexRow position="center">
+        <FlexColumn center col={6}>
+          <BoxYellow>
+            <FlexRow position="center">
+              <FlexColumn col={1}>
+                <Box>1</Box>
+              </FlexColumn>
+              <FlexColumn col={1}>
+                <Box>2</Box>
+              </FlexColumn>
+              <FlexColumn col={1}>
+                <Box>3</Box>
+              </FlexColumn>
+              <FlexColumn col={1}>
+                <Box>4</Box>
+              </FlexColumn>
+              <FlexColumn col={1}>
+                <Box>5</Box>
+              </FlexColumn>
+              <FlexColumn col={1}>
+                <Box>6</Box>
+              </FlexColumn>
+              <FlexColumn col={1}>
+                <Box>7</Box>
+              </FlexColumn>
+              <FlexColumn col={1}>
+                <Box>8</Box>
+              </FlexColumn>
+              <FlexColumn col={1}>
+                <Box>9</Box>
+              </FlexColumn>
+              <FlexColumn col={1}>
+                <Box>10</Box>
+              </FlexColumn>
+              <FlexColumn col={1}>
+                <Box>11</Box>
+              </FlexColumn>
+              <FlexColumn col={1}>
+                <Box>12</Box>
+              </FlexColumn>
+            </FlexRow>
+          </BoxYellow>
         </FlexColumn>
       </FlexRow>
     ))
