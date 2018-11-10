@@ -1,11 +1,20 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { injectGlobal } from "styled-components";
 import { storiesOf } from "@storybook/react";
 import PrinciplesPage from "../src/Welcome/PrinciplesPage";
 import EthosPage from "../src/Welcome/EthosPage";
 import ThemeColors from "../src/Welcome/ThemeColors";
 import ThemeTypography from "../src/Welcome/ThemeTypography";
 import ThemeLogos from "../src/Welcome/ThemeLogos";
+
+// eslint-disable-next-line
+injectGlobal`
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'TTNorms', sans-serif;
+  }
+`;
 
 const ThemeStyles = styled.div`
   .container {
