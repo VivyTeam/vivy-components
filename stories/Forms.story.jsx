@@ -6,7 +6,6 @@ import { Input, Button, Checkbox, Form, FormItem } from "../src/index";
 
 const PageLayout = styled.div`
   padding: 50px 100px;
-  display: flex;
 
   form {
     width: 100%;
