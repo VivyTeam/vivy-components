@@ -40,9 +40,7 @@ export default class ColorBox extends Component {
         >
           <p style={{ margin: ".5rem", fontWeight: "500" }}>{description}</p>
           <small>{gradient ? "" : color}</small>
-          <h3 style={{ color: "white" }} id="copy">
-            Copy
-          </h3>
+          <h3 className="copy">Copy</h3>
         </div>
       </div>
     );

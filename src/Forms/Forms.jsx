@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Schema from "async-validator";
-import { FlexGrid, Row, Col } from "../index";
+import { Row, Col } from "../index";
 
 export default class Form extends Component {
   static propTypes = {
@@ -55,14 +55,16 @@ export default class Form extends Component {
     const form = horizontal ? <Row> {children} </Row> : <Col> {children} </Col>;
 
     return (
-      <FlexGrid>
-        <form
-          onChange={e => select(e.target.value)}
-          onSubmit={e => this.formValidator(e)}
-        >
-          {form}
-        </form>
-      </FlexGrid>
+      <Row>
+        <Col>
+          <form
+            onChange={e => select(e.target.value)}
+            onSubmit={e => this.formValidator(e)}
+          >
+            {form}
+          </form>
+        </Col>
+      </Row>
     );
   }
 }

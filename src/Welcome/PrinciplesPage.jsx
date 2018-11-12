@@ -1,12 +1,11 @@
 import React from "react";
-import FlexGrid from "../grid/FlexGrid";
-import Col from "../grid/Col";
+import { Row, Col } from "../../src/index";
 import WelcomeStyles from "./welcome.style";
 
 export default function PrinciplesPage() {
   return (
     <WelcomeStyles>
-      <FlexGrid>
+      <Row>
         <Col>
           <div className="container">
             <h1>Principles</h1>
@@ -66,7 +65,7 @@ export default function PrinciplesPage() {
             </div>
           </div>
         </Col>
-      </FlexGrid>
+      </Row>
     </WelcomeStyles>
   );
 }
