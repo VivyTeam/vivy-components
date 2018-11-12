@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import InputStyles from "./input.style";
 
 export default function Input(props) {
-  const { id, label, optional, type, placeholder, name } = props;
+  const { id, label, optional, type, placeholder, name, onChange } = props;
 
   return (
     <InputStyles>
@@ -12,7 +12,13 @@ export default function Input(props) {
         {optional ? <span className="optional">*optional</span> : null}
       </span>
       <label htmlFor={id}>
-        <input id={id} name={name} type={type} placeholder={placeholder} />
+        <input
+          id={id}
+          name={name}
+          type={type}
+          placeholder={placeholder}
+          onChange={onChange}
+        />
         <span className="error-feedback" />
       </label>
     </InputStyles>
@@ -25,7 +31,8 @@ Input.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   label: PropTypes.string,
-  optional: PropTypes.bool
+  optional: PropTypes.bool,
+  onChange: PropTypes.func
 };
 
 Input.defaultProps = {
@@ -33,5 +40,6 @@ Input.defaultProps = {
   name: "default",
   placeholder: "",
   label: "",
-  optional: false
+  optional: false,
+  onChange: () => {}
 };

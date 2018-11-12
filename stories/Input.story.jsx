@@ -42,4 +42,17 @@ storiesOf("Input", module)
         />
       </PageLayout>
     ))
+  )
+  .add(
+    "onChange",
+    withInfo()(() => (
+      <PageLayout>
+        <Input
+          onChange={e => console.log(e.target.value)}
+          id="onChange"
+          placeholder="on every key stroke I will console log"
+          label="on every key stroke I will console log"
+        />
+      </PageLayout>
+    ))
   );
