@@ -11,18 +11,20 @@ const RowStyles = styled.div`
     flex: 0 1 auto;
     flex-direction: row;
     flex-wrap: wrap;
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    .column {
+      flex-direction: column;
+    }
   }
 
-  .row.reverse {
-    flex-direction: row-reverse;
-  }
-
-  .col.reverse {
-    flex-direction: column-reverse;
-  }
-
-  .row.column {
-    flex-direction: column;
+  .col {
+    .reverse {
+      flex-direction: column-reverse;
+    }
   }
 
   .max-grid-width {
