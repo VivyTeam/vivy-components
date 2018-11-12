@@ -55,16 +55,12 @@ export default class Form extends Component {
     const form = horizontal ? <Row> {children} </Row> : <Col> {children} </Col>;
 
     return (
-      <Row>
-        <Col>
-          <form
-            onChange={e => select(e.target.value)}
-            onSubmit={e => this.formValidator(e)}
-          >
-            {form}
-          </form>
-        </Col>
-      </Row>
+      <form
+        onChange={e => select(e.target.value)}
+        onSubmit={e => this.formValidator(e)}
+      >
+        {form}
+      </form>
     );
   }
 }
