@@ -4,6 +4,11 @@ import { withInfo } from "@storybook/addon-info";
 import styled from "styled-components";
 import { Row, Col } from "../src/index";
 
+const OffsetGrid = styled.div`
+  .row {
+    margin-bottom: 10px;
+  }
+`;
 const Box = styled.div`
   background-color: #04d4bf;
   height: 50px;
@@ -121,63 +126,63 @@ storiesOf("FlexGrid", module)
   .addWithJSX(
     "offset",
     withInfo()(() => (
-      <div>
-        <Row space="around" style={{ marginBottom: 10 }}>
+      <OffsetGrid>
+        <Row space="around">
           <Col col={1} offset={11}>
             <Box />
           </Col>
         </Row>
-        <Row space="around" style={{ marginBottom: 10 }}>
+        <Row space="around">
           <Col col={2} offset={10}>
             <Box />
           </Col>
         </Row>
-        <Row space="around" style={{ marginBottom: 10 }}>
+        <Row space="around">
           <Col col={3} offset={9}>
             <Box />
           </Col>
         </Row>
-        <Row space="around" style={{ marginBottom: 10 }}>
+        <Row space="around">
           <Col col={4} offset={8}>
             <Box />
           </Col>
         </Row>
-        <Row space="around" style={{ marginBottom: 10 }}>
+        <Row space="around">
           <Col col={5} offset={7}>
             <Box />
           </Col>
         </Row>
-        <Row space="around" style={{ marginBottom: 10 }}>
+        <Row space="around">
           <Col col={6} offset={6}>
             <Box />
           </Col>
         </Row>
-        <Row space="around" style={{ marginBottom: 10 }}>
+        <Row space="around">
           <Col col={7} offset={5}>
             <Box />
           </Col>
         </Row>
-        <Row space="around" style={{ marginBottom: 10 }}>
+        <Row space="around">
           <Col col={8} offset={4}>
             <Box />
           </Col>
         </Row>
-        <Row space="around" style={{ marginBottom: 10 }}>
+        <Row space="around">
           <Col col={9} offset={3}>
             <Box />
           </Col>
         </Row>
-        <Row space="around" style={{ marginBottom: 10 }}>
+        <Row space="around">
           <Col col={10} offset={2}>
             <Box />
           </Col>
         </Row>
-        <Row space="around" style={{ marginBottom: 10 }}>
+        <Row space="around">
           <Col col={11} offset={1}>
             <Box />
           </Col>
         </Row>
-      </div>
+      </OffsetGrid>
     ))
   )
   .addWithJSX(
