@@ -1,10 +1,13 @@
 import React from "react";
 import { Row, Col } from "../../src/index";
 import WelcomeStyles from "./welcome.style";
+import header from "../../public/images/header.png";
 
 export default function PrinciplesPage() {
   return (
     <WelcomeStyles>
+      <img src={header} alt="Vivy relax header" width="100%" />
+
       <Row>
         <Col>
           <div className="container">
