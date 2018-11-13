@@ -19,7 +19,7 @@ const BoxYellow = styled.div`
   height: 50px;
 `;
 
-storiesOf("FlexGrid", module)
+storiesOf("Grid", module)
   .addWithJSX(
     "default",
     withInfo()(() => (
