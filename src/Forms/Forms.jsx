@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Schema from "async-validator";
-import { Row, Col } from "../index";
 
 export default class Form extends Component {
   static propTypes = {
@@ -10,12 +9,10 @@ export default class Form extends Component {
     select: PropTypes.func,
     rules: PropTypes.shape({}),
     ignoredFields: PropTypes.arrayOf(PropTypes.string),
-    horizontal: PropTypes.bool
   };
 
   static defaultProps = {
     rules: {},
-    horizontal: false,
     select: () => {},
     ignoredFields: ["button", "submit", "reset"]
   };
@@ -51,15 +48,14 @@ export default class Form extends Component {
   }
 
   render() {
-    const { horizontal, children, select } = this.props;
-    const form = horizontal ? <Row> {children} </Row> : <Col> {children} </Col>;
+    const { children, select } = this.props;
 
     return (
       <form
         onChange={e => select(e.target.value)}
         onSubmit={e => this.formValidator(e)}
       >
-        {form}
+        {children}
       </form>
     );
   }
