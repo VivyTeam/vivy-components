@@ -28,6 +28,7 @@ const RowStyles = styled.div`
   }
 
   .max-grid-width {
+    width: 100%
     max-width: 960px;
   }
 
