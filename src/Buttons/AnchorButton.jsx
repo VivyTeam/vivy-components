@@ -10,7 +10,7 @@ export default function AnchorButton({
   rel,
   download,
   children,
-  customStyle
+  style
 }) {
   return (
     <ButtonStyles>
@@ -20,7 +20,7 @@ export default function AnchorButton({
         href={href}
         target={target}
         rel={rel}
-        style={customStyle}
+        style={style}
         download={download}
       >
         <div className="component-child">{children}</div>
@@ -37,7 +37,7 @@ AnchorButton.propTypes = {
   target: PropTypes.string,
   rel: PropTypes.string,
   download: PropTypes.string,
-  customStyle: PropTypes.shape({})
+  style: PropTypes.shape({})
 };
 
 AnchorButton.defaultProps = {
@@ -46,5 +46,5 @@ AnchorButton.defaultProps = {
   target: "_self",
   rel: "",
   download: "",
-  customStyle: {}
+  style: {}
 };

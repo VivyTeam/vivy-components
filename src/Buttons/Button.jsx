@@ -8,7 +8,7 @@ export default function Button({
   onClick,
   children,
   disabled,
-  customStyle
+  style
 }) {
   return (
     <ButtonStyles>
@@ -18,7 +18,7 @@ export default function Button({
         onClick={onClick}
         className={type}
         type={htmlType}
-        style={customStyle}
+        style={style}
       >
         <div className="component-child">{children}</div>
       </button>
@@ -31,7 +31,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   type: PropTypes.string,
   htmlType: PropTypes.oneOf(["button", "submit", "reset"]),
-  customStyle: PropTypes.shape({}),
+  style: PropTypes.shape({}),
   disabled: PropTypes.bool
 };
 
@@ -39,6 +39,6 @@ Button.defaultProps = {
   onClick: () => {},
   type: "primary",
   htmlType: "button",
-  customStyle: {},
+  style: {},
   disabled: false
 };
