@@ -4,6 +4,6 @@ import { withInfo } from "@storybook/addon-info";
 import { VivyFooter } from "../src/index";
 
 storiesOf("VivyFooter", module).add(
-  "default",
+  "default styles",
   withInfo("The raw footer component")(() => <VivyFooter />)
 );
