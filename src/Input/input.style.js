@@ -5,6 +5,7 @@ const InputStyles = styled.div`
   width: 100%;
 
   label {
+    position: relative;
     display: flex;
     flex-direction: column;
     color: #353f41;

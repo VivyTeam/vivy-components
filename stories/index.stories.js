@@ -5,6 +5,7 @@ import "./DateDisplayMinimal.story";
 import "./Footer.story";
 import "./Icon.story";
 import "./Input.story";
+import "./InputPassword.story";
 import "./Checkbox.story";
 import "./Forms.story";
 import "./Modal.story";

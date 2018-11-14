@@ -5,6 +5,7 @@ export { default as Fonts } from "./Fonts/fonts.style";
 export { default as DateDisplayMinimal } from "./DateDisplayMinimal";
 export { default as Textarea } from "./Textarea";
 export { default as Input } from "./Input";
+export { default as InputPassword } from "./InputPassword";
 export { default as Checkbox } from "./Checkbox";
 export { default as Form } from "./Forms";
 export { default as FormItem } from "./Forms/FormItem";
