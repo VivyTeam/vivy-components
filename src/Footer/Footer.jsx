@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import FooterStyles from "./footer.style";
+import Styles from "./footer.style";
 
 export default function Footer({ children }) {
   return (
-    <FooterStyles className="footer">
+    <Styles>
       <div className="footer">{children}</div>
-    </FooterStyles>
+    </Styles>
   );
 }
 

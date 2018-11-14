@@ -33,6 +33,7 @@ const RowStyles = styled.div`
   }
 
   .col,
+  .col-0
   .col-1,
   .col-2,
   .col-3,
@@ -70,6 +71,10 @@ const RowStyles = styled.div`
     max-width: 100%;
   }
 
+  .col-0 {
+    flex-basis: 0;
+  }
+  
   .col-1 {
     flex-basis: 8.33333333%;
     max-width: 8.33333333%;
