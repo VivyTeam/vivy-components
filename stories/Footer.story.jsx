@@ -24,7 +24,7 @@ storiesOf("Footer", module)
       <Footer>
         <Container>
           <Row position="center" verticalAlign="middle">
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <Anchor
                 href="https://www.vivy.com/impressum"
                 target="_"
@@ -33,7 +33,7 @@ storiesOf("Footer", module)
                 Impressum
               </Anchor>
             </Col>
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <Anchor
                 href="https://www.vivy.com/nutzungsbedingungen"
                 target="_"
@@ -42,7 +42,7 @@ storiesOf("Footer", module)
                 AGB
               </Anchor>
             </Col>
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <AnchorLast
                 href="https://www.vivy.com/datenschutz"
                 target="_"
@@ -62,7 +62,7 @@ storiesOf("Footer", module)
       <Footer>
         <Container>
           <Row position="start">
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <Anchor
                 href="https://www.vivy.com/impressum"
                 target="_"
@@ -71,7 +71,7 @@ storiesOf("Footer", module)
                 Impressum
               </Anchor>
             </Col>
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <Anchor
                 href="https://www.vivy.com/nutzungsbedingungen"
                 target="_"
@@ -80,7 +80,7 @@ storiesOf("Footer", module)
                 AGB
               </Anchor>
             </Col>
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <AnchorLast
                 href="https://www.vivy.com/datenschutz"
                 target="_"
@@ -100,7 +100,7 @@ storiesOf("Footer", module)
       <Footer>
         <Container>
           <Row position="end">
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <Anchor
                 href="https://www.vivy.com/impressum"
                 target="_"
@@ -109,7 +109,7 @@ storiesOf("Footer", module)
                 Impressum
               </Anchor>
             </Col>
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <Anchor
                 href="https://www.vivy.com/nutzungsbedingungen"
                 target="_"
@@ -118,7 +118,7 @@ storiesOf("Footer", module)
                 AGB
               </Anchor>
             </Col>
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <AnchorLast
                 href="https://www.vivy.com/datenschutz"
                 target="_"
@@ -138,7 +138,7 @@ storiesOf("Footer", module)
       <Footer withBorder={false}>
         <Container>
           <Row position="center">
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <Anchor
                 href="https://www.vivy.com/impressum"
                 target="_"
@@ -147,7 +147,7 @@ storiesOf("Footer", module)
                 Impressum
               </Anchor>
             </Col>
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <Anchor
                 href="https://www.vivy.com/nutzungsbedingungen"
                 target="_"
@@ -156,7 +156,7 @@ storiesOf("Footer", module)
                 AGB
               </Anchor>
             </Col>
-            <Col col={0} style={{ padding: 0 }}>
+            <Col col={0}>
               <AnchorLast
                 href="https://www.vivy.com/datenschutz"
                 target="_"

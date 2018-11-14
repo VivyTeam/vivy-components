@@ -61,8 +61,6 @@ const RowStyles = styled.div`
   .col-offset-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: 10px;
-    padding-left: 10px;
   }
 
   .col {
