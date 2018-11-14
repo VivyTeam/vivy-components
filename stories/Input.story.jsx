@@ -54,7 +54,7 @@ storiesOf("Input", module)
       <PageLayout>
         <Input
           id="password"
-          placeholder="&#xe801;"
+          placeholder="&#xe801; Placeholder text"
           label="Password"
           type="password"
         />
