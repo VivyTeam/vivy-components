@@ -9,7 +9,7 @@ export default function VivyFooter() {
         <Row position="center" verticalAlign="middle">
           <Col col={0} style={{ padding: 0 }}>
             <a
-              className="anchor-1"
+              className="anchor"
               href="https://www.vivy.com/impressum"
               target="_"
               rel="noopener noreferrer"
@@ -19,7 +19,7 @@ export default function VivyFooter() {
           </Col>
           <Col col={0} style={{ padding: 0 }}>
             <a
-              className="anchor-2"
+              className="anchor"
               href="https://www.vivy.com/nutzungsbedingungen"
               target="_"
               rel="noopener noreferrer"
@@ -29,7 +29,7 @@ export default function VivyFooter() {
           </Col>
           <Col col={0} style={{ padding: 0 }}>
             <a
-              className="anchor-3"
+              className="anchor last"
               href="https://www.vivy.com/datenschutz"
               target="_"
               rel="noopener noreferrer"
