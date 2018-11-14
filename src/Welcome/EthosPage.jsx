@@ -1,7 +1,6 @@
 import React from "react";
 import { Row, Col } from "../../src/index";
 import WelcomeStyles from "./welcome.style";
-import header from "../../public/images/header.png";
 
 export default function WelcomePage() {
   return (
