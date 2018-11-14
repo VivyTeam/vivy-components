@@ -8,12 +8,30 @@ const PageLayout = styled.div`
   padding: 50px 100px;
   display: flex;
 `;
-
-storiesOf("InputPassword", module).add(
-  "basic",
-  withInfo()(() => (
-    <PageLayout>
-      <InputPassword id="name" placeholder="Password" label="Password" />
-    </PageLayout>
-  ))
-);
+storiesOf("InputPassword", module)
+  .add(
+    "show password false",
+    withInfo()(() => (
+      <PageLayout>
+        <InputPassword
+          showPassword={false}
+          id="name"
+          placeholder="Password"
+          label="Password"
+        />
+      </PageLayout>
+    ))
+  )
+  .add(
+    "show password true",
+    withInfo()(() => (
+      <PageLayout>
+        <InputPassword
+          showPassword
+          id="name"
+          placeholder="Password"
+          label="Password"
+        />
+      </PageLayout>
+    ))
+  );
