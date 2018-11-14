@@ -26,7 +26,12 @@ storiesOf("Input", module)
     "optional",
     withInfo()(() => (
       <PageLayout>
-        <Input placeholder="Your last name" label="Last name" optional />
+        <Input
+          id="name"
+          placeholder="Your last name"
+          label="Last name"
+          optional
+        />
       </PageLayout>
     ))
   )
@@ -36,7 +41,20 @@ storiesOf("Input", module)
       <PageLayout>
         <Input
           id="password"
-          placeholder="Your password"
+          placeholder="Password"
+          label="Password"
+          type="password"
+        />
+      </PageLayout>
+    ))
+  )
+  .add(
+    "icon",
+    withInfo()(() => (
+      <PageLayout>
+        <Input
+          id="password"
+          placeholder="&#xe801;"
           label="Password"
           type="password"
         />

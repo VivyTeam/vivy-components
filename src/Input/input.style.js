@@ -38,6 +38,7 @@ const InputStyles = styled.div`
     }
 
     &::placeholder {
+      font-family: "Norms", sans-serif, "vivy-icons";
       color: #bfbfbf;
     }
   }
