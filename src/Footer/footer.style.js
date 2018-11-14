@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FooterStyles = styled.div`
+const Styles = styled.div`
   a {
     display: block;
     color: #03d4bf;
@@ -9,4 +9,4 @@ const FooterStyles = styled.div`
   }
 `;
 
-export default FooterStyles;
+export default Styles;
