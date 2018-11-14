@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./vivyFooter.style";
+import Styles from "./footer.style";
 import { Col, Row, Footer } from "../index";
 
 export default function VivyFooter() {
