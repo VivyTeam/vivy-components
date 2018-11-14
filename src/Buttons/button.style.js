@@ -5,7 +5,7 @@ const baseStyles = css`
   align-items: center;
   justify-content: space-evenly;
   cursor: pointer;
-  border-radius: 24px;
+  border-radius: 4px;
   font-family: "Norms", sans-serif;
   padding-top: 2px;
   line-height: 1em;
@@ -29,7 +29,7 @@ const ButtonStyles = styled.div`
 
   button {
     padding: 0;
-    border-radius: 24px;
+    border-radius: 4px;
     display: block;
     text-decoration: none;
     outline: none;
@@ -38,7 +38,7 @@ const ButtonStyles = styled.div`
 
   a {
     font-family: system-ui;
-    border-radius: 24px;
+    border-radius: 4px;
     display: block;
     text-decoration: none;
   }
