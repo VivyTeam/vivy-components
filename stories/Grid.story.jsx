@@ -16,6 +16,7 @@ const Box = styled.div`
 
 const BoxYellow = styled.div`
   background-color: #ffff19;
+  padding: 10px;
   height: 50px;
 `;
 

@@ -2,6 +2,7 @@ import "./Welcome.story";
 import "./Buttons.story";
 import "./DateDisplay.story";
 import "./DateDisplayMinimal.story";
+import "./VivyFooter.story";
 import "./Footer.story";
 import "./Icon.story";
 import "./Input.story";
