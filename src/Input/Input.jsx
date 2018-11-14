@@ -1,9 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import InputStyles from "./input.style";
+import Icon from "../Icon";
 
 export default function Input(props) {
-  const { id, label, optional, type, placeholder, name } = props;
+  const { id, label, optional, type, placeholder, name, iconName } = props;
+  const padding = iconName ? "extra-padding" : "default-padding";
 
   return (
     <InputStyles>
@@ -12,7 +14,18 @@ export default function Input(props) {
         {optional ? <span className="optional">*optional</span> : null}
       </span>
       <label htmlFor={id}>
-        <input id={id} name={name} type={type} placeholder={placeholder} />
+        {iconName ? (
+          <div className="icon-left">
+            <Icon name={iconName} />
+          </div>
+        ) : null}
+        <input
+          id={id}
+          name={name}
+          type={type}
+          placeholder={placeholder}
+          className={padding}
+        />
         <span className="error-feedback" />
       </label>
     </InputStyles>
@@ -25,7 +38,8 @@ Input.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   label: PropTypes.string,
-  optional: PropTypes.bool
+  optional: PropTypes.bool,
+  iconName: PropTypes.string
 };
 
 Input.defaultProps = {
@@ -33,5 +47,6 @@ Input.defaultProps = {
   name: "default",
   placeholder: "",
   label: "",
-  optional: false
+  optional: false,
+  iconName: undefined
 };

@@ -5,6 +5,7 @@ const InputStyles = styled.div`
   width: 100%;
 
   label {
+    position: relative;
     display: flex;
     flex-direction: column;
     color: #353f41;
@@ -22,8 +23,15 @@ const InputStyles = styled.div`
     font-size: 18px;
     font-weight: normal;
     color: #353f41;
-    padding: 2px 16px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &.default-padding {
+      padding: 2px 16px;
+    }
+
+    &.extra-padding {
+      padding: 2px 16px 2px 54px;
+    }
 
     &:hover {
       border-color: #04d4bf;
@@ -68,6 +76,24 @@ const InputStyles = styled.div`
     padding-top: 8px;
     padding-bottom: 10px;
     display: flex;
+  }
+
+  .icon-left {
+    font-size: 30px;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 `;
 
