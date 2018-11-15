@@ -1,22 +1,26 @@
 import styled from "styled-components";
 
-const ButtonStyles = styled.div`
-  font-size: 30px;
-  cursor: pointer;
-  width: 54px;
-  height: 54px;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  right: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+const InputPasswordStyles = styled.div`
+  .button-position-right {
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    right: 0;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+
+    i {
+      display: flex;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+    }
+  }
 `;
 
-export default ButtonStyles;
+export default InputPasswordStyles;

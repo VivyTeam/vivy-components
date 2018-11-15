@@ -1,31 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Icon from "../Icon";
-import ButtonStyles from "./inputPassword.style";
-import InputStyles from "../Input/input.style";
+import InputPasswordStyles from "./inputPassword.style";
+import ParentStyles from "../Input/input.style";
 
 function InputPassword({ id, label, placeholder, name, toggle, showPassword }) {
   return (
-    <InputStyles>
-      <span className="label">{label}</span>
-      <label htmlFor={id}>
-        <input
-          id={id}
-          name={name}
-          type={showPassword ? "text" : "password"}
-          placeholder={placeholder}
-        />
+    <ParentStyles>
+      <InputPasswordStyles>
+        <span className="label">{label}</span>
+        <label htmlFor={id}>
+          <input
+            id={id}
+            name={name}
+            type={showPassword ? "text" : "password"}
+            placeholder={placeholder}
+          />
 
-        <ButtonStyles className="password-icon" onClick={toggle}>
-          {showPassword ? (
-            <Icon name="show-pass-off" />
-          ) : (
-            <Icon name="show-pass-on" />
-          )}
-        </ButtonStyles>
-        <span className="error-feedback" />
-      </label>
-    </InputStyles>
+          <button className="button-position-right" onClick={toggle}>
+            {showPassword ? (
+              <Icon name="show-pass-off" />
+            ) : (
+              <Icon name="show-pass-on" />
+            )}
+          </button>
+          <span className="error-feedback" />
+        </label>
+      </InputPasswordStyles>
+    </ParentStyles>
   );
 }
 
