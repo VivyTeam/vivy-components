@@ -28,13 +28,14 @@ export default function InputPassword({
             className={invalid}
           />
 
-          <button className="button-position-right" onClick={toggle}>
+          {/* eslint-disable-next-line */}
+          <div className="icon-position-right" onClick={toggle}>
             {showPassword ? (
               <Icon name="show-pass-off" />
             ) : (
               <Icon name="show-pass-on" />
             )}
-          </button>
+          </div>
 
           {id in errors &&
             errors[id].map(index => (

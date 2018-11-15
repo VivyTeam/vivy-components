@@ -67,9 +67,7 @@ storiesOf("Input", module)
           label="Password"
           type="password"
           errors={{
-            password: [
-              { message: "look there is an error", field: "password" },
-            ]
+            password: [{ message: "look there is an error", field: "password" }]
           }}
         />
       </PageLayout>
@@ -110,4 +108,4 @@ storiesOf("Input", module)
         />
       </PageLayout>
     ))
-  )
+  );
