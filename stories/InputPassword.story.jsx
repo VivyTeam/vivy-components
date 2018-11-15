@@ -34,4 +34,39 @@ storiesOf("InputPassword", module)
         />
       </PageLayout>
     ))
+  )
+  .add(
+    "with errors",
+    withInfo()(() => (
+      <PageLayout>
+        <InputPassword
+          showPassword
+          id="password"
+          placeholder="Password"
+          label="Password"
+          errors={{
+            password: [{ message: "look there is an error", field: "password" }]
+          }}
+        />
+      </PageLayout>
+    ))
+  )
+  .add(
+    "with multiple errors",
+    withInfo()(() => (
+      <PageLayout>
+        <InputPassword
+          showPassword
+          id="password"
+          placeholder="Password"
+          label="Password"
+          errors={{
+            password: [
+              { message: "look there is an error", field: "password" },
+              { message: "look there is another error", field: "password" }
+            ]
+          }}
+        />
+      </PageLayout>
+    ))
   );
