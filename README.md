@@ -2,7 +2,7 @@
 
 React components used inside of our web apps.
 
-# Quick Start
+# Adding vivy components to your project
 
 To get started just install the package via npm's registry:
 
@@ -11,6 +11,24 @@ To get started just install the package via npm's registry:
 or
 
 `yarn install @vivy/vivy-components`
+
+## Contributing to the project (designers and devs)
+
+When adding new components and styles to Vivy components just make sure to keep the PR small and keep it
+focused in scope while avoiding unrelated commits and changes.
+
+- Clone the project by running `git clone git@github.com:UvitaTeam/vivy-components.git`
+- Navigate to the component library `cd vivy-components`
+- Create a new branch for your feature `git checkout -b cool.new.feature`
+- Install all the projects dependencies `npm install`
+- Run the project on https://localhost:3006 to preview changes `npm run serve`
+- Make your changes. The src/ folder is where the components live, stories/ contain all the documentation
+- Add your changes `git add myFeature.js` and commit them `git commit -m "Updated some cool styles"`
+- Push your branch `git push origin cool.new.feature`
+- Submit a [pull request](https://github.com/UvitaTeam/vivy-components/pulls) and add details about your changes
+- Add a reviewer (or ask someone in person) to go over your changes
+- If all goes well click the "Squash and Merge" button to close your PR (make sure to clean up and delete your branch)
+- To see your changes live (in both the lib and storybook website) make a new release via github!
 
 ## Running story book locally
 
