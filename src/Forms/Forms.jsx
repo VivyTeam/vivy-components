@@ -8,7 +8,7 @@ export default class Form extends Component {
     submit: PropTypes.func.isRequired,
     select: PropTypes.func,
     rules: PropTypes.shape({}),
-    ignoredFields: PropTypes.arrayOf(PropTypes.string),
+    ignoredFields: PropTypes.arrayOf(PropTypes.string)
   };
 
   static defaultProps = {
