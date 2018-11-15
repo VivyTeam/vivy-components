@@ -48,7 +48,7 @@ storiesOf("Input", module)
     withInfo()(() => (
       <PageLayout>
         <Input
-          iconName="body"
+          iconName="password"
           id="password"
           placeholder="Your password"
           label="Password"
