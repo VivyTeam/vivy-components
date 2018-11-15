@@ -42,4 +42,18 @@ storiesOf("Input", module)
         />
       </PageLayout>
     ))
+  )
+  .add(
+    "icon left",
+    withInfo()(() => (
+      <PageLayout>
+        <Input
+          iconName="password"
+          id="password"
+          placeholder="Your password"
+          label="Password"
+          type="password"
+        />
+      </PageLayout>
+    ))
   );
