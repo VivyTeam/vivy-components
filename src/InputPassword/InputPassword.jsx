@@ -4,7 +4,17 @@ import Icon from "../Icon";
 import InputPasswordStyles from "./inputPassword.style";
 import ParentStyles from "../Input/input.style";
 
-function InputPassword({ id, label, placeholder, name, toggle, showPassword }) {
+export default function InputPassword({
+  id,
+  label,
+  placeholder,
+  name,
+  toggle,
+  showPassword,
+  errors
+}) {
+  const error = id in errors ? "invalid" : "";
+
   return (
     <ParentStyles>
       <InputPasswordStyles>
@@ -15,6 +25,7 @@ function InputPassword({ id, label, placeholder, name, toggle, showPassword }) {
             name={name}
             type={showPassword ? "text" : "password"}
             placeholder={placeholder}
+            className={error}
           />
 
           <button className="button-position-right" onClick={toggle}>
@@ -24,7 +35,13 @@ function InputPassword({ id, label, placeholder, name, toggle, showPassword }) {
               <Icon name="show-pass-on" />
             )}
           </button>
-          <span className="error-feedback" />
+
+          {id in errors &&
+            errors[id].map(index => (
+              <span key={index} className="error-feedback">
+                {index.message}
+              </span>
+            ))}
         </label>
       </InputPasswordStyles>
     </ParentStyles>
@@ -37,13 +54,13 @@ InputPassword.propTypes = {
   placeholder: PropTypes.string,
   label: PropTypes.string,
   toggle: PropTypes.func.isRequired,
-  showPassword: PropTypes.bool.isRequired
+  showPassword: PropTypes.bool.isRequired,
+  errors: PropTypes.shape({})
 };
 
 InputPassword.defaultProps = {
   name: "default",
   placeholder: "",
-  label: ""
+  label: "",
+  errors: {}
 };
-
-export default InputPassword;

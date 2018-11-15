@@ -26,6 +26,11 @@ const InputStyles = styled.div`
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     padding: 2px 16px;
 
+    &.invalid {
+      border-color: ${error};
+      background-color: ${errorBackground};
+    }
+
     &.icon-padding {
       padding: 2px 16px 2px 54px;
     }
@@ -45,11 +50,6 @@ const InputStyles = styled.div`
     &::placeholder {
       color: #bfbfbf;
     }
-  }
-
-  .invalid {
-    border-color: ${error};
-    background-color: ${errorBackground};
   }
 
   .error-feedback {

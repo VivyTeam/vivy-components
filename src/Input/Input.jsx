@@ -3,9 +3,18 @@ import PropTypes from "prop-types";
 import InputStyles from "./input.style";
 import Icon from "../Icon";
 
-export default function Input(props) {
-  const { id, label, optional, type, placeholder, name, iconName } = props;
+export default function Input({
+  id,
+  label,
+  optional,
+  type,
+  placeholder,
+  name,
+  iconName,
+  errors
+}) {
   const padding = iconName ? "icon-padding" : "";
+  const error = id in errors ? "invalid" : "";
 
   return (
     <InputStyles>
@@ -24,9 +33,14 @@ export default function Input(props) {
           name={name}
           type={type}
           placeholder={placeholder}
-          className={padding}
+          className={`${padding} ${error}`}
         />
-        <span className="error-feedback" />
+        {id in errors &&
+          errors[id].map(index => (
+            <span key={index} className="error-feedback">
+              {index.message}
+            </span>
+          ))}
       </label>
     </InputStyles>
   );
@@ -39,7 +53,13 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   label: PropTypes.string,
   optional: PropTypes.bool,
-  iconName: PropTypes.string
+  iconName: PropTypes.string,
+  errors: PropTypes.shape({
+    inputId: PropTypes.arrayOf({
+      message: PropTypes.string,
+      field: PropTypes.string
+    })
+  })
 };
 
 Input.defaultProps = {
@@ -48,5 +68,6 @@ Input.defaultProps = {
   placeholder: "",
   label: "",
   optional: false,
-  iconName: ""
+  iconName: "",
+  errors: {}
 };
