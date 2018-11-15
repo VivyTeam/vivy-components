@@ -48,5 +48,5 @@ Input.defaultProps = {
   placeholder: "",
   label: "",
   optional: false,
-  iconName: undefined
+  iconName: ""
 };
