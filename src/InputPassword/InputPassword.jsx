@@ -13,7 +13,7 @@ export default function InputPassword({
   showPassword,
   errors
 }) {
-  const error = id in errors ? "invalid" : "";
+  const invalid = id in errors ? "invalid" : "";
 
   return (
     <ParentStyles>
@@ -25,7 +25,7 @@ export default function InputPassword({
             name={name}
             type={showPassword ? "text" : "password"}
             placeholder={placeholder}
-            className={error}
+            className={invalid}
           />
 
           <button className="button-position-right" onClick={toggle}>
