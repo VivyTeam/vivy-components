@@ -29,7 +29,7 @@ const InputStyles = styled.div`
       padding: 2px 16px;
     }
 
-    &.extra-padding {
+    &.icon-padding {
       padding: 2px 16px 2px 54px;
     }
 
