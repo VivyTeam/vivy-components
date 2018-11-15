@@ -14,7 +14,7 @@ export default function Input({
   errors
 }) {
   const padding = iconName ? "icon-padding" : "";
-  const error = id in errors ? "invalid" : "";
+  const invalid = id in errors ? "invalid" : "";
 
   return (
     <InputStyles>
@@ -33,7 +33,7 @@ export default function Input({
           name={name}
           type={type}
           placeholder={placeholder}
-          className={`${padding} ${error}`}
+          className={`${padding} ${invalid}`}
         />
         {id in errors &&
           errors[id].map(index => (
