@@ -24,10 +24,7 @@ const InputStyles = styled.div`
     font-weight: normal;
     color: #353f41;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
-
-    &.default-padding {
-      padding: 2px 16px;
-    }
+    padding: 2px 16px;
 
     &.icon-padding {
       padding: 2px 16px 2px 54px;

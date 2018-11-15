@@ -5,7 +5,7 @@ import Icon from "../Icon";
 
 export default function Input(props) {
   const { id, label, optional, type, placeholder, name, iconName } = props;
-  const padding = iconName ? "icon-padding" : "default-padding";
+  const padding = iconName ? "icon-padding" : "";
 
   return (
     <InputStyles>
