@@ -10,6 +10,10 @@ const click = action("Button");
 const ButtonStyles = styled.div`
   margin: 80px 0 50px 110px;
 
+  .margin-top {
+    margin-top: 5vh;
+  }
+
   h1 {
     margin-bottom: 66.6px;
     font-size: 22px;
@@ -100,6 +104,11 @@ storiesOf("Buttons", module).add(
           Disabled
         </Button>
       </div>
+      <h2>With ClassName</h2>
+      <div className="list">
+        <Button className="margin-top">margin-top</Button>
+        <Button className="margin-top">margin-top</Button>
+      </div>
 
       <h1>Anchor Buttons</h1>
 
@@ -178,6 +187,23 @@ storiesOf("Buttons", module).add(
           target="_blank"
         >
           <Icon name="call-filled" /> <span>Call to Action</span>
+        </AnchorButton>
+      </div>
+      <h2>With ClassName</h2>
+      <div className="list">
+        <AnchorButton
+          href="https://www.vivy.com/"
+          target="_blank"
+          className="margin-top"
+        >
+          margin-top
+        </AnchorButton>
+        <AnchorButton
+          href="https://www.vivy.com/"
+          target="_blank"
+          className="margin-top"
+        >
+          margin-top
         </AnchorButton>
       </div>
     </ButtonStyles>

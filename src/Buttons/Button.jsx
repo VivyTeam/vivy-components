@@ -8,7 +8,8 @@ export default function Button({
   onClick,
   children,
   disabled,
-  style
+  style,
+  className
 }) {
   return (
     <ButtonStyles>
@@ -16,7 +17,7 @@ export default function Button({
       <button
         disabled={disabled}
         onClick={onClick}
-        className={type}
+        className={`${className} ${type}`}
         type={htmlType}
         style={style}
       >
@@ -32,7 +33,8 @@ Button.propTypes = {
   type: PropTypes.string,
   htmlType: PropTypes.oneOf(["button", "submit", "reset"]),
   style: PropTypes.shape({}),
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  className: PropTypes.string
 };
 
 Button.defaultProps = {
@@ -40,5 +42,6 @@ Button.defaultProps = {
   type: "primary",
   htmlType: "button",
   style: {},
-  disabled: false
+  disabled: false,
+  className: ""
 };
