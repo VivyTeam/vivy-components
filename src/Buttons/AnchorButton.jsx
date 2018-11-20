@@ -10,12 +10,13 @@ export default function AnchorButton({
   rel,
   download,
   children,
-  style
+  style,
+  className
 }) {
   return (
     <ButtonStyles>
       <a
-        className={type}
+        className={`${className} ${type}`}
         onClick={onClick}
         href={href}
         target={target}
@@ -37,7 +38,8 @@ AnchorButton.propTypes = {
   target: PropTypes.string,
   rel: PropTypes.string,
   download: PropTypes.string,
-  style: PropTypes.shape({})
+  style: PropTypes.shape({}),
+  className: PropTypes.string
 };
 
 AnchorButton.defaultProps = {
@@ -46,5 +48,6 @@ AnchorButton.defaultProps = {
   target: "_self",
   rel: "",
   download: "",
-  style: {}
+  style: {},
+  className: ""
 };
