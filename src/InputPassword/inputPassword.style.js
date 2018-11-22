@@ -1,18 +1,20 @@
 import styled from "styled-components";
 
 const InputPasswordStyles = styled.div`
-  .icon-position-right {
-    font-size: 30px;
-    cursor: pointer;
+  position: relative;
+  width: 100%;
+
+  .button-position-right {
     width: 54px;
     height: 54px;
-    display: flex;
-    justify-content: center;
     position: absolute;
-    display: flex;
-    align-items: center;
     right: 0;
-    user-select: none;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
 
     i {
       display: flex;
