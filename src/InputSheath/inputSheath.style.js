@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { error, errorBackground } from "../Colors/index";
+import { error, errorBackground } from "../Colors";
 
 const InputStyles = styled.div`
   position: relative;
