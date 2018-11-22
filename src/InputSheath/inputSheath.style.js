@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { error, errorBackground } from "../Colors";
 
 const InputStyles = styled.div`
+  position: relative;
   width: 100%;
 
   label {
-    position: relative;
     display: flex;
     flex-direction: column;
     color: #353f41;

@@ -2,7 +2,14 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { Input, Button, Checkbox, Form, FormItem } from "../src/index";
+import {
+  Input,
+  Button,
+  Checkbox,
+  Form,
+  FormItem,
+  InputPassword
+} from "../src/index";
 
 const PageLayout = styled.div`
   padding: 50px 100px;
@@ -26,7 +33,7 @@ const PageLayout = styled.div`
 class FormWithValidation extends Component {
   constructor(props) {
     super(props);
-
+    this.state = { showPasswordVisibility: false };
     this.validateForms = this.validateForms.bind(this);
   }
 
@@ -50,6 +57,7 @@ class FormWithValidation extends Component {
   }
 
   render() {
+    const { showPasswordVisibility } = this.state;
     const rules = {
       name: {
         type: "string",
@@ -89,6 +97,19 @@ class FormWithValidation extends Component {
               id="email"
               placeholder="Your preferred e-mail"
               label="E-mail"
+            />
+          </FormItem>
+          <FormItem>
+            <InputPassword
+              showPassword={showPasswordVisibility}
+              toggle={() =>
+                this.setState({
+                  showPasswordVisibility: !showPasswordVisibility
+                })
+              }
+              id="password"
+              placeholder="Your password"
+              label="Password"
             />
           </FormItem>
           <FormItem>

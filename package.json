@@ -1,6 +1,6 @@
 {
   "name": "@vivy/vivy-components",
-  "version": "0.6.10",
+  "version": "0.6.11",
   "private": false,
   "repository": {
     "type": "git",
@@ -23,18 +23,18 @@
   },
   "dependencies": {
     "@storybook/addon-actions": "^3.4.6",
-    "@storybook/addon-console": "^1.0.0",
+    "@storybook/addon-console": "^1.1.0",
     "@storybook/addon-info": "^3.4.11",
     "@storybook/addon-links": "^3.4.6",
     "@storybook/addon-options": "^3.4.6",
-    "@storybook/addons": "^3.4.6",
+    "@storybook/addons": "^3.4.11",
     "@storybook/react": "^3.4.6",
     "@storybook/storybook-deployer": "^2.3.0",
     "async-validator": "^1.10.0",
     "copy-to-clipboard": "^3.0.8",
     "i18next": "^11.9.0",
     "i18next-browser-languagedetector": "^2.2.3",
-    "prettier": "^1.13.5",
+    "prettier": "^1.15.2",
     "prop-types": "^15.6.1",
     "react": "^16.6.3",
     "react-dom": "^16.2.0",
@@ -63,8 +63,8 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^1.1.11",
-    "jest": "^23.6.0",
-    "react-test-renderer": "^16.4.0",
+    "jest": "^23.0.1",
+    "react-test-renderer": "^16.6.3",
     "storybook-addon-jsx": "^5.4.0",
     "style-loader": "^0.20.1"
   }
