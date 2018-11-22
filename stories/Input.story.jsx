@@ -26,19 +26,11 @@ storiesOf("Input", module)
     "optional",
     withInfo()(() => (
       <PageLayout>
-        <Input placeholder="Your last name" label="Last name" optional />
-      </PageLayout>
-    ))
-  )
-  .add(
-    "password",
-    withInfo()(() => (
-      <PageLayout>
         <Input
-          id="password"
-          placeholder="Your password"
-          label="Password"
-          type="password"
+          placeholder="Your last name"
+          label="Last name"
+          optional
+          id="email"
         />
       </PageLayout>
     ))
@@ -48,11 +40,11 @@ storiesOf("Input", module)
     withInfo()(() => (
       <PageLayout>
         <Input
-          iconName="password"
-          id="password"
-          placeholder="Your password"
-          label="Password"
-          type="password"
+          iconName="email"
+          id="email"
+          placeholder="Email"
+          label="Email"
+          type="text"
         />
       </PageLayout>
     ))
@@ -62,12 +54,12 @@ storiesOf("Input", module)
     withInfo()(() => (
       <PageLayout>
         <Input
-          id="password"
-          placeholder="Your password"
-          label="Password"
-          type="password"
+          id="email"
+          placeholder="Email"
+          label="Email"
+          type="text"
           errors={{
-            password: [{ message: "look there is an error", field: "password" }]
+            email: [{ message: "look there is an error", field: "email" }]
           }}
         />
       </PageLayout>
@@ -78,14 +70,14 @@ storiesOf("Input", module)
     withInfo()(() => (
       <PageLayout>
         <Input
-          id="password"
-          placeholder="Your password"
-          label="Password"
-          type="password"
+          id="email"
+          placeholder="Email"
+          label="Email"
+          type="text"
           errors={{
-            password: [
-              { message: "look there is an error", field: "password" },
-              { message: "look there is another error", field: "password" }
+            email: [
+              { message: "look there is an error", field: "email" },
+              { message: "look there is another an error!", field: "email" }
             ]
           }}
         />
@@ -97,13 +89,13 @@ storiesOf("Input", module)
     withInfo()(() => (
       <PageLayout>
         <Input
-          iconName="password"
-          id="password"
-          placeholder="Your password"
-          label="Password"
-          type="password"
+          iconName="email"
+          id="email"
+          placeholder="Email"
+          label="Email"
+          type="text"
           errors={{
-            password: [{ message: "look there is an error", field: "password" }]
+            email: [{ message: "look there is an error", field: "email" }]
           }}
         />
       </PageLayout>

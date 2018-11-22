@@ -14,6 +14,7 @@ storiesOf("InputPassword", module)
     withInfo()(() => (
       <PageLayout>
         <InputPassword
+          toggle={() => {}}
           iconName="body"
           showPassword
           id="password"
@@ -28,6 +29,7 @@ storiesOf("InputPassword", module)
     withInfo()(() => (
       <PageLayout>
         <InputPassword
+          toggle={() => {}}
           showPassword={false}
           id="name"
           placeholder="Password"
@@ -41,6 +43,7 @@ storiesOf("InputPassword", module)
     withInfo()(() => (
       <PageLayout>
         <InputPassword
+          toggle={() => {}}
           showPassword
           id="name"
           placeholder="Password"
@@ -54,6 +57,7 @@ storiesOf("InputPassword", module)
     withInfo()(() => (
       <PageLayout>
         <InputPassword
+          toggle={() => {}}
           showPassword
           id="password"
           placeholder="Password"
@@ -70,6 +74,7 @@ storiesOf("InputPassword", module)
     withInfo()(() => (
       <PageLayout>
         <InputPassword
+          toggle={() => {}}
           showPassword
           id="password"
           placeholder="Password"
@@ -89,6 +94,7 @@ storiesOf("InputPassword", module)
     withInfo()(() => (
       <PageLayout>
         <InputPassword
+          toggle={() => {}}
           iconName="body"
           showPassword={false}
           id="password"
