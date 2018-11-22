@@ -24,7 +24,7 @@ const InputPasswordStyles = styled.div`
       justify-content: center;
       display: flex;
       align-items: center;
-      font-size: 30px;
+      font-size: 24px;
     }
   }
 `;

@@ -76,7 +76,11 @@ const InputStyles = styled.div`
   }
 
   .icon-left {
-    font-size: 30px;
+    color: #bfbfbf;
+    line-heigh: normal;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
     width: 54px;
     height: 54px;
     display: flex;
