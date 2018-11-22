@@ -76,16 +76,17 @@ const InputStyles = styled.div`
   }
 
   .icon-left {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #bfbfbf;
-    line-heigh: normal;
+    line-height: normal;
     font-size: 24px;
     width: 54px;
     height: 54px;
-    display: flex;
-    justify-content: center;
     position: absolute;
     display: flex;
-    align-items: center;
     left: 0;
     -webkit-touch-callout: none;
     -webkit-user-select: none;

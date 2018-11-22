@@ -3,11 +3,8 @@ import styled from "styled-components";
 const InputPasswordStyles = styled.div`
   width: 100%;
 
-  button {
-    margin: 0;
-  }
-
   .button-position-right {
+    margin: 0;
     width: 54px;
     height: 54px;
     position: absolute;

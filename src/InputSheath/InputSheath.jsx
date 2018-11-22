@@ -26,8 +26,8 @@ export default function InputSheath({
         ) : null}
         {children}
         {id in errors &&
-          errors[id].map(index => (
-            <span key={index} className="error-feedback">
+          errors[id].map((index, key) => (
+            <span key={key} className="error-feedback">
               {index.message}
             </span>
           ))}
