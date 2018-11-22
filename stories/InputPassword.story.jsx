@@ -10,6 +10,20 @@ const PageLayout = styled.div`
 `;
 storiesOf("InputPassword", module)
   .add(
+    "icon left",
+    withInfo()(() => (
+      <PageLayout>
+        <InputPassword
+          iconName="body"
+          showPassword
+          id="password"
+          placeholder="Password"
+          label="Password"
+        />
+      </PageLayout>
+    ))
+  )
+  .add(
     "show password false",
     withInfo()(() => (
       <PageLayout>
@@ -57,6 +71,26 @@ storiesOf("InputPassword", module)
       <PageLayout>
         <InputPassword
           showPassword
+          id="password"
+          placeholder="Password"
+          label="Password"
+          errors={{
+            password: [
+              { message: "look there is an error", field: "password" },
+              { message: "look there is another error", field: "password" }
+            ]
+          }}
+        />
+      </PageLayout>
+    ))
+  )
+  .add(
+    "icon left and error",
+    withInfo()(() => (
+      <PageLayout>
+        <InputPassword
+          iconName="body"
+          showPassword={false}
           id="password"
           placeholder="Password"
           label="Password"
