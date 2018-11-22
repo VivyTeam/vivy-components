@@ -3,6 +3,10 @@ import styled from "styled-components";
 const InputPasswordStyles = styled.div`
   width: 100%;
 
+  button {
+    margin: 0;
+  }
+
   .button-position-right {
     width: 54px;
     height: 54px;
@@ -20,7 +24,7 @@ const InputPasswordStyles = styled.div`
       justify-content: center;
       display: flex;
       align-items: center;
-      font-size: 30px;
+      font-size: 24px;
     }
   }
 `;
