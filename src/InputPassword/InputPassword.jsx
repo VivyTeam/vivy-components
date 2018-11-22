@@ -21,6 +21,7 @@ export default function InputPassword({
     <Styles>
       <InputSheath id={id} iconName={iconName} errors={errors} label={label}>
         <input
+          autoComplete="password"
           id={id}
           name={name}
           type={showPassword ? "text" : "password"}
