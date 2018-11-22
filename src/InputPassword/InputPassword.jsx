@@ -6,6 +6,7 @@ import InputSheath from "../InputSheath";
 
 export default function InputPassword({
   id,
+  label,
   placeholder,
   name,
   toggle,
@@ -18,7 +19,7 @@ export default function InputPassword({
 
   return (
     <Styles>
-      <InputSheath id={id} iconName={iconName} errors={errors}>
+      <InputSheath id={id} iconName={iconName} errors={errors} label={label}>
         <input
           id={id}
           name={name}
@@ -47,6 +48,7 @@ InputPassword.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   placeholder: PropTypes.string,
+  label: PropTypes.string,
   iconName: PropTypes.string,
   toggle: PropTypes.func.isRequired,
   showPassword: PropTypes.bool.isRequired,
@@ -57,5 +59,6 @@ InputPassword.defaultProps = {
   name: "default",
   placeholder: "",
   iconName: "",
+  label: "",
   errors: {}
 };

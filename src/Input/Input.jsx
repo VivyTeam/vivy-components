@@ -4,6 +4,7 @@ import InputSheath from "../InputSheath";
 
 export default function Input({
   id,
+  label,
   type,
   placeholder,
   name,
@@ -14,7 +15,7 @@ export default function Input({
   const invalid = id in errors ? "invalid" : "";
 
   return (
-    <InputSheath id={id} iconName={iconName} errors={errors}>
+    <InputSheath id={id} iconName={iconName} errors={errors} label={label}>
       <input
         id={id}
         name={name}
@@ -31,6 +32,7 @@ Input.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
+  label: PropTypes.string,
   iconName: PropTypes.string,
   errors: PropTypes.shape({
     inputId: PropTypes.arrayOf({
@@ -44,6 +46,7 @@ Input.defaultProps = {
   type: "",
   name: "default",
   placeholder: "",
+  label: "",
   iconName: "",
   errors: {}
 };
