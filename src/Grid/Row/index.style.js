@@ -188,7 +188,18 @@ const RowStyles = styled.div`
 
   .center {
     justify-content: center;
+  }
+  
+  .text-align-left{
+    text-align: left;
+  }
+  
+  .text-align-center{
     text-align: center;
+  }
+  
+  .text-align-right{
+    text-align: right;
   }
 
   .end {
