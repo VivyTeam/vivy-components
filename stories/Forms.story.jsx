@@ -33,27 +33,12 @@ const PageLayout = styled.div`
 class FormWithValidation extends Component {
   constructor(props) {
     super(props);
-    this.state = { showPasswordVisibility: false };
+    this.state = { errors: {}, showPasswordVisibility: false };
     this.validateForms = this.validateForms.bind(this);
   }
 
   validateForms(fields, errors) {
-    Object.keys(fields).forEach(id => {
-      const input = document.getElementById(id);
-      const error = errors ? errors[id] : null;
-      const label = input.parentNode.querySelector(".error-feedback");
-
-      if (error) {
-        const { message } = error[0];
-        input.classList.add("invalid");
-
-        label.textContent = message;
-        return;
-      }
-
-      input.classList.remove("invalid");
-      label.textContent = "";
-    });
+    this.setState({ errors });
   }
 
   render() {
@@ -73,6 +58,7 @@ class FormWithValidation extends Component {
         transform: value => value.toString()
       }
     };
+    const { errors } = this.state;
 
     return (
       <PageLayout>
@@ -82,6 +68,7 @@ class FormWithValidation extends Component {
               id="name"
               placeholder="Please add your first name"
               label="First name"
+              errors={errors}
             />
           </FormItem>
           <FormItem>
@@ -90,6 +77,7 @@ class FormWithValidation extends Component {
               placeholder="Please add your last name"
               label="Last name"
               optional
+              errors={errors}
             />
           </FormItem>
           <FormItem>
@@ -97,6 +85,7 @@ class FormWithValidation extends Component {
               id="email"
               placeholder="Your preferred e-mail"
               label="E-mail"
+              errors={errors}
             />
           </FormItem>
           <FormItem>
@@ -110,15 +99,21 @@ class FormWithValidation extends Component {
               id="password"
               placeholder="Your password"
               label="Password"
+              errors={errors}
             />
           </FormItem>
           <FormItem>
-            <Checkbox id="terms" name="Terms and Conditions">
+            <Checkbox id="terms" name="Terms and Conditions" errors={errors}>
               <p>Terms and conditions</p>
             </Checkbox>
           </FormItem>
           <FormItem>
-            <Checkbox id="newsletter" name="Newsletter" optional>
+            <Checkbox
+              id="newsletter"
+              name="Newsletter"
+              optional
+              errors={errors}
+            >
               <p>Newsletter sign up</p>
             </Checkbox>
           </FormItem>

@@ -2,7 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import CheckboxStyle from "./checkbox.style";
 
-export default function Checkbox({ id, children, value, name, optional }) {
+export default function Checkbox({
+  id,
+  children,
+  value,
+  name,
+  optional,
+  errors
+}) {
   return (
     <CheckboxStyle>
       <input id={id} name={name} type="checkbox" value={value} />
@@ -11,7 +18,12 @@ export default function Checkbox({ id, children, value, name, optional }) {
       <div className="content">{children}</div>
 
       {optional ? <span className="optional">*optional</span> : null}
-      <span className="error-feedback" />
+      {id in errors &&
+        errors[id].map(index => (
+          <span key={index} className="error-feedback">
+            {index.message}
+          </span>
+        ))}
     </CheckboxStyle>
   );
 }
