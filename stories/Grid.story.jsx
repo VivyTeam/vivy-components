@@ -268,6 +268,75 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
+    "text-align-left",
+    withInfo()(() => (
+      <Row position="center">
+        <Col col={3}>
+          <Row column position="center">
+            <Col>
+              <Box>1</Box>
+            </Col>
+            <Col>
+              <Box>2</Box>
+            </Col>
+            <Col>
+              <Box>3</Box>
+            </Col>
+            <Col>
+              <Box>4</Box>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
+    "text-align-center",
+    withInfo()(() => (
+      <Row position="center" >
+        <Col col={3}>
+          <Row column position="center" textAlign="center">
+            <Col>
+              <Box>1</Box>
+            </Col>
+            <Col>
+              <Box>2</Box>
+            </Col>
+            <Col>
+              <Box>3</Box>
+            </Col>
+            <Col>
+              <Box>4</Box>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
+    "text-align-right",
+    withInfo()(() => (
+      <Row position="center">
+        <Col col={3}>
+          <Row column position="center" textAlign="right">
+            <Col>
+              <Box>1</Box>
+            </Col>
+            <Col>
+              <Box>2</Box>
+            </Col>
+            <Col>
+              <Box>3</Box>
+            </Col>
+            <Col>
+              <Box>4</Box>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
     "nested",
     withInfo()(() => (
       <Row position="center">
