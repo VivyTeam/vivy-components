@@ -33,11 +33,18 @@ Checkbox.propTypes = {
   children: PropTypes.node.isRequired,
   optional: PropTypes.bool,
   value: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
+  errors: PropTypes.shape({
+    inputId: PropTypes.arrayOf({
+      message: PropTypes.string,
+      field: PropTypes.string
+    })
+  })
 };
 
 Checkbox.defaultProps = {
   optional: false,
   value: "",
-  name: ""
+  name: "",
+  errors: {}
 };
