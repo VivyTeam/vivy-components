@@ -32,7 +32,7 @@
     "@storybook/storybook-deployer": "^2.3.0",
     "async-validator": "^1.10.0",
     "copy-to-clipboard": "^3.0.8",
-    "i18next": "^11.9.0",
+    "i18next": "^12.1.0",
     "i18next-browser-languagedetector": "^2.2.3",
     "prettier": "^1.15.2",
     "prop-types": "^15.6.1",
