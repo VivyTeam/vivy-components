@@ -66,6 +66,6 @@
     "jest": "^23.0.1",
     "react-test-renderer": "^16.6.3",
     "storybook-addon-jsx": "^5.3.0",
-    "style-loader": "^0.20.1"
+    "style-loader": "^0.23.1"
   }
 }
