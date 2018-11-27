@@ -9,19 +9,22 @@ export default function Input({
   placeholder,
   name,
   iconName,
-  errors
+  onBlur,
+  onChange,
+  error
 }) {
   const padding = iconName ? "icon-padding" : "";
-  const invalid = id in errors ? "invalid" : "";
 
   return (
-    <InputSheath id={id} iconName={iconName} errors={errors} label={label}>
+    <InputSheath id={id} iconName={iconName} error={error} label={label}>
       <input
+        onChange={onChange}
+        onBlur={onBlur}
         id={id}
         name={name}
         type={type}
         placeholder={placeholder}
-        className={`${padding} ${invalid}`}
+        className={padding}
       />
     </InputSheath>
   );
@@ -34,12 +37,9 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   label: PropTypes.string,
   iconName: PropTypes.string,
-  errors: PropTypes.shape({
-    inputId: PropTypes.arrayOf({
-      message: PropTypes.string,
-      field: PropTypes.string
-    })
-  })
+  onChange: PropTypes.func,
+  onBlur: PropTypes.func,
+  error: PropTypes.shape({})
 };
 
 Input.defaultProps = {
@@ -48,5 +48,7 @@ Input.defaultProps = {
   placeholder: "",
   label: "",
   iconName: "",
-  errors: {}
+  onChange: () => {},
+  onBlur: () => {},
+  error: {}
 };

@@ -1,15 +1,22 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import {
-  Input,
-  Button,
-  Checkbox,
-  Form,
-  FormItem,
-  InputPassword
-} from "../src/index";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+import { Button, Checkbox, Col, Form, Input, Row } from "../src";
+import Validate from "../src/Forms/Validate.jsx";
+
+const rules = {
+  name: { type: "string", required: true, min: 8 },
+  email: { type: "email", required: true },
+  terms: {
+    type: "enum",
+    enum: ["true"],
+    required: true,
+    message: "*You must agree to terms",
+    transform: (value = false) => value.toString()
+  }
+};
 
 const PageLayout = styled.div`
   padding: 50px 100px;
@@ -29,102 +36,6 @@ const PageLayout = styled.div`
     padding: 15px;
   }
 `;
-
-class FormWithValidation extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { errors: {}, showPasswordVisibility: false };
-    this.validateForms = this.validateForms.bind(this);
-  }
-
-  validateForms(fields, errors) {
-    this.setState({ errors });
-  }
-
-  render() {
-    const { showPasswordVisibility } = this.state;
-    const rules = {
-      name: {
-        type: "string",
-        required: true,
-        whitespace: true
-      },
-      email: { type: "email", required: true },
-      terms: {
-        type: "enum",
-        enum: ["true"],
-        required: true,
-        message: "*You must agree to terms",
-        transform: value => value.toString()
-      }
-    };
-    const { errors } = this.state;
-
-    return (
-      <PageLayout>
-        <Form submit={this.validateForms} rules={rules}>
-          <FormItem>
-            <Input
-              id="name"
-              placeholder="Please add your first name"
-              label="First name"
-              errors={errors}
-            />
-          </FormItem>
-          <FormItem>
-            <Input
-              id="lastName"
-              placeholder="Please add your last name"
-              label="Last name"
-              optional
-              errors={errors}
-            />
-          </FormItem>
-          <FormItem>
-            <Input
-              id="email"
-              placeholder="Your preferred e-mail"
-              label="E-mail"
-              errors={errors}
-            />
-          </FormItem>
-          <FormItem>
-            <InputPassword
-              showPassword={showPasswordVisibility}
-              toggle={() =>
-                this.setState({
-                  showPasswordVisibility: !showPasswordVisibility
-                })
-              }
-              id="password"
-              placeholder="Your password"
-              label="Password"
-              errors={errors}
-            />
-          </FormItem>
-          <FormItem>
-            <Checkbox id="terms" name="Terms and Conditions" errors={errors}>
-              <p>Terms and conditions</p>
-            </Checkbox>
-          </FormItem>
-          <FormItem>
-            <Checkbox
-              id="newsletter"
-              name="Newsletter"
-              optional
-              errors={errors}
-            >
-              <p>Newsletter sign up</p>
-            </Checkbox>
-          </FormItem>
-          <FormItem>
-            <Button htmlType="submit">Submit</Button>
-          </FormItem>
-        </Form>
-      </PageLayout>
-    );
-  }
-}
 
 storiesOf("Forms", module)
   .add(
@@ -162,4 +73,74 @@ storiesOf("Forms", module)
       </PageLayout>
     ))
   )
-  .add("form with validation", withInfo()(() => <FormWithValidation />));
+  .add(
+    "form with validation",
+    withInfo()(() => (
+      <Validate rules={rules}>
+        {({
+          onSubmit,
+          onBlur,
+          onChange,
+          name,
+          lastName,
+          email,
+          terms,
+          newsletter
+        }) => (
+          <Row position="center">
+            <Col col={9}>
+              <Form submit={onSubmit}>
+                <Input
+                  onBlur={onBlur}
+                  onChange={onChange}
+                  id="name"
+                  placeholder="Please add your first name"
+                  label="First name"
+                  error={name}
+                />
+
+                <Input
+                  onBlur={onBlur}
+                  onChange={onChange}
+                  id="lastName"
+                  placeholder="Please add your last name"
+                  label="Last name"
+                  optional
+                  error={lastName}
+                />
+
+                <Input
+                  onBlur={onBlur}
+                  onChange={onChange}
+                  id="email"
+                  placeholder="Your preferred e-mail"
+                  label="E-mail"
+                  error={email}
+                />
+
+                <Checkbox
+                  onChange={onChange}
+                  onBlur={onBlur}
+                  id="terms"
+                  name="Terms and Conditions"
+                  error={terms}
+                >
+                  <p>Terms and conditions</p>
+                </Checkbox>
+
+                <Checkbox
+                  id="newsletter"
+                  name="Newsletter"
+                  optional
+                  error={newsletter}
+                >
+                  <p>Newsletter sign up</p>
+                </Checkbox>
+                <Button htmlType="submit">Submit</Button>
+              </Form>
+            </Col>
+          </Row>
+        )}
+      </Validate>
+    ))
+  );

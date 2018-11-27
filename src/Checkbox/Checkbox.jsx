@@ -8,22 +8,26 @@ export default function Checkbox({
   value,
   name,
   optional,
-  errors
+  error,
+  onChange
 }) {
   return (
     <CheckboxStyle>
-      <input id={id} name={name} type="checkbox" value={value} />
+      <input
+        id={id}
+        name={name}
+        type="checkbox"
+        value={value}
+        onChange={onChange}
+      />
       {/* eslint-disable-next-line */}
       <label id={id} htmlFor={id} />
       <div className="content">{children}</div>
 
       {optional ? <span className="optional">*optional</span> : null}
-      {id in errors &&
-        errors[id].map(index => (
-          <span key={index} className="error-feedback">
-            {index.message}
-          </span>
-        ))}
+      {"message" in error ? (
+        <span className="error-feedback">{error.message}</span>
+      ) : null}
     </CheckboxStyle>
   );
 }
@@ -34,17 +38,14 @@ Checkbox.propTypes = {
   optional: PropTypes.bool,
   value: PropTypes.string,
   name: PropTypes.string,
-  errors: PropTypes.shape({
-    inputId: PropTypes.arrayOf({
-      message: PropTypes.string,
-      field: PropTypes.string
-    })
-  })
+  error: PropTypes.shape({}),
+  onChange: PropTypes.func
 };
 
 Checkbox.defaultProps = {
   optional: false,
   value: "",
   name: "",
-  errors: {}
+  error: {},
+  onChange: () => {}
 };

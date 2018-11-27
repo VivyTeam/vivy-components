@@ -11,22 +11,20 @@ export default function InputPassword({
   name,
   toggle,
   showPassword,
-  iconName,
-  errors
+  iconName
 }) {
   const padding = iconName ? "icon-padding" : "";
-  const invalid = id in errors ? "invalid" : "";
 
   return (
     <Styles>
-      <InputSheath id={id} iconName={iconName} errors={errors} label={label}>
+      <InputSheath id={id} iconName={iconName} label={label}>
         <input
           autoComplete="password"
           id={id}
           name={name}
           type={showPassword ? "text" : "password"}
           placeholder={placeholder}
-          className={`${padding} ${invalid}`}
+          className={padding}
         />
 
         <button
@@ -52,14 +50,12 @@ InputPassword.propTypes = {
   label: PropTypes.string,
   iconName: PropTypes.string,
   toggle: PropTypes.func.isRequired,
-  showPassword: PropTypes.bool.isRequired,
-  errors: PropTypes.shape({})
+  showPassword: PropTypes.bool.isRequired
 };
 
 InputPassword.defaultProps = {
   name: "default",
   placeholder: "",
   iconName: "",
-  label: "",
-  errors: {}
+  label: ""
 };

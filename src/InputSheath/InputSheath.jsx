@@ -8,9 +8,11 @@ export default function InputSheath({
   label,
   optional,
   iconName,
-  errors,
-  children
+  children,
+  error
 }) {
+  const invalid = "message" in error ? "invalid" : "";
+
   return (
     <Styles>
       <span className="label">
@@ -18,19 +20,16 @@ export default function InputSheath({
         {optional ? <span className="optional">*optional</span> : null}
       </span>
       {/* eslint-disable-next-line */}
-      <label htmlFor={id} id={id}>
+      <label htmlFor={id} id={id} className={invalid}>
         {iconName ? (
           <div className="icon-left">
             <Icon name={iconName} />
           </div>
         ) : null}
         {children}
-        {id in errors &&
-          errors[id].map((index, key) => (
-            <span key={key} className="error-feedback">
-              {index.message}
-            </span>
-          ))}
+        {"message" in error ? (
+          <span className="error-feedback">{error.message}</span>
+        ) : null}
       </label>
     </Styles>
   );
@@ -42,17 +41,12 @@ InputSheath.propTypes = {
   label: PropTypes.string,
   optional: PropTypes.bool,
   iconName: PropTypes.string,
-  errors: PropTypes.shape({
-    inputId: PropTypes.arrayOf({
-      message: PropTypes.string,
-      field: PropTypes.string
-    })
-  })
+  error: PropTypes.shape({})
 };
 
 InputSheath.defaultProps = {
   label: "",
   optional: false,
   iconName: "",
-  errors: {}
+  error: {}
 };
