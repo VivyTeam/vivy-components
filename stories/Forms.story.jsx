@@ -81,11 +81,11 @@ storiesOf("Forms", module)
           onSubmit,
           onBlur,
           onChange,
-          name,
-          lastName,
-          email,
-          terms,
-          newsletter
+          nameError,
+          lastNameError,
+          emailError,
+          termsError,
+          newsletterError
         }) => (
           <Row position="center">
             <Col col={9}>
@@ -96,7 +96,7 @@ storiesOf("Forms", module)
                   id="name"
                   placeholder="Please add your first name"
                   label="First name"
-                  error={name}
+                  error={nameError}
                 />
 
                 <Input
@@ -106,7 +106,7 @@ storiesOf("Forms", module)
                   placeholder="Please add your last name"
                   label="Last name"
                   optional
-                  error={lastName}
+                  error={lastNameError}
                 />
 
                 <Input
@@ -115,7 +115,7 @@ storiesOf("Forms", module)
                   id="email"
                   placeholder="Your preferred e-mail"
                   label="E-mail"
-                  error={email}
+                  error={emailError}
                 />
 
                 <Checkbox
@@ -123,7 +123,7 @@ storiesOf("Forms", module)
                   onBlur={onBlur}
                   id="terms"
                   name="Terms and Conditions"
-                  error={terms}
+                  error={termsError}
                 >
                   <p>Terms and conditions</p>
                 </Checkbox>
@@ -132,7 +132,7 @@ storiesOf("Forms", module)
                   id="newsletter"
                   name="Newsletter"
                   optional
-                  error={newsletter}
+                  error={newsletterError}
                 >
                   <p>Newsletter sign up</p>
                 </Checkbox>

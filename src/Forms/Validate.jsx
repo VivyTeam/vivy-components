@@ -25,11 +25,11 @@ const runRulesOnField = (rules, e) => {
 
     if (error.length > 0) {
       error = error.reduce(
-        (previous, err) => ({ ...previous, [err.field]: err }),
+        (previous, err) => ({ ...previous, [`${err.field}Error`]: err }),
         {}
       );
     } else {
-      error = { [e.target.id]: {} };
+      error = { [`${e.target.id}Error`]: {} };
     }
   });
 
@@ -49,7 +49,7 @@ const runRulesOnAllFields = (rules, e) => {
   schema.validate(fields, errors => {
     if (errors && errors.length > 0) {
       error = errors.reduce(
-        (previous, err) => ({ ...previous, [err.field]: err }),
+        (previous, err) => ({ ...previous, [`${err.field}Error`]: err }),
         {}
       );
     } else {
