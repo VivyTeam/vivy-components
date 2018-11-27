@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import CheckboxStyle from "./checkbox.style";
+import Styles from "./checkbox.style";
 
 export default function Checkbox({
   id,
@@ -12,7 +12,7 @@ export default function Checkbox({
   onChange
 }) {
   return (
-    <CheckboxStyle>
+    <Styles>
       <input
         id={id}
         name={name}
@@ -28,7 +28,7 @@ export default function Checkbox({
       {"message" in error ? (
         <span className="error-feedback">{error.message}</span>
       ) : null}
-    </CheckboxStyle>
+    </Styles>
   );
 }
 
