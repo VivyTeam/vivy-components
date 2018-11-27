@@ -85,7 +85,7 @@ const runRulesOnAllFields = (rules, e) => {
         }
         const { rules } = props$.value;
         const errors = runRulesOnAllFields(rules, e);
-        return { ...errors, isValid: !Object.keys(errors).length };
+        return { ...errors };
       }),
       startWith({ isValid: false })
     )
@@ -95,25 +95,22 @@ class Validate extends React.Component {
   static defaultProps = {
     validateForm: () => {},
     validateField: () => {},
-    rules: {},
-    isValid: false
+    rules: {}
   };
   static propTypes = {
     children: PropTypes.func.isRequired,
     validateForm: PropTypes.func,
     validateField: PropTypes.func,
-    rules: PropTypes.shape({}),
-    isValid: PropTypes.bool
+    rules: PropTypes.shape({})
   };
 
   render() {
-    const { validateField, validateForm, isValid } = this.props;
+    const { validateField, validateForm } = this.props;
 
     return this.props.children({
       onSubmit: validateForm,
       onBlur: validateField,
       onChange: validateField,
-      isValid,
       ...this.props
     });
   }
