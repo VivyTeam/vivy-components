@@ -14,6 +14,11 @@ const Box = styled.div`
   height: 50px;
 `;
 
+const BoxBlue = styled.div`
+  background-color: #0000ff;
+  height: 50px;
+`;
+
 const BoxYellow = styled.div`
   background-color: #ffff19;
   padding: 10px;
@@ -32,6 +37,38 @@ storiesOf("Grid", module)
           <Box />
         </Col>
         <Col col={3}>
+          <Box />
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
+    "responsive",
+    withInfo()(() => (
+      <Row position="center">
+        <Col xs={10} sm={3} md={7} lg={3}>
+          <Box />
+        </Col>
+        <Col xs={10} sm={3} md={8} lg={3}>
+          <BoxBlue />
+        </Col>
+        <Col xs={10} sm={3} md={7} lg={3}>
+          <Box />
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
+    "responsive with none",
+    withInfo()(() => (
+      <Row position="center">
+        <Col xs={7} sm={12} md={7} lg={3}>
+          <Box />
+        </Col>
+        <Col xs={7} sm="none" md={10} lg={3}>
+          <BoxBlue />
+        </Col>
+        <Col xs={7} sm={12} md={7} lg={3}>
           <Box />
         </Col>
       </Row>
@@ -293,7 +330,7 @@ storiesOf("Grid", module)
   .addWithJSX(
     "text-align-center",
     withInfo()(() => (
-      <Row position="center" >
+      <Row position="center">
         <Col col={3}>
           <Row column position="center" textAlign="center">
             <Col>
