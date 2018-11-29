@@ -22,7 +22,7 @@ const BoxBlue = styled.div`
 const BoxYellow = styled.div`
   background-color: #ffff19;
   padding: 10px;
-  height: 50px;
+  min-height: 50px;
 `;
 
 storiesOf("Grid", module)
@@ -59,7 +59,7 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "responsive with none",
+    "responsive with hiden middle column on tablet devices",
     withInfo()(() => (
       <Row position="center">
         <Col xs={7} sm={12} md={7} lg={3}>
@@ -166,57 +166,57 @@ storiesOf("Grid", module)
     withInfo()(() => (
       <OffsetGrid>
         <Row space="around">
-          <Col lg={1} offset={11}>
+          <Col lg={1} offsetLg={11}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={2} offset={10}>
+          <Col lg={2} offsetLg={10}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={3} offset={9}>
+          <Col lg={3} offsetLg={9}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={4} offset={8}>
+          <Col lg={4} offsetLg={8}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={5} offset={7}>
+          <Col lg={5} offsetLg={7}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={6} offset={6}>
+          <Col lg={6} offsetLg={6}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={7} offset={5}>
+          <Col lg={7} offsetLg={5}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={8} offset={4}>
+          <Col lg={8} offsetLg={4}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={9} offset={3}>
+          <Col lg={9} offsetLg={3}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={10} offset={2}>
+          <Col lg={10} offsetLg={2}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={11} offset={1}>
+          <Col lg={11} offsetLg={1}>
             <Box />
           </Col>
         </Row>
@@ -284,22 +284,18 @@ storiesOf("Grid", module)
   .addWithJSX(
     "column",
     withInfo()(() => (
-      <Row position="center">
+      <Row column position="center">
         <Col lg={3}>
-          <Row column position="center">
-            <Col>
-              <Box>1</Box>
-            </Col>
-            <Col>
-              <Box>2</Box>
-            </Col>
-            <Col>
-              <Box>3</Box>
-            </Col>
-            <Col>
-              <Box>4</Box>
-            </Col>
-          </Row>
+          <Box>1</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>2</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>3</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>4</Box>
         </Col>
       </Row>
     ))
