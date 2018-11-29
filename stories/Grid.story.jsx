@@ -310,16 +310,16 @@ storiesOf("Grid", module)
       <Row position="center">
         <Col lg={3}>
           <Row column position="center">
-            <Col>
+            <Col lg={12}>
               <Box>1</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>2</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>3</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>4</Box>
             </Col>
           </Row>
@@ -333,16 +333,16 @@ storiesOf("Grid", module)
       <Row position="center">
         <Col lg={3}>
           <Row column position="center" textAlign="center">
-            <Col>
+            <Col lg={12}>
               <Box>1</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>2</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>3</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>4</Box>
             </Col>
           </Row>
@@ -356,16 +356,16 @@ storiesOf("Grid", module)
       <Row position="center">
         <Col lg={3}>
           <Row column position="center" textAlign="right">
-            <Col>
+            <Col lg={12}>
               <Box>1</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>2</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>3</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>4</Box>
             </Col>
           </Row>
