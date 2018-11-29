@@ -25,8 +25,8 @@ Col.propTypes = {
 Col.defaultProps = {
   style: {},
   offset: 0,
-  xs: 12,
-  sm: 12,
-  md: 12,
-  lg: 12
+  xs: 0,
+  sm: 0,
+  md: 0,
+  lg: 0
 };
