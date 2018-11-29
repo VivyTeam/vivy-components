@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import RowStyles from "./index.style";
+import Styles from "./index.style";
 
 export default function Row({
   children,
@@ -14,7 +14,7 @@ export default function Row({
   const classReverse = reverse ? "reverse" : "";
 
   return (
-    <RowStyles style={style}>
+    <Styles style={style}>
       <div className="grid center">
         <div className="max-grid-width">
           <div
@@ -24,7 +24,7 @@ export default function Row({
           </div>
         </div>
       </div>
-    </RowStyles>
+    </Styles>
   );
 }
 
