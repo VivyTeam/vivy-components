@@ -65,7 +65,7 @@ storiesOf("Grid", module)
         <Col xs={7} sm={12} md={7} lg={3}>
           <Box />
         </Col>
-        <Col xs={7} sm="none" md={10} lg={3}>
+        <Col xs={7} sm="hide" md={10} lg={3}>
           <BoxBlue />
         </Col>
         <Col xs={7} sm={12} md={7} lg={3}>

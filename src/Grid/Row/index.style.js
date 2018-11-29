@@ -75,7 +75,7 @@ const RowStyles = styled.div`
   }
 
     
-  .col-lg-none{
+  .col-lg-hide{
     display: none;
   }
     
@@ -276,7 +276,7 @@ const RowStyles = styled.div`
       flex-basis: 0;
     }
     
-    .col-md-none{
+    .col-md-hide{
       display: none;
     }
     
@@ -425,7 +425,7 @@ const RowStyles = styled.div`
       flex-basis: 0;
     }
     
-    .col-sm-none{
+    .col-sm-hide{
       display: none;
     }
     
@@ -574,7 +574,7 @@ const RowStyles = styled.div`
       flex-basis: 0;
     }
     
-    .col-xs-none{
+    .col-xs-hide{
       display: none;
     }
     
