@@ -59,20 +59,22 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "responsive with hiden middle column on tablet devices",
-    withInfo()(() => (
-      <Row position="center">
-        <Col xs={7} sm={12} md={7} lg={3}>
-          <Box />
-        </Col>
-        <Col xs={7} sm="hide" md={10} lg={3}>
-          <BoxBlue />
-        </Col>
-        <Col xs={7} sm={12} md={7} lg={3}>
-          <Box />
-        </Col>
-      </Row>
-    ))
+    "responsive with hidden column",
+    withInfo("Hides the middle column on Tablet devices by parsing sm='hide'")(
+      () => (
+        <Row position="center">
+          <Col xs={7} sm={12} md={7} lg={3}>
+            <Box />
+          </Col>
+          <Col xs={7} sm="hide" md={10} lg={3}>
+            <BoxBlue />
+          </Col>
+          <Col xs={7} sm={12} md={7} lg={3}>
+            <Box />
+          </Col>
+        </Row>
+      )
+    )
   )
   .addWithJSX(
     "around",

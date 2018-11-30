@@ -29,7 +29,7 @@ export default function Col({
         ${colXs}
         ${colSm}
         ${colMd}
-        ${colLg} 
+        ${colLg}
         ${colOffsetXs}
         ${colOffsetSm}
         ${colOffsetMd}
