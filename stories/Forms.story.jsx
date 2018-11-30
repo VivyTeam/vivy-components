@@ -72,6 +72,28 @@ storiesOf("Forms", module)
     ))
   )
   .add(
+    "inputs without Validation",
+    withInfo("Using the Form without any validation")(() => (
+      <Row position="center">
+        <Col col={9}>
+          <Form>
+            <Input
+              id="name"
+              placeholder="Please add your first name"
+              label="First name"
+            />
+            <Input
+              id="lastName"
+              placeholder="Please add your last name"
+              label="Last name"
+              optional
+            />
+          </Form>
+        </Col>
+      </Row>
+    ))
+  )
+  .add(
     "with Validation",
     withInfo("Using the Context API to share functionality")(() => (
       <Row position="center">

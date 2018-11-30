@@ -11,7 +11,7 @@ export const ValidationContext = createContext(DEFAULT_STATE);
 export default class Validation extends Component {
   state = DEFAULT_STATE;
 
-  valueOfTarget = target => {
+  fieldValue = target => {
     const { type, checked, value, id } = target;
     switch (type) {
       case "checkbox":
@@ -29,10 +29,7 @@ export default class Validation extends Component {
     const { rules } = this.props;
     const fields = Array.from(e.target.elements)
       .filter(target => target.id)
-      .reduce(
-        (prev, target) => ({ ...prev, ...this.valueOfTarget(target) }),
-        {}
-      );
+      .reduce((prev, target) => ({ ...prev, ...this.fieldValue(target) }), {});
 
     const schema = new Schema(rules);
     schema.validate(fields, errors => {
@@ -49,7 +46,7 @@ export default class Validation extends Component {
 
   validateField = e => {
     const { rules } = this.props;
-    const field = this.valueOfTarget(e.target);
+    const field = this.fieldValue(e.target);
 
     const schema = new Schema(rules);
     schema.validate(field, errors => {
