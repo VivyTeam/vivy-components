@@ -72,10 +72,10 @@ storiesOf("Forms", module)
     ))
   )
   .add(
-    "inputs without Validation",
+    "without Validation",
     withInfo("Using the Form without any validation")(() => (
       <Row position="center">
-        <Col col={9}>
+        <Col lg={9}>
           <Form>
             <Input
               id="name"
@@ -97,7 +97,7 @@ storiesOf("Forms", module)
     "with Validation",
     withInfo("Using the Context API to share functionality")(() => (
       <Row position="center">
-        <Col col={9}>
+        <Col lg={9}>
           <Validation rules={rules}>
             <Form>
               <Input
