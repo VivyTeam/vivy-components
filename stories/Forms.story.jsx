@@ -1,15 +1,20 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import {
-  Input,
-  Button,
-  Checkbox,
-  Form,
-  FormItem,
-  InputPassword
-} from "../src/index";
+import styled from "styled-components";
+import { Button, Checkbox, Col, Form, Validation, Input, Row } from "../src";
+
+const rules = {
+  name: { type: "string", required: true, min: 8 },
+  email: { type: "email", required: true },
+  terms: {
+    type: "enum",
+    enum: ["true"],
+    required: true,
+    message: "*You must agree to terms",
+    transform: (value = false) => value.toString()
+  }
+};
 
 const PageLayout = styled.div`
   padding: 50px 100px;
@@ -30,102 +35,6 @@ const PageLayout = styled.div`
   }
 `;
 
-class FormWithValidation extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { errors: {}, showPasswordVisibility: false };
-    this.validateForms = this.validateForms.bind(this);
-  }
-
-  validateForms(fields, errors) {
-    this.setState({ errors });
-  }
-
-  render() {
-    const { showPasswordVisibility } = this.state;
-    const rules = {
-      name: {
-        type: "string",
-        required: true,
-        whitespace: true
-      },
-      email: { type: "email", required: true },
-      terms: {
-        type: "enum",
-        enum: ["true"],
-        required: true,
-        message: "*You must agree to terms",
-        transform: value => value.toString()
-      }
-    };
-    const { errors } = this.state;
-
-    return (
-      <PageLayout>
-        <Form submit={this.validateForms} rules={rules}>
-          <FormItem>
-            <Input
-              id="name"
-              placeholder="Please add your first name"
-              label="First name"
-              errors={errors}
-            />
-          </FormItem>
-          <FormItem>
-            <Input
-              id="lastName"
-              placeholder="Please add your last name"
-              label="Last name"
-              optional
-              errors={errors}
-            />
-          </FormItem>
-          <FormItem>
-            <Input
-              id="email"
-              placeholder="Your preferred e-mail"
-              label="E-mail"
-              errors={errors}
-            />
-          </FormItem>
-          <FormItem>
-            <InputPassword
-              showPassword={showPasswordVisibility}
-              toggle={() =>
-                this.setState({
-                  showPasswordVisibility: !showPasswordVisibility
-                })
-              }
-              id="password"
-              placeholder="Your password"
-              label="Password"
-              errors={errors}
-            />
-          </FormItem>
-          <FormItem>
-            <Checkbox id="terms" name="Terms and Conditions" errors={errors}>
-              <p>Terms and conditions</p>
-            </Checkbox>
-          </FormItem>
-          <FormItem>
-            <Checkbox
-              id="newsletter"
-              name="Newsletter"
-              optional
-              errors={errors}
-            >
-              <p>Newsletter sign up</p>
-            </Checkbox>
-          </FormItem>
-          <FormItem>
-            <Button htmlType="submit">Submit</Button>
-          </FormItem>
-        </Form>
-      </PageLayout>
-    );
-  }
-}
-
 storiesOf("Forms", module)
   .add(
     "documentation",
@@ -133,18 +42,30 @@ storiesOf("Forms", module)
       <PageLayout>
         <div className="documentation">
           <h2>Official Documentation</h2>
+          <h3>High level overview of this story</h3>
+          <p>
+            We use <a href="https://reactjs.org/docs/context.html">Context</a>{" "}
+            as way to share functionality into nested. Context provides a way to
+            pass data through the component tree without having to pass props
+            down manually at every level.
+          </p>
           <p>
             The validation used in Vivy forms takes advantage of the library
             async-validator. The full documentation can be found in the &nbsp;
             <a href="https://github.com/yiminghe/async-validator#api">here.</a>
+          </p>
+          <p>
+            Having a Context Provide named <b>Validation</b> as a parent
+            component of the <b>Form</b> and parsing into it certain rules will
+            validate the form on the fly and return the errors for each input.
           </p>
           <h2>Quick Start</h2>
           <ul>
             <li>
               All that is required for validation is to pass a{" "}
               <b>rules object</b> to the
-              <b> Form </b> component. This allows the validation to verify each
-              rule that belongs to a specific input element.
+              <b> Validation </b> component. This allows the validation to
+              verify each rule that belongs to a specific input element.
             </li>
             <li>
               The keys in the rules object match the id of the input elements in
@@ -162,4 +83,65 @@ storiesOf("Forms", module)
       </PageLayout>
     ))
   )
-  .add("form with validation", withInfo()(() => <FormWithValidation />));
+  .add(
+    "without Validation",
+    withInfo("Using the Form without any validation")(() => (
+      <Row position="center">
+        <Col lg={9}>
+          <Form>
+            <Input
+              id="name"
+              placeholder="Please add your first name"
+              label="First name"
+            />
+            <Input
+              id="lastName"
+              placeholder="Please add your last name"
+              label="Last name"
+              optional
+            />
+          </Form>
+        </Col>
+      </Row>
+    ))
+  )
+  .add(
+    "with Validation",
+    withInfo("Using the Context API to share functionality")(() => (
+      <Row position="center">
+        <Col lg={9}>
+          <Validation rules={rules}>
+            <Form>
+              <Input
+                id="name"
+                placeholder="Please add your first name"
+                label="First name"
+              />
+
+              <Input
+                id="lastName"
+                placeholder="Please add your last name"
+                label="Last name"
+                optional
+              />
+
+              <Input
+                id="email"
+                placeholder="Your preferred e-mail"
+                label="E-mail"
+              />
+
+              <Checkbox id="terms" name="Terms and Conditions">
+                <p>Terms and conditions</p>
+              </Checkbox>
+
+              <Checkbox id="newsletter" name="Newsletter" optional>
+                <p>Newsletter sign up</p>
+              </Checkbox>
+              <Button htmlType="submit">Submit</Button>
+            </Form>
+          </Validation>
+        </Col>
+      </Row>
+    ))
+  );

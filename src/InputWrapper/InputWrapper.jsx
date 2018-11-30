@@ -1,16 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Styles from "./inputSheath.style";
+import Styles from "./inputWrapper.style";
 import Icon from "../Icon/index";
 
-export default function InputSheath({
+export default function InputWrapper({
+  children,
   id,
   label,
   optional,
   iconName,
-  errors,
-  children
+  error
 }) {
+  const invalid = error ? "invalid" : "";
+
   return (
     <Styles>
       <span className="label">
@@ -18,41 +20,31 @@ export default function InputSheath({
         {optional ? <span className="optional">*optional</span> : null}
       </span>
       {/* eslint-disable-next-line */}
-      <label htmlFor={id} id={id}>
+      <label htmlFor={id} id={id} className={invalid}>
         {iconName ? (
           <div className="icon-left">
             <Icon name={iconName} />
           </div>
         ) : null}
         {children}
-        {id in errors &&
-          errors[id].map((index, key) => (
-            <span key={key} className="error-feedback">
-              {index.message}
-            </span>
-          ))}
+        {error ? <span className="error-feedback">{error}</span> : null}
       </label>
     </Styles>
   );
 }
 
-InputSheath.propTypes = {
+InputWrapper.propTypes = {
   children: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
   optional: PropTypes.bool,
   iconName: PropTypes.string,
-  errors: PropTypes.shape({
-    inputId: PropTypes.arrayOf({
-      message: PropTypes.string,
-      field: PropTypes.string
-    })
-  })
+  error: PropTypes.string
 };
 
-InputSheath.defaultProps = {
+InputWrapper.defaultProps = {
   label: "",
   optional: false,
   iconName: "",
-  errors: {}
+  error: ""
 };

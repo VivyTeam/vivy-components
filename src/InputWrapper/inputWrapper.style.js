@@ -13,6 +13,11 @@ const InputStyles = styled.div`
     font-weight: 500;
     letter-spacing: normal;
     line-height: 1.38;
+
+    &.invalid input {
+      border-color: ${error};
+      background-color: ${errorBackground};
+    }
   }
 
   input {
@@ -25,11 +30,6 @@ const InputStyles = styled.div`
     color: #353f41;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     padding: 2px 16px;
-
-    &.invalid {
-      border-color: ${error};
-      background-color: ${errorBackground};
-    }
 
     &.icon-padding {
       padding: 2px 16px 2px 54px;
