@@ -4,27 +4,36 @@ import PropTypes from "prop-types";
 export default function Col({
   children,
   lg,
-  md = lg,
-  sm = md || lg,
-  xs = sm || md || lg,
+  md,
+  sm,
+  xs,
   offsetLg,
-  offsetMd = offsetLg,
-  offsetSm = offsetLg || offsetMd,
-  offsetXs = offsetLg || offsetMd || offsetSm,
+  offsetMd,
+  offsetSm,
+  offsetXs,
   style
 }) {
+  const colXs = xs ? `col-xs-${xs}` : "";
+  const colSm = sm ? `col-sm-${sm}` : "";
+  const colMd = md ? `col-md-${md}` : "";
+  const colLg = `col-lg-${lg}`;
+  const colOffsetXs = offsetXs ? `col-xs-offset-${offsetXs}` : "";
+  const colOffsetSm = offsetSm ? `col-sm-offset-${offsetSm}` : "";
+  const colOffsetMd = offsetMd ? `col-md-offset-${offsetMd}` : "";
+  const colOffsetLg = `col-lg-offset-${offsetLg}`;
+
   return (
     <div
       style={style}
       className={`
-        col-xs-${xs}
-        col-sm-${sm}
-        col-md-${md}
-        col-lg-${lg}
-        col-xs-offset-${offsetXs}
-        col-sm-offset-${offsetSm}
-        col-md-offset-${offsetMd}
-        col-lg-offset-${offsetLg}
+        ${colXs}
+        ${colSm}
+        ${colMd}
+        ${colLg} 
+        ${colOffsetXs}
+        ${colOffsetSm}
+        ${colOffsetMd}
+        ${colOffsetLg}
       `}
     >
       {children}
