@@ -16,11 +16,9 @@ export default function Col({
   const colXs = xs ? `col-xs-${xs}` : "";
   const colSm = sm ? `col-sm-${sm}` : "";
   const colMd = md ? `col-md-${md}` : "";
-  const colLg = `col-lg-${lg}`;
   const colOffsetXs = offsetXs ? `col-xs-offset-${offsetXs}` : "";
   const colOffsetSm = offsetSm ? `col-sm-offset-${offsetSm}` : "";
   const colOffsetMd = offsetMd ? `col-md-offset-${offsetMd}` : "";
-  const colOffsetLg = `col-lg-offset-${offsetLg}`;
 
   return (
     <div
@@ -29,11 +27,11 @@ export default function Col({
         ${colXs}
         ${colSm}
         ${colMd}
-        ${colLg}
+        col-lg-${lg}
         ${colOffsetXs}
         ${colOffsetSm}
         ${colOffsetMd}
-        ${colOffsetLg}
+        col-lg-offset-${offsetLg}
       `}
     >
       {children}
