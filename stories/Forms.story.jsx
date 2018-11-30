@@ -42,18 +42,30 @@ storiesOf("Forms", module)
       <PageLayout>
         <div className="documentation">
           <h2>Official Documentation</h2>
+          <h3>High level overview of this story</h3>
+          <p>
+            We use <a href="https://reactjs.org/docs/context.html">Context</a>{" "}
+            as way to share functionality into nested. Context provides a way to
+            pass data through the component tree without having to pass props
+            down manually at every level.
+          </p>
           <p>
             The validation used in Vivy forms takes advantage of the library
             async-validator. The full documentation can be found in the &nbsp;
             <a href="https://github.com/yiminghe/async-validator#api">here.</a>
           </p>
+          <p>
+            Having a Context Provide named <b>Validation</b> as a parent
+            component of the <b>Form</b> and parsing into it certain rules will
+            validate the form on the fly and return the errors for each input.
+          </p>
           <h2>Quick Start</h2>
           <ul>
             <li>
-              All that is required for validation is to pass a
+              All that is required for validation is to pass a{" "}
               <b>rules object</b> to the
-              <b> Validation </b> component. This allows the validation to verify each
-              rule that belongs to a specific input element.
+              <b> Validation </b> component. This allows the validation to
+              verify each rule that belongs to a specific input element.
             </li>
             <li>
               The keys in the rules object match the id of the input elements in
