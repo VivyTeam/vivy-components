@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { Footer, Row, Col } from "../src/index";
 
-const Container = styled.a`
+const Container = styled.div`
   margin-bottom: 35px;
   margin-top: 35px;
 `;
