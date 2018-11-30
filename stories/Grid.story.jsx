@@ -43,6 +43,22 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
+    "full width",
+    withInfo()(() => (
+      <Row fullWidth>
+        <Col lg={3}>
+          <Box />
+        </Col>
+        <Col lg={3}>
+          <Box />
+        </Col>
+        <Col lg={3}>
+          <Box />
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
     "responsive",
     withInfo()(() => (
       <Row position="center">

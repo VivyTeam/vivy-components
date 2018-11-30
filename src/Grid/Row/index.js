@@ -4,21 +4,23 @@ import Styles from "./index.style";
 
 export default function Row({
   children,
+  style,
   space,
   position,
   verticalAlign,
   reverse,
   textAlign,
   column,
-  style
+  fullWidth
 }) {
   const classReverse = reverse ? "reverse" : "";
   const classColumn = column ? "column" : "";
+  const classFullWidth = fullWidth ? "" : "limited-grid-width";
 
   return (
     <Styles style={style}>
       <div className="grid center">
-        <div className="max-grid-width">
+        <div className={`width ${classFullWidth}`}>
           <div
             className={`
               row
@@ -46,7 +48,8 @@ Row.propTypes = {
   position: PropTypes.oneOf(["start", "center", "end"]),
   reverse: PropTypes.bool,
   column: PropTypes.bool,
-  textAlign: PropTypes.oneOf(["left", "center", "right"])
+  textAlign: PropTypes.oneOf(["left", "center", "right"]),
+  fullWidth: PropTypes.bool
 };
 
 Row.defaultProps = {
@@ -56,5 +59,6 @@ Row.defaultProps = {
   position: "start",
   reverse: false,
   column: false,
-  textAlign: "left"
+  textAlign: "left",
+  fullWidth: false
 };
