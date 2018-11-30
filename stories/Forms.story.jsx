@@ -50,9 +50,9 @@ storiesOf("Forms", module)
           <h2>Quick Start</h2>
           <ul>
             <li>
-              All that is required for validation is to pass a{" "}
+              All that is required for validation is to pass a
               <b>rules object</b> to the
-              <b> Form </b> component. This allows the validation to verify each
+              <b> Validation </b> component. This allows the validation to verify each
               rule that belongs to a specific input element.
             </li>
             <li>
