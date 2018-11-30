@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Icon from "../Icon";
 import Styles from "./inputPassword.style";
-import InputSheath from "../InputSheath";
+import InputWrapper from "../InputWrapper";
 
 export default function InputPassword({
   id,
@@ -17,7 +17,7 @@ export default function InputPassword({
 
   return (
     <Styles>
-      <InputSheath id={id} iconName={iconName} label={label}>
+      <InputWrapper id={id} iconName={iconName} label={label}>
         <input
           autoComplete="password"
           id={id}
@@ -38,7 +38,7 @@ export default function InputPassword({
             <Icon name="show-pass-on" />
           )}
         </button>
-      </InputSheath>
+      </InputWrapper>
     </Styles>
   );
 }

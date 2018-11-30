@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import InputSheath from "../InputSheath";
+import InputWrapper from "../InputWrapper";
+import { ValidationContext } from "../Forms/Validation";
 
 export default function Input({
   id,
@@ -8,25 +9,26 @@ export default function Input({
   type,
   placeholder,
   name,
-  iconName,
-  onBlur,
-  onChange,
-  error
+  iconName
 }) {
   const padding = iconName ? "icon-padding" : "";
 
   return (
-    <InputSheath id={id} iconName={iconName} error={error} label={label}>
-      <input
-        onChange={onChange}
-        onBlur={onBlur}
-        id={id}
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        className={padding}
-      />
-    </InputSheath>
+    <ValidationContext.Consumer>
+      {({ onBlur, onChange, errors: { [id]: error } }) => (
+        <InputWrapper error={error} id={id} iconName={iconName} label={label}>
+          <input
+            id={id}
+            name={name}
+            type={type}
+            placeholder={placeholder}
+            className={padding}
+            onChange={onChange}
+            onBlur={onBlur}
+          />
+        </InputWrapper>
+      )}
+    </ValidationContext.Consumer>
   );
 }
 
@@ -36,10 +38,7 @@ Input.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   label: PropTypes.string,
-  iconName: PropTypes.string,
-  onChange: PropTypes.func,
-  onBlur: PropTypes.func,
-  error: PropTypes.shape({})
+  iconName: PropTypes.string
 };
 
 Input.defaultProps = {
@@ -47,8 +46,5 @@ Input.defaultProps = {
   name: "default",
   placeholder: "",
   label: "",
-  iconName: "",
-  onChange: () => {},
-  onBlur: () => {},
-  error: {}
+  iconName: ""
 };

@@ -27,7 +27,8 @@ function MedicalCard({ user, data, t }) {
               <DateDisplay
                 date={pregnancyDueDate.data}
                 monthNames={t("component.months")}
-              />)
+              />
+              )
             </span>
           ) : (
             t("component.pregnant")

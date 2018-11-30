@@ -2,9 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import styled from "styled-components";
-import PropTypes from "prop-types";
-import { Button, Checkbox, Col, Form, Input, Row } from "../src";
-import Validate from "../src/Forms/Validate.jsx";
+import { Button, Checkbox, Col, Form, Validation, Input, Row } from "../src";
 
 const rules = {
   name: { type: "string", required: true, min: 8 },
@@ -74,73 +72,42 @@ storiesOf("Forms", module)
     ))
   )
   .add(
-    "form with validation",
-    withInfo()(() => (
-      <Validate rules={rules}>
-        {({
-          onSubmit,
-          onBlur,
-          onChange,
-          nameError,
-          lastNameError,
-          emailError,
-          termsError,
-          newsletterError
-        }) => (
-          <Row position="center">
-            <Col col={9}>
-              <Form submit={onSubmit}>
-                <Input
-                  onBlur={onBlur}
-                  onChange={onChange}
-                  id="name"
-                  placeholder="Please add your first name"
-                  label="First name"
-                  error={nameError}
-                />
+    "with Validation",
+    withInfo("Using the Context API to share functionality")(() => (
+      <Row position="center">
+        <Col col={9}>
+          <Validation rules={rules}>
+            <Form>
+              <Input
+                id="name"
+                placeholder="Please add your first name"
+                label="First name"
+              />
 
-                <Input
-                  onBlur={onBlur}
-                  onChange={onChange}
-                  id="lastName"
-                  placeholder="Please add your last name"
-                  label="Last name"
-                  optional
-                  error={lastNameError}
-                />
+              <Input
+                id="lastName"
+                placeholder="Please add your last name"
+                label="Last name"
+                optional
+              />
 
-                <Input
-                  onBlur={onBlur}
-                  onChange={onChange}
-                  id="email"
-                  placeholder="Your preferred e-mail"
-                  label="E-mail"
-                  error={emailError}
-                />
+              <Input
+                id="email"
+                placeholder="Your preferred e-mail"
+                label="E-mail"
+              />
 
-                <Checkbox
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  id="terms"
-                  name="Terms and Conditions"
-                  error={termsError}
-                >
-                  <p>Terms and conditions</p>
-                </Checkbox>
+              <Checkbox id="terms" name="Terms and Conditions">
+                <p>Terms and conditions</p>
+              </Checkbox>
 
-                <Checkbox
-                  id="newsletter"
-                  name="Newsletter"
-                  optional
-                  error={newsletterError}
-                >
-                  <p>Newsletter sign up</p>
-                </Checkbox>
-                <Button htmlType="submit">Submit</Button>
-              </Form>
-            </Col>
-          </Row>
-        )}
-      </Validate>
+              <Checkbox id="newsletter" name="Newsletter" optional>
+                <p>Newsletter sign up</p>
+              </Checkbox>
+              <Button htmlType="submit">Submit</Button>
+            </Form>
+          </Validation>
+        </Col>
+      </Row>
     ))
   );

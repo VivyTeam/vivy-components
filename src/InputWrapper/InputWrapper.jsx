@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Styles from "./inputSheath.style";
+import Styles from "./inputWrapper.style";
 import Icon from "../Icon/index";
 
-export default function InputSheath({
+export default function InputWrapper({
+  children,
   id,
   label,
   optional,
   iconName,
-  children,
   error
 }) {
-  const invalid = "message" in error ? "invalid" : "";
+  const invalid = error ? "invalid" : "";
 
   return (
     <Styles>
@@ -27,26 +27,24 @@ export default function InputSheath({
           </div>
         ) : null}
         {children}
-        {"message" in error ? (
-          <span className="error-feedback">{error.message}</span>
-        ) : null}
+        {error ? <span className="error-feedback">{error}</span> : null}
       </label>
     </Styles>
   );
 }
 
-InputSheath.propTypes = {
+InputWrapper.propTypes = {
   children: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired,
   label: PropTypes.string,
   optional: PropTypes.bool,
   iconName: PropTypes.string,
-  error: PropTypes.shape({})
+  error: PropTypes.string
 };
 
-InputSheath.defaultProps = {
+InputWrapper.defaultProps = {
   label: "",
   optional: false,
   iconName: "",
-  error: {}
+  error: ""
 };

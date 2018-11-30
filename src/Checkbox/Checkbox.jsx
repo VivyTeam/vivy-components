@@ -1,34 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Styles from "./checkbox.style";
+import { ValidationContext } from "../Forms/Validation";
 
-export default function Checkbox({
-  id,
-  children,
-  value,
-  name,
-  optional,
-  error,
-  onChange
-}) {
+export default function Checkbox({ id, children, value, name, optional }) {
   return (
-    <Styles>
-      <input
-        id={id}
-        name={name}
-        type="checkbox"
-        value={value}
-        onChange={onChange}
-      />
-      {/* eslint-disable-next-line */}
-      <label id={id} htmlFor={id} />
-      <div className="content">{children}</div>
+    <ValidationContext.Consumer>
+      {({ onChange, errors: { [id]: error } }) => (
+        <Styles>
+          <input
+            id={id}
+            name={name}
+            type="checkbox"
+            value={value}
+            onChange={onChange}
+          />
+          {/* eslint-disable-next-line */}
+          <label id={id} htmlFor={id} />
+          <div className="content">{children}</div>
 
-      {optional ? <span className="optional">*optional</span> : null}
-      {"message" in error ? (
-        <span className="error-feedback">{error.message}</span>
-      ) : null}
-    </Styles>
+          {optional ? <span className="optional">*optional</span> : null}
+          {error ? <span className="error-feedback">{error}</span> : null}
+        </Styles>
+      )}
+    </ValidationContext.Consumer>
   );
 }
 
@@ -37,15 +32,11 @@ Checkbox.propTypes = {
   children: PropTypes.node.isRequired,
   optional: PropTypes.bool,
   value: PropTypes.string,
-  name: PropTypes.string,
-  error: PropTypes.shape({}),
-  onChange: PropTypes.func
+  name: PropTypes.string
 };
 
 Checkbox.defaultProps = {
   optional: false,
   value: "",
-  name: "",
-  error: {},
-  onChange: () => {}
+  name: ""
 };
