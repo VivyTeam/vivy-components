@@ -9,16 +9,26 @@ export default function Row({
   verticalAlign,
   reverse,
   textAlign,
+  column,
   style
 }) {
   const classReverse = reverse ? "reverse" : "";
+  const classColumn = column ? "column" : "";
 
   return (
     <Styles style={style}>
       <div className="grid center">
         <div className="max-grid-width">
           <div
-            className={`row ${space} ${position} ${verticalAlign} ${classReverse} text-align-${textAlign}`}
+            className={`
+              row
+              ${space}
+              ${position}
+              ${verticalAlign}
+              ${classReverse}
+              ${classColumn}
+              text-align-${textAlign}
+            `}
           >
             {children}
           </div>
@@ -35,6 +45,7 @@ Row.propTypes = {
   verticalAlign: PropTypes.oneOf(["top", "middle", "bottom"]),
   position: PropTypes.oneOf(["start", "center", "end"]),
   reverse: PropTypes.bool,
+  column: PropTypes.bool,
   textAlign: PropTypes.oneOf(["left", "center", "right"])
 };
 
@@ -44,5 +55,6 @@ Row.defaultProps = {
   verticalAlign: "top",
   position: "start",
   reverse: false,
+  column: false,
   textAlign: "left"
 };

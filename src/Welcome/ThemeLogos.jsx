@@ -10,18 +10,18 @@ export default function ThemeLogos() {
     <ThemeLogosStyles>
       <div className="logo-container">
         <Row>
-          <Col col={4}>
+          <Col lg={4}>
             <div className="logo-box">
               <img src={logo} alt="Vivy logo" />
             </div>
           </Col>
 
-          <Col col={4}>
+          <Col lg={4}>
             <div className="logo-box">
               <img src={letterHead} alt="Vivy logo letterhead" width="130" />
             </div>
           </Col>
-          <Col col={4}>
+          <Col lg={4}>
             <div className="logo-box">
               <img src={logoComplete} alt="Vivy complete logo" width="80" />
             </div>

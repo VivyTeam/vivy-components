@@ -22,7 +22,7 @@ const BoxBlue = styled.div`
 const BoxYellow = styled.div`
   background-color: #ffff19;
   padding: 10px;
-  height: 50px;
+  min-height: 50px;
 `;
 
 storiesOf("Grid", module)
@@ -30,13 +30,13 @@ storiesOf("Grid", module)
     "default",
     withInfo()(() => (
       <Row>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
       </Row>
@@ -59,32 +59,34 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "responsive with none",
-    withInfo()(() => (
-      <Row position="center">
-        <Col xs={7} sm={12} md={7} lg={3}>
-          <Box />
-        </Col>
-        <Col xs={7} sm="hide" md={10} lg={3}>
-          <BoxBlue />
-        </Col>
-        <Col xs={7} sm={12} md={7} lg={3}>
-          <Box />
-        </Col>
-      </Row>
-    ))
+    "responsive with hidden column",
+    withInfo("Hides the middle column on Tablet devices by parsing sm='hide'")(
+      () => (
+        <Row position="center">
+          <Col xs={7} sm={12} md={7} lg={3}>
+            <Box />
+          </Col>
+          <Col xs={7} sm="hide" md={10} lg={3}>
+            <BoxBlue />
+          </Col>
+          <Col xs={7} sm={12} md={7} lg={3}>
+            <Box />
+          </Col>
+        </Row>
+      )
+    )
   )
   .addWithJSX(
     "around",
     withInfo()(() => (
       <Row space="around">
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
       </Row>
@@ -94,13 +96,13 @@ storiesOf("Grid", module)
     "evenly",
     withInfo()(() => (
       <Row space="evenly">
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
       </Row>
@@ -110,13 +112,13 @@ storiesOf("Grid", module)
     "between",
     withInfo()(() => (
       <Row space="between">
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
       </Row>
@@ -126,10 +128,10 @@ storiesOf("Grid", module)
     "start",
     withInfo()(() => (
       <Row position="start">
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
       </Row>
@@ -139,10 +141,10 @@ storiesOf("Grid", module)
     "center",
     withInfo()(() => (
       <Row position="center">
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
       </Row>
@@ -152,10 +154,10 @@ storiesOf("Grid", module)
     "end",
     withInfo()(() => (
       <Row position="end">
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box />
         </Col>
       </Row>
@@ -166,57 +168,57 @@ storiesOf("Grid", module)
     withInfo()(() => (
       <OffsetGrid>
         <Row space="around">
-          <Col col={1} offset={11}>
+          <Col lg={1} offsetLg={11}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col col={2} offset={10}>
+          <Col lg={2} offsetLg={10}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col col={3} offset={9}>
+          <Col lg={3} offsetLg={9}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col col={4} offset={8}>
+          <Col lg={4} offsetLg={8}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col col={5} offset={7}>
+          <Col lg={5} offsetLg={7}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col col={6} offset={6}>
+          <Col lg={6} offsetLg={6}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col col={7} offset={5}>
+          <Col lg={7} offsetLg={5}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col col={8} offset={4}>
+          <Col lg={8} offsetLg={4}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col col={9} offset={3}>
+          <Col lg={9} offsetLg={3}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col col={10} offset={2}>
+          <Col lg={10} offsetLg={2}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col col={11} offset={1}>
+          <Col lg={11} offsetLg={1}>
             <Box />
           </Col>
         </Row>
@@ -227,10 +229,10 @@ storiesOf("Grid", module)
     "top",
     withInfo()(() => (
       <Row verticalAlign="top">
-        <Col col={6}>
+        <Col lg={6}>
           <Box style={{ height: 200 }} />
         </Col>
-        <Col col={6}>
+        <Col lg={6}>
           <Box />
         </Col>
       </Row>
@@ -240,10 +242,10 @@ storiesOf("Grid", module)
     "middle",
     withInfo()(() => (
       <Row verticalAlign="middle">
-        <Col col={6}>
+        <Col lg={6}>
           <Box style={{ height: 200 }} />
         </Col>
-        <Col col={6}>
+        <Col lg={6}>
           <Box />
         </Col>
       </Row>
@@ -253,10 +255,10 @@ storiesOf("Grid", module)
     "bottom",
     withInfo()(() => (
       <Row verticalAlign="bottom">
-        <Col col={6}>
+        <Col lg={6}>
           <Box style={{ height: 200 }} />
         </Col>
-        <Col col={6}>
+        <Col lg={6}>
           <Box />
         </Col>
       </Row>
@@ -266,16 +268,16 @@ storiesOf("Grid", module)
     "reverse",
     withInfo()(() => (
       <Row reverse position="center">
-        <Col col={3}>
+        <Col lg={3}>
           <Box>1</Box>
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box>2</Box>
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box>3</Box>
         </Col>
-        <Col col={3}>
+        <Col lg={3}>
           <Box>4</Box>
         </Col>
       </Row>
@@ -284,22 +286,18 @@ storiesOf("Grid", module)
   .addWithJSX(
     "column",
     withInfo()(() => (
-      <Row position="center">
-        <Col col={3}>
-          <Row column position="center">
-            <Col>
-              <Box>1</Box>
-            </Col>
-            <Col>
-              <Box>2</Box>
-            </Col>
-            <Col>
-              <Box>3</Box>
-            </Col>
-            <Col>
-              <Box>4</Box>
-            </Col>
-          </Row>
+      <Row column position="center">
+        <Col lg={3}>
+          <Box>1</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>2</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>3</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>4</Box>
         </Col>
       </Row>
     ))
@@ -308,18 +306,18 @@ storiesOf("Grid", module)
     "text-align-left",
     withInfo()(() => (
       <Row position="center">
-        <Col col={3}>
+        <Col lg={3}>
           <Row column position="center">
-            <Col>
+            <Col lg={12}>
               <Box>1</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>2</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>3</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>4</Box>
             </Col>
           </Row>
@@ -331,18 +329,18 @@ storiesOf("Grid", module)
     "text-align-center",
     withInfo()(() => (
       <Row position="center">
-        <Col col={3}>
+        <Col lg={3}>
           <Row column position="center" textAlign="center">
-            <Col>
+            <Col lg={12}>
               <Box>1</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>2</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>3</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>4</Box>
             </Col>
           </Row>
@@ -354,18 +352,18 @@ storiesOf("Grid", module)
     "text-align-right",
     withInfo()(() => (
       <Row position="center">
-        <Col col={3}>
+        <Col lg={3}>
           <Row column position="center" textAlign="right">
-            <Col>
+            <Col lg={12}>
               <Box>1</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>2</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>3</Box>
             </Col>
-            <Col>
+            <Col lg={12}>
               <Box>4</Box>
             </Col>
           </Row>
@@ -377,43 +375,43 @@ storiesOf("Grid", module)
     "nested",
     withInfo()(() => (
       <Row position="center">
-        <Col center col={6}>
+        <Col center lg={6}>
           <BoxYellow>
             <Row position="center">
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>1</Box>
               </Col>
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>2</Box>
               </Col>
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>3</Box>
               </Col>
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>4</Box>
               </Col>
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>5</Box>
               </Col>
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>6</Box>
               </Col>
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>7</Box>
               </Col>
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>8</Box>
               </Col>
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>9</Box>
               </Col>
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>10</Box>
               </Col>
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>11</Box>
               </Col>
-              <Col col={1}>
+              <Col lg={1}>
                 <Box>12</Box>
               </Col>
             </Row>

@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { MedicalCard, Topbar, Footer } from "../src/index";
+import { MedicalCard, Topbar, VivyFooter } from "../src/index";
 import logo from "../public/images/logo.svg";
 import "../public/translations/i18n";
 
@@ -79,7 +79,7 @@ storiesOf("Layout", module).add(
           lastUpdatedAt="1970-01-01"
         />
       </div>
-      <Footer>{footerChildren}</Footer>
+      <VivyFooter>{footerChildren}</VivyFooter>
     </LayoutStyles>
   ))
 );

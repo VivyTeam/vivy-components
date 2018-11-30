@@ -16,18 +16,13 @@ const RowStyles = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
 
-    .reverse {
+    &.reverse {
       flex-direction: row-reverse;
     }
 
-    .column {
+    &.column {
+      display: block;
       flex-direction: column;
-    }
-  }
-
-  .col {
-    .reverse {
-      flex-direction: column-reverse;
     }
   }
 
