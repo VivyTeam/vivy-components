@@ -7,15 +7,28 @@ export default function Row({
   style,
   space,
   position,
+  positionMd,
+  positionSm,
+  positionXs,
+  textAlign,
+  textAlignMd,
+  textAlignSm,
+  textAlignXs,
   verticalAlign,
   reverse,
-  textAlign,
   column,
   fullWidth
 }) {
   const classReverse = reverse ? "reverse" : "";
   const classColumn = column ? "column" : "";
   const classFullWidth = fullWidth ? "" : "limited-grid-width";
+
+  const classPositionXs = positionXs ? `position-xs-${positionXs}` : "";
+  const classPositionSm = positionSm ? `position-sm-${positionSm}` : "";
+  const classPositionMd = positionMd ? `position-md-${positionMd}` : "";
+  const classTextAlignXs = textAlignXs ? `text-align-xs-${textAlignXs}` : "";
+  const classTextAlignSm = textAlignSm ? `text-align-sm-${textAlignSm}` : "";
+  const classTextAlignMd = textAlignMd ? `text-align-md-${textAlignMd}` : "";
 
   return (
     <Styles style={style}>
@@ -25,11 +38,17 @@ export default function Row({
             className={`
               row
               ${space}
-              ${position}
+              ${classPositionXs}
+              ${classPositionSm}
+              ${classPositionMd}
+              position-${position}
+              ${classTextAlignXs}
+              ${classTextAlignSm}
+              ${classTextAlignMd}
+              text-align-${textAlign}
               ${verticalAlign}
               ${classReverse}
               ${classColumn}
-              text-align-${textAlign}
             `}
           >
             {children}

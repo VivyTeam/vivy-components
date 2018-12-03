@@ -93,6 +93,24 @@ storiesOf("Grid", module)
     )
   )
   .addWithJSX(
+    "responsive with different position on tablets",
+    withInfo("Changes the position of the row to end for tablet devices")(
+      () => (
+        <Row position="center" positionMd="end">
+          <Col lg={3}>
+            <Box />
+          </Col>
+          <Col lg={3}>
+            <BoxBlue />
+          </Col>
+          <Col lg={3}>
+            <Box />
+          </Col>
+        </Row>
+      )
+    )
+  )
+  .addWithJSX(
     "around",
     withInfo()(() => (
       <Row space="around">
@@ -347,6 +365,31 @@ storiesOf("Grid", module)
       <Row position="center">
         <Col lg={3}>
           <Row column position="center" textAlign="center">
+            <Col lg={12}>
+              <Box>1</Box>
+            </Col>
+            <Col lg={12}>
+              <Box>2</Box>
+            </Col>
+            <Col lg={12}>
+              <Box>3</Box>
+            </Col>
+            <Col lg={12}>
+              <Box>4</Box>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
+    "text-align-center responsive",
+    withInfo(
+      "Changes the position of the text alignment to end for tablet devices"
+    )(() => (
+      <Row position="center">
+        <Col lg={3}>
+          <Row column position="center" textAlign="center" textAlignMd="right">
             <Col lg={12}>
               <Box>1</Box>
             </Col>

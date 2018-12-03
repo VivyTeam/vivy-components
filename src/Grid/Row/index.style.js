@@ -187,13 +187,17 @@ const RowStyles = styled.div`
     margin-left: 91.66666667%;
   }
 
-  .start {
+  .position-start {
     justify-content: flex-start;
-    text-align: start;
   }
 
-  .center {
+  .position-center {
     justify-content: center;
+  }
+
+  .position-end {
+    justify-content: flex-end;
+    text-align: end;
   }
 
   .text-align-left {
@@ -206,11 +210,6 @@ const RowStyles = styled.div`
 
   .text-align-right {
     text-align: right;
-  }
-
-  .end {
-    justify-content: flex-end;
-    text-align: end;
   }
 
   .top {
@@ -382,6 +381,31 @@ const RowStyles = styled.div`
     .col-md-offset-11 {
       margin-left: 91.66666667%;
     }
+
+    .position-md-start {
+      justify-content: flex-start;
+    }
+
+    .position-md-center {
+      justify-content: center;
+    }
+
+    .position-md-end {
+      justify-content: flex-end;
+      text-align: end;
+    }
+
+    .text-align-md-left {
+      text-align: left;
+    }
+
+    .text-align-md-center {
+      text-align: center;
+    }
+
+    .text-align-md-right {
+      text-align: right;
+    }
   }
 
   @media (max-width: ${smMax}px) {
@@ -530,6 +554,31 @@ const RowStyles = styled.div`
     .col-sm-offset-11 {
       margin-left: 91.66666667%;
     }
+
+    .position-sm-start {
+      justify-content: flex-start;
+    }
+
+    .position-sm-center {
+      justify-content: center;
+    }
+
+    .position-sm-end {
+      justify-content: flex-end;
+      text-align: end;
+    }
+
+    .text-align-sm-left {
+      text-align: left;
+    }
+
+    .text-align-sm-center {
+      text-align: center;
+    }
+
+    .text-align-sm-right {
+      text-align: right;
+    }
   }
 
   @media (max-width: ${xsMax}px) {
@@ -677,6 +726,31 @@ const RowStyles = styled.div`
 
     .col-xs-offset-11 {
       margin-left: 91.66666667%;
+    }
+
+    .position-xs-start {
+      justify-content: flex-start;
+    }
+
+    .position-xs-center {
+      justify-content: center;
+    }
+
+    .position-xs-end {
+      justify-content: flex-end;
+      text-align: end;
+    }
+
+    .text-align-xs-left {
+      text-align: left;
+    }
+
+    .text-align-xs-center {
+      text-align: center;
+    }
+
+    .text-align-xs-right {
+      text-align: right;
     }
   }
 `;
