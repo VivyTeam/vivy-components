@@ -65,10 +65,16 @@ Row.propTypes = {
   space: PropTypes.oneOf(["normal", "around", "between", "evenly"]),
   verticalAlign: PropTypes.oneOf(["top", "middle", "bottom"]),
   position: PropTypes.oneOf(["start", "center", "end"]),
+  positionMd: PropTypes.oneOf(["start", "center", "end"]),
+  positionSm: PropTypes.oneOf(["start", "center", "end"]),
+  positionXs: PropTypes.oneOf(["start", "center", "end"]),
   reverse: PropTypes.bool,
   column: PropTypes.bool,
+  fullWidth: PropTypes.bool,
   textAlign: PropTypes.oneOf(["left", "center", "right"]),
-  fullWidth: PropTypes.bool
+  textAlignMd: PropTypes.oneOf(["left", "center", "right"]),
+  textAlignSm: PropTypes.oneOf(["left", "center", "right"]),
+  textAlignXs: PropTypes.oneOf(["left", "center", "right"])
 };
 
 Row.defaultProps = {
@@ -76,8 +82,14 @@ Row.defaultProps = {
   space: "normal",
   verticalAlign: "top",
   position: "start",
+  positionMd: null,
+  positionSm: null,
+  positionXs: null,
+  textAlign: "left",
+  textAlignMd: null,
+  textAlignSm: null,
+  textAlignXs: null,
   reverse: false,
   column: false,
-  textAlign: "left",
   fullWidth: false
 };
