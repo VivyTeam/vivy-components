@@ -22,15 +22,12 @@ export default class Validation extends Component {
   };
 
   validateForm = e => {
-    if (e && e.preventDefault) {
-      e.preventDefault();
-    }
-
     const { rules } = this.props;
     const fields = Array.from(e.target.elements)
       .filter(target => target.id)
       .reduce((prev, target) => ({ ...prev, ...this.fieldValue(target) }), {});
 
+    let isValid = true;
     const schema = new Schema(rules);
     schema.validate(fields, errors => {
       let err = {};
@@ -39,9 +36,11 @@ export default class Validation extends Component {
           (prev, error) => ({ ...prev, [error.field]: error.message }),
           {}
         );
+        isValid = false;
       }
       this.setState({ errors: err });
     });
+    return isValid;
   };
 
   validateField = e => {
@@ -67,7 +66,7 @@ export default class Validation extends Component {
         value={{
           onBlur: this.validateField,
           onChange: this.validateField,
-          onSubmit: this.validateForm,
+          validation: this.validateForm,
           errors: this.state.errors
         }}
       >
