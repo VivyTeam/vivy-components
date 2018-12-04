@@ -196,57 +196,57 @@ storiesOf("Grid", module)
     withInfo()(() => (
       <OffsetGrid>
         <Row space="around">
-          <Col lg={1} offsetLg={11}>
+          <Col lg={1} offset={11}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={2} offsetLg={10}>
+          <Col lg={2} offset={10}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={3} offsetLg={9}>
+          <Col lg={3} offset={9}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={4} offsetLg={8}>
+          <Col lg={4} offset={8}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={5} offsetLg={7}>
+          <Col lg={5} offset={7}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={6} offsetLg={6}>
+          <Col lg={6} offset={6}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={7} offsetLg={5}>
+          <Col lg={7} offset={5}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={8} offsetLg={4}>
+          <Col lg={8} offset={4}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={9} offsetLg={3}>
+          <Col lg={9} offset={3}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={10} offsetLg={2}>
+          <Col lg={10} offset={2}>
             <Box />
           </Col>
         </Row>
         <Row space="around">
-          <Col lg={11} offsetLg={1}>
+          <Col lg={11} offset={1}>
             <Box />
           </Col>
         </Row>

@@ -8,7 +8,7 @@ export default function Col({
   md,
   sm,
   xs,
-  offsetLg,
+  offset,
   offsetMd,
   offsetSm,
   offsetXs,
@@ -37,7 +37,7 @@ Col.propTypes = {
   offsetXs: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]),
   offsetSm: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]),
   offsetMd: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]),
-  offsetLg: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]),
+  offset: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]),
   lg: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
   md: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
   sm: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
@@ -46,7 +46,7 @@ Col.propTypes = {
 
 Col.defaultProps = {
   style: {},
-  offsetLg: 0,
+  offset: 0,
   offsetMd: null,
   offsetSm: null,
   offsetXs: null,
