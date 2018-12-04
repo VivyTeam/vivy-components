@@ -50,7 +50,10 @@ export default class Validation extends Component {
 
     const schema = new Schema(rules);
     schema.validate(field, errors => {
-      const err = errors.filter(input => input.field === e.target.id)[0] || {};
+      let err = {};
+      if (errors) {
+        err = errors.filter(input => input.field === e.target.id)[0] || {};
+      }
 
       this.setState({
         errors: { ...this.state.errors, [e.target.id]: err.message }
