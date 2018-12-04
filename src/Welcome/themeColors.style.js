@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 const ThemeStyles = styled.div`
+  h2 {
+    margin-left: 50px;
+  }
   .color-box {
     border-radius: 99%;
     margin: 20px;

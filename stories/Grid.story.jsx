@@ -46,13 +46,7 @@ storiesOf("Grid", module)
     "full width",
     withInfo()(() => (
       <Row fullWidth>
-        <Col lg={3}>
-          <Box />
-        </Col>
-        <Col lg={3}>
-          <Box />
-        </Col>
-        <Col lg={3}>
+        <Col lg={12}>
           <Box />
         </Col>
       </Row>

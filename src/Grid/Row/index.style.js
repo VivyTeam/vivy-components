@@ -6,6 +6,7 @@ const xsMax = 480;
 
 const RowStyles = styled.div`
   .grid {
+    justify-content: center;
     display: flex;
   }
 
