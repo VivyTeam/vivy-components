@@ -5,7 +5,14 @@ import styled from "styled-components";
 import { Button, Checkbox, Col, Form, Validation, Input, Row } from "../src";
 
 const rules = {
-  name: { type: "string", required: true, min: 8 },
+  name: [
+    { type: "string", required: true, message: "Username ist required" },
+    {
+      type: "string",
+      min: 8,
+      message: "Minimum characters is 8"
+    }
+  ],
   email: { type: "email", required: true },
   terms: {
     type: "enum",
