@@ -5,7 +5,14 @@ import styled from "styled-components";
 import { Button, Checkbox, Col, Form, Validation, Input, Row } from "../src";
 
 const rules = {
-  name: { type: "string", required: true, min: 8 },
+  name: [
+    { type: "string", required: true, message: "Username ist required" },
+    {
+      type: "string",
+      min: 8,
+      message: "Minimum characters is 8"
+    }
+  ],
   email: { type: "email", required: true },
   terms: {
     type: "enum",
@@ -88,7 +95,7 @@ storiesOf("Forms", module)
     withInfo("Using the Form without any validation")(() => (
       <Row position="center">
         <Col lg={9}>
-          <Form>
+          <Form action={() => console.log("an action")}>
             <Input
               id="name"
               placeholder="Please add your first name"
@@ -100,6 +107,9 @@ storiesOf("Forms", module)
               label="Last name"
               optional
             />
+            <Button style={{ marginTop: "4vh" }} htmlType="submit">
+              Submit
+            </Button>
           </Form>
         </Col>
       </Row>
@@ -111,7 +121,7 @@ storiesOf("Forms", module)
       <Row position="center">
         <Col lg={9}>
           <Validation rules={rules}>
-            <Form>
+            <Form action={() => console.log("an action")}>
               <Input
                 id="name"
                 placeholder="Please add your first name"
