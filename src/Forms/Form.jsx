@@ -7,9 +7,7 @@ export default function Form({ children, select, action }) {
     if (e && e.preventDefault) {
       e.preventDefault();
     }
-    if (typeof validation === "undefined") {
-      submitAction();
-    } else if (validation(e) === null) {
+    if (!validation || validation(e) === null) {
       submitAction();
     }
   };
