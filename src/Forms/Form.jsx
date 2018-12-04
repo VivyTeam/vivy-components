@@ -7,14 +7,15 @@ export default function Form({ children, select, action }) {
     if (e && e.preventDefault) {
       e.preventDefault();
     }
-
-    if (validation(e)) {
+    if (typeof validation === "undefined") {
+      submitAction();
+    } else if (validation(e)) {
       submitAction();
     }
   };
   return (
     <ValidationContext.Consumer>
-      {({ validation = () => true }) => (
+      {({ validation }) => (
         <form
           onChange={e => select(e.target.value)}
           onSubmit={e => submit(e, validation, action)}
