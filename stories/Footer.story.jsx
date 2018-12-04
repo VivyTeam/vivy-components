@@ -131,42 +131,4 @@ storiesOf("Footer", module)
         </Container>
       </Footer>
     ))
-  )
-  .add(
-    "no border",
-    withInfo("no border")(() => (
-      <Footer withBorder={false}>
-        <Container>
-          <Row position="center">
-            <Col lg={0}>
-              <Anchor
-                href="https://www.vivy.com/impressum"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                Impressum
-              </Anchor>
-            </Col>
-            <Col lg={0}>
-              <Anchor
-                href="https://www.vivy.com/nutzungsbedingungen"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                AGB
-              </Anchor>
-            </Col>
-            <Col lg={0}>
-              <AnchorLast
-                href="https://www.vivy.com/datenschutz"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                Datenschutz
-              </AnchorLast>
-            </Col>
-          </Row>
-        </Container>
-      </Footer>
-    ))
   );
