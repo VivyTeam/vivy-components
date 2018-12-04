@@ -107,6 +107,9 @@ storiesOf("Forms", module)
               label="Last name"
               optional
             />
+            <Button style={{ marginTop: "4vh" }} htmlType="submit">
+              Submit
+            </Button>
           </Form>
         </Col>
       </Row>
