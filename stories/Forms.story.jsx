@@ -95,7 +95,7 @@ storiesOf("Forms", module)
     withInfo("Using the Form without any validation")(() => (
       <Row position="center">
         <Col lg={9}>
-          <Form action={() => console.log("an rxjs action")}>
+          <Form action={() => console.log("an action")}>
             <Input
               id="name"
               placeholder="Please add your first name"
@@ -121,7 +121,7 @@ storiesOf("Forms", module)
       <Row position="center">
         <Col lg={9}>
           <Validation rules={rules}>
-            <Form action={() => console.log("an rxjs action")}>
+            <Form action={() => console.log("an action")}>
               <Input
                 id="name"
                 placeholder="Please add your first name"
