@@ -9,7 +9,7 @@ export default function Form({ children, select, action }) {
     }
     if (typeof validation === "undefined") {
       submitAction();
-    } else if (validation(e)) {
+    } else if (validation(e) === null) {
       submitAction();
     }
   };

@@ -27,20 +27,20 @@ export default class Validation extends Component {
       .filter(target => target.id)
       .reduce((prev, target) => ({ ...prev, ...this.fieldValue(target) }), {});
 
-    let isValid = true;
+    let rawErrors;
     const schema = new Schema(rules);
     schema.validate(fields, errors => {
+      rawErrors = errors;
       let err = {};
       if (errors) {
         err = errors.reduce(
           (prev, error) => ({ ...prev, [error.field]: error.message }),
           {}
         );
-        isValid = false;
       }
       this.setState({ errors: err });
     });
-    return isValid;
+    return rawErrors;
   };
 
   validateField = e => {
