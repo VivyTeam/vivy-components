@@ -15,21 +15,21 @@ import {
 
 const rules = {
   name: [
-    { add: "string", required: true, message: "Username is required" },
+    { type: "string", required: true, message: "Username is required" },
     {
-      add: "string",
+      type: "string",
       min: 8,
       message: "Minimum characters is 8"
     }
   ],
   password: {
-    add: "string",
+    type: "string",
     required: true,
     message: "Password is required"
   },
-  email: { add: "email", required: true },
+  email: { type: "email", required: true },
   terms: {
-    add: "enum",
+    type: "enum",
     enum: ["true"],
     required: true,
     message: "*You must agree to terms",
