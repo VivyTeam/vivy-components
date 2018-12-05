@@ -2,20 +2,34 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import styled from "styled-components";
-import { Button, Checkbox, Col, Form, Validation, Input, Row } from "../src";
+import {
+  Button,
+  Checkbox,
+  Col,
+  Form,
+  Validation,
+  Input,
+  InputPassword,
+  Row
+} from "../src";
 
 const rules = {
   name: [
-    { type: "string", required: true, message: "Username ist required" },
+    { add: "string", required: true, message: "Username is required" },
     {
-      type: "string",
+      add: "string",
       min: 8,
       message: "Minimum characters is 8"
     }
   ],
-  email: { type: "email", required: true },
+  password: {
+    add: "string",
+    required: true,
+    message: "Password is required"
+  },
+  email: { add: "email", required: true },
   terms: {
-    type: "enum",
+    add: "enum",
     enum: ["true"],
     required: true,
     message: "*You must agree to terms",
@@ -137,9 +151,17 @@ storiesOf("Forms", module)
                 optional
               />
 
+              <InputPassword
+                showPassword={false}
+                toggle={() => {}}
+                id="password"
+                placeholder="Please add your password"
+                label="Password"
+              />
+
               <Input
                 id="email"
-                placeholder="Your preferred e-mail"
+                placeholder="Please add your e-mail"
                 label="E-mail"
               />
 
