@@ -11,10 +11,9 @@ const PageLayout = styled.div`
 storiesOf("InputPassword", module)
   .add(
     "icon left",
-    withInfo()(() => (
+    withInfo("default")(() => (
       <PageLayout>
         <InputPassword
-          toggle={() => {}}
           iconName="body"
           showPassword
           id="password"
@@ -25,12 +24,11 @@ storiesOf("InputPassword", module)
     ))
   )
   .add(
-    "show password false",
-    withInfo()(() => (
+    "with Visibility",
+    withInfo("initial state would not show what is typed in the input")(() => (
       <PageLayout>
         <InputPassword
-          toggle={() => {}}
-          showPassword={false}
+          visibility
           id="name"
           placeholder="Password"
           label="Password"
@@ -39,11 +37,11 @@ storiesOf("InputPassword", module)
     ))
   )
   .add(
-    "show password true",
-    withInfo()(() => (
+    "with Visibility and showPassword by default",
+    withInfo("initial state would show what is typed in the input")(() => (
       <PageLayout>
         <InputPassword
-          toggle={() => {}}
+          visibility
           showPassword
           id="name"
           placeholder="Password"

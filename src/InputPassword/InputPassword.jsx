@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Icon from "../Icon";
 import Styles from "./inputPassword.style";
@@ -6,49 +6,57 @@ import InputWrapper from "../InputWrapper";
 import classNames from "../utils/classNames";
 import { ValidationContext } from "../Forms/Validation";
 
-export default function InputPassword({
-  id,
-  label,
-  placeholder,
-  name,
-  toggle,
-  showPassword,
-  iconName
-}) {
-  const padding = classNames(["icon-padding", iconName]);
+class InputPassword extends Component {
+  state = { showPassword: this.props.showPassword };
 
-  return (
-    <ValidationContext.Consumer>
-      {({ onBlur, onChange, errors: { [id]: error } }) => (
-        <Styles>
-          <InputWrapper error={error} id={id} iconName={iconName} label={label}>
-            <input
-              autoComplete="password"
+  toggle = () => this.setState({ showPassword: !this.state.showPassword });
+
+  render() {
+    const { id, label, placeholder, name, iconName, visibility } = this.props;
+    const { showPassword } = this.state;
+
+    const padding = classNames(["icon-padding", iconName]);
+
+    return (
+      <ValidationContext.Consumer>
+        {({ onBlur, onChange, errors: { [id]: error } }) => (
+          <Styles>
+            <InputWrapper
+              error={error}
               id={id}
-              name={name}
-              type={showPassword ? "text" : "password"}
-              placeholder={placeholder}
-              className={padding}
-              onChange={onChange}
-              onBlur={onBlur}
-            />
-
-            <button
-              type="button"
-              className="button-position-right"
-              onClick={toggle}
+              iconName={iconName}
+              label={label}
             >
-              {showPassword ? (
-                <Icon name="show-pass-off" />
-              ) : (
-                <Icon name="show-pass-on" />
-              )}
-            </button>
-          </InputWrapper>
-        </Styles>
-      )}
-    </ValidationContext.Consumer>
-  );
+              <input
+                autoComplete="password"
+                id={id}
+                name={name}
+                type={showPassword ? "text" : "password"}
+                placeholder={placeholder}
+                className={padding}
+                onChange={onChange}
+                onBlur={onBlur}
+              />
+
+              {visibility ? (
+                <button
+                  type="button"
+                  className="button-position-right"
+                  onClick={this.toggle}
+                >
+                  {showPassword ? (
+                    <Icon name="show-pass-off" />
+                  ) : (
+                    <Icon name="show-pass-on" />
+                  )}
+                </button>
+              ) : null}
+            </InputWrapper>
+          </Styles>
+        )}
+      </ValidationContext.Consumer>
+    );
+  }
 }
 
 InputPassword.propTypes = {
@@ -57,13 +65,17 @@ InputPassword.propTypes = {
   placeholder: PropTypes.string,
   label: PropTypes.string,
   iconName: PropTypes.string,
-  toggle: PropTypes.func.isRequired,
-  showPassword: PropTypes.bool.isRequired
+  showPassword: PropTypes.bool,
+  visibility: PropTypes.bool
 };
 
 InputPassword.defaultProps = {
   name: "default",
   placeholder: "",
   iconName: "",
-  label: ""
+  label: "",
+  showPassword: false,
+  visibility: false
 };
+
+export default InputPassword;
