@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Icon from "../Icon";
 import Styles from "./inputPassword.style";
 import InputWrapper from "../InputWrapper";
+import classNames from "../utils/classNames";
 
 export default function InputPassword({
   id,
@@ -13,7 +14,7 @@ export default function InputPassword({
   showPassword,
   iconName
 }) {
-  const padding = iconName ? "icon-padding" : "";
+  const padding = classNames(["icon-padding", iconName]);
 
   return (
     <Styles>

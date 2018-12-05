@@ -377,13 +377,11 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "text-align-center responsive",
-    withInfo(
-      "Changes the position of the text alignment to end for tablet devices"
-    )(() => (
+    "text-align-right",
+    withInfo()(() => (
       <Row position="center">
         <Col lg={3}>
-          <Row column position="center" textAlign="center" textAlignMd="right">
+          <Row column position="center" textAlign="right">
             <Col lg={12}>
               <Box>1</Box>
             </Col>
@@ -402,11 +400,13 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "text-align-right",
-    withInfo()(() => (
+    "text-align responsive",
+    withInfo(
+      "Changes the position of the text alignment to end for tablet devices"
+    )(() => (
       <Row position="center">
         <Col lg={3}>
-          <Row column position="center" textAlign="right">
+          <Row column position="center" textAlign="center" textAlignMd="right">
             <Col lg={12}>
               <Box>1</Box>
             </Col>

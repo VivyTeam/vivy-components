@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Styles from "./index.style";
+import classNames from "../../utils/classNames";
 
 export default function Row({
   children,
@@ -19,40 +20,31 @@ export default function Row({
   column,
   fullWidth
 }) {
-  const classReverse = reverse ? "reverse" : "";
-  const classColumn = column ? "column" : "";
-  const classFullWidth = fullWidth ? "" : "limited-grid-width";
+  const width = classNames(
+    ["full-width", fullWidth],
+    ["default-width", !fullWidth]
+  );
 
-  const classPositionXs = positionXs ? `position-xs-${positionXs}` : "";
-  const classPositionSm = positionSm ? `position-sm-${positionSm}` : "";
-  const classPositionMd = positionMd ? `position-md-${positionMd}` : "";
-  const classTextAlignXs = textAlignXs ? `text-align-xs-${textAlignXs}` : "";
-  const classTextAlignSm = textAlignSm ? `text-align-sm-${textAlignSm}` : "";
-  const classTextAlignMd = textAlignMd ? `text-align-md-${textAlignMd}` : "";
+  const row = classNames(
+    [
+      `row position-${position} text-align-${textAlign} ${verticalAlign} ${space}`,
+      true
+    ],
+    ["reverse", reverse],
+    ["column", column],
+    [`position-xs-${positionXs}`, positionXs],
+    [`position-sm-${positionSm}`, positionSm],
+    [`position-md-${positionMd}`, positionMd],
+    [`text-align-xs-${textAlignXs}`, textAlignXs],
+    [`text-align-sm-${textAlignSm}`, textAlignSm],
+    [`text-align-md-${textAlignMd}`, textAlignMd]
+  );
 
   return (
     <Styles style={style}>
       <div className="grid center">
-        <div className={`width ${classFullWidth}`}>
-          <div
-            className={`
-              row
-              ${space}
-              ${classPositionXs}
-              ${classPositionSm}
-              ${classPositionMd}
-              position-${position}
-              ${classTextAlignXs}
-              ${classTextAlignSm}
-              ${classTextAlignMd}
-              text-align-${textAlign}
-              ${verticalAlign}
-              ${classReverse}
-              ${classColumn}
-            `}
-          >
-            {children}
-          </div>
+        <div className={width}>
+          <div className={row}>{children}</div>
         </div>
       </div>
     </Styles>

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "../../utils/classNames";
 
 export default function Col({
   children,
@@ -13,27 +14,18 @@ export default function Col({
   offsetXs,
   style
 }) {
-  const colXs = xs ? `col-xs-${xs}` : "";
-  const colSm = sm ? `col-sm-${sm}` : "";
-  const colMd = md ? `col-md-${md}` : "";
-  const colOffsetXs = offsetXs ? `col-xs-offset-${offsetXs}` : "";
-  const colOffsetSm = offsetSm ? `col-sm-offset-${offsetSm}` : "";
-  const colOffsetMd = offsetMd ? `col-md-offset-${offsetMd}` : "";
+  const column = classNames(
+    [`col-lg-${lg} col-lg-offset-${offsetLg}`, true],
+    [`col-xs-${xs}`, xs],
+    [`col-sm-${sm}`, sm],
+    [`col-md-${md}`, md],
+    [`col-xs-offset-${offsetXs}`, offsetXs],
+    [`col-sm-offset-${offsetSm}`, offsetSm],
+    [`col-md-offset-${offsetMd}`, offsetMd]
+  );
 
   return (
-    <div
-      style={style}
-      className={`
-        ${colXs}
-        ${colSm}
-        ${colMd}
-        col-lg-${lg}
-        ${colOffsetXs}
-        ${colOffsetSm}
-        ${colOffsetMd}
-        col-lg-offset-${offsetLg}
-      `}
-    >
+    <div style={style} className={column}>
       {children}
     </div>
   );
