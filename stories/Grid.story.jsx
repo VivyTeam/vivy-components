@@ -424,7 +424,6 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-
   .addWithJSX(
     "nested",
     withInfo()(() => (
