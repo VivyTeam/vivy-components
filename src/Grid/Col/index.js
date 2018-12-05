@@ -13,27 +13,28 @@ export default function Col({
   offsetXs,
   style
 }) {
-  const colXs = xs ? `col-xs-${xs}` : "";
-  const colSm = sm ? `col-sm-${sm}` : "";
-  const colMd = md ? `col-md-${md}` : "";
-  const colOffsetXs = offsetXs ? `col-xs-offset-${offsetXs}` : "";
-  const colOffsetSm = offsetSm ? `col-sm-offset-${offsetSm}` : "";
-  const colOffsetMd = offsetMd ? `col-md-offset-${offsetMd}` : "";
+  let classesCol = `col-lg-${lg} col-lg-offset-${offsetLg}`;
 
+  if (xs) {
+    classesCol += ` col-xs-${xs}`;
+  }
+  if (sm) {
+    classesCol += ` col-sm-${sm}`;
+  }
+  if (md) {
+    classesCol += ` col-md-${md}`;
+  }
+  if (offsetXs) {
+    classesCol += ` col-xs-offset-${offsetXs}`;
+  }
+  if (offsetSm) {
+    classesCol += ` col-sm-offset-${offsetSm}`;
+  }
+  if (offsetMd) {
+    classesCol += ` col-md-offset-${offsetMd}`;
+  }
   return (
-    <div
-      style={style}
-      className={`
-        ${colXs}
-        ${colSm}
-        ${colMd}
-        col-lg-${lg}
-        ${colOffsetXs}
-        ${colOffsetSm}
-        ${colOffsetMd}
-        col-lg-offset-${offsetLg}
-      `}
-    >
+    <div style={style} className={classesCol}>
       {children}
     </div>
   );

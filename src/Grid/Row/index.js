@@ -19,40 +19,39 @@ export default function Row({
   column,
   fullWidth
 }) {
-  const classReverse = reverse ? "reverse" : "";
-  const classColumn = column ? "column" : "";
-  const classFullWidth = fullWidth ? "" : "limited-grid-width";
+  const classesWidth = fullWidth ? "width" : "width limited-grid-width";
 
-  const classPositionXs = positionXs ? `position-xs-${positionXs}` : "";
-  const classPositionSm = positionSm ? `position-sm-${positionSm}` : "";
-  const classPositionMd = positionMd ? `position-md-${positionMd}` : "";
-  const classTextAlignXs = textAlignXs ? `text-align-xs-${textAlignXs}` : "";
-  const classTextAlignSm = textAlignSm ? `text-align-sm-${textAlignSm}` : "";
-  const classTextAlignMd = textAlignMd ? `text-align-md-${textAlignMd}` : "";
+  let classesRow = `row position-${position} text-align-${textAlign} ${verticalAlign} ${space}`;
+  if (reverse) {
+    classesRow += "reverse";
+  }
+  if (column) {
+    classesRow += " column";
+  }
+  if (positionXs) {
+    classesRow += ` position-xs-${positionXs}`;
+  }
+  if (positionSm) {
+    classesRow += ` position-sm-${positionSm}`;
+  }
+  if (positionMd) {
+    classesRow += ` position-md-${positionMd}`;
+  }
+  if (textAlignXs) {
+    classesRow += ` text-align-xs-${textAlignXs}`;
+  }
+  if (textAlignSm) {
+    classesRow += ` text-align-sm-${textAlignSm}`;
+  }
+  if (textAlignMd) {
+    classesRow += ` text-align-md-${textAlignMd}`;
+  }
 
   return (
     <Styles style={style}>
       <div className="grid center">
-        <div className={`width ${classFullWidth}`}>
-          <div
-            className={`
-              row
-              ${space}
-              ${classPositionXs}
-              ${classPositionSm}
-              ${classPositionMd}
-              position-${position}
-              ${classTextAlignXs}
-              ${classTextAlignSm}
-              ${classTextAlignMd}
-              text-align-${textAlign}
-              ${verticalAlign}
-              ${classReverse}
-              ${classColumn}
-            `}
-          >
-            {children}
-          </div>
+        <div className={classesWidth}>
+          <div className={classesRow}>{children}</div>
         </div>
       </div>
     </Styles>
