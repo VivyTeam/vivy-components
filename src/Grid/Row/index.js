@@ -27,7 +27,8 @@ export default function Row({
 
   const row = classNames(
     [
-      `row position-${position} text-align-${textAlign} ${verticalAlign} ${space}`
+      `row position-${position} text-align-${textAlign} ${verticalAlign} ${space}`,
+      true
     ],
     ["reverse", reverse],
     ["column", column],
@@ -72,7 +73,7 @@ Row.defaultProps = {
   style: {},
   space: "normal",
   verticalAlign: "top",
-  position: "start",
+  position: "sindextart",
   positionMd: null,
   positionSm: null,
   positionXs: null,
