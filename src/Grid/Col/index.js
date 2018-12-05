@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "../../../utils/classNames";
+import classNames from "../../_utils/classNames";
 
 export default function Col({
   children,

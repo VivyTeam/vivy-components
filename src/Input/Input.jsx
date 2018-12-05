@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import InputWrapper from "../InputWrapper";
 import { ValidationContext } from "../Forms/Validation";
-import classNames from "../../utils/classNames";
+import classNames from "../_utils/classNames";
 
 export default function Input({
   id,

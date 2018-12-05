@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Styles from "./index.style";
-import classNames from "../../../utils/classNames";
+import classNames from "../../_utils/classNames";
 
 export default function Row({
   children,
