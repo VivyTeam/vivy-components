@@ -15,7 +15,7 @@ export default function Col({
   style
 }) {
   const column = classNames(
-    [`col-lg-${lg} col-lg-offset-${offsetLg}`],
+    [`col-lg-${lg} col-lg-offset-${offsetLg}`, true],
     [`col-xs-${xs}`, xs],
     [`col-sm-${sm}`, sm],
     [`col-md-${md}`, md],
