@@ -8,14 +8,14 @@ export default function Col({
   md,
   sm,
   xs,
-  offsetLg,
+  offset,
   offsetMd,
   offsetSm,
   offsetXs,
   style
 }) {
   const column = classNames(
-    [`col-lg-${lg} col-lg-offset-${offsetLg}`, true],
+    [`col-lg-${lg} col-lg-offset-${offset}`, true],
     [`col-xs-${xs}`, xs],
     [`col-sm-${sm}`, sm],
     [`col-md-${md}`, md],
@@ -37,7 +37,7 @@ Col.propTypes = {
   offsetXs: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]),
   offsetSm: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]),
   offsetMd: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]),
-  offsetLg: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]),
+  offset: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]),
   lg: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
   md: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
   sm: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
@@ -46,7 +46,7 @@ Col.propTypes = {
 
 Col.defaultProps = {
   style: {},
-  offsetLg: 0,
+  offset: 0,
   offsetMd: null,
   offsetSm: null,
   offsetXs: null,
