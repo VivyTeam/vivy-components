@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Styles from "./inputWrapper.style";
 import Icon from "../Icon/index";
-import classNames from "../_utils/classNames";
+import classNames from "../utils/classNames";
 
 export default function InputWrapper({
   children,
