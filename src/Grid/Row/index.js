@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Styles from "./index.style";
+import classNames from "../../../utils/classNames";
 
 export default function Row({
   children,
@@ -19,39 +20,30 @@ export default function Row({
   column,
   fullWidth
 }) {
-  const classesWidth = fullWidth ? "width" : "width limited-grid-width";
+  const width = classNames(
+    ["full-width", fullWidth],
+    ["default-width", !fullWidth]
+  );
 
-  let classesRow = `row position-${position} text-align-${textAlign} ${verticalAlign} ${space}`;
-  if (reverse) {
-    classesRow += "reverse";
-  }
-  if (column) {
-    classesRow += " column";
-  }
-  if (positionXs) {
-    classesRow += ` position-xs-${positionXs}`;
-  }
-  if (positionSm) {
-    classesRow += ` position-sm-${positionSm}`;
-  }
-  if (positionMd) {
-    classesRow += ` position-md-${positionMd}`;
-  }
-  if (textAlignXs) {
-    classesRow += ` text-align-xs-${textAlignXs}`;
-  }
-  if (textAlignSm) {
-    classesRow += ` text-align-sm-${textAlignSm}`;
-  }
-  if (textAlignMd) {
-    classesRow += ` text-align-md-${textAlignMd}`;
-  }
+  const row = classNames(
+    [
+      `row position-${position} text-align-${textAlign} ${verticalAlign} ${space}`
+    ],
+    ["reverse", reverse],
+    ["column", column],
+    [`position-xs-${positionXs}`, positionXs],
+    [`position-sm-${positionSm}`, positionSm],
+    [`position-md-${positionMd}`, positionMd],
+    [`text-align-xs-${textAlignXs}`, textAlignXs],
+    [`text-align-sm-${textAlignSm}`, textAlignSm],
+    [`text-align-md-${textAlignMd}`, textAlignMd]
+  );
 
   return (
     <Styles style={style}>
       <div className="grid center">
-        <div className={classesWidth}>
-          <div className={classesRow}>{children}</div>
+        <div className={width}>
+          <div className={row}>{children}</div>
         </div>
       </div>
     </Styles>

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Styles from "./inputWrapper.style";
 import Icon from "../Icon/index";
+import classNames from "../../utils/classNames";
 
 export default function InputWrapper({
   children,
@@ -11,7 +12,7 @@ export default function InputWrapper({
   iconName,
   error
 }) {
-  const invalid = error ? "invalid" : "";
+  const invalid = classNames(["invalid", error]);
 
   return (
     <Styles>

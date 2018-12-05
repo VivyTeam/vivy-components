@@ -27,12 +27,13 @@ const RowStyles = styled.div`
     }
   }
 
-  .width {
+  .default-width {
     width: 100%;
+    max-width: 960px;
   }
 
-  .limited-grid-width {
-    max-width: 960px;
+  .full-width {
+    width: 100%;
   }
 
   .col,

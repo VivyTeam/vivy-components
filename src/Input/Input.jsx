@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import InputWrapper from "../InputWrapper";
 import { ValidationContext } from "../Forms/Validation";
+import classNames from "../../utils/classNames";
 
 export default function Input({
   id,
@@ -11,7 +12,7 @@ export default function Input({
   name,
   iconName
 }) {
-  const padding = iconName ? "icon-padding" : "";
+  const padding = classNames(["icon-padding", iconName]);
 
   return (
     <ValidationContext.Consumer>
