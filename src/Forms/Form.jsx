@@ -2,21 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ValidationContext } from "./Validation";
 
-export default function Form({ children, select, action }) {
-  const submit = (e, validation, submitAction) => {
+export default function Form({ children, select, submit }) {
+  const formSubmit = (e, validation) => {
     if (e && e.preventDefault) {
       e.preventDefault();
     }
     if (!validation || !validation(e)) {
-      submitAction();
+      submit();
     }
   };
+
   return (
     <ValidationContext.Consumer>
       {({ validation }) => (
         <form
           onChange={e => select(e.target.value)}
-          onSubmit={e => submit(e, validation, action)}
+          onSubmit={e => formSubmit(e, validation)}
         >
           {children}
         </form>
@@ -28,10 +29,10 @@ export default function Form({ children, select, action }) {
 Form.propTypes = {
   children: PropTypes.node.isRequired,
   select: PropTypes.func,
-  action: PropTypes.func
+  submit: PropTypes.func
 };
 
 Form.defaultProps = {
   select: () => {},
-  action: () => {}
+  submit: () => {}
 };
