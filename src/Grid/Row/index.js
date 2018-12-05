@@ -73,7 +73,7 @@ Row.defaultProps = {
   style: {},
   space: "normal",
   verticalAlign: "top",
-  position: "sindextart",
+  position: "start",
   positionMd: null,
   positionSm: null,
   positionXs: null,
