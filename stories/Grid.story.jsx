@@ -377,7 +377,30 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "text-align-center responsive",
+    "text-align-right",
+    withInfo()(() => (
+      <Row position="center">
+        <Col lg={3}>
+          <Row column position="center" textAlign="right">
+            <Col lg={12}>
+              <Box>1</Box>
+            </Col>
+            <Col lg={12}>
+              <Box>2</Box>
+            </Col>
+            <Col lg={12}>
+              <Box>3</Box>
+            </Col>
+            <Col lg={12}>
+              <Box>4</Box>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
+    "text-align responsive",
     withInfo(
       "Changes the position of the text alignment to end for tablet devices"
     )(() => (
@@ -401,29 +424,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
-    "text-align-right",
-    withInfo()(() => (
-      <Row position="center">
-        <Col lg={3}>
-          <Row column position="center" textAlign="right">
-            <Col lg={12}>
-              <Box>1</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>2</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>3</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>4</Box>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    ))
-  )
+
   .addWithJSX(
     "nested",
     withInfo()(() => (
