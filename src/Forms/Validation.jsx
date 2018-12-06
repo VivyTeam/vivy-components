@@ -13,45 +13,32 @@ export default class Validation extends Component {
 
   validate = (fields, rules) => {
     const schema = new Schema(rules);
-    const { errors } = this.state;
     let validation = {};
 
     schema.validate(fields, validateErr => {
-      let err = {};
       if (validateErr) {
-        err = validateErr.reduce(
+        validation = validateErr.reduce(
           (prev, error) => ({ ...prev, [error.field]: error.message }),
           {}
         );
-      } else {
-        err = Object.keys(fields).reduce(
-          (prev, key) => ({ ...prev, [key]: null }),
-          {}
-        );
       }
-      validation = { ...errors, ...err };
     });
+
     return validation;
   };
 
-  validateForm = fields => {
+  validateForm = (fields, target) => {
     const { rules } = this.props;
-    const errors = this.validate(fields, rules);
+    const { errors } = this.state;
     const hasErrors = Object.keys(errors).some(message => errors[message]);
+    const validation = this.validate(fields, rules);
+    const validationErrors = target
+      ? { [target]: validation[target] }
+      : validation;
 
-    this.setState({ errors });
+    this.setState({ errors: { ...errors, ...validationErrors } });
 
     return hasErrors;
-  };
-
-  validateField = e => {
-    const { checked, value, id } = e.target;
-    const { rules } = this.props;
-    const rule = { [id]: rules[id] || {} };
-    const field = checked ? { [id]: checked } : { [id]: value };
-
-    const errors = this.validate(field, rule);
-    this.setState({ errors });
   };
 
   render() {
@@ -61,8 +48,8 @@ export default class Validation extends Component {
     return (
       <ValidationContext.Provider
         value={{
-          onBlur: this.validateField,
-          onChange: this.validateField,
+          onBlur: this.validateForm,
+          onChange: this.validateForm,
           validation: this.validateForm,
           errors
         }}
