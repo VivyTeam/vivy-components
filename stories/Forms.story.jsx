@@ -7,10 +7,11 @@ import {
   Checkbox,
   Col,
   Form,
-  Validation,
   Input,
   InputPassword,
-  Row
+  Row,
+  Validation,
+  ValidationContext
 } from "../src";
 
 const rules = {
@@ -137,43 +138,49 @@ storiesOf("Forms", module)
       <Row position="center">
         <Col lg={9}>
           <Validation rules={rules}>
-            <Form submit={() => record.log("an action")}>
-              <Input
-                id="name"
-                placeholder="Please add your first name"
-                label="First name"
-              />
+            <ValidationContext.Consumer>
+              {({ fields }) => (
+                <Form
+                  submit={() => record.log("an action using fields:", fields)}
+                >
+                  <Input
+                    id="name"
+                    placeholder="Please add your first name"
+                    label="First name"
+                  />
 
-              <Input
-                id="lastName"
-                placeholder="Please add your last name"
-                label="Last name"
-                optional
-              />
+                  <Input
+                    id="lastName"
+                    placeholder="Please add your last name"
+                    label="Last name"
+                    optional
+                  />
 
-              <InputPassword
-                showPassword={false}
-                toggle={() => {}}
-                id="password"
-                placeholder="Please add your password"
-                label="Password"
-              />
+                  <InputPassword
+                    showPassword={false}
+                    toggle={() => {}}
+                    id="password"
+                    placeholder="Please add your password"
+                    label="Password"
+                  />
 
-              <Input
-                id="email"
-                placeholder="Please add your e-mail"
-                label="E-mail"
-              />
+                  <Input
+                    id="email"
+                    placeholder="Please add your e-mail"
+                    label="E-mail"
+                  />
 
-              <Checkbox id="terms" name="Terms and Conditions">
-                <p>Terms and conditions</p>
-              </Checkbox>
+                  <Checkbox id="terms" name="Terms and Conditions">
+                    <p>Terms and conditions</p>
+                  </Checkbox>
 
-              <Checkbox id="newsletter" name="Newsletter" optional>
-                <p>Newsletter sign up</p>
-              </Checkbox>
-              <Button htmlType="submit">Submit</Button>
-            </Form>
+                  <Checkbox id="newsletter" name="Newsletter" optional>
+                    <p>Newsletter sign up</p>
+                  </Checkbox>
+                  <Button htmlType="submit">Submit</Button>
+                </Form>
+              )}
+            </ValidationContext.Consumer>
           </Validation>
         </Col>
       </Row>
