@@ -11,10 +11,9 @@ const PageLayout = styled.div`
 storiesOf("InputPassword", module)
   .add(
     "icon left",
-    withInfo()(() => (
+    withInfo("Has an Icon on the left side.")(() => (
       <PageLayout>
         <InputPassword
-          toggle={() => {}}
           iconName="body"
           showPassword
           id="password"
@@ -25,12 +24,13 @@ storiesOf("InputPassword", module)
     ))
   )
   .add(
-    "show password false",
-    withInfo()(() => (
+    "with visibility property, true",
+    withInfo(
+      "the initial state of the input indicates that there will be an Icon on the right side. By clicking the button the input changes its type between 'text' and 'password'"
+    )(() => (
       <PageLayout>
         <InputPassword
-          toggle={() => {}}
-          showPassword={false}
+          visibility
           id="name"
           placeholder="Password"
           label="Password"
@@ -39,11 +39,13 @@ storiesOf("InputPassword", module)
     ))
   )
   .add(
-    "show password true",
-    withInfo()(() => (
+    "with visibility and showPassword properties, true",
+    withInfo(
+      "the initial state of the input indicates that there will be an Icon on the right side. Also the type of the Input will be 'text'. That means that when the user start typing will be able to see what he is typing in th password input."
+    )(() => (
       <PageLayout>
         <InputPassword
-          toggle={() => {}}
+          visibility
           showPassword
           id="name"
           placeholder="Password"

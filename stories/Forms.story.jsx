@@ -157,6 +157,7 @@ storiesOf("Forms", module)
                   />
 
                   <InputPassword
+                    visibility
                     showPassword={false}
                     toggle={() => {}}
                     id="password"
