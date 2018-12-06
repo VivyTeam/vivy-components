@@ -3,8 +3,7 @@ import Schema from "async-validator";
 import PropTypes from "prop-types";
 
 const DEFAULT_STATE = {
-  errors: {},
-  fields: {}
+  errors: {}
 };
 
 export const ValidationContext = createContext(DEFAULT_STATE);
@@ -12,23 +11,15 @@ export const ValidationContext = createContext(DEFAULT_STATE);
 export default class Validation extends Component {
   state = DEFAULT_STATE;
 
-  fieldValue = target => {
-    const { type, checked, value, id } = target;
-    switch (type) {
-      case "checkbox":
-        return { [id]: checked };
-      default:
-        return { [id]: value };
-    }
-  };
-
   validate = (fields, rules) => {
     const schema = new Schema(rules);
+    const { errors } = this.state;
     let validation = {};
-    schema.validate(fields, errors => {
+
+    schema.validate(fields, validateErr => {
       let err = {};
-      if (errors) {
-        err = errors.reduce(
+      if (validateErr) {
+        err = validateErr.reduce(
           (prev, error) => ({ ...prev, [error.field]: error.message }),
           {}
         );
@@ -38,46 +29,45 @@ export default class Validation extends Component {
           {}
         );
       }
-      validation = { ...this.state.errors, ...err };
+      validation = { ...errors, ...err };
     });
     return validation;
   };
 
-  validateForm = e => {
+  validateForm = fields => {
     const { rules } = this.props;
-    const fields = Array.from(e.target.elements)
-      .filter(target => target.id)
-      .reduce((prev, target) => ({ ...prev, ...this.fieldValue(target) }), {});
-
     const errors = this.validate(fields, rules);
     const hasErrors = Object.keys(errors).some(message => errors[message]);
-    this.setState({ errors, fields });
+
+    this.setState({ errors });
+
     return hasErrors;
   };
 
   validateField = e => {
-    const { id } = e.target;
+    const { checked, value, id } = e.target;
     const { rules } = this.props;
-
     const rule = { [id]: rules[id] || {} };
-    const field = this.fieldValue(e.target);
+    const field = checked ? { [id]: checked } : { [id]: value };
 
     const errors = this.validate(field, rule);
-    this.setState({ errors, fields: { ...this.state.fields, ...field } });
+    this.setState({ errors });
   };
 
   render() {
+    const { children } = this.props;
+    const { errors } = this.state;
+
     return (
       <ValidationContext.Provider
         value={{
           onBlur: this.validateField,
           onChange: this.validateField,
           validation: this.validateForm,
-          errors: this.state.errors,
-          fields: this.state.fields
+          errors
         }}
       >
-        {this.props.children}
+        {children}
       </ValidationContext.Provider>
     );
   }

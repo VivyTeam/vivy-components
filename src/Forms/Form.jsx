@@ -3,12 +3,32 @@ import PropTypes from "prop-types";
 import { ValidationContext } from "./Validation";
 
 export default function Form({ children, select, submit }) {
+  const fieldValue = target => {
+    const { type, checked, value, id } = target;
+    switch (type) {
+      case "checkbox":
+        return { [id]: checked };
+      case "button":
+      case "submit":
+      case "reset":
+        return {};
+      default:
+        return { [id]: value };
+    }
+  };
+
   const formSubmit = (e, validation) => {
     if (e && e.preventDefault) {
       e.preventDefault();
     }
-    if (!validation || !validation(e)) {
-      submit();
+    let formData = {};
+
+    Array.from(e.target.elements).forEach(element => {
+      formData = { ...formData, ...fieldValue(element) };
+    });
+
+    if (!validation || !validation(formData)) {
+      submit(formData, e);
     }
   };
 
