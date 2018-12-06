@@ -25,14 +25,8 @@ export default function Input({
             type={type}
             placeholder={placeholder}
             className={padding}
-            onChange={e => {
-              const { target } = e;
-              onChange(formData(target.form), target.id);
-            }}
-            onBlur={e => {
-              const { target } = e;
-              onBlur(formData(target.form), target.id);
-            }}
+            onChange={e => onChange(formData(e.target.form), e.target.id)}
+            onBlur={e => onBlur(formData(e.target.form), e.target.id)}
           />
         </InputWrapper>
       )}
