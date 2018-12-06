@@ -43,6 +43,7 @@ class InputPassword extends Component {
                   type="button"
                   className="button-position-right"
                   onClick={this.toggle}
+                  tabIndex="-1"
                 >
                   {showPassword ? (
                     <Icon name="show-pass-off" />
