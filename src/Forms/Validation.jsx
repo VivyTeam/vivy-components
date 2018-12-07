@@ -27,16 +27,17 @@ export default class Validation extends Component {
     return validation;
   };
 
-  validateForm = (fields, target) => {
+  validateForm = (fields, input) => {
     const { rules } = this.props;
     const { errors } = this.state;
-    const hasErrors = Object.keys(errors).some(message => errors[message]);
     const validation = this.validate(fields, rules);
-    const validationErrors = target
-      ? { [target]: validation[target] }
-      : validation;
+    const inputErrors = input ? { [input]: validation[input] } : validation;
+    const allErrors = { ...errors, ...inputErrors };
+    const hasErrors = Object.keys(allErrors).some(
+      message => allErrors[message]
+    );
 
-    this.setState({ errors: { ...errors, ...validationErrors } });
+    this.setState({ errors: allErrors });
 
     return hasErrors;
   };
