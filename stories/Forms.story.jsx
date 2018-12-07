@@ -10,8 +10,7 @@ import {
   Input,
   InputPassword,
   Row,
-  Validation,
-  ValidationContext
+  Validation
 } from "../src";
 
 const rules = {
@@ -112,7 +111,12 @@ storiesOf("Forms", module)
     withInfo("Using the Form without any validation")(() => (
       <Row position="center">
         <Col lg={9}>
-          <Form submit={() => record.log("an action")}>
+          <Form
+            submit={(fields, event) => {
+              record.log(`Fields: ${JSON.stringify(fields)}`);
+              record.log(event);
+            }}
+          >
             <Input
               id="name"
               placeholder="Please add your first name"
@@ -138,50 +142,45 @@ storiesOf("Forms", module)
       <Row position="center">
         <Col lg={9}>
           <Validation rules={rules}>
-            <ValidationContext.Consumer>
-              {({ fields }) => (
-                <Form
-                  submit={() => record.log("an action using fields:", fields)}
-                >
-                  <Input
-                    id="name"
-                    placeholder="Please add your first name"
-                    label="First name"
-                  />
+            <Form
+              submit={(fields, event) => {
+                record.log(`Fields: ${JSON.stringify(fields)}`);
+                record.log(event);
+              }}
+            >
+              <Input
+                id="name"
+                placeholder="Please add your first name"
+                label="First name"
+              />
+              <Input
+                id="lastName"
+                placeholder="Please add your last name"
+                label="Last name"
+                optional
+              />
+              <InputPassword
+                showPassword={false}
+                toggle={() => {}}
+                id="password"
+                placeholder="Please add your password"
+                label="Password"
+              />
+              <Input
+                id="email"
+                placeholder="Please add your e-mail"
+                label="E-mail"
+              />
 
-                  <Input
-                    id="lastName"
-                    placeholder="Please add your last name"
-                    label="Last name"
-                    optional
-                  />
+              <Checkbox id="terms" name="Terms and Conditions">
+                <p>Terms and conditions</p>
+              </Checkbox>
 
-                  <InputPassword
-                    visibility
-                    showPassword={false}
-                    toggle={() => {}}
-                    id="password"
-                    placeholder="Please add your password"
-                    label="Password"
-                  />
-
-                  <Input
-                    id="email"
-                    placeholder="Please add your e-mail"
-                    label="E-mail"
-                  />
-
-                  <Checkbox id="terms" name="Terms and Conditions">
-                    <p>Terms and conditions</p>
-                  </Checkbox>
-
-                  <Checkbox id="newsletter" name="Newsletter" optional>
-                    <p>Newsletter sign up</p>
-                  </Checkbox>
-                  <Button htmlType="submit">Submit</Button>
-                </Form>
-              )}
-            </ValidationContext.Consumer>
+              <Checkbox id="newsletter" name="Newsletter" optional>
+                <p>Newsletter sign up</p>
+              </Checkbox>
+              <Button htmlType="submit">Submit</Button>
+            </Form>
           </Validation>
         </Col>
       </Row>

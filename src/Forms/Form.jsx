@@ -1,14 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ValidationContext } from "./Validation";
+import formData from "../utils/formData";
 
 export default function Form({ children, select, submit }) {
   const formSubmit = (e, validation) => {
     if (e && e.preventDefault) {
       e.preventDefault();
     }
-    if (!validation || !validation(e)) {
-      submit();
+    const fields = formData(e.target.elements);
+
+    if (!validation || !validation(fields)) {
+      submit(fields, e);
     }
   };
 

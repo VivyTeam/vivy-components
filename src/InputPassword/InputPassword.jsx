@@ -5,6 +5,7 @@ import Styles from "./inputPassword.style";
 import InputWrapper from "../InputWrapper";
 import classNames from "../utils/classNames";
 import { ValidationContext } from "../Forms/Validation";
+import formData from "../utils/formData";
 
 class InputPassword extends Component {
   state = { showPassword: this.props.showPassword };
@@ -34,8 +35,8 @@ class InputPassword extends Component {
                 type={showPassword ? "text" : "password"}
                 placeholder={placeholder}
                 className={padding}
-                onChange={onChange}
-                onBlur={onBlur}
+                onChange={e => onChange(formData(e.target.form), e.target.id)}
+                onBlur={e => onBlur(formData(e.target.form), e.target.id)}
               />
 
               {visibility ? (

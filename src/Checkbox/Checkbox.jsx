@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Styles from "./checkbox.style";
 import { ValidationContext } from "../Forms/Validation";
+import formData from "../utils/formData";
 
 export default function Checkbox({ id, children, value, name, optional }) {
   return (
@@ -13,7 +14,7 @@ export default function Checkbox({ id, children, value, name, optional }) {
             name={name}
             type="checkbox"
             value={value}
-            onChange={onChange}
+            onChange={e => onChange(formData(e.target.form), e.target.id)}
           />
           {/* eslint-disable-next-line */}
           <label id={id} htmlFor={id} />
