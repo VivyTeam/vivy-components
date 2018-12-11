@@ -9,6 +9,11 @@ const LayoutStyles = styled.div`
   width: 80%;
   margin: 0 auto;
 
+  .logo {
+    width: 93px;
+    height: 63px;
+  }
+
   .layout-body {
     padding: 100px;
     display: flex;
