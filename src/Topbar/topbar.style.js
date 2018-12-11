@@ -1,12 +1,8 @@
 import styled from "styled-components";
 
 const TopbarStyles = styled.div`
-  display: flex;
   background-color: #fff;
-  min-height: 63px;
-  height: 63px;
   border-bottom: 1px solid #f0f0f0;
-  justify-content: flex-start;
 
   .link {
     display: flex;
