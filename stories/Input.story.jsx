@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { Input, InputPassword } from "../src/index";
+import { Input } from "../src/index";
 
 const PageLayout = styled.div`
   padding: 50px 100px;
@@ -23,14 +23,14 @@ storiesOf("Input", module)
     ))
   )
   .add(
-    "optional",
+    "default value",
     withInfo()(() => (
       <PageLayout>
         <Input
-          placeholder="Your last name"
-          label="Last name"
-          optional
-          id="email"
+          placeholder="Enter your name"
+          label="Your name"
+          id="name"
+          defaultValue="John Doe"
         />
       </PageLayout>
     ))
