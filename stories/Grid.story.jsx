@@ -28,7 +28,7 @@ storiesOf("Grid", module)
   .addWithJSX(
     "default width",
     withInfo(
-      "would have the default maximum width of the column which is 960px"
+      "The Row would have the default maximum width of the column which is 960px"
     )(() => (
       <Row>
         <Col lg={12}>
@@ -39,7 +39,7 @@ storiesOf("Grid", module)
   )
   .addWithJSX(
     "full width",
-    withInfo("would take the full width of the screen")(() => (
+    withInfo("The Row would take the full width of the screen")(() => (
       <Row fullWidth>
         <Col lg={12}>
           <Box />
@@ -49,21 +49,21 @@ storiesOf("Grid", module)
   )
   .addWithJSX(
     "responsive column sizes",
-    withInfo("would have different size of columns for different devices")(
-      () => (
-        <Row position="center">
-          <Col xs={10} sm={3} md={7} lg={3}>
-            <Box />
-          </Col>
-          <Col xs={10} sm={3} md={8} lg={3}>
-            <BoxWhite />
-          </Col>
-          <Col xs={10} sm={3} md={7} lg={3}>
-            <Box />
-          </Col>
-        </Row>
-      )
-    )
+    withInfo(
+      "The Row would have different size of columns for different devices"
+    )(() => (
+      <Row position="center">
+        <Col xs={10} sm={3} md={7} lg={3}>
+          <Box />
+        </Col>
+        <Col xs={10} sm={3} md={8} lg={3}>
+          <BoxWhite />
+        </Col>
+        <Col xs={10} sm={3} md={7} lg={3}>
+          <Box />
+        </Col>
+      </Row>
+    ))
   )
   .addWithJSX(
     "hidden column only on small devices",
