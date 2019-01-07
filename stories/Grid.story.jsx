@@ -4,39 +4,34 @@ import { withInfo } from "@storybook/addon-info";
 import styled from "styled-components";
 import { Row, Col } from "../src/index";
 
-const OffsetGrid = styled.div`
-  .row {
-    margin-bottom: 10px;
-  }
-`;
 const Box = styled.div`
-  background-color: #04d4bf;
-  height: 50px;
+  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  margin: 2px;
+  padding: 1em 1em;
+  border: 1px solid #01a1a1;
+  background-color: #b3e1e5;
+  flex: 1;
 `;
 
-const BoxBlue = styled.div`
-  background-color: #0000ff;
-  height: 50px;
-`;
-
-const BoxYellow = styled.div`
-  background-color: #ffff19;
-  padding: 10px;
-  min-height: 50px;
+const BoxWhite = styled.div`
+  -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15);
+  margin: 2px;
+  padding: 1em 1em;
+  border: 1px solid #01a1a1;
+  background-color: #fff;
+  flex: 1;
 `;
 
 storiesOf("Grid", module)
   .addWithJSX(
-    "default",
-    withInfo()(() => (
+    "default width",
+    withInfo(
+      "The Row would have the default maximum width of the column which is 960px"
+    )(() => (
       <Row>
-        <Col lg={3}>
-          <Box />
-        </Col>
-        <Col lg={3}>
-          <Box />
-        </Col>
-        <Col lg={3}>
+        <Col lg={12}>
           <Box />
         </Col>
       </Row>
@@ -44,7 +39,7 @@ storiesOf("Grid", module)
   )
   .addWithJSX(
     "full width",
-    withInfo()(() => (
+    withInfo("The Row would take the full width of the screen")(() => (
       <Row fullWidth>
         <Col lg={12}>
           <Box />
@@ -53,14 +48,16 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "responsive",
-    withInfo()(() => (
+    "responsive column sizes",
+    withInfo(
+      "The Row would have different size of columns for different devices"
+    )(() => (
       <Row position="center">
         <Col xs={10} sm={3} md={7} lg={3}>
           <Box />
         </Col>
         <Col xs={10} sm={3} md={8} lg={3}>
-          <BoxBlue />
+          <BoxWhite />
         </Col>
         <Col xs={10} sm={3} md={7} lg={3}>
           <Box />
@@ -69,15 +66,15 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "responsive with hidden column",
-    withInfo("Hides the middle column on Tablet devices by parsing sm='hide'")(
+    "hidden column only on small devices",
+    withInfo("Hides the middle column on small devices by parsing sm='hide'")(
       () => (
         <Row position="center">
           <Col xs={7} sm={12} md={7} lg={3}>
             <Box />
           </Col>
           <Col xs={7} sm="hide" md={10} lg={3}>
-            <BoxBlue />
+            <BoxWhite />
           </Col>
           <Col xs={7} sm={12} md={7} lg={3}>
             <Box />
@@ -87,25 +84,7 @@ storiesOf("Grid", module)
     )
   )
   .addWithJSX(
-    "responsive with different position on tablets",
-    withInfo("Changes the position of the row to end for tablet devices")(
-      () => (
-        <Row position="center" positionMd="end">
-          <Col lg={3}>
-            <Box />
-          </Col>
-          <Col lg={3}>
-            <BoxBlue />
-          </Col>
-          <Col lg={3}>
-            <Box />
-          </Col>
-        </Row>
-      )
-    )
-  )
-  .addWithJSX(
-    "around",
+    "space around",
     withInfo()(() => (
       <Row space="around">
         <Col lg={3}>
@@ -121,7 +100,7 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "evenly",
+    "space evenly",
     withInfo()(() => (
       <Row space="evenly">
         <Col lg={3}>
@@ -137,7 +116,7 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "between",
+    "space between",
     withInfo()(() => (
       <Row space="between">
         <Col lg={3}>
@@ -153,7 +132,7 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "start",
+    "position start",
     withInfo()(() => (
       <Row position="start">
         <Col lg={3}>
@@ -166,7 +145,7 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "center",
+    "position center",
     withInfo()(() => (
       <Row position="center">
         <Col lg={3}>
@@ -179,7 +158,7 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "end",
+    "position end",
     withInfo()(() => (
       <Row position="end">
         <Col lg={3}>
@@ -192,9 +171,27 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
+    "responsive position end",
+    withInfo(
+      "Changes the position of the row to 'end' for medium devices and all the smaller than medium devices"
+    )(() => (
+      <Row positionMd="end">
+        <Col lg={3}>
+          <Box />
+        </Col>
+        <Col lg={3}>
+          <BoxWhite />
+        </Col>
+        <Col lg={3}>
+          <Box />
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
     "offset",
     withInfo()(() => (
-      <OffsetGrid>
+      <div>
         <Row space="around">
           <Col lg={1} offset={11}>
             <Box />
@@ -250,11 +247,11 @@ storiesOf("Grid", module)
             <Box />
           </Col>
         </Row>
-      </OffsetGrid>
+      </div>
     ))
   )
   .addWithJSX(
-    "top",
+    "vertical alignment top",
     withInfo()(() => (
       <Row verticalAlign="top">
         <Col lg={6}>
@@ -267,7 +264,7 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "middle",
+    "vertical alignment middle",
     withInfo()(() => (
       <Row verticalAlign="middle">
         <Col lg={6}>
@@ -280,7 +277,7 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "bottom",
+    "vertical alignment bottom",
     withInfo()(() => (
       <Row verticalAlign="bottom">
         <Col lg={6}>
@@ -293,8 +290,8 @@ storiesOf("Grid", module)
     ))
   )
   .addWithJSX(
-    "reverse",
-    withInfo()(() => (
+    "columns in reverse order",
+    withInfo("will reverse the columns")(() => (
       <Row reverse position="center">
         <Col lg={3}>
           <Box>1</Box>
@@ -316,6 +313,25 @@ storiesOf("Grid", module)
     withInfo()(() => (
       <Row column position="center">
         <Col lg={3}>
+          <Box />
+        </Col>
+        <Col lg={3}>
+          <Box />
+        </Col>
+        <Col lg={3}>
+          <Box />
+        </Col>
+        <Col lg={3}>
+          <Box />
+        </Col>
+      </Row>
+    ))
+  )
+  .addWithJSX(
+    "text align is on left",
+    withInfo()(() => (
+      <Row position="center">
+        <Col lg={3}>
           <Box>1</Box>
         </Col>
         <Col lg={3}>
@@ -324,112 +340,65 @@ storiesOf("Grid", module)
         <Col lg={3}>
           <Box>3</Box>
         </Col>
-        <Col lg={3}>
-          <Box>4</Box>
-        </Col>
       </Row>
     ))
   )
   .addWithJSX(
-    "text-align-left",
+    "text align is on center",
     withInfo()(() => (
-      <Row position="center">
+      <Row position="center" textAlign="center">
         <Col lg={3}>
-          <Row column position="center">
-            <Col lg={12}>
-              <Box>1</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>2</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>3</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>4</Box>
-            </Col>
-          </Row>
+          <Box>1</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>2</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>3</Box>
         </Col>
       </Row>
     ))
   )
   .addWithJSX(
-    "text-align-center",
+    "text align is on right",
     withInfo()(() => (
-      <Row position="center">
+      <Row position="center" textAlign="right">
         <Col lg={3}>
-          <Row column position="center" textAlign="center">
-            <Col lg={12}>
-              <Box>1</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>2</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>3</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>4</Box>
-            </Col>
-          </Row>
+          <Box>1</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>2</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>3</Box>
         </Col>
       </Row>
     ))
   )
   .addWithJSX(
-    "text-align-right",
-    withInfo()(() => (
-      <Row position="center">
-        <Col lg={3}>
-          <Row column position="center" textAlign="right">
-            <Col lg={12}>
-              <Box>1</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>2</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>3</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>4</Box>
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-    ))
-  )
-  .addWithJSX(
-    "text-align responsive",
+    "responsive text align is on right",
     withInfo(
-      "Changes the position of the text alignment to end for tablet devices"
+      "Changes the position of the text alignment to 'right' for medium size devices"
     )(() => (
-      <Row position="center">
+      <Row position="center" textAlign="left" textAlignMd="right">
         <Col lg={3}>
-          <Row column position="center" textAlign="center" textAlignMd="right">
-            <Col lg={12}>
-              <Box>1</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>2</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>3</Box>
-            </Col>
-            <Col lg={12}>
-              <Box>4</Box>
-            </Col>
-          </Row>
+          <Box>1</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>2</Box>
+        </Col>
+        <Col lg={3}>
+          <Box>3</Box>
         </Col>
       </Row>
     ))
   )
   .addWithJSX(
-    "nested",
+    "nested rows",
     withInfo()(() => (
       <Row position="center">
-        <Col center lg={6}>
-          <BoxYellow>
+        <Col center lg={10}>
+          <BoxWhite>
             <Row position="center">
               <Col lg={1}>
                 <Box>1</Box>
@@ -468,7 +437,7 @@ storiesOf("Grid", module)
                 <Box>12</Box>
               </Col>
             </Row>
-          </BoxYellow>
+          </BoxWhite>
         </Col>
       </Row>
     ))
