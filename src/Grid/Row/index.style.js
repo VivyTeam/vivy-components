@@ -5,16 +5,18 @@ const smMax = 768;
 const xsMax = 480;
 
 const RowStyles = styled.div`
-  .grid {
-    justify-content: center;
-    display: flex;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+
+  &.inherited-height {
+    height: 100%;
   }
 
   .row {
     box-sizing: border-box;
     display: flex;
-    flex: 0 1 auto;
-    flex-direction: row;
     flex-wrap: wrap;
 
     &.reverse {
@@ -29,15 +31,16 @@ const RowStyles = styled.div`
 
   .default-width {
     width: 100%;
-    max-width: 960px;
+    flex-basis: 960px;
   }
 
   .full-width {
-    width: 100%;
+    flex-basis: 100%;
   }
 
   .col,
-  .col-lg-0 .col-lg-1,
+  .col-lg-0,
+  .col-lg-1,
   .col-lg-2,
   .col-lg-3,
   .col-lg-4,
@@ -60,8 +63,7 @@ const RowStyles = styled.div`
   .col-lg-offset-8,
   .col-lg-offset-9,
   .col-lg-offset-10,
-  .col-lg-offset-11,
-  .col-lg-offset-12 {
+  .col-lg-offset-11 {
     display: block;
     box-sizing: border-box;
     flex: 0 0 auto;
@@ -238,7 +240,8 @@ const RowStyles = styled.div`
   }
 
   @media (max-width: ${mdMax}px) {
-    .col-md-0 .col-md-1,
+    .col-md-0,
+    .col-md-1,
     .col-md-2,
     .col-md-3,
     .col-md-4,
@@ -261,8 +264,7 @@ const RowStyles = styled.div`
     .col-md-offset-8,
     .col-md-offset-9,
     .col-md-offset-10,
-    .col-md-offset-11,
-    .col-md-offset-12 {
+    .col-md-offset-11 {
       display: block;
       box-sizing: border-box;
       flex: 0 0 auto;
@@ -411,7 +413,8 @@ const RowStyles = styled.div`
   }
 
   @media (max-width: ${smMax}px) {
-    .col-sm-0 .col-sm-1,
+    .col-sm-0,
+    .col-sm-1,
     .col-sm-2,
     .col-sm-3,
     .col-sm-4,
@@ -434,8 +437,7 @@ const RowStyles = styled.div`
     .col-sm-offset-8,
     .col-sm-offset-9,
     .col-sm-offset-10,
-    .col-sm-offset-11,
-    .col-sm-offset-12 {
+    .col-sm-offset-11 {
       display: block;
       box-sizing: border-box;
       flex: 0 0 auto;
@@ -584,7 +586,8 @@ const RowStyles = styled.div`
   }
 
   @media (max-width: ${xsMax}px) {
-    .col-xs-0 .col-xs-1,
+    .col-xs-0,
+    .col-xs-1,
     .col-xs-2,
     .col-xs-3,
     .col-xs-4,
@@ -607,8 +610,7 @@ const RowStyles = styled.div`
     .col-xs-offset-8,
     .col-xs-offset-9,
     .col-xs-offset-10,
-    .col-xs-offset-11,
-    .col-xs-offset-12 {
+    .col-xs-offset-11 {
       display: block;
       box-sizing: border-box;
       flex: 0 0 auto;
