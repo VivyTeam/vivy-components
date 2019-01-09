@@ -253,38 +253,69 @@ storiesOf("Grid", module)
   .addWithJSX(
     "vertical alignment top",
     withInfo()(() => (
-      <Row verticalAlign="top">
-        <Col lg={6}>
-          <Box style={{ height: 200 }} />
-        </Col>
-        <Col lg={6}>
-          <Box />
-        </Col>
-      </Row>
+      <BoxWhite style={{ height: 300 }}>
+        <Row verticalAlign="top">
+          <Col lg={12}>
+            <Box />
+          </Col>
+        </Row>
+      </BoxWhite>
     ))
   )
   .addWithJSX(
     "vertical alignment middle",
     withInfo()(() => (
-      <Row verticalAlign="middle">
-        <Col lg={6}>
-          <Box style={{ height: 200 }} />
-        </Col>
-        <Col lg={6}>
-          <Box />
-        </Col>
-      </Row>
+      <BoxWhite style={{ height: 300 }}>
+        <Row verticalAlign="middle">
+          <Col lg={12}>
+            <Box />
+          </Col>
+        </Row>
+      </BoxWhite>
     ))
   )
   .addWithJSX(
     "vertical alignment bottom",
     withInfo()(() => (
-      <Row verticalAlign="bottom">
-        <Col lg={6}>
-          <Box style={{ height: 200 }} />
+      <BoxWhite style={{ height: 300 }}>
+        <Row verticalAlign="bottom">
+          <Col lg={12}>
+            <Box />
+          </Col>
+        </Row>
+      </BoxWhite>
+    ))
+  )
+  .addWithJSX(
+    "complex vertical alignment example",
+    withInfo()(() => (
+      <Row>
+        <Col lg={4}>
+          <Box style={{ height: 300 }}>
+            <Row verticalAlign="bottom">
+              <Col lg={12}>
+                <BoxWhite>i am on the bottom</BoxWhite>
+              </Col>
+            </Row>
+          </Box>
         </Col>
-        <Col lg={6}>
-          <Box />
+        <Col lg={4}>
+          <Box style={{ height: 300 }}>
+            <Row verticalAlign="middle" stretched>
+              <Col lg={12}>
+                <BoxWhite>i am on the middle</BoxWhite>
+              </Col>
+            </Row>
+          </Box>
+        </Col>
+        <Col lg={4}>
+          <Box style={{ height: 300 }}>
+            <Row stretched>
+              <Col lg={12}>
+                <BoxWhite>i am on the top</BoxWhite>
+              </Col>
+            </Row>
+          </Box>
         </Col>
       </Row>
     ))

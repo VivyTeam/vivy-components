@@ -20,16 +20,17 @@ export default function Row({
   column,
   fullWidth
 }) {
-  const width = classNames(
-    ["full-width", fullWidth],
-    ["default-width", !fullWidth]
-  );
+  const height = classNames([
+    "inherited-height",
+    verticalAlign === "middle" || "bottom"
+  ]);
 
   const row = classNames(
     [
-      `row position-${position} text-align-${textAlign} ${verticalAlign} ${space}`,
+      `row default-width position-${position} text-align-${textAlign} ${verticalAlign} ${space}`,
       true
     ],
+    ["full-width", fullWidth],
     ["reverse", reverse],
     ["column", column],
     [`position-xs-${positionXs}`, positionXs],
@@ -41,12 +42,8 @@ export default function Row({
   );
 
   return (
-    <Styles style={style}>
-      <div className="grid center">
-        <div className={width}>
-          <div className={row}>{children}</div>
-        </div>
-      </div>
+    <Styles style={style} className={height}>
+      <div className={row}>{children}</div>
     </Styles>
   );
 }
