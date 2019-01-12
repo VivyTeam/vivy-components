@@ -25,7 +25,7 @@ const BoxWhite = styled.div`
 `;
 
 storiesOf("Grid", module)
-  .addWithJSX(
+  .add(
     "default width",
     withInfo(
       "The Row would have the default maximum width of the column which is 960px"
@@ -37,7 +37,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "full width",
     withInfo("The Row would take the full width of the screen")(() => (
       <Row fullWidth>
@@ -47,7 +47,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "responsive column sizes",
     withInfo(
       "The Row would have different size of columns for different devices"
@@ -65,7 +65,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "hidden column only on small devices",
     withInfo("Hides the middle column on small devices by parsing sm='hide'")(
       () => (
@@ -83,7 +83,7 @@ storiesOf("Grid", module)
       )
     )
   )
-  .addWithJSX(
+  .add(
     "space around",
     withInfo()(() => (
       <Row space="around">
@@ -99,7 +99,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "space evenly",
     withInfo()(() => (
       <Row space="evenly">
@@ -115,7 +115,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "space between",
     withInfo()(() => (
       <Row space="between">
@@ -131,7 +131,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "position start",
     withInfo()(() => (
       <Row position="start">
@@ -144,7 +144,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "position center",
     withInfo()(() => (
       <Row position="center">
@@ -157,7 +157,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "position end",
     withInfo()(() => (
       <Row position="end">
@@ -170,7 +170,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "responsive position end",
     withInfo(
       "Changes the position of the row to 'end' for medium devices and all the smaller than medium devices"
@@ -188,7 +188,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "offset",
     withInfo()(() => (
       <div>
@@ -250,7 +250,7 @@ storiesOf("Grid", module)
       </div>
     ))
   )
-  .addWithJSX(
+  .add(
     "vertical alignment top",
     withInfo()(() => (
       <BoxWhite style={{ height: 300 }}>
@@ -262,7 +262,7 @@ storiesOf("Grid", module)
       </BoxWhite>
     ))
   )
-  .addWithJSX(
+  .add(
     "vertical alignment middle",
     withInfo()(() => (
       <BoxWhite style={{ height: 300 }}>
@@ -274,7 +274,7 @@ storiesOf("Grid", module)
       </BoxWhite>
     ))
   )
-  .addWithJSX(
+  .add(
     "vertical alignment bottom",
     withInfo()(() => (
       <BoxWhite style={{ height: 300 }}>
@@ -286,7 +286,7 @@ storiesOf("Grid", module)
       </BoxWhite>
     ))
   )
-  .addWithJSX(
+  .add(
     "complex vertical alignment example",
     withInfo()(() => (
       <Row>
@@ -320,7 +320,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "columns in reverse order",
     withInfo("will reverse the columns")(() => (
       <Row reverse position="center">
@@ -339,7 +339,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "column",
     withInfo()(() => (
       <Row column position="center">
@@ -358,7 +358,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "text align is on left",
     withInfo()(() => (
       <Row position="center">
@@ -374,7 +374,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "text align is on center",
     withInfo()(() => (
       <Row position="center" textAlign="center">
@@ -390,7 +390,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "text align is on right",
     withInfo()(() => (
       <Row position="center" textAlign="right">
@@ -406,7 +406,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "responsive text align is on right",
     withInfo(
       "Changes the position of the text alignment to 'right' for medium size devices"
@@ -424,7 +424,7 @@ storiesOf("Grid", module)
       </Row>
     ))
   )
-  .addWithJSX(
+  .add(
     "nested rows",
     withInfo()(() => (
       <Row position="center">

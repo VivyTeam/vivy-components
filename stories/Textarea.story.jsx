@@ -1,22 +1,13 @@
 import React from "react";
-import { storiesOf, setAddon } from "@storybook/react";
-import JSXAddon from "storybook-addon-jsx";
-import { Textarea } from "../src/index";
+import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-
-setAddon(JSXAddon);
+import { Textarea } from "../src/index";
 
 storiesOf("Textarea", module)
-  .addWithJSX("default", withInfo()(() => <Textarea label="Default" />))
-  .addWithJSX(
-    "disabled",
-    withInfo()(() => <Textarea disabled label="Disabled" />)
-  )
-  .addWithJSX(
-    "required",
-    withInfo()(() => <Textarea required label="Mandatory" />)
-  )
-  .addWithJSX(
+  .add("default", withInfo()(() => <Textarea label="Default" />))
+  .add("disabled", withInfo()(() => <Textarea disabled label="Disabled" />))
+  .add("required", withInfo()(() => <Textarea required label="Mandatory" />))
+  .add(
     "with style",
     withInfo()(() => (
       <Textarea style={{ height: 500 }} label="With some style" />
