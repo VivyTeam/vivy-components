@@ -1,22 +1,16 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import { SimpleLoader } from "../src/index";
 
 storiesOf("Loaders", module)
-  .add(
-    "Basic loader",
-    withInfo("A simple loader without any frills")(() => <SimpleLoader />)
-  )
-  .add(
-    "Centered",
-    withInfo("A loader that is centered in the page")(() => (
-      <SimpleLoader centered />
-    ))
-  )
+  .add("Basic loader", () => <SimpleLoader />, {
+    info: "A simple loader without any frills"
+  })
+  .add("Centered", () => <SimpleLoader centered />, {
+    info: { info: "A list of primary, secondary, and tertiary buttons" }
+  })
   .add(
     "Loader with custom size",
-    withInfo("Loader with a set width and height")(() => (
-      <SimpleLoader width={100} height={100} />
-    ))
+    () => <SimpleLoader width={100} height={100} />,
+    { info: "Loader with a set width and height" }
   );

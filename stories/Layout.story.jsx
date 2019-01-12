@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import { MedicalCard, Topbar, VivyFooter } from "../src/index";
 import logo from "../public/images/logo.svg";
 import "../public/translations/i18n";
@@ -49,7 +48,7 @@ const footerChildren = (
 
 storiesOf("Layout", module).add(
   "Simple Page",
-  withInfo("A simple page with topbar, body, footer")(() => (
+  () => (
     <LayoutStyles>
       <Topbar>
         <a
@@ -81,5 +80,6 @@ storiesOf("Layout", module).add(
       </div>
       <VivyFooter>{footerChildren}</VivyFooter>
     </LayoutStyles>
-  ))
+  ),
+  { info: "A simple page with topbar, body, footer" }
 );

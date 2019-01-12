@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import { Button, Modal } from "../src/index";
 
 const LayoutStyles = styled.div`
@@ -35,7 +34,7 @@ const LayoutStyles = styled.div`
 
 storiesOf("Modal", module).add(
   "Fullscreen",
-  withInfo("Use to grab the users attention")(() => (
+  () => (
     <LayoutStyles>
       <Modal open>
         <div className="full-screen-modal">
@@ -44,5 +43,6 @@ storiesOf("Modal", module).add(
         </div>
       </Modal>
     </LayoutStyles>
-  ))
+  ),
+  { info: "Use to grab the users attention" }
 );

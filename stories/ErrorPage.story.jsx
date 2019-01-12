@@ -1,12 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import { NotFoundPage, Topbar, Button } from "../src/index";
 import logo from "../public/images/logo.svg";
 
 storiesOf("Error Pages", module).add(
   "404 page",
-  withInfo("A error page for when a route can't be found")(() => (
+  () => (
     <div>
       <Topbar>
         <a
@@ -24,5 +23,6 @@ storiesOf("Error Pages", module).add(
         <Button type="secondary">Return home</Button>
       </NotFoundPage>
     </div>
-  ))
+  ),
+  { info: "An error page for when a route can't be found" }
 );

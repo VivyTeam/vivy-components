@@ -1,6 +1,8 @@
 import { addDecorator, configure } from "@storybook/react";
 import { withOptions } from '@storybook/addon-options';
+import { withInfo } from '@storybook/addon-info';
 
+addDecorator(withInfo);
 addDecorator(
   withOptions({
     name: "Vivy",

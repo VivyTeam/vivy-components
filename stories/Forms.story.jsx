@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import styled from "styled-components";
 import {
   Button,
@@ -105,7 +104,7 @@ storiesOf("Forms", module)
   ))
   .add(
     "without Validation",
-    withInfo("Using the Form without any validation")(() => (
+    () => (
       <Row position="center">
         <Col lg={9}>
           <Form
@@ -131,11 +130,12 @@ storiesOf("Forms", module)
           </Form>
         </Col>
       </Row>
-    ))
+    ),
+    { info: "Using the Form without any validation" }
   )
   .add(
     "with Validation",
-    withInfo("Using the Context API to share functionality")(() => (
+    () => (
       <Row position="center">
         <Col lg={9}>
           <Validation rules={rules}>
@@ -181,5 +181,6 @@ storiesOf("Forms", module)
           </Validation>
         </Col>
       </Row>
-    ))
+    ),
+    { info: "Using the Context API to share functionality" }
   );
