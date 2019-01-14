@@ -1,4 +1,4 @@
-import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.min.css";
 
 export { MessageContainer, message } from "./Message";
 export { default as Button } from "./Buttons/Button";
