@@ -10,7 +10,7 @@ const primarybackground = "#fff";
 const secondarybackground = "#f7f7f7";
 const cardbackground = "#fefefe";
 
-export default {
+export {
   primary,
   gray,
   darkgray,
