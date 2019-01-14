@@ -21,7 +21,7 @@
     "build:storybook": "storybook-to-ghpages",
     "build:package": "babel --presets react ./src --out-dir ./dist",
     "test": "jest",
-    "test:watch": "npm run test -- --watchAll --coverage"
+    "test:watch": "npm run test -- --watchAll"
   },
   "dependencies": {
     "@storybook/addon-actions": "^4.1.6",
