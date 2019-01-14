@@ -10,6 +10,7 @@ import "./InputPassword.story";
 import "./Checkbox.story";
 import "./Forms.story";
 import "./Modal.story";
+import "./Message.story";
 import "./Layout.story";
 import "./MedicalCard.story";
 import "./ErrorPage.story";
