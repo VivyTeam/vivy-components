@@ -22,7 +22,7 @@
     "build:package": "babel --presets react ./src --out-dir ./dist"
   },
   "dependencies": {
-    "@storybook/addon-actions": "^3.4.6",
+    "@storybook/addon-actions": "^4.1.6",
     "@storybook/addon-console": "^1.0.0",
     "@storybook/addon-info": "^3.4.6",
     "@storybook/addon-links": "^3.4.6",
