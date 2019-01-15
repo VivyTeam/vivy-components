@@ -11,6 +11,11 @@ const Styles = styled.div`
   .text-content {
     display: flex;
     align-items: center;
+
+    p {
+      text-align: left;
+      margin-left: 20px;
+    }
   }
 
   .progress-bar {
