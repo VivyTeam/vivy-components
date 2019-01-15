@@ -1,8 +1,8 @@
 {
-  "presets": ["env", "es2015", "stage-0", "react"],
+  "presets": ["@babel/env", "@babel/react"],
   "env": {
     "test": {
-      "plugins": ["require-context-hook", "babel-plugin-styled-components"]
+      "plugins": ["require-context-hook", "babel-plugin-styled-components", "@babel/plugin-proposal-class-properties"]
     }
   }
 }
