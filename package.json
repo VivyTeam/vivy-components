@@ -67,7 +67,7 @@
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|svg|ttf|woff|woff2|eot)$": "<rootDir>/.jest/assetsTransformer.js",
-      "\\.(css|less)$": "<rootDir>/.jest/styleMock.js"
+      "\\.(css)$": "<rootDir>/.jest/styleMock.js"
     },
     "setupFiles": [
       "<rootDir>/.jest/registerContext.js"
