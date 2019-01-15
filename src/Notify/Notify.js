@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { toast, ToastContainer } from "react-toastify";
-import Styles from "./message.style";
+import Styles from "./notify.style";
 import { Icon } from "../index";
 
-function MessageContent({ text, icon, color, size }) {
+function NotifyContent({ text, icon, color, size }) {
   return (
     <Styles>
       <div className="text-content">
@@ -16,19 +16,19 @@ function MessageContent({ text, icon, color, size }) {
   );
 }
 
-MessageContent.propTypes = {
+NotifyContent.propTypes = {
   text: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   color: PropTypes.string,
   size: PropTypes.number
 };
 
-MessageContent.defaultProps = {
+NotifyContent.defaultProps = {
   color: "#04d4bf",
   size: 22
 };
 
-export function MessageContainer() {
+export function NotifyContainer() {
   return (
     <Styles>
       <ToastContainer />
@@ -36,17 +36,17 @@ export function MessageContainer() {
   );
 }
 
-export const message = {
+export const notify = {
   ...toast,
   info(text, options = {}) {
-    return toast.info(<MessageContent icon="info" text={text} />, {
+    return toast.info(<NotifyContent icon="info" text={text} />, {
       ...options,
       className: "message-box",
       progressClassName: "progress-bar"
     });
   },
   success(text, options = {}) {
-    return toast.success(<MessageContent icon="confirmed" text={text} />, {
+    return toast.success(<NotifyContent icon="confirmed" text={text} />, {
       ...options,
       className: "message-box",
       progressClassName: "progress-bar"
@@ -54,7 +54,7 @@ export const message = {
   },
   error(text, options = {}) {
     return toast.error(
-      <MessageContent
+      <NotifyContent
         icon="failed-filled-16"
         text={text}
         color="#e94119"
