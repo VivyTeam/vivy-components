@@ -1,5 +1,3 @@
-import "react-toastify/dist/ReactToastify.min.css";
-
 export { NotifyContainer, notify } from "./Notify";
 export { default as Button } from "./Buttons/Button";
 export { default as AnchorButton } from "./Buttons/AnchorButton";

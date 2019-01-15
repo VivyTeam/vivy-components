@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { toast, ToastContainer } from "react-toastify";
-import Styles from "./notify.style";
 import { Icon } from "../index";
+import Styles from "./notify.style";
+import "react-toastify/dist/ReactToastify.min.css";
 
-function NotifyContent({ text, icon, color, size }) {
+function NotifyContent({ text, icon, color, fontSize }) {
   return (
     <Styles>
       <div className="text-content">
-        <Icon name={icon} style={{ color, fontSize: size }} />
+        <Icon name={icon} style={{ color, fontSize }} />
         &nbsp;
         {text}
       </div>
@@ -20,12 +21,12 @@ NotifyContent.propTypes = {
   text: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   color: PropTypes.string,
-  size: PropTypes.number
+  fontSize: PropTypes.number
 };
 
 NotifyContent.defaultProps = {
   color: "#04d4bf",
-  size: 22
+  fontSize: 22
 };
 
 export function NotifyContainer() {
@@ -58,7 +59,7 @@ export const notify = {
         icon="failed-filled-16"
         text={text}
         color="#e94119"
-        size={18}
+        fontSize={18}
       />,
       {
         ...options,
