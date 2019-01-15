@@ -19,7 +19,7 @@
     "linter:check": "eslint stories/ && eslint src/",
     "serve": "start-storybook -p 3006 -s ./public",
     "build:storybook": "storybook-to-ghpages",
-    "build:package": "babel --presets react ./src --out-dir ./dist",
+    "build:package": "babel --presets @babel/react ./src --out-dir ./dist",
     "test": "jest",
     "test:watch": "npm run test -- --watchAll"
   },
