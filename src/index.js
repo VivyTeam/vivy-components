@@ -1,3 +1,4 @@
+export { NotifyContainer, notify } from "./Notify";
 export { default as Button } from "./Buttons/Button";
 export { default as AnchorButton } from "./Buttons/AnchorButton";
 export { default as Icon } from "./Icon";
