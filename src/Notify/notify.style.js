@@ -13,7 +13,6 @@ const Styles = styled.div`
     align-items: center;
 
     p {
-      text-align: left;
       margin-left: 20px;
     }
   }
