@@ -10,8 +10,7 @@ function NotifyContent({ text, icon, color, fontSize }) {
     <Styles>
       <div className="text-content">
         <Icon name={icon} style={{ color, fontSize }} />
-        &nbsp;
-        {text}
+        <p>{text}</p>
       </div>
     </Styles>
   );
