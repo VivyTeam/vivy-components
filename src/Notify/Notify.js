@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { toast, ToastContainer } from "react-toastify";
-import { Icon } from "../index";
-import Styles from "./notify.style";
 import "react-toastify/dist/ReactToastify.min.css";
+import Styles from "./notify.style";
+import { Icon } from "../index";
 
 function NotifyContent({ text, icon, color, fontSize }) {
   return (
