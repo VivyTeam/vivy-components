@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import { Button, AnchorButton, Icon } from "../src/index";
 
@@ -53,7 +52,7 @@ const ButtonStyles = styled.div`
 // WebUIs/Styleguide
 storiesOf("Buttons", module).add(
   "Buttons Types",
-  withInfo("A list of primary, secondary, and tertiary buttons")(() => (
+  () => (
     <ButtonStyles>
       <h1>Buttons</h1>
 
@@ -207,5 +206,6 @@ storiesOf("Buttons", module).add(
         </AnchorButton>
       </div>
     </ButtonStyles>
-  ))
+  ),
+  { info: "A list of primary, secondary, and tertiary buttons" }
 );

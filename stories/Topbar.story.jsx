@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import { Topbar } from "../src/index";
 import logo from "../public/images/logo.svg";
 
@@ -24,7 +23,7 @@ const LayoutStyles = styled.div`
 
 storiesOf("Topbar", module).add(
   "default",
-  withInfo("The raw topbar component")(() => (
+  () => (
     <LayoutStyles>
       <Topbar>
         <a
@@ -37,5 +36,6 @@ storiesOf("Topbar", module).add(
         </a>
       </Topbar>
     </LayoutStyles>
-  ))
+  ),
+  { info: "The raw topbar component" }
 );

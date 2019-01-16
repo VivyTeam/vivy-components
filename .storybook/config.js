@@ -1,12 +1,16 @@
-import { configure } from "@storybook/react";
-import { setOptions } from "@storybook/addon-options";
+import { addDecorator, configure } from "@storybook/react";
+import { withOptions } from "@storybook/addon-options";
+import { withInfo } from "@storybook/addon-info";
 
-setOptions({
-  name: "Vivy",
-  url: "https://www.vivy.com/",
-  showStoriesPanel: true,
-  showAddonPanel: true
-});
+addDecorator(withInfo);
+addDecorator(
+  withOptions({
+    name: "Vivy",
+    url: "https://www.vivy.com/",
+    showStoriesPanel: true,
+    showAddonPanel: true
+  })
+);
 
 // automatically import all files ending in *.stories.js
 const req = require.context("../stories", true, /.stories.js$/);

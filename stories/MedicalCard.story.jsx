@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import { MedicalCard } from "../src/index";
 import "../public/translations/i18n";
 
@@ -19,7 +18,7 @@ const CollectionStyles = styled.div`
 
 storiesOf("MedicalCard", module).add(
   "default",
-  withInfo("A simple page with topbar, body, footer")(() => (
+  () => (
     <CollectionStyles>
       <div className="layout-body">
         <MedicalCard
@@ -44,5 +43,6 @@ storiesOf("MedicalCard", module).add(
         />
       </div>
     </CollectionStyles>
-  ))
+  ),
+  { info: "A simple page with topbar, body, footer" }
 );

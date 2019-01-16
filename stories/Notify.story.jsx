@@ -47,7 +47,7 @@ storiesOf("Notify", module)
   ))
   .add(
     "basic notification",
-    withInfo("Basic notify")(() => {
+    () => {
       const info = () => {
         notify.info("Info Notification", {
           hideProgressBar: true,
@@ -79,5 +79,6 @@ storiesOf("Notify", module)
           </Row>
         </Container>
       );
-    })
+    },
+    { info: "Basic notify" }
   );

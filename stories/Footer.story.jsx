@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import { Footer, Row, Col } from "../src/index";
 
 const Container = styled.div`
@@ -18,117 +17,108 @@ const AnchorLast = styled.a`
 `;
 
 storiesOf("Footer", module)
-  .add(
-    "default",
-    withInfo("The raw Footer component")(() => (
-      <Footer>
-        <Container>
-          <Row position="center" verticalAlign="middle">
-            <Col lg={0}>
-              <Anchor
-                href="https://www.vivy.com/impressum"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                Impressum
-              </Anchor>
-            </Col>
-            <Col lg={0}>
-              <Anchor
-                href="https://www.vivy.com/nutzungsbedingungen"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                AGB
-              </Anchor>
-            </Col>
-            <Col lg={0}>
-              <AnchorLast
-                href="https://www.vivy.com/datenschutz"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                Datenschutz
-              </AnchorLast>
-            </Col>
-          </Row>
-        </Container>
-      </Footer>
-    ))
-  )
-  .add(
-    "position start",
-    withInfo("Position start")(() => (
-      <Footer>
-        <Container>
-          <Row position="start">
-            <Col lg={0}>
-              <Anchor
-                href="https://www.vivy.com/impressum"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                Impressum
-              </Anchor>
-            </Col>
-            <Col lg={0}>
-              <Anchor
-                href="https://www.vivy.com/nutzungsbedingungen"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                AGB
-              </Anchor>
-            </Col>
-            <Col lg={0}>
-              <AnchorLast
-                href="https://www.vivy.com/datenschutz"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                Datenschutz
-              </AnchorLast>
-            </Col>
-          </Row>
-        </Container>
-      </Footer>
-    ))
-  )
-  .add(
-    "position end",
-    withInfo("position end")(() => (
-      <Footer>
-        <Container>
-          <Row position="end">
-            <Col lg={0}>
-              <Anchor
-                href="https://www.vivy.com/impressum"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                Impressum
-              </Anchor>
-            </Col>
-            <Col lg={0}>
-              <Anchor
-                href="https://www.vivy.com/nutzungsbedingungen"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                AGB
-              </Anchor>
-            </Col>
-            <Col lg={0}>
-              <AnchorLast
-                href="https://www.vivy.com/datenschutz"
-                target="_"
-                rel="noopener noreferrer"
-              >
-                Datenschutz
-              </AnchorLast>
-            </Col>
-          </Row>
-        </Container>
-      </Footer>
-    ))
-  );
+  .add("default", () => (
+    <Footer>
+      <Container>
+        <Row position="center" verticalAlign="middle">
+          <Col lg={0}>
+            <Anchor
+              href="https://www.vivy.com/impressum"
+              target="_"
+              rel="noopener noreferrer"
+            >
+              Impressum
+            </Anchor>
+          </Col>
+          <Col lg={0}>
+            <Anchor
+              href="https://www.vivy.com/nutzungsbedingungen"
+              target="_"
+              rel="noopener noreferrer"
+            >
+              AGB
+            </Anchor>
+          </Col>
+          <Col lg={0}>
+            <AnchorLast
+              href="https://www.vivy.com/datenschutz"
+              target="_"
+              rel="noopener noreferrer"
+            >
+              Datenschutz
+            </AnchorLast>
+          </Col>
+        </Row>
+      </Container>
+    </Footer>
+  ))
+  .add("position start", () => (
+    <Footer>
+      <Container>
+        <Row position="start">
+          <Col lg={0}>
+            <Anchor
+              href="https://www.vivy.com/impressum"
+              target="_"
+              rel="noopener noreferrer"
+            >
+              Impressum
+            </Anchor>
+          </Col>
+          <Col lg={0}>
+            <Anchor
+              href="https://www.vivy.com/nutzungsbedingungen"
+              target="_"
+              rel="noopener noreferrer"
+            >
+              AGB
+            </Anchor>
+          </Col>
+          <Col lg={0}>
+            <AnchorLast
+              href="https://www.vivy.com/datenschutz"
+              target="_"
+              rel="noopener noreferrer"
+            >
+              Datenschutz
+            </AnchorLast>
+          </Col>
+        </Row>
+      </Container>
+    </Footer>
+  ))
+  .add("position end", () => (
+    <Footer>
+      <Container>
+        <Row position="end">
+          <Col lg={0}>
+            <Anchor
+              href="https://www.vivy.com/impressum"
+              target="_"
+              rel="noopener noreferrer"
+            >
+              Impressum
+            </Anchor>
+          </Col>
+          <Col lg={0}>
+            <Anchor
+              href="https://www.vivy.com/nutzungsbedingungen"
+              target="_"
+              rel="noopener noreferrer"
+            >
+              AGB
+            </Anchor>
+          </Col>
+          <Col lg={0}>
+            <AnchorLast
+              href="https://www.vivy.com/datenschutz"
+              target="_"
+              rel="noopener noreferrer"
+            >
+              Datenschutz
+            </AnchorLast>
+          </Col>
+        </Row>
+      </Container>
+    </Footer>
+  ));

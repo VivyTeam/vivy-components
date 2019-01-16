@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import styled from "styled-components";
 import { Icon } from "../src/index";
 
@@ -35,7 +34,7 @@ const IconsStory = styled.div`
 
 storiesOf("Icons", module).add(
   "Vivy font icon pack",
-  withInfo("Simple icon set used for frontend apps")(() => (
+  () => (
     <IconsStory>
       <div className="container">
         <h1>Vivy icons</h1>
@@ -715,5 +714,6 @@ storiesOf("Icons", module).add(
         </div>
       </div>
     </IconsStory>
-  ))
+  ),
+  { info: { info: "A list of primary, secondary, and tertiary buttons" } }
 );
