@@ -12,8 +12,8 @@ export function withGlobalStyles(storyFn) {
 }
 
 export const withVivyOptions = withOptions({
-    name: "Vivy",
-    url: "https://www.vivy.com/",
-    showStoriesPanel: true,
-    showAddonPanel: true
-  })
+  name: "Vivy",
+  url: "https://www.vivy.com/",
+  showStoriesPanel: true,
+  showAddonPanel: true
+});
