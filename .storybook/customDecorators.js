@@ -1,13 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Fonts from "../src/Fonts/fonts.style";
 import { withOptions } from "@storybook/addon-options";
 
 export function withGlobalStyles(storyFn) {
   return (
-    <React.Fragment>
+    <Fragment>
       <Fonts />
       {storyFn()}
-    </React.Fragment>
+    </Fragment>
   );
 }
 
