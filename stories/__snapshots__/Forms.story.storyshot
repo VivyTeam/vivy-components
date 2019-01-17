@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Forms documentation 1`] = `
+<div
+  class="Formsstory__PageLayout-sc-6dins7-0 eWkAUE"
+>
+  <div
+    class="documentation"
+  >
+    <h2>
+      Official Documentation
+    </h2>
+    <h3>
+      High level overview of this story
+    </h3>
+    <p>
+      We use 
+      <a
+        href="https://reactjs.org/docs/context.html"
+      >
+        Context
+      </a>
+       as way to share functionality into nested. Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+    </p>
+    <p>
+      The validation used in Vivy forms takes advantage of the library async-validator. The full documentation can be found in the  
+      <a
+        href="https://github.com/yiminghe/async-validator#api"
+      >
+        here.
+      </a>
+    </p>
+    <p>
+      Having a Context Provide named 
+      <b>
+        Validation
+      </b>
+       as a parent component of the 
+      <b>
+        Form
+      </b>
+       and parsing into it certain rules will validate the form on the fly and return the errors for each input.
+    </p>
+    <h2>
+      Quick Start
+    </h2>
+    <ul>
+      <li>
+        All that is required for validation is to pass a 
+        <b>
+          rules object
+        </b>
+         to the
+        <b>
+           Validation 
+        </b>
+         component. This allows the validation to verify each rule that belongs to a specific input element.
+      </li>
+      <li>
+        The keys in the rules object match the id of the input elements in the html form.
+      </li>
+      <li>
+        All rules can be added within the rules object and there is a large standard list of rules built in. For example rules for whitespace, email, required, and min/max length are already built in. A full list of rules and how to build custom validation can be found in the official documentation.
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Forms with Validation 1`] = `
+<div
+  class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+>
+  <div
+    class="row default-width position-center text-align-left top normal "
+  >
+    <div
+      class="col-lg-9 col-lg-offset-0 "
+    >
+      <form>
+        <div
+          class="inputWrapperstyle__InputStyles-sc-1pduhqy-0 ghDlDm"
+        >
+          <span
+            class="label"
+          >
+            First name
+          </span>
+          <label
+            class=""
+            for="name"
+            id="name"
+          >
+            <input
+              class=""
+              id="name"
+              name="default"
+              placeholder="Please add your first name"
+              type=""
+            />
+          </label>
+        </div>
+        <div
+          class="inputWrapperstyle__InputStyles-sc-1pduhqy-0 ghDlDm"
+        >
+          <span
+            class="label"
+          >
+            Last name
+          </span>
+          <label
+            class=""
+            for="lastName"
+            id="lastName"
+          >
+            <input
+              class=""
+              id="lastName"
+              name="default"
+              placeholder="Please add your last name"
+              type=""
+            />
+          </label>
+        </div>
+        <div
+          class="inputPasswordstyle__InputPasswordStyles-sc-1wi8vl4-0 iYinPH"
+        >
+          <div
+            class="inputWrapperstyle__InputStyles-sc-1pduhqy-0 ghDlDm"
+          >
+            <span
+              class="label"
+            >
+              Password
+            </span>
+            <label
+              class=""
+              for="password"
+              id="password"
+            >
+              <input
+                autocomplete="password"
+                class=""
+                id="password"
+                name="default"
+                placeholder="Please add your password"
+                type="password"
+              />
+            </label>
+          </div>
+        </div>
+        <div
+          class="inputWrapperstyle__InputStyles-sc-1pduhqy-0 ghDlDm"
+        >
+          <span
+            class="label"
+          >
+            E-mail
+          </span>
+          <label
+            class=""
+            for="email"
+            id="email"
+          >
+            <input
+              class=""
+              id="email"
+              name="default"
+              placeholder="Please add your e-mail"
+              type=""
+            />
+          </label>
+        </div>
+        <div
+          class="checkboxstyle__CheckboxStyle-jtw5sa-0 doWUJy"
+        >
+          <input
+            id="terms"
+            name="Terms and Conditions"
+            type="checkbox"
+            value=""
+          />
+          <label
+            for="terms"
+            id="terms"
+          />
+          <div
+            class="content"
+          >
+            <p>
+              Terms and conditions
+            </p>
+          </div>
+        </div>
+        <div
+          class="checkboxstyle__CheckboxStyle-jtw5sa-0 doWUJy"
+        >
+          <input
+            id="newsletter"
+            name="Newsletter"
+            type="checkbox"
+            value=""
+          />
+          <label
+            for="newsletter"
+            id="newsletter"
+          />
+          <div
+            class="content"
+          >
+            <p>
+              Newsletter sign up
+            </p>
+          </div>
+          <span
+            class="optional"
+          >
+            *optional
+          </span>
+        </div>
+        <div
+          class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+        >
+          <button
+            class=" primary"
+            type="submit"
+          >
+            <div
+              class="component-child"
+            >
+              Submit
+            </div>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Forms without Validation 1`] = `
+<div
+  class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+>
+  <div
+    class="row default-width position-center text-align-left top normal "
+  >
+    <div
+      class="col-lg-9 col-lg-offset-0 "
+    >
+      <form>
+        <div
+          class="inputWrapperstyle__InputStyles-sc-1pduhqy-0 ghDlDm"
+        >
+          <span
+            class="label"
+          >
+            First name
+          </span>
+          <label
+            class=""
+            for="name"
+            id="name"
+          >
+            <input
+              class=""
+              id="name"
+              name="default"
+              placeholder="Please add your first name"
+              type=""
+            />
+          </label>
+        </div>
+        <div
+          class="inputWrapperstyle__InputStyles-sc-1pduhqy-0 ghDlDm"
+        >
+          <span
+            class="label"
+          >
+            Last name
+          </span>
+          <label
+            class=""
+            for="lastName"
+            id="lastName"
+          >
+            <input
+              class=""
+              id="lastName"
+              name="default"
+              placeholder="Please add your last name"
+              type=""
+            />
+          </label>
+        </div>
+        <div
+          class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+        >
+          <button
+            class=" primary"
+            style="margin-top:4vh"
+            type="submit"
+          >
+            <div
+              class="component-child"
+            >
+              Submit
+            </div>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

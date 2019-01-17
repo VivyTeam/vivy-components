@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Modal Fullscreen 1`] = `
+<div
+  class="Modalstory__LayoutStyles-sc-1uwrkmn-0 hyaGyd"
+>
+  <div
+    class="modalstyle__ModalStyles-sc-1n3kwdq-0 kbUCPi"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="modal-body"
+      >
+        <div
+          class="full-screen-modal"
+        >
+          <h2>
+            Fullscreen modal
+          </h2>
+          <div
+            class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+          >
+            <button
+              class=" primary"
+              type="button"
+            >
+              <div
+                class="component-child"
+              >
+                OK
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

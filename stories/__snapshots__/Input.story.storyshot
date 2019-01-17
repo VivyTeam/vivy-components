@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Input basic 1`] = `
+<div
+  class="Inputstory__PageLayout-skdy5l-0 zLidY"
+>
+  <div
+    class="inputWrapperstyle__InputStyles-sc-1pduhqy-0 ghDlDm"
+  >
+    <span
+      class="label"
+    >
+      First name
+    </span>
+    <label
+      class=""
+      for="name"
+      id="name"
+    >
+      <input
+        class=""
+        id="name"
+        name="default"
+        placeholder="Please add your name"
+        type=""
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input default value 1`] = `
+<div
+  class="Inputstory__PageLayout-skdy5l-0 zLidY"
+>
+  <div
+    class="inputWrapperstyle__InputStyles-sc-1pduhqy-0 ghDlDm"
+  >
+    <span
+      class="label"
+    >
+      Your name
+    </span>
+    <label
+      class=""
+      for="name"
+      id="name"
+    >
+      <input
+        class=""
+        id="name"
+        name="default"
+        placeholder="Enter your name"
+        type=""
+        value="John Doe"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input icon left 1`] = `
+<div
+  class="Inputstory__PageLayout-skdy5l-0 zLidY"
+>
+  <div
+    class="inputWrapperstyle__InputStyles-sc-1pduhqy-0 ghDlDm"
+  >
+    <span
+      class="label"
+    >
+      Email
+    </span>
+    <label
+      class=""
+      for="email"
+      id="email"
+    >
+      <div
+        class="icon-left"
+      >
+        <div
+          class="Icon__Icons-pmfh88-0 bqaPQj"
+        >
+          <i>
+            
+          </i>
+        </div>
+      </div>
+      <input
+        class="icon-padding "
+        id="email"
+        name="default"
+        placeholder="Email"
+        type="text"
+      />
+    </label>
+  </div>
+</div>
+`;

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Loaders Basic loader 1`] = `
+<div
+  class="SimpleLoaderstyle__Wrapper-k848hg-1 hxCcLj"
+>
+  <img
+    alt="Loading..."
+    class="SimpleLoaderstyle__AnimatedImg-k848hg-0 kNPPPV"
+    height="50"
+    src="file-stub"
+    width="50"
+  />
+</div>
+`;
+
+exports[`Storyshots Loaders Centered 1`] = `
+<div
+  class="SimpleLoaderstyle__Wrapper-k848hg-1 jiBiuB"
+>
+  <img
+    alt="Loading..."
+    class="SimpleLoaderstyle__AnimatedImg-k848hg-0 kNPPPV"
+    height="50"
+    src="file-stub"
+    width="50"
+  />
+</div>
+`;
+
+exports[`Storyshots Loaders Loader with custom size 1`] = `
+<div
+  class="SimpleLoaderstyle__Wrapper-k848hg-1 hxCcLj"
+>
+  <img
+    alt="Loading..."
+    class="SimpleLoaderstyle__AnimatedImg-k848hg-0 gHObTW"
+    height="100"
+    src="file-stub"
+    width="100"
+  />
+</div>
+`;

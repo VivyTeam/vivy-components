@@ -1,0 +1,490 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Buttons Buttons Types 1`] = `
+<div
+  class="Buttonsstory__ButtonStyles-sc-5g2mgl-0 WyYAi"
+>
+  <h1>
+    Buttons
+  </h1>
+  <h2>
+    Primary Call to Action
+  </h2>
+  <div
+    class="list"
+  >
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class=" primary"
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          Call to Action
+        </div>
+      </button>
+    </div>
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class=" primary"
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          <div
+            class="Icon__Icons-pmfh88-0 bqaPQj"
+          >
+            <i>
+              
+            </i>
+          </div>
+          Call to Action
+        </div>
+      </button>
+    </div>
+  </div>
+  <h2>
+    Secondary Call to Action
+  </h2>
+  <div
+    class="list"
+  >
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class=" secondary"
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          Call to Action
+        </div>
+      </button>
+    </div>
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class=" secondary"
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          <div
+            class="Icon__Icons-pmfh88-0 bqaPQj"
+          >
+            <i>
+              
+            </i>
+          </div>
+          Call to Action
+        </div>
+      </button>
+    </div>
+  </div>
+  <h2>
+    Tertiary Call to Action
+  </h2>
+  <div
+    class="list"
+  >
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class=" tertiary"
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          Call to Action
+        </div>
+      </button>
+    </div>
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class=" tertiary"
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          <div
+            class="Icon__Icons-pmfh88-0 bqaPQj"
+          >
+            <i>
+              
+            </i>
+          </div>
+          Call to Action
+        </div>
+      </button>
+    </div>
+  </div>
+  <h2>
+    quaternary call to action
+  </h2>
+  <div
+    class="list"
+  >
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class=" quaternary"
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          Call to Action
+        </div>
+      </button>
+    </div>
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class=" quaternary"
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          <div
+            class="Icon__Icons-pmfh88-0 bqaPQj"
+          >
+            <i>
+              
+            </i>
+          </div>
+          Call to Action
+        </div>
+      </button>
+    </div>
+  </div>
+  <h2>
+    Disabled
+  </h2>
+  <div
+    class="list"
+  >
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class=" primary"
+        disabled=""
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          Disabled
+        </div>
+      </button>
+    </div>
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class=" secondary"
+        disabled=""
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          Disabled
+        </div>
+      </button>
+    </div>
+  </div>
+  <h2>
+    With ClassName
+  </h2>
+  <div
+    class="list"
+  >
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class="margin-top primary"
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          margin-top
+        </div>
+      </button>
+    </div>
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <button
+        class="margin-top primary"
+        type="button"
+      >
+        <div
+          class="component-child"
+        >
+          margin-top
+        </div>
+      </button>
+    </div>
+  </div>
+  <h1>
+    Anchor Buttons
+  </h1>
+  <h2>
+    Primary Call to Action
+  </h2>
+  <div
+    class="list"
+  >
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <a
+        class=" primary"
+        download=""
+        href="https://www.vivy.com/"
+        rel=""
+        target="_blank"
+      >
+        <div
+          class="component-child"
+        >
+          Call to Action
+        </div>
+      </a>
+    </div>
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <a
+        class=" primary"
+        download=""
+        href="https://www.vivy.com/"
+        rel=""
+        target="_blank"
+      >
+        <div
+          class="component-child"
+        >
+          <div
+            class="Icon__Icons-pmfh88-0 bqaPQj"
+          >
+            <i>
+              
+            </i>
+          </div>
+          Call to Action
+        </div>
+      </a>
+    </div>
+  </div>
+  <h2>
+    Secondary Call to Action
+  </h2>
+  <div
+    class="list"
+  >
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <a
+        class=" secondary"
+        download=""
+        href="https://www.vivy.com/"
+        rel=""
+        target="_blank"
+      >
+        <div
+          class="component-child"
+        >
+          Call to Action
+        </div>
+      </a>
+    </div>
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <a
+        class=" secondary"
+        download=""
+        href="https://www.vivy.com/"
+        rel=""
+        target="_blank"
+      >
+        <div
+          class="component-child"
+        >
+          <div
+            class="Icon__Icons-pmfh88-0 bqaPQj"
+          >
+            <i>
+              
+            </i>
+          </div>
+          Call to Action
+        </div>
+      </a>
+    </div>
+  </div>
+  <h2>
+    Tertiary Call to Action
+  </h2>
+  <div
+    class="list"
+  >
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <a
+        class=" tertiary"
+        download=""
+        href="https://www.vivy.com/"
+        rel=""
+        target="_blank"
+      >
+        <div
+          class="component-child"
+        >
+          Call to Action
+        </div>
+      </a>
+    </div>
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <a
+        class=" tertiary"
+        download=""
+        href="https://www.vivy.com/"
+        rel=""
+        target="_blank"
+      >
+        <div
+          class="component-child"
+        >
+          <div
+            class="Icon__Icons-pmfh88-0 bqaPQj"
+          >
+            <i>
+              
+            </i>
+          </div>
+          Call to Action
+        </div>
+      </a>
+    </div>
+  </div>
+  <h2>
+    Quaternary call to action
+  </h2>
+  <div
+    class="list"
+  >
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <a
+        class=" quaternary"
+        download=""
+        href="https://www.vivy.com/"
+        rel=""
+        target="_blank"
+      >
+        <div
+          class="component-child"
+        >
+          Call to Action
+        </div>
+      </a>
+    </div>
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <a
+        class=" quaternary"
+        download=""
+        href="https://www.vivy.com/"
+        rel=""
+        target="_blank"
+      >
+        <div
+          class="component-child"
+        >
+          <div
+            class="Icon__Icons-pmfh88-0 bqaPQj"
+          >
+            <i>
+              
+            </i>
+          </div>
+           
+          <span>
+            Call to Action
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <h2>
+    With ClassName
+  </h2>
+  <div
+    class="list"
+  >
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <a
+        class="margin-top primary"
+        download=""
+        href="https://www.vivy.com/"
+        rel=""
+        target="_blank"
+      >
+        <div
+          class="component-child"
+        >
+          margin-top
+        </div>
+      </a>
+    </div>
+    <div
+      class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+    >
+      <a
+        class="margin-top primary"
+        download=""
+        href="https://www.vivy.com/"
+        rel=""
+        target="_blank"
+      >
+        <div
+          class="component-child"
+        >
+          margin-top
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots MedicalCard default 1`] = `
+<div
+  class="MedicalCardstory__CollectionStyles-t5qe7q-0 eutHCi"
+>
+  <div
+    class="layout-body"
+  />
+</div>
+`;

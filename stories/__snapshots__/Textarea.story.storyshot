@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Textarea default 1`] = `
+<div
+  class="textareastyle__TextareaStyles-p5dnca-0 mLPwH"
+>
+  Default
+  <textarea
+    placeholder=""
+  />
+</div>
+`;
+
+exports[`Storyshots Textarea disabled 1`] = `
+<div
+  class="textareastyle__TextareaStyles-p5dnca-0 mLPwH"
+>
+  Disabled
+  <textarea
+    disabled=""
+    placeholder=""
+  />
+</div>
+`;
+
+exports[`Storyshots Textarea required 1`] = `
+<div
+  class="textareastyle__TextareaStyles-p5dnca-0 mLPwH"
+>
+  Mandatory
+  <span
+    class="required"
+  >
+    (required)
+  </span>
+  <textarea
+    placeholder=""
+  />
+</div>
+`;
+
+exports[`Storyshots Textarea with style 1`] = `
+<div
+  class="textareastyle__TextareaStyles-p5dnca-0 mLPwH"
+>
+  With some style
+  <textarea
+    placeholder=""
+    style="height:500px"
+  />
+</div>
+`;

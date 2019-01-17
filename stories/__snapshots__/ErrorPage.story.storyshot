@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Error Pages 404 page 1`] = `
+<div>
+  <div
+    class="topbarstyle__TopbarStyles-tewtpg-0 glyuhd"
+  >
+    <a
+      class="link"
+      href="https://www.vivy.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Vivy Logo"
+        class="logo"
+        src="file-stub"
+      />
+    </a>
+  </div>
+  <div
+    class="errorstyle__ErrorStyles-sc-1ip7nqj-0 kznfAQ"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="error-body"
+      >
+        <img
+          alt=""
+          class="error-img"
+          src="file-stub"
+        />
+        <div
+          class="info"
+        >
+          <h2>
+            Oops! Looks like we have lost that page.
+          </h2>
+          <p>
+            Please try again or return to the homepage
+          </p>
+          <div
+            class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+          >
+            <button
+              class=" secondary"
+              type="button"
+            >
+              <div
+                class="component-child"
+              >
+                Return home
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

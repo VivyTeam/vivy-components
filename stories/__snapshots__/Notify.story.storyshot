@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Notify basic notification 1`] = `
+<div
+  class="Notifystory__Container-sc-1spq07j-1 bRUIpn"
+>
+  <div
+    class="notifystyle__Styles-sc-1knaqc4-0 jsEnKl"
+  >
+    <div
+      class="Toastify"
+    />
+  </div>
+  <div
+    class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+  >
+    <div
+      class="row default-width position-center text-align-left bottom normal "
+    >
+      <div
+        class="col-lg-4 col-lg-offset-0 "
+      >
+        <div
+          class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+        >
+          <button
+            class=" primary"
+            type="button"
+          >
+            <div
+              class="component-child"
+            >
+              Info
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-lg-offset-0 "
+      >
+        <div
+          class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+        >
+          <button
+            class=" primary"
+            type="button"
+          >
+            <div
+              class="component-child"
+            >
+              Error
+            </div>
+          </button>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-lg-offset-0 "
+      >
+        <div
+          class="buttonstyle__ButtonStyles-sc-13swllz-0 dhaSjL"
+        >
+          <button
+            class=" primary"
+            type="button"
+          >
+            <div
+              class="component-child"
+            >
+              Success
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Notify documentation 1`] = `
+<div
+  class="Notifystory__PageLayout-sc-1spq07j-0 daPKzB"
+>
+  <h2>
+    Notification Docs
+  </h2>
+  <h3>
+    Overview
+  </h3>
+  <p>
+    To begin, notifications are used when you need to notify a user about some action they need to take. They can also be used to notify users about updated state (CRUD functions) and also can be incredibly convenient for displaying error notifys.
+  </p>
+  <p>
+    In the Vivy component library we abstract a lot of the logic away to the 
+    <a
+      href="https://github.com/fkhadra/react-toastify#readme"
+    >
+      react-toastify
+    </a>
+     library. This allows us to apply custom styles to our own notify components while avoiding having to maintain a lot of code around the components logic. While in the library we abstract away the API with the Message component you can find most of what you can do with the notify component in the toastify readme.
+  </p>
+  <h3>
+    Quick Start
+  </h3>
+  <p>
+    To get started with notifys you first need to import the NotifyContainer component into your app. Typically this is inside your app.jsx file or typically where you initialize your app code. After initializing this component, all you need to do is import the notify() function and call it whenever you want to display a notify. The below stories have examples of how to do this and how to pass optional configurations.
+  </p>
+</div>
+`;

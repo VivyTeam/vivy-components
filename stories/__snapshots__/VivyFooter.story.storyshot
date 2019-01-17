@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots VivyFooter default styles 1`] = `
+<div
+  class="footerstyle__Styles-bumlqs-0 kMTRAD"
+>
+  <div
+    class="footer"
+  >
+    <div
+      class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+    >
+      <div
+        class="row default-width position-start text-align-left top normal "
+      >
+        <div
+          class="col-lg-12 col-lg-offset-0 "
+        >
+          <div
+            class="footerstyle__Styles-hlrnet-0 jXvvRX"
+          >
+            <div
+              class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+            >
+              <div
+                class="row default-width position-center text-align-left middle normal "
+              >
+                <div
+                  class="col-lg-0 col-lg-offset-0 "
+                >
+                  <a
+                    class="anchor"
+                    href="https://www.vivy.com/impressum"
+                    rel="noopener noreferrer"
+                    target="_"
+                  >
+                    Impressum
+                  </a>
+                </div>
+                <div
+                  class="col-lg-0 col-lg-offset-0 "
+                >
+                  <a
+                    class="anchor"
+                    href="https://www.vivy.com/nutzungsbedingungen"
+                    rel="noopener noreferrer"
+                    target="_"
+                  >
+                    AGB
+                  </a>
+                </div>
+                <div
+                  class="col-lg-0 col-lg-offset-0 "
+                >
+                  <a
+                    class="anchor last"
+                    href="https://www.vivy.com/datenschutz"
+                    rel="noopener noreferrer"
+                    target="_"
+                  >
+                    Datenschutz
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

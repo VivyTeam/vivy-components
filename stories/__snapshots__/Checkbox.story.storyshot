@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Checkbox basic 1`] = `
+<div
+  class="Checkboxstory__PageLayout-paumea-0 bpjQDn"
+>
+  <div
+    class="checkboxstyle__CheckboxStyle-jtw5sa-0 doWUJy"
+  >
+    <input
+      id="newsletter"
+      name="newsletter"
+      type="checkbox"
+      value=""
+    />
+    <label
+      for="newsletter"
+      id="newsletter"
+    />
+    <div
+      class="content"
+    >
+      Sign up newsletter
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Checkbox optional 1`] = `
+<div
+  class="Checkboxstory__PageLayout-paumea-0 bpjQDn"
+>
+  <div
+    class="checkboxstyle__CheckboxStyle-jtw5sa-0 doWUJy"
+  >
+    <input
+      id="newsletter"
+      name="newsletter"
+      type="checkbox"
+      value=""
+    />
+    <label
+      for="newsletter"
+      id="newsletter"
+    />
+    <div
+      class="content"
+    >
+      Sign up newsletter
+    </div>
+    <span
+      class="optional"
+    >
+      *optional
+    </span>
+  </div>
+</div>
+`;

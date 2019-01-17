@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Topbar default 1`] = `
+<div
+  class="Topbarstory__LayoutStyles-tbc1vr-0 kyjlhN"
+>
+  <div
+    class="topbarstyle__TopbarStyles-tewtpg-0 glyuhd"
+  >
+    <a
+      class="link"
+      href="https://www.vivy.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Vivy Logo"
+        class="logo"
+        src="file-stub"
+      />
+    </a>
+  </div>
+</div>
+`;

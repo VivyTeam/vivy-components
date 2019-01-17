@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Footer default 1`] = `
+<div
+  class="footerstyle__Styles-bumlqs-0 kMTRAD"
+>
+  <div
+    class="footer"
+  >
+    <div
+      class="Footerstory__Container-sc-1ibo71s-0 iDkHfE"
+    >
+      <div
+        class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+      >
+        <div
+          class="row default-width position-center text-align-left middle normal "
+        >
+          <div
+            class="col-lg-0 col-lg-offset-0 "
+          >
+            <a
+              class="Footerstory__Anchor-sc-1ibo71s-1 gbEyZA"
+              href="https://www.vivy.com/impressum"
+              rel="noopener noreferrer"
+              target="_"
+            >
+              Impressum
+            </a>
+          </div>
+          <div
+            class="col-lg-0 col-lg-offset-0 "
+          >
+            <a
+              class="Footerstory__Anchor-sc-1ibo71s-1 gbEyZA"
+              href="https://www.vivy.com/nutzungsbedingungen"
+              rel="noopener noreferrer"
+              target="_"
+            >
+              AGB
+            </a>
+          </div>
+          <div
+            class="col-lg-0 col-lg-offset-0 "
+          >
+            <a
+              class="Footerstory__AnchorLast-sc-1ibo71s-2 bElbrR"
+              href="https://www.vivy.com/datenschutz"
+              rel="noopener noreferrer"
+              target="_"
+            >
+              Datenschutz
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Footer position end 1`] = `
+<div
+  class="footerstyle__Styles-bumlqs-0 kMTRAD"
+>
+  <div
+    class="footer"
+  >
+    <div
+      class="Footerstory__Container-sc-1ibo71s-0 iDkHfE"
+    >
+      <div
+        class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+      >
+        <div
+          class="row default-width position-end text-align-left top normal "
+        >
+          <div
+            class="col-lg-0 col-lg-offset-0 "
+          >
+            <a
+              class="Footerstory__Anchor-sc-1ibo71s-1 gbEyZA"
+              href="https://www.vivy.com/impressum"
+              rel="noopener noreferrer"
+              target="_"
+            >
+              Impressum
+            </a>
+          </div>
+          <div
+            class="col-lg-0 col-lg-offset-0 "
+          >
+            <a
+              class="Footerstory__Anchor-sc-1ibo71s-1 gbEyZA"
+              href="https://www.vivy.com/nutzungsbedingungen"
+              rel="noopener noreferrer"
+              target="_"
+            >
+              AGB
+            </a>
+          </div>
+          <div
+            class="col-lg-0 col-lg-offset-0 "
+          >
+            <a
+              class="Footerstory__AnchorLast-sc-1ibo71s-2 bElbrR"
+              href="https://www.vivy.com/datenschutz"
+              rel="noopener noreferrer"
+              target="_"
+            >
+              Datenschutz
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Footer position start 1`] = `
+<div
+  class="footerstyle__Styles-bumlqs-0 kMTRAD"
+>
+  <div
+    class="footer"
+  >
+    <div
+      class="Footerstory__Container-sc-1ibo71s-0 iDkHfE"
+    >
+      <div
+        class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+      >
+        <div
+          class="row default-width position-start text-align-left top normal "
+        >
+          <div
+            class="col-lg-0 col-lg-offset-0 "
+          >
+            <a
+              class="Footerstory__Anchor-sc-1ibo71s-1 gbEyZA"
+              href="https://www.vivy.com/impressum"
+              rel="noopener noreferrer"
+              target="_"
+            >
+              Impressum
+            </a>
+          </div>
+          <div
+            class="col-lg-0 col-lg-offset-0 "
+          >
+            <a
+              class="Footerstory__Anchor-sc-1ibo71s-1 gbEyZA"
+              href="https://www.vivy.com/nutzungsbedingungen"
+              rel="noopener noreferrer"
+              target="_"
+            >
+              AGB
+            </a>
+          </div>
+          <div
+            class="col-lg-0 col-lg-offset-0 "
+          >
+            <a
+              class="Footerstory__AnchorLast-sc-1ibo71s-2 bElbrR"
+              href="https://www.vivy.com/datenschutz"
+              rel="noopener noreferrer"
+              target="_"
+            >
+              Datenschutz
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

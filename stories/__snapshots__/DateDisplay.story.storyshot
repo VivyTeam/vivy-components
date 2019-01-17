@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots DateDisplay default 1`] = `
+<span
+  class="DateDisplay__DateDisplayStyles-bm5lg8-0 hqDlTj"
+>
+  10. Oktober 1990
+</span>
+`;
