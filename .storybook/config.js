@@ -1,8 +1,6 @@
-import { addDecorator, configure } from "@storybook/react";
+import {addDecorator, configure } from "@storybook/react";
 import { withOptions } from "@storybook/addon-options";
-import { withInfo } from "@storybook/addon-info";
 
-addDecorator(withInfo);
 addDecorator(
   withOptions({
     name: "Vivy",
@@ -12,10 +10,11 @@ addDecorator(
   })
 );
 
-// automatically import all files ending in *.stories.js
-const req = require.context("../stories", true, /.stories.js$/);
-
 function loadStories() {
+  // put welcome screen at the top of the list so it's the first one displayed
+  require('../stories/Welcome');
+  // automatically import all story js files that end with *.stories.js
+  const req = require.context('../stories', true, /\.story\.jsx$/);
   req.keys().forEach(filename => req(filename));
 }
 
