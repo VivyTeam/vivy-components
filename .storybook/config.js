@@ -1,7 +1,9 @@
 import React from "react";
 import { addDecorator, configure } from "@storybook/react";
 import { withVivyOptions, withGlobalStyles } from "./customDecorators";
+import { withInfo } from "@storybook/addon-info";
 
+addDecorator(withInfo);
 addDecorator(withVivyOptions);
 addDecorator(withGlobalStyles);
 
