@@ -1290,6 +1290,8 @@ exports[`Storyshots Welcome Typography 1`] = `
           </small>
           <br />
           <a
+            href="https://www.vivy.com/"
+            rel="noopener noreferrer"
             style="margin-left:-16px;margin-top:48px"
           >
             This is a link
