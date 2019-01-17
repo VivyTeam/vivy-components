@@ -1,4 +1,4 @@
-import { injectGlobal } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import ie9Compat00 from "../../public/fonts/TTNorms/35C396_0_0.eot";
 import woff200 from "../../public/fonts/TTNorms/35C396_0_0.woff2";
 import woff00 from "../../public/fonts/TTNorms/35C396_0_0.woff";
@@ -34,8 +34,11 @@ import vivyIconsWoff from "../../public/fonts/vivy-icons/vivy-icons.woff";
 import vivyIconsTtf from "../../public/fonts/vivy-icons/vivy-icons.ttf";
 import vivyIconsSvg from "../../public/fonts/vivy-icons/vivy-icons.svg";
 
-// eslint-disable-next-line
-injectGlobal`
+const Fonts = createGlobalStyle`
+    body {
+      font-family: 'TTNorms', sans-serif;
+    }
+
     @font-face {
       font-family: 'Norms';
       font-weight: 700;
@@ -106,3 +109,5 @@ injectGlobal`
       font-style: normal;
     }
 `;
+
+export default Fonts;
