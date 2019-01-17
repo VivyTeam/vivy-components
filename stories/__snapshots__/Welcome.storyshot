@@ -1,0 +1,1700 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Welcome Colors 1`] = `
+<div>
+  <div
+    style="position:relative;z-index:0"
+  >
+    <div
+      class="Welcome__ThemeStyles-sc-13skmlg-0 djNMEJ"
+    >
+      <div
+        class="themeColorsstyle__ThemeStyles-sc-16a7e8l-0 eKTKuW"
+      >
+        <div
+          class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+        >
+          <div
+            class="row default-width position-start text-align-left top normal "
+          >
+            <div
+              class="col-lg-12 col-lg-offset-0 "
+            >
+              <h2>
+                Colors
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+        >
+          <div
+            class="row default-width position-center text-align-center top around "
+          >
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#fff"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-color:#04d4bf"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Brand color
+                  </p>
+                  <small>
+                    #04d4bf
+                  </small>
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#fff"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-color:#05e6c8"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Alt brand color
+                  </p>
+                  <small>
+                    #05e6c8
+                  </small>
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#fff"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-color:#09cbb8"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Actionable text
+                  </p>
+                  <small>
+                    #09cbb8
+                  </small>
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#fff"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-color:#e94119"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Alert
+                  </p>
+                  <small>
+                    #e94119
+                  </small>
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#575756"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-color:#f5f5f5"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Background
+                  </p>
+                  <small>
+                    #f5f5f5
+                  </small>
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#fff"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-color:#353f41"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Primary
+                  </p>
+                  <small>
+                    #353f41
+                  </small>
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#fff"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-color:#7b7b7b"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Secondary
+                  </p>
+                  <small>
+                    #7b7b7b
+                  </small>
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#fff"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-color:#bfbfbf"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Hint
+                  </p>
+                  <small>
+                    #bfbfbf
+                  </small>
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#575756"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-color:#e0e0e0"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Divider
+                  </p>
+                  <small>
+                    #e0e0e0
+                  </small>
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+        >
+          <div
+            class="row default-width position-start text-align-left top normal "
+          >
+            <div
+              class="col-lg-12 col-lg-offset-0 "
+            >
+              <h2>
+                Gradient
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+        >
+          <div
+            class="row default-width position-center text-align-center top around "
+          >
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#fff"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-image:linear-gradient(180deg,#34de95,#14cfc1)"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Positive
+                  </p>
+                  <small />
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#fff"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-image:linear-gradient(180deg,#ffe071,#ffa97c)"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Neutral
+                  </p>
+                  <small />
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#fff"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-image:linear-gradient(180deg,#ff7676,#f54ea2)"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Negative
+                  </p>
+                  <small />
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-0 col-lg-offset-0 "
+            >
+              <div
+                class="color-box-container"
+                style="color:#fff"
+              >
+                <div
+                  class="color-box"
+                  role="button"
+                  style="background-image:linear-gradient(180deg,#cccbd0,#bcbbc1)"
+                  tabindex="0"
+                >
+                  <p
+                    style="margin:.5rem;font-weight:500"
+                  >
+                    Inactive
+                  </p>
+                  <small />
+                  <h3
+                    class="copy"
+                  >
+                    Copy
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="info__show-button"
+    style="font-family:sans-serif;font-size:12px;display:block;position:fixed;border:none;background:#28c;color:#fff;padding:5px 15px;cursor:pointer;top:0;right:0;border-radius:0 0 0 5px"
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    class="info__overlay"
+    style="position:fixed;background:white;top:0;bottom:0;left:0;right:0;padding:0 40px;overflow:auto;z-index:99999;display:none"
+  >
+    <button
+      class="info__close-button"
+      style="font-family:sans-serif;font-size:12px;display:block;position:fixed;border:none;background:#28c;color:#fff;padding:5px 15px;cursor:pointer;top:0;right:0;border-radius:0 0 0 5px"
+      type="button"
+    >
+      ×
+    </button>
+    <div>
+      <div
+        style="font-family:-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif;color:#444;-webkit-font-smoothing:antialiased;font-weight:300;line-height:1.45;font-size:15px;border:1px solid #eee;padding:20px 40px 40px;border-radius:2px;background-color:#fff;margin-top:20px;margin-bottom:20px"
+      >
+        <div
+          style="border-bottom:1px solid #eee;padding-top:10px;margin-bottom:10px"
+        >
+          <h1
+            style="margin:0;padding:0;font-size:35px"
+          >
+            Welcome
+          </h1>
+          <h2
+            style="margin:0 0 10px 0;padding:0;font-weight:400;font-size:22px"
+          >
+            Colors
+          </h2>
+        </div>
+        <div>
+          <h1
+            style="margin:20px 0 0 0;padding:0 0 5px 0;font-size:25px;border-bottom:1px solid #EEE"
+          >
+            Story Source
+          </h1>
+          <pre
+            style="display:flex;justify-content:space-between;align-items:center;font-size:.88em;font-family:Menlo, Monaco, \\"Courier New\\", monospace;background-color:#fafafa;padding:.5rem;line-height:1.5;overflow-x:scroll"
+          >
+            <div>
+              <div>
+                <div
+                  style="padding-left:18px;padding-right:3px"
+                >
+                  <span
+                    style="color:#444"
+                  >
+                    &lt;ForwardRef
+                  </span>
+                  <span />
+                  <span
+                    style="color:#444"
+                  >
+                    &gt;
+                  </span>
+                </div>
+                <div>
+                  <div
+                    style="padding-left:33px;padding-right:3px"
+                  >
+                    <span
+                      style="color:#444"
+                    >
+                      &lt;StyledComponent
+                    </span>
+                    <span>
+                      <span>
+                         
+                        <span>
+                          forwardedComponent
+                        </span>
+                        <span>
+                          =
+                          <span>
+                            {
+                            <span
+                              style="color:#666"
+                            >
+                              {
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                <span
+                                  style="color:#666"
+                                >
+                                  $$typeof
+                                </span>
+                              </span>
+                              : 
+                              <span>
+                                …
+                              </span>
+                              ,
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                <span
+                                  style="color:#666"
+                                >
+                                  render
+                                </span>
+                              </span>
+                              : 
+                              <span
+                                style="color:#170"
+                              >
+                                anonymous
+                              </span>
+                              ,
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                <span
+                                  style="color:#666"
+                                >
+                                  attrs
+                                </span>
+                              </span>
+                              : 
+                              <span
+                                style="color:#666"
+                              >
+                                []
+                              </span>
+                              ,
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                …
+                              </span>
+                              <span>
+                                <br />
+                                  
+                              </span>
+                              }
+                            </span>
+                            }
+                          </span>
+                        </span>
+                      </span>
+                      <span>
+                         
+                        <span>
+                          forwardedRef
+                        </span>
+                        <span>
+                          =
+                          <span>
+                            {
+                            <span
+                              style="color:#444"
+                            >
+                              null
+                            </span>
+                            }
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                    <span
+                      style="color:#444"
+                    >
+                      &gt;
+                    </span>
+                  </div>
+                  <div
+                    style="padding-left:48px;padding-right:3px"
+                  >
+                    <span
+                      style="color:#444"
+                    >
+                      &lt;ThemeColors
+                    </span>
+                    <span />
+                    <span
+                      style="color:#444"
+                    >
+                      /&gt;
+                    </span>
+                  </div>
+                  <div
+                    style="padding-left:33px;padding-right:3px"
+                  >
+                    <span
+                      style="color:#444"
+                    >
+                      &lt;/StyledComponent&gt;
+                    </span>
+                  </div>
+                </div>
+                <div
+                  style="padding-left:18px;padding-right:3px"
+                >
+                  <span
+                    style="color:#444"
+                  >
+                    &lt;/ForwardRef&gt;
+                  </span>
+                </div>
+              </div>
+            </div>
+            <button
+              style="background-color:rgb(255, 255, 255);cursor:pointer;font-size:13px;align-self:flex-start;flex-shrink:0;overflow:hidden;border-width:1px;border-style:solid;border-color:rgb(238, 238, 238);border-image:initial;border-radius:3px;padding:3px 10px"
+              type="button"
+            >
+              Copy
+            </button>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style="margin:20px 0 0 0;padding:0 0 5px 0;font-size:25px;border-bottom:1px solid #EEE"
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style="margin:20px 0 0 0"
+            >
+              "StyledComponent" Component
+            </h2>
+            <small>
+              No propTypes defined!
+            </small>
+          </div>
+          <div>
+            <h2
+              style="margin:20px 0 0 0"
+            >
+              "ThemeColors" Component
+            </h2>
+            <small>
+              No propTypes defined!
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Welcome Logos 1`] = `
+<div>
+  <div
+    style="position:relative;z-index:0"
+  >
+    <div
+      class="Welcome__ThemeStyles-sc-13skmlg-0 djNMEJ"
+    >
+      <div
+        class="themeLogosstyle__ThemeLogosStyles-sc-1aoi25u-0 pEcZK"
+      >
+        <div
+          class="logo-container"
+        >
+          <div
+            class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+          >
+            <div
+              class="row default-width position-start text-align-left top normal "
+            >
+              <div
+                class="col-lg-4 col-lg-offset-0 "
+              >
+                <div
+                  class="logo-box"
+                >
+                  <img
+                    alt="Vivy logo"
+                    src="file-stub"
+                  />
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-lg-offset-0 "
+              >
+                <div
+                  class="logo-box"
+                >
+                  <img
+                    alt="Vivy logo letterhead"
+                    src="file-stub"
+                    width="130"
+                  />
+                </div>
+              </div>
+              <div
+                class="col-lg-4 col-lg-offset-0 "
+              >
+                <div
+                  class="logo-box"
+                >
+                  <img
+                    alt="Vivy complete logo"
+                    src="file-stub"
+                    width="80"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="info__show-button"
+    style="font-family:sans-serif;font-size:12px;display:block;position:fixed;border:none;background:#28c;color:#fff;padding:5px 15px;cursor:pointer;top:0;right:0;border-radius:0 0 0 5px"
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    class="info__overlay"
+    style="position:fixed;background:white;top:0;bottom:0;left:0;right:0;padding:0 40px;overflow:auto;z-index:99999;display:none"
+  >
+    <button
+      class="info__close-button"
+      style="font-family:sans-serif;font-size:12px;display:block;position:fixed;border:none;background:#28c;color:#fff;padding:5px 15px;cursor:pointer;top:0;right:0;border-radius:0 0 0 5px"
+      type="button"
+    >
+      ×
+    </button>
+    <div>
+      <div
+        style="font-family:-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif;color:#444;-webkit-font-smoothing:antialiased;font-weight:300;line-height:1.45;font-size:15px;border:1px solid #eee;padding:20px 40px 40px;border-radius:2px;background-color:#fff;margin-top:20px;margin-bottom:20px"
+      >
+        <div
+          style="border-bottom:1px solid #eee;padding-top:10px;margin-bottom:10px"
+        >
+          <h1
+            style="margin:0;padding:0;font-size:35px"
+          >
+            Welcome
+          </h1>
+          <h2
+            style="margin:0 0 10px 0;padding:0;font-weight:400;font-size:22px"
+          >
+            Logos
+          </h2>
+        </div>
+        <div>
+          <h1
+            style="margin:20px 0 0 0;padding:0 0 5px 0;font-size:25px;border-bottom:1px solid #EEE"
+          >
+            Story Source
+          </h1>
+          <pre
+            style="display:flex;justify-content:space-between;align-items:center;font-size:.88em;font-family:Menlo, Monaco, \\"Courier New\\", monospace;background-color:#fafafa;padding:.5rem;line-height:1.5;overflow-x:scroll"
+          >
+            <div>
+              <div>
+                <div
+                  style="padding-left:18px;padding-right:3px"
+                >
+                  <span
+                    style="color:#444"
+                  >
+                    &lt;ForwardRef
+                  </span>
+                  <span />
+                  <span
+                    style="color:#444"
+                  >
+                    &gt;
+                  </span>
+                </div>
+                <div>
+                  <div
+                    style="padding-left:33px;padding-right:3px"
+                  >
+                    <span
+                      style="color:#444"
+                    >
+                      &lt;StyledComponent
+                    </span>
+                    <span>
+                      <span>
+                         
+                        <span>
+                          forwardedComponent
+                        </span>
+                        <span>
+                          =
+                          <span>
+                            {
+                            <span
+                              style="color:#666"
+                            >
+                              {
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                <span
+                                  style="color:#666"
+                                >
+                                  $$typeof
+                                </span>
+                              </span>
+                              : 
+                              <span>
+                                …
+                              </span>
+                              ,
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                <span
+                                  style="color:#666"
+                                >
+                                  render
+                                </span>
+                              </span>
+                              : 
+                              <span
+                                style="color:#170"
+                              >
+                                anonymous
+                              </span>
+                              ,
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                <span
+                                  style="color:#666"
+                                >
+                                  attrs
+                                </span>
+                              </span>
+                              : 
+                              <span
+                                style="color:#666"
+                              >
+                                []
+                              </span>
+                              ,
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                …
+                              </span>
+                              <span>
+                                <br />
+                                  
+                              </span>
+                              }
+                            </span>
+                            }
+                          </span>
+                        </span>
+                      </span>
+                      <span>
+                         
+                        <span>
+                          forwardedRef
+                        </span>
+                        <span>
+                          =
+                          <span>
+                            {
+                            <span
+                              style="color:#444"
+                            >
+                              null
+                            </span>
+                            }
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                    <span
+                      style="color:#444"
+                    >
+                      &gt;
+                    </span>
+                  </div>
+                  <div
+                    style="padding-left:48px;padding-right:3px"
+                  >
+                    <span
+                      style="color:#444"
+                    >
+                      &lt;ThemeLogos
+                    </span>
+                    <span />
+                    <span
+                      style="color:#444"
+                    >
+                      /&gt;
+                    </span>
+                  </div>
+                  <div
+                    style="padding-left:33px;padding-right:3px"
+                  >
+                    <span
+                      style="color:#444"
+                    >
+                      &lt;/StyledComponent&gt;
+                    </span>
+                  </div>
+                </div>
+                <div
+                  style="padding-left:18px;padding-right:3px"
+                >
+                  <span
+                    style="color:#444"
+                  >
+                    &lt;/ForwardRef&gt;
+                  </span>
+                </div>
+              </div>
+            </div>
+            <button
+              style="background-color:rgb(255, 255, 255);cursor:pointer;font-size:13px;align-self:flex-start;flex-shrink:0;overflow:hidden;border-width:1px;border-style:solid;border-color:rgb(238, 238, 238);border-image:initial;border-radius:3px;padding:3px 10px"
+              type="button"
+            >
+              Copy
+            </button>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style="margin:20px 0 0 0;padding:0 0 5px 0;font-size:25px;border-bottom:1px solid #EEE"
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style="margin:20px 0 0 0"
+            >
+              "StyledComponent" Component
+            </h2>
+            <small>
+              No propTypes defined!
+            </small>
+          </div>
+          <div>
+            <h2
+              style="margin:20px 0 0 0"
+            >
+              "ThemeLogos" Component
+            </h2>
+            <small>
+              No propTypes defined!
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Welcome Principles 1`] = `
+<div>
+  <div
+    style="position:relative;z-index:0"
+  >
+    <div
+      class="welcomestyle__WelcomeStyles-sc-114f65x-0 kdzEBu"
+    >
+      <div
+        class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+      >
+        <div
+          class="row default-width position-start text-align-left top normal "
+        >
+          <div
+            class="col-lg-12 col-lg-offset-0 "
+          >
+            <div
+              class="container"
+            >
+              <h1>
+                Principles
+              </h1>
+              <div
+                class="box"
+              >
+                <h3>
+                  Integrity
+                </h3>
+                <p>
+                  We design products to be open, honest and re­liable. Their interfaces are channels of truth which never obscure our intentions.
+                </p>
+              </div>
+              <div
+                class="box"
+              >
+                <h3>
+                  Simplicity
+                </h3>
+                <p>
+                  We create products to empower our users. We honor their goals by paving their way. For every solution, we strive for its essence.
+                </p>
+              </div>
+              <div
+                class="box"
+              >
+                <h3>
+                  Confidence
+                </h3>
+                <p>
+                  We challenge our ideas and let understanding drive our decisions. Through research and exploration, we transform uncertainties into insight.
+                </p>
+              </div>
+              <div
+                class="box"
+              >
+                <h3>
+                  Inclusivity
+                </h3>
+                <p>
+                  We design for humans, in all their diversity. We welcome them, comfort them, guide them, serve them and never get in their way.
+                </p>
+              </div>
+              <div
+                class="box"
+              >
+                <h3>
+                  Delight
+                </h3>
+                <p>
+                  We enrich our products with moments of joy and comfort to express our appreciation for the person on the other side of the screen.
+                </p>
+              </div>
+              <div
+                class="box"
+              >
+                <h3>
+                  Momentum
+                </h3>
+                <p>
+                  We question our work and are willing to kill our darlings. We fight for our ideas, listen to arguments, agree or disagree, but always commit.
+                </p>
+              </div>
+              <div
+                class="box"
+              >
+                <h3>
+                  Consistency
+                </h3>
+                <p>
+                  We think holistically. The bigger picture always informs our decisions down to the tiniest detail. Every change to one part enhances the whole.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="info__show-button"
+    style="font-family:sans-serif;font-size:12px;display:block;position:fixed;border:none;background:#28c;color:#fff;padding:5px 15px;cursor:pointer;top:0;right:0;border-radius:0 0 0 5px"
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    class="info__overlay"
+    style="position:fixed;background:white;top:0;bottom:0;left:0;right:0;padding:0 40px;overflow:auto;z-index:99999;display:none"
+  >
+    <button
+      class="info__close-button"
+      style="font-family:sans-serif;font-size:12px;display:block;position:fixed;border:none;background:#28c;color:#fff;padding:5px 15px;cursor:pointer;top:0;right:0;border-radius:0 0 0 5px"
+      type="button"
+    >
+      ×
+    </button>
+    <div>
+      <div
+        style="font-family:-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif;color:#444;-webkit-font-smoothing:antialiased;font-weight:300;line-height:1.45;font-size:15px;border:1px solid #eee;padding:20px 40px 40px;border-radius:2px;background-color:#fff;margin-top:20px;margin-bottom:20px"
+      >
+        <div
+          style="border-bottom:1px solid #eee;padding-top:10px;margin-bottom:10px"
+        >
+          <h1
+            style="margin:0;padding:0;font-size:35px"
+          >
+            Welcome
+          </h1>
+          <h2
+            style="margin:0 0 10px 0;padding:0;font-weight:400;font-size:22px"
+          >
+            Principles
+          </h2>
+        </div>
+        <div>
+          <h1
+            style="margin:20px 0 0 0;padding:0 0 5px 0;font-size:25px;border-bottom:1px solid #EEE"
+          >
+            Story Source
+          </h1>
+          <pre
+            style="display:flex;justify-content:space-between;align-items:center;font-size:.88em;font-family:Menlo, Monaco, \\"Courier New\\", monospace;background-color:#fafafa;padding:.5rem;line-height:1.5;overflow-x:scroll"
+          >
+            <div>
+              <div
+                style="padding-left:18px;padding-right:3px"
+              >
+                <span
+                  style="color:#444"
+                >
+                  &lt;PrinciplesPage
+                </span>
+                <span />
+                <span
+                  style="color:#444"
+                >
+                  /&gt;
+                </span>
+              </div>
+            </div>
+            <button
+              style="background-color:rgb(255, 255, 255);cursor:pointer;font-size:13px;align-self:flex-start;flex-shrink:0;overflow:hidden;border-width:1px;border-style:solid;border-color:rgb(238, 238, 238);border-image:initial;border-radius:3px;padding:3px 10px"
+              type="button"
+            >
+              Copy
+            </button>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style="margin:20px 0 0 0;padding:0 0 5px 0;font-size:25px;border-bottom:1px solid #EEE"
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style="margin:20px 0 0 0"
+            >
+              "PrinciplesPage" Component
+            </h2>
+            <small>
+              No propTypes defined!
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Welcome Typography 1`] = `
+<div>
+  <div
+    style="position:relative;z-index:0"
+  >
+    <div
+      class="Welcome__ThemeStyles-sc-13skmlg-0 djNMEJ"
+    >
+      <div
+        class="themeTypographystyle__FontStyles-sc-1pi0k1g-0 wjTGu"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="title"
+          >
+            Typography
+          </div>
+          <br />
+          <h1
+            style="margin-top:32px"
+          >
+            Heading One
+          </h1>
+          <small>
+            TTNorms-Medium, 3rem (48px) line-height: 54px
+          </small>
+          <br />
+          <h2
+            style="margin-top:32px"
+          >
+            Heading Two
+          </h2>
+          <small>
+            TTNorms-Regular, 2.25rem (36px) line-height: 42px
+          </small>
+          <br />
+          <h3
+            style="margin-top:32px"
+          >
+            Heading Three
+          </h3>
+          <small>
+            TTNorms-Regular, 2.5rem (40px), #575756, line-height: 46px
+          </small>
+          <br />
+          <h4
+            style="margin-top:32px"
+          >
+            Heading Four
+          </h4>
+          <small>
+            TTNorms-Regular, 2rem (32px), #575756, line-height: 36px
+          </small>
+          <br />
+          <h5
+            style="margin-top:32px"
+          >
+            Heading Five
+          </h5>
+          <small>
+            TTNorms-Medium, 1.5rem (24px), #575756, line-height: 30px
+          </small>
+          <br />
+          <p
+            style="margin-top:48px"
+          >
+            Paragraph
+          </p>
+          <p>
+            Teilen Sie Untersuchungs­ergebnisse und Befunde sicher und einfach mit Patienten und erhalten Sie in der gleichen Weise wichtige Unterlagen aus vorangegangenen Untersuchungen. Für eine bessere Patientenbindung, effiziente Diagnosen und weniger Doppelbehandlungen.
+          </p>
+          <small>
+            TTNorms-Regular, 1rem (16px), #575756, line-height: 26px
+          </small>
+          <br />
+          <small
+            style="margin-top:56px;display:block"
+          >
+            Caption
+          </small>
+          <br />
+          <small>
+            TTNorms-Regular, 0.9375rem (15px), #575756, line-height: 20px
+          </small>
+          <small
+            style="color:red;display:block"
+          >
+            Small and hard to read for many people so use with caution
+          </small>
+          <br />
+          <a
+            href="https://www.vivy.com/"
+            rel="noopener noreferrer"
+            style="margin-left:-16px;margin-top:48px"
+          >
+            This is a link
+          </a>
+          <small>
+            TTNorms-Medium, 1rem (16px), #575756, line-height: 22px
+          </small>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="info__show-button"
+    style="font-family:sans-serif;font-size:12px;display:block;position:fixed;border:none;background:#28c;color:#fff;padding:5px 15px;cursor:pointer;top:0;right:0;border-radius:0 0 0 5px"
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    class="info__overlay"
+    style="position:fixed;background:white;top:0;bottom:0;left:0;right:0;padding:0 40px;overflow:auto;z-index:99999;display:none"
+  >
+    <button
+      class="info__close-button"
+      style="font-family:sans-serif;font-size:12px;display:block;position:fixed;border:none;background:#28c;color:#fff;padding:5px 15px;cursor:pointer;top:0;right:0;border-radius:0 0 0 5px"
+      type="button"
+    >
+      ×
+    </button>
+    <div>
+      <div
+        style="font-family:-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif;color:#444;-webkit-font-smoothing:antialiased;font-weight:300;line-height:1.45;font-size:15px;border:1px solid #eee;padding:20px 40px 40px;border-radius:2px;background-color:#fff;margin-top:20px;margin-bottom:20px"
+      >
+        <div
+          style="border-bottom:1px solid #eee;padding-top:10px;margin-bottom:10px"
+        >
+          <h1
+            style="margin:0;padding:0;font-size:35px"
+          >
+            Welcome
+          </h1>
+          <h2
+            style="margin:0 0 10px 0;padding:0;font-weight:400;font-size:22px"
+          >
+            Typography
+          </h2>
+        </div>
+        <div>
+          <h1
+            style="margin:20px 0 0 0;padding:0 0 5px 0;font-size:25px;border-bottom:1px solid #EEE"
+          >
+            Story Source
+          </h1>
+          <pre
+            style="display:flex;justify-content:space-between;align-items:center;font-size:.88em;font-family:Menlo, Monaco, \\"Courier New\\", monospace;background-color:#fafafa;padding:.5rem;line-height:1.5;overflow-x:scroll"
+          >
+            <div>
+              <div>
+                <div
+                  style="padding-left:18px;padding-right:3px"
+                >
+                  <span
+                    style="color:#444"
+                  >
+                    &lt;ForwardRef
+                  </span>
+                  <span />
+                  <span
+                    style="color:#444"
+                  >
+                    &gt;
+                  </span>
+                </div>
+                <div>
+                  <div
+                    style="padding-left:33px;padding-right:3px"
+                  >
+                    <span
+                      style="color:#444"
+                    >
+                      &lt;StyledComponent
+                    </span>
+                    <span>
+                      <span>
+                         
+                        <span>
+                          forwardedComponent
+                        </span>
+                        <span>
+                          =
+                          <span>
+                            {
+                            <span
+                              style="color:#666"
+                            >
+                              {
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                <span
+                                  style="color:#666"
+                                >
+                                  $$typeof
+                                </span>
+                              </span>
+                              : 
+                              <span>
+                                …
+                              </span>
+                              ,
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                <span
+                                  style="color:#666"
+                                >
+                                  render
+                                </span>
+                              </span>
+                              : 
+                              <span
+                                style="color:#170"
+                              >
+                                anonymous
+                              </span>
+                              ,
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                <span
+                                  style="color:#666"
+                                >
+                                  attrs
+                                </span>
+                              </span>
+                              : 
+                              <span
+                                style="color:#666"
+                              >
+                                []
+                              </span>
+                              ,
+                              <span>
+                                <span>
+                                  <br />
+                                      
+                                </span>
+                                …
+                              </span>
+                              <span>
+                                <br />
+                                  
+                              </span>
+                              }
+                            </span>
+                            }
+                          </span>
+                        </span>
+                      </span>
+                      <span>
+                         
+                        <span>
+                          forwardedRef
+                        </span>
+                        <span>
+                          =
+                          <span>
+                            {
+                            <span
+                              style="color:#444"
+                            >
+                              null
+                            </span>
+                            }
+                          </span>
+                        </span>
+                      </span>
+                    </span>
+                    <span
+                      style="color:#444"
+                    >
+                      &gt;
+                    </span>
+                  </div>
+                  <div
+                    style="padding-left:48px;padding-right:3px"
+                  >
+                    <span
+                      style="color:#444"
+                    >
+                      &lt;ThemeTypography
+                    </span>
+                    <span />
+                    <span
+                      style="color:#444"
+                    >
+                      /&gt;
+                    </span>
+                  </div>
+                  <div
+                    style="padding-left:33px;padding-right:3px"
+                  >
+                    <span
+                      style="color:#444"
+                    >
+                      &lt;/StyledComponent&gt;
+                    </span>
+                  </div>
+                </div>
+                <div
+                  style="padding-left:18px;padding-right:3px"
+                >
+                  <span
+                    style="color:#444"
+                  >
+                    &lt;/ForwardRef&gt;
+                  </span>
+                </div>
+              </div>
+            </div>
+            <button
+              style="background-color:rgb(255, 255, 255);cursor:pointer;font-size:13px;align-self:flex-start;flex-shrink:0;overflow:hidden;border-width:1px;border-style:solid;border-color:rgb(238, 238, 238);border-image:initial;border-radius:3px;padding:3px 10px"
+              type="button"
+            >
+              Copy
+            </button>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style="margin:20px 0 0 0;padding:0 0 5px 0;font-size:25px;border-bottom:1px solid #EEE"
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style="margin:20px 0 0 0"
+            >
+              "StyledComponent" Component
+            </h2>
+            <small>
+              No propTypes defined!
+            </small>
+          </div>
+          <div>
+            <h2
+              style="margin:20px 0 0 0"
+            >
+              "ThemeTypography" Component
+            </h2>
+            <small>
+              No propTypes defined!
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Welcome Vision & Ethos 1`] = `
+<div>
+  <div
+    style="position:relative;z-index:0"
+  >
+    <div
+      class="welcomestyle__WelcomeStyles-sc-114f65x-0 kdzEBu"
+    >
+      <div
+        class="inherited-height  indexstyle__RowStyles-sc-7zwqmf-0 djeDtC"
+      >
+        <div
+          class="row default-width position-start text-align-left top normal "
+        >
+          <div
+            class="col-lg-12 col-lg-offset-0 "
+          >
+            <div
+              class="container"
+            >
+              <h1>
+                Vision & Ethos
+              </h1>
+              <p
+                style="margin-top:4rem"
+              >
+                The styleguide and component library aims to bring engineering and design together.
+                <br />
+                 
+                <br />
+                 
+                <br />
+                Components tie into our frontend infrastructure to empower a design first approach.
+                <br />
+                 
+                <br />
+                 
+                <br />
+                With this philosophy we aim to have consistent and accessible design that unifies our features into a greater whole.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="info__show-button"
+    style="font-family:sans-serif;font-size:12px;display:block;position:fixed;border:none;background:#28c;color:#fff;padding:5px 15px;cursor:pointer;top:0;right:0;border-radius:0 0 0 5px"
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    class="info__overlay"
+    style="position:fixed;background:white;top:0;bottom:0;left:0;right:0;padding:0 40px;overflow:auto;z-index:99999;display:none"
+  >
+    <button
+      class="info__close-button"
+      style="font-family:sans-serif;font-size:12px;display:block;position:fixed;border:none;background:#28c;color:#fff;padding:5px 15px;cursor:pointer;top:0;right:0;border-radius:0 0 0 5px"
+      type="button"
+    >
+      ×
+    </button>
+    <div>
+      <div
+        style="font-family:-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif;color:#444;-webkit-font-smoothing:antialiased;font-weight:300;line-height:1.45;font-size:15px;border:1px solid #eee;padding:20px 40px 40px;border-radius:2px;background-color:#fff;margin-top:20px;margin-bottom:20px"
+      >
+        <div
+          style="border-bottom:1px solid #eee;padding-top:10px;margin-bottom:10px"
+        >
+          <h1
+            style="margin:0;padding:0;font-size:35px"
+          >
+            Welcome
+          </h1>
+          <h2
+            style="margin:0 0 10px 0;padding:0;font-weight:400;font-size:22px"
+          >
+            Vision & Ethos
+          </h2>
+        </div>
+        <div>
+          <h1
+            style="margin:20px 0 0 0;padding:0 0 5px 0;font-size:25px;border-bottom:1px solid #EEE"
+          >
+            Story Source
+          </h1>
+          <pre
+            style="display:flex;justify-content:space-between;align-items:center;font-size:.88em;font-family:Menlo, Monaco, \\"Courier New\\", monospace;background-color:#fafafa;padding:.5rem;line-height:1.5;overflow-x:scroll"
+          >
+            <div>
+              <div
+                style="padding-left:18px;padding-right:3px"
+              >
+                <span
+                  style="color:#444"
+                >
+                  &lt;WelcomePage
+                </span>
+                <span />
+                <span
+                  style="color:#444"
+                >
+                  /&gt;
+                </span>
+              </div>
+            </div>
+            <button
+              style="background-color:rgb(255, 255, 255);cursor:pointer;font-size:13px;align-self:flex-start;flex-shrink:0;overflow:hidden;border-width:1px;border-style:solid;border-color:rgb(238, 238, 238);border-image:initial;border-radius:3px;padding:3px 10px"
+              type="button"
+            >
+              Copy
+            </button>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style="margin:20px 0 0 0;padding:0 0 5px 0;font-size:25px;border-bottom:1px solid #EEE"
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style="margin:20px 0 0 0"
+            >
+              "WelcomePage" Component
+            </h2>
+            <small>
+              No propTypes defined!
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -17,38 +17,40 @@ const LayoutStyles = styled.div`
   }
 `;
 
-storiesOf("Layout", module).add("Simple Page", () => (
-  <LayoutStyles>
-    <Topbar>
-      <a
-        className="link"
-        href="https://www.vivy.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img className="logo" src={logo} alt="Vivy Logo" />
-      </a>
-    </Topbar>
-    <div className="layout-body">
-      <MedicalCard
-        user={{
-          name: "Demo User",
-          dateOfBirth: "1970-01-01"
-        }}
-        data={{
-          gender: {
-            text: "Other",
-            icon: "gender-other-16"
-          },
-          weight: "82",
-          height: "180",
-          bloodType: "A-"
-        }}
-        lastUpdatedAt="1970-01-01"
-      />
-    </div>
-    <VivyFooter />
-  </LayoutStyles>
+storiesOf("Layout", module).add(
+  "Simple Page",
+  () => (
+    <LayoutStyles>
+      <Topbar>
+        <a
+          className="link"
+          href="https://www.vivy.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="logo" src={logo} alt="Vivy Logo" />
+        </a>
+      </Topbar>
+      <div className="layout-body">
+        <MedicalCard
+          user={{
+            name: "Demo User",
+            dateOfBirth: "1970-01-01"
+          }}
+          data={{
+            gender: {
+              text: "Other",
+              icon: "gender-other-16"
+            },
+            weight: "82",
+            height: "180",
+            bloodType: "A-"
+          }}
+          lastUpdatedAt="1970-01-01"
+        />
+      </div>
+      <VivyFooter />
+    </LayoutStyles>
   ),
   { info: "A simple page with topbar, body, footer" }
 );

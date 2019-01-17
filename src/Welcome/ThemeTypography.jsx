@@ -51,7 +51,13 @@ export default function ThemeTypography() {
         </small>
         <br />
 
-        <a style={{ marginLeft: "-16px", marginTop: "48px" }}>This is a link</a>
+        <a
+          href="https://www.vivy.com/"
+          rel="noopener noreferrer"
+          style={{ marginLeft: "-16px", marginTop: "48px" }}
+        >
+          This is a link
+        </a>
         <small>TTNorms-Medium, 1rem (16px), #575756, line-height: 22px</small>
         <br />
       </div>
