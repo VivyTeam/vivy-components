@@ -1,5 +1,5 @@
 import { withOptions } from "@storybook/addon-options";
-import Fonts from "../src/Fonts";
+import { Fonts, GlobalStyles } from "../src/index";
 import React from "react";
 
 export const withVivyOptions = withOptions({
@@ -12,6 +12,7 @@ export const withVivyOptions = withOptions({
 export function withGlobalStyles(storyFn) {
   return (
     <React.Fragment>
+      <GlobalStyles />
       <Fonts />
       {storyFn()}
     </React.Fragment>
