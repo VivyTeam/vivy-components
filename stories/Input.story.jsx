@@ -1,37 +1,56 @@
-import React from "react";
-import styled from "styled-components";
+import React, { Fragment, Component } from "react";
 import { storiesOf } from "@storybook/react";
-import { Input } from "../src/index";
+import { Input, Button } from "../src/index";
 
-const PageLayout = styled.div`
-  padding: 50px 100px;
-  display: flex;
-`;
+class Focus extends Component {
+  constructor(props) {
+    super(props);
+    this.textInput = React.createRef();
+    this.focusTextInput = this.focusTextInput.bind(this);
+  }
+
+  focusTextInput() {
+    this.textInput.current.focus();
+  }
+  render() {
+    return (
+      <Fragment>
+        <Input
+          id="name"
+          placeholder="Please add your name"
+          label="First name"
+          rel={this.textInput}
+        />
+        <Button
+          style={{ width: "100%", marginTop: 12 }}
+          onClick={this.focusTextInput}
+        >
+          Focus
+        </Button>
+      </Fragment>
+    );
+  }
+}
 
 storiesOf("Input", module)
   .add("basic", () => (
-    <PageLayout>
-      <Input id="name" placeholder="Please add your name" label="First name" />
-    </PageLayout>
+    <Input id="name" placeholder="Please add your name" label="First name" />
   ))
   .add("default value", () => (
-    <PageLayout>
-      <Input
-        placeholder="Enter your name"
-        label="Your name"
-        id="name"
-        defaultValue="John Doe"
-      />
-    </PageLayout>
+    <Input
+      placeholder="Enter your name"
+      label="Your name"
+      id="name"
+      defaultValue="John Doe"
+    />
   ))
   .add("icon left", () => (
-    <PageLayout>
-      <Input
-        iconName="email"
-        id="email"
-        placeholder="Email"
-        label="Email"
-        type="text"
-      />
-    </PageLayout>
-  ));
+    <Input
+      iconName="email"
+      id="email"
+      placeholder="Email"
+      label="Email"
+      type="text"
+    />
+  ))
+  .add("with focus on click", () => <Focus />);
