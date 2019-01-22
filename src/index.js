@@ -3,6 +3,7 @@ export { default as Button } from "./Buttons/Button";
 export { default as AnchorButton } from "./Buttons/AnchorButton";
 export { default as Icon } from "./Icon";
 export { default as Fonts } from "./Fonts";
+export { default as GlobalStyles } from "./GlobalStyles";
 export { default as DateDisplayMinimal } from "./DateDisplayMinimal";
 export { default as Textarea } from "./Textarea";
 export { default as Input } from "./Input";
