@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs";
+import devices from "puppeteer/DeviceDescriptors";
 
 export function getStorybookUrl() {
   let location = path.join(__dirname, "..", "storybook-static");
@@ -16,3 +17,7 @@ export const failureThreshold = () => ({
   failureThreshold: 0.1,
   failureThresholdType: "percent"
 });
+
+const tablet = devices["iPad landscape"];
+export const customizePage = page => page.emulate(tablet);
+export const beforeScreenshot = page => page.emulate(tablet);

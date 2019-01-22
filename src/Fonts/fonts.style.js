@@ -36,7 +36,7 @@ import vivyIconsSvg from "../../public/fonts/vivy-icons/vivy-icons.svg";
 
 const Fonts = createGlobalStyle`
     body {
-      font-family: 'TTNorms', sans-serif;
+      font-family: 'Norms', sans-serif;
     }
 
     @font-face {
