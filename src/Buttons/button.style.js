@@ -39,7 +39,8 @@ const ButtonStyles = styled.div`
   a {
     font-family: system-ui;
     border-radius: 4px;
-    display: block;
+    display: inline-block;
+    text-align: center;
     text-decoration: none;
   }
 
