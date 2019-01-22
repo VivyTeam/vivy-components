@@ -55,7 +55,7 @@
     "babel-loader": "8.0.5",
     "babel-plugin-require-context-hook": "1.0.0",
     "babel-plugin-styled-components": "1.10.0",
-    "eslint": "^5.10.0",
+    "eslint": "^5.12.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.11.0",
