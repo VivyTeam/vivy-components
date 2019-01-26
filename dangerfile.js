@@ -23,8 +23,8 @@ if (pr.requested_teams.length === 0 && pr.requested_reviewers.length === 0) {
     "Looks like this pull request is missing a reviewer. That's OK as long as this PR is still a 'work in progress', if that is the case please add 'WIP' in the PR title or corresponding label.";
   warn(`${title} - <i>${idea}</i>`);
 } else {
-  const title = "✅ Get 👍 for requesting reviewers.";
-  const idea = "We are celebrating every win!";
+  const title = "✅ Get a 👍 for requesting reviewers.";
+  const idea = "Celebrating every win!";
   message(`${title} - <i>${idea}</i>`);
 }
 
@@ -35,7 +35,7 @@ if (pr.body.length < 10) {
   warn(`${title} - <i>${idea}</i>`);
 } else {
   const title = "✅  Get a 🏆 for adding description on this PR.";
-  const idea = "We are celebrate on every step!";
+  const idea = "Celebrate on every step!";
   message(`${title} - <i>${idea}</i>`);
 }
 
