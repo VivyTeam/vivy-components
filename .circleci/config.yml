@@ -17,8 +17,8 @@ jobs:
       - run: npm install
       - run: npm run build:static
       - run: npm run linter:check
-      - run: npm run danger
       - run: npm test
+      - run: npm run danger
       - run: npm run build:package
       # preview what files will be packaged into npm
       - run: ls ./dist

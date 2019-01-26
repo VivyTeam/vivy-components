@@ -1,46 +1,46 @@
-import { danger, markdown, warn, message } from "danger";
+import { danger, warn, message } from "danger";
 import includes from "lodash.includes";
 
-let messageCount = 0;
+const { pr } = danger.github;
+const { modified_files: modifiedFiles } = danger.git;
 
-// Warn when PR size is large
-const bigPRThreshold = 500;
-if (danger.github.pr.additions + danger.github.pr.deletions > bigPRThreshold) {
-  messageCount += 1;
-  warn(`(${messageCount}) Big PR`);
-  markdown(
-    `> (${messageCount}) : Pull Request size seems relatively large. If Pull Request contains multiple changes, split each into separate PR will helps faster, easier review.`
-  );
+const bigPRThreshold = 700;
+if (pr.additions - pr.deletions > bigPRThreshold) {
+  const title = ":exclamation: Big PR";
+  const idea = `This PR is unlikely to get reviewed because it touches too many lines 
+  (${pr.additions - pr.deletions}). 
+  Consider sending smaller Pull Requests and stack them on top of each other.`;
+  warn(`${title} - <i>${idea}</i>`);
 }
 
-// Warn when PR size is large
-if (!danger.github.pr.assignee && !danger.github.pr.title.includes("WIP")) {
-  messageCount += 1;
-  warn(`(${messageCount}) Missing reviewer`);
-  markdown(
-    `> (${messageCount}) : Pull Request size like it is missing a reviewer. Please assign at least one.`
-  );
+if (pr.requested_teams.length === 0 && pr.requested_reviewers.length === 0) {
+  const title = ":exclamation: Missing reviewer";
+  const idea =
+    "Looks like this pull request is missing a reviewer. That's OK as long as this PR is still a 'work in progress', please add 'WIP' in the PR title or corresponding label.";
+  warn(`${title} - <i>${idea}</i>`);
 } else {
-  message("✅ 🏅 for adding a reviewer.");
+  const title = "✅ Get 👍 for requesting reviewers.";
+  const idea = "We are celebrating every win!";
+  message(`${title} - <i>${idea}</i>`);
 }
 
-if (danger.github.pr.body.length === 0) {
-  messageCount += 1;
-
-  warn("This requests would be more useful with a description.");
+if (pr.body.length < 10) {
+  const title = ":exclamation: Missing description";
+  const idea =
+    "Help your reviewers by writing a paragraph or two with the goals and motives of this PR.";
+  warn(`${title} - <i>${idea}</i>`);
 } else {
-  message("✅ 👍 for adding a description.");
+  const title = "✅  Get a 🏆 for adding description on this PR.";
+  const idea = "We are celebrate on every step!";
+  message(`${title} - <i>${idea}</i>`);
 }
 
-const packageChanges = includes(danger.git.modified_files, "package.json");
-const lockChanges = includes(danger.git.modified_files, "package-lock.json");
+const packageChanges = includes(modifiedFiles, "package.json");
+const lockChanges = includes(modifiedFiles, "package-lock.json");
 if (packageChanges && !lockChanges) {
-  messageCount += 1;
-  warn(
-    `(${messageCount}) There are package.json changes with no corresponding package-lock.json.`
-  );
-  markdown(
-    `> (${messageCount}) : It might be that you added some new package on package.json file but you havent commited package-lock.json file, please commit to avoid unexpected build failures.`
-  );
+  const title =
+    ":exclamation: There are package.json changes with no corresponding package-lock.json.";
+  const idea =
+    "Seems like you added some new package on package.json but you haven't committed package-lock.json file, please commit to avoid unexpected build failures. That's OK as long as you didn't add any new packages.";
+  message(`${title} - <i>${idea}</i>`);
 }
-
