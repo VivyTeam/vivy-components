@@ -11,12 +11,16 @@ if (pr.additions - pr.deletions > bigPRThreshold) {
   (${pr.additions - pr.deletions}). 
   Consider sending smaller Pull Requests and stack them on top of each other.`;
   warn(`${title} - <i>${idea}</i>`);
+} else {
+  const title = "✅ Get a 🥇 for opening a small enough PR.";
+  const idea = "Be proud of yourself!";
+  message(`${title} - <i>${idea}</i>`);
 }
 
 if (pr.requested_teams.length === 0 && pr.requested_reviewers.length === 0) {
   const title = ":exclamation: Missing reviewer";
   const idea =
-    "Looks like this pull request is missing a reviewer. That's OK as long as this PR is still a 'work in progress', please add 'WIP' in the PR title or corresponding label.";
+    "Looks like this pull request is missing a reviewer. That's OK as long as this PR is still a 'work in progress', if that is the case please add 'WIP' in the PR title or corresponding label.";
   warn(`${title} - <i>${idea}</i>`);
 } else {
   const title = "✅ Get 👍 for requesting reviewers.";
