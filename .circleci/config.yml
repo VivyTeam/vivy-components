@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.11.1
+      - image: circleci/node:8.11.1-browsers
 
     working_directory: ~/repo
 
@@ -15,6 +15,7 @@ jobs:
           - v1-dependencies-
 
       - run: npm install
+      - run: npm run build:static
       - run: npm test
       - run: npm run linter:check
       - run: npm run build:package

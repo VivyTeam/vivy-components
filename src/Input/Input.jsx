@@ -12,7 +12,8 @@ export default function Input({
   placeholder,
   name,
   iconName,
-  defaultValue
+  defaultValue,
+  rel
 }) {
   const padding = classNames(["icon-padding", iconName]);
 
@@ -33,6 +34,7 @@ export default function Input({
             onChange={e => onChange(formData(e.target.form || {}), e.target.id)}
             onBlur={e => onBlur(formData(e.target.form || {}), e.target.id)}
             {...defaultValue && { defaultValue }}
+            ref={rel}
           />
         </InputWrapper>
       )}
@@ -47,7 +49,8 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   label: PropTypes.string,
   defaultValue: PropTypes.string,
-  iconName: PropTypes.string
+  iconName: PropTypes.string,
+  rel: PropTypes.shape({})
 };
 
 Input.defaultProps = {
@@ -56,5 +59,6 @@ Input.defaultProps = {
   placeholder: "",
   label: "",
   defaultValue: "",
-  iconName: ""
+  iconName: "",
+  rel: React.createRef()
 };
