@@ -154,6 +154,12 @@ storiesOf("Forms", module)
                 placeholder="Please add your first name"
                 label="First name"
               />
+              <Input
+                id="lastName"
+                placeholder="Please add your last name"
+                label="Last name"
+                optional
+              />
               <InputMask
                 mask="1111 1111 1111 1111"
                 id="card"
@@ -162,12 +168,7 @@ storiesOf("Forms", module)
                 placeholderChar=" "
                 defaultValue="John Doe"
               />
-              <Input
-                id="lastName"
-                placeholder="Please add your last name"
-                label="Last name"
-                optional
-              />
+
               <InputPassword
                 showPassword={false}
                 toggle={() => {}}
