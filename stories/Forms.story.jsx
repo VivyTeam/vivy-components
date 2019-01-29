@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { storiesOf } from "@storybook/react";
 import styled from "styled-components";
 import {
@@ -9,7 +9,8 @@ import {
   Input,
   InputPassword,
   Row,
-  Validation
+  Validation,
+  InputMask
 } from "../src";
 
 const rules = {
@@ -20,6 +21,9 @@ const rules = {
       min: 8,
       message: "Minimum characters is 8"
     }
+  ],
+  card: [
+    { type: "string", required: true, message: "Card number is required" }
   ],
   password: {
     type: "string",
@@ -149,6 +153,14 @@ storiesOf("Forms", module)
                 id="name"
                 placeholder="Please add your first name"
                 label="First name"
+              />
+              <InputMask
+                mask="1111 1111 1111 1111"
+                id="card"
+                placeholder="Please add your card number"
+                label="Card Number"
+                placeholderChar=" "
+                defaultValue="John Doe"
               />
               <Input
                 id="lastName"
