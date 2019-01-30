@@ -1,0 +1,79 @@
+import React from "react";
+import PropTypes from "prop-types";
+import InputMask from "react-input-mask";
+import InputWrapper from "../InputWrapper";
+import { ValidationContext } from "../Forms/Validation";
+import classNames from "../utils/classNames";
+import formData from "../utils/formData";
+
+export default function InputMasked({
+  id,
+  label,
+  type,
+  placeholder,
+  name,
+  iconName,
+  defaultValue,
+  rel,
+  mask,
+  maskChar
+}) {
+  const basic = classNames(["masked-input", true], ["icon-padding", iconName]);
+
+  return (
+    <ValidationContext.Consumer>
+      {({
+        onBlur = () => {},
+        onChange = () => {},
+        errors: { [id]: error }
+      }) => (
+        <InputWrapper error={error} id={id} iconName={iconName} label={label}>
+          <InputMask
+            mask={mask}
+            maskChar={maskChar}
+            onChange={e => onChange(formData(e.target.form || {}), e.target.id)}
+            onBlur={e => onBlur(formData(e.target.form || {}), e.target.id)}
+          >
+            {inherited => (
+              <input
+                id={id}
+                name={name}
+                type={type}
+                placeholder={placeholder}
+                className={basic}
+                ref={rel}
+                {...defaultValue && { defaultValue }}
+                {...inherited}
+              />
+            )}
+          </InputMask>
+        </InputWrapper>
+      )}
+    </ValidationContext.Consumer>
+  );
+}
+
+InputMasked.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+  label: PropTypes.string,
+  defaultValue: PropTypes.string,
+  iconName: PropTypes.string,
+  mask: PropTypes.string,
+  maskChar: PropTypes.string,
+  rel: PropTypes.shape({})
+};
+
+InputMasked.defaultProps = {
+  type: "",
+  name: "default",
+  placeholder: "",
+  label: "",
+  defaultValue: "",
+  iconName: "",
+  mask: "",
+  maskChar: "",
+  rel: React.createRef()
+};

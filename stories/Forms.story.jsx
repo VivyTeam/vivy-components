@@ -10,6 +10,7 @@ import {
   InputPassword,
   Row,
   Validation,
+  InputMasked
 } from "../src";
 
 const rules = {
@@ -21,11 +22,16 @@ const rules = {
       message: "Minimum characters is 8"
     }
   ],
-  card: [
+  code: [
     {
       type: "string",
       required: true,
       message: "Emergency sticker code is required"
+    },
+    {
+      type: "string",
+      min: 19, // plus 3 dashed from mask
+      message: "Minimum characters is 16"
     }
   ],
   password: {
@@ -163,7 +169,13 @@ storiesOf("Forms", module)
                 label="Last name"
                 optional
               />
-
+              <InputMasked
+                mask="****–****–****–****"
+                maskChar={null}
+                id="code"
+                placeholder="Please add your Emergency sticker code here."
+                label="Emergency sticker unique code"
+              />
               <InputPassword
                 showPassword={false}
                 toggle={() => {}}
