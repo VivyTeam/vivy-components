@@ -13,8 +13,7 @@ export default function Input({
   name,
   iconName,
   defaultValue,
-  rel,
-  ...rest
+  rel
 }) {
   const padding = classNames(["icon-padding", iconName]);
 
@@ -36,7 +35,6 @@ export default function Input({
             onBlur={e => onBlur(formData(e.target.form || {}), e.target.id)}
             ref={rel}
             {...defaultValue && { defaultValue }}
-            {...rest}
           />
         </InputWrapper>
       )}
