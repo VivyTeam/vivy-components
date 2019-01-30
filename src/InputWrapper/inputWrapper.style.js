@@ -31,6 +31,14 @@ const InputStyles = styled.div`
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     padding: 2px 16px;
 
+    &.masked-input {
+      font-family: monospace;
+    }
+
+    &.masked-input::placeholder {
+      font-family: "Norms", sans-serif;
+    }
+
     &.icon-padding {
       padding: 2px 16px 2px 54px;
     }
