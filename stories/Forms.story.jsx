@@ -23,7 +23,11 @@ const rules = {
     }
   ],
   card: [
-    { type: "string", required: true, message: "Card number is required" }
+    {
+      type: "string",
+      required: true,
+      message: "Emergency sticker code is required"
+    }
   ],
   password: {
     type: "string",
