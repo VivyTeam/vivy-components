@@ -10,7 +10,7 @@ import {
   InputPassword,
   Row,
   Validation,
-  InputMask
+  InputMasked
 } from "../src";
 
 const rules = {
@@ -160,13 +160,12 @@ storiesOf("Forms", module)
                 label="Last name"
                 optional
               />
-              <InputMask
-                mask="1111 1111 1111 1111"
+              <InputMasked
+                mask="aaaa aaaa aaaa aaaa"
                 id="card"
-                placeholder="Please add your card number"
-                label="Card Number"
+                placeholder="Please add your Emergency sticker code here."
+                label="Emergency sticker unique code"
                 placeholderChar=" "
-                defaultValue="John Doe"
               />
 
               <InputPassword

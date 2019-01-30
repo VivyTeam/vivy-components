@@ -1,6 +1,6 @@
 import React, { Fragment, Component } from "react";
 import { storiesOf } from "@storybook/react";
-import { Button, InputMask } from "../src/index";
+import { Button, InputMasked } from "../src/index";
 
 class Focus extends Component {
   constructor(props) {
@@ -16,12 +16,12 @@ class Focus extends Component {
   render() {
     return (
       <Fragment>
-        <InputMask
+        <InputMasked
           placeholderChar="-"
-          mask="1111 1111 1111 1111"
-          id="card"
-          placeholder="Please add your card number"
-          label="Card Number"
+          mask="aaaa aaaa aaaa aaaa"
+          id="sticker"
+          placeholder="Please add your Emergency sticker code here."
+          label="Emergency sticker unique code"
           rel={this.textInput}
         />
         <Button
@@ -35,23 +35,22 @@ class Focus extends Component {
   }
 }
 
-storiesOf("InputMask", module)
+storiesOf("InputMasked", module)
   .add("basic", () => (
-    <InputMask
-      mask="1111-1111-1111-1111"
-      id="card"
-      placeholder="Please add your card number"
-      label="Card Number"
+    <InputMasked
+      mask="aaaa-aaaa-aaaa-aaaa"
+      id="sticker"
+      placeholder="Please add your Emergency sticker code here."
+      label="Emergency sticker unique code"
     />
   ))
   .add("with placeholderMask", () => (
-    <InputMask
-      mask="1111 1111 1111 1111"
-      id="card"
-      placeholder="Please add your card number"
-      label="Card Number"
+    <InputMasked
+      mask="aaaa aaaa aaaa aaaa"
+      id="sticker"
+      placeholder="Please add your Emergency sticker code here."
+      label="Emergency sticker unique code"
       placeholderChar="-"
-      defaultValue="John Doe"
     />
   ))
   .add("with focus on click", () => <Focus />);
