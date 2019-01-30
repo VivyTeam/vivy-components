@@ -15,9 +15,10 @@ export default function Input({
   iconName,
   rel,
   mask,
-  placeholderChar
+  placeholderChar,
+  formatCharacters
 }) {
-  const padding = classNames(["icon-padding", iconName]);
+  const basic = classNames(["masked-input", true], ["icon-padding", iconName]);
 
   return (
     <ValidationContext.Consumer>
@@ -32,12 +33,13 @@ export default function Input({
             name={name}
             type={type}
             placeholder={placeholder}
-            className={padding}
+            className={basic}
             onChange={e => onChange(formData(e.target.form || {}), e.target.id)}
             onBlur={e => onBlur(formData(e.target.form || {}), e.target.id)}
             ref={rel}
             mask={mask}
             placeholderChar={placeholderChar}
+            formatCharacters={formatCharacters}
           />
         </InputWrapper>
       )}
@@ -54,7 +56,8 @@ Input.propTypes = {
   iconName: PropTypes.string,
   rel: PropTypes.shape({}),
   mask: PropTypes.string,
-  placeholderChar: PropTypes.string
+  placeholderChar: PropTypes.string,
+  formatCharacters: PropTypes.shape({})
 };
 
 Input.defaultProps = {
@@ -65,5 +68,6 @@ Input.defaultProps = {
   iconName: "",
   rel: React.createRef(),
   mask: "",
-  placeholderChar: ""
+  placeholderChar: "",
+  formatCharacters: {}
 };

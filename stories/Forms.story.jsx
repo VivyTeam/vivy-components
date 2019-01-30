@@ -165,11 +165,16 @@ storiesOf("Forms", module)
                 optional
               />
               <InputMasked
-                mask="aaaa aaaa aaaa aaaa"
+                mask="wwww – wwww – wwww – wwww"
                 id="card"
                 placeholder="Please add your Emergency sticker code here."
                 label="Emergency sticker unique code"
                 placeholderChar=" "
+                formatCharacters={{
+                  w: {
+                    validate: char => /\w/.test(char)
+                  }
+                }}
               />
 
               <InputPassword
