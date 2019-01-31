@@ -53,4 +53,14 @@ storiesOf("InputMasked", module)
       maskChar="_"
     />
   ))
+  .add("with defaultValue", () => (
+    <InputMasked
+      defaultValue="medicalStickerCode"
+      mask="****–****–****–****"
+      id="sticker"
+      placeholder="Please add your Emergency sticker code here."
+      label="Emergency sticker unique code"
+      maskChar="_"
+    />
+  ))
   .add("with focus on click", () => <Focus />);
