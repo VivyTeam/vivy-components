@@ -170,6 +170,7 @@ storiesOf("Forms", module)
                 optional
               />
               <InputMasked
+                validateOnChange={false}
                 mask="****–****–****–****"
                 maskChar={null}
                 id="code"
