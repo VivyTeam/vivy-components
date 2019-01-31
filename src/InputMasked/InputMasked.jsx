@@ -16,7 +16,8 @@ export default function InputMasked({
   defaultValue,
   rel,
   mask,
-  maskChar
+  maskChar,
+  validateOnChange
 }) {
   const basic = classNames(["masked-input", true], ["icon-padding", iconName]);
 
@@ -31,7 +32,10 @@ export default function InputMasked({
           <InputMask
             mask={mask}
             maskChar={maskChar}
-            onChange={e => onChange(formData(e.target.form || {}), e.target.id)}
+            onChange={
+              validateOnChange &&
+              (e => onChange(formData(e.target.form || {}), e.target.id))
+            }
             onBlur={e => onBlur(formData(e.target.form || {}), e.target.id)}
           >
             {inherited => (
@@ -63,6 +67,7 @@ InputMasked.propTypes = {
   iconName: PropTypes.string,
   mask: PropTypes.string,
   maskChar: PropTypes.string,
+  validateOnChange: PropTypes.bool,
   rel: PropTypes.shape({})
 };
 
@@ -75,5 +80,6 @@ InputMasked.defaultProps = {
   iconName: "",
   mask: "",
   maskChar: "",
+  validateOnChange: true,
   rel: React.createRef()
 };
