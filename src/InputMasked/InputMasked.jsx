@@ -26,6 +26,7 @@ export default function InputMasked({
       {({
         onBlur = () => {},
         onChange = () => {},
+        cleanField = () => {},
         errors: { [id]: error }
       }) => (
         <InputWrapper error={error} id={id} iconName={iconName} label={label}>
@@ -33,8 +34,9 @@ export default function InputMasked({
             mask={mask}
             maskChar={maskChar}
             onChange={
-              validateOnChange &&
-              (e => onChange(formData(e.target.form || {}), e.target.id))
+              validateOnChange
+                ? e => onChange(formData(e.target.form || {}), e.target.id)
+                : e => cleanField(e.target.id)
             }
             onBlur={e => onBlur(formData(e.target.form || {}), e.target.id)}
             {...defaultValue && { defaultValue }}

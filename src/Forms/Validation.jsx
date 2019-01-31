@@ -42,6 +42,19 @@ export default class Validation extends Component {
     return hasErrors;
   };
 
+  cleanField = input => {
+    const { errors } = this.state;
+    const cleanError = input && { [input]: "" };
+    const allErrors = { ...errors, ...cleanError };
+    const hasErrors = Object.keys(allErrors).some(
+      message => allErrors[message]
+    );
+
+    this.setState({ errors: allErrors });
+
+    return hasErrors;
+  };
+
   render() {
     const { children } = this.props;
     const { errors } = this.state;
@@ -52,6 +65,7 @@ export default class Validation extends Component {
           onBlur: this.validateForm,
           onChange: this.validateForm,
           validation: this.validateForm,
+          cleanField: this.cleanField,
           errors
         }}
       >
