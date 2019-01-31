@@ -37,6 +37,7 @@ export default function InputMasked({
               (e => onChange(formData(e.target.form || {}), e.target.id))
             }
             onBlur={e => onBlur(formData(e.target.form || {}), e.target.id)}
+            {...defaultValue && { defaultValue }}
           >
             {inherited => (
               <input
@@ -46,7 +47,6 @@ export default function InputMasked({
                 placeholder={placeholder}
                 className={basic}
                 ref={rel}
-                {...defaultValue && { defaultValue }}
                 {...inherited}
               />
             )}
