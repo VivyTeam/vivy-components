@@ -17,18 +17,14 @@ export default function InputMasked({
   rel,
   mask,
   maskChar,
-  validateOnChange
+  validateOnChange,
+  validateOnBlur
 }) {
   const basic = classNames(["masked-input", true], ["icon-padding", iconName]);
 
   return (
     <ValidationContext.Consumer>
-      {({
-        onBlur = () => {},
-        onChange = () => {},
-        cleanField = () => {},
-        errors: { [id]: error }
-      }) => (
+      {({ onBlur, onChange, cleanField, errors: { [id]: error } }) => (
         <InputWrapper error={error} id={id} iconName={iconName} label={label}>
           <InputMask
             mask={mask}
@@ -38,7 +34,11 @@ export default function InputMasked({
                 ? e => onChange(formData(e.target.form || {}), e.target.id)
                 : e => cleanField(e.target.id)
             }
-            onBlur={e => onBlur(formData(e.target.form || {}), e.target.id)}
+            onBlur={
+              validateOnBlur
+                ? e => onBlur(formData(e.target.form || {}), e.target.id)
+                : null
+            }
             {...defaultValue && { defaultValue }}
           >
             {inherited => (
@@ -70,6 +70,7 @@ InputMasked.propTypes = {
   mask: PropTypes.string,
   maskChar: PropTypes.string,
   validateOnChange: PropTypes.bool,
+  validateOnBlur: PropTypes.bool,
   rel: PropTypes.shape({})
 };
 
@@ -83,5 +84,6 @@ InputMasked.defaultProps = {
   mask: "",
   maskChar: "",
   validateOnChange: true,
+  validateOnBlur: true,
   rel: React.createRef()
 };
