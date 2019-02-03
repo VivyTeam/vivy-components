@@ -1,14 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import styled from "styled-components";
 import {
   Button,
   Checkbox,
-  Col,
   Form,
   Input,
   InputPassword,
   Row,
+  Col,
   Validation,
   InputMasked
 } from "../src";
@@ -56,31 +55,12 @@ const rules = {
   }
 };
 
-const PageLayout = styled.div`
-  padding: 50px 100px;
-
-  form {
-    width: 100%;
-  }
-
-  .documentation {
-    li {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-
-  .form-item {
-    padding: 15px;
-  }
-`;
-
 const record = console;
 
 storiesOf("Forms", module)
   .add("documentation", () => (
-    <PageLayout>
-      <div className="documentation">
+    <Row position="center">
+      <Col lg={8}>
         <h2>Official Documentation</h2>
         <h3>High level overview of this story</h3>
         <p>
@@ -119,8 +99,8 @@ storiesOf("Forms", module)
             official documentation.
           </li>
         </ul>
-      </div>
-    </PageLayout>
+      </Col>
+    </Row>
   ))
   .add(
     "without Validation",

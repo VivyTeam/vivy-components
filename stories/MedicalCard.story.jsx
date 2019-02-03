@@ -1,26 +1,14 @@
 import React from "react";
-import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { MedicalCard } from "../src/index";
+import { Row, Col, MedicalCard } from "../src/index";
 import "../public/translations/i18n";
 
-const CollectionStyles = styled.div`
-  width: 80%;
-  margin: 0 auto;
-
-  .layout-body {
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-`;
 
 storiesOf("MedicalCard", module).add(
   "default",
   () => (
-    <CollectionStyles>
-      <div className="layout-body">
+    <Row position="center">
+      <Col lg={8}>
         <MedicalCard
           user={{
             name: "Demo User",
@@ -41,8 +29,8 @@ storiesOf("MedicalCard", module).add(
           }}
           lastUpdatedAt="1970-01-01"
         />
-      </div>
-    </CollectionStyles>
+      </Col>
+    </Row>
   ),
   { info: "A simple page with topbar, body, footer" }
 );

@@ -21,7 +21,6 @@ const TopbarStyles = styled.div`
 
   @media (max-width: 1000px) {
     min-height: 50px;
-    height: 50px;
 
     .logo {
       width: 80px;
