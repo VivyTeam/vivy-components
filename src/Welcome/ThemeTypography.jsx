@@ -6,33 +6,33 @@ export default function ThemeTypography() {
   return (
     <Styles>
       <Row position="center">
-        <Col lg={10}>
+        <Col lg={8}>
+          <h1 style={{ marginTop: "32px" }}>Heading One</h1>
           <p>
-            <h1 style={{ marginTop: "32px" }}>Heading One</h1>
             <small>TTNorms-Medium, 3rem (48px) line-height: 54px</small>
           </p>
 
+          <h2 style={{ marginTop: "32px" }}>Heading Two</h2>
           <p>
-            <h2 style={{ marginTop: "32px" }}>Heading Two</h2>
             <small>TTNorms-Regular, 2.25rem (36px) line-height: 42px</small>
           </p>
 
+          <h3 style={{ marginTop: "32px" }}>Heading Three</h3>
           <p>
-            <h3 style={{ marginTop: "32px" }}>Heading Three</h3>
             <small>
               TTNorms-Regular, 2.5rem (40px), #575756, line-height: 46px
             </small>
           </p>
 
+          <h4 style={{ marginTop: "32px" }}>Heading Four</h4>
           <p>
-            <h4 style={{ marginTop: "32px" }}>Heading Four</h4>
             <small>
               TTNorms-Regular, 2rem (32px), #575756, line-height: 36px
             </small>
           </p>
 
+          <h5 style={{ marginTop: "32px" }}>Heading Five</h5>
           <p>
-            <h5 style={{ marginTop: "32px" }}>Heading Five</h5>
             <small>
               TTNorms-Medium, 1.5rem (24px), #575756, line-height: 30px
             </small>
