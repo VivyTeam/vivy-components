@@ -1,61 +1,23 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import copy from "copy-to-clipboard";
+import PropTypes from "prop-types";
 
-export default class ColorBox extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleCopy = this.handleCopy.bind(this);
-  }
-
-  handleCopy() {
-    const { gradient, color } = this.props;
-    const text = gradient || color;
-
-    copy(text, {
-      debug: true,
-      message: "Copied"
-    });
-  }
-
-  render() {
-    const { description, color, gradient, dark } = this.props;
-    return (
-      <div
-        className="color-box-container"
-        style={{ color: dark ? "#575756" : "#fff" }}
+export default function ColorBox({ description, color }) {
+  return (
+    <div>
+      <button
+        className="color-box"
+        style={{ backgroundColor: color }}
+        onClick={() => copy(color)}
       >
-        <div
-          tabIndex="0"
-          role="button"
-          onClick={this.handleCopy}
-          onKeyPress={() => {}}
-          className="color-box"
-          style={
-            gradient
-              ? { backgroundImage: gradient }
-              : { backgroundColor: color }
-          }
-        >
-          <p style={{ margin: ".5rem", fontWeight: "500" }}>{description}</p>
-          <small>{gradient ? "" : color}</small>
-          <h3 className="copy">Copy</h3>
-        </div>
-      </div>
-    );
-  }
+        <span className="copy">copy {color}</span>
+      </button>
+      <div className="color-description">{description}</div>
+      <div className="color-name">{color}</div>
+    </div>
+  );
 }
-
 ColorBox.propTypes = {
   description: PropTypes.string.isRequired,
-  color: PropTypes.string,
-  gradient: PropTypes.string,
-  dark: PropTypes.bool
-};
-
-ColorBox.defaultProps = {
-  color: "#fff",
-  gradient: null,
-  dark: false
+  color: PropTypes.string.isRequired
 };
