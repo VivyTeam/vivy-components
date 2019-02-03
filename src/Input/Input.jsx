@@ -13,17 +13,15 @@ export default function Input({
   name,
   iconName,
   defaultValue,
-  rel
+  rel,
+  validateOnChange,
+  validateOnBlur
 }) {
   const padding = classNames(["icon-padding", iconName]);
 
   return (
     <ValidationContext.Consumer>
-      {({
-        onBlur = () => {},
-        onChange = () => {},
-        errors: { [id]: error }
-      }) => (
+      {({ onBlur, onChange, cleanField, errors: { [id]: error } }) => (
         <InputWrapper error={error} id={id} iconName={iconName} label={label}>
           <input
             id={id}
@@ -31,9 +29,17 @@ export default function Input({
             type={type}
             placeholder={placeholder}
             className={padding}
-            onChange={e => onChange(formData(e.target.form || {}), e.target.id)}
-            onBlur={e => onBlur(formData(e.target.form || {}), e.target.id)}
             ref={rel}
+            onChange={
+              validateOnChange
+                ? e => onChange(formData(e.target.form || {}), e.target.id)
+                : e => cleanField(e.target.id)
+            }
+            onBlur={
+              validateOnBlur
+                ? e => onBlur(formData(e.target.form || {}), e.target.id)
+                : null
+            }
             {...defaultValue && { defaultValue }}
           />
         </InputWrapper>
@@ -50,6 +56,8 @@ Input.propTypes = {
   label: PropTypes.string,
   defaultValue: PropTypes.string,
   iconName: PropTypes.string,
+  validateOnChange: PropTypes.bool,
+  validateOnBlur: PropTypes.bool,
   rel: PropTypes.shape({})
 };
 
@@ -60,5 +68,7 @@ Input.defaultProps = {
   label: "",
   defaultValue: "",
   iconName: "",
+  validateOnChange: true,
+  validateOnBlur: true,
   rel: React.createRef()
 };

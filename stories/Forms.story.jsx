@@ -34,11 +34,18 @@ const rules = {
       message: "Minimum characters is 16"
     }
   ],
-  password: {
-    type: "string",
-    required: true,
-    message: "Password is required"
-  },
+  password: [
+    {
+      type: "string",
+      required: true,
+      message: "Password is required"
+    },
+    {
+      type: "string",
+      min: 5,
+      message: "Minimum characters is 5"
+    }
+  ],
   email: { type: "email", required: true },
   terms: {
     type: "enum",
@@ -170,7 +177,6 @@ storiesOf("Forms", module)
                 optional
               />
               <InputMasked
-                validateOnChange={false}
                 mask="****–****–****–****"
                 maskChar={null}
                 id="code"
@@ -204,4 +210,111 @@ storiesOf("Forms", module)
       </Row>
     ),
     { info: "Using the Context API to share functionality" }
+  )
+  .add(
+    "inactive validation on value change",
+    () => (
+      <Row position="center">
+        <Col lg={9}>
+          <Validation rules={rules}>
+            <Form
+              submit={(fields, event) => {
+                record.log(`Fields: ${JSON.stringify(fields)}`);
+                record.log(event);
+              }}
+            >
+              <Input
+                validateOnChange={false}
+                id="name"
+                placeholder="Please add your first name"
+                label="First name"
+              />
+              <InputMasked
+                validateOnChange={false}
+                mask="****–****–****–****"
+                maskChar={null}
+                id="code"
+                placeholder="Please add your Emergency sticker code here."
+                label="Emergency sticker unique code"
+              />
+              <InputPassword
+                validateOnChange={false}
+                showPassword={false}
+                toggle={() => {}}
+                id="password"
+                placeholder="Please add your password"
+                label="Password"
+              />
+
+              <Checkbox id="terms" name="Terms and Conditions">
+                <p>Terms and conditions</p>
+              </Checkbox>
+
+              <Checkbox id="newsletter" name="Newsletter" optional>
+                <p>Newsletter sign up</p>
+              </Checkbox>
+              <Button htmlType="submit">Submit</Button>
+            </Form>
+          </Validation>
+        </Col>
+      </Row>
+    ),
+    {
+      info:
+        "validateOnChange=false means the validation wont happen each time the input value is changing"
+    }
+  )
+  .add(
+    "inactive validation on value change and on blur",
+    () => (
+      <Row position="center">
+        <Col lg={9}>
+          <Validation rules={rules}>
+            <Form
+              submit={(fields, event) => {
+                record.log(`Fields: ${JSON.stringify(fields)}`);
+                record.log(event);
+              }}
+            >
+              <Input
+                validateOnBlur={false}
+                validateOnChange={false}
+                id="name"
+                placeholder="Please add your first name"
+                label="First name"
+              />
+              <InputMasked
+                validateOnBlur={false}
+                validateOnChange={false}
+                mask="****–****–****–****"
+                maskChar={null}
+                id="code"
+                placeholder="Please add your Emergency sticker code here."
+                label="Emergency sticker unique code"
+              />
+              <InputPassword
+                validateOnBlur={false}
+                showPassword={false}
+                id="password"
+                placeholder="Please add your password"
+                label="Password"
+              />
+
+              <Checkbox id="terms" name="Terms and Conditions">
+                <p>Terms and conditions</p>
+              </Checkbox>
+
+              <Checkbox id="newsletter" name="Newsletter" optional>
+                <p>Newsletter sign up</p>
+              </Checkbox>
+              <Button htmlType="submit">Submit</Button>
+            </Form>
+          </Validation>
+        </Col>
+      </Row>
+    ),
+    {
+      info:
+        "validateOnBlur=false means the validation wont happen each time the input changes focus. eg clicking outside of a input field will normally trigger the onBlur validation"
+    }
   );

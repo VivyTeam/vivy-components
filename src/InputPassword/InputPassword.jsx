@@ -13,14 +13,23 @@ class InputPassword extends Component {
   toggle = () => this.setState({ showPassword: !this.state.showPassword });
 
   render() {
-    const { id, label, placeholder, name, iconName, visibility } = this.props;
+    const {
+      id,
+      label,
+      placeholder,
+      name,
+      iconName,
+      visibility,
+      validateOnChange,
+      validateOnBlur
+    } = this.props;
     const { showPassword } = this.state;
 
     const padding = classNames(["icon-padding", iconName]);
 
     return (
       <ValidationContext.Consumer>
-        {({ onBlur, onChange, errors: { [id]: error } }) => (
+        {({ onBlur, onChange, cleanField, errors: { [id]: error } }) => (
           <Styles>
             <InputWrapper
               error={error}
@@ -35,8 +44,16 @@ class InputPassword extends Component {
                 type={showPassword ? "text" : "password"}
                 placeholder={placeholder}
                 className={padding}
-                onChange={e => onChange(formData(e.target.form), e.target.id)}
-                onBlur={e => onBlur(formData(e.target.form), e.target.id)}
+                onChange={
+                  validateOnChange
+                    ? e => onChange(formData(e.target.form || {}), e.target.id)
+                    : e => cleanField(e.target.id)
+                }
+                onBlur={
+                  validateOnBlur
+                    ? e => onBlur(formData(e.target.form || {}), e.target.id)
+                    : null
+                }
               />
 
               {visibility ? (
@@ -68,7 +85,9 @@ InputPassword.propTypes = {
   label: PropTypes.string,
   iconName: PropTypes.string,
   showPassword: PropTypes.bool,
-  visibility: PropTypes.bool
+  visibility: PropTypes.bool,
+  validateOnChange: PropTypes.bool,
+  validateOnBlur: PropTypes.bool
 };
 
 InputPassword.defaultProps = {
@@ -77,7 +96,9 @@ InputPassword.defaultProps = {
   iconName: "",
   label: "",
   showPassword: false,
-  visibility: false
+  visibility: false,
+  validateOnChange: true,
+  validateOnBlur: true
 };
 
 export default InputPassword;
