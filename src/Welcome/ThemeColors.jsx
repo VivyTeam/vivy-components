@@ -1,16 +1,45 @@
+import styled from "styled-components";
 import React from "react";
-import ThemeStyles from "./themeColors.style";
 import ColorBox from "./ColorBox";
 import { Row, Col } from "../../src";
 
+const Styles = styled.div`
+  .color-box {
+    border-radius: 99%;
+    margin: 20px;
+    padding: 30px;
+    height: 100px;
+    width: 100px;
+  }
+
+  .color-box:hover {
+    cursor: pointer;
+  }
+
+  .color-box:focus {
+    outline: none;
+  }
+
+  .color-box:active {
+    border: none;
+  }
+
+  .color-box .copy {
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
+  }
+
+  .color-box:hover .copy {
+    visibility: visible;
+    opacity: 1;
+  }
+`;
+
 export default function ThemeColors() {
   return (
-    <ThemeStyles>
-      <Row>
-        <Col>
-          <h2>Colors</h2>
-        </Col>
-      </Row>
+    <Styles>
       <Row position="center" space="around" textAlign="center">
         <Col lg={0}>
           <ColorBox description="Brand color" color="#04d4bf" />
@@ -41,11 +70,6 @@ export default function ThemeColors() {
         </Col>
       </Row>
 
-      <Row>
-        <Col>
-          <h2>Gradient</h2>
-        </Col>
-      </Row>
       <Row position="center" space="around" textAlign="center">
         <Col lg={0}>
           <ColorBox
@@ -72,6 +96,6 @@ export default function ThemeColors() {
           />
         </Col>
       </Row>
-    </ThemeStyles>
+    </Styles>
   );
 }

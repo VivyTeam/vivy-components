@@ -81,12 +81,12 @@ const FontStyles = styled.div`
   a {
     font-size: 16px;
     display: block;
-    font-weight: 500;
     font-stretch: normal;
     letter-spacing: normal;
-
+    text-decoration: none;
     color: #00bfac;
-    padding: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 `;
 

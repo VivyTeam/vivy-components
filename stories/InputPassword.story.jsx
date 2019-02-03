@@ -1,39 +1,30 @@
 import React from "react";
-import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { InputPassword } from "../src/index";
 
-const PageLayout = styled.div`
-  padding: 50px 100px;
-  display: flex;
-`;
 storiesOf("InputPassword", module)
   .add(
     "icon left",
     () => (
-      <PageLayout>
-        <InputPassword
-          iconName="body"
-          showPassword
-          id="password"
-          placeholder="Password"
-          label="Password"
-        />
-      </PageLayout>
+      <InputPassword
+        iconName="body"
+        showPassword
+        id="password"
+        placeholder="Password"
+        label="Password"
+      />
     ),
     { info: "Has an Icon on the left side." }
   )
   .add(
     "with visibility property, true",
     () => (
-      <PageLayout>
-        <InputPassword
-          visibility
-          id="name"
-          placeholder="Password"
-          label="Password"
-        />
-      </PageLayout>
+      <InputPassword
+        visibility
+        id="name"
+        placeholder="Password"
+        label="Password"
+      />
     ),
     {
       info:
@@ -43,15 +34,13 @@ storiesOf("InputPassword", module)
   .add(
     "with visibility and showPassword properties, true",
     () => (
-      <PageLayout>
-        <InputPassword
-          visibility
-          showPassword
-          id="name"
-          placeholder="Password"
-          label="Password"
-        />
-      </PageLayout>
+      <InputPassword
+        visibility
+        showPassword
+        id="name"
+        placeholder="Password"
+        label="Password"
+      />
     ),
     {
       info:
