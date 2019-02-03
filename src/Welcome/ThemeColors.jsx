@@ -1,33 +1,34 @@
 import styled from "styled-components";
 import React from "react";
 import ColorBox from "./ColorBox";
-import { Row, Col } from "../../src";
+import { Row, Col, Colors } from "../../src";
 
 const Styles = styled.div`
+  margin-top: 20px;
+
+  color: ${Colors.textPrimary};
+
+  h2 {
+    margin-left: 20px;
+  }
+
   .color-box {
-    border-radius: 99%;
-    margin: 20px;
-    padding: 30px;
-    height: 100px;
-    width: 100px;
-  }
-
-  .color-box:hover {
     cursor: pointer;
-  }
-
-  .color-box:focus {
     outline: none;
-  }
-
-  .color-box:active {
-    border: none;
+    text-align: center;
+    border: solid 1px ${Colors.divider};
+    width: 200px;
+    padding: 25px 0;
+    border-radius: 4px;
   }
 
   .color-box .copy {
-    color: white;
+    cursor: pointer;
+    font-size: 20px;
     visibility: hidden;
     opacity: 0;
+    padding: 4px;
+    background-color: rgba(245, 245, 245, 0.6);
     transition: visibility 0s, opacity 0.2s linear;
   }
 
@@ -35,66 +36,29 @@ const Styles = styled.div`
     visibility: visible;
     opacity: 1;
   }
+
+  .color-description {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+
+  .color-name {
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
 `;
 
 export default function ThemeColors() {
   return (
     <Styles>
-      <Row position="center" space="around" textAlign="center">
-        <Col lg={0}>
-          <ColorBox description="Brand color" color="#04d4bf" />
-        </Col>
-        <Col lg={0}>
-          <ColorBox description="Alt brand color" color="#05e6c8" />
-        </Col>
-        <Col lg={0}>
-          <ColorBox description="Actionable text" color="#09cbb8" />
-        </Col>
-        <Col lg={0}>
-          <ColorBox description="Alert" color="#e94119" />
-        </Col>
-        <Col lg={0}>
-          <ColorBox description="Background" color="#f5f5f5" dark />
-        </Col>
-        <Col lg={0}>
-          <ColorBox description="Primary" color="#353f41" />
-        </Col>
-        <Col lg={0}>
-          <ColorBox description="Secondary" color="#7b7b7b" />
-        </Col>
-        <Col lg={0}>
-          <ColorBox description="Hint" color="#bfbfbf" />
-        </Col>
-        <Col lg={0}>
-          <ColorBox description="Divider" color="#e0e0e0" dark />
-        </Col>
-      </Row>
-
-      <Row position="center" space="around" textAlign="center">
-        <Col lg={0}>
-          <ColorBox
-            description="Positive"
-            gradient="linear-gradient(180deg,#34de95,#14cfc1)"
-          />
-        </Col>
-        <Col lg={0}>
-          <ColorBox
-            description="Neutral"
-            gradient="linear-gradient(180deg,#ffe071,#ffa97c)"
-          />
-        </Col>
-        <Col lg={0}>
-          <ColorBox
-            description="Negative"
-            gradient="linear-gradient(180deg,#ff7676,#f54ea2)"
-          />
-        </Col>
-        <Col lg={0}>
-          <ColorBox
-            description="Inactive"
-            gradient="linear-gradient(180deg,#cccbd0,#bcbbc1)"
-          />
-        </Col>
+      <Row space="around">
+        {Object.keys(Colors).map(name => (
+          <Col lg={0} key={name}>
+            <ColorBox description={name} color={Colors[name]} />
+          </Col>
+        ))}
       </Row>
     </Styles>
   );
