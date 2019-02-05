@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Styles = styled.div`
-  border-top: solid 0.5px #cdcdcd;
+  border-top: 1px solid #f0f0f0;
 
   .anchor {
     border-right: 1px solid #cdcdcd;
