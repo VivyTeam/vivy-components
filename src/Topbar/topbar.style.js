@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { Colors } from "../index";
 
 const TopbarStyles = styled.div`
   background-color: #fff;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid ${Colors.divider};
 
   .link {
     display: flex;
