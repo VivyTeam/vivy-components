@@ -5,9 +5,9 @@ import { Col, Row, Footer } from "../index";
 export default function VivyFooter() {
   return (
     <Footer>
-      <Row>
-        <Col lg={12}>
-          <Styles>
+      <Styles>
+        <Row fullWidth>
+          <Col lg={12}>
             <Row position="center" verticalAlign="middle">
               <Col lg={0}>
                 <a
@@ -40,9 +40,9 @@ export default function VivyFooter() {
                 </a>
               </Col>
             </Row>
-          </Styles>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
+      </Styles>
     </Footer>
   );
 }

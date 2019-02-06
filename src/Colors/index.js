@@ -39,7 +39,6 @@ const colors = {
   backgroundSecondary: "#FAFAFA",
   backgroundBrand: "#F8F7F5",
 
-
   brandDestructive: "#EB5A47",
   brandAffirmative: "#61BD4F",
   brandWarning: "#FFBD00"
