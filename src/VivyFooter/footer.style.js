@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { Colors } from "../index";
 
 const Styles = styled.div`
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid ${Colors.divider};
 
   .anchor {
     border-right: 1px solid #cdcdcd;
