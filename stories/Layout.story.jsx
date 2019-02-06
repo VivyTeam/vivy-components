@@ -1,21 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { MedicalCard, Topbar, VivyFooter, Row, Col } from "../src/index";
 import logo from "../public/images/logo.svg";
 import "../public/translations/i18n";
-
-const LayoutStyles = styled.div`
-  width: 80%;
-  margin: 0 auto;
-
-  .layout-body {
-    padding: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-`;
 
 storiesOf("Layout", module).add(
   "Simple Page",

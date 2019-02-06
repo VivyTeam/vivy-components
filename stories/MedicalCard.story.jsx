@@ -3,7 +3,6 @@ import { storiesOf } from "@storybook/react";
 import { Row, Col, MedicalCard } from "../src/index";
 import "../public/translations/i18n";
 
-
 storiesOf("MedicalCard", module).add(
   "default",
   () => (
