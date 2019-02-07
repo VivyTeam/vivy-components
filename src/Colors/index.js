@@ -9,6 +9,8 @@ const hint = "#898988";
 const primarybackground = "#fff";
 const secondarybackground = "#f7f7f7";
 const cardbackground = "#fefefe";
+const brandprimary = "#03D4BF"
+const brandalternative = "#00BFAC"
 
 // maintaining these names colors to avoid introducing breaking changes (for now).
 export {
@@ -22,7 +24,9 @@ export {
   primaryHover,
   headerColor,
   hint,
-  cardbackground
+  cardbackground,
+  brandprimary,
+  brandalternative
 };
 
 // this is v2
@@ -41,6 +45,10 @@ const colors = {
 
   brandDestructive: "#EB5A47",
   brandAffirmative: "#61BD4F",
-  brandWarning: "#FFBD00"
+  brandWarning: "#FFBD00",
+
+  brandPrimary: "#03D4BF",
+  brandAlternative: "#00BFAC"
+
 };
 export default colors;

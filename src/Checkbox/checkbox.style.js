@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { error } from "../Colors";
+import { error, brandalternative} from "../Colors";
 import mapping from "../../public/fonts/vivy-icons/iconMapping.json";
 
 const checkboxEmpty = mapping["icon-checkbox-empty"];
@@ -32,6 +32,7 @@ const CheckboxStyle = styled.div`
   input[type="checkbox"]:checked + label:after {
     font-family: "vivy-icons";
     content: "\\${checkboxFilled}";
+    color:  ${brandalternative};
   }
 
   .content {
@@ -41,13 +42,12 @@ const CheckboxStyle = styled.div`
   }
 
   .optional {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
-    line-height: 1.29;
     letter-spacing: normal;
     color: #7b7b7b;
-    padding-left: 3px;
-    padding-bottom: 14px;
+    padding-left: 4px;
+    padding-bottom: 16px;
   }
 
   .error-feedback {
