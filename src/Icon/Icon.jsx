@@ -8,6 +8,7 @@ const Icons = styled.div`
     font-family: "vivy-icons";
     font-weight: normal;
     font-style: normal;
+    line-height: 1;
   }
 `;
 
