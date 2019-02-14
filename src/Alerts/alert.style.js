@@ -20,6 +20,9 @@ export const AlertStyles = styled.div`
       font-size: 14px;
       i {
         font-size: 24px;
+        display: block;
+        text-align: left;
+        padding-left: 16px;
       }
     `}
 

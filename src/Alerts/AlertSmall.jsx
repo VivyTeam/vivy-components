@@ -12,11 +12,15 @@ export default function AlertSmall({ type, children }) {
 
   return (
     <AlertStyles small type={type}>
-      <Row verticalAlign="middle" space="between" textAlign="center">
+      <Row fullWidth verticalAlign="middle" textAlign="center">
         <Col lg={1}>
+          {/* <div style={{ textAlign: "left", marginLeft: "10px" }}>
+            <Icon name={iconName} />
+          </div> */}
           <Icon name={iconName} />
         </Col>
-        <Col lg={11}>{children}</Col>
+        <Col lg={10}>{children}</Col>
+        <Col lg={1} />
       </Row>
     </AlertStyles>
   );

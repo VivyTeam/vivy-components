@@ -12,7 +12,7 @@ export default function Alert({ type, children }) {
 
   return (
     <AlertStyles normal type={type}>
-      <Row textAlign="center">
+      <Row fullWidth textAlign="center">
         <Col>
           <Icon name={iconName} />
           <ContentStyles>{children}</ContentStyles>
