@@ -14,13 +14,9 @@ export default function AlertSmall({ type, children }) {
     <AlertStyles small type={type}>
       <Row fullWidth verticalAlign="middle" textAlign="center">
         <Col lg={1}>
-          {/* <div style={{ textAlign: "left", marginLeft: "10px" }}>
-            <Icon name={iconName} />
-          </div> */}
           <Icon name={iconName} />
         </Col>
         <Col lg={10}>{children}</Col>
-        <Col lg={1} />
       </Row>
     </AlertStyles>
   );
