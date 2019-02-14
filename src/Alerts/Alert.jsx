@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Row, Col, Icon } from "../../src/index";
+import { Row, Col, Icon } from "../index";
 import { AlertStyles, ContentStyles } from "./alert.style";
 import * as AlertTypes from "./alertTypes";
 
