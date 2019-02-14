@@ -4,6 +4,8 @@ import styled from "styled-components";
 import mapping from "../../public/fonts/vivy-icons/iconMapping.json";
 
 const Icons = styled.div`
+  line-height: 1;
+
   i {
     font-family: "vivy-icons";
     font-weight: normal;
