@@ -2,11 +2,12 @@ import styled, { css } from "styled-components";
 import { SUCCESS, WARNING } from "./alertTypes";
 
 export const AlertStyles = styled.div`
+  border-radius: 8px;
+
   ${({ normal }) =>
     normal &&
     css`
       padding: 16px;
-      border-radius: 8px;
       i {
         font-size: 48px;
       }
@@ -16,7 +17,6 @@ export const AlertStyles = styled.div`
     small &&
     css`
       height: 44px;
-      border-radius: 8px;
       font-size: 14px;
       i {
         font-size: 24px;
