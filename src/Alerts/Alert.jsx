@@ -1,36 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Row, Col, Icon } from "../../src/index";
-import {
-  AlertSuccessStyles,
-  AlertWarningStyles,
-  ContentStyles
-} from "./alert.style";
-
-const TYPE_WARNING = "warning";
-const TYPE_SUCCESS = "success";
+import { AlertStyles, ContentStyles } from "./alert.style";
+import * as AlertTypes from "./alertTypes";
 
 export default function Alert({ type, children }) {
-  const Styles =
-    type === TYPE_SUCCESS ? AlertSuccessStyles : AlertWarningStyles;
   const iconName =
-    type === TYPE_SUCCESS
+    type === AlertTypes.SUCCESS
       ? "radio-button-filled-alt"
       : "warning-triangle-filled";
 
   return (
-    <Styles>
+    <AlertStyles normal type={type}>
       <Row textAlign="center">
         <Col>
           <Icon name={iconName} />
           <ContentStyles>{children}</ContentStyles>
         </Col>
       </Row>
-    </Styles>
+    </AlertStyles>
   );
 }
 
 Alert.propTypes = {
-  type: PropTypes.oneOf([TYPE_SUCCESS, TYPE_WARNING]).isRequired,
+  type: PropTypes.oneOf(Object.values(AlertTypes)).isRequired,
   children: PropTypes.string.isRequired
 };
