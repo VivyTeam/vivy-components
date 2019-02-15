@@ -4,7 +4,7 @@ import { Row, Col, MedicalCard } from "../src/index";
 import "../public/translations/i18n";
 
 storiesOf("MedicalCard", module).add(
-  "default",
+  "basic",
   () => (
     <Row position="center">
       <Col lg={8}>
