@@ -4,7 +4,7 @@ import { Topbar } from "../src/index";
 import logo from "../public/images/logo.svg";
 
 storiesOf("Topbar", module).add(
-  "default",
+  "basic",
   () => (
     <Topbar>
       <a

@@ -17,7 +17,7 @@ const AnchorLast = styled.a`
 `;
 
 storiesOf("Footer", module)
-  .add("default", () => (
+  .add("basic", () => (
     <Footer>
       <Container>
         <Row position="center" verticalAlign="middle">
