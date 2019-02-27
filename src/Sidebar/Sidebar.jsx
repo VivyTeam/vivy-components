@@ -7,7 +7,11 @@ import {
   ActiveIndicator,
   SidebarHeaderStyles
 } from "./sidebar.style";
-import logo from "../../public/images/vivy_logo/logo/logo_2.svg";
+
+const renderableChildrenPropType = PropTypes.oneOfType([
+  PropTypes.arrayOf(PropTypes.node),
+  PropTypes.node
+]);
 
 const Item = ({ iconName, active, children }) => {
   return (
@@ -23,36 +27,39 @@ const Item = ({ iconName, active, children }) => {
 Item.propTypes = {
   iconName: PropTypes.string.isRequired,
   active: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]).isRequired
+  children: renderableChildrenPropType.isRequired
 };
 Item.defaultProps = {
   active: false
 };
+Item.displayName = "Sidebar.Item";
+
+const Header = ({ logoUrl, logoAltText, children }) => (
+  <SidebarHeaderStyles>
+    <Row verticalAlign="middle">
+      <img src={logoUrl} alt={logoAltText} />
+      {children}
+    </Row>
+  </SidebarHeaderStyles>
+);
+Header.propTypes = {
+  logoUrl: PropTypes.string.isRequired,
+  logoAltText: PropTypes.string.isRequired,
+  children: renderableChildrenPropType.isRequired
+};
+Header.displayName = "Sidebar.Header";
 
 const Sidebar = ({ children }) => {
   return (
     <SidebarStyles>
-      <Col>
-        <SidebarHeaderStyles>
-          <Row verticalAlign="middle">
-            <img src={logo} alt="Vivy logo" />
-            <span>Vivy Pro</span>
-          </Row>
-        </SidebarHeaderStyles>
-        {children}
-      </Col>
+      <Col>{children}</Col>
     </SidebarStyles>
   );
 };
 Sidebar.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]).isRequired
+  children: renderableChildrenPropType.isRequired
 };
 
+Sidebar.Header = Header;
 Sidebar.Item = Item;
 export default Sidebar;
