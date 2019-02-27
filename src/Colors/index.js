@@ -1,3 +1,8 @@
+export const hexToRGBA = (hex, alpha = 1) => {
+  const [r, g, b] = hex.match(/\w\w/g).map(x => parseInt(x, 16));
+  return `rgba(${r},${g},${b},${alpha})`;
+};
+
 const primary = "#353F41";
 const primaryHover = "#05e6c8";
 const error = "#e94119";
@@ -41,6 +46,8 @@ const colors = {
 
   brandDestructive: "#EB5A47",
   brandAffirmative: "#61BD4F",
-  brandWarning: "#FFBD00"
+  brandWarning: "#FFBD00",
+
+  white: "#FFFFFF"
 };
 export default colors;
