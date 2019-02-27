@@ -13,20 +13,23 @@ const renderableChildrenPropType = PropTypes.oneOfType([
   PropTypes.node
 ]);
 
-const Item = ({ iconName, active, children }) => {
+const Item = ({ iconName, active, href, children }) => {
   return (
     <ItemStyles active={active}>
-      <Row textAlign="center" verticalAlign="middle">
-        <ActiveIndicator active={active} />
-        <Icon name={iconName} />
-        {children}
-      </Row>
+      <a href={href}>
+        <Row textAlign="center" verticalAlign="middle">
+          <ActiveIndicator active={active} />
+          <Icon name={iconName} />
+          {children}
+        </Row>
+      </a>
     </ItemStyles>
   );
 };
 Item.propTypes = {
   iconName: PropTypes.string.isRequired,
   active: PropTypes.bool,
+  href: PropTypes.string.isRequired,
   children: renderableChildrenPropType.isRequired
 };
 Item.defaultProps = {
@@ -34,17 +37,20 @@ Item.defaultProps = {
 };
 Item.displayName = "Sidebar.Item";
 
-const Header = ({ logoUrl, logoAltText, children }) => (
+const Header = ({ logoUrl, logoAltText, href, children }) => (
   <SidebarHeaderStyles>
-    <Row verticalAlign="middle">
-      <img src={logoUrl} alt={logoAltText} />
-      {children}
-    </Row>
+    <a href={href}>
+      <Row verticalAlign="middle">
+        <img src={logoUrl} alt={logoAltText} />
+        {children}
+      </Row>
+    </a>
   </SidebarHeaderStyles>
 );
 Header.propTypes = {
   logoUrl: PropTypes.string.isRequired,
   logoAltText: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
   children: renderableChildrenPropType.isRequired
 };
 Header.displayName = "Sidebar.Header";

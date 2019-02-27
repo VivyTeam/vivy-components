@@ -12,13 +12,21 @@ storiesOf("Sidebar", module)
   .addDecorator(storyFn => <LayoutStyles>{storyFn()}</LayoutStyles>)
   .add("basic", () => (
     <Sidebar>
-      <Sidebar.Header logoUrl={logo} logoAltText="Vivy Logo">
+      <Sidebar.Header
+        logoUrl={logo}
+        logoAltText="Vivy Logo"
+        href="https://vivy.com"
+      >
         Vivy Pro
       </Sidebar.Header>
-      <Sidebar.Item active iconName="documents">
+      <Sidebar.Item active iconName="documents" href="https://vivy.com">
         Documents
       </Sidebar.Item>
-      <Sidebar.Item iconName="share-with-user">Patients</Sidebar.Item>
-      <Sidebar.Item iconName="invoice">Invoices</Sidebar.Item>
+      <Sidebar.Item iconName="share-with-user" href="https://vivy.com">
+        Patients
+      </Sidebar.Item>
+      <Sidebar.Item iconName="invoice" href="https://vivy.com">
+        Invoices
+      </Sidebar.Item>
     </Sidebar>
   ));

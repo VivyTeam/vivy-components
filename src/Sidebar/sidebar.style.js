@@ -13,6 +13,11 @@ export const SidebarStyles = styled.div`
     padding-left: 24px;
     padding-right: 24px;
   }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
 `;
 
 export const SidebarHeaderStyles = styled.div`
