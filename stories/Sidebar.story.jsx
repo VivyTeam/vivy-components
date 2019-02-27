@@ -19,14 +19,14 @@ storiesOf("Sidebar", module)
       >
         Vivy Pro
       </Sidebar.Header>
-      <Sidebar.Item active iconName="documents" href="https://vivy.com">
+      <Sidebar.Link active iconName="documents" href="https://vivy.com">
         Documents
-      </Sidebar.Item>
-      <Sidebar.Item iconName="share-with-user" href="https://vivy.com">
+      </Sidebar.Link>
+      <Sidebar.Link iconName="share-with-user" href="https://vivy.com">
         Patients
-      </Sidebar.Item>
-      <Sidebar.Item iconName="invoice" href="https://vivy.com">
+      </Sidebar.Link>
+      <Sidebar.Link iconName="invoice" href="https://vivy.com">
         Invoices
-      </Sidebar.Item>
+      </Sidebar.Link>
     </Sidebar>
   ));

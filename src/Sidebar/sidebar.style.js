@@ -30,7 +30,7 @@ export const SidebarHeaderStyles = styled.div`
   }
 `;
 
-export const ItemStyles = styled.div`
+export const LinkStyles = styled.div`
   height: 48px;
 
   i {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Row, Col, Icon } from "../../src/index";
 import {
   SidebarStyles,
-  ItemStyles,
+  LinkStyles,
   ActiveIndicator,
   SidebarHeaderStyles
 } from "./sidebar.style";
@@ -13,9 +13,9 @@ const renderableChildrenPropType = PropTypes.oneOfType([
   PropTypes.node
 ]);
 
-const Item = ({ iconName, active, href, children }) => {
+const Link = ({ iconName, active, href, children }) => {
   return (
-    <ItemStyles active={active}>
+    <LinkStyles active={active}>
       <a href={href}>
         <Row textAlign="center" verticalAlign="middle">
           <ActiveIndicator active={active} />
@@ -23,19 +23,19 @@ const Item = ({ iconName, active, href, children }) => {
           {children}
         </Row>
       </a>
-    </ItemStyles>
+    </LinkStyles>
   );
 };
-Item.propTypes = {
+Link.propTypes = {
   iconName: PropTypes.string.isRequired,
   active: PropTypes.bool,
   href: PropTypes.string.isRequired,
   children: renderableChildrenPropType.isRequired
 };
-Item.defaultProps = {
+Link.defaultProps = {
   active: false
 };
-Item.displayName = "Sidebar.Item";
+Link.displayName = "Sidebar.Link";
 
 const Header = ({ logoUrl, logoAltText, href, children }) => (
   <SidebarHeaderStyles>
@@ -67,5 +67,5 @@ Sidebar.propTypes = {
 };
 
 Sidebar.Header = Header;
-Sidebar.Item = Item;
+Sidebar.Link = Link;
 export default Sidebar;
