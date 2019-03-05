@@ -21,7 +21,8 @@
     "build:storybook": "storybook-to-ghpages",
     "build:static": "build-storybook -s public",
     "build:package": "babel --presets @babel/react ./src --out-dir ./dist",
-    "test": "jest",
+    "test": "npm run build:package && jest",
+    "test:dist": "npm run build:package && node tests/dist.test.js",
     "danger": "danger ci",
     "test:watch": "npm run test -- --watchAll"
   },
@@ -71,12 +72,31 @@
     "react-test-renderer": "16.8.1"
   },
   "jest": {
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|svg|ttf|woff|woff2|eot)$": "<rootDir>/.jest/assetsTransformer.js",
-      "\\.(css)$": "<rootDir>/.jest/styleMock.js"
-    },
-    "setupFiles": [
-      "<rootDir>/.jest/registerContext.js"
+    "projects": [
+      {
+        "displayName": "Snapshots",
+        "moduleNameMapper": {
+          "\\.(jpg|jpeg|png|gif|svg|ttf|woff|woff2|eot)$": "<rootDir>/.jest/assetsTransformer.js",
+          "\\.(css)$": "<rootDir>/.jest/styleMock.js"
+        },
+        "setupFiles": [
+          "<rootDir>/.jest/registerContext.js"
+        ],
+        "testMatch": [
+          "<rootDir>/tests/storyshots*.js"
+        ]
+      },
+      {
+        "displayName": "Dist",
+        "moduleNameMapper": {
+          "\\.(jpg|jpeg|png|gif|svg|ttf|woff|woff2|eot)$": "<rootDir>/.jest/assetsTransformer.js",
+          "\\.(css)$": "<rootDir>/.jest/styleMock.js",
+          "/src/(.*)": "ERROR: Imports should not include the src folder"
+        },
+        "testMatch": [
+          "<rootDir>/tests/dist.test.js"
+        ]
+      }
     ]
   }
 }
