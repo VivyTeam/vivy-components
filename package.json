@@ -67,7 +67,7 @@
     "jest-styled-components": "6.3.1",
     "prettier": "^1.16.4",
     "react-scripts": "^2.1.8",
-    "react-test-renderer": "16.8.1"
+    "react-test-renderer": "16.8.4"
   },
   "jest": {
     "projects": [
