@@ -18,6 +18,7 @@ export { default as Modal } from "./Modal";
 export { default as Colors } from "./Colors";
 export { default as Sidebar } from "./Sidebar/Sidebar";
 export { default as SimpleLoader } from "./SimpleLoader";
+export { default as Table } from "./Table";
 export { default as Topbar } from "./Topbar";
 export { default as VivyFooter } from "./VivyFooter";
 export { default as Footer } from "./Footer";
