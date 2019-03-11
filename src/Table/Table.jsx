@@ -11,6 +11,9 @@ const tableWithDefaults = props => {
 
   return <StyledTable {...defaultOptions} {...props} />;
 };
+
+// Pass through all ReactTable props so that we can still
+// benefit from prop-types type checks
 tableWithDefaults.propTypes = StyledTable.propTypes;
 
 export default tableWithDefaults;
