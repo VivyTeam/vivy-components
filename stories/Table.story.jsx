@@ -119,4 +119,26 @@ storiesOf("Table", module)
         <Table data={medicalPersonsData} columns={columns} />
       </LayoutStyles>
     );
+  })
+  .add("no data", () => {
+    const columns = [
+      {
+        Header: "Name",
+        accessor: "name"
+      },
+      {
+        Header: "Birthday",
+        accessor: "birthday"
+      },
+      {
+        Header: "Known for",
+        accessor: "knownFor"
+      }
+    ];
+
+    return (
+      <LayoutStyles>
+        <Table data={[]} columns={columns} />
+      </LayoutStyles>
+    );
   });

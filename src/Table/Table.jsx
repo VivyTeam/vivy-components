@@ -5,8 +5,13 @@ const tableWithDefaults = props => {
   const defaultOptions = {
     showPagination: false,
     minRows: 0,
+
+    // Do not allow sorting rows or dragging columns around
     sortable: false,
-    resizable: false
+    resizable: false,
+
+    // Do not show any extra UI when there are no rows
+    NoDataComponent: () => null
   };
 
   return <StyledTable {...defaultOptions} {...props} />;
