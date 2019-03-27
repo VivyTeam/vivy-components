@@ -37,7 +37,7 @@ AnchorButton.propTypes = {
   onClick: PropTypes.func,
   target: PropTypes.string,
   rel: PropTypes.string,
-  download: PropTypes.string,
+  download: PropTypes.oneOf([PropTypes.bool, PropTypes.string]),
   style: PropTypes.shape({}),
   className: PropTypes.string
 };
@@ -46,8 +46,8 @@ AnchorButton.defaultProps = {
   type: "primary",
   onClick: () => {},
   target: "_self",
-  rel: "",
-  download: "",
+  rel: null,
+  download: null,
   style: {},
   className: ""
 };
