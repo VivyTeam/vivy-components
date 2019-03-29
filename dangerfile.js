@@ -4,19 +4,6 @@ import includes from "lodash.includes";
 const { pr } = danger.github;
 const { modified_files: modifiedFiles } = danger.git;
 
-const bigPRThreshold = 700;
-if (pr.additions - pr.deletions > bigPRThreshold) {
-  const title = "Big PR";
-  const idea = `This PR is unlikely to get reviewed because it touches too many lines 
-  (${pr.additions - pr.deletions}). 
-  Consider sending smaller Pull Requests and stack them on top of each other.`;
-  warn(`${title} - <i>${idea}</i>`);
-} else {
-  const title = "✅ Get a 🥇 for opening a small enough PR.";
-  const idea = "Be proud of yourself!";
-  message(`${title} - <i>${idea}</i>`);
-}
-
 if (pr.requested_teams.length === 0 && pr.requested_reviewers.length === 0) {
   const title = "Missing reviewer";
   const idea =
