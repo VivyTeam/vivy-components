@@ -1252,13 +1252,13 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-storyshots-puppeteer@^5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-storyshots-puppeteer/-/addon-storyshots-puppeteer-5.0.3.tgz#c79767d5043487bc003f37e2bbf9d41969a051c1"
-  integrity sha512-C26RGEHQM/sroIOaWQT0PoxUsfrKO+ZuTcclRPUTYxLmBdcZPkfAh/EMYwmSGJN9s4+a8RMtc7Z3Aw0PMXOXKw==
+"@storybook/addon-storyshots-puppeteer@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-storyshots-puppeteer/-/addon-storyshots-puppeteer-5.0.6.tgz#b4ab97112230e26f3e376ad4c0206f2a2d49142e"
+  integrity sha512-bHIxHv+Z276YWrkRAMGgEavlwZttlHxzOlhwmBWnv+6MWS9QAwIbi9gmcpabCMqMWVs3HXqXgvC9Mh+BP/EqRw==
   dependencies:
-    "@storybook/node-logger" "5.0.3"
-    "@storybook/router" "5.0.3"
+    "@storybook/node-logger" "5.0.6"
+    "@storybook/router" "5.0.6"
     core-js "^2.6.5"
     jest-image-snapshot "^2.6.0"
     puppeteer "^1.12.0"
@@ -1507,17 +1507,6 @@
     webpack "^4.29.0"
     webpack-dev-middleware "^3.5.1"
     webpack-hot-middleware "^2.24.3"
-
-"@storybook/node-logger@5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@storybook/node-logger/-/node-logger-5.0.3.tgz#616992e02ac58318250d6bb3d212d6bb79ed9b87"
-  integrity sha512-sVOOXO5Ae9xu1uTiBkVItDYZpsncA83tZ5xUNjxQmmQaaDDev+SO2d6b8A5drFLZQxbIXCdHn57CjZXUP1ChlA==
-  dependencies:
-    chalk "^2.4.2"
-    core-js "^2.6.5"
-    npmlog "^4.1.2"
-    pretty-hrtime "^1.0.3"
-    regenerator-runtime "^0.12.1"
 
 "@storybook/node-logger@5.0.6":
   version "5.0.6"
