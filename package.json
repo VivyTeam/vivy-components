@@ -27,7 +27,7 @@
     "test:watch": "npm run test -- --watchAll"
   },
   "dependencies": {
-    "@storybook/theming": "^5.0.5",
+    "@storybook/theming": "^5.0.6",
     "async-validator": "^1.11.0",
     "copy-to-clipboard": "^3.0.8",
     "i18next": "^15.0.8",
@@ -47,10 +47,10 @@
     "@babel/plugin-proposal-class-properties": "7.4.0",
     "@babel/preset-env": "7.4.2",
     "@babel/preset-react": "7.0.0",
-    "@storybook/addon-info": "^5.0.3",
-    "@storybook/addon-storyshots": "^5.0.3",
-    "@storybook/addon-storyshots-puppeteer": "^5.0.3",
-    "@storybook/addons": "^5.0.3",
+    "@storybook/addon-storyshots": "^5.0.6",
+    "@storybook/addon-info": "^5.0.6",
+    "@storybook/addon-storyshots-puppeteer": "^5.0.6",
+    "@storybook/addons": "^5.0.6",
     "@storybook/react": "^5.0.6",
     "@storybook/storybook-deployer": "^2.8.1",
     "babel-eslint": "^10.0.1",
