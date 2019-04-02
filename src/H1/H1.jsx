@@ -2,20 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const HeadingOneStyles = styled.h1`
+const Styles = styled.h1`
   font-weight: 500;
   font-size: 36px;
 `;
 
-export default function HeadingOne({ children, style }) {
-  return <HeadingOneStyles style={style}>{children}</HeadingOneStyles>;
+export default function H1({ children, style }) {
+  return <Styles style={style}>{children}</Styles>;
 }
 
-HeadingOne.propTypes = {
+H1.propTypes = {
   children: PropTypes.string.isRequired,
   style: PropTypes.shape({})
 };
 
-HeadingOne.defaultProps = {
+H1.defaultProps = {
   style: {}
 };
