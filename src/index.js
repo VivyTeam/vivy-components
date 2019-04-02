@@ -29,3 +29,5 @@ export { default as Row } from "./Grid/Row";
 export { default as Col } from "./Grid/Col";
 export { default as Validation } from "./Forms/Validation";
 export { ValidationContext } from "./Forms/Validation";
+export { default as Paragraph } from "./Paragraph";
+export { default as Caption } from "./Caption";
