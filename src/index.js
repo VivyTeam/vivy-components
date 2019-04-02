@@ -31,3 +31,4 @@ export { default as Validation } from "./Forms/Validation";
 export { ValidationContext } from "./Forms/Validation";
 export { default as Paragraph } from "./Paragraph";
 export { default as Caption } from "./Caption";
+export { default as Tiny } from "./Tiny";

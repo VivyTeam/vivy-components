@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
-const BOLD = "bold";
-const BASIC = "basic";
+const TYPE_BASIC = "basic";
+const TYPE_BOLD = "bold";
 
 const ParagraphStyles = styled.p`
   font-size: 16px;
 
   ${({ type }) =>
-    type === BOLD &&
+    type === TYPE_BOLD &&
     css`
       font-weight: 500;
     `}
@@ -25,11 +25,11 @@ export default function Paragraph({ children, style, type }) {
 
 Paragraph.propTypes = {
   children: PropTypes.string.isRequired,
-  type: PropTypes.oneOf([BASIC, BOLD]),
+  type: PropTypes.oneOf([TYPE_BASIC, TYPE_BOLD]),
   style: PropTypes.shape({})
 };
 
 Paragraph.defaultProps = {
-  type: BASIC,
+  type: TYPE_BASIC,
   style: {}
 };

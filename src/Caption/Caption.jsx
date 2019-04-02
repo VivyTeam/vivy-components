@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 
+const TYPE_BASIC = "basic";
 const TYPE_BOLD = "bold";
-const SIZE_SMALL = "tiny";
 
-const CaptionStyles = styled.div`
+const CaptionStyles = styled.p`
   font-size: 14px;
 
   ${({ type }) =>
@@ -13,17 +13,11 @@ const CaptionStyles = styled.div`
     css`
       font-weight: 500;
     `}
-
-  ${({ size }) =>
-    size === SIZE_SMALL &&
-    css`
-      font-size: 12px;
-    `}
 `;
 
-export default function Caption({ children, style, type, size }) {
+export default function Caption({ children, style, type }) {
   return (
-    <CaptionStyles style={style} type={type} size={size}>
+    <CaptionStyles style={style} type={type}>
       {children}
     </CaptionStyles>
   );
@@ -31,13 +25,11 @@ export default function Caption({ children, style, type, size }) {
 
 Caption.propTypes = {
   children: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(["", TYPE_BOLD]),
-  size: PropTypes.oneOf(["", SIZE_SMALL]),
+  type: PropTypes.oneOf([TYPE_BASIC, TYPE_BOLD]),
   style: PropTypes.shape({})
 };
 
 Caption.defaultProps = {
-  type: "",
-  size: "",
+  type: TYPE_BASIC,
   style: {}
 };
