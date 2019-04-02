@@ -9,6 +9,6 @@ storiesOf("Paragraph", module)
       Better Health needs Vivy.
     </Paragraph>
   ))
-  .add("bold", () => (
+  .add("type bold", () => (
     <Paragraph type="bold">Better Health needs Vivy.</Paragraph>
   ));
