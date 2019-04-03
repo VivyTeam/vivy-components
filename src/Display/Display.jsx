@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 // This is a div element that is in font-size bigger than h1 and is supposed to be
 // used as 'slogan' around our apps. We dont want this to be crawled from search engines
-// since its only for design reasons but instead we want the h1 to be so as it is meant by default.
+// since its only for design reasons.
 const DisplayStyles = styled.div`
   font-weight: 500;
   line-height: 1.13;
