@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const Styles = styled.h1`
   font-weight: 500;
+  line-height: 1.17;
   font-size: 36px;
 `;
 
@@ -12,7 +13,10 @@ export default function H1({ children, style }) {
 }
 
 H1.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
   style: PropTypes.shape({})
 };
 
