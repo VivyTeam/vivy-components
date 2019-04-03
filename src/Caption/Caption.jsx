@@ -7,7 +7,7 @@ const TYPE_BOLD = "bold";
 
 const CaptionStyles = styled.p`
   font-size: 14px;
-  line-height: 0.875rem;
+  line-height: 18px;
 
   ${({ type }) =>
     type === TYPE_BOLD &&

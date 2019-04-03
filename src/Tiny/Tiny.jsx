@@ -7,7 +7,7 @@ const TYPE_BOLD = "bold";
 
 const TinyStyles = styled.p`
   font-size: 12px;
-  line-height: 0.75rem;
+  line-height: 18px;
 
   ${({ type }) =>
     type === TYPE_BOLD &&
