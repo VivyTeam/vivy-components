@@ -5,8 +5,9 @@ import styled, { css } from "styled-components";
 const TYPE_BASIC = "basic";
 const TYPE_BOLD = "bold";
 
-const CaptionStyles = styled.p`
+const TinyStyles = styled.p`
   font-size: 12px;
+  line-height: 0.75rem;
 
   ${({ type }) =>
     type === TYPE_BOLD &&
@@ -15,21 +16,24 @@ const CaptionStyles = styled.p`
     `}
 `;
 
-export default function Caption({ children, style, type }) {
+export default function Tiny({ children, style, type }) {
   return (
-    <CaptionStyles style={style} type={type}>
+    <TinyStyles style={style} type={type}>
       {children}
-    </CaptionStyles>
+    </TinyStyles>
   );
 }
 
-Caption.propTypes = {
-  children: PropTypes.string.isRequired,
+Tiny.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
   type: PropTypes.oneOf([TYPE_BASIC, TYPE_BOLD]),
   style: PropTypes.shape({})
 };
 
-Caption.defaultProps = {
+Tiny.defaultProps = {
   type: TYPE_BASIC,
   style: {}
 };

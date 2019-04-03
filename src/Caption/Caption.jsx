@@ -7,6 +7,7 @@ const TYPE_BOLD = "bold";
 
 const CaptionStyles = styled.p`
   font-size: 14px;
+  line-height: 0.875rem;
 
   ${({ type }) =>
     type === TYPE_BOLD &&
@@ -24,7 +25,10 @@ export default function Caption({ children, style, type }) {
 }
 
 Caption.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
   type: PropTypes.oneOf([TYPE_BASIC, TYPE_BOLD]),
   style: PropTypes.shape({})
 };

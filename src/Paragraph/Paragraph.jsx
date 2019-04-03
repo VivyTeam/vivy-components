@@ -7,6 +7,7 @@ const TYPE_BOLD = "bold";
 
 const ParagraphStyles = styled.p`
   font-size: 16px;
+  line-height: 1.375rem;
 
   ${({ type }) =>
     type === TYPE_BOLD &&
@@ -24,7 +25,10 @@ export default function Paragraph({ children, style, type }) {
 }
 
 Paragraph.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
   type: PropTypes.oneOf([TYPE_BASIC, TYPE_BOLD]),
   style: PropTypes.shape({})
 };
