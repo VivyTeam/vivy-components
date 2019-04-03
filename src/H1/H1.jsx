@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Styles = styled.h1`
   font-weight: 500;
-  line-height: 2.625rem;
+  line-height: 42px;
   font-size: 36px;
 `;
 
