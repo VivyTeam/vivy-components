@@ -30,7 +30,7 @@
     "@storybook/theming": "^5.0.6",
     "async-validator": "^1.11.0",
     "copy-to-clipboard": "^3.0.8",
-    "i18next": "^15.0.8",
+    "i18next": "^15.0.9",
     "i18next-browser-languagedetector": "^2.2.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
