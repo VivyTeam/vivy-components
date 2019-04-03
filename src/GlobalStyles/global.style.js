@@ -6,7 +6,6 @@ const GlobalStyles = createGlobalStyle`
     color: ${primary}; 
     margin: 0;
     padding: 0;
-    background-color: #fff;    
     min-height: 100%;
     overflow-x: hidden;
     min-width: 320px;
