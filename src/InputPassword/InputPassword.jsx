@@ -8,9 +8,16 @@ import { ValidationContext } from "../Forms/Validation";
 import formData from "../utils/formData";
 
 class InputPassword extends Component {
-  state = { showPassword: this.props.showPassword };
+  constructor(props) {
+    super(props);
+    const { showPassword } = props;
+    this.state = { showPassword };
+  }
 
-  toggle = () => this.setState({ showPassword: !this.state.showPassword });
+  toggle = () => {
+    const { showPassword } = this.state;
+    return this.setState({ showPassword: !showPassword });
+  };
 
   render() {
     const {

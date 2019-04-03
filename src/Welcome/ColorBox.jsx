@@ -6,6 +6,7 @@ export default function ColorBox({ description, color }) {
   return (
     <div>
       <button
+        type="button"
         className="color-box"
         style={{ backgroundColor: color }}
         onClick={() => copy(color)}
