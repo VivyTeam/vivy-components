@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Styles = styled.h2`
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.875rem;
   font-size: 24px;
 `;
 

@@ -7,7 +7,7 @@ import styled from "styled-components";
 // since its only for design reasons.
 const DisplayStyles = styled.div`
   font-weight: 500;
-  line-height: 1.13;
+  line-height: 3.5rem;
   font-size: 48px;
 `;
 
