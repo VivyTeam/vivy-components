@@ -12,7 +12,7 @@ const FontStyles = styled.div`
     margin-bottom: 8px;
     color: ${Colors.textSecondary};
   }
-  
+
   a {
     display: block;
     text-decoration: none;
