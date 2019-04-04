@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "../../src/index";
+import { Row, Col } from "../index";
 import Styles from "./themeTypography.style";
 
 export default function ThemeTypography() {

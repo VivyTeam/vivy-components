@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import ColorBox from "./ColorBox";
-import { Row, Col, Colors } from "../../src";
+import { Row, Col, Colors } from "..";
 
 const Styles = styled.div`
   margin-top: 20px;
