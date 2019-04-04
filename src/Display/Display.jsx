@@ -7,8 +7,8 @@ import styled from "styled-components";
 // since its only for design reasons.
 const DisplayStyles = styled.div`
   font-weight: 500;
-  font-size: 3rem;
-  line-height: 3.5rem;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
 `;
 
 export default function Display({ children, style }) {
