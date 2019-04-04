@@ -2,7 +2,12 @@ import { createGlobalStyle } from "styled-components";
 import { primary } from "../Colors";
 
 const GlobalStyles = createGlobalStyle`
+  html{
+    font-size: 62.5%;
+  }
+  
   body {
+    font-size: 1.6rem;
     color: ${primary}; 
     margin: 0;
     padding: 0;

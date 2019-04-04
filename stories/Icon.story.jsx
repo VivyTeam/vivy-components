@@ -12,7 +12,6 @@ const IconStory = styled.div`
     width: 80%;
   }
   i {
-    font-size: 1.5em;
     margin: 10px;
   }
   h3 {
