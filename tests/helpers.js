@@ -20,4 +20,10 @@ export const failureThreshold = () => ({
 
 const tablet = devices["iPad landscape"];
 export const customizePage = page => page.emulate(tablet);
-export const beforeScreenshot = page => page.emulate(tablet);
+export const beforeScreenshot = () => {
+  return new Promise(resolve =>
+    setTimeout(() => {
+      resolve();
+    }, 100)
+  );
+};
