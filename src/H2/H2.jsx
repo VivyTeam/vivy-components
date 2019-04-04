@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 const Styles = styled.h2`
   font-weight: 500;
-  line-height: 30px;
-  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
 `;
 
 export default function H2({ children, style }) {
