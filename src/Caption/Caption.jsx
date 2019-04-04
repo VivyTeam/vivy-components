@@ -6,8 +6,8 @@ const TYPE_BASIC = "basic";
 const TYPE_BOLD = "bold";
 
 const CaptionStyles = styled.p`
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
 
   ${({ type }) =>
     type === TYPE_BOLD &&
