@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
+    font-size: 1.6rem;
     color: ${primary}; 
     margin: 0;
     padding: 0;
