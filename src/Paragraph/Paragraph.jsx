@@ -6,8 +6,8 @@ const TYPE_BASIC = "basic";
 const TYPE_BOLD = "bold";
 
 const ParagraphStyles = styled.p`
-  font-size: 1rem;
-  line-height: 1.375rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
 
   ${({ type }) =>
     type === TYPE_BOLD &&
