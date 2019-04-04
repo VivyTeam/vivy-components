@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Paragraph, Caption, Tiny } from "../index";
+
 import Styles from "./themeTypography.style";
 
 export default function ThemeTypography() {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "../../src/index";
+import { Row, Col } from "../index";
 
 export default function WelcomePage() {
   return (

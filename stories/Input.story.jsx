@@ -12,6 +12,7 @@ class Focus extends Component {
   focusTextInput() {
     this.textInput.current.focus();
   }
+
   render() {
     return (
       <Fragment>
