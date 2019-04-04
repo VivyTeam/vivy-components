@@ -2,6 +2,10 @@ import { createGlobalStyle } from "styled-components";
 import { primary } from "../Colors";
 
 const GlobalStyles = createGlobalStyle`
+  html{
+    font-size: 62.5%;
+  }
+  
   body {
     color: ${primary}; 
     margin: 0;
