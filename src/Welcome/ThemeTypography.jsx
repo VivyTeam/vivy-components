@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Paragraph, Caption, Tiny } from "../index";
+import { Row, Col, Paragraph, Display, H1, H2, Caption, Tiny } from "../index";
 
 import Styles from "./themeTypography.style";
 
@@ -8,11 +8,16 @@ export default function ThemeTypography() {
     <Styles>
       <Row position="center">
         <Col lg={8}>
-          <h5>H1</h5>
-          <h1>Heading One</h1>
+          <h5>Display</h5>
+          <Display>Used for Slogans</Display>
           <br />
+
+          <h5>H1</h5>
+          <H1>Heading One</H1>
+          <br />
+
           <h5>H2</h5>
-          <h2>Heading Two</h2>
+          <H2>Heading Two</H2>
           <br />
 
           <h5>Paragraph</h5>
