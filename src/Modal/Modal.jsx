@@ -1,20 +1,37 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ModalStyles from "./modal.style";
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
+import { ModalStyles, Overlay, Content } from "./modal.style";
 
-export default function Modal({ open, children }) {
-  return (
-    <ModalStyles>
-      {open ? (
-        <div className="container">
-          <div className="modal-body">{children}</div>
-        </div>
-      ) : null}
-    </ModalStyles>
-  );
+class Modal extends React.Component {
+  componentDidMount() {
+    disableBodyScroll(document.querySelector("body"));
+  }
+
+  componentWillUnmount() {
+    clearAllBodyScrollLocks();
+  }
+
+  render() {
+    const { closeCallback, children } = this.props;
+    return (
+      <ModalStyles>
+        <Overlay onClick={closeCallback} />
+        <Content>{children}</Content>
+      </ModalStyles>
+    );
+  }
 }
 
 Modal.propTypes = {
-  children: PropTypes.node.isRequired,
-  open: PropTypes.bool.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
+  closeCallback: PropTypes.func
 };
+Modal.defaultProps = {
+  closeCallback: () => {}
+};
+
+export default Modal;

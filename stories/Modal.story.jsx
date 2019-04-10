@@ -1,48 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { Button, Modal } from "../src/index";
+import { Button, Colors, Row, Col } from "../src/index";
+import Modal from "../src/Modal";
 
 const LayoutStyles = styled.div`
-  width: 80%;
-  margin: 0 auto;
-
-  padding: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .full-screen-modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 60px;
-
-    h2 {
-      font-size: 2.25m;
-      font-weight: 500;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.17;
-      letter-spacing: normal;
-      color: #353f41;
-      margin: 6px 0 40px 0;
-    }
+  height: 150vh;
+  .green {
+    height: 25%;
+    background: ${Colors.brandPrimary};
+  }
+  .white {
+    height: 25%;
+    background: ${Colors.white};
   }
 `;
 
-storiesOf("Modal", module).add(
-  "Fullscreen",
-  () => (
-    <LayoutStyles>
-      <Modal open>
-        <div className="full-screen-modal">
-          <h2>Fullscreen modal</h2>
-          <Button>OK</Button>
+storiesOf("Modal", module)
+  .add("basic", () => <Modal>A very basic modal.</Modal>)
+  .add("example usage with trigger button", () => {
+    const ModalUseCase = () => {
+      const [open, toggleModal] = useState(false);
+
+      return (
+        <>
+          <Button onClick={() => toggleModal(true)}>
+            Launch composed modal
+          </Button>
+          {open && (
+            <Modal closeCallback={() => toggleModal(false)}>
+              A very basic modal that wont scroll the background when opened.
+            </Modal>
+          )}
+        </>
+      );
+    };
+    return (
+      <LayoutStyles>
+        <div className="white">
+          <Row position="center">
+            <Col lg={3}>
+              <ModalUseCase />
+            </Col>
+          </Row>
         </div>
-      </Modal>
-    </LayoutStyles>
-  ),
-  { info: "Use to grab the users attention" }
-);
+        <div className="green" />
+        <div className="white" />
+        <div className="green" />
+      </LayoutStyles>
+    );
+  });
