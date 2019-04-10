@@ -18,7 +18,8 @@ export default function InputMasked({
   mask,
   maskChar,
   validateOnChange,
-  validateOnBlur
+  validateOnBlur,
+  autoComplete
 }) {
   const basic = classNames(["masked-input", true], ["icon-padding", iconName]);
 
@@ -43,6 +44,7 @@ export default function InputMasked({
           >
             {inherited => (
               <input
+                autoComplete={autoComplete ? "on" : "off"}
                 id={id}
                 name={name}
                 type={type}
@@ -71,6 +73,7 @@ InputMasked.propTypes = {
   maskChar: PropTypes.string,
   validateOnChange: PropTypes.bool,
   validateOnBlur: PropTypes.bool,
+  autoComplete: PropTypes.bool,
   rel: PropTypes.shape({})
 };
 
@@ -85,5 +88,6 @@ InputMasked.defaultProps = {
   maskChar: "",
   validateOnChange: true,
   validateOnBlur: true,
+  autoComplete: false,
   rel: React.createRef()
 };
