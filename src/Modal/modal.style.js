@@ -35,5 +35,5 @@ export const Content = styled.div`
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
   text-align: center;
   border-radius: 2px;
-  width: 520px; /* This just a default width */
+  min-width: 320px; /* This just a default width */
 `;
