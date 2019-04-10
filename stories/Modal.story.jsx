@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { Button, Colors, Row, Col } from "../src/index";
-import Modal from "../src/Modal";
+import { Button, Colors, Row, Col, Modal } from "../src/index";
 
 const LayoutStyles = styled.div`
   height: 150vh;
