@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 import { ModalStyles, Overlay, Content } from "./modal.style";
 
-class Modal extends React.Component {
+class Modal extends Component {
   componentDidMount() {
     disableBodyScroll(document.querySelector("body"));
   }
