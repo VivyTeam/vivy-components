@@ -27,12 +27,13 @@ export default function Button({
         className={`${className} ${type}`}
         type={htmlType}
         style={style}
+        ref={ref}
       >
         <div className="component-child">{children}</div>
       </button>
     </ButtonStyles>
-  );
-}
+  )
+);
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
@@ -56,3 +57,5 @@ Button.defaultProps = {
   className: "",
   height: HEIGHT_TYPE_BASIC
 };
+
+export default Button;
