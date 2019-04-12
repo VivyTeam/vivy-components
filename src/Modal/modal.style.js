@@ -13,6 +13,15 @@ export const Overlay = styled.div`
   background-color: #000000;
 `;
 
+export const CloseButton = styled.button`
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+`;
+
 export const ModalStyles = styled.div`
   position: fixed;
   left: 0;
