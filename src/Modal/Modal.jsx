@@ -13,10 +13,10 @@ class Modal extends Component {
   }
 
   render() {
-    const { closeCallback, children } = this.props;
+    const { onClose, children } = this.props;
     return (
       <ModalStyles>
-        <Overlay onClick={closeCallback} />
+        <Overlay onClick={onClose} />
         <Content>{children}</Content>
       </ModalStyles>
     );
@@ -28,10 +28,10 @@ Modal.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
-  closeCallback: PropTypes.func
+  onClose: PropTypes.func
 };
 Modal.defaultProps = {
-  closeCallback: () => {}
+  onClose: () => {}
 };
 
 export default Modal;
