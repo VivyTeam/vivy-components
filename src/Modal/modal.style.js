@@ -14,12 +14,17 @@ export const Overlay = styled.div`
 `;
 
 export const CloseButton = styled.button`
+  display: inline-flex;
   background: none;
   color: inherit;
   border: none;
   font: inherit;
   cursor: pointer;
   padding: 0;
+
+  div {
+    display: inline-flex;
+  }
 `;
 
 export const ModalStyles = styled.div`
@@ -39,7 +44,7 @@ export const Content = styled.div`
   transform: translate(-50%, -50%);
   max-height: 90%;
   background: ${Colors.white};
-  padding: 24px;
+  padding: 16px 16px 24px 16px;
   text-align: center;
   border-radius: 8px;
   min-width: 320px; /* This just a default width */

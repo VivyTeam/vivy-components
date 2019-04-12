@@ -1,25 +1,26 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactFocusTrap from "react-focus-lock";
-import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { ModalStyles, Overlay, Content, CloseButton } from "./modal.style";
 import { Row, Col, Icon } from "../index";
 
 class Modal extends Component {
-  closeButton = React.createRef();
+  constructor(props) {
+    super(props);
+    this.closeButton = React.createRef();
+  }
 
   componentDidMount() {
-    this.focusOnCloseButton();
+    if (this.closeButton.current) {
+      this.closeButton.current.focus();
+    }
     disableBodyScroll(document.querySelector("body"));
   }
 
   componentWillUnmount() {
     enableBodyScroll(document.querySelector("body"));
   }
-
-  focusOnCloseButton = () => {
-    this.closeButton.current.focus();
-  };
 
   render() {
     const { closeCallback, role, ariaLabel, children } = this.props;
@@ -34,7 +35,7 @@ class Modal extends Component {
         <ModalStyles>
           <Overlay onClick={closeCallback} />
           <Content>
-            <Row>
+            <Row textAlign="right">
               <Col offset={11} lg={1}>
                 <CloseButton ref={this.closeButton} onClick={closeCallback}>
                   <Icon name="close" />
