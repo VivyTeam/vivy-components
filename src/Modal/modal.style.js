@@ -22,6 +22,12 @@ export const CloseButton = styled.button`
   cursor: pointer;
   padding: 0;
 
+  i {
+    width: 16px;
+    height: 16px;
+    text-align: left;
+  }
+
   div {
     display: inline-flex;
   }
