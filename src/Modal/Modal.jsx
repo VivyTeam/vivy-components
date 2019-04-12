@@ -62,7 +62,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
   closeCallback: () => {},
   role: "dialog",
-  ariaLabel: "A Label for the Modal that describes what it is."
+  ariaLabel: "" // A Label for the Modal that describes what it is.
 };
 
 export default Modal;
