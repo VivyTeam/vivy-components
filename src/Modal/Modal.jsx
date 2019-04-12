@@ -28,10 +28,6 @@ class Modal extends Component {
     enableBodyScroll(document.querySelector("body"));
   }
 
-  focusOnCloseButton = () => {
-    this.closeButton.current.focus();
-  };
-
   render() {
     const { onClose, role, ariaLabel, children } = this.props;
     return (
