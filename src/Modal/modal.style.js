@@ -9,7 +9,8 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   z-index: ${zIndex};
-  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0.3;
+  background-color: #000000;
 `;
 
 export const ModalStyles = styled.div`
@@ -29,9 +30,8 @@ export const Content = styled.div`
   transform: translate(-50%, -50%);
   max-height: 90%;
   background: ${Colors.white};
-  padding: 20px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+  padding: 24px;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 8px;
   min-width: 320px; /* This just a default width */
 `;
