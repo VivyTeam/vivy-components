@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { ModalStyles, Overlay, Content } from "./modal.style";
 
 class Modal extends Component {
@@ -9,7 +9,7 @@ class Modal extends Component {
   }
 
   componentWillUnmount() {
-    clearAllBodyScrollLocks();
+    enableBodyScroll(document.querySelector("body"));
   }
 
   render() {
