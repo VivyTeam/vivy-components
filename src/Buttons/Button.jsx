@@ -2,8 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import ButtonStyles from "./button.style";
 
-const Button = React.forwardRef(
-  ({ type, htmlType, onClick, children, disabled, style, className }, ref) => (
+export default function Button({
+  type,
+  htmlType,
+  onClick,
+  children,
+  disabled,
+  style,
+  className
+}) {
+  return (
     <ButtonStyles>
       {/* eslint-disable-next-line */}
       <button
@@ -12,13 +20,12 @@ const Button = React.forwardRef(
         className={`${className} ${type}`}
         type={htmlType}
         style={style}
-        ref={ref}
       >
         <div className="component-child">{children}</div>
       </button>
     </ButtonStyles>
-  )
-);
+  );
+}
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
@@ -38,5 +45,3 @@ Button.defaultProps = {
   disabled: false,
   className: ""
 };
-
-export default Button;
