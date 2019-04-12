@@ -2,13 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactFocusTrap from "react-focus-lock";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import {
-  ModalStyles,
-  Overlay,
-  Content,
-  CloseButton,
-  BodyContent
-} from "./modal.style";
+import { ModalStyles, Overlay, Content, CloseButton } from "./modal.style";
 import { Row, Col, Icon } from "../index";
 
 class Modal extends Component {
@@ -29,6 +23,14 @@ class Modal extends Component {
   }
 
   render() {
+    const {
+      passiveModal,
+      closeCallback,
+      role,
+      ariaLabel,
+      children,
+      actionCallback
+    } = this.props;
     const { onClose, role, ariaLabel, children } = this.props;
     return (
       <ReactFocusTrap
@@ -46,9 +48,48 @@ class Modal extends Component {
                 <CloseButton ref={this.onClose} onClick={onClose}>
                   <Icon name="close" />
                 </CloseButton>
+          <Overlay onClick={closeCallback} />
+          <Height>
+            <Row position="center" verticalAlign="middle">
+              <Col>
+                <Content>
+                  <Row textAlign="right">
+                    <Col offset={11} lg={1}>
+                      <CloseButton
+                        ref={this.closeButton}
+                        onClick={closeCallback}
+                      >
+                        <Icon name="close" />
+                      </CloseButton>
+                    </Col>
+                  </Row>
+                  {children}
+                  {!passiveModal ? (
+                    <Row position="end">
+                      <Col lg={0}>
+                        <Button
+                          type="tertiary"
+                          onClick={closeCallback}
+                          style={{ marginRight: 16 }}
+                        >
+                          Cancel
+                        </Button>
+                      </Col>
+                      <Col lg={0}>
+                        <Button
+                          type="tertiary"
+                          onClick={actionCallback}
+                          style={{ marginRight: 20 }}
+                        >
+                          Submit
+                        </Button>
+                      </Col>
+                    </Row>
+                  ) : null}
+                </Content>
               </Col>
             </Row>
-            <BodyContent>{children}</BodyContent>
+            {children}
           </Content>
         </ModalStyles>
       </ReactFocusTrap>
@@ -62,13 +103,19 @@ Modal.propTypes = {
     PropTypes.node
   ]).isRequired,
   onClose: PropTypes.func,
+  closeCallback: PropTypes.func,
+  actionCallback: PropTypes.func,
   role: PropTypes.string,
-  ariaLabel: PropTypes.string
+  ariaLabel: PropTypes.string,
+  passiveModal: PropTypes.bool
 };
 Modal.defaultProps = {
   onClose: () => {},
+  closeCallback: () => {},
+  actionCallback: () => {},
   role: "dialog",
-  ariaLabel: "" // A Label for the Modal that describes what it is.
+  ariaLabel: "", // A Label for the Modal that describes what it is.
+  passiveModal: false
 };
 
 export default Modal;
