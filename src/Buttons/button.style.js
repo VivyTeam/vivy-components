@@ -32,8 +32,11 @@ const ButtonStyles = styled.div`
     border-radius: 4px;
     display: block;
     text-decoration: none;
-    outline: none;
     cursor: pointer;
+  }
+
+  button:focus:active {
+    outline: 0;
   }
 
   a {
