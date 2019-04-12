@@ -11,7 +11,7 @@ const LayoutStyles = styled.div`
   }
   .white {
     height: 25%;
-    background: ${Colors.white};
+    background: #f5f5f5;
   }
 `;
 
