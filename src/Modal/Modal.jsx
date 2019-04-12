@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import ReactFocusTrap from "react-focus-lock";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 import { ModalStyles, Overlay, Content, CloseButton } from "./modal.style";
+import { Row, Col, Icon } from "../index";
 
 class Modal extends Component {
   closeButton = React.createRef();
@@ -20,21 +22,29 @@ class Modal extends Component {
   };
 
   render() {
-    const { onClose, children } = this.props;
+    const { closeCallback, role, ariaLabel, children } = this.props;
     return (
-      <ModalStyles>
-        <Overlay onClick={closeCallback} />
-        <Content>
-          <Row>
-            <Col offset={11} lg={1}>
-              <CloseButton ref={this.closeButton} onClick={closeCallback}>
-                <Icon name="close" />
-              </CloseButton>
-            </Col>
-          </Row>
-          {children}
-        </Content>
-      </ModalStyles>
+      <ReactFocusTrap
+        tag="aside"
+        focusTrapOptions={{ onDeactivate: closeCallback }}
+        aria-modal="true"
+        role={role}
+        aria-label={ariaLabel}
+      >
+        <ModalStyles>
+          <Overlay onClick={closeCallback} />
+          <Content>
+            <Row>
+              <Col offset={11} lg={1}>
+                <CloseButton ref={this.closeButton} onClick={closeCallback}>
+                  <Icon name="close" />
+                </CloseButton>
+              </Col>
+            </Row>
+            {children}
+          </Content>
+        </ModalStyles>
+      </ReactFocusTrap>
     );
   }
 }
@@ -44,10 +54,14 @@ Modal.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
-  onClose: PropTypes.func
+  closeCallback: PropTypes.func,
+  role: PropTypes.string,
+  ariaLabel: PropTypes.string
 };
 Modal.defaultProps = {
-  onClose: () => {}
+  closeCallback: () => {},
+  role: "dialog",
+  ariaLabel: "A Label for the Modal that describes what it is."
 };
 
 export default Modal;
