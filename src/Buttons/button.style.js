@@ -35,16 +35,17 @@ const ButtonStyles = styled.div`
     cursor: pointer;
   }
 
-  button:focus:active {
-    outline: 0;
-  }
-
   a {
     font-family: system-ui;
     border-radius: 4px;
     display: inline-block;
     text-align: center;
     text-decoration: none;
+  }
+
+  a:focus:active,
+  button:focus:active {
+    outline: 0;
   }
 
   .primary .component-child {
