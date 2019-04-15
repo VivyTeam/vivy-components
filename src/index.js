@@ -1,3 +1,4 @@
+export { default as Colors } from "./Colors";
 export { NotifyContainer, notify } from "./Notify";
 export { default as Alert } from "./Alerts/Alert";
 export { default as AlertSmall } from "./Alerts/AlertSmall";
@@ -15,7 +16,6 @@ export { default as Checkbox } from "./Checkbox";
 export { default as Form } from "./Forms";
 export { default as FormItem } from "./Forms/FormItem";
 export { default as Modal } from "./Modal";
-export { default as Colors } from "./Colors";
 export { default as Sidebar } from "./Sidebar/Sidebar";
 export { default as SimpleLoader } from "./SimpleLoader";
 export { default as Table } from "./Table";
