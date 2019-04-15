@@ -61,7 +61,7 @@
     "eslint-config-vivy": "^1.0.6",
     "jest": "^24.7.0",
     "jest-styled-components": "6.3.1",
-    "prettier": "^1.16.4",
+    "prettier": "^1.17.0",
     "react-scripts": "^2.1.8",
     "react-test-renderer": "16.8.6"
   },
