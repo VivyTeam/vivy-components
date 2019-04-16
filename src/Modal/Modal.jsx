@@ -7,7 +7,8 @@ import {
   Overlay,
   Content,
   CloseButton,
-  Height
+  Height,
+  BodyContent
 } from "./modal.style";
 import { Row, Col, Icon, Button } from "../index";
 
@@ -58,29 +59,27 @@ class Modal extends Component {
                       </CloseButton>
                     </Col>
                   </Row>
-                  {children}
-                  {!passiveModal ? (
-                    <Row position="end">
-                      <Col lg={0}>
-                        <Button
-                          type="tertiary"
-                          onClick={onClose}
-                          style={{ marginRight: 16 }}
-                        >
-                          Cancel
-                        </Button>
-                      </Col>
-                      <Col lg={0}>
-                        <Button
-                          type="tertiary"
-                          onClick={actionCallback}
-                          style={{ marginRight: 20 }}
-                        >
-                          Submit
-                        </Button>
-                      </Col>
-                    </Row>
-                  ) : null}
+                  <BodyContent>
+                    {children}
+                    {!passiveModal ? (
+                      <Row position="end">
+                        <Col lg={0}>
+                          <Button
+                            type="tertiary"
+                            onClick={onClose}
+                            style={{ marginRight: 16 }}
+                          >
+                            Cancel
+                          </Button>
+                        </Col>
+                        <Col lg={0}>
+                          <Button type="tertiary" onClick={actionCallback}>
+                            Submit
+                          </Button>
+                        </Col>
+                      </Row>
+                    ) : null}
+                  </BodyContent>
                 </Content>
               </Col>
             </Row>
