@@ -2,8 +2,14 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactFocusTrap from "react-focus-lock";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import { ModalStyles, Overlay, Content, CloseButton } from "./modal.style";
-import { Row, Col, Icon } from "../index";
+import {
+  ModalStyles,
+  Overlay,
+  Content,
+  CloseButton,
+  Height
+} from "./modal.style";
+import { Row, Col, Icon, Button } from "../index";
 
 class Modal extends Component {
   constructor(props) {
@@ -24,14 +30,13 @@ class Modal extends Component {
 
   render() {
     const {
-      passiveModal,
-      closeCallback,
+      onClose,
       role,
       ariaLabel,
       children,
-      actionCallback
+      actionCallback,
+      passiveModal
     } = this.props;
-    const { onClose, role, ariaLabel, children } = this.props;
     return (
       <ReactFocusTrap
         tag="aside"
@@ -42,23 +47,13 @@ class Modal extends Component {
       >
         <ModalStyles>
           <Overlay onClick={onClose} />
-          <Content>
-            <Row textAlign="right">
-              <Col offset={11} lg={1}>
-                <CloseButton ref={this.onClose} onClick={onClose}>
-                  <Icon name="close" />
-                </CloseButton>
-          <Overlay onClick={closeCallback} />
           <Height>
             <Row position="center" verticalAlign="middle">
               <Col>
                 <Content>
                   <Row textAlign="right">
                     <Col offset={11} lg={1}>
-                      <CloseButton
-                        ref={this.closeButton}
-                        onClick={closeCallback}
-                      >
+                      <CloseButton ref={this.closeButton} onClick={onClose}>
                         <Icon name="close" />
                       </CloseButton>
                     </Col>
@@ -69,7 +64,7 @@ class Modal extends Component {
                       <Col lg={0}>
                         <Button
                           type="tertiary"
-                          onClick={closeCallback}
+                          onClick={onClose}
                           style={{ marginRight: 16 }}
                         >
                           Cancel
@@ -89,8 +84,7 @@ class Modal extends Component {
                 </Content>
               </Col>
             </Row>
-            {children}
-          </Content>
+          </Height>
         </ModalStyles>
       </ReactFocusTrap>
     );
@@ -103,7 +97,6 @@ Modal.propTypes = {
     PropTypes.node
   ]).isRequired,
   onClose: PropTypes.func,
-  closeCallback: PropTypes.func,
   actionCallback: PropTypes.func,
   role: PropTypes.string,
   ariaLabel: PropTypes.string,
@@ -111,7 +104,6 @@ Modal.propTypes = {
 };
 Modal.defaultProps = {
   onClose: () => {},
-  closeCallback: () => {},
   actionCallback: () => {},
   role: "dialog",
   ariaLabel: "", // A Label for the Modal that describes what it is.
