@@ -23,9 +23,11 @@ export const CloseButton = styled.button`
   padding: 0;
 
   i {
-    width: 16px;
-    height: 16px;
-    text-align: left;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    color: #575756;
   }
 
   div {
