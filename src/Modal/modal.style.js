@@ -57,3 +57,8 @@ export const Content = styled.div`
   border-radius: 8px;
   min-width: 320px; /* This just a default width */
 `;
+
+export const BodyContent = styled.div`
+  margin-left: 24px;
+  margin-right: 24px;
+`;

@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactFocusTrap from "react-focus-lock";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import { ModalStyles, Overlay, Content, CloseButton } from "./modal.style";
+import {
+  ModalStyles,
+  Overlay,
+  Content,
+  CloseButton,
+  BodyContent
+} from "./modal.style";
 import { Row, Col, Icon } from "../index";
 
 class Modal extends Component {
@@ -42,7 +48,7 @@ class Modal extends Component {
                 </CloseButton>
               </Col>
             </Row>
-            <div style={{ marginRight: 24 }}>{children}</div>
+            <BodyContent>{children}</BodyContent>
           </Content>
         </ModalStyles>
       </ReactFocusTrap>
