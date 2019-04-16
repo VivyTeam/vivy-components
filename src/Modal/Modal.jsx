@@ -7,9 +7,10 @@ import {
   Overlay,
   Content,
   CloseButton,
+  Height,
   BodyContent
 } from "./modal.style";
-import { Row, Col, Icon } from "../index";
+import { Row, Col, Icon, Button } from "../index";
 
 class Modal extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class Modal extends Component {
   }
 
   render() {
-    const { onClose, role, ariaLabel, children } = this.props;
+    const { onClose, role, ariaLabel, children, onSubmit } = this.props;
     return (
       <ReactFocusTrap
         tag="aside"
@@ -40,16 +41,40 @@ class Modal extends Component {
       >
         <ModalStyles>
           <Overlay onClick={onClose} />
-          <Content>
-            <Row textAlign="right">
-              <Col offset={11} lg={1}>
-                <CloseButton ref={this.onClose} onClick={onClose}>
-                  <Icon name="close" />
-                </CloseButton>
+          <Height>
+            <Row position="center" verticalAlign="middle">
+              <Col>
+                <Content>
+                  <Row textAlign="right" position="end">
+                    <Col lg={1}>
+                      <CloseButton ref={this.closeButton} onClick={onClose}>
+                        <Icon name="close" />
+                      </CloseButton>
+                    </Col>
+                  </Row>
+                  <BodyContent>
+                    {children}
+                    <Row position="end">
+                      <Col lg={0}>
+                        <Button
+                          type="tertiary"
+                          onClick={onClose}
+                          style={{ marginRight: 16 }}
+                        >
+                          Cancel
+                        </Button>
+                      </Col>
+                      <Col lg={0}>
+                        <Button type="tertiary" onClick={onSubmit}>
+                          Submit
+                        </Button>
+                      </Col>
+                    </Row>
+                  </BodyContent>
+                </Content>
               </Col>
             </Row>
-            <BodyContent>{children}</BodyContent>
-          </Content>
+          </Height>
         </ModalStyles>
       </ReactFocusTrap>
     );
@@ -62,11 +87,13 @@ Modal.propTypes = {
     PropTypes.node
   ]).isRequired,
   onClose: PropTypes.func,
+  onSubmit: PropTypes.func,
   role: PropTypes.string,
   ariaLabel: PropTypes.string
 };
 Modal.defaultProps = {
   onClose: () => {},
+  onSubmit: () => {},
   role: "dialog",
   ariaLabel: "" // A Label for the Modal that describes what it is.
 };
