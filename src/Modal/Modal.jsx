@@ -23,17 +23,17 @@ class Modal extends Component {
   }
 
   render() {
-    const { closeCallback, role, ariaLabel, children } = this.props;
+    const { onClose, role, ariaLabel, children } = this.props;
     return (
       <ReactFocusTrap
         tag="aside"
-        focusTrapOptions={{ onDeactivate: closeCallback }}
+        focusTrapOptions={{ onDeactivate: onClose }}
         aria-modal="true"
         role={role}
         aria-label={ariaLabel}
       >
         <ModalStyles>
-          <Overlay onClick={closeCallback} />
+          <Overlay onClick={onClose} />
           <Content>
             <Row textAlign="right">
               <Col offset={11} lg={1}>
@@ -55,12 +55,12 @@ Modal.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
-  closeCallback: PropTypes.func,
+  onClose: PropTypes.func,
   role: PropTypes.string,
   ariaLabel: PropTypes.string
 };
 Modal.defaultProps = {
-  closeCallback: () => {},
+  onClose: () => {},
   role: "dialog",
   ariaLabel: "" // A Label for the Modal that describes what it is.
 };
