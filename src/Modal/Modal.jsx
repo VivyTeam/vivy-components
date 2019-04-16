@@ -37,12 +37,12 @@ class Modal extends Component {
           <Content>
             <Row textAlign="right">
               <Col offset={11} lg={1}>
-                <CloseButton ref={this.closeButton} onClick={closeCallback}>
+                <CloseButton ref={this.onClose} onClick={onClose}>
                   <Icon name="close" />
                 </CloseButton>
               </Col>
             </Row>
-            {children}
+            <div style={{ marginRight: 24 }}>{children}</div>
           </Content>
         </ModalStyles>
       </ReactFocusTrap>
