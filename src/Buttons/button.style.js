@@ -32,7 +32,6 @@ const ButtonStyles = styled.div`
     border-radius: 4px;
     display: block;
     text-decoration: none;
-    outline: none;
     cursor: pointer;
   }
 
@@ -42,6 +41,11 @@ const ButtonStyles = styled.div`
     display: inline-block;
     text-align: center;
     text-decoration: none;
+  }
+
+  a:focus:active,
+  button:focus:active {
+    outline: 0;
   }
 
   .primary .component-child {
