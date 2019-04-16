@@ -27,7 +27,7 @@ storiesOf("Modal", module)
             Launch composed modal
           </Button>
           {open && (
-            <Modal closeCallback={() => toggleModal(false)}>
+            <Modal onClose={() => toggleModal(false)}>
               A very basic modal that wont scroll the background when opened.
             </Modal>
           )}
