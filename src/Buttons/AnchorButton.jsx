@@ -41,7 +41,7 @@ AnchorButton.propTypes = {
   id: PropTypes.string,
   children: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(["primary", "secondary"]),
   onClick: PropTypes.func,
   target: PropTypes.string,
   rel: PropTypes.string,
