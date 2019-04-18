@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import ButtonStyles from "./button.style";
 
 export default function AnchorButton({
+  id,
   onClick,
   type,
   href,
@@ -16,6 +17,7 @@ export default function AnchorButton({
   return (
     <ButtonStyles>
       <a
+        id={id}
         className={`${className} ${type}`}
         onClick={onClick}
         href={href}
@@ -31,6 +33,7 @@ export default function AnchorButton({
 }
 
 AnchorButton.propTypes = {
+  id: PropTypes.string,
   children: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired,
   type: PropTypes.string,
@@ -43,6 +46,7 @@ AnchorButton.propTypes = {
 };
 
 AnchorButton.defaultProps = {
+  id: null,
   type: "primary",
   onClick: () => {},
   target: "_self",
