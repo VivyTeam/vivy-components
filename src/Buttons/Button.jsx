@@ -1,6 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ButtonStyles from "./button.style";
+import ButtonStyles, {
+  HEIGHT_TYPE_LG,
+  HEIGHT_TYPE_SM,
+  HEIGHT_TYPE_BASIC
+} from "./button.style";
 
 export default function Button({
   type,
@@ -10,10 +14,11 @@ export default function Button({
   children,
   disabled,
   style,
-  className
+  className,
+  height
 }) {
   return (
-    <ButtonStyles>
+    <ButtonStyles height={height}>
       {/* eslint-disable-next-line */}
       <button
         id={id}
@@ -33,11 +38,12 @@ Button.propTypes = {
   children: PropTypes.node.isRequired,
   id: PropTypes.string,
   onClick: PropTypes.func,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(["primary", "secondary"]),
   htmlType: PropTypes.oneOf(["button", "submit", "reset"]),
   style: PropTypes.shape({}),
   disabled: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
+  height: PropTypes.oneOf([HEIGHT_TYPE_LG, HEIGHT_TYPE_SM, HEIGHT_TYPE_BASIC])
 };
 
 Button.defaultProps = {
@@ -47,5 +53,6 @@ Button.defaultProps = {
   htmlType: "button",
   style: {},
   disabled: false,
-  className: ""
+  className: "",
+  height: HEIGHT_TYPE_BASIC
 };

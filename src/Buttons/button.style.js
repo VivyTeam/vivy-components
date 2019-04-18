@@ -1,4 +1,9 @@
 import styled, { css } from "styled-components";
+import { Colors } from "../index";
+
+export const HEIGHT_TYPE_LG = "lg";
+export const HEIGHT_TYPE_SM = "sm";
+export const HEIGHT_TYPE_BASIC = "basic";
 
 const baseStyles = css`
   display: flex;
@@ -15,6 +20,9 @@ const transitionBoxShadow = css`
 `;
 const transitionBackgroundColor = css`
   transition: color 0.2s ease, background-color 0.2s ease;
+`;
+const transitionBorderColor = css`
+  transition: color 0.2s ease, border-color 0.2s ease;
 `;
 
 const ButtonStyles = styled.div`
@@ -48,16 +56,30 @@ const ButtonStyles = styled.div`
     outline: 0;
   }
 
-  .primary .component-child {
-    height: 46px;
+  .component-child {
+    ${({ height }) => {
+      if (height === HEIGHT_TYPE_LG) {
+        return css`
+          height: 56px;
+        `;
+      }
+      if (height === HEIGHT_TYPE_SM) {
+        return css`
+          height: 32px;
+        `;
+      }
+      return css`
+        height: 40px;
+      `;
+    }}
   }
 
   .primary {
     ${transitionBoxShadow};
-    min-width: 230px;
-    font-size: 1em;
+    width: 230px;
+    font-size: 1.6rem;
     font-weight: 500;
-    color: #fff;
+    color: ${Colors.white};
     background-color: #04d4bf;
     border: 0;
 
@@ -67,133 +89,50 @@ const ButtonStyles = styled.div`
 
     &:hover {
       ${transitionBoxShadow};
-      background-color: #03d4bf;
+      background-color: ${Colors.brandAlternative};
       box-shadow: 0 4px 8px 0 rgba(0, 160, 144, 0.4);
     }
 
     &:active {
       ${transitionBoxShadow};
-      background-color: #00bfac;
+      background-color: #28dbc9;
       box-shadow: 0 2px 4px 0 rgba(0, 160, 144, 0.2);
     }
 
     &:disabled {
-      opacity: 0.4;
+      opacity: 0.5;
       box-shadow: none;
     }
-  }
-
-  .secondary .component-child {
-    height: 38px;
   }
 
   .secondary {
-    ${transitionBoxShadow};
-    min-width: 178px;
-    font-size: 1em;
-    font-weight: 500;
-    color: #fff;
-    background-color: #03d4bf;
-    border: 0;
-
-    i {
-      font-size: 1.4em;
-    }
-
-    &:hover {
-      ${transitionBoxShadow};
-      background-color: #03d4bf;
-      box-shadow: 0 4px 8px 0 rgba(0, 160, 144, 0.2);
-    }
-
-    &:active {
-      ${transitionBoxShadow};
-      background-color: #00bfac;
-      box-shadow: 0 2px 4px 0 rgba(0, 160, 144, 0.2);
-    }
-
-    &:disabled {
-      opacity: 0.4;
-      box-shadow: none;
-    }
-  }
-
-  .tertiary .component-child {
-    height: 34px;
-  }
-  button.tertiary.component-child {
-    height: 36px;
-  }
-
-  .tertiary {
     ${transitionBackgroundColor};
-    min-width: 178px;
-    font-size: 1em;
+    width: 230px;
+    font-size: 1.6rem;
     font-weight: 500;
-    background-color: #fff;
-    border: solid 2px #00bfac;
-    color: #00bfac;
+    background-color: ${Colors.white};
+    border: solid 1px ${Colors.divider};
+    color: ${Colors.textPrimary};
 
     i {
       font-size: 1.4em;
     }
 
     &:hover {
-      ${transitionBackgroundColor};
-      color: #fff;
-      background-color: #03d4bf;
-      border-color: #03d4bf;
+      ${transitionBorderColor};
+      color: ${Colors.brandPrimary};
+      border-color: ${Colors.brandPrimary};
     }
 
     &:active {
-      ${transitionBackgroundColor};
-      color: #fff;
-      background-color: #00bfac;
-      border: solid 2px #00bfac;
+      ${transitionBorderColor};
+      color: ${Colors.brandPrimary};
+      border-color: ${Colors.brandPrimary};
     }
 
     &:disabled {
-      background-color: #cdcdcd;
-      box-shadow: none;
-    }
-  }
-
-  .quaternary .component-child {
-    height: 34px;
-  }
-  button.quaternary.component-child {
-    height: 36px;
-  }
-
-  .quaternary {
-    ${transitionBackgroundColor};
-    min-width: 178px;
-    font-size: 1em;
-    font-weight: 500;
-    background-color: #fff;
-    border: solid 2px #898988;
-    color: #898988;
-
-    i {
-      font-size: 1.4em;
-    }
-
-    &:hover {
-      ${transitionBackgroundColor};
-      color: #fff;
-      background-color: #03d4bf;
-      border-color: #03d4bf;
-    }
-
-    &:active {
-      ${transitionBackgroundColor};
-      color: #fff;
-      background-color: #00bfac;
-      border: solid 2px #00bfac;
-    }
-
-    &:disabled {
-      background-color: #cdcdcd;
+      border-color: ${Colors.textInactive};
+      color: ${Colors.textInactive};
       box-shadow: none;
     }
   }
