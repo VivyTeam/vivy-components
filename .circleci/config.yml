@@ -49,12 +49,35 @@ jobs:
 
       # Deploys static website of storybook.
       - run:
+          name: "What branch am I on?"
+          command: echo "$CIRCLE_BRANCH/bin:$CIRCLE_BRANCH"
+      - run:
+          name: "What branch am I on?"
+          command: echo ${CIRCLE_PROJECT_REPONAME}
+      - run:
+          name: "What branch am I on?"
+          command: echo ${GITHUB_REPO_ACCESS}
+      - run:
+          name: "What branch am I on?"
+          command:  echo ${REPONAME}
+      - run:
+          name: "CIRCLE?"
+          command: echo ${CIRCLE_SHA1}
+      - run:
+          name: "What CIRCLE_PULL_REQUEST?"
+          command: echo ${CIRCLE_PULL_REQUEST}
+      - run:
+           name: deploy preview in actual url
+           command: |
+            echo ${CIRCLE_SHA1}-${CIRCLE_PROJECT_REPONAME}.surge.sh
+            curl -H Authorization: token ${GITHUB_REPO_ACCESS} --request POST https://api.github.com/repos/VivyTeam/${CIRCLE_PROJECT_REPONAME}/statuses/${CIRCLE_SHA1} --data  '{ "state" : "success", "target_url": "${CIRCLE_SHA1}-${CIRCLE_PROJECT_REPONAME}.surge.sh", "context": "${CIRCLE_PROJECT_REPONAME}", "description": "Preview for PR deployed!" }'
+      - run:
           name: PR Preview Storybook
           command: |
             npm install
-            npm run build:storybook
+            npm run build:static
             mv .out .public
-            yarn run surge --project .public --domain 'https://' + $CIRCLE_PR_NUMBER + 'vivyteam.github.io'
+            yarn run surge --project .public --domain ${CIRCLE_SHA1}-${CIRCLE_PROJECT_REPONAME}.surge.sh
 
   release:
     docker:

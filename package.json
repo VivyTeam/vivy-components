@@ -19,7 +19,7 @@
     "linter:check": "eslint src/**/* && eslint stories/*.jsx",
     "serve": "start-storybook -p 3006 -s ./public",
     "build:storybook": "storybook-to-ghpages",
-    "build:static": "build-storybook -s public",
+    "build:static": "build-storybook -c .storybook -o .out",
     "build:package": "babel --presets @babel/react ./src --out-dir ./dist",
     "test": "npm run build:package && jest",
     "test:dist": "npm run build:package && node tests/dist.test.js",
@@ -65,7 +65,8 @@
     "jest-styled-components": "6.3.1",
     "prettier": "^1.16.4",
     "react-scripts": "^2.1.8",
-    "react-test-renderer": "16.8.6"
+    "react-test-renderer": "16.8.6",
+    "surge": "^0.20.3"
   },
   "jest": {
     "projects": [
