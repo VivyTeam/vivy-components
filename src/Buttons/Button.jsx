@@ -4,6 +4,7 @@ import ButtonStyles from "./button.style";
 
 export default function Button({
   type,
+  id,
   htmlType,
   onClick,
   children,
@@ -15,6 +16,7 @@ export default function Button({
     <ButtonStyles>
       {/* eslint-disable-next-line */}
       <button
+        id={id}
         disabled={disabled}
         onClick={onClick}
         className={`${className} ${type}`}
@@ -29,6 +31,7 @@ export default function Button({
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
+  id: PropTypes.string,
   onClick: PropTypes.func,
   type: PropTypes.string,
   htmlType: PropTypes.oneOf(["button", "submit", "reset"]),
@@ -38,6 +41,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  id: null,
   onClick: () => {},
   type: "primary",
   htmlType: "button",
