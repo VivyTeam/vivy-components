@@ -1,6 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ButtonStyles from "./button.style";
+import ButtonStyles, {
+  HEIGHT_TYPE_LG,
+  HEIGHT_TYPE_SM,
+  HEIGHT_TYPE_BASIC
+} from "./button.style";
 
 export default function AnchorButton({
   id,
@@ -12,10 +16,11 @@ export default function AnchorButton({
   download,
   children,
   style,
-  className
+  className,
+  height
 }) {
   return (
-    <ButtonStyles>
+    <ButtonStyles height={height}>
       <a
         id={id}
         className={`${className} ${type}`}
@@ -36,13 +41,14 @@ AnchorButton.propTypes = {
   id: PropTypes.string,
   children: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(["primary", "secondary"]),
   onClick: PropTypes.func,
   target: PropTypes.string,
   rel: PropTypes.string,
   download: PropTypes.oneOf([PropTypes.bool, PropTypes.string]),
   style: PropTypes.shape({}),
-  className: PropTypes.string
+  className: PropTypes.string,
+  height: PropTypes.oneOf([HEIGHT_TYPE_LG, HEIGHT_TYPE_SM, HEIGHT_TYPE_BASIC])
 };
 
 AnchorButton.defaultProps = {
@@ -53,5 +59,6 @@ AnchorButton.defaultProps = {
   rel: null,
   download: null,
   style: {},
-  className: ""
+  className: "",
+  height: HEIGHT_TYPE_BASIC
 };
