@@ -8,12 +8,12 @@ storiesOf("AnchorButton", module)
       Call to Action
     </AnchorButton>
   ))
-  .add("primary height 56", () => (
+  .add("primary with height large", () => (
     <AnchorButton height="lg" href="https://www.vivy.com/" target="_blank">
       Call to Action
     </AnchorButton>
   ))
-  .add("primary height 32", () => (
+  .add("primary with height small", () => (
     <AnchorButton height="sm" href="https://www.vivy.com/" target="_blank">
       Call to Action
     </AnchorButton>
@@ -32,7 +32,7 @@ storiesOf("AnchorButton", module)
       Call to Action
     </AnchorButton>
   ))
-  .add("secondary height 56", () => (
+  .add("secondary with height large", () => (
     <AnchorButton
       height="lg"
       href="https://www.vivy.com/"
@@ -42,7 +42,7 @@ storiesOf("AnchorButton", module)
       Call to Action
     </AnchorButton>
   ))
-  .add("secondary height 32", () => (
+  .add("secondary with height small", () => (
     <AnchorButton
       height="sm"
       href="https://www.vivy.com/"
