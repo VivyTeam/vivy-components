@@ -52,7 +52,7 @@ jobs:
           command: |
             npm install
             npm run build:static
-            yarn run surge --project storybook-static --domain ${CIRCLE_SHA1}-${CIRCLE_PROJECT_REPONAME}.surge.sh
+            yarn run surge --project storybook-static --domain ${CIRCLE_SHA1}-${CIRCLE_SHA1}--${CIRCLE_PROJECT_REPONAME}.surge.sh
       - run:
            name: Post Github Status
            command: |
