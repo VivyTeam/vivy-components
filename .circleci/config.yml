@@ -33,6 +33,31 @@ jobs:
           path: ~/repo/tests/__image_snapshots__/__diff_output__
           destination: storyshot-diffs
 
+  pr-preview:
+    docker:
+      - image: circleci/node:11.9.0
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      # Deploy PR-Preview
+      - run:
+          name: PR Preview Storybook
+          command: |
+            npm install
+            npm run build:static
+            yarn run surge --project storybook-static --domain ${CIRCLE_SHA1}-compoments-vivy.surge.sh
+      - run:
+           name: Post Github Status
+           command: |
+             curl -i -H "Authorization: token ${GITHUB_REPO_STATUS_ONLY_TOKEN}" -H "Content-Type: application/json" --request POST --data "{\"state\": \"success\", \"target_url\": \"https://${CIRCLE_SHA1}-compoments-vivy.surge.sh\", \"description\": \"Feature deployed!\", \"context\": \"pr-preview\"}" https://api.github.com/repos/VivyTeam/vivy-components/statuses/${CIRCLE_SHA1}
+
   release:
     docker:
       - image: circleci/node:8.11.1
@@ -61,6 +86,11 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
+      - pr-preview:
+          filters:
+            branches:
+              ignore:
+                - master
       - build:
           filters:
             branches:
