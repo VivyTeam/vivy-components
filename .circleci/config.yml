@@ -52,11 +52,11 @@ jobs:
           command: |
             npm install
             npm run build:static
-            yarn run surge --project storybook-static --domain ${CIRCLE_SHA1}-${CIRCLE_PROJECT_REPONAME}-${CIRCLE_PROJECT_USERNAME}.surge.sh
+            yarn run surge --project storybook-static --domain ${CIRCLE_SHA1}-${CIRCLE_PROJECT_REPONAME}-vivyteam.surge.sh
       - run:
            name: Post Github Status
            command: |
-             curl -i -H "Authorization: token ${GITHUB_REPO_STATUS_ONLY_TOKEN}" -H "Content-Type: application/json" --request POST --data "{\"state\": \"success\", \"target_url\": \"https://${CIRCLE_SHA1}-${CIRCLE_PROJECT_REPONAME}-${CIRCLE_PROJECT_USERNAME}.surge.sh\", \"description\": \"Feature deployed!\", \"context\": \"pr-preview\"}" https://api.github.com/repos/VivyTeam/vivy-components/statuses/${CIRCLE_SHA1}
+             curl -i -H "Authorization: token ${GITHUB_REPO_STATUS_ONLY_TOKEN}" -H "Content-Type: application/json" --request POST --data "{\"state\": \"success\", \"target_url\": \"https://${CIRCLE_SHA1}-${CIRCLE_PROJECT_REPONAME}-vivyteam.surge.sh\", \"description\": \"Feature deployed!\", \"context\": \"pr-preview\"}" https://api.github.com/repos/VivyTeam/vivy-components/statuses/${CIRCLE_SHA1}
 
   release:
     docker:
