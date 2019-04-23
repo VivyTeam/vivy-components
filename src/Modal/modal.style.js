@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../index";
+import { Colors, Button } from "../index";
 
 const zIndex = 10;
 export const Overlay = styled.div`
@@ -61,4 +61,12 @@ export const Height = styled.div`
 export const BodyContent = styled.div`
   margin-left: 24px;
   margin-right: 24px;
+`;
+
+export const ButtonsArea = styled.div`
+  margin-top: 16px;
+`;
+
+export const SubmitButton = styled(Button)`
+  margin-left: 16px;
 `;
