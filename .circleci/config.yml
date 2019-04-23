@@ -48,8 +48,11 @@ jobs:
             - v1-dependencies-
       # Deploy PR-Preview
       - run:
+          environment:
+            SURGE_URL: ${CIRCLE_SHA1}-${CIRCLE_PROJECT_REPONAME}.surge.sh
           name: PR Preview Storybook
           command: |
+            echo ${SURGE_URL}
             npm install
             npm run build:static
             yarn run surge --project storybook-static --domain ${CIRCLE_SHA1}-${CIRCLE_PROJECT_REPONAME}.surge.sh
