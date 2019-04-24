@@ -104,41 +104,47 @@ storiesOf("Modal", module)
     };
     return <ModalUseCase />;
   })
-  .add("example usage with trigger button", () => {
-    const ModalUseCase = () => {
-      const [open, toggleModal] = useState(false);
+  .add(
+    "with page that has more height than one screen",
+    () => {
+      const ModalUseCase = () => {
+        const [open, toggleModal] = useState(false);
 
+        return (
+          <>
+            <Button onClick={() => toggleModal(true)}>
+              Launch composed modal
+            </Button>
+            {open && (
+              <Modal
+                onClose={() => toggleModal(false)}
+                onCancel={() => alert("I can cancel something")}
+                onSubmit={() => alert("I can submit something")}
+                submitText="Submit"
+                cancelText="Cancel"
+              >
+                A very basic modal that wont scroll the background when opened.
+              </Modal>
+            )}
+          </>
+        );
+      };
       return (
-        <>
-          <Button onClick={() => toggleModal(true)}>
-            Launch composed modal
-          </Button>
-          {open && (
-            <Modal
-              onClose={() => toggleModal(false)}
-              onCancel={() => alert("I can cancel something")}
-              onSubmit={() => alert("I can submit something")}
-              submitText="Submit"
-              cancelText="Cancel"
-            >
-              A very basic modal that wont scroll the background when opened.
-            </Modal>
-          )}
-        </>
+        <LayoutStyles>
+          <div className="white">
+            <Row position="center">
+              <Col lg={3}>
+                <ModalUseCase />
+              </Col>
+            </Row>
+          </div>
+          <div className="green" />
+          <div className="white" />
+          <div className="green" />
+        </LayoutStyles>
       );
-    };
-    return (
-      <LayoutStyles>
-        <div className="white">
-          <Row position="center">
-            <Col lg={3}>
-              <ModalUseCase />
-            </Col>
-          </Row>
-        </div>
-        <div className="green" />
-        <div className="white" />
-        <div className="green" />
-      </LayoutStyles>
-    );
-  });
+    },
+    {
+      info: "Scrolling should be disabled when modal is open"
+    }
+  );
