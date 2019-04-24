@@ -106,7 +106,7 @@ Modal.propTypes = {
   cancelText: ({ onCancel, cancelText }) => {
     if (onCancel && !cancelText) {
       return new Error(
-        "You might need to add property 'cancelText' if you need the button responsible for submit to have text"
+        "You might need to add property 'cancelText' if you need the button to have text"
       );
     }
     if (typeof cancelText !== "string") {
@@ -117,7 +117,7 @@ Modal.propTypes = {
   submitText: ({ onSubmit, submitText }) => {
     if (onSubmit && !submitText) {
       return new Error(
-        "You might need to add property 'submitText' if you need the button responsible for submit to have text"
+        "You might need to add property 'submitText' if you need the button to have text"
       );
     }
     if (typeof submitText !== "string") {
