@@ -7,9 +7,12 @@ import {
   Overlay,
   Content,
   CloseButton,
-  BodyContent
+  Height,
+  BodyContent,
+  ButtonsArea,
+  SubmitButton
 } from "./modal.style";
-import { Row, Col, Icon } from "../index";
+import { Row, Col, Icon, Button } from "../index";
 
 class Modal extends Component {
   constructor(props) {
@@ -29,7 +32,17 @@ class Modal extends Component {
   }
 
   render() {
-    const { onClose, role, ariaLabel, children } = this.props;
+    const {
+      onClose,
+      onCancel,
+      onSubmit,
+      role,
+      ariaLabel,
+      children,
+      submitText,
+      cancelText
+    } = this.props;
+
     return (
       <ReactFocusTrap
         tag="aside"
@@ -40,16 +53,42 @@ class Modal extends Component {
       >
         <ModalStyles>
           <Overlay onClick={onClose} />
-          <Content>
-            <Row textAlign="right">
-              <Col offset={11} lg={1}>
-                <CloseButton ref={this.onClose} onClick={onClose}>
-                  <Icon name="close" />
-                </CloseButton>
+          <Height>
+            <Row position="center" verticalAlign="middle">
+              <Col>
+                <Content>
+                  <Row textAlign="right" position="end">
+                    <Col lg={1}>
+                      <CloseButton ref={this.closeButton} onClick={onClose}>
+                        <Icon name="close" />
+                      </CloseButton>
+                    </Col>
+                  </Row>
+                  <BodyContent>
+                    {children}
+                    <ButtonsArea>
+                      <Row position="end">
+                        {onCancel && (
+                          <Col lg={0}>
+                            <Button type="secondary" onClick={onCancel}>
+                              {cancelText}
+                            </Button>
+                          </Col>
+                        )}
+                        {onSubmit && (
+                          <Col lg={0}>
+                            <SubmitButton onClick={onSubmit}>
+                              {submitText}
+                            </SubmitButton>
+                          </Col>
+                        )}
+                      </Row>
+                    </ButtonsArea>
+                  </BodyContent>
+                </Content>
               </Col>
             </Row>
-            <BodyContent>{children}</BodyContent>
-          </Content>
+          </Height>
         </ModalStyles>
       </ReactFocusTrap>
     );
@@ -62,11 +101,41 @@ Modal.propTypes = {
     PropTypes.node
   ]).isRequired,
   onClose: PropTypes.func,
+  onCancel: PropTypes.func,
+  onSubmit: PropTypes.func,
+  cancelText: ({ onCancel, cancelText }) => {
+    if (onCancel && !cancelText) {
+      return new Error(
+        "You might need to add property 'cancelText' if you need the button to have text"
+      );
+    }
+    if (typeof cancelText !== "string") {
+      return new Error(`cancelText needs to be a string`);
+    }
+
+    return null;
+  },
+  submitText: ({ onSubmit, submitText }) => {
+    if (onSubmit && !submitText) {
+      return new Error(
+        "You might need to add property 'submitText' if you need the button to have text"
+      );
+    }
+    if (typeof submitText !== "string") {
+      return new Error(`submitText needs to be a string`);
+    }
+
+    return null;
+  },
   role: PropTypes.string,
   ariaLabel: PropTypes.string
 };
 Modal.defaultProps = {
-  onClose: () => {},
+  onClose: null,
+  onCancel: null,
+  onSubmit: null,
+  cancelText: "",
+  submitText: "",
   role: "dialog",
   ariaLabel: "" // A Label for the Modal that describes what it is.
 };
