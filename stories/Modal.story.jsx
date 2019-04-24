@@ -46,7 +46,7 @@ storiesOf("Modal", module)
     },
     {
       info:
-        "Sumbit button is show since property 'onSubmit' is being passed on the component."
+        "Submit button is shown since property 'onSubmit' is being passed to the component."
     }
   )
   .add(
@@ -76,7 +76,7 @@ storiesOf("Modal", module)
     },
     {
       info:
-        "Cancel button is show since property 'onCancel' is being passed on the component."
+        "Cancel button is shown since property 'onCancel' is being passed to the component."
     }
   )
   .add("both Cancel and Submit buttons", () => {
