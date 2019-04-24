@@ -112,6 +112,7 @@ Modal.propTypes = {
     if (typeof cancelText !== "string") {
       return new Error(`cancelText needs to be a string`);
     }
+
     return null;
   },
   submitText: ({ onSubmit, submitText }) => {
