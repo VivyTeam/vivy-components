@@ -151,10 +151,10 @@ storiesOf("Modal", module)
       info: "Scrolling should be disabled when modal is open"
     }
   )
-  .add("enables submit button", () => {
+  .add("toggle availability of submit button", () => {
     const ModalUseCase = () => {
       const [open, toggleModal] = useState(true);
-      const [actionComplete, toggleAction] = useState(false);
+      const [actionComplete, toggleSubmissionState] = useState(false);
 
       return (
         <>
@@ -172,14 +172,15 @@ storiesOf("Modal", module)
             >
               <Row position="center" textAlign="center">
                 <Col lg={9}>
-                  Clicking this button will enable the submission of this modal.
+                  Clicking this button will toggle the availability of
+                  submission in this modal.
                   <Button
                     type="secondary"
                     height="sm"
-                    onClick={() => toggleAction(true)}
+                    onClick={() => toggleSubmissionState(!actionComplete)}
                     style={{ display: "unset", margin: 10 }}
                   >
-                    Enable submission
+                    {actionComplete ? "Disable" : "Enable"} submission
                   </Button>
                 </Col>
               </Row>
