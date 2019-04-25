@@ -35,6 +35,7 @@ storiesOf("Modal", module)
                 onClose={() => toggleModal(false)}
                 onSubmit={() => alert("I can submit something")}
                 submitText="Submit"
+                submissionEnabled
               >
                 A very basic modal that wont scroll the background when opened.
               </Modal>
@@ -93,6 +94,7 @@ storiesOf("Modal", module)
               onClose={() => toggleModal(false)}
               onCancel={() => alert("I can cancel something")}
               onSubmit={() => alert("I can submit something")}
+              submissionEnabled
               submitText="Submit"
               cancelText="Cancel"
             >
@@ -120,6 +122,7 @@ storiesOf("Modal", module)
                 onClose={() => toggleModal(false)}
                 onCancel={() => alert("I can cancel something")}
                 onSubmit={() => alert("I can submit something")}
+                submissionEnabled
                 submitText="Submit"
                 cancelText="Cancel"
               >
@@ -153,7 +156,6 @@ storiesOf("Modal", module)
       const [open, toggleModal] = useState(true);
       const [actionComplete, toggleAction] = useState(false);
 
-      console.log(actionComplete);
       return (
         <>
           <Button onClick={() => toggleModal(true)}>
