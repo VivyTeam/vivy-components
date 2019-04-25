@@ -46,7 +46,6 @@ export const ModalStyles = styled.div`
 export const Content = styled.div`
   z-index: ${zIndex};
   position: relative;
-  max-height: 90%;
   background: ${Colors.white};
   padding: 16px 16px 24px 16px;
   border-radius: 8px;
@@ -58,12 +57,17 @@ export const Height = styled.div`
   height: 100vh;
 `;
 
-export const BodyContent = styled.div`
+const ModalMargin = styled.div`
   margin-left: 24px;
   margin-right: 24px;
 `;
 
-export const ButtonsArea = styled.div`
+export const BodyArea = styled(ModalMargin)`
+  overflow-y: auto;
+  max-height: 75vh;
+`;
+
+export const ButtonsArea = styled(ModalMargin)`
   margin-top: 16px;
 `;
 

@@ -147,4 +147,42 @@ storiesOf("Modal", module)
     {
       info: "Scrolling should be disabled when modal is open"
     }
-  );
+  )
+  .add("with scrollable modal content", () => {
+    const ModalUseCase = () => {
+      const [open, toggleModal] = useState(true);
+
+      return (
+        <>
+          <Button onClick={() => toggleModal(true)}>
+            Launch composed modal
+          </Button>
+          {open && (
+            <Modal
+              onClose={() => toggleModal(false)}
+              onCancel={() => alert("I can cancel something")}
+              onSubmit={() => alert("I can submit something")}
+              submitText="Submit"
+              cancelText="Cancel"
+            >
+              <p style={{ height: 2000 }}>A modal with scrolable body.</p>
+            </Modal>
+          )}
+        </>
+      );
+    };
+    return (
+      <LayoutStyles>
+        <div className="white">
+          <Row position="center">
+            <Col lg={3}>
+              <ModalUseCase />
+            </Col>
+          </Row>
+        </div>
+        <div className="green" />
+        <div className="white" />
+        <div className="green" />
+      </LayoutStyles>
+    );
+  });

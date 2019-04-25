@@ -8,7 +8,7 @@ import {
   Content,
   CloseButton,
   Height,
-  BodyContent,
+  BodyArea,
   ButtonsArea,
   SubmitButton
 } from "./modal.style";
@@ -76,27 +76,27 @@ class Modal extends Component {
                       </CloseButton>
                     </Col>
                   </Row>
-                  <BodyContent>
-                    {children}
-                    <ButtonsArea>
-                      <Row position="end">
-                        {onCancel && (
-                          <Col lg={0}>
-                            <Button type="secondary" onClick={onCancel}>
-                              {cancelText}
-                            </Button>
-                          </Col>
-                        )}
-                        {onSubmit && (
-                          <Col lg={0}>
-                            <SubmitButton onClick={onSubmit}>
-                              {submitText}
-                            </SubmitButton>
-                          </Col>
-                        )}
-                      </Row>
-                    </ButtonsArea>
-                  </BodyContent>
+
+                  <BodyArea>{children}</BodyArea>
+
+                  <ButtonsArea>
+                    <Row position="end">
+                      {onCancel && (
+                        <Col lg={0}>
+                          <Button type="secondary" onClick={onCancel}>
+                            {cancelText}
+                          </Button>
+                        </Col>
+                      )}
+                      {onSubmit && (
+                        <Col lg={0}>
+                          <SubmitButton onClick={onSubmit}>
+                            {submitText}
+                          </SubmitButton>
+                        </Col>
+                      )}
+                    </Row>
+                  </ButtonsArea>
                 </Content>
               </Col>
             </Row>
