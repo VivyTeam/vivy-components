@@ -14,10 +14,13 @@ import {
 } from "./modal.style";
 import { Row, Col, Icon, Button } from "../index";
 
+const ESC_KEY = 27;
+
 class Modal extends Component {
   constructor(props) {
     super(props);
     this.closeButton = React.createRef();
+    this.handleEscKeyPress = this.handleEscKeyPress.bind(this);
   }
 
   componentDidMount() {
@@ -25,10 +28,19 @@ class Modal extends Component {
       this.closeButton.current.focus();
     }
     disableBodyScroll(document.querySelector("body"));
+    document.addEventListener("keydown", this.handleEscKeyPress, false);
   }
 
   componentWillUnmount() {
     enableBodyScroll(document.querySelector("body"));
+    document.removeEventListener("keydown", this.handleEscKeyPress, false);
+  }
+
+  handleEscKeyPress({ which: keyPressed }) {
+    if (keyPressed === ESC_KEY) {
+      const { onClose } = this.props;
+      onClose();
+    }
   }
 
   render() {
