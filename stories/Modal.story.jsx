@@ -147,4 +147,44 @@ storiesOf("Modal", module)
     {
       info: "Scrolling should be disabled when modal is open"
     }
-  );
+  )
+  .add("enables submit button", () => {
+    const ModalUseCase = () => {
+      const [open, toggleModal] = useState(true);
+      const [actionComplete, toggleAction] = useState(false);
+
+      console.log(actionComplete);
+      return (
+        <>
+          <Button onClick={() => toggleModal(true)}>
+            Launch composed modal
+          </Button>
+          {open && (
+            <Modal
+              onClose={() => toggleModal(false)}
+              onCancel={() => alert("I can cancel something")}
+              onSubmit={() => alert("I can submit something")}
+              submitText="Submit"
+              cancelText="Cancel"
+              submissionEnabled={actionComplete}
+            >
+              <Row position="center" textAlign="center">
+                <Col lg={9}>
+                  Clicking this button will enable the submission of this modal.
+                  <Button
+                    type="secondary"
+                    height="sm"
+                    onClick={() => toggleAction(true)}
+                    style={{ display: "unset", margin: 10 }}
+                  >
+                    Enable submission
+                  </Button>
+                </Col>
+              </Row>
+            </Modal>
+          )}
+        </>
+      );
+    };
+    return <ModalUseCase />;
+  });
