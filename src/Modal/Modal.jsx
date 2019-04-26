@@ -154,7 +154,7 @@ Modal.defaultProps = {
   cancelText: "",
   submitText: "",
   role: "dialog",
-  submissionEnabled: false,
+  submissionEnabled: true,
   ariaLabel: "" // A Label for the Modal that describes what it is.
 };
 
