@@ -35,7 +35,6 @@ storiesOf("Modal", module)
                 onClose={() => toggleModal(false)}
                 onSubmit={() => alert("I can submit something")}
                 submitText="Submit"
-                submissionEnabled
               >
                 A very basic modal that wont scroll the background when opened.
               </Modal>
@@ -94,7 +93,6 @@ storiesOf("Modal", module)
               onClose={() => toggleModal(false)}
               onCancel={() => alert("I can cancel something")}
               onSubmit={() => alert("I can submit something")}
-              submissionEnabled
               submitText="Submit"
               cancelText="Cancel"
             >
@@ -122,7 +120,6 @@ storiesOf("Modal", module)
                 onClose={() => toggleModal(false)}
                 onCancel={() => alert("I can cancel something")}
                 onSubmit={() => alert("I can submit something")}
-                submissionEnabled
                 submitText="Submit"
                 cancelText="Cancel"
               >
@@ -154,7 +151,7 @@ storiesOf("Modal", module)
   .add("toggle availability of submit button", () => {
     const ModalUseCase = () => {
       const [open, toggleModal] = useState(true);
-      const [actionComplete, toggleSubmissionState] = useState(false);
+      const [allowSubmit, toggleSubmissionState] = useState(false);
 
       return (
         <>
@@ -168,7 +165,7 @@ storiesOf("Modal", module)
               onSubmit={() => alert("I can submit something")}
               submitText="Submit"
               cancelText="Cancel"
-              submissionEnabled={actionComplete}
+              submissionEnabled={allowSubmit}
             >
               <Row position="center" textAlign="center">
                 <Col lg={9}>
@@ -177,10 +174,10 @@ storiesOf("Modal", module)
                   <Button
                     type="secondary"
                     height="sm"
-                    onClick={() => toggleSubmissionState(!actionComplete)}
+                    onClick={() => toggleSubmissionState(!allowSubmit)}
                     style={{ display: "unset", margin: 10 }}
                   >
-                    {actionComplete ? "Disable" : "Enable"} submission
+                    {allowSubmit ? "Disable" : "Enable"} submission
                   </Button>
                 </Col>
               </Row>
