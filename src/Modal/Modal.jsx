@@ -52,7 +52,8 @@ class Modal extends Component {
       ariaLabel,
       children,
       submitText,
-      cancelText
+      cancelText,
+      submissionEnabled
     } = this.props;
 
     return (
@@ -89,7 +90,10 @@ class Modal extends Component {
                         )}
                         {onSubmit && (
                           <Col lg={0}>
-                            <SubmitButton onClick={onSubmit}>
+                            <SubmitButton
+                              onClick={onSubmit}
+                              disabled={!submissionEnabled}
+                            >
                               {submitText}
                             </SubmitButton>
                           </Col>
@@ -140,6 +144,7 @@ Modal.propTypes = {
     return null;
   },
   role: PropTypes.string,
+  submissionEnabled: PropTypes.bool,
   ariaLabel: PropTypes.string
 };
 Modal.defaultProps = {
@@ -149,6 +154,7 @@ Modal.defaultProps = {
   cancelText: "",
   submitText: "",
   role: "dialog",
+  submissionEnabled: true,
   ariaLabel: "" // A Label for the Modal that describes what it is.
 };
 
