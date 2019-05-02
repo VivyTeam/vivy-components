@@ -35,7 +35,7 @@ import vivyIconsTtf from "../../public/fonts/vivy-icons/vivy-icons.ttf";
 import vivyIconsSvg from "../../public/fonts/vivy-icons/vivy-icons.svg";
 
 const Fonts = createGlobalStyle`
-    body, input {
+    body, input, textarea {
       font-family: 'Norms', sans-serif;
     }
 
