@@ -45,6 +45,10 @@ storiesOf("Icon", module)
               <h3>add</h3>
             </div>
             <div className="icon-box">
+              <Icon name="add-filled" />
+              <h3>add-filled</h3>
+            </div>
+            <div className="icon-box">
               <Icon name="allergy-test" />
               <h3>allergy-test</h3>
             </div>
