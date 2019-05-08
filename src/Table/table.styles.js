@@ -41,6 +41,11 @@ export const StyledTable = styled(WithoutConflictingDefaultStyles)`
   && {
     border: unset;
   }
+  && {
+    .rt-table {
+      overflow: visible;
+    }
+  }
 
   .rt-table {
     .rt-thead {
