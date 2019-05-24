@@ -13,20 +13,31 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-
       - run: npm install
       - run: npm run build:static
-      - run: npm run linter:check
-      - run: npm test
-      - run: npm run danger
-      - run: npm run build:package
-      # preview what files will be packaged into npm
-      - run: ls ./dist
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
+  test:
+    docker:
+      - image: circleci/node:11.9.0-browsers
+
+    working_directory: ~/repo
+
+    steps:
+      - attach_workspace:
+          at: ~/repo
+
+      - run: npm run linter:check
+      - run: npm test
+      - run: npm run danger
 
       # Allow us to see failed storyshot diff files in the circle CI artifacts UI
       - store_artifacts:
@@ -40,41 +51,39 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
+      - attach_workspace:
+          at: ~/repo
+
       # Deploy PR-Preview
       - run:
           name: PR Preview Storybook
           command: |
-            npm install
-            npm run build:static
             yarn run surge --project storybook-static --domain ${CIRCLE_SHA1}-compoments-vivy.surge.sh
+
       - run:
-           name: Post Github Status
-           command: |
-             curl -i -H "Authorization: token ${GITHUB_REPO_STATUS_ONLY_TOKEN}" -H "Content-Type: application/json" --request POST --data "{\"state\": \"success\", \"target_url\": \"https://${CIRCLE_SHA1}-compoments-vivy.surge.sh\", \"description\": \"Feature deployed!\", \"context\": \"pr-preview\"}" https://api.github.com/repos/VivyTeam/vivy-components/statuses/${CIRCLE_SHA1}
+          name: Post Github Status
+          command: |
+            curl -i -H "Authorization: token ${GITHUB_REPO_STATUS_ONLY_TOKEN}" -H "Content-Type: application/json" --request POST --data "{\"state\": \"success\", \"target_url\": \"https://${CIRCLE_SHA1}-compoments-vivy.surge.sh\", \"description\": \"Feature deployed!\", \"context\": \"pr-preview\"}" https://api.github.com/repos/VivyTeam/vivy-components/statuses/${CIRCLE_SHA1}
 
   release:
     docker:
-      - image: circleci/node:8.11.1
+      - image: circleci/node:11.9.0
 
     working_directory: ~/repo
 
     steps:
+      - attach_workspace:
+          at: ~/repo
+
+      # Add the public deploy key from the repository
+      # and call checkout to ensure git uses ssh not https
+      - add_ssh_keys:
+          fingerprints:
+            - "67:d4:fc:1c:51:d7:2d:30:96:32:54:7b:cf:33:5a:f8"
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
 
       # Update package.json version
       - run: npm version $CIRCLE_TAG && git push origin HEAD:master
-      - run: npm install
       # Deploys static website of storybook.
       - run: npm run build:storybook
       # Builds package.
@@ -84,21 +93,36 @@ jobs:
 
 workflows:
   version: 2
-  build-and-deploy:
+  build-test-preview-publish:
     jobs:
-      - pr-preview:
+      - build:
           filters:
+            tags:
+              only: /\d+\.\d+\.\d+/
             branches:
               ignore:
                 - master
-      - build:
+      - test:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /\d+\.\d+\.\d+/
+            branches:
+              ignore:
+                - master
+      - pr-preview:
+          requires:
+            - test
           filters:
             branches:
               ignore:
                 - master
       - release:
+          requires:
+            - test
           filters:
             tags:
-              only: /.*/
+              only: /\d+\.\d+\.\d+/
             branches:
               ignore: /.*/
