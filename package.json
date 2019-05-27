@@ -37,7 +37,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-focus-lock": "^1.18.3",
-    "react-i18next": "^7.12.0",
+    "react-i18next": "^10.10.0",
     "react-input-mask": "2.0.4",
     "react-table": "^6.9.2",
     "react-toastify": "^5.1.0",
