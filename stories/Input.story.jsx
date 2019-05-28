@@ -62,6 +62,23 @@ storiesOf("Input", module)
     };
     return <OnChangeExample />;
   })
+  .add("onBlur handler", () => {
+    const OnBlurExample = () => {
+      const [word, onWordChange] = useState("");
+
+      return (
+        <Fragment>
+          <Input
+            id="word-input"
+            placeholder="enter a word"
+            onBlur={e => onWordChange(e.target.value)}
+          />
+          <span>Your text backwards is: {[...word].reverse()}</span>
+        </Fragment>
+      );
+    };
+    return <OnBlurExample />;
+  })
   .add("icon left", () => (
     <Input
       iconName="email"
