@@ -27,7 +27,9 @@ class InputPassword extends Component {
       name,
       iconName,
       visibility,
+      onChange,
       validateOnChange,
+      onBlur,
       validateOnBlur
     } = this.props;
     const { showPassword } = this.state;
@@ -36,7 +38,7 @@ class InputPassword extends Component {
 
     return (
       <ValidationContext.Consumer>
-        {({ onBlur, onChange, cleanField, errors: { [id]: error } }) => (
+        {({ validate, cleanField, errors: { [id]: error } }) => (
           <Styles>
             <InputWrapper
               error={error}
@@ -51,16 +53,20 @@ class InputPassword extends Component {
                 type={showPassword ? "text" : "password"}
                 placeholder={placeholder}
                 className={padding}
-                onChange={
-                  validateOnChange
-                    ? e => onChange(formData(e.target.form || {}), e.target.id)
-                    : e => cleanField(e.target.id)
-                }
-                onBlur={
-                  validateOnBlur
-                    ? e => onBlur(formData(e.target.form || {}), e.target.id)
-                    : null
-                }
+                onChange={e => {
+                  if (validateOnChange) {
+                    validate(formData(e.target.form || {}), e.target.id);
+                  } else {
+                    cleanField(e.target.id);
+                  }
+                  onChange(e);
+                }}
+                onBlur={e => {
+                  if (validateOnBlur) {
+                    validate(formData(e.target.form || {}), e.target.id);
+                  }
+                  onBlur(e);
+                }}
               />
 
               {visibility ? (
@@ -93,7 +99,9 @@ InputPassword.propTypes = {
   iconName: PropTypes.string,
   showPassword: PropTypes.bool,
   visibility: PropTypes.bool,
+  onChange: PropTypes.func,
   validateOnChange: PropTypes.bool,
+  onBlur: PropTypes.func,
   validateOnBlur: PropTypes.bool
 };
 
@@ -104,7 +112,9 @@ InputPassword.defaultProps = {
   label: "",
   showPassword: false,
   visibility: false,
+  onChange: () => {},
   validateOnChange: true,
+  onBlur: () => {},
   validateOnBlur: true
 };
 

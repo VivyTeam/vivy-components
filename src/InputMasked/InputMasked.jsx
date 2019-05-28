@@ -17,7 +17,9 @@ export default function InputMasked({
   rel,
   mask,
   maskChar,
+  onChange,
   validateOnChange,
+  onBlur,
   validateOnBlur,
   autoComplete
 }) {
@@ -25,21 +27,25 @@ export default function InputMasked({
 
   return (
     <ValidationContext.Consumer>
-      {({ onBlur, onChange, cleanField, errors: { [id]: error } }) => (
+      {({ validate, cleanField, errors: { [id]: error } }) => (
         <InputWrapper error={error} id={id} iconName={iconName} label={label}>
           <InputMask
             mask={mask}
             maskChar={maskChar}
-            onChange={
-              validateOnChange
-                ? e => onChange(formData(e.target.form || {}), e.target.id)
-                : e => cleanField(e.target.id)
-            }
-            onBlur={
-              validateOnBlur
-                ? e => onBlur(formData(e.target.form || {}), e.target.id)
-                : null
-            }
+            onChange={e => {
+              if (validateOnChange) {
+                validate(formData(e.target.form || {}), e.target.id);
+              } else {
+                cleanField(e.target.id);
+              }
+              onChange(e);
+            }}
+            onBlur={e => {
+              if (validateOnBlur) {
+                validate(formData(e.target.form || {}), e.target.id);
+              }
+              onBlur(e);
+            }}
             {...defaultValue && { defaultValue }}
           >
             {inherited => (
@@ -71,7 +77,9 @@ InputMasked.propTypes = {
   iconName: PropTypes.string,
   mask: PropTypes.string,
   maskChar: PropTypes.string,
+  onChange: PropTypes.func,
   validateOnChange: PropTypes.bool,
+  onBlur: PropTypes.func,
   validateOnBlur: PropTypes.bool,
   autoComplete: PropTypes.bool,
   rel: PropTypes.shape({})
@@ -86,7 +94,9 @@ InputMasked.defaultProps = {
   iconName: "",
   mask: "",
   maskChar: "",
+  onChange: () => {},
   validateOnChange: true,
+  onBlur: () => {},
   validateOnBlur: true,
   autoComplete: false,
   rel: React.createRef()

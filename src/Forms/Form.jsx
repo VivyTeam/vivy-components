@@ -17,10 +17,10 @@ export default function Form({ children, select, submit }) {
 
   return (
     <ValidationContext.Consumer>
-      {({ validation }) => (
+      {({ validate }) => (
         <form
           onChange={e => select(e.target.value)}
-          onSubmit={e => formSubmit(e, validation)}
+          onSubmit={e => formSubmit(e, validate)}
         >
           {children}
         </form>
