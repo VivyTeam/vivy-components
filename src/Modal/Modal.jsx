@@ -53,7 +53,9 @@ class Modal extends Component {
       children,
       submitText,
       cancelText,
-      submissionEnabled
+      submissionEnabled,
+      buttonsPosition,
+      modalLength
     } = this.props;
 
     return (
@@ -68,7 +70,7 @@ class Modal extends Component {
           <Overlay onClick={onClose} />
           <Height>
             <Row position="center" verticalAlign="middle">
-              <Col>
+              <Col lg={modalLength}>
                 <Content>
                   <Row textAlign="right" position="end">
                     <Col lg={1}>
@@ -80,7 +82,7 @@ class Modal extends Component {
                   <BodyContent>
                     {children}
                     <ButtonsArea>
-                      <Row position="end">
+                      <Row position={buttonsPosition}>
                         {onCancel && (
                           <Col lg={0}>
                             <Button type="secondary" onClick={onCancel}>
@@ -145,7 +147,9 @@ Modal.propTypes = {
   },
   role: PropTypes.string,
   submissionEnabled: PropTypes.bool,
-  ariaLabel: PropTypes.string
+  ariaLabel: PropTypes.string,
+  buttonsPosition: PropTypes.oneOf(["start", "center", "end"]),
+  modalLength: PropTypes.oneOf([6, 7, 8, 9, 10, 11, 12])
 };
 Modal.defaultProps = {
   onClose: null,
@@ -155,7 +159,9 @@ Modal.defaultProps = {
   submitText: "",
   role: "dialog",
   submissionEnabled: true,
-  ariaLabel: "" // A Label for the Modal that describes what it is.
+  ariaLabel: "", // A Label for the Modal that describes what it is.
+  buttonsPosition: "end",
+  modalLength: 12
 };
 
 export default Modal;
