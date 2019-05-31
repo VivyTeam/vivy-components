@@ -19,9 +19,6 @@ const LayoutStyles = styled.div`
 
 storiesOf("Modal", module)
   .add("basic", () => <Modal>A very basic modal.</Modal>)
-  .add("with modal length", () => (
-    <Modal modalLength={6}>A very basic modal.</Modal>
-  ))
   .add(
     "only Submit button",
     () => {
@@ -107,7 +104,7 @@ storiesOf("Modal", module)
     };
     return <ModalUseCase />;
   })
-  .add("buttons position start", () => {
+  .add("modal size small", () => {
     const ModalUseCase = () => {
       const [open, toggleModal] = useState(true);
 
@@ -123,35 +120,9 @@ storiesOf("Modal", module)
               onSubmit={() => alert("I can submit something")}
               submitText="Submit"
               cancelText="Cancel"
-              buttonsPosition="start"
+              modalSize="sm"
             >
-              A very basic modal that wont scroll the background when opened.
-            </Modal>
-          )}
-        </>
-      );
-    };
-    return <ModalUseCase />;
-  })
-  .add("buttons position center", () => {
-    const ModalUseCase = () => {
-      const [open, toggleModal] = useState(true);
-
-      return (
-        <>
-          <Button onClick={() => toggleModal(true)}>
-            Launch composed modal
-          </Button>
-          {open && (
-            <Modal
-              onClose={() => toggleModal(false)}
-              onCancel={() => alert("I can cancel something")}
-              onSubmit={() => alert("I can submit something")}
-              submitText="Submit"
-              cancelText="Cancel"
-              buttonsPosition="center"
-            >
-              A very basic modal that wont scroll the background when opened.
+              A very basic modal small sized
             </Modal>
           )}
         </>
