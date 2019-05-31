@@ -120,7 +120,7 @@ storiesOf("Modal", module)
               onSubmit={() => alert("I can submit something")}
               submitText="Submit"
               cancelText="Cancel"
-              modalSize="sm"
+              size="sm"
             >
               A very basic modal small sized
             </Modal>
