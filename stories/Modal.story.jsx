@@ -104,6 +104,32 @@ storiesOf("Modal", module)
     };
     return <ModalUseCase />;
   })
+  .add("modal size small", () => {
+    const ModalUseCase = () => {
+      const [open, toggleModal] = useState(true);
+
+      return (
+        <>
+          <Button onClick={() => toggleModal(true)}>
+            Launch composed modal
+          </Button>
+          {open && (
+            <Modal
+              onClose={() => toggleModal(false)}
+              onCancel={() => alert("I can cancel something")}
+              onSubmit={() => alert("I can submit something")}
+              submitText="Submit"
+              cancelText="Cancel"
+              size="sm"
+            >
+              A very basic modal small sized
+            </Modal>
+          )}
+        </>
+      );
+    };
+    return <ModalUseCase />;
+  })
   .add(
     "with page that has more height than one screen",
     () => {
