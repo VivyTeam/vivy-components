@@ -1,19 +1,16 @@
 import React from "react";
-import ReactSelect from "react-select";
 import PropTypes from "prop-types";
-import { SelectStyles } from "./select.style";
+import { StyledSelect } from "./select.style";
 
 export default function Select({ onChange, options, menuPosition, ...rest }) {
   return (
-    <SelectStyles>
-      <ReactSelect
-        classNamePrefix="react-select"
-        onChange={onChange}
-        options={options}
-        menuPosition={menuPosition}
-        {...rest}
-      />
-    </SelectStyles>
+    <StyledSelect
+      classNamePrefix="react-select"
+      onChange={onChange}
+      options={options}
+      menuPosition={menuPosition}
+      {...rest}
+    />
   );
 }
 

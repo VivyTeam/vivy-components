@@ -11,21 +11,21 @@ const flavourOptions = [
 
 storiesOf("Select", module)
   .add("basic", () => (
-    <Row style={{ marginTop: 2 }} fullWidth>
+    <Row style={{ margin: 2 }} fullWidth>
       <Col lg={3}>
         <Select />
       </Col>
     </Row>
   ))
   .add("with options", () => (
-    <Row style={{ marginTop: 2 }} fullWidth>
+    <Row style={{ margin: 2 }} fullWidth>
       <Col lg={3}>
         <Select options={flavourOptions} />
       </Col>
     </Row>
   ))
   .add("with onChange func", () => (
-    <Row style={{ marginTop: 2 }} fullWidth>
+    <Row style={{ margin: 2 }} fullWidth>
       <Col lg={3}>
         <Select
           options={flavourOptions}
