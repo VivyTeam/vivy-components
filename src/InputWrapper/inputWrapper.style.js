@@ -22,7 +22,7 @@ const InputStyles = styled.div`
 
   input {
     height: 48px;
-    border-radius: 2px;
+    border-radius: 4px;
     background-color: #ffffff;
     border: solid 1px #cdcdcd;
     font-size: 18px;
