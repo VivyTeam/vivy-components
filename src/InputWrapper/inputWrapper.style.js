@@ -80,6 +80,7 @@ const InputStyles = styled.div`
   .label {
     padding-top: 8px;
     padding-bottom: 10px;
+    font-weight: 500;
     display: flex;
   }
 
