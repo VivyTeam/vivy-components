@@ -27,7 +27,7 @@ export default function InputWrapper({
             <Icon name={iconName} />
           </div>
         ) : null}
-        {children}
+        <div className="input-border">{children}</div>
         {error ? <span className="error-feedback">{error}</span> : null}
       </label>
     </Styles>
