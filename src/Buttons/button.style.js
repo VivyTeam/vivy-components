@@ -100,7 +100,7 @@ const ButtonStyles = styled.div`
     }
 
     &:disabled {
-      opacity: 0.5;
+      background-color: ${Colors.divider};
       box-shadow: none;
     }
   }
