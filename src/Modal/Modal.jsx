@@ -73,7 +73,11 @@ class Modal extends Component {
                 <Content>
                   <Row textAlign="right" position="end">
                     <Col lg={1}>
-                      <CloseButton ref={this.closeButton} onClick={onClose}>
+                      <CloseButton
+                        id="modal-close-button"
+                        ref={this.closeButton}
+                        onClick={onClose}
+                      >
                         <Icon name="close" />
                       </CloseButton>
                     </Col>
@@ -84,7 +88,11 @@ class Modal extends Component {
                       <Row position={size === "sm" ? "center" : "end"}>
                         {onCancel && (
                           <Col lg={0}>
-                            <Button type="secondary" onClick={onCancel}>
+                            <Button
+                              id="modal-cancel-button"
+                              type="secondary"
+                              onClick={onCancel}
+                            >
                               {cancelText}
                             </Button>
                           </Col>
@@ -92,6 +100,7 @@ class Modal extends Component {
                         {onSubmit && (
                           <Col lg={0}>
                             <SubmitButton
+                              id="modal-submit-button"
                               onClick={onSubmit}
                               disabled={!submissionEnabled}
                             >
