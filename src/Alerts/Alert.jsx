@@ -6,9 +6,7 @@ import * as AlertTypes from "./alertTypes";
 
 export default function Alert({ hasIcon, type, children }) {
   const iconName =
-    type === AlertTypes.SUCCESS
-      ? "radio-button-filled-alt"
-      : "warning-triangle-filled";
+    type === AlertTypes.SUCCESS ? "confirmed-fill" : "warning-triangle-filled";
 
   return (
     <AlertStyles type={type}>

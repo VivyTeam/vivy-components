@@ -102,7 +102,7 @@ const Fonts = createGlobalStyle`
     }
     @font-face {
       font-family: 'vivy-icons';
-      src: url(${vivyIconsEot}),
+      src: url(${vivyIconsEot});
       src: url(${vivyIconsWoff2}) format('woff2'),          
            url(${vivyIconsWoff}) format('woff'),
            url(${vivyIconsTtf}) format('truetype'),
