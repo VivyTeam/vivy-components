@@ -19,4 +19,18 @@ storiesOf("Alert", module)
     <LayoutStyles>
       <Alert type="warning">Bad things happened!</Alert>
     </LayoutStyles>
+  ))
+  .add("without success icon", () => (
+    <LayoutStyles>
+      <Alert hasIcon={false} type="success">
+        There is no icon now!
+      </Alert>
+    </LayoutStyles>
+  ))
+  .add("without warning icon", () => (
+    <LayoutStyles>
+      <Alert hasIcon={false} type="warning">
+        There is no icon now!
+      </Alert>
+    </LayoutStyles>
   ));
