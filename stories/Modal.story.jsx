@@ -104,6 +104,38 @@ storiesOf("Modal", module)
     };
     return <ModalUseCase />;
   })
+  .add("with long content", () => {
+    const ModalUseCase = () => {
+      const [open, toggleModal] = useState(true);
+
+      return (
+        <>
+          <Button onClick={() => toggleModal(true)}>
+            Launch composed modal
+          </Button>
+          {open && (
+            <Modal
+              onClose={() => toggleModal(false)}
+              onCancel={() => alert("I can cancel something")}
+              onSubmit={() => alert("I can submit something")}
+              submitText="Submit"
+              cancelText="Cancel"
+            >
+              <div
+                style={{
+                  backgroundColor: Colors.brandAffirmativeDim,
+                  height: 3000
+                }}
+              >
+                Very long Content
+              </div>
+            </Modal>
+          )}
+        </>
+      );
+    };
+    return <ModalUseCase />;
+  })
   .add("modal size small", () => {
     const ModalUseCase = () => {
       const [open, toggleModal] = useState(true);

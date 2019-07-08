@@ -8,7 +8,7 @@ import {
   Content,
   CloseButton,
   Height,
-  BodyContent,
+  BodyArea,
   ButtonsArea,
   SubmitButton
 } from "./modal.style";
@@ -82,35 +82,35 @@ class Modal extends Component {
                       </CloseButton>
                     </Col>
                   </Row>
-                  <BodyContent>
-                    {children}
-                    <ButtonsArea>
-                      <Row position={size === "sm" ? "center" : "end"}>
-                        {onCancel && (
-                          <Col lg={0}>
-                            <Button
-                              id="modal-cancel-button"
-                              type="secondary"
-                              onClick={onCancel}
-                            >
-                              {cancelText}
-                            </Button>
-                          </Col>
-                        )}
-                        {onSubmit && (
-                          <Col lg={0}>
-                            <SubmitButton
-                              id="modal-submit-button"
-                              onClick={onSubmit}
-                              disabled={!submissionEnabled}
-                            >
-                              {submitText}
-                            </SubmitButton>
-                          </Col>
-                        )}
-                      </Row>
-                    </ButtonsArea>
-                  </BodyContent>
+
+                  <BodyArea>{children}</BodyArea>
+
+                  <ButtonsArea>
+                    <Row position={size === "sm" ? "center" : "end"}>
+                      {onCancel && (
+                        <Col xs="hide" lg={0}>
+                          <Button
+                            id="modal-cancel-button"
+                            type="secondary"
+                            onClick={onCancel}
+                          >
+                            {cancelText}
+                          </Button>
+                        </Col>
+                      )}
+                      {onSubmit && (
+                        <Col xs={12} lg={0}>
+                          <SubmitButton
+                            id="modal-submit-button"
+                            onClick={onSubmit}
+                            disabled={!submissionEnabled}
+                          >
+                            {submitText}
+                          </SubmitButton>
+                        </Col>
+                      )}
+                    </Row>
+                  </ButtonsArea>
                 </Content>
               </Col>
             </Row>
