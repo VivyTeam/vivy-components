@@ -50,7 +50,6 @@ export const Content = styled.div`
   background: ${Colors.white};
   padding: 16px 16px 24px 16px;
   border-radius: 8px;
-  min-width: 320px; /* This just a default width */
   max-width: 920px;
 `;
 
