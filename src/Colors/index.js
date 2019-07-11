@@ -17,9 +17,7 @@ const colors = {
   textInactive: "#BFBFBF",
   textActive: "#00BFAC",
   divider: "#E0E0E0",
-  background: "#F8F7F5",
-  backgroundPrimary: "#F5F5F5",
-  backgroundSecondary: "#FAFAFA"
+  background: "#F8F7F5"
 };
 
 export default colors;
