@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { error } from "../Colors/index";
+import { Colors } from "..";
 
 const TextareaStyles = styled.div`
   label {
@@ -40,7 +40,7 @@ const TextareaStyles = styled.div`
 
   .required {
     padding-left: 10px;
-    color: ${error};
+    color: ${Colors.destructive};
   }
 `;
 

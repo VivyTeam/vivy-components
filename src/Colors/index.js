@@ -3,55 +3,23 @@ export const hexToRGBA = (hex, alpha = 1) => {
   return `rgba(${r},${g},${b},${alpha})`;
 };
 
-const primary = "#353F41";
-const primaryHover = "#05e6c8";
-const error = "#e94119";
-const errorBackground = "#fce6e4";
-const gray = "#cdcdcd";
-const darkgray = "#4c4c4c";
-const headerColor = "#575756";
-const hint = "#898988";
-const primarybackground = "#fff";
-const secondarybackground = "#f7f7f7";
-const cardbackground = "#fefefe";
-
-// maintaining these names colors to avoid introducing breaking changes (for now).
-export {
-  primary,
-  gray,
-  darkgray,
-  primarybackground,
-  secondarybackground,
-  error,
-  errorBackground,
-  primaryHover,
-  headerColor,
-  hint,
-  cardbackground
-};
-
-// this is v2
 const colors = {
-  brandPrimary: "#03D4BF",
-  brandAlternative: "#00BFAC",
-
+  primary: "#03D4BF",
+  destructive: "#E63644",
+  affirmative: "#189F59",
+  warning: "#D97508",
+  white: "#FFFFFF",
+  destructiveDim: "#FFE1E1",
+  affirmativeDim: "#E8F5E5",
+  warningDim: "#FFF6D1",
   textPrimary: "#353F41",
   textSecondary: "#7B7B7B",
   textInactive: "#BFBFBF",
+  textActive: "#00BFAC",
   divider: "#E0E0E0",
-
+  background: "#F8F7F5",
   backgroundPrimary: "#F5F5F5",
-  backgroundSecondary: "#FAFAFA",
-  backgroundBrand: "#F8F7F5",
-
-  brandDestructive: "#E63644",
-  brandAffirmative: "#189F59",
-  brandWarning: "#D97508",
-
-  brandDestructiveDim: "#FFE1E1",
-  brandAffirmativeDim: "#E8F5E5",
-  brandWarningDim: "#FFF6D1",
-
-  white: "#FFFFFF"
+  backgroundSecondary: "#FAFAFA"
 };
+
 export default colors;

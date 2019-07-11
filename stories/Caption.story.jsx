@@ -5,7 +5,7 @@ import { Caption, Colors } from "../src/index";
 storiesOf("Caption", module)
   .add("basic", () => <Caption>Better Health needs Vivy.</Caption>)
   .add("styled", () => (
-    <Caption style={{ color: Colors.brandPrimary }}>
+    <Caption style={{ color: Colors.primary }}>
       Better Health needs Vivy.
     </Caption>
   ))

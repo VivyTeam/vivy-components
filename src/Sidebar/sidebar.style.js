@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components";
-import colors, { hexToRGBA } from "../Colors";
+import { hexToRGBA } from "../Colors";
+import { Colors } from "..";
 
 export const SidebarStyles = styled.div`
-  background-color: ${colors.textPrimary};
+  background-color: ${Colors.textPrimary};
   line-height: 1.38;
-  color: ${colors.white};
+  color: ${Colors.white};
   width: 224px;
   height: 100%;
 
@@ -23,7 +24,7 @@ export const SidebarStyles = styled.div`
 export const SidebarHeaderStyles = styled.div`
   height: 63px;
   margin-bottom: 16px;
-  border-bottom: 1px solid ${hexToRGBA(colors.divider, 0.15)};
+  border-bottom: 1px solid ${hexToRGBA(Colors.divider, 0.15)};
 
   img {
     width: 24px;
@@ -40,7 +41,7 @@ export const LinkStyles = styled.div`
   ${({ active }) =>
     active &&
     css`
-      background-color: ${colors.textSecondary};
+      background-color: ${Colors.textSecondary};
     `}
 `;
 
@@ -52,6 +53,6 @@ export const ActiveIndicator = styled.div`
   ${({ active }) =>
     active &&
     css`
-      background-color: ${colors.brandAlternative};
+      background-color: ${Colors.affirmative};
     `}
 `;

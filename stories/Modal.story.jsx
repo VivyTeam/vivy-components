@@ -9,7 +9,7 @@ const LayoutStyles = styled.div`
   height: 150vh;
   .green {
     height: 25%;
-    background: ${Colors.brandPrimary};
+    background: ${Colors.primary};
   }
   .white {
     height: 25%;
@@ -123,7 +123,7 @@ storiesOf("Modal", module)
             >
               <div
                 style={{
-                  backgroundColor: Colors.brandAffirmativeDim,
+                  backgroundColor: Colors.affirmativeDim,
                   height: 3000
                 }}
               >
