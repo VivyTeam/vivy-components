@@ -3,15 +3,15 @@ import { addDecorator, configure, addParameters } from "@storybook/react";
 import { create } from "@storybook/theming";
 import { withGlobalStyles } from "./customDecorators";
 import { withInfo } from "@storybook/addon-info";
-import { withA11y } from '@storybook/addon-a11y';
+import { withA11y } from "@storybook/addon-a11y";
 
-addDecorator(withInfo);
 addDecorator(withA11y);
+addDecorator(withInfo);
 addDecorator(withGlobalStyles);
 
 addParameters({
   options: {
-    showPanel: false,
+    showPanel: true,
     name: "Vivy",
     theme: create({
       base: "light",
