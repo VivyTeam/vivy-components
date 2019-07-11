@@ -24,6 +24,10 @@ const InputPasswordStyles = styled.div`
       font-size: 24px;
     }
   }
+
+  input {
+    margin-right: 54px;
+  }
 `;
 
 export default InputPasswordStyles;

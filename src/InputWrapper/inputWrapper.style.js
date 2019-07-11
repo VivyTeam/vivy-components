@@ -20,11 +20,29 @@ const InputStyles = styled.div`
     }
   }
 
+  .input-border {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    border: solid 1px #cdcdcd;
+    background-color: #ffffff;
+
+    &:hover {
+      border-color: #04d4bf;
+      transition: border-color 0.2s ease;
+    }
+
+    &:focus-within {
+      box-shadow: 0 0 0 2px rgba(4, 212, 191, 0.2);
+      border-color: #04d4bf;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+  }
+
   input {
     height: 48px;
-    border-radius: 2px;
-    background-color: #ffffff;
-    border: solid 1px #cdcdcd;
+    background-color: transparent;
+    border: none;
     font-size: 18px;
     font-weight: normal;
     color: #353f41;
@@ -43,16 +61,8 @@ const InputStyles = styled.div`
       padding: 2px 16px 2px 54px;
     }
 
-    &:hover {
-      border-color: #04d4bf;
-      transition: border-color 0.2s ease;
-    }
-
     &:focus {
       outline: none;
-      box-shadow: 0 0 0 2px rgba(4, 212, 191, 0.2);
-      border-color: #04d4bf;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     &::placeholder {
@@ -80,6 +90,7 @@ const InputStyles = styled.div`
   .label {
     padding-top: 8px;
     padding-bottom: 10px;
+    font-weight: 500;
     display: flex;
   }
 

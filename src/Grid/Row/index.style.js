@@ -1,8 +1,5 @@
 import styled from "styled-components";
-
-const mdMax = 1024;
-const smMax = 768;
-const xsMax = 480;
+import { xsMax, mdMax, smMax } from "../../constants";
 
 const RowStyles = styled.div`
   display: flex;

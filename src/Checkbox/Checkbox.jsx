@@ -7,14 +7,14 @@ import formData from "../utils/formData";
 export default function Checkbox({ id, children, value, name, optional }) {
   return (
     <ValidationContext.Consumer>
-      {({ onChange, errors: { [id]: error } }) => (
+      {({ validate, errors: { [id]: error } }) => (
         <Styles>
           <input
             id={id}
             name={name}
             type="checkbox"
             value={value}
-            onChange={e => onChange(formData(e.target.form), e.target.id)}
+            onChange={e => validate(formData(e.target.form), e.target.id)}
           />
           {/* eslint-disable-next-line */}
           <label id={id} htmlFor={id} />

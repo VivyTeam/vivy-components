@@ -3,7 +3,9 @@ import Schema from "async-validator";
 import PropTypes from "prop-types";
 
 const DEFAULT_STATE = {
-  errors: {}
+  errors: {},
+  validate: () => {},
+  cleanField: () => {}
 };
 
 export const ValidationContext = createContext(DEFAULT_STATE);
@@ -62,9 +64,7 @@ export default class Validation extends Component {
     return (
       <ValidationContext.Provider
         value={{
-          onBlur: this.validateForm,
-          onChange: this.validateForm,
-          validation: this.validateForm,
+          validate: this.validateForm,
           cleanField: this.cleanField,
           errors
         }}

@@ -30,12 +30,13 @@ import woff50 from "../../public/fonts/TTNorms/35C396_5_0.woff";
 import tt50 from "../../public/fonts/TTNorms/35C396_5_0.ttf";
 import svg50 from "../../public/fonts/TTNorms/35C396_5_0.svg";
 import vivyIconsEot from "../../public/fonts/vivy-icons/vivy-icons.eot";
+import vivyIconsWoff2 from "../../public/fonts/vivy-icons/vivy-icons.woff2";
 import vivyIconsWoff from "../../public/fonts/vivy-icons/vivy-icons.woff";
 import vivyIconsTtf from "../../public/fonts/vivy-icons/vivy-icons.ttf";
 import vivyIconsSvg from "../../public/fonts/vivy-icons/vivy-icons.svg";
 
 const Fonts = createGlobalStyle`
-    body {
+    body, input, textarea {
       font-family: 'Norms', sans-serif;
     }
 
@@ -101,7 +102,8 @@ const Fonts = createGlobalStyle`
     }
     @font-face {
       font-family: 'vivy-icons';
-      src: url(${vivyIconsEot}),
+      src: url(${vivyIconsEot});
+      src: url(${vivyIconsWoff2}) format('woff2'),          
            url(${vivyIconsWoff}) format('woff'),
            url(${vivyIconsTtf}) format('truetype'),
            url(${vivyIconsSvg}) format('svg');

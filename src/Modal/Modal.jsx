@@ -7,14 +7,20 @@ import {
   Overlay,
   Content,
   CloseButton,
-  BodyContent
+  Height,
+  BodyArea,
+  ButtonsArea,
+  SubmitButton
 } from "./modal.style";
-import { Row, Col, Icon } from "../index";
+import { Row, Col, Icon, Button } from "../index";
+
+const ESC_KEY = 27;
 
 class Modal extends Component {
   constructor(props) {
     super(props);
     this.closeButton = React.createRef();
+    this.handleEscKeyPress = this.handleEscKeyPress.bind(this);
   }
 
   componentDidMount() {
@@ -22,14 +28,35 @@ class Modal extends Component {
       this.closeButton.current.focus();
     }
     disableBodyScroll(document.querySelector("body"));
+    document.addEventListener("keydown", this.handleEscKeyPress, false);
   }
 
   componentWillUnmount() {
     enableBodyScroll(document.querySelector("body"));
+    document.removeEventListener("keydown", this.handleEscKeyPress, false);
+  }
+
+  handleEscKeyPress({ which: keyPressed }) {
+    if (keyPressed === ESC_KEY) {
+      const { onClose } = this.props;
+      onClose();
+    }
   }
 
   render() {
-    const { onClose, role, ariaLabel, children } = this.props;
+    const {
+      onClose,
+      onCancel,
+      onSubmit,
+      role,
+      ariaLabel,
+      children,
+      submitText,
+      cancelText,
+      submissionEnabled,
+      size
+    } = this.props;
+
     return (
       <ReactFocusTrap
         tag="aside"
@@ -40,16 +67,54 @@ class Modal extends Component {
       >
         <ModalStyles>
           <Overlay onClick={onClose} />
-          <Content>
-            <Row textAlign="right">
-              <Col offset={11} lg={1}>
-                <CloseButton ref={this.onClose} onClick={onClose}>
-                  <Icon name="close" />
-                </CloseButton>
+          <Height>
+            <Row position="center" verticalAlign="middle">
+              <Col lg={size === "sm" ? 7 : 12}>
+                <Content>
+                  <Row textAlign="right" position="end">
+                    <Col lg={1}>
+                      <CloseButton
+                        id="modal-close-button"
+                        ref={this.closeButton}
+                        onClick={onClose}
+                      >
+                        <Icon name="close" />
+                      </CloseButton>
+                    </Col>
+                  </Row>
+
+                  <BodyArea>{children}</BodyArea>
+
+                  <ButtonsArea>
+                    <Row position={size === "sm" ? "center" : "end"}>
+                      {onCancel && (
+                        <Col xs="hide" lg={0}>
+                          <Button
+                            id="modal-cancel-button"
+                            type="secondary"
+                            onClick={onCancel}
+                          >
+                            {cancelText}
+                          </Button>
+                        </Col>
+                      )}
+                      {onSubmit && (
+                        <Col xs={12} lg={0}>
+                          <SubmitButton
+                            id="modal-submit-button"
+                            onClick={onSubmit}
+                            disabled={!submissionEnabled}
+                          >
+                            {submitText}
+                          </SubmitButton>
+                        </Col>
+                      )}
+                    </Row>
+                  </ButtonsArea>
+                </Content>
               </Col>
             </Row>
-            <BodyContent>{children}</BodyContent>
-          </Content>
+          </Height>
         </ModalStyles>
       </ReactFocusTrap>
     );
@@ -62,13 +127,47 @@ Modal.propTypes = {
     PropTypes.node
   ]).isRequired,
   onClose: PropTypes.func,
+  onCancel: PropTypes.func,
+  onSubmit: PropTypes.func,
+  cancelText: ({ onCancel, cancelText }) => {
+    if (onCancel && !cancelText) {
+      return new Error(
+        "You might need to add property 'cancelText' if you need the button to have text"
+      );
+    }
+    if (typeof cancelText !== "string") {
+      return new Error(`cancelText needs to be a string`);
+    }
+
+    return null;
+  },
+  submitText: ({ onSubmit, submitText }) => {
+    if (onSubmit && !submitText) {
+      return new Error(
+        "You might need to add property 'submitText' if you need the button to have text"
+      );
+    }
+    if (typeof submitText !== "string") {
+      return new Error(`submitText needs to be a string`);
+    }
+
+    return null;
+  },
   role: PropTypes.string,
-  ariaLabel: PropTypes.string
+  submissionEnabled: PropTypes.bool,
+  ariaLabel: PropTypes.string,
+  size: PropTypes.oneOf(["sm", "lg"])
 };
 Modal.defaultProps = {
-  onClose: () => {},
+  onClose: null,
+  onCancel: null,
+  onSubmit: null,
+  cancelText: "",
+  submitText: "",
   role: "dialog",
-  ariaLabel: "" // A Label for the Modal that describes what it is.
+  submissionEnabled: true,
+  ariaLabel: "", // A Label for the Modal that describes what it is.
+  size: "lg"
 };
 
 export default Modal;

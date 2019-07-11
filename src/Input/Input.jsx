@@ -14,14 +14,16 @@ export default function Input({
   iconName,
   defaultValue,
   rel,
+  onChange,
   validateOnChange,
+  onBlur,
   validateOnBlur
 }) {
   const padding = classNames(["icon-padding", iconName]);
 
   return (
     <ValidationContext.Consumer>
-      {({ onBlur, onChange, cleanField, errors: { [id]: error } }) => (
+      {({ validate, cleanField, errors: { [id]: error } }) => (
         <InputWrapper error={error} id={id} iconName={iconName} label={label}>
           <input
             id={id}
@@ -30,16 +32,20 @@ export default function Input({
             placeholder={placeholder}
             className={padding}
             ref={rel}
-            onChange={
-              validateOnChange
-                ? e => onChange(formData(e.target.form || {}), e.target.id)
-                : e => cleanField(e.target.id)
-            }
-            onBlur={
-              validateOnBlur
-                ? e => onBlur(formData(e.target.form || {}), e.target.id)
-                : null
-            }
+            onChange={e => {
+              if (validateOnChange) {
+                validate(formData(e.target.form || {}), e.target.id);
+              } else {
+                cleanField(e.target.id);
+              }
+              onChange(e);
+            }}
+            onBlur={e => {
+              if (validateOnBlur) {
+                validate(formData(e.target.form || {}), e.target.id);
+              }
+              onBlur(e);
+            }}
             {...defaultValue && { defaultValue }}
           />
         </InputWrapper>
@@ -56,7 +62,9 @@ Input.propTypes = {
   label: PropTypes.string,
   defaultValue: PropTypes.string,
   iconName: PropTypes.string,
+  onChange: PropTypes.func,
   validateOnChange: PropTypes.bool,
+  onBlur: PropTypes.func,
   validateOnBlur: PropTypes.bool,
   rel: PropTypes.shape({})
 };
@@ -68,7 +76,9 @@ Input.defaultProps = {
   label: "",
   defaultValue: "",
   iconName: "",
+  onChange: () => {},
   validateOnChange: true,
+  onBlur: () => {},
   validateOnBlur: true,
   rel: React.createRef()
 };

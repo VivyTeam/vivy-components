@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Colors } from "../index";
+import { Colors, Button } from "../index";
+import { xsMax } from "../constants";
 
 const zIndex = 10;
 export const Overlay = styled.div`
@@ -41,24 +42,45 @@ export const ModalStyles = styled.div`
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: ${zIndex};
 `;
 
 export const Content = styled.div`
   z-index: ${zIndex};
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-height: 90%;
+  position: relative;
   background: ${Colors.white};
   padding: 16px 16px 24px 16px;
-  text-align: center;
   border-radius: 8px;
-  min-width: 320px; /* This just a default width */
+  max-width: 920px;
 `;
 
-export const BodyContent = styled.div`
+export const Height = styled.div`
+  height: 100vh;
+`;
+
+const ModalMargin = styled.div`
   margin-left: 24px;
   margin-right: 24px;
+`;
+
+export const BodyArea = styled(ModalMargin)`
+  @media (max-width: ${xsMax}px) {
+    overflow-y: auto;
+    max-height: 75vh;
+  }
+`;
+
+export const ButtonsArea = styled(ModalMargin)`
+  margin-top: 16px;
+
+  // on mobile devices we want the button to be 100 percent of the available width with no margins.
+  @media (max-width: ${xsMax}px) {
+    button.primary {
+      width: 100%;
+      margin: 0;
+    }
+  }
+`;
+
+export const SubmitButton = styled(Button)`
+  margin-left: 16px;
 `;

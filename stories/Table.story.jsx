@@ -107,7 +107,7 @@ storiesOf("Table", module)
         id: "wikiLink",
         maxWidth: 200,
         Cell: row => (
-          <AnchorButton href={row.value} target="_blank" type="tertiary">
+          <AnchorButton href={row.value} target="_blank" type="secondary">
             Learn more
           </AnchorButton>
         )

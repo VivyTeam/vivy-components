@@ -35,3 +35,4 @@ export { default as H2 } from "./H2";
 export { default as Paragraph } from "./Paragraph";
 export { default as Caption } from "./Caption";
 export { default as Tiny } from "./Tiny";
+export { default as Select } from "./Select";

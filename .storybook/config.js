@@ -11,6 +11,7 @@ addDecorator(withGlobalStyles);
 
 addParameters({
   options: {
+    showPanel: false,
     name: "Vivy",
     theme: create({
       base: "light",
