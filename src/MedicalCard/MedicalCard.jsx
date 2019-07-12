@@ -119,7 +119,10 @@ MedicalCard.propTypes = {
     height: PropTypes.string,
     weight: PropTypes.string,
     bloodType: PropTypes.string,
-    gender: PropTypes.shape({})
+    gender: PropTypes.shape({
+      text: PropTypes.string,
+      icon: PropTypes.string
+    })
   }).isRequired,
   t: PropTypes.func.isRequired
 };

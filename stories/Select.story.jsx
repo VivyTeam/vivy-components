@@ -30,6 +30,7 @@ storiesOf("Select", module)
         <Select
           options={flavourOptions}
           onChange={({ value, label }) =>
+            // eslint-disable-next-line no-console
             console.log(`Selected value is ${value}. Label is ${label}`)
           }
         />

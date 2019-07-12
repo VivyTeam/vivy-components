@@ -46,7 +46,7 @@ export default function Input({
               }
               onBlur(e);
             }}
-            {...defaultValue && { defaultValue }}
+            {...(defaultValue && { defaultValue })}
           />
         </InputWrapper>
       )}
