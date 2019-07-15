@@ -69,7 +69,7 @@ class Modal extends Component {
           <Overlay onClick={onClose} />
           <Height>
             <Row position="center" verticalAlign="middle">
-              <Col lg={size === "sm" ? 7 : 12}>
+              <Col lg={size === "sm" ? 7 : 12} sm={12}>
                 <Content>
                   <Row textAlign="right" position="end">
                     <Col lg={1}>
