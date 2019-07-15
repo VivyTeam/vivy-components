@@ -53,6 +53,6 @@ export const ActiveIndicator = styled.div`
   ${({ active }) =>
     active &&
     css`
-      background-color: ${Colors.affirmative};
+      background-color: ${Colors.textActive};
     `}
 `;
