@@ -89,7 +89,7 @@ const ButtonStyles = styled.div`
 
     &:hover {
       ${transitionBoxShadow};
-      background-color: ${Colors.affirmative};
+      background-color: ${Colors.textActive};
       box-shadow: 0 4px 8px 0 rgba(0, 160, 144, 0.4);
     }
 
