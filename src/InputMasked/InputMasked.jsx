@@ -46,7 +46,7 @@ export default function InputMasked({
               }
               onBlur(e);
             }}
-            {...defaultValue && { defaultValue }}
+            {...(defaultValue && { defaultValue })}
           >
             {inherited => (
               <input
