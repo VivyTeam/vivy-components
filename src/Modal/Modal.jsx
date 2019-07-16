@@ -27,12 +27,12 @@ class Modal extends Component {
     if (this.closeButton.current) {
       this.closeButton.current.focus();
     }
-    disableBodyScroll(document.querySelector("body"));
+    disableBodyScroll(document.querySelector("#modal-body-area"));
     document.addEventListener("keydown", this.handleEscKeyPress, false);
   }
 
   componentWillUnmount() {
-    enableBodyScroll(document.querySelector("body"));
+    enableBodyScroll(document.querySelector("#modal-body-area"));
     document.removeEventListener("keydown", this.handleEscKeyPress, false);
   }
 
@@ -83,7 +83,7 @@ class Modal extends Component {
                     </Col>
                   </Row>
 
-                  <BodyArea>{children}</BodyArea>
+                  <BodyArea id="modal-body-area">{children}</BodyArea>
 
                   <ButtonsArea>
                     <Row position={size === "sm" ? "center" : "end"}>

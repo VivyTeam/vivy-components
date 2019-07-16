@@ -65,6 +65,8 @@ const ModalMargin = styled.div`
 export const BodyArea = styled(ModalMargin)`
   @media (max-width: ${xsMax}px) {
     overflow-y: auto;
+    label: scroll-box;
+    -webkit-overflow-scrolling: touch;
     max-height: 75vh;
   }
 `;
