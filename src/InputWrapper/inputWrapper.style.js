@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { error, errorBackground } from "../Colors";
+import { Colors } from "..";
 
 const InputStyles = styled.div`
   position: relative;
@@ -15,8 +15,8 @@ const InputStyles = styled.div`
     line-height: 1.38;
 
     &.invalid input {
-      border-color: ${error};
-      background-color: ${errorBackground};
+      border-color: ${Colors.destructive};
+      background-color: ${Colors.destructiveDim};
     }
   }
 
@@ -75,7 +75,7 @@ const InputStyles = styled.div`
     font-weight: normal;
     line-height: 1.29;
     letter-spacing: normal;
-    color: ${error};
+    color: ${Colors.destructive};
     margin-top: 4px;
   }
 

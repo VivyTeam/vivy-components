@@ -5,7 +5,7 @@ import { Display, Colors } from "../src/index";
 storiesOf("Display", module)
   .add("basic", () => <Display>Better Health Needs Vivy</Display>)
   .add("styled", () => (
-    <Display style={{ color: Colors.brandPrimary }}>
+    <Display style={{ color: Colors.primary }}>
       Better Health Needs Vivy
     </Display>
   ));

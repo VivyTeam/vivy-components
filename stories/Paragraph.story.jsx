@@ -5,7 +5,7 @@ import { Paragraph, Colors } from "../src/index";
 storiesOf("Paragraph", module)
   .add("basic", () => <Paragraph>Better Health needs Vivy.</Paragraph>)
   .add("styled", () => (
-    <Paragraph style={{ color: Colors.brandPrimary }}>
+    <Paragraph style={{ color: Colors.primary }}>
       Better Health needs Vivy.
     </Paragraph>
   ))

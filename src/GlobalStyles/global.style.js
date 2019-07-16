@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { primary } from "../Colors";
+import { Colors } from "..";
 
 const GlobalStyles = createGlobalStyle`
   html{
@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
   
   body {
     font-size: 1.6rem;
-    color: ${primary}; 
+    color: ${Colors.textPrimary}; 
     margin: 0;
     padding: 0;
     min-height: 100%;

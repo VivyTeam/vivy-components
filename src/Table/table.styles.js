@@ -1,7 +1,7 @@
 import ReactTable from "react-table";
 import styled from "styled-components";
 import "react-table/react-table.css";
-import colors from "../Colors";
+import { Colors } from "..";
 
 // The styles below are styles that come with
 // ReactTable but must be disabled or unset to
@@ -49,7 +49,7 @@ export const StyledTable = styled(WithoutConflictingDefaultStyles)`
 
   .rt-table {
     .rt-thead {
-      border: 1px solid ${colors.divider};
+      border: 1px solid ${Colors.divider};
       border-radius: 4px 4px 0 0;
 
       font-size: 12px;
@@ -58,11 +58,11 @@ export const StyledTable = styled(WithoutConflictingDefaultStyles)`
     }
     .rt-tbody {
       .rt-tr-group {
-        border: 1px solid ${colors.divider};
+        border: 1px solid ${Colors.divider};
         border-top: unset;
 
         :last-child {
-          border-bottom: 1px solid ${colors.divider};
+          border-bottom: 1px solid ${Colors.divider};
           border-radius: 0 0 4px 4px;
         }
       }

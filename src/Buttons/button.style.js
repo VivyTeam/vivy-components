@@ -89,7 +89,7 @@ const ButtonStyles = styled.div`
 
     &:hover {
       ${transitionBoxShadow};
-      background-color: ${Colors.brandAlternative};
+      background-color: ${Colors.textActive};
       box-shadow: 0 4px 8px 0 rgba(0, 160, 144, 0.4);
     }
 
@@ -120,14 +120,14 @@ const ButtonStyles = styled.div`
 
     &:hover {
       ${transitionBorderColor};
-      color: ${Colors.brandPrimary};
-      border-color: ${Colors.brandPrimary};
+      color: ${Colors.primary};
+      border-color: ${Colors.primary};
     }
 
     &:active {
       ${transitionBorderColor};
-      color: ${Colors.brandPrimary};
-      border-color: ${Colors.brandPrimary};
+      color: ${Colors.primary};
+      border-color: ${Colors.primary};
     }
 
     &:disabled {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { error } from "../Colors";
+import { Colors } from "..";
 import mapping from "../../public/fonts/vivy-icons/iconMapping.json";
 
 const checkboxEmpty = mapping["icon-checkbox-empty"];
@@ -55,7 +55,7 @@ const CheckboxStyle = styled.div`
     font-weight: normal;
     line-height: 1.29;
     letter-spacing: normal;
-    color: ${error};
+    color: ${Colors.destructive};
     padding-left: 3px;
     padding-bottom: 14px;
   }

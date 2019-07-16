@@ -10,5 +10,5 @@ storiesOf("Welcome", module)
   .add("Principles", () => <PrinciplesPage />)
   .add("Vision & Ethos", () => <EthosPage />)
   .add("Typography", () => <ThemeTypography />)
-  .add("Colors", () => <ThemeColors />)
+  .add("Color Palette", () => <ThemeColors />)
   .add("Logos", () => <ThemeLogos />);
