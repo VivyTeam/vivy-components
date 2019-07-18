@@ -72,22 +72,15 @@ export const BodyArea = styled(ModalMargin)`
   label: scroll-box;
   -webkit-overflow-scrolling: touch;
 
-  display: flex;
   flex: 1;
-
-  .overflow-container {
-    flex: 1;
-    overflow-y: auto;
-  }
+  overflow-y: auto;
 `;
 
 export const HeaderArea = styled.div`
-  display: flex;
   flex: 1 0;
 `;
 
 export const ButtonsArea = styled(ModalMargin)`
-  display: flex;
   flex: 1 0;
 
   margin-top: 16px;

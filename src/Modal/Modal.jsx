@@ -84,11 +84,7 @@ class Modal extends Component {
                   </Row>
                 </HeaderArea>
 
-                <BodyArea>
-                  <div id="modal-body-area" className="overflow-container">
-                    {children}
-                  </div>
-                </BodyArea>
+                <BodyArea id="modal-body-area">{children}</BodyArea>
 
                 <ButtonsArea>
                   <Row position={size === "sm" ? "center" : "end"}>
