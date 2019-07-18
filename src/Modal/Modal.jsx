@@ -7,7 +7,6 @@ import {
   Overlay,
   Content,
   CloseButton,
-  HeaderArea,
   BodyArea,
   ButtonsArea,
   SubmitButton
@@ -70,19 +69,17 @@ class Modal extends Component {
           <Row position="center" verticalAlign="middle">
             <Col lg={size === "sm" ? 7 : 12} sm={12}>
               <Content>
-                <HeaderArea>
-                  <Row textAlign="right" position="end">
-                    <Col lg={1}>
-                      <CloseButton
-                        id="modal-close-button"
-                        ref={this.closeButton}
-                        onClick={onClose}
-                      >
-                        <Icon name="close" />
-                      </CloseButton>
-                    </Col>
-                  </Row>
-                </HeaderArea>
+                <Row textAlign="right" position="end">
+                  <Col lg={1}>
+                    <CloseButton
+                      id="modal-close-button"
+                      ref={this.closeButton}
+                      onClick={onClose}
+                    >
+                      <Icon name="close" />
+                    </CloseButton>
+                  </Col>
+                </Row>
 
                 <BodyArea id="modal-body-area">{children}</BodyArea>
 

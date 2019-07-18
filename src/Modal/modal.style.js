@@ -76,13 +76,7 @@ export const BodyArea = styled(ModalMargin)`
   overflow-y: auto;
 `;
 
-export const HeaderArea = styled.div`
-  flex: 1 0;
-`;
-
 export const ButtonsArea = styled(ModalMargin)`
-  flex: 1 0;
-
   margin-top: 16px;
 
   // on mobile devices we want the button to be 100 percent of the available width with no margins.
