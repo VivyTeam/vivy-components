@@ -7,7 +7,6 @@ import {
   Overlay,
   Content,
   CloseButton,
-  Height,
   BodyArea,
   ButtonsArea,
   SubmitButton
@@ -67,54 +66,52 @@ class Modal extends Component {
       >
         <ModalStyles>
           <Overlay onClick={onClose} />
-          <Height>
-            <Row position="center" verticalAlign="middle">
-              <Col lg={size === "sm" ? 7 : 12} sm={12}>
-                <Content>
-                  <Row textAlign="right" position="end">
-                    <Col lg={1}>
-                      <CloseButton
-                        id="modal-close-button"
-                        ref={this.closeButton}
-                        onClick={onClose}
-                      >
-                        <Icon name="close" />
-                      </CloseButton>
-                    </Col>
+          <Row position="center" verticalAlign="middle">
+            <Col lg={size === "sm" ? 7 : 12} sm={12}>
+              <Content>
+                <Row textAlign="right" position="end">
+                  <Col lg={1}>
+                    <CloseButton
+                      id="modal-close-button"
+                      ref={this.closeButton}
+                      onClick={onClose}
+                    >
+                      <Icon name="close" />
+                    </CloseButton>
+                  </Col>
+                </Row>
+
+                <BodyArea id="modal-body-area">{children}</BodyArea>
+
+                <ButtonsArea>
+                  <Row position={size === "sm" ? "center" : "end"}>
+                    {onCancel && (
+                      <Col xs="hide" lg={0}>
+                        <Button
+                          id="modal-cancel-button"
+                          type="secondary"
+                          onClick={onCancel}
+                        >
+                          {cancelText}
+                        </Button>
+                      </Col>
+                    )}
+                    {onSubmit && (
+                      <Col xs={12} lg={0}>
+                        <SubmitButton
+                          id="modal-submit-button"
+                          onClick={onSubmit}
+                          disabled={!submissionEnabled}
+                        >
+                          {submitText}
+                        </SubmitButton>
+                      </Col>
+                    )}
                   </Row>
-
-                  <BodyArea id="modal-body-area">{children}</BodyArea>
-
-                  <ButtonsArea>
-                    <Row position={size === "sm" ? "center" : "end"}>
-                      {onCancel && (
-                        <Col xs="hide" lg={0}>
-                          <Button
-                            id="modal-cancel-button"
-                            type="secondary"
-                            onClick={onCancel}
-                          >
-                            {cancelText}
-                          </Button>
-                        </Col>
-                      )}
-                      {onSubmit && (
-                        <Col xs={12} lg={0}>
-                          <SubmitButton
-                            id="modal-submit-button"
-                            onClick={onSubmit}
-                            disabled={!submissionEnabled}
-                          >
-                            {submitText}
-                          </SubmitButton>
-                        </Col>
-                      )}
-                    </Row>
-                  </ButtonsArea>
-                </Content>
-              </Col>
-            </Row>
-          </Height>
+                </ButtonsArea>
+              </Content>
+            </Col>
+          </Row>
         </ModalStyles>
       </ReactFocusTrap>
     );

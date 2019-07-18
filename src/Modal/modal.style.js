@@ -51,10 +51,15 @@ export const Content = styled.div`
   padding: 16px 16px 24px 16px;
   border-radius: 8px;
   max-width: 920px;
-`;
 
-export const Height = styled.div`
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  max-height: 70vh;
+
+  @media (max-width: ${xsMax}px) {
+    max-height: 80vh;
+  }
 `;
 
 const ModalMargin = styled.div`
@@ -63,12 +68,12 @@ const ModalMargin = styled.div`
 `;
 
 export const BodyArea = styled(ModalMargin)`
-  @media (max-width: ${xsMax}px) {
-    overflow-y: auto;
-    label: scroll-box;
-    -webkit-overflow-scrolling: touch;
-    max-height: 75vh;
-  }
+  overflow-y: auto;
+  label: scroll-box;
+  -webkit-overflow-scrolling: touch;
+
+  flex: 1;
+  overflow-y: auto;
 `;
 
 export const ButtonsArea = styled(ModalMargin)`
