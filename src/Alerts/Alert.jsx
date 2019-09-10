@@ -4,6 +4,7 @@ import { Row, Col, Icon } from "../index";
 import { AlertStyles, TextStyles } from "./alert.style";
 import * as AlertTypes from "./alertTypes";
 
+
 export default function Alert({ hasIcon, type, children }) {
   const iconName =
     type === AlertTypes.SUCCESS ? "confirmed-fill" : "warning-triangle-filled";
