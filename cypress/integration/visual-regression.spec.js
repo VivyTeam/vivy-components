@@ -1,4 +1,4 @@
-import { ids } from "./ids";
+import { ids } from "./data/ids";
 
 context("Visual Regression - Vivy", () => {
   beforeEach(() => {
