@@ -24,330 +24,171 @@ context("Visual Regression - Vivy", () => {
     cy.eyesClose();
   });
 
-  it("Should be able to click the welcome tab to show the rest of the tabs", () => {
-    cy.visit(`http://localhost:3006/?path=/story/welcome`);
-    cy.get("#explorerwelcome").trigger("mousedown");
-  });
+  const ids = [
+    "welcome",
+    "welcome--principles",
+    "welcome--vision-ethos",
+    "welcome--typography",
+    "welcome--color-palette",
+    "welcome--logos",
+    "alert",
+    "alert--success",
+    "alert--warning",
+    "alert--without-success-icon",
+    "alert--without-warning-icon",
+    "alertsmall",
+    "alertsmall--success",
+    "alertsmall--warning",
+    "alertsmall--without-success-icon",
+    "alertsmall--without-warning-icon",
+    "anchorbutton",
+    "anchorbutton--primary",
+    "anchorbutton--primary-with-height-large",
+    "anchorbutton--primary-with-height-small",
+    "anchorbutton--primary-with-custom-width",
+    "anchorbutton--secondary",
+    "anchorbutton--secondary-with-height-large",
+    "anchorbutton--secondary-with-height-small",
+    "anchorbutton--secondary-with-custom-width",
+    "anchorbutton--with-an-icon",
+    "button",
+    "button--primary",
+    "button--primary-height-large",
+    "button--primary-with-height-small",
+    "button--primary-with-custom-width",
+    "button--primary-disabled",
+    "button--secondary",
+    "button--secondary-with-height-large",
+    "button--secondary-with-height-small",
+    "button--secondary-with-custom-width",
+    "button--secondary-disabled",
+    "button--with-an-icon",
+    "button--onclick-handler",
+    "caption",
+    "caption--basic",
+    "caption--styled",
+    "caption--type-bold",
+    "checkbox",
+    "checkbox--basic",
+    "checkbox--optional",
+    "datedisplay",
+    "datedisplay--basic",
+    "datedisplayminimal",
+    "datedisplayminimal--basic",
+    "display",
+    "display--basic",
+    "display--styled",
+    "form",
+    "form--documentation",
+    "form--without-validation",
+    "form--with-validation",
+    "form--inactive-validation-on-value-change",
+    "form--inactive-validation-on-value-change-and-on-blur",
+    "grid",
+    "grid--default-width",
+    "grid--full-width",
+    "grid--responsive-column-sizes",
+    "grid--hidden-column-only-on-small-devices",
+    "grid--space-around",
+    "grid--space-evenly",
+    "grid--space-between",
+    "grid--position-start",
+    "grid--position-center",
+    "grid--position-end",
+    "grid--responsive-position-end",
+    "grid--offset",
+    "grid--vertical-alignment-top",
+    "grid--vertical-alignment-middle",
+    "grid--vertical-alignment-bottom",
+    "grid--complex-vertical-alignment-example",
+    "grid--columns-in-reverse-order",
+    "grid--column",
+    "grid--text-align-is-on-left",
+    "grid--text-align-is-on-center",
+    "grid--text-align-is-on-right",
+    "grid--responsive-text-align-is-on-right",
+    "grid--nested-rows",
+    "h1",
+    "h1--basic",
+    "h1--styled",
+    "h2",
+    "h2--basic",
+    "h2--styled",
+    "icon",
+    "icon--basic",
+    "icon--vivy-font-icon-pack",
+    "input",
+    "input--basic",
+    "input--default-value",
+    "input--onchange-handler",
+    "input--onblur-handler",
+    "input--icon-left",
+    "input--with-focus-on-click",
+    "inputmasked",
+    "inputmasked--basic",
+    "inputmasked--with-placeholdermask",
+    "inputmasked--with-defaultvalue",
+    "inputmasked--with-focus-on-click",
+    "inputpassword",
+    "inputpassword--icon-left",
+    "inputpassword--with-visibility-property-true",
+    "inputpassword--with-visibility-and-showpassword-properties-true",
+    "layout",
+    "layout--simple-page",
+    "medicalcard",
+    "medicalcard--basic",
+    "modal",
+    "modal--basic",
+    "modal--only-submit-button",
+    "modal--only-cancel-button",
+    "modal--both-cancel-and-submit-buttons",
+    "modal--with-long-content",
+    "modal--modal-size-small",
+    "modal--with-page-that-has-more-height-than-one-screen",
+    "modal--toggle-availability-of-submit-button",
+    "notfoundpage",
+    "notfoundpage--basic",
+    "notify",
+    "notify--documentation",
+    "notify--basic-notification",
+    "paragraph",
+    "paragraph--basic",
+    "paragraph--styled",
+    "paragraph--type-bold",
+    "select",
+    "select--basic",
+    "select--with-options",
+    "select--with-onchange-func",
+    "sidebar",
+    "sidebar--basic",
+    "simpleloader",
+    "simpleloader--basic",
+    "simpleloader--centered",
+    "simpleloader--loader-with-custom-size",
+    "table",
+    "table--basic",
+    "table--auto-sizing-column-widths",
+    "table--custom-cell-contents",
+    "table--no-data",
+    "textarea",
+    "textarea--basic",
+    "textarea--disabled",
+    "textarea--required",
+    "textarea--with-style",
+    "tiny",
+    "tiny--basic",
+    "tiny--styled",
+    "tiny--type-bold",
+    "topbar",
+    "topbar--basic",
+    "vivyfooter",
+    "vivyfooter--default-styles"
+  ];
 
-  it("Should be able to click the principles tab", () => {
-    cy.visit(`http://localhost:3006/?path=/story/welcome--principles`);
-    cy.get("#explorerwelcome--principles").trigger("mousedown");
-  });
-
-  it("Should be able to click the vision-ethos tab", () => {
-    cy.get("#explorerwelcome--vision-ethos").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/welcome--vision-ethos`);
-  });
-
-  it("Should be able to click the typography tab", () => {
-    cy.get("#explorerwelcome--typography").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/welcome--typography`);
-  });
-
-  it("Should be able to click the color-palette tab", () => {
-    cy.get("#explorerwelcome--color-palette").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/welcome--color-palette`);
-  });
-
-  it("Should be able to click the logos tab", () => {
-    cy.get("#explorerwelcome--logos").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/welcome--logos`);
-  });
-
-  it("Should be able to click the alert tab to show the rest of the tabs", () => {
-    cy.visit(`http://localhost:3006/?path=/story/alert`);
-    cy.get("#exploreralert").trigger("mousedown");
-  });
-
-  it("Should be able to click the success tab", () => {
-    cy.visit(`http://localhost:3006/?path=/story/alert--success`);
-    cy.get("#exploreralert--success").trigger("mousedown");
-  });
-
-  it("Should be able to click the warning tab", () => {
-    cy.get("#exploreralert--warning").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/alert--warning`);
-  });
-
-  it("Should be able to click the without-success-icon tab", () => {
-    cy.get("#exploreralert--without-success-icon").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/alert--without-success-icon`);
-  });
-
-  it("Should be able to click the without-warning-icon tab", () => {
-    cy.get("#exploreralert--without-warning-icon").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/alert--without-warning-icon`);
-  });
-
-  it("Should be able to click the alertsmall tab to show the rest of the tabs", () => {
-    cy.visit(`http://localhost:3006/?path=/story/alertsmall`);
-    cy.get("#exploreralertsmall").trigger("mousedown");
-  });
-
-  it("Should be able to click the success tab", () => {
-    cy.visit(`http://localhost:3006/?path=/story/alertsmall--success`);
-    cy.get("#alertsmall--success").trigger("mousedown");
-  });
-
-  it("Should be able to click the warning tab", () => {
-    cy.get("#alertsmall--warning").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/alertsmall--warning`);
-  });
-
-  it("Should be able to click the without-success-icon tab", () => {
-    cy.get("#alertsmall--without-success-icon").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/alertsmall--without-success-icon`
-    );
-  });
-
-  it("Should be able to click the without-warning-icon tab", () => {
-    cy.get("#alertsmall--without-warning-icon").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/alertsmall--without-warning-icon`
-    );
-  });
-
-  it("Should be able to click the anchorbutton tab to show the rest of the tabs", () => {
-    cy.visit(`http://localhost:3006/?path=/story/anchorbutton`);
-    cy.get("#exploreranchorbutton").trigger("mousedown");
-  });
-
-  it("Should be able to click the primary tab", () => {
-    cy.visit(`http://localhost:3006/?path=/story/anchorbutton--primary`);
-    cy.get("#anchorbutton--primary").trigger("mousedown");
-  });
-
-  it("Should be able to click the primary-with-height-large tab", () => {
-    cy.get("#anchorbutton--primary-with-height-large").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/anchorbutton--primary-with-height-large`
-    );
-  });
-
-  it("Should be able to click the primary-with-height-small tab", () => {
-    cy.get("#anchorbutton--primary-with-height-small").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/anchorbutton--primary-with-height-small`
-    );
-  });
-
-  it("Should be able to click the primary-with-custom-width tab", () => {
-    cy.get("#anchorbutton--primary-with-custom-width").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/anchorbutton--primary-with-custom-width`
-    );
-  });
-
-  it("Should be able to click the secondary tab", () => {
-    cy.get("#anchorbutton--secondary").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/anchorbutton--secondary`);
-  });
-
-  it("Should be able to click the secondary-with-height-large tab", () => {
-    cy.get("#anchorbutton--secondary-with-height-large").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/anchorbutton--secondary-with-height-large`
-    );
-  });
-
-  it("Should be able to click the secondary-with-height-small tab", () => {
-    cy.get("#anchorbutton--secondary-with-height-small").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/anchorbutton--secondary-with-height-small`
-    );
-  });
-
-  it("Should be able to click the secondary-with-custom-width tab", () => {
-    cy.get("#anchorbutton--secondary-with-custom-width").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/anchorbutton--secondary-with-custom-width`
-    );
-  });
-
-  it("Should be able to click the with-an-icon tab", () => {
-    cy.get("#anchorbutton--with-an-icon").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/anchorbutton--with-an-icon`);
-  });
-
-  it("Should be able to click the button tab to show the rest of the tabs", () => {
-    cy.visit(`http://localhost:3006/?path=/story/button`);
-    cy.get("#explorerbutton").trigger("mousedown");
-  });
-
-  it("Should be able to click the primary tab", () => {
-    cy.visit(`http://localhost:3006/?path=/story/button--primary`);
-    cy.get("#button--primary").trigger("mousedown");
-  });
-
-  it("Should be able to click the primary-height-large tab", () => {
-    cy.get("#button--primary-height-large").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/button--primary-height-large`);
-  });
-
-  it("Should be able to click the primary-with-height-small tab", () => {
-    cy.get("#button--primary-with-height-small").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/button--primary-with-height-small`
-    );
-  });
-
-  it("Should be able to click the primary-with-custom-width tab", () => {
-    cy.get("#button--primary-with-custom-width").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/button--primary-with-custom-width`
-    );
-  });
-
-  it("Should be able to click the primary-disabled tab", () => {
-    cy.get("#button--primary-disabled").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/button--primary-disabled`);
-  });
-
-  it("Should be able to click the secondary tab", () => {
-    cy.get("#button--secondary").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/button--secondary`);
-  });
-
-  it("Should be able to click the secondary-with-height-large tab", () => {
-    cy.get("#button--secondary-with-height-large").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/button--secondary-with-height-large`
-    );
-  });
-
-  it("Should be able to click the secondary-with-height-small tab", () => {
-    cy.get("#button--secondary-with-height-small").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/button--secondary-with-height-small`
-    );
-  });
-
-  it("Should be able to click the secondary-with-custom-width tab", () => {
-    cy.get("#button--secondary-with-custom-width").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/button--secondary-with-custom-width`
-    );
-  });
-
-  it("Should be able to click the secondary-disabled tab", () => {
-    cy.get("#button--secondary-disabled").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/button--secondary-disabled`);
-  });
-
-  it("Should be able to click the with-an-icon tab", () => {
-    cy.get("#button--with-an-icon").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/button--with-an-icon`);
-  });
-
-  it("Should be able to click the onclick-handler tab", () => {
-    cy.get("#button--onclick-handler").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/button--onclick-handler`);
-  });
-
-  it("Should be able to click the caption tab to show the rest of the tabs", () => {
-    cy.visit(`http://localhost:3006/?path=/story/caption`);
-    cy.get("#explorercaption").trigger("mousedown");
-  });
-
-  it("Should be able to click the basic tab", () => {
-    cy.visit(`http://localhost:3006/?path=/story/caption--basic`);
-    cy.get("#caption--basic").trigger("mousedown");
-  });
-
-  it("Should be able to click the styled tab", () => {
-    cy.get("#caption--styled").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/caption--styled`);
-  });
-
-  it("Should be able to click the type-bold tab", () => {
-    cy.get("#caption--type-bold").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/caption--type-bold`);
-  });
-
-  it("Should be able to click the checkbox tab to show the rest of the tabs", () => {
-    cy.visit(`http://localhost:3006/?path=/story/checkbox`);
-    cy.get("#explorercheckbox").trigger("mousedown");
-  });
-
-  it("Should be able to click the basic tab", () => {
-    cy.visit(`http://localhost:3006/?path=/story/checkbox--basic`);
-    cy.get("#checkbox--basic").trigger("mousedown");
-  });
-
-  it("Should be able to click the optional tab", () => {
-    cy.get("#checkbox--optional").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/checkbox--optional`);
-  });
-
-  it("Should be able to click the datedisplay tab to show the rest of the tabs", () => {
-    cy.visit(`http://localhost:3006/?path=/story/datedisplay`);
-    cy.get("#explorerdatedisplay").trigger("mousedown");
-  });
-
-  it("Should be able to click the basic tab", () => {
-    cy.visit(`http://localhost:3006/?path=/story/datedisplay--basic`);
-    cy.get("#datedisplay--basic").trigger("mousedown");
-  });
-
-  it("Should be able to click the datedisplayminimal tab to show the rest of the tabs", () => {
-    cy.visit(`http://localhost:3006/?path=/story/datedisplayminimal`);
-    cy.get("#explorerdatedisplayminimal").trigger("mousedown");
-  });
-
-  it("Should be able to click the basic tab", () => {
-    cy.visit(`http://localhost:3006/?path=/story/datedisplayminimal--basic`);
-    cy.get("#datedisplayminimal--basic").trigger("mousedown");
-  });
-
-  it("Should be able to click the display tab to show the rest of the tabs", () => {
-    cy.visit(`http://localhost:3006/?path=/story/display`);
-    cy.get("#explorerdisplay").trigger("mousedown");
-  });
-
-  it("Should be able to click the basic tab", () => {
-    cy.visit(`http://localhost:3006/?path=/story/display--basic`);
-    cy.get("#display--basic").trigger("mousedown");
-  });
-
-  it("Should be able to click the styled tab", () => {
-    cy.get("#display--styled").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/display--styled`);
-  });
-
-  it("Should be able to click the form tab to show the rest of the tabs", () => {
-    cy.visit(`http://localhost:3006/?path=/story/form`);
-    cy.get("#explorerform").trigger("mousedown");
-  });
-
-  it("Should be able to click the documentation tab", () => {
-    cy.visit(`http://localhost:3006/?path=/story/form--documentation`);
-    cy.get("#form--documentation").trigger("mousedown");
-  });
-
-  it("Should be able to click the without-validation tab", () => {
-    cy.get("#form--without-validation").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/form--without-validation`);
-  });
-
-  it("Should be able to click the with-validation tab", () => {
-    cy.get("#form--with-validation").trigger("mousedown");
-    cy.visit(`http://localhost:3006/?path=/story/form--with-validation`);
-  });
-
-  it("Should be able to click the inactive-validation-on-value-change tab", () => {
-    cy.get("#form--inactive-validation-on-value-change").trigger("mousedown");
-    cy.visit(
-      `http://localhost:3006/?path=/story/form--inactive-validation-on-value-change`
-    );
-  });
-
-  it("Should be able to click the inactive-validation-on-value-change-and-on-blur tab", () => {
-    cy.get("#form--inactive-validation-on-value-change-and-on-blur").trigger(
-      "mousedown"
-    );
-    cy.visit(
-      `http://localhost:3006/?path=/story/form--inactive-validation-on-value-change-and-on-blur`
-    );
+  ids.forEach(id => {
+    it(`Should click on '${id} page'`, () => {
+      cy.visit(`/${id}`);
+      cy.get(`#explorer${id}`).trigger("mousedown");
+    });
   });
 });

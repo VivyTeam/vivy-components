@@ -24,12 +24,14 @@
     "test": "npm run build:package && jest",
     "test:dist": "npm run build:package && node tests/dist.test.js",
     "danger": "danger ci",
-    "test:watch": "npm run test -- --watchAll"
+    "test:watch": "npm run test -- --watchAll",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "async-validator": "^1.11.3",
     "body-scroll-lock": "^2.6.4",
     "copy-to-clipboard": "^3.2.0",
+    "cypress-image-snapshot": "^3.1.1",
     "i18next": "^17.0.6",
     "i18next-browser-languagedetector": "^3.0.1",
     "prop-types": "^15.7.2",
