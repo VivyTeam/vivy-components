@@ -51,7 +51,7 @@
     "@babel/preset-react": "7.0.0",
     "@storybook/addon-info": "^5.1.9",
     "@storybook/addon-storyshots": "^5.2.0",
-    "@storybook/addon-storyshots-puppeteer": "^5.1.9",
+    "@storybook/addon-storyshots-puppeteer": "^5.2.1",
     "@storybook/addons": "^5.2.1",
     "@storybook/react": "^5.1.11",
     "@storybook/storybook-deployer": "^2.8.1",
