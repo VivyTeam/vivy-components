@@ -31,7 +31,7 @@
     "body-scroll-lock": "^2.6.4",
     "copy-to-clipboard": "^3.2.0",
     "i18next": "^17.0.12",
-    "i18next-browser-languagedetector": "^3.0.1",
+    "i18next-browser-languagedetector": "^3.0.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
