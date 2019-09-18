@@ -62,7 +62,7 @@
     "danger": "9.1.5",
     "eslint": "^6.4.0",
     "eslint-config-vivy": "^1.0.8",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "jest-styled-components": "6.3.3",
     "prettier": "^1.18.2",
     "react-scripts": "^3.1.1",
