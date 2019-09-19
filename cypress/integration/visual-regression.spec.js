@@ -28,8 +28,12 @@ context("Visual Regression - Vivy", () => {
     it(`Should click on '${id} page'`, () => {
       cy.visit(`/${id}`);
       cy.get(`#explorer${id}`)
-        .click()
-        .should("be.visible");
+        .then(el => {
+          el[0].scrollIntoView();
+          return el;
+        })
+        .should("be.visible")
+        .click({ force: true });
     });
   });
 });
