@@ -155,6 +155,6 @@ export const ids = [
   "tiny--type-bold",
   "topbar",
   "topbar--basic",
-  "vivyfooter",
-  "vivyfooter--default-styles"
+  // "vivyfooter",
+  // "vivyfooter--default-styles"
 ];

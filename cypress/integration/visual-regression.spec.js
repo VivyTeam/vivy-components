@@ -1,4 +1,4 @@
-import { ids } from "./data/ids";
+import { ids, footerIds } from "./data/ids";
 
 context("Visual Regression - Vivy", () => {
   beforeEach(() => {
@@ -27,7 +27,9 @@ context("Visual Regression - Vivy", () => {
   ids.forEach(id => {
     it(`Should click on '${id} page'`, () => {
       cy.visit(`/${id}`);
-      cy.get(`#explorer${id}`).trigger("mousedown");
+      cy.get(`#explorer${id}`)
+        .click()
+        .should("be.visible");
     });
   });
 });
