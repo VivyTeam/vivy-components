@@ -156,5 +156,5 @@ export const ids = [
   "topbar",
   "topbar--basic",
   // "vivyfooter",
-  "vivyfooter--default-styles"
+  // "vivyfooter--default-styles"
 ];
