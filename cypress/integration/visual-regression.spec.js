@@ -28,10 +28,7 @@ context("Visual Regression - Vivy", () => {
     it(`Should click on '${id} page'`, () => {
       cy.visit(`/${id}`);
       cy.get(`#explorer${id}`)
-        .then(el => {
-          el[0].scrollIntoView();
-          return el;
-        })
+        .scrollIntoView()
         .click({ force: true });
     });
   });
