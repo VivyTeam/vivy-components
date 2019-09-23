@@ -1,4 +1,4 @@
-import { ids, footerIds } from "./data/ids";
+import { ids } from "./data/ids";
 
 context("Visual Regression - Vivy", () => {
   beforeEach(() => {
@@ -8,13 +8,13 @@ context("Visual Regression - Vivy", () => {
       browser: [
         {
           name: "chrome",
-          width: 1280,
-          height: 800
+          width: 1500,
+          height: 2000
         },
         {
           name: "firefox",
-          width: 1280,
-          height: 800
+          width: 1500,
+          height: 2000
         }
       ]
     });
@@ -32,7 +32,6 @@ context("Visual Regression - Vivy", () => {
           el[0].scrollIntoView();
           return el;
         })
-        .should("be.visible")
         .click({ force: true });
     });
   });
