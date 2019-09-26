@@ -1,0 +1,5 @@
+{
+  "eyesTimeout": 1200000,
+  "video": false,
+  "baseUrl": "http://localhost:3006/?path=/story"
+}

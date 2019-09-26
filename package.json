@@ -24,12 +24,14 @@
     "test": "npm run build:package && jest",
     "test:dist": "npm run build:package && node tests/dist.test.js",
     "danger": "danger ci",
-    "test:watch": "npm run test -- --watchAll"
+    "test:watch": "npm run test -- --watchAll",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "async-validator": "^1.11.3",
     "body-scroll-lock": "^2.6.4",
     "copy-to-clipboard": "^3.2.0",
+    "cypress-image-snapshot": "^3.1.1",
     "i18next": "^17.0.6",
     "i18next-browser-languagedetector": "^3.0.1",
     "prop-types": "^15.7.2",
@@ -44,6 +46,7 @@
     "styled-components": "4.3.2"
   },
   "devDependencies": {
+    "@applitools/eyes-cypress": "^3.7.1",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "7.5.5",
@@ -59,6 +62,8 @@
     "babel-loader": "8.0.6",
     "babel-plugin-require-context-hook": "1.0.0",
     "babel-plugin-styled-components": "1.10.6",
+    "concurrently": "^4.1.2",
+    "cypress": "^3.4.1",
     "danger": "9.1.5",
     "eslint": "^6.1.0",
     "eslint-config-vivy": "^1.0.8",
