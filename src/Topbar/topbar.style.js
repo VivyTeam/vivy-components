@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "../../node_modules/styled-components";
 import { Colors } from "../index";
 
 const TopbarStyles = styled.div`

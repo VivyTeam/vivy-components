@@ -1,6 +1,6 @@
-import React from "react";
-import copy from "copy-to-clipboard";
-import PropTypes from "prop-types";
+import React from "../../node_modules/react";
+import copy from "../../node_modules/copy-to-clipboard";
+import PropTypes from "../../node_modules/prop-types";
 
 export default function ColorBox({ description, color }) {
   return (

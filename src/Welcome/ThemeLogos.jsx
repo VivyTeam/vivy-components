@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from "../../node_modules/react";
+import styled from "../../node_modules/styled-components";
 import { Col, Row } from "../index";
 import logo from "../../public/images/vivy_logo/logo/logo_2.svg";
 import letterHead from "../../public/images/vivy_logo/logo_letter_head/letter_head.svg";

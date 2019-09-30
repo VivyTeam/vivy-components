@@ -1,4 +1,4 @@
-import React from "react";
+import React from "../../node_modules/react";
 import { Row, Col, Paragraph, Display, H1, H2, Caption, Tiny } from "../index";
 
 import Styles from "./themeTypography.style";

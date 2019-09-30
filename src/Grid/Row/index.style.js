@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "../../../node_modules/styled-components";
 import { xsMax, mdMax, smMax } from "../../constants";
 
 const RowStyles = styled.div`

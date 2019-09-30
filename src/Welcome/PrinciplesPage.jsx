@@ -1,4 +1,4 @@
-import React from "react";
+import React from "../../node_modules/react";
 import { Row, Col } from "../index";
 
 export default function PrinciplesPage() {

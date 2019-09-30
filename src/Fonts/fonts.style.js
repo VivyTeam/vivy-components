@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "../../node_modules/styled-components";
 import ie9Compat00 from "../../public/fonts/TTNorms/35C396_0_0.eot";
 import woff200 from "../../public/fonts/TTNorms/35C396_0_0.woff2";
 import woff00 from "../../public/fonts/TTNorms/35C396_0_0.woff";
