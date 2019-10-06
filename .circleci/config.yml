@@ -38,7 +38,6 @@ jobs:
       - run: npm run linter:check
       - run: npm test
       - run: npm run danger
-      - run: bundle exec danger --verbose
       
 
       # Allow us to see failed storyshot diff files in the circle CI artifacts UI
