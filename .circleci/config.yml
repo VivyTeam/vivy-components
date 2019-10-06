@@ -37,8 +37,7 @@ jobs:
 
       - run: npm run linter:check
       - run: npm test
-      # - run: npm run danger
-      - run: npm run test:dist
+      - run: npm run danger
 
       # Allow us to see failed storyshot diff files in the circle CI artifacts UI
       - store_artifacts:
