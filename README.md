@@ -17,7 +17,7 @@ or
 When adding new components and styles to Vivy components just make sure to keep the PR small and keep it
 focused in scope while avoiding unrelated commits and changes.
 
-- Clone the project by running `git clone git@github.com:UvitaTeam/vivy-components.git`
+- Clone the project by running `git clone git@github.com:VivyTeam/vivy-components.git`
 - Navigate to the component library `cd vivy-components`
 - Create a new branch for your feature `git checkout -b cool.new.feature`
 - Install all the projects dependencies `npm install`
@@ -25,7 +25,7 @@ focused in scope while avoiding unrelated commits and changes.
 - Make your changes. The src/ folder is where the components live, stories/ contain all the documentation
 - Add your changes `git add myFeature.js` and commit them `git commit -m "Updated some cool styles"`
 - Push your branch `git push origin cool.new.feature`
-- Submit a [pull request](https://github.com/UvitaTeam/vivy-components/pulls) and add details about your changes
+- Submit a [pull request](https://github.com/VivyTeam/vivy-components/pulls) and add details about your changes
 - Add a reviewer (or ask someone in person) to go over your changes
 - If all goes well click the "Squash and Merge" button to close your PR (make sure to clean up and delete your branch)
 - To see your changes live (in both the lib and storybook website) make a new release via github!
@@ -56,7 +56,7 @@ Deployment for the component library is an automated process requiring three sep
 - Packaging: Deploying the npm package
 - Website: Deploying storybook static assets to Github pages
 
-All tasks are ran using [Circle CI](https://circleci.com/gh/UvitaTeam/) whenever any changes are detected (excluding the master branch). Both the packaging and website steps are only triggered when a new tag is added to the project. To handle releases we use Github's release interface which will automatically run the steps necessary to make new changes available.
+All tasks are ran using [Circle CI](https://circleci.com/gh/VivyTeam/) whenever any changes are detected (excluding the master branch). Both the packaging and website steps are only triggered when a new tag is added to the project. To handle releases we use Github's release interface which will automatically run the steps necessary to make new changes available.
 
 #### To specify a target branch and serve your storybook with rawgit instead of gh-pages:
 
@@ -66,7 +66,7 @@ All tasks are ran using [Circle CI](https://circleci.com/gh/UvitaTeam/) whenever
 npm run build:storybook -- --branch={{branch-name}}
 ```
 
-2.  visit https://rawgit.com/UvitaTeam/vivy-components/{{branch-name}}/
+2.  visit https://rawgit.com/VivyTeam/vivy-components/{{branch-name}}/
 
 ## Tech Used
 
