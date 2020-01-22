@@ -23,7 +23,6 @@
     "build:package": "babel --presets @babel/react ./src --out-dir ./dist",
     "test": "npm run build:package && jest",
     "test:dist": "npm run build:package && node tests/dist.test.js",
-    "danger": "danger ci",
     "test:watch": "npm run test -- --watchAll"
   },
   "dependencies": {
@@ -59,7 +58,6 @@
     "babel-loader": "8.0.6",
     "babel-plugin-require-context-hook": "1.0.0",
     "babel-plugin-styled-components": "1.10.6",
-    "danger": "9.2.10",
     "eslint": "^6.5.1",
     "eslint-config-vivy": "^1.0.8",
     "jest": "^24.9.0",
