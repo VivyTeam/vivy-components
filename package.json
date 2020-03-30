@@ -26,6 +26,7 @@
     "test:watch": "npm run test -- --watchAll"
   },
   "dependencies": {
+    "@storybook/preset-create-react-app": "^2.1.1",
     "async-validator": "^3.2.4",
     "body-scroll-lock": "^3.0.1",
     "copy-to-clipboard": "^3.3.1",
