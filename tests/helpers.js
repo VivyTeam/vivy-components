@@ -15,16 +15,16 @@ export function getStorybookUrl() {
 
 export const failureThreshold = () => ({
   failureThreshold: 0.1,
-  failureThresholdType: "percent"
+  failureThresholdType: "percent",
 });
 
 const tablet = devices["iPad landscape"];
-export const customizePage = page => page.emulate(tablet);
-export const beforeScreenshot = page => {
-  return new Promise(resolve =>
+export const customizePage = (page) => page.emulate(tablet);
+export const beforeScreenshot = (page) => {
+  return new Promise((resolve) =>
     setTimeout(() => {
       page.emulate(tablet);
       resolve();
-    }, 100)
+    }, 200)
   );
 };
