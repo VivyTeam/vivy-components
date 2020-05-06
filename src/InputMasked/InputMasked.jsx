@@ -21,7 +21,7 @@ export default function InputMasked({
   validateOnChange,
   onBlur,
   validateOnBlur,
-  autoComplete
+  autoComplete,
 }) {
   const basic = classNames(["masked-input", true], ["icon-padding", iconName]);
 
@@ -32,7 +32,7 @@ export default function InputMasked({
           <InputMask
             mask={mask}
             maskChar={maskChar}
-            onChange={e => {
+            onChange={(e) => {
               if (validateOnChange) {
                 validate(formData(e.target.form || {}), e.target.id);
               } else {
@@ -40,7 +40,7 @@ export default function InputMasked({
               }
               onChange(e);
             }}
-            onBlur={e => {
+            onBlur={(e) => {
               if (validateOnBlur) {
                 validate(formData(e.target.form || {}), e.target.id);
               }
@@ -48,7 +48,7 @@ export default function InputMasked({
             }}
             {...(defaultValue && { defaultValue })}
           >
-            {inherited => (
+            {(inherited) => (
               <input
                 autoComplete={autoComplete ? "on" : "off"}
                 id={id}
@@ -82,7 +82,7 @@ InputMasked.propTypes = {
   onBlur: PropTypes.func,
   validateOnBlur: PropTypes.bool,
   autoComplete: PropTypes.bool,
-  rel: PropTypes.shape({})
+  rel: PropTypes.shape({}),
 };
 
 InputMasked.defaultProps = {
@@ -99,5 +99,5 @@ InputMasked.defaultProps = {
   onBlur: () => {},
   validateOnBlur: true,
   autoComplete: false,
-  rel: React.createRef()
+  rel: React.createRef(),
 };

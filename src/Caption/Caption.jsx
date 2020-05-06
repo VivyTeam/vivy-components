@@ -27,13 +27,13 @@ export default function Caption({ children, style, type }) {
 Caption.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]).isRequired,
   type: PropTypes.oneOf([TYPE_BASIC, TYPE_BOLD]),
-  style: PropTypes.shape({})
+  style: PropTypes.shape({}),
 };
 
 Caption.defaultProps = {
   type: TYPE_BASIC,
-  style: {}
+  style: {},
 };

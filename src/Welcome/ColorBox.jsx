@@ -20,5 +20,5 @@ export default function ColorBox({ description, color }) {
 }
 ColorBox.propTypes = {
   description: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired
+  color: PropTypes.string.isRequired,
 };

@@ -20,12 +20,12 @@ NotifyContent.propTypes = {
   text: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   color: PropTypes.string,
-  fontSize: PropTypes.number
+  fontSize: PropTypes.number,
 };
 
 NotifyContent.defaultProps = {
   color: "#04d4bf",
-  fontSize: 22
+  fontSize: 22,
 };
 
 export function NotifyContainer() {
@@ -42,14 +42,14 @@ export const notify = {
     return toast.info(<NotifyContent icon="info" text={text} />, {
       ...options,
       className: "message-box",
-      progressClassName: "progress-bar"
+      progressClassName: "progress-bar",
     });
   },
   success(text, options = {}) {
     return toast.success(<NotifyContent icon="confirmed" text={text} />, {
       ...options,
       className: "message-box",
-      progressClassName: "progress-bar"
+      progressClassName: "progress-bar",
     });
   },
   error(text, options = {}) {
@@ -63,8 +63,8 @@ export const notify = {
       {
         ...options,
         className: "message-box",
-        progressClassName: "error-progress-bar"
+        progressClassName: "error-progress-bar",
       }
     );
-  }
+  },
 };

@@ -1,5 +1,5 @@
 export const hexToRGBA = (hex, alpha = 1) => {
-  const [r, g, b] = hex.match(/\w\w/g).map(x => parseInt(x, 16));
+  const [r, g, b] = hex.match(/\w\w/g).map((x) => parseInt(x, 16));
   return `rgba(${r},${g},${b},${alpha})`;
 };
 
@@ -17,7 +17,7 @@ const colors = {
   textInactive: "#BFBFBF",
   textActive: "#00BFAC",
   divider: "#E0E0E0",
-  background: "#F8F7F5"
+  background: "#F8F7F5",
 };
 
 export default colors;

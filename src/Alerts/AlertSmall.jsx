@@ -23,9 +23,9 @@ export default function AlertSmall({ hasIcon, type, children }) {
 AlertSmall.propTypes = {
   hasIcon: PropTypes.bool,
   type: PropTypes.oneOf(Object.values(AlertTypes)).isRequired,
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 };
 
 AlertSmall.defaultProps = {
-  hasIcon: true
+  hasIcon: true,
 };

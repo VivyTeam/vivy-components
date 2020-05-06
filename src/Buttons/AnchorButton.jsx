@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import ButtonStyles, {
   HEIGHT_TYPE_LG,
   HEIGHT_TYPE_SM,
-  HEIGHT_TYPE_BASIC
+  HEIGHT_TYPE_BASIC,
 } from "./button.style";
 
 export default function AnchorButton({
@@ -17,7 +17,7 @@ export default function AnchorButton({
   children,
   style,
   className,
-  height
+  height,
 }) {
   return (
     <ButtonStyles height={height}>
@@ -48,7 +48,7 @@ AnchorButton.propTypes = {
   download: PropTypes.oneOf([PropTypes.bool, PropTypes.string]),
   style: PropTypes.shape({}),
   className: PropTypes.string,
-  height: PropTypes.oneOf([HEIGHT_TYPE_LG, HEIGHT_TYPE_SM, HEIGHT_TYPE_BASIC])
+  height: PropTypes.oneOf([HEIGHT_TYPE_LG, HEIGHT_TYPE_SM, HEIGHT_TYPE_BASIC]),
 };
 
 AnchorButton.defaultProps = {
@@ -60,5 +60,5 @@ AnchorButton.defaultProps = {
   download: null,
   style: {},
   className: "",
-  height: HEIGHT_TYPE_BASIC
+  height: HEIGHT_TYPE_BASIC,
 };

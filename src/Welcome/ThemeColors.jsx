@@ -54,7 +54,7 @@ export default function ThemeColors() {
   return (
     <Styles>
       <Row space="around">
-        {Object.keys(Colors).map(name => (
+        {Object.keys(Colors).map((name) => (
           <Col lg={0} key={name}>
             <ColorBox description={name} color={Colors[name]} />
           </Col>

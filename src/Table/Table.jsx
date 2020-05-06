@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledTable } from "./table.styles";
 
-const tableWithDefaults = props => {
+const tableWithDefaults = (props) => {
   const defaultOptions = {
     showPagination: false,
     minRows: 0,
@@ -11,7 +11,7 @@ const tableWithDefaults = props => {
     resizable: false,
 
     // Do not show any extra UI when there are no rows
-    NoDataComponent: () => null
+    NoDataComponent: () => null,
   };
 
   return <StyledTable {...defaultOptions} {...props} />;

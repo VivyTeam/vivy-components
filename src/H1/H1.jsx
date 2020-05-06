@@ -15,11 +15,11 @@ export default function H1({ children, style }) {
 H1.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]).isRequired,
-  style: PropTypes.shape({})
+  style: PropTypes.shape({}),
 };
 
 H1.defaultProps = {
-  style: {}
+  style: {},
 };

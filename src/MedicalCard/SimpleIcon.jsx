@@ -16,9 +16,9 @@ BasicInfoIcon.propTypes = {
   iconDetail: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})])
     .isRequired,
   icon: PropTypes.string.isRequired,
-  iconColor: PropTypes.string
+  iconColor: PropTypes.string,
 };
 
 BasicInfoIcon.defaultProps = {
-  iconColor: ""
+  iconColor: "",
 };

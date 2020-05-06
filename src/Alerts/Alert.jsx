@@ -23,9 +23,9 @@ export default function Alert({ hasIcon, type, children }) {
 Alert.propTypes = {
   hasIcon: PropTypes.bool,
   type: PropTypes.oneOf(Object.values(AlertTypes)).isRequired,
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 };
 
 Alert.defaultProps = {
-  hasIcon: true
+  hasIcon: true,
 };

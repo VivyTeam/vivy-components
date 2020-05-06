@@ -17,11 +17,11 @@ export default function Select({ onChange, options, menuPosition, ...rest }) {
 Select.propTypes = {
   onChange: PropTypes.func,
   options: PropTypes.arrayOf(PropTypes.shape({})),
-  menuPosition: PropTypes.oneOf(["fixed", "absolute"])
+  menuPosition: PropTypes.oneOf(["fixed", "absolute"]),
 };
 
 Select.defaultProps = {
   onChange: () => {},
   options: [],
-  menuPosition: "fixed"
+  menuPosition: "fixed",
 };

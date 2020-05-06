@@ -11,5 +11,5 @@ export default function Footer({ children }) {
 }
 
 Footer.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };

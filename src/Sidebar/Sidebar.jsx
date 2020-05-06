@@ -5,12 +5,12 @@ import {
   SidebarStyles,
   LinkStyles,
   ActiveIndicator,
-  SidebarHeaderStyles
+  SidebarHeaderStyles,
 } from "./sidebar.style";
 
 const renderableChildrenPropType = PropTypes.oneOfType([
   PropTypes.arrayOf(PropTypes.node),
-  PropTypes.node
+  PropTypes.node,
 ]);
 
 const Link = ({ iconName, active, href, children }) => {
@@ -30,10 +30,10 @@ Link.propTypes = {
   iconName: PropTypes.string.isRequired,
   active: PropTypes.bool,
   href: PropTypes.string.isRequired,
-  children: renderableChildrenPropType.isRequired
+  children: renderableChildrenPropType.isRequired,
 };
 Link.defaultProps = {
-  active: false
+  active: false,
 };
 Link.displayName = "Sidebar.Link";
 
@@ -51,7 +51,7 @@ Header.propTypes = {
   logoUrl: PropTypes.string.isRequired,
   logoAltText: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
-  children: renderableChildrenPropType.isRequired
+  children: renderableChildrenPropType.isRequired,
 };
 Header.displayName = "Sidebar.Header";
 
@@ -63,7 +63,7 @@ const Sidebar = ({ children }) => {
   );
 };
 Sidebar.propTypes = {
-  children: renderableChildrenPropType.isRequired
+  children: renderableChildrenPropType.isRequired,
 };
 
 Sidebar.Header = Header;

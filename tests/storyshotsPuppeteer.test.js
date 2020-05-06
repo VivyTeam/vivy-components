@@ -4,7 +4,7 @@ import {
   failureThreshold,
   getStorybookUrl,
   customizePage,
-  beforeScreenshot
+  beforeScreenshot,
 } from "./helpers";
 
 initStoryshots({
@@ -14,6 +14,6 @@ initStoryshots({
     storybookUrl: getStorybookUrl(),
     getMatchOptions: failureThreshold,
     customizePage,
-    beforeScreenshot
-  })
+    beforeScreenshot,
+  }),
 });

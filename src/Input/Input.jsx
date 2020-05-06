@@ -17,7 +17,7 @@ export default function Input({
   onChange,
   validateOnChange,
   onBlur,
-  validateOnBlur
+  validateOnBlur,
 }) {
   const padding = classNames(["icon-padding", iconName]);
 
@@ -32,7 +32,7 @@ export default function Input({
             placeholder={placeholder}
             className={padding}
             ref={rel}
-            onChange={e => {
+            onChange={(e) => {
               if (validateOnChange) {
                 validate(formData(e.target.form || {}), e.target.id);
               } else {
@@ -40,7 +40,7 @@ export default function Input({
               }
               onChange(e);
             }}
-            onBlur={e => {
+            onBlur={(e) => {
               if (validateOnBlur) {
                 validate(formData(e.target.form || {}), e.target.id);
               }
@@ -66,7 +66,7 @@ Input.propTypes = {
   validateOnChange: PropTypes.bool,
   onBlur: PropTypes.func,
   validateOnBlur: PropTypes.bool,
-  rel: PropTypes.shape({})
+  rel: PropTypes.shape({}),
 };
 
 Input.defaultProps = {
@@ -80,5 +80,5 @@ Input.defaultProps = {
   validateOnChange: true,
   onBlur: () => {},
   validateOnBlur: true,
-  rel: React.createRef()
+  rel: React.createRef(),
 };

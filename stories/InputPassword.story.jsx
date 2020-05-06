@@ -28,7 +28,7 @@ storiesOf("InputPassword", module)
     ),
     {
       info:
-        "the initial state of the input indicates that there will be an Icon on the right side. By clicking the button the input changes its type between 'text' and 'password'"
+        "the initial state of the input indicates that there will be an Icon on the right side. By clicking the button the input changes its type between 'text' and 'password'",
     }
   )
   .add(
@@ -44,6 +44,6 @@ storiesOf("InputPassword", module)
     ),
     {
       info:
-        "the initial state of the input indicates that there will be an Icon on the right side. Also the type of the Input will be 'text'. That means that when the user start typing will be able to see what he is typing in th password input."
+        "the initial state of the input indicates that there will be an Icon on the right side. Also the type of the Input will be 'text'. That means that when the user start typing will be able to see what he is typing in th password input.",
     }
   );

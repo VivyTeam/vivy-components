@@ -10,9 +10,9 @@ export default function DateDisplayMinimal({ date, style }) {
 }
 DateDisplayMinimal.propTypes = {
   date: PropTypes.string.isRequired,
-  style: PropTypes.shape({})
+  style: PropTypes.shape({}),
 };
 
 DateDisplayMinimal.defaultProps = {
-  style: {}
+  style: {},
 };

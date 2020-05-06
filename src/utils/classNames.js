@@ -1,4 +1,4 @@
-export default function(...args) {
+export default function (...args) {
   return args.reduce((prev, index) => {
     const [className, condition] = index;
 

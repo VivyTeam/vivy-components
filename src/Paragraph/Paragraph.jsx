@@ -27,13 +27,13 @@ export default function Paragraph({ children, style, type }) {
 Paragraph.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]).isRequired,
   type: PropTypes.oneOf([TYPE_BASIC, TYPE_BOLD]),
-  style: PropTypes.shape({})
+  style: PropTypes.shape({}),
 };
 
 Paragraph.defaultProps = {
   type: TYPE_BASIC,
-  style: {}
+  style: {},
 };

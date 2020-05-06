@@ -19,10 +19,10 @@ DetailedProfileIcon.propTypes = {
   title: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   iconDetail: PropTypes.string,
-  iconSize: PropTypes.string
+  iconSize: PropTypes.string,
 };
 
 DetailedProfileIcon.defaultProps = {
   iconSize: "26px",
-  iconDetail: "nicht verfügbar"
+  iconDetail: "nicht verfügbar",
 };

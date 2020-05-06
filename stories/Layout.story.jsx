@@ -24,16 +24,16 @@ storiesOf("Layout", module).add(
             <MedicalCard
               user={{
                 name: "Demo User",
-                dateOfBirth: "1970-01-01"
+                dateOfBirth: "1970-01-01",
               }}
               data={{
                 gender: {
                   text: "Other",
-                  icon: "gender-other-16"
+                  icon: "gender-other-16",
                 },
                 weight: "82",
                 height: "180",
-                bloodType: "A-"
+                bloodType: "A-",
               }}
               lastUpdatedAt="1970-01-01"
             />

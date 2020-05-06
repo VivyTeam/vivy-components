@@ -9,7 +9,7 @@ import {
   CloseButton,
   BodyArea,
   ButtonsArea,
-  SubmitButton
+  SubmitButton,
 } from "./modal.style";
 import { Row, Col, Icon, Button } from "../index";
 
@@ -53,7 +53,7 @@ class Modal extends Component {
       submitText,
       cancelText,
       submissionEnabled,
-      size
+      size,
     } = this.props;
 
     return (
@@ -121,7 +121,7 @@ class Modal extends Component {
 Modal.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]).isRequired,
   onClose: PropTypes.func,
   onCancel: PropTypes.func,
@@ -153,7 +153,7 @@ Modal.propTypes = {
   role: PropTypes.string,
   submissionEnabled: PropTypes.bool,
   ariaLabel: PropTypes.string,
-  size: PropTypes.oneOf(["sm", "lg"])
+  size: PropTypes.oneOf(["sm", "lg"]),
 };
 Modal.defaultProps = {
   onClose: null,
@@ -164,7 +164,7 @@ Modal.defaultProps = {
   role: "dialog",
   submissionEnabled: true,
   ariaLabel: "", // A Label for the Modal that describes what it is.
-  size: "lg"
+  size: "lg",
 };
 
 export default Modal;

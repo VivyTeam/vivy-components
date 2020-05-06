@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const DEFAULT_STATE = {
   errors: {},
   validate: () => {},
-  cleanField: () => {}
+  cleanField: () => {},
 };
 
 export const ValidationContext = createContext(DEFAULT_STATE);
@@ -17,7 +17,7 @@ export default class Validation extends Component {
     const schema = new Schema(rules);
     let validation = {};
 
-    schema.validate(fields, validateErr => {
+    schema.validate(fields, (validateErr) => {
       if (validateErr) {
         validation = validateErr.reduce(
           (prev, error) => ({ ...prev, [error.field]: error.message }),
@@ -36,7 +36,7 @@ export default class Validation extends Component {
     const inputErrors = input ? { [input]: validation[input] } : validation;
     const allErrors = { ...errors, ...inputErrors };
     const hasErrors = Object.keys(allErrors).some(
-      message => allErrors[message]
+      (message) => allErrors[message]
     );
 
     this.setState({ errors: allErrors });
@@ -44,12 +44,12 @@ export default class Validation extends Component {
     return hasErrors;
   };
 
-  cleanField = input => {
+  cleanField = (input) => {
     const { errors } = this.state;
     const cleanError = input && { [input]: "" };
     const allErrors = { ...errors, ...cleanError };
     const hasErrors = Object.keys(allErrors).some(
-      message => allErrors[message]
+      (message) => allErrors[message]
     );
 
     this.setState({ errors: allErrors });
@@ -66,7 +66,7 @@ export default class Validation extends Component {
         value={{
           validate: this.validateForm,
           cleanField: this.cleanField,
-          errors
+          errors,
         }}
       >
         {children}
@@ -77,5 +77,5 @@ export default class Validation extends Component {
 
 Validation.propTypes = {
   children: PropTypes.node.isRequired,
-  rules: PropTypes.shape({}).isRequired
+  rules: PropTypes.shape({}).isRequired,
 };

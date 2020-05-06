@@ -14,8 +14,8 @@ i18n
     returnObjects: true,
     debug: false,
     react: {
-      wait: true
-    }
+      wait: true,
+    },
   });
 
 export default i18n;
