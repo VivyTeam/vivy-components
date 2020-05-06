@@ -11,20 +11,20 @@ storiesOf("MedicalCard", module).add(
         <MedicalCard
           user={{
             name: "Demo User",
-            dateOfBirth: "1970-01-01"
+            dateOfBirth: "1970-01-01",
           }}
           data={{
             pregnancyDueDate: {
-              data: "1970-01-01"
+              data: "1970-01-01",
             },
             gender: {
               text: "Female",
-              icon: "gender-female"
+              icon: "gender-female",
             },
             weight: "82",
             height: "180",
             bloodType: "A-",
-            organDonor: "yes"
+            organDonor: "yes",
           }}
           lastUpdatedAt="1970-01-01"
         />

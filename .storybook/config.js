@@ -14,9 +14,9 @@ addParameters({
     theme: create({
       base: "light",
       brandTitle: "Vivy",
-      brandUrl: "https://www.vivy.com/"
-    })
-  }
+      brandUrl: "https://www.vivy.com/",
+    }),
+  },
 });
 
 function loadStories() {
@@ -24,7 +24,7 @@ function loadStories() {
   require("../stories/Welcome");
   // automatically import all story js files that end with *.stories.js
   const req = require.context("../stories", true, /\.story\.jsx$/);
-  req.keys().forEach(filename => req(filename));
+  req.keys().forEach((filename) => req(filename));
 }
 
 configure(loadStories, module);

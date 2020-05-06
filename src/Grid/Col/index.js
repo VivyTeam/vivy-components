@@ -12,7 +12,7 @@ export default function Col({
   offsetMd,
   offsetSm,
   offsetXs,
-  style
+  style,
 }) {
   const column = classNames(
     [`col-lg-${lg} col-lg-offset-${offset}`, true],
@@ -41,7 +41,7 @@ Col.propTypes = {
   lg: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
   md: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
   sm: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
-  xs: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"])
+  xs: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
 };
 
 Col.defaultProps = {
@@ -53,5 +53,5 @@ Col.defaultProps = {
   lg: 12,
   md: null,
   sm: null,
-  xs: null
+  xs: null,
 };

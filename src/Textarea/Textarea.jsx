@@ -8,7 +8,7 @@ export function Textarea({
   placeholder,
   onInput,
   disabled,
-  style
+  style,
 }) {
   return (
     <TextareaStyles>
@@ -30,7 +30,7 @@ Textarea.propTypes = {
   label: PropTypes.string,
   required: PropTypes.bool,
   disabled: PropTypes.bool,
-  style: PropTypes.shape({})
+  style: PropTypes.shape({}),
 };
 
 Textarea.defaultProps = {
@@ -39,7 +39,7 @@ Textarea.defaultProps = {
   label: "",
   required: false,
   disabled: false,
-  style: {}
+  style: {},
 };
 
 export default Textarea;

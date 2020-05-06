@@ -18,11 +18,11 @@ export default function Display({ children, style }) {
 Display.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]).isRequired,
-  style: PropTypes.shape({})
+  style: PropTypes.shape({}),
 };
 
 Display.defaultProps = {
-  style: {}
+  style: {},
 };

@@ -30,7 +30,7 @@ class InputPassword extends Component {
       onChange,
       validateOnChange,
       onBlur,
-      validateOnBlur
+      validateOnBlur,
     } = this.props;
     const { showPassword } = this.state;
 
@@ -53,7 +53,7 @@ class InputPassword extends Component {
                 type={showPassword ? "text" : "password"}
                 placeholder={placeholder}
                 className={padding}
-                onChange={e => {
+                onChange={(e) => {
                   if (validateOnChange) {
                     validate(formData(e.target.form || {}), e.target.id);
                   } else {
@@ -61,7 +61,7 @@ class InputPassword extends Component {
                   }
                   onChange(e);
                 }}
-                onBlur={e => {
+                onBlur={(e) => {
                   if (validateOnBlur) {
                     validate(formData(e.target.form || {}), e.target.id);
                   }
@@ -102,7 +102,7 @@ InputPassword.propTypes = {
   onChange: PropTypes.func,
   validateOnChange: PropTypes.bool,
   onBlur: PropTypes.func,
-  validateOnBlur: PropTypes.bool
+  validateOnBlur: PropTypes.bool,
 };
 
 InputPassword.defaultProps = {
@@ -115,7 +115,7 @@ InputPassword.defaultProps = {
   onChange: () => {},
   validateOnChange: true,
   onBlur: () => {},
-  validateOnBlur: true
+  validateOnBlur: true,
 };
 
 export default InputPassword;

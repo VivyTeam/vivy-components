@@ -10,7 +10,7 @@ export default function InputWrapper({
   label,
   optional,
   iconName,
-  error
+  error,
 }) {
   const invalid = classNames(["invalid", error]);
 
@@ -40,12 +40,12 @@ InputWrapper.propTypes = {
   label: PropTypes.string,
   optional: PropTypes.bool,
   iconName: PropTypes.string,
-  error: PropTypes.string
+  error: PropTypes.string,
 };
 
 InputWrapper.defaultProps = {
   label: "",
   optional: false,
   iconName: "",
-  error: ""
+  error: "",
 };

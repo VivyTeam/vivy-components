@@ -1,4 +1,4 @@
-const fieldValue = target => {
+const fieldValue = (target) => {
   const { type, checked, value, id } = target;
   switch (type) {
     case "checkbox":
@@ -15,7 +15,7 @@ const fieldValue = target => {
 export default function formData(elements) {
   let data = {};
 
-  Array.from(elements).forEach(element => {
+  Array.from(elements).forEach((element) => {
     data = { ...data, ...fieldValue(element) };
   });
 

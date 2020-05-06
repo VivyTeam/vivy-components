@@ -26,9 +26,9 @@ export default function Icon({ name, style }) {
 
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
-  style: PropTypes.shape({})
+  style: PropTypes.shape({}),
 };
 
 Icon.defaultProps = {
-  style: {}
+  style: {},
 };

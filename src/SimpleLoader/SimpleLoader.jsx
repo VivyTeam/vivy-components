@@ -12,13 +12,13 @@ const SimpleLoader = ({ width, height, centered }) => (
 SimpleLoader.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
-  centered: PropTypes.bool
+  centered: PropTypes.bool,
 };
 
 SimpleLoader.defaultProps = {
   width: 50,
   height: 50,
-  centered: false
+  centered: false,
 };
 
 export default SimpleLoader;

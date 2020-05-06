@@ -14,20 +14,20 @@ const medicalPersonsData = [
     name: "Alexander Fleming",
     birthday: "6 August 1881",
     knownFor: "Discovery of penicillin",
-    wikiLink: "https://en.wikipedia.org/wiki/Alexander_Fleming"
+    wikiLink: "https://en.wikipedia.org/wiki/Alexander_Fleming",
   },
   {
     name: "Edward Jenner",
     birthday: "17 May 1749",
     knownFor: "Pioneer of the smallpox vaccine",
-    wikiLink: "https://en.wikipedia.org/wiki/Edward_Jenner"
+    wikiLink: "https://en.wikipedia.org/wiki/Edward_Jenner",
   },
   {
     name: "William Osler",
     birthday: "12 July, 1849",
     knownFor: "Created the first specialty training for physicians",
-    wikiLink: "https://en.wikipedia.org/wiki/William_Osler"
-  }
+    wikiLink: "https://en.wikipedia.org/wiki/William_Osler",
+  },
 ];
 
 storiesOf("Table", module)
@@ -35,16 +35,16 @@ storiesOf("Table", module)
     const columns = [
       {
         Header: "Name",
-        accessor: "name"
+        accessor: "name",
       },
       {
         Header: "Birthday",
-        accessor: "birthday"
+        accessor: "birthday",
       },
       {
         Header: "Known for",
-        accessor: "knownFor"
-      }
+        accessor: "knownFor",
+      },
     ];
 
     return (
@@ -58,17 +58,17 @@ storiesOf("Table", module)
       {
         Header: "Name",
         accessor: "name",
-        maxWidth: 150
+        maxWidth: 150,
       },
       {
         Header: "Birthday",
         accessor: "birthday",
-        maxWidth: 150
+        maxWidth: 150,
       },
       {
         Header: "Known for",
-        accessor: "knownFor"
-      }
+        accessor: "knownFor",
+      },
     ];
 
     return (
@@ -95,23 +95,23 @@ storiesOf("Table", module)
       {
         Header: "Patient",
         id: "name",
-        accessor: data => ({ name: data.name, birthday: data.birthday }),
-        Cell: row => <PatientCell {...row.value} />
+        accessor: (data) => ({ name: data.name, birthday: data.birthday }),
+        Cell: (row) => <PatientCell {...row.value} />,
       },
       {
         Header: "Known for",
-        accessor: "knownFor"
+        accessor: "knownFor",
       },
       {
         accessor: "wikiLink",
         id: "wikiLink",
         maxWidth: 200,
-        Cell: row => (
+        Cell: (row) => (
           <AnchorButton href={row.value} target="_blank" type="secondary">
             Learn more
           </AnchorButton>
-        )
-      }
+        ),
+      },
     ];
 
     return (
@@ -124,16 +124,16 @@ storiesOf("Table", module)
     const columns = [
       {
         Header: "Name",
-        accessor: "name"
+        accessor: "name",
       },
       {
         Header: "Birthday",
-        accessor: "birthday"
+        accessor: "birthday",
       },
       {
         Header: "Known for",
-        accessor: "knownFor"
-      }
+        accessor: "knownFor",
+      },
     ];
 
     return (

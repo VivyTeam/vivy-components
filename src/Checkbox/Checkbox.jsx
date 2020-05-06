@@ -14,7 +14,7 @@ export default function Checkbox({ id, children, value, name, optional }) {
             name={name}
             type="checkbox"
             value={value}
-            onChange={e => validate(formData(e.target.form), e.target.id)}
+            onChange={(e) => validate(formData(e.target.form), e.target.id)}
           />
           {/* eslint-disable-next-line */}
           <label id={id} htmlFor={id} />
@@ -33,11 +33,11 @@ Checkbox.propTypes = {
   children: PropTypes.node.isRequired,
   optional: PropTypes.bool,
   value: PropTypes.string,
-  name: PropTypes.string
+  name: PropTypes.string,
 };
 
 Checkbox.defaultProps = {
   optional: false,
   value: "",
-  name: ""
+  name: "",
 };

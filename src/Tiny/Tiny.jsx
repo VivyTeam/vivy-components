@@ -27,13 +27,13 @@ export default function Tiny({ children, style, type }) {
 Tiny.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]).isRequired,
   type: PropTypes.oneOf([TYPE_BASIC, TYPE_BOLD]),
-  style: PropTypes.shape({})
+  style: PropTypes.shape({}),
 };
 
 Tiny.defaultProps = {
   type: TYPE_BASIC,
-  style: {}
+  style: {},
 };

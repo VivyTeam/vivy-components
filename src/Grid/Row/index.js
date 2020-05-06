@@ -18,17 +18,17 @@ export default function Row({
   verticalAlign,
   reverse,
   column,
-  fullWidth
+  fullWidth,
 }) {
   const height = classNames([
     "inherited-height",
-    verticalAlign === "middle" || "bottom"
+    verticalAlign === "middle" || "bottom",
   ]);
 
   const row = classNames(
     [
       `row default-width position-${position} text-align-${textAlign} ${verticalAlign} ${space}`,
-      true
+      true,
     ],
     ["full-width", fullWidth],
     ["reverse", reverse],
@@ -63,7 +63,7 @@ Row.propTypes = {
   textAlign: PropTypes.oneOf(["left", "center", "right"]),
   textAlignMd: PropTypes.oneOf(["left", "center", "right"]),
   textAlignSm: PropTypes.oneOf(["left", "center", "right"]),
-  textAlignXs: PropTypes.oneOf(["left", "center", "right"])
+  textAlignXs: PropTypes.oneOf(["left", "center", "right"]),
 };
 
 Row.defaultProps = {
@@ -80,5 +80,5 @@ Row.defaultProps = {
   textAlignXs: null,
   reverse: false,
   column: false,
-  fullWidth: false
+  fullWidth: false,
 };

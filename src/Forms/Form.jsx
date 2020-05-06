@@ -19,8 +19,8 @@ export default function Form({ children, select, submit }) {
     <ValidationContext.Consumer>
       {({ validate }) => (
         <form
-          onChange={e => select(e.target.value)}
-          onSubmit={e => formSubmit(e, validate)}
+          onChange={(e) => select(e.target.value)}
+          onSubmit={(e) => formSubmit(e, validate)}
         >
           {children}
         </form>
@@ -32,10 +32,10 @@ export default function Form({ children, select, submit }) {
 Form.propTypes = {
   children: PropTypes.node.isRequired,
   select: PropTypes.func,
-  submit: PropTypes.func
+  submit: PropTypes.func,
 };
 
 Form.defaultProps = {
   select: () => {},
-  submit: () => {}
+  submit: () => {},
 };

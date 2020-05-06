@@ -45,12 +45,12 @@ storiesOf("Notify", module)
       const info = () => {
         notify.info("Info Notification", {
           hideProgressBar: true,
-          position: notify.POSITION.TOP_LEFT
+          position: notify.POSITION.TOP_LEFT,
         });
       };
       const error = () => {
         notify.error("Error Notification", {
-          position: notify.POSITION.TOP_CENTER
+          position: notify.POSITION.TOP_CENTER,
         });
       };
       const success = () => {

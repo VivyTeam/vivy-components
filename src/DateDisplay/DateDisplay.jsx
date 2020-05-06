@@ -12,7 +12,7 @@ export default function DateDisplay({ date, monthNames }) {
 
 DateDisplay.propTypes = {
   date: PropTypes.string.isRequired,
-  monthNames: PropTypes.arrayOf(PropTypes.string)
+  monthNames: PropTypes.arrayOf(PropTypes.string),
 };
 
 DateDisplay.defaultProps = {
@@ -28,6 +28,6 @@ DateDisplay.defaultProps = {
     "September",
     "Oktober",
     "November",
-    "Dezember"
-  ]
+    "Dezember",
+  ],
 };

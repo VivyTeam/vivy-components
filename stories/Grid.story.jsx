@@ -35,7 +35,7 @@ storiesOf("Grid", module)
     ),
     {
       info:
-        "The Row would have the default maximum width of the column which is 960px"
+        "The Row would have the default maximum width of the column which is 960px",
     }
   )
   .add(
@@ -65,7 +65,8 @@ storiesOf("Grid", module)
       </Row>
     ),
     {
-      info: "The Row would have different size of columns for different devices"
+      info:
+        "The Row would have different size of columns for different devices",
     }
   )
   .add(
@@ -171,7 +172,7 @@ storiesOf("Grid", module)
     ),
     {
       info:
-        "Changes the position of the row to 'end' for medium devices and all the smaller than medium devices"
+        "Changes the position of the row to 'end' for medium devices and all the smaller than medium devices",
     }
   )
   .add("offset", () => (
@@ -383,7 +384,7 @@ storiesOf("Grid", module)
     ),
     {
       info:
-        "Changes the position of the text alignment to 'right' for medium size devices"
+        "Changes the position of the text alignment to 'right' for medium size devices",
     }
   )
   .add("nested rows", () => (

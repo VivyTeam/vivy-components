@@ -6,5 +6,5 @@ export default function FormItem({ children }) {
 }
 
 FormItem.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };

@@ -9,7 +9,7 @@ import {
   Row,
   Col,
   Validation,
-  InputMasked
+  InputMasked,
 } from "../src";
 
 const rules = {
@@ -18,32 +18,32 @@ const rules = {
     {
       type: "string",
       min: 8,
-      message: "Minimum characters is 8"
-    }
+      message: "Minimum characters is 8",
+    },
   ],
   code: [
     {
       type: "string",
       required: true,
-      message: "Emergency sticker code is required"
+      message: "Emergency sticker code is required",
     },
     {
       type: "string",
       min: 19, // plus 3 dashed from mask
-      message: "Minimum characters is 16"
-    }
+      message: "Minimum characters is 16",
+    },
   ],
   password: [
     {
       type: "string",
       required: true,
-      message: "Password is required"
+      message: "Password is required",
     },
     {
       type: "string",
       min: 5,
-      message: "Minimum characters is 5"
-    }
+      message: "Minimum characters is 5",
+    },
   ],
   email: { type: "email", required: true },
   terms: {
@@ -51,8 +51,8 @@ const rules = {
     enum: ["true"],
     required: true,
     message: "*You must agree to terms",
-    transform: (value = false) => value.toString()
-  }
+    transform: (value = false) => value.toString(),
+  },
 };
 
 const record = console;
@@ -241,7 +241,7 @@ storiesOf("Form", module)
     ),
     {
       info:
-        "validateOnChange=false means the validation wont happen each time the input value is changing"
+        "validateOnChange=false means the validation wont happen each time the input value is changing",
     }
   )
   .add(
@@ -295,6 +295,6 @@ storiesOf("Form", module)
     ),
     {
       info:
-        "validateOnBlur=false means the validation wont happen each time the input changes focus. eg clicking outside of a input field will normally trigger the onBlur validation"
+        "validateOnBlur=false means the validation wont happen each time the input changes focus. eg clicking outside of a input field will normally trigger the onBlur validation",
     }
   );

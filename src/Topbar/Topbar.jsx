@@ -7,9 +7,9 @@ export default function Topbar({ children }) {
 }
 
 Topbar.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 Topbar.defaultProps = {
-  children: {}
+  children: {},
 };

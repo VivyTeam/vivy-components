@@ -54,7 +54,7 @@ storiesOf("Input", module)
           <Input
             id="word-input"
             placeholder="enter a word"
-            onChange={e => onWordChange(e.target.value)}
+            onChange={(e) => onWordChange(e.target.value)}
           />
           <span>Your text backwards is: {[...word].reverse()}</span>
         </Fragment>
@@ -71,7 +71,7 @@ storiesOf("Input", module)
           <Input
             id="word-input"
             placeholder="enter a word"
-            onBlur={e => onWordChange(e.target.value)}
+            onBlur={(e) => onWordChange(e.target.value)}
           />
           <span>Your text backwards is: {[...word].reverse()}</span>
         </Fragment>

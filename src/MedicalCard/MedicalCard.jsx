@@ -14,7 +14,7 @@ function MedicalCard({ user, data, t }) {
     height,
     weight,
     bloodType,
-    gender
+    gender,
   } = data;
   const pregnancyStatus =
     pregnancyDueDate && Object.keys(pregnancyDueDate).length > 0 ? (
@@ -109,11 +109,11 @@ MedicalCard.propTypes = {
   user: PropTypes.shape({
     name: PropTypes.string,
     dateOfBirth: PropTypes.string,
-    pictureBase64: PropTypes.string
+    pictureBase64: PropTypes.string,
   }).isRequired,
   data: PropTypes.shape({
     pregnancyDueDate: PropTypes.shape({
-      data: PropTypes.string
+      data: PropTypes.string,
     }),
     organDonor: PropTypes.string,
     height: PropTypes.string,
@@ -121,10 +121,10 @@ MedicalCard.propTypes = {
     bloodType: PropTypes.string,
     gender: PropTypes.shape({
       text: PropTypes.string,
-      icon: PropTypes.string
-    })
+      icon: PropTypes.string,
+    }),
   }).isRequired,
-  t: PropTypes.func.isRequired
+  t: PropTypes.func.isRequired,
 };
 
 export default withTranslation()(MedicalCard);

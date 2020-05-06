@@ -46,7 +46,7 @@ storiesOf("Modal", module)
     },
     {
       info:
-        "Submit button is shown since property 'onSubmit' is being passed to the component."
+        "Submit button is shown since property 'onSubmit' is being passed to the component.",
     }
   )
   .add(
@@ -76,7 +76,7 @@ storiesOf("Modal", module)
     },
     {
       info:
-        "Cancel button is shown since property 'onCancel' is being passed to the component."
+        "Cancel button is shown since property 'onCancel' is being passed to the component.",
     }
   )
   .add("both Cancel and Submit buttons", () => {
@@ -124,7 +124,7 @@ storiesOf("Modal", module)
               <div
                 style={{
                   backgroundColor: Colors.affirmativeDim,
-                  height: 3000
+                  height: 3000,
                 }}
               >
                 Very long Content
@@ -203,7 +203,7 @@ storiesOf("Modal", module)
       );
     },
     {
-      info: "Scrolling should be disabled when modal is open"
+      info: "Scrolling should be disabled when modal is open",
     }
   )
   .add("toggle availability of submit button", () => {

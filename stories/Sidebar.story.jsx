@@ -9,7 +9,7 @@ const LayoutStyles = styled.div`
 `;
 
 storiesOf("Sidebar", module)
-  .addDecorator(storyFn => <LayoutStyles>{storyFn()}</LayoutStyles>)
+  .addDecorator((storyFn) => <LayoutStyles>{storyFn()}</LayoutStyles>)
   .add("basic", () => (
     <Sidebar>
       <Sidebar.Header

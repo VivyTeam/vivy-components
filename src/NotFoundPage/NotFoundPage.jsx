@@ -17,5 +17,5 @@ export default function NotFoundPage({ children }) {
 }
 
 NotFoundPage.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
