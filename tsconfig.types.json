@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    // soon...
+    // "strict": true,
+    "preserveConstEnums": true,
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

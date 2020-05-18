@@ -20,7 +20,7 @@
     "serve": "start-storybook -p 3006 -s ./public",
     "build:storybook": "storybook-to-ghpages",
     "build:static": "build-storybook -s public",
-    "build:package": "babel --presets @babel/react ./src --out-dir ./dist",
+    "build:package": "rm -rf dist && tsc --project tsconfig.types.json --emitDeclarationOnly && babel --extensions .ts,.tsx,.js,.jsx ./src --out-dir ./dist",
     "test": "npm run build:package && jest",
     "test:dist": "npm run build:package && node tests/dist.test.js",
     "test:watch": "npm run test -- --watchAll"
@@ -42,9 +42,10 @@
     "react-select": "^3.1.0",
     "react-table": "^6.11.5",
     "react-toastify": "^6.0.0",
-    "styled-components": "4.3.2"
+    "typescript": "^3.9.2"
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.0",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "7.8.3",
@@ -67,7 +68,11 @@
     "prettier": "^2.0.5",
     "react-scripts": "^3.3.0",
     "react-test-renderer": "16.13.1",
-    "surge": "^0.21.3"
+    "surge": "^0.21.3",
+    "styled-components": "4.3.2"
+  },
+  "peerDependencies": {
+    "styled-components": "4.3.2"
   },
   "jest": {
     "projects": [
@@ -96,5 +101,6 @@
         ]
       }
     ]
-  }
+  },
+  "types": "dist/index.d.ts"
 }
