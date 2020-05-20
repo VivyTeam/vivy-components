@@ -1,29 +1,18 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
+import React, { FC } from "react";
+import ButtonStyles, { ButtonHeights } from "./button.style";
 
-import React, { FC, ReactElement } from "react";
-import ButtonStyles, {
-  HEIGHT_TYPE_LG,
-  HEIGHT_TYPE_SM,
-  HEIGHT_TYPE_BASIC,
-} from "./button.style";
-
-export type TButtonProps = {
-  children: ReactElement;
-  id: string | null;
-  onClick: () => void;
-  type: "primary" | "secondary";
-  htmlType: "button" | "submit" | "reset";
-  style: React.CSSProperties;
-  disabled: boolean;
-  className: string;
-  height:
-    | typeof HEIGHT_TYPE_LG
-    | typeof HEIGHT_TYPE_SM
-    | typeof HEIGHT_TYPE_BASIC;
+export type ButtonProps = {
+  id?: string | null;
+  onClick?: () => void;
+  type?: "primary" | "secondary";
+  htmlType?: "button" | "submit" | "reset";
+  style?: React.CSSProperties;
+  disabled?: boolean;
+  className?: string;
+  height?: ButtonHeights;
 };
 
-const Button: FC<TButtonProps> = ({
+const Button: FC<ButtonProps> = ({
   type = "primary",
   id = null,
   htmlType = "button",
@@ -32,7 +21,7 @@ const Button: FC<TButtonProps> = ({
   disabled = false,
   style = {},
   className = "",
-  height = HEIGHT_TYPE_BASIC,
+  height = ButtonHeights.HEIGHT_TYPE_BASIC,
 }) => {
   return (
     <ButtonStyles height={height}>
@@ -41,6 +30,7 @@ const Button: FC<TButtonProps> = ({
         disabled={disabled}
         onClick={onClick}
         className={`${className} ${type}`}
+        // requires a static string!
         // eslint-disable-next-line react/button-has-type
         type={htmlType}
         style={style}

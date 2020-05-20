@@ -45,7 +45,6 @@
     "typescript": "^3.9.2"
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.0",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "7.8.3",
@@ -58,6 +57,7 @@
     "@storybook/react": "^5.3.18",
     "@storybook/storybook-deployer": "^2.8.5",
     "@storybook/theming": "^5.3.18",
+    "@types/styled-components": "^5.1.0",
     "@vivy/eslint-config": "1.0.2",
     "babel-loader": "8.1.0",
     "babel-plugin-require-context-hook": "1.0.0",
@@ -72,11 +72,11 @@
     "prettier": "^2.0.5",
     "react-scripts": "^3.3.0",
     "react-test-renderer": "16.13.1",
-    "styled-components": "4.3.2",
+    "styled-components": "^4.3.2",
     "surge": "^0.21.3"
   },
   "peerDependencies": {
-    "styled-components": "4.3.2"
+    "styled-components": "^4.3.2"
   },
   "jest": {
     "projects": [

@@ -4,8 +4,6 @@
     "browser": true
   },
   "rules": {
-    "import/no-extraneous-dependencies": 0,
-    "class-methods-use-this": 1,
-    "react/prop-types": 1,
+    "import/no-extraneous-dependencies": 0
   }
 }

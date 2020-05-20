@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import styled, { css } from "styled-components";
 import Colors from "../Colors";
-import { TButtonProps } from "./Button";
+import { ButtonProps } from "./Button";
 
-export const HEIGHT_TYPE_LG = "lg";
-export const HEIGHT_TYPE_SM = "sm";
-export const HEIGHT_TYPE_BASIC = "basic";
+export enum ButtonHeights {
+  HEIGHT_TYPE_LG = "lg",
+  HEIGHT_TYPE_SM = "sm",
+  HEIGHT_TYPE_BASIC = "basic",
+}
 
 const baseStyles = css`
   display: flex;
@@ -27,7 +29,7 @@ const transitionBorderColor = css`
   transition: color 0.2s ease, border-color 0.2s ease;
 `;
 
-const ButtonStyles = styled.div<{ height: TButtonProps["height"] }>`
+const ButtonStyles = styled.div<{ height: ButtonProps["height"] }>`
   .component-child {
     ${baseStyles};
   }
@@ -60,12 +62,12 @@ const ButtonStyles = styled.div<{ height: TButtonProps["height"] }>`
 
   .component-child {
     ${({ height }) => {
-      if (height === HEIGHT_TYPE_LG) {
+      if (height === ButtonHeights.HEIGHT_TYPE_LG) {
         return css`
           height: 56px;
         `;
       }
-      if (height === HEIGHT_TYPE_SM) {
+      if (height === ButtonHeights.HEIGHT_TYPE_SM) {
         return css`
           height: 32px;
         `;
