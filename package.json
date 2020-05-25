@@ -20,7 +20,7 @@
     "serve": "start-storybook -p 3006 -s ./public",
     "build:storybook": "storybook-to-ghpages",
     "build:static": "build-storybook -s public",
-    "build:package": "rm -rf dist && tsc --project tsconfig.types.json --emitDeclarationOnly && babel --extensions .ts,.tsx,.js,.jsx ./src --out-dir ./dist",
+    "build:package": "rm -rf dist && babel --extensions .ts,.tsx,.js,.jsx ./src --out-dir ./dist && tsc --project tsconfig.types.json --emitDeclarationOnly",
     "test": "npm run build:package && jest",
     "test:dist": "npm run build:package && node tests/dist.test.js",
     "test:watch": "npm run test -- --watchAll"
@@ -58,7 +58,7 @@
     "@storybook/storybook-deployer": "^2.8.5",
     "@storybook/theming": "^5.3.18",
     "@types/styled-components": "^5.1.0",
-    "@vivy/eslint-config": "1.0.2",
+    "@vivy/eslint-config": "1.0.3",
     "babel-loader": "8.1.0",
     "babel-plugin-require-context-hook": "1.0.0",
     "babel-plugin-styled-components": "1.10.7",
@@ -105,6 +105,5 @@
         ]
       }
     ]
-  },
-  "types": "dist/index.d.ts"
+  }
 }

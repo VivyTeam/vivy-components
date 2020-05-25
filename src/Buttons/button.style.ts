@@ -1,7 +1,5 @@
-/* eslint-disable no-unused-vars */
 import styled, { css } from "styled-components";
 import Colors from "../Colors";
-import { ButtonProps } from "./Button";
 
 export enum ButtonHeights {
   HEIGHT_TYPE_LG = "lg",
@@ -29,7 +27,7 @@ const transitionBorderColor = css`
   transition: color 0.2s ease, border-color 0.2s ease;
 `;
 
-const ButtonStyles = styled.div<{ height: ButtonProps["height"] }>`
+const ButtonStyles = styled.div<{ height: ButtonHeights }>`
   .component-child {
     ${baseStyles};
   }

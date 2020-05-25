@@ -1,12 +1,12 @@
-import React, { FC } from "react";
+import React, { FC, CSSProperties } from "react";
 import ButtonStyles, { ButtonHeights } from "./button.style";
 
-export type ButtonProps = {
+type ButtonProps = {
   id?: string | null;
   onClick?: () => void;
   type?: "primary" | "secondary";
   htmlType?: "button" | "submit" | "reset";
-  style?: React.CSSProperties;
+  style?: CSSProperties;
   disabled?: boolean;
   className?: string;
   height?: ButtonHeights;
