@@ -1,9 +1,11 @@
 import styled, { css } from "styled-components";
-import { Colors } from "../index";
+import Colors from "../Colors";
 
-export const HEIGHT_TYPE_LG = "lg";
-export const HEIGHT_TYPE_SM = "sm";
-export const HEIGHT_TYPE_BASIC = "basic";
+export enum ButtonHeights {
+  HEIGHT_TYPE_LG = "lg",
+  HEIGHT_TYPE_SM = "sm",
+  HEIGHT_TYPE_BASIC = "basic",
+}
 
 const baseStyles = css`
   display: flex;
@@ -25,7 +27,7 @@ const transitionBorderColor = css`
   transition: color 0.2s ease, border-color 0.2s ease;
 `;
 
-const ButtonStyles = styled.div`
+const ButtonStyles = styled.div<{ height: ButtonHeights }>`
   .component-child {
     ${baseStyles};
   }
@@ -58,12 +60,12 @@ const ButtonStyles = styled.div`
 
   .component-child {
     ${({ height }) => {
-      if (height === HEIGHT_TYPE_LG) {
+      if (height === ButtonHeights.HEIGHT_TYPE_LG) {
         return css`
           height: 56px;
         `;
       }
-      if (height === HEIGHT_TYPE_SM) {
+      if (height === ButtonHeights.HEIGHT_TYPE_SM) {
         return css`
           height: 32px;
         `;
