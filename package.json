@@ -20,11 +20,10 @@
     "serve": "start-storybook -p 3006 -s ./public",
     "build:storybook": "storybook-to-ghpages",
     "build:static": "build-storybook -s public",
-    "build:package": "rm -rf dist && babel --extensions .ts,.tsx,.js,.jsx ./src --out-dir ./dist && tsc --project tsconfig.types.json --emitDeclarationOnly ",
+    "build:package": "babel --delete-dir-on-start --extensions .ts,.tsx,.js,.jsx ./src --out-dir ./dist && tsc --project tsconfig.types.json --emitDeclarationOnly ",
     "test": "npm run build:package && jest",
     "test:dist": "npm run build:package && node tests/dist.test.js",
-    "test:watch": "npm run test -- --watchAll",
-    "moveTypes": ". ./scripts/copyTypes.sh"
+    "test:watch": "npm run test -- --watchAll"
   },
   "dependencies": {
     "@storybook/preset-create-react-app": "^2.1.1",
