@@ -18,10 +18,10 @@
     "linter:fix": "prettier --write '{,!(node_modules|.git|storybook-static)/**/}*.{js,json,jsx,md}'",
     "linter:check": "eslint src/**/* && eslint stories/*.jsx",
     "serve": "start-storybook -p 3006 -s ./public",
-    "storybook:check": "tsc --project tsconfig.json --noEmit",
+    "storybook:check": "tsc --project tsconfig.storybook.json --noEmit",
     "storybook:publish": "npm run storybook:check && storybook-to-ghpages",
     "storybook:build": "npm run storybook:check && build-storybook -s public",
-    "build:package": "babel --delete-dir-on-start --extensions .ts,.tsx,.js,.jsx ./src --out-dir ./dist && tsc --project tsconfig.types.json --emitDeclarationOnly ",
+    "build:package": "npm run storybook:check && tsc --project tsconfig.types.json --emitDeclarationOnly && babel --delete-dir-on-start --extensions .ts,.tsx,.js,.jsx ./src --out-dir ./dist",
     "test": "npm run build:package && jest",
     "test:dist": "npm run build:package && node tests/dist.test.js",
     "test:watch": "npm run test -- --watchAll"
