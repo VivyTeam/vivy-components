@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Button, Icon } from "../src/index";
-import { ButtonHeights } from "../src/Buttons/button.style";
+import { Button, Icon, ButtonHeights } from "../src/index";
 
 storiesOf("Button", module)
   .add("primary", () => <Button>Call to Action</Button>)
