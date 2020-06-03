@@ -42,3 +42,4 @@ const Button: FC<ButtonProps> = ({
 };
 
 export default Button;
+export { ButtonHeights } from "./button.style";
