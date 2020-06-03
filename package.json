@@ -18,15 +18,14 @@
     "linter:fix": "prettier --write '{,!(node_modules|.git|storybook-static)/**/}*.{js,json,jsx,md}'",
     "linter:check": "eslint src/**/* && eslint stories/*.jsx",
     "serve": "start-storybook -p 3006 -s ./public",
-    "build:storybook": "storybook-to-ghpages",
-    "build:static": "build-storybook -s public",
-    "build:package": "babel --delete-dir-on-start --extensions .ts,.tsx,.js,.jsx ./src --out-dir ./dist && tsc --project tsconfig.types.json --emitDeclarationOnly ",
+    "storybook:publish": "storybook-to-ghpages",
+    "storybook:build": "build-storybook -s public",
+    "build:package": "tsc --project tsconfig.types.json --emitDeclarationOnly && babel --delete-dir-on-start --extensions .ts,.tsx,.js,.jsx ./src --out-dir ./dist",
     "test": "npm run build:package && jest",
     "test:dist": "npm run build:package && node tests/dist.test.js",
     "test:watch": "npm run test -- --watchAll"
   },
   "dependencies": {
-    "@storybook/preset-create-react-app": "^2.1.1",
     "async-validator": "^3.3.0",
     "body-scroll-lock": "^3.0.2",
     "copy-to-clipboard": "^3.3.1",
@@ -54,7 +53,7 @@
     "@storybook/addon-storyshots": "^5.3.17",
     "@storybook/addon-storyshots-puppeteer": "^5.2.1",
     "@storybook/addons": "^5.3.19",
-    "@storybook/react": "^5.3.18",
+    "@storybook/react": "^5.3.19",
     "@storybook/storybook-deployer": "^2.8.5",
     "@storybook/theming": "^5.3.18",
     "@types/styled-components": "^5.1.0",
@@ -73,7 +72,8 @@
     "react-scripts": "^3.3.0",
     "react-test-renderer": "16.13.1",
     "styled-components": "^4.3.2",
-    "surge": "^0.21.3"
+    "surge": "^0.21.3",
+    "ts-loader": "^7.0.5"
   },
   "peerDependencies": {
     "styled-components": "^4.3.2"

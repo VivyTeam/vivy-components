@@ -11652,6 +11652,183 @@ Array [
 ]
 `;
 
+exports[`Storyshots Button secondary with height basic 1`] = `
+Array [
+  .c0 .component-child {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Norms",sans-serif;
+  padding-top: 2px;
+  line-height: 1em;
+}
+
+.c0 button:disabled,
+.c0 button:disabled .component-child {
+  cursor: not-allowed !important;
+}
+
+.c0 button {
+  padding: 0;
+  border-radius: 4px;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c0 a {
+  font-family: system-ui;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 a:focus:active,
+.c0 button:focus:active {
+  outline: 0;
+}
+
+.c0 .component-child {
+  height: 40px;
+}
+
+.c0 .primary {
+  -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
+  transition: box-shadow 0.2s ease,background-color 0.2s ease;
+  width: 230px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  background-color: #04d4bf;
+  border: 0;
+}
+
+.c0 .primary i {
+  font-size: 1.5em;
+}
+
+.c0 .primary:hover {
+  -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
+  transition: box-shadow 0.2s ease,background-color 0.2s ease;
+  background-color: #00BFAC;
+  box-shadow: 0 4px 8px 0 rgba(0,160,144,0.4);
+}
+
+.c0 .primary:active {
+  -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
+  transition: box-shadow 0.2s ease,background-color 0.2s ease;
+  background-color: #28dbc9;
+  box-shadow: 0 2px 4px 0 rgba(0,160,144,0.2);
+}
+
+.c0 .primary:disabled {
+  background-color: #E0E0E0;
+  box-shadow: none;
+}
+
+.c0 .secondary {
+  -webkit-transition: color 0.2s ease,background-color 0.2s ease;
+  transition: color 0.2s ease,background-color 0.2s ease;
+  width: 230px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: #FFFFFF;
+  border: solid 1px #E0E0E0;
+  color: #353F41;
+}
+
+.c0 .secondary i {
+  font-size: 1.4em;
+}
+
+.c0 .secondary:hover {
+  -webkit-transition: color 0.2s ease,border-color 0.2s ease;
+  transition: color 0.2s ease,border-color 0.2s ease;
+  color: #03D4BF;
+  border-color: #03D4BF;
+}
+
+.c0 .secondary:active {
+  -webkit-transition: color 0.2s ease,border-color 0.2s ease;
+  transition: color 0.2s ease,border-color 0.2s ease;
+  color: #03D4BF;
+  border-color: #03D4BF;
+}
+
+.c0 .secondary:disabled {
+  border-color: #BFBFBF;
+  color: #BFBFBF;
+  box-shadow: none;
+}
+
+<div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="c0"
+      height="basic"
+    >
+      <button
+        className=" secondary"
+        disabled={false}
+        id={null}
+        onClick={[Function]}
+        style={Object {}}
+        type="button"
+      >
+        <div
+          className="component-child"
+        >
+          Call to Action
+        </div>
+      </button>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": 12,
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
 exports[`Storyshots Button secondary with height large 1`] = `
 Array [
   .c0 .component-child {

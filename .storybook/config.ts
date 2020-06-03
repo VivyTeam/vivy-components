@@ -1,4 +1,3 @@
-import React from "react";
 import { addDecorator, configure, addParameters } from "@storybook/react";
 import { create } from "@storybook/theming";
 import { withGlobalStyles } from "./customDecorators";
@@ -22,8 +21,9 @@ addParameters({
 function loadStories() {
   // put welcome screen at the top of the list so it's the first one displayed
   require("../stories/Welcome");
-  // automatically import all story js files that end with *.stories.js
-  const req = require.context("../stories", true, /\.story\.jsx$/);
+  // automatically import all story files
+  const req = require.context("../stories", true, /\.story\.(tsx|jsx)$/);
+
   req.keys().forEach((filename) => req(filename));
 }
 

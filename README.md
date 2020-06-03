@@ -63,7 +63,7 @@ All tasks are ran using [Circle CI](https://circleci.com/gh/VivyTeam/) whenever 
 1.  run the command
 
 ```
-npm run build:storybook -- --branch={{branch-name}}
+npm run storybook:publish -- --branch={{branch-name}}
 ```
 
 2.  visit https://rawgit.com/VivyTeam/vivy-components/{{branch-name}}/

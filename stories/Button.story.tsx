@@ -1,27 +1,32 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Button, Icon } from "../src/index";
+import { Button, Icon, ButtonHeights } from "../src/index";
 
 storiesOf("Button", module)
   .add("primary", () => <Button>Call to Action</Button>)
   .add("primary height large", () => (
-    <Button height="lg">Call to Action</Button>
+    <Button height={ButtonHeights.HEIGHT_TYPE_LG}>Call to Action</Button>
   ))
   .add("primary with height small", () => (
-    <Button height="sm">Call to Action</Button>
+    <Button height={ButtonHeights.HEIGHT_TYPE_SM}>Call to Action</Button>
   ))
   .add("primary with custom width", () => (
     <Button style={{ width: 130 }}>Call to Action</Button>
   ))
   .add("primary disabled", () => <Button disabled>Call to Action</Button>)
   .add("secondary", () => <Button type="secondary">Call to Action</Button>)
+  .add("secondary with height basic", () => (
+    <Button height={ButtonHeights.HEIGHT_TYPE_BASIC} type="secondary">
+      Call to Action
+    </Button>
+  ))
   .add("secondary with height large", () => (
-    <Button height="lg" type="secondary">
+    <Button height={ButtonHeights.HEIGHT_TYPE_LG} type="secondary">
       Call to Action
     </Button>
   ))
   .add("secondary with height small", () => (
-    <Button height="sm" type="secondary">
+    <Button height={ButtonHeights.HEIGHT_TYPE_SM} type="secondary">
       Call to Action
     </Button>
   ))
