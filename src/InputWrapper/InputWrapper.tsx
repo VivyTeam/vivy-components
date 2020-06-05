@@ -1,17 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { FC } from "react";
 import Styles from "./inputWrapper.style";
 import Icon from "../Icon/index";
 import classNames from "../utils/classNames";
 
-export default function InputWrapper({
+type InputWrapperProps = {
+  id: string;
+  label?: string;
+  optional?: boolean;
+  iconName?: string;
+  error?: string;
+};
+
+const InputWrapper: FC<InputWrapperProps> = ({
   children,
   id,
-  label,
-  optional,
-  iconName,
-  error,
-}) {
+  label = "",
+  optional = false,
+  iconName = "",
+  error = "",
+}) => {
   const invalid = classNames(["invalid", error]);
 
   return (
@@ -20,7 +27,7 @@ export default function InputWrapper({
         {label}
         {optional ? <span className="optional">*optional</span> : null}
       </span>
-      {/* eslint-disable-next-line */}
+      {/* eslint-disable-next-line jsx-a11y/label-has-for */}
       <label htmlFor={id} id={id} className={invalid}>
         {iconName ? (
           <div className="icon-left">
@@ -32,20 +39,6 @@ export default function InputWrapper({
       </label>
     </Styles>
   );
-}
-
-InputWrapper.propTypes = {
-  children: PropTypes.node.isRequired,
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  optional: PropTypes.bool,
-  iconName: PropTypes.string,
-  error: PropTypes.string,
 };
 
-InputWrapper.defaultProps = {
-  label: "",
-  optional: false,
-  iconName: "",
-  error: "",
-};
+export default InputWrapper;

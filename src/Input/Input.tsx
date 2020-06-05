@@ -1,24 +1,38 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { FC, createRef, ChangeEvent, LegacyRef } from "react";
 import InputWrapper from "../InputWrapper";
 import { ValidationContext } from "../Forms/Validation";
 import classNames from "../utils/classNames";
 import formData from "../utils/formData";
 
-export default function Input({
+type InputProps = {
+  id: string;
+  name?: string;
+  type?: string;
+  placeholder?: string;
+  label?: string;
+  defaultValue?: string;
+  iconName?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  validateOnChange?: boolean;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  validateOnBlur?: boolean;
+  rel?: LegacyRef<HTMLInputElement>;
+};
+
+const Input: FC<InputProps> = ({
   id,
-  label,
-  type,
-  placeholder,
-  name,
-  iconName,
-  defaultValue,
-  rel,
-  onChange,
-  validateOnChange,
-  onBlur,
-  validateOnBlur,
-}) {
+  label = "",
+  type = "",
+  placeholder = "",
+  name = "default",
+  iconName = "",
+  defaultValue = "",
+  rel = createRef(),
+  onChange = (_e: ChangeEvent<HTMLInputElement>) => {},
+  validateOnChange = true,
+  onBlur = () => {},
+  validateOnBlur = true,
+}) => {
   const padding = classNames(["icon-padding", iconName]);
 
   return (
@@ -34,15 +48,16 @@ export default function Input({
             ref={rel}
             onChange={(e) => {
               if (validateOnChange) {
-                validate(formData(e.target.form || {}), e.target.id);
+                validate(formData(e.target.form), e.target.id);
               } else {
                 cleanField(e.target.id);
               }
+
               onChange(e);
             }}
             onBlur={(e) => {
               if (validateOnBlur) {
-                validate(formData(e.target.form || {}), e.target.id);
+                validate(formData(e.target.form), e.target.id);
               }
               onBlur(e);
             }}
@@ -52,33 +67,6 @@ export default function Input({
       )}
     </ValidationContext.Consumer>
   );
-}
-
-Input.propTypes = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  type: PropTypes.string,
-  placeholder: PropTypes.string,
-  label: PropTypes.string,
-  defaultValue: PropTypes.string,
-  iconName: PropTypes.string,
-  onChange: PropTypes.func,
-  validateOnChange: PropTypes.bool,
-  onBlur: PropTypes.func,
-  validateOnBlur: PropTypes.bool,
-  rel: PropTypes.shape({}),
 };
 
-Input.defaultProps = {
-  type: "",
-  name: "default",
-  placeholder: "",
-  label: "",
-  defaultValue: "",
-  iconName: "",
-  onChange: () => {},
-  validateOnChange: true,
-  onBlur: () => {},
-  validateOnBlur: true,
-  rel: React.createRef(),
-};
+export default Input;
