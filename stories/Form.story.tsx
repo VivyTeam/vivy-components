@@ -1,5 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { Rules } from "async-validator";
+
 import {
   Button,
   Checkbox,
@@ -12,7 +14,7 @@ import {
   InputMasked,
 } from "../src";
 
-const rules = {
+const rules: Rules = {
   name: [
     { type: "string", required: true, message: "Username is required" },
     {

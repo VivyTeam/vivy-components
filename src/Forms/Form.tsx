@@ -3,8 +3,8 @@ import { ValidationContext, FieldsObject } from "./Validation";
 import formData from "../utils/formData";
 
 type FormProps = {
-  select: (value: string) => void;
-  submit: (fields: FieldsObject, event: FormEvent<HTMLFormElement>) => void;
+  select?: (value: string) => void;
+  submit?: (fields: FieldsObject, event: FormEvent<HTMLFormElement>) => void;
 };
 
 const Form: FC<FormProps> = ({
