@@ -55,7 +55,7 @@ class InputPassword extends Component {
                 className={padding}
                 onChange={(e) => {
                   if (validateOnChange) {
-                    validate(formData(e.target.form || {}), e.target.id);
+                    validate(formData(e.target.form), e.target.id);
                   } else {
                     cleanField(e.target.id);
                   }
@@ -63,7 +63,7 @@ class InputPassword extends Component {
                 }}
                 onBlur={(e) => {
                   if (validateOnBlur) {
-                    validate(formData(e.target.form || {}), e.target.id);
+                    validate(formData(e.target.form), e.target.id);
                   }
                   onBlur(e);
                 }}

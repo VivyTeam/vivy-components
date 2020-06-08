@@ -34,7 +34,7 @@ export default function InputMasked({
             maskChar={maskChar}
             onChange={(e) => {
               if (validateOnChange) {
-                validate(formData(e.target.form || {}), e.target.id);
+                validate(formData(e.target.form), e.target.id);
               } else {
                 cleanField(e.target.id);
               }
@@ -42,7 +42,7 @@ export default function InputMasked({
             }}
             onBlur={(e) => {
               if (validateOnBlur) {
-                validate(formData(e.target.form || {}), e.target.id);
+                validate(formData(e.target.form), e.target.id);
               }
               onBlur(e);
             }}

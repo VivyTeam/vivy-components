@@ -1,14 +1,22 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { ValidationContext } from "./Validation";
+import React, { FC, FormEvent } from "react";
+import { ValidationContext, FieldsObject } from "./Validation";
 import formData from "../utils/formData";
 
-export default function Form({ children, select, submit }) {
-  const formSubmit = (e, validation) => {
+type FormProps = {
+  select: (value: string) => void;
+  submit: (fields: FieldsObject, event: FormEvent<HTMLFormElement>) => void;
+};
+
+const Form: FC<FormProps> = ({
+  children,
+  select = () => {},
+  submit = () => {},
+}) => {
+  const formSubmit = (e: FormEvent<HTMLFormElement>, validation) => {
     if (e && e.preventDefault) {
       e.preventDefault();
     }
-    const fields = formData(e.target.elements);
+    const fields = formData((e.target as HTMLFormElement).elements);
 
     if (!validation || !validation(fields)) {
       submit(fields, e);
@@ -19,7 +27,7 @@ export default function Form({ children, select, submit }) {
     <ValidationContext.Consumer>
       {({ validate }) => (
         <form
-          onChange={(e) => select(e.target.value)}
+          onChange={(e) => select((e.target as HTMLFormElement).value)}
           onSubmit={(e) => formSubmit(e, validate)}
         >
           {children}
@@ -27,15 +35,6 @@ export default function Form({ children, select, submit }) {
       )}
     </ValidationContext.Consumer>
   );
-}
-
-Form.propTypes = {
-  children: PropTypes.node.isRequired,
-  select: PropTypes.func,
-  submit: PropTypes.func,
 };
 
-Form.defaultProps = {
-  select: () => {},
-  submit: () => {},
-};
+export default Form;

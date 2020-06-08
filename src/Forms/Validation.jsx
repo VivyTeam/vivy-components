@@ -1,23 +1,35 @@
-import React, { createContext, Component } from "react";
-import Schema from "async-validator";
-import PropTypes from "prop-types";
+import React, { createContext, useState, FC } from "react";
+import Schema, { Rules } from "async-validator";
+
+export type FieldsObject = { [key: string]: unknown };
+
+export type Validator = (
+  fields: FieldsObject,
+  rulesOrID: Rules | string
+) => boolean;
+
+const validateFn: Validator = (_fields, _rulesOrID) => false;
 
 const DEFAULT_STATE = {
-  errors: {},
-  validate: () => {},
-  cleanField: () => {},
+  errors: {} as { [key: string]: string },
+  validate: validateFn,
+  cleanField: (_inputId: string) => {},
 };
 
 export const ValidationContext = createContext(DEFAULT_STATE);
 
-export default class Validation extends Component {
-  state = DEFAULT_STATE;
+type ValidationProps = {
+  rules: Rules;
+};
 
-  validate = (fields, rules) => {
+const Validation: FC<ValidationProps> = ({ children, rules }) => {
+  const [errors, setErrors] = useState({});
+
+  const validateRules = (fields: FieldsObject) => {
     const schema = new Schema(rules);
     let validation = {};
 
-    schema.validate(fields, (validateErr) => {
+    schema.validate(fields, undefined, (validateErr) => {
       if (validateErr) {
         validation = validateErr.reduce(
           (prev, error) => ({ ...prev, [error.field]: error.message }),
@@ -29,53 +41,42 @@ export default class Validation extends Component {
     return validation;
   };
 
-  validateForm = (fields, input) => {
-    const { rules } = this.props;
-    const { errors } = this.state;
-    const validation = this.validate(fields, rules);
+  const validateForm = (fields: FieldsObject, input?: string) => {
+    const validation = validateRules(fields);
     const inputErrors = input ? { [input]: validation[input] } : validation;
     const allErrors = { ...errors, ...inputErrors };
     const hasErrors = Object.keys(allErrors).some(
       (message) => allErrors[message]
     );
 
-    this.setState({ errors: allErrors });
+    setErrors(allErrors);
 
     return hasErrors;
   };
 
-  cleanField = (input) => {
-    const { errors } = this.state;
-    const cleanError = input && { [input]: "" };
+  const cleanField = (inputId: string) => {
+    const cleanError = inputId && { [inputId]: "" };
     const allErrors = { ...errors, ...cleanError };
     const hasErrors = Object.keys(allErrors).some(
       (message) => allErrors[message]
     );
 
-    this.setState({ errors: allErrors });
+    setErrors(allErrors);
 
     return hasErrors;
   };
 
-  render() {
-    const { children } = this.props;
-    const { errors } = this.state;
-
-    return (
-      <ValidationContext.Provider
-        value={{
-          validate: this.validateForm,
-          cleanField: this.cleanField,
-          errors,
-        }}
-      >
-        {children}
-      </ValidationContext.Provider>
-    );
-  }
-}
-
-Validation.propTypes = {
-  children: PropTypes.node.isRequired,
-  rules: PropTypes.shape({}).isRequired,
+  return (
+    <ValidationContext.Provider
+      value={{
+        validate: validateForm,
+        cleanField,
+        errors,
+      }}
+    >
+      {children}
+    </ValidationContext.Provider>
+  );
 };
+
+export default Validation;

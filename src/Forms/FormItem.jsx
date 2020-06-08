@@ -1,10 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { FC } from "react";
 
-export default function FormItem({ children }) {
+const FormItem: FC = ({ children }) => {
   return <div className="form-item">{children}</div>;
-}
-
-FormItem.propTypes = {
-  children: PropTypes.node.isRequired,
 };
+
+export default FormItem;
