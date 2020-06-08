@@ -4,13 +4,15 @@ import Schema, { Rules } from "async-validator";
 export type FieldsObject = { [key: string]: unknown };
 
 type Validator = (fields: FieldsObject, rulesOrID: Rules | string) => boolean;
+type FieldCleaner = (inputId: string) => void;
 
-const validateFn: Validator = (_fields, _rulesOrID) => false;
+const defaultValidate: Validator = () => false;
+const defaultCleanField: FieldCleaner = () => {};
 
 const DEFAULT_STATE = {
   errors: {} as { [key: string]: string },
-  validate: validateFn,
-  cleanField: (_inputId: string) => {},
+  validate: defaultValidate,
+  cleanField: defaultCleanField,
 };
 
 export const ValidationContext = createContext(DEFAULT_STATE);
