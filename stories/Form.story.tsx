@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Rules } from "async-validator";
+import { ValidationRules } from "../src/Forms/Validation";
 
 import {
   Button,
@@ -14,7 +14,7 @@ import {
   InputMasked,
 } from "../src";
 
-const rules: Rules = {
+const rules: ValidationRules = {
   name: [
     { type: "string", required: true, message: "Username is required" },
     {

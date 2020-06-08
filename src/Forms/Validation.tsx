@@ -17,6 +17,7 @@ const DEFAULT_STATE = {
 };
 
 export const ValidationContext = createContext(DEFAULT_STATE);
+export type ValidationRules = Rules;
 
 type ValidationProps = {
   rules: Rules;
