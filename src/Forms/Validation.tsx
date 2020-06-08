@@ -3,10 +3,7 @@ import Schema, { Rules } from "async-validator";
 
 export type FieldsObject = { [key: string]: unknown };
 
-export type Validator = (
-  fields: FieldsObject,
-  rulesOrID: Rules | string
-) => boolean;
+type Validator = (fields: FieldsObject, rulesOrID: Rules | string) => boolean;
 
 const validateFn: Validator = (_fields, _rulesOrID) => false;
 
