@@ -54,7 +54,7 @@
     "@storybook/addon-storyshots-puppeteer": "^5.2.1",
     "@storybook/addons": "^5.3.19",
     "@storybook/react": "^5.3.19",
-    "@storybook/storybook-deployer": "^2.8.5",
+    "@storybook/storybook-deployer": "^2.8.6",
     "@storybook/theming": "^5.3.18",
     "@types/styled-components": "^5.1.0",
     "@vivy/eslint-config": "1.0.3",
