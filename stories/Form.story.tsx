@@ -124,7 +124,6 @@ storiesOf("Form", module)
               id="lastName"
               placeholder="Please add your last name"
               label="Last name"
-              optional
             />
             <Button style={{ marginTop: "4vh" }} htmlType="submit">
               Submit
@@ -156,7 +155,6 @@ storiesOf("Form", module)
                 id="lastName"
                 placeholder="Please add your last name"
                 label="Last name"
-                optional
               />
               <InputMasked
                 mask="****–****–****–****"
