@@ -1,5 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { ValidationRules } from "../src/Forms/Validation";
+
 import {
   Button,
   Checkbox,
@@ -12,7 +14,7 @@ import {
   InputMasked,
 } from "../src";
 
-const rules = {
+const rules: ValidationRules = {
   name: [
     { type: "string", required: true, message: "Username is required" },
     {
