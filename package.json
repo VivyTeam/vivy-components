@@ -22,6 +22,7 @@
     "storybook:build": "build-storybook -s public",
     "build:package": "tsc --project tsconfig.types.json --emitDeclarationOnly && babel --delete-dir-on-start --extensions .ts,.tsx,.js,.jsx ./src --out-dir ./dist",
     "test": "npm run build:package && jest",
+    "test:update": "jest --updateSnapshot",
     "test:dist": "npm run build:package && node tests/dist.test.js",
     "test:watch": "npm run test -- --watchAll"
   },
@@ -72,12 +73,12 @@
     "prettier": "^2.0.5",
     "react-scripts": "^3.3.0",
     "react-test-renderer": "16.13.1",
-    "styled-components": "^4.3.2",
+    "styled-components": "^4.4.1",
     "surge": "^0.21.3",
     "ts-loader": "^7.0.5"
   },
   "peerDependencies": {
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.4.1"
   },
   "jest": {
     "projects": [
