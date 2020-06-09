@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "..";
+import Colors from "../Colors";
 
 const TextareaStyles = styled.div`
   label {

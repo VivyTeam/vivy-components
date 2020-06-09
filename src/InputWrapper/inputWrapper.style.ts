@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "..";
+import Colors from "../Colors";
 
 const InputStyles = styled.div`
   position: relative;
