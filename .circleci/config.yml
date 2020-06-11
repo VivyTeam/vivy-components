@@ -38,7 +38,7 @@ jobs:
       - run: npm run linter:check
       - run:
           name: Tests
-          no_output_timeout: 15m # a workaround until we make it faster later
+          no_output_timeout: 25m # a workaround until we make it faster later
           command: npm test
 
       # Allow us to see failed storyshot diff files in the circle CI artifacts UI
