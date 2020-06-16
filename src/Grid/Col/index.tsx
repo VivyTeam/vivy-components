@@ -16,13 +16,13 @@ type ColProps = {
 const Col: FC<ColProps> = ({
   children,
   lg = 12,
-  md = null,
-  sm = null,
-  xs = null,
+  md,
+  sm,
+  xs,
   offset = 0,
-  offsetMd = null,
-  offsetSm = null,
-  offsetXs = null,
+  offsetMd,
+  offsetSm,
+  offsetXs,
   style = {},
 }) => {
   const column = classNames(
