@@ -11,6 +11,7 @@ type ColProps = {
   offsetSm?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
   offsetXs?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
   style?: CSSProperties;
+  center?: boolean;
 };
 
 const Col: FC<ColProps> = ({
