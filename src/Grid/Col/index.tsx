@@ -1,8 +1,7 @@
-import React, { FC, CSSProperties, ReactNode } from "react";
+import React, { FC, CSSProperties } from "react";
 import classNames from "../../utils/classNames";
 
 type ColProps = {
-  children?: ReactNode;
   lg?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | "hide";
   md?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | "hide";
   sm?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | "hide";
