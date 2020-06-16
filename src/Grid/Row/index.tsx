@@ -3,7 +3,6 @@ import Styles from "./index.style";
 import classNames from "../../utils/classNames";
 
 type RowProps = {
-  children: ReactNode;
   style?: CSSProperties;
   space?: "normal" | "around" | "between" | "evenly";
   position?: "start" | "center" | "end";
