@@ -18,6 +18,7 @@ type RowProps = {
   reverse?: boolean;
   column?: boolean;
   fullWidth?: boolean;
+  stretched?: boolean;
 };
 
 const Row: FC<RowProps> = ({

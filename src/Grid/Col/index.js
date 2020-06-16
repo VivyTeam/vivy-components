@@ -42,6 +42,7 @@ Col.propTypes = {
   md: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
   sm: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
   xs: PropTypes.oneOf([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "hide"]),
+  center: PropTypes.bool,
 };
 
 Col.defaultProps = {
@@ -54,4 +55,5 @@ Col.defaultProps = {
   md: null,
   sm: null,
   xs: null,
+  center: null,
 };
