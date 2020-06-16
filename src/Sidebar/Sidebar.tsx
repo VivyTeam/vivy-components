@@ -1,5 +1,4 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { FC, ReactNode } from "react";
 import { Row, Col, Icon } from "../index";
 import {
   SidebarStyles,
@@ -8,12 +7,43 @@ import {
   SidebarHeaderStyles,
 } from "./sidebar.style";
 
-const renderableChildrenPropType = PropTypes.oneOfType([
-  PropTypes.arrayOf(PropTypes.node),
-  PropTypes.node,
-]);
+type LinkProps = {
+  iconName: string;
+  active?: boolean;
+  href: string;
+  children?: ReactNode;
+};
 
-const Link = ({ iconName, active, href, children }) => {
+type HeaderProps = {
+  logoUrl?: string;
+  logoAltText?: string;
+  href?: string;
+  children?: ReactNode;
+};
+
+type SideBarProps = {
+  children: ReactNode;
+};
+
+interface LinkFC<T> extends React.FC<T> {
+  displayName: string;
+}
+
+interface HeaderFC<T> extends React.FC<T> {
+  displayName: string;
+}
+
+interface SideBarFC<Link, Header, Sidebar> extends React.FC<Sidebar> {
+  Link: LinkFC<Link>;
+  Header: HeaderFC<Header>;
+}
+
+const Link: LinkFC<LinkProps> = ({
+  iconName,
+  active = false,
+  href,
+  children,
+}) => {
   return (
     <LinkStyles active={active}>
       <a href={href}>
@@ -26,18 +56,14 @@ const Link = ({ iconName, active, href, children }) => {
     </LinkStyles>
   );
 };
-Link.propTypes = {
-  iconName: PropTypes.string.isRequired,
-  active: PropTypes.bool,
-  href: PropTypes.string.isRequired,
-  children: renderableChildrenPropType.isRequired,
-};
-Link.defaultProps = {
-  active: false,
-};
 Link.displayName = "Sidebar.Link";
 
-const Header = ({ logoUrl, logoAltText, href, children }) => (
+const Header: HeaderFC<HeaderProps> = ({
+  logoUrl,
+  logoAltText,
+  href,
+  children,
+}) => (
   <SidebarHeaderStyles>
     <a href={href}>
       <Row verticalAlign="middle">
@@ -47,23 +73,16 @@ const Header = ({ logoUrl, logoAltText, href, children }) => (
     </a>
   </SidebarHeaderStyles>
 );
-Header.propTypes = {
-  logoUrl: PropTypes.string.isRequired,
-  logoAltText: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  children: renderableChildrenPropType.isRequired,
-};
 Header.displayName = "Sidebar.Header";
 
-const Sidebar = ({ children }) => {
+const Sidebar: SideBarFC<LinkProps, HeaderProps, SideBarProps> = ({
+  children,
+}) => {
   return (
     <SidebarStyles>
       <Col>{children}</Col>
     </SidebarStyles>
   );
-};
-Sidebar.propTypes = {
-  children: renderableChildrenPropType.isRequired,
 };
 
 Sidebar.Header = Header;
