@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "linter:fix": "prettier --write '{,!(node_modules|.git|storybook-static)/**/}*.{js,json,jsx,md}'",
-    "linter:check": "eslint 'src/**/*.{tsx, jsx}' && eslint stories/*.jsx",
+    "linter:check": "eslint 'src/**/*.{tsx, jsx, ts, js}' && eslint stories/*.jsx",
     "serve": "start-storybook -p 3006 -s ./public",
     "storybook:publish": "storybook-to-ghpages",
     "storybook:build": "build-storybook -s public",
