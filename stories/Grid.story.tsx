@@ -389,7 +389,7 @@ storiesOf("Grid", module)
   )
   .add("nested rows", () => (
     <Row position="center">
-      <Col center lg={10}>
+      <Col lg={10}>
         <BoxWhite>
           <Row position="center">
             <Col lg={1}>
