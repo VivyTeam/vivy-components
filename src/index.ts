@@ -1,6 +1,8 @@
 export { default as Colors } from "./Colors";
 export { NotifyContainer, notify } from "./Notify";
+// eslint-disable-next-line import/no-cycle
 export { default as Alert } from "./Alerts/Alert";
+// eslint-disable-next-line import/no-cycle
 export { default as AlertSmall } from "./Alerts/AlertSmall";
 export { default as Button, ButtonHeights } from "./Buttons/Button";
 export { default as AnchorButton } from "./Buttons/AnchorButton";
@@ -16,6 +18,7 @@ export { default as Checkbox } from "./Checkbox";
 export { default as Form } from "./Forms";
 export { default as FormItem } from "./Forms/FormItem";
 export { default as Modal } from "./Modal";
+// eslint-disable-next-line import/no-cycle
 export { default as Sidebar } from "./Sidebar/Sidebar";
 export { default as SimpleLoader } from "./SimpleLoader";
 export { default as Table } from "./Table";
