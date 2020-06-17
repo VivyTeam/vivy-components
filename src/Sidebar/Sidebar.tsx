@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { Row, Col, Icon } from "../index";
 import {
   SidebarStyles,
