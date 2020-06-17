@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { Row, Col, Icon } from "../index";
 import {
   SidebarStyles,
@@ -11,18 +11,12 @@ type LinkProps = {
   iconName: string;
   active?: boolean;
   href: string;
-  children?: ReactNode;
 };
 
 type HeaderProps = {
-  logoUrl?: string;
-  logoAltText?: string;
-  href?: string;
-  children?: ReactNode;
-};
-
-type SideBarProps = {
-  children: ReactNode;
+  logoUrl: string;
+  logoAltText: string;
+  href: string;
 };
 
 interface LinkFC<T> extends React.FC<T> {
@@ -33,7 +27,7 @@ interface HeaderFC<T> extends React.FC<T> {
   displayName: string;
 }
 
-interface SideBarFC<Link, Header, Sidebar> extends React.FC<Sidebar> {
+interface SideBarFC<Link, Header> extends React.FC {
   Link: LinkFC<Link>;
   Header: HeaderFC<Header>;
 }
@@ -75,9 +69,7 @@ const Header: HeaderFC<HeaderProps> = ({
 );
 Header.displayName = "Sidebar.Header";
 
-const Sidebar: SideBarFC<LinkProps, HeaderProps, SideBarProps> = ({
-  children,
-}) => {
+const Sidebar: SideBarFC<LinkProps, HeaderProps> = ({ children }) => {
   return (
     <SidebarStyles>
       <Col>{children}</Col>
