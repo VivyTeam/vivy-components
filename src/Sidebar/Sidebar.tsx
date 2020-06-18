@@ -13,26 +13,7 @@ type LinkProps = {
   href: string;
 };
 
-type HeaderProps = {
-  logoUrl: string;
-  logoAltText: string;
-  href: string;
-};
-
-interface LinkFC<T> extends React.FC<T> {
-  displayName: string;
-}
-
-interface HeaderFC<T> extends React.FC<T> {
-  displayName: string;
-}
-
-interface SideBarFC<Link, Header> extends React.FC {
-  Link: LinkFC<Link>;
-  Header: HeaderFC<Header>;
-}
-
-const Link: LinkFC<LinkProps> = ({
+const Link: React.FC<LinkProps> = ({
   iconName,
   active = false,
   href,
@@ -52,7 +33,13 @@ const Link: LinkFC<LinkProps> = ({
 };
 Link.displayName = "Sidebar.Link";
 
-const Header: HeaderFC<HeaderProps> = ({
+type HeaderProps = {
+  logoUrl: string;
+  logoAltText: string;
+  href: string;
+};
+
+const Header: React.FC<HeaderProps> = ({
   logoUrl,
   logoAltText,
   href,
@@ -69,7 +56,11 @@ const Header: HeaderFC<HeaderProps> = ({
 );
 Header.displayName = "Sidebar.Header";
 
-const Sidebar: SideBarFC<LinkProps, HeaderProps> = ({ children }) => {
+interface SideBarSubComponents {
+  Link: React.FC<LinkProps>;
+  Header: React.FC<HeaderProps>;
+}
+const Sidebar: React.FC & SideBarSubComponents = ({ children }) => {
   return (
     <SidebarStyles>
       <Col>{children}</Col>

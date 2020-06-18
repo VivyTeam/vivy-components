@@ -2,10 +2,6 @@ import styled, { css } from "styled-components";
 import { hexToRGBA } from "../Colors";
 import { Colors } from "..";
 
-interface ActiveProps {
-  active: boolean;
-}
-
 export const SidebarStyles = styled.div`
   background-color: ${Colors.textPrimary};
   line-height: 1.38;
@@ -35,7 +31,7 @@ export const SidebarHeaderStyles = styled.div`
   }
 `;
 
-export const LinkStyles = styled.div<ActiveProps>`
+export const LinkStyles = styled.div<{ active: boolean }>`
   height: 48px;
 
   i {
@@ -49,7 +45,7 @@ export const LinkStyles = styled.div<ActiveProps>`
     `}
 `;
 
-export const ActiveIndicator = styled.div<ActiveProps>`
+export const ActiveIndicator = styled.div<{ active: boolean }>`
   width: 6px;
   margin-right: -6px;
   height: 100%;
