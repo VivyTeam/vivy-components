@@ -8,4 +8,5 @@ storiesOf("Textarea", module)
   .add("required", () => <Textarea required label="Mandatory" />)
   .add("with style", () => (
     <Textarea style={{ height: 500 }} label="With some style" />
-  ));
+  ))
+  .add("with value", () => <Textarea value="With some value" />);

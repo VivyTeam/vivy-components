@@ -5,6 +5,7 @@ type TextareaProps = {
   onInput?: () => {};
   placeholder?: string;
   label?: string;
+  value?: string;
   required?: boolean;
   disabled?: boolean;
   style?: {};
@@ -12,6 +13,7 @@ type TextareaProps = {
 
 const Textarea: FC<TextareaProps> = ({
   label = "",
+  value = "",
   required = false,
   placeholder = "",
   onInput = () => {},
@@ -23,6 +25,7 @@ const Textarea: FC<TextareaProps> = ({
       {label}
       {required ? <span className="required">(required)</span> : null}
       <textarea
+        value={value}
         disabled={disabled}
         onInput={onInput}
         placeholder={placeholder}
