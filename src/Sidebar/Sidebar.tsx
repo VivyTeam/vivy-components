@@ -1,5 +1,8 @@
 import React from "react";
-import { Row, Col, Icon } from "../index";
+import Row from "../Grid/Row";
+import Col from "../Grid/Col";
+import Icon from "../Icon";
+
 import {
   SidebarStyles,
   LinkStyles,
