@@ -31,7 +31,7 @@ export const SidebarHeaderStyles = styled.div`
   }
 `;
 
-export const LinkStyles = styled.div`
+export const LinkStyles = styled.div<{ active: boolean }>`
   height: 48px;
 
   i {
@@ -45,7 +45,7 @@ export const LinkStyles = styled.div`
     `}
 `;
 
-export const ActiveIndicator = styled.div`
+export const ActiveIndicator = styled.div<{ active: boolean }>`
   width: 6px;
   margin-right: -6px;
   height: 100%;

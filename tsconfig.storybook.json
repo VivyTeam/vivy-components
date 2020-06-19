@@ -5,6 +5,6 @@
     "skipLibCheck": true,
     "preserveConstEnums": true
   },
-  "include": ["stories/*", "src/**/*"],
+  "include": ["stories/*", "src/**/*", "definitions.d.ts"],
   "exclude": ["node_modules"]
 }

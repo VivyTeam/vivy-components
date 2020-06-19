@@ -1,4 +1,4 @@
-import React, { FC, CSSProperties, ReactNode } from "react";
+import React, { FC, CSSProperties } from "react";
 import Styles from "./index.style";
 import classNames from "../../utils/classNames";
 
