@@ -1,1 +1,1 @@
-export { default } from "./fonts.style";
+export { default, ShadowStylesFonts } from "./fonts.style";

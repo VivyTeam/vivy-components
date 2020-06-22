@@ -1,2 +1,1 @@
-export { default } from "./global.style";
-export { GlobalShadowStylesWrapper } from "./global.style";
+export { default, ShadowStylesGlobal } from "./global.style";
