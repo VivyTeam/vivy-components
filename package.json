@@ -22,7 +22,7 @@
     "storybook:build": "build-storybook -s public",
     "build:package": "babel --delete-dir-on-start --extensions .ts,.tsx,.js,.jsx ./src --out-dir ./dist && tsc --project tsconfig.types.json --emitDeclarationOnly",
     "test": "npm run build:package && jest",
-    "test:update": "jest --updateSnapshot",
+    "test:update": "npm run build:package && npm run storybook:build && jest --updateSnapshot",
     "test:dist": "npm run build:package && node tests/dist.test.js",
     "test:watch": "npm run test -- --watchAll"
   },
