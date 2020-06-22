@@ -36,95 +36,97 @@ import vivyIconsTtf from "../../public/fonts/vivy-icons/vivy-icons.ttf";
 import vivyIconsSvg from "../../public/fonts/vivy-icons/vivy-icons.svg";
 
 const DefaultFont = css`
-  font-family: 'Norms', sans-serif;
-`
+  font-family: "Norms", sans-serif;
+`;
 
 // CSS Attributes which normally being inherited from html/body should
 // aren't used in ShadowDom. It's encapsulation prevents a natural inheritance.
-// All attributes which are also global in Web Components should be 
+// All attributes which are also global in Web Components should be
 // added to the Shadow Styles
 export const ShadowStylesFonts = css`
-  input, textarea {
+  input,
+  textarea {
+    ${DefaultFont}
+  }
+`;
+
+const Fonts = createGlobalStyle`
+  @font-face {
+    font-family: 'Norms';
+    font-weight: 700;
+    font-style: normal;
+    src: url(${ie9Compat00}); /* IE9 Compat Modes */
+    src: url(${woff200}) format('woff2'), /* Super Modern Browsers */
+          url(${woff00}) format('woff'), /* Pretty Modern Browsers */
+          url(${tt00})  format('truetype'),
+          url(${svg00}) format('svg'); /* Legacy iOS */
+  }
+  @font-face {
+    font-family: 'Norms';
+    font-weight: 400;
+    font-style: italic;
+    src: url(${ie9Compat10}); /* IE9 Compat Modes */
+    src: url(${woff210}) format('woff2'), /* Super Modern Browsers */
+          url(${woff10}) format('woff'), /* Pretty Modern Browsers */
+          url(${tt10})  format('truetype'),
+          url(${svg10}) format('svg'); /* Legacy iOS */
+  }
+  @font-face {
+    font-family: 'Norms';
+    font-weight: 300;
+    font-style: normal;
+    src: url(${ie9Compat20}); /* IE9 Compat Modes */
+    src: url(${woff220}) format('woff2'), /* Super Modern Browsers */
+          url(${woff20}) format('woff'), /* Pretty Modern Browsers */
+          url(${tt20})  format('truetype'),
+          url(${svg20}) format('svg'); /* Legacy iOS */
+  }
+  @font-face {
+    font-family: 'Norms';
+    font-weight: 500;
+    font-style: normal;
+    src: url(${ie9Compat30}); /* IE9 Compat Modes */
+    src: url(${woff230}) format('woff2'), /* Super Modern Browsers */
+          url(${woff30}) format('woff'), /* Pretty Modern Browsers */
+          url(${tt30})  format('truetype'),
+          url(${svg30}) format('svg'); /* Legacy iOS */
+  }
+  @font-face {
+    font-family: 'Norms';
+    font-weight: 300;
+    font-style: normal;
+    src: url(${ie9Compat40}); /* IE9 Compat Modes */
+    src: url(${woff240}) format('woff2'), /* Super Modern Browsers */
+          url(${woff40}) format('woff'), /* Pretty Modern Browsers */
+          url(${tt40})  format('truetype'),
+          url(${svg40}) format('svg'); /* Legacy iOS */
+  }
+  @font-face {
+    font-family: 'Norms';
+    font-weight: 400;
+    font-style: normal;
+    src: url(${ie9Compat50}); /* IE9 Compat Modes */
+    src: url(${woff250}) format('woff2'), /* Super Modern Browsers */
+          url(${woff50}) format('woff'), /* Pretty Modern Browsers */
+          url(${tt50})  format('truetype'),
+          url(${svg50}) format('svg'); /* Legacy iOS */
+  }
+  @font-face {
+    font-family: 'vivy-icons';
+    src: url(${vivyIconsEot});
+    src: url(${vivyIconsWoff2}) format('woff2'),          
+          url(${vivyIconsWoff}) format('woff'),
+          url(${vivyIconsTtf}) format('truetype'),
+          url(${vivyIconsSvg}) format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
     ${DefaultFont}
   }
 
-  @font-face {
-      font-family: 'Norms';
-      font-weight: 700;
-      font-style: normal;
-      src: url(${ie9Compat00}); /* IE9 Compat Modes */
-      src: url(${woff200}) format('woff2'), /* Super Modern Browsers */
-           url(${woff00}) format('woff'), /* Pretty Modern Browsers */
-           url(${tt00})  format('truetype'),
-           url(${svg00}) format('svg'); /* Legacy iOS */
-    }
-    @font-face {
-      font-family: 'Norms';
-      font-weight: 400;
-      font-style: italic;
-      src: url(${ie9Compat10}); /* IE9 Compat Modes */
-      src: url(${woff210}) format('woff2'), /* Super Modern Browsers */
-           url(${woff10}) format('woff'), /* Pretty Modern Browsers */
-           url(${tt10})  format('truetype'),
-           url(${svg10}) format('svg'); /* Legacy iOS */
-    }
-    @font-face {
-      font-family: 'Norms';
-      font-weight: 300;
-      font-style: normal;
-      src: url(${ie9Compat20}); /* IE9 Compat Modes */
-      src: url(${woff220}) format('woff2'), /* Super Modern Browsers */
-           url(${woff20}) format('woff'), /* Pretty Modern Browsers */
-           url(${tt20})  format('truetype'),
-           url(${svg20}) format('svg'); /* Legacy iOS */
-    }
-    @font-face {
-      font-family: 'Norms';
-      font-weight: 500;
-      font-style: normal;
-      src: url(${ie9Compat30}); /* IE9 Compat Modes */
-      src: url(${woff230}) format('woff2'), /* Super Modern Browsers */
-           url(${woff30}) format('woff'), /* Pretty Modern Browsers */
-           url(${tt30})  format('truetype'),
-           url(${svg30}) format('svg'); /* Legacy iOS */
-    }
-    @font-face {
-      font-family: 'Norms';
-      font-weight: 300;
-      font-style: normal;
-      src: url(${ie9Compat40}); /* IE9 Compat Modes */
-      src: url(${woff240}) format('woff2'), /* Super Modern Browsers */
-           url(${woff40}) format('woff'), /* Pretty Modern Browsers */
-           url(${tt40})  format('truetype'),
-           url(${svg40}) format('svg'); /* Legacy iOS */
-    }
-    @font-face {
-      font-family: 'Norms';
-      font-weight: 400;
-      font-style: normal;
-      src: url(${ie9Compat50}); /* IE9 Compat Modes */
-      src: url(${woff250}) format('woff2'), /* Super Modern Browsers */
-           url(${woff50}) format('woff'), /* Pretty Modern Browsers */
-           url(${tt50})  format('truetype'),
-           url(${svg50}) format('svg'); /* Legacy iOS */
-    }
-    @font-face {
-      font-family: 'vivy-icons';
-      src: url(${vivyIconsEot});
-      src: url(${vivyIconsWoff2}) format('woff2'),          
-           url(${vivyIconsWoff}) format('woff'),
-           url(${vivyIconsTtf}) format('truetype'),
-           url(${vivyIconsSvg}) format('svg');
-      font-weight: normal;
-      font-style: normal;
-    }
-`
-
-const Fonts = createGlobalStyle`
-    body {
-      ${DefaultFont}
-    }
-    ${ShadowStylesFonts}
+  ${ShadowStylesFonts}
 `;
 
 export default Fonts;
