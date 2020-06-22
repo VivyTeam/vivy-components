@@ -1,8 +1,16 @@
+import path from "path";
+import fs from "fs";
 import devices from "puppeteer/DeviceDescriptors";
 
 export function getStorybookUrl() {
+  let location = path.join(__dirname, "..", "storybook-static");
 
-  return "http://localhost:3006";
+  if (fs.existsSync(location)) {
+    location = `file://${location}`;
+  } else {
+    location = "http://localhost:3006";
+  }
+  return location;
 }
 
 export const failureThreshold = () => ({
