@@ -3,10 +3,32 @@ import { storiesOf } from "@storybook/react";
 import { Textarea } from "../src/index";
 
 storiesOf("Textarea", module)
-  .add("basic", () => <Textarea label="Default" />)
-  .add("disabled", () => <Textarea disabled label="Disabled" />)
-  .add("required", () => <Textarea required label="Mandatory" />)
-  .add("with style", () => (
-    <Textarea style={{ height: 500 }} label="With some style" />
+  .add("basic", () => <Textarea id="textarea" label="Default" />)
+  .add("disabled", () => <Textarea id="textarea" disabled label="Disabled" />)
+  .add("Mandatory", () => (
+    <Textarea id="textarea" optional={false} label="Mandatory" />
   ))
-  .add("with value", () => <Textarea value="With some value" />);
+  .add("with style", () => (
+    <Textarea id="textarea" style={{ height: 500 }} label="With some style" />
+  ))
+  .add("with default value", () => (
+    <Textarea id="textarea" defaultValue="With some value" />
+  ))
+  .add("with onBlur", () => (
+    <Textarea
+      id="textarea"
+      onBlur={(_e) => {
+        // eslint-disable-next-line no-console
+        console.log("Blur!");
+      }}
+    />
+  ))
+  .add("with onChange", () => (
+    <Textarea
+      id="textarea"
+      onChange={(_e) => {
+        // eslint-disable-next-line no-console
+        console.log(_e.target.value);
+      }}
+    />
+  ));
