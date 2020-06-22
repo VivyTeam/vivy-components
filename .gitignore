@@ -13,8 +13,8 @@
 /public/dist/*.js.map
 
 # dist files
-/dist/*
-/storybook-static/*
+/dist
+/storybook-static
 
 # misc
 .DS_Store
@@ -31,3 +31,5 @@ yarn-error.log*
 
 # Editor specific
 .idea/
+.history
+.vscode
