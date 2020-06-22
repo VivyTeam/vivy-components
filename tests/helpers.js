@@ -3,6 +3,7 @@ import devices from "puppeteer/DeviceDescriptors";
 
 export function getStorybookUrl() {
   const location = path.join(__dirname, "..", "storybook-static");
+  console.log({ location });
 
   return `file://${location}`;
 }
