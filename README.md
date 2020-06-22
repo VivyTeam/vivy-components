@@ -10,7 +10,7 @@ To get started just install the package via npm's registry:
 
 or
 
-`yarn install @vivy/vivy-components`
+`yarn add @vivy/vivy-components`
 
 ## Contributing to the project (designers and devs)
 
