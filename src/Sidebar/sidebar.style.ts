@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
-import { hexToRGBA } from "../Colors";
-import { Colors } from "..";
+import Colors, { hexToRGBA } from "../Colors";
 
 export const SidebarStyles = styled.div`
   background-color: ${Colors.textPrimary};

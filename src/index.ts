@@ -18,7 +18,6 @@ export { default as Checkbox } from "./Checkbox";
 export { default as Form } from "./Forms";
 export { default as FormItem } from "./Forms/FormItem";
 export { default as Modal } from "./Modal";
-// eslint-disable-next-line import/no-cycle
 export { default as Sidebar } from "./Sidebar/Sidebar";
 export { default as SimpleLoader } from "./SimpleLoader";
 export { default as Table } from "./Table";
