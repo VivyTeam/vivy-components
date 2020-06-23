@@ -1,5 +1,5 @@
 import { createGlobalStyle, css } from "styled-components";
-import { Colors } from "..";
+import Colors from "../Colors";
 
 // CSS Attributes which normally being inherited from html/body should
 // aren't used in ShadowDom. It's encapsulation prevents a natural inheritance.
