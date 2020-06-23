@@ -1,5 +1,5 @@
 import path from "path";
-import devices from "puppeteer/DeviceDescriptors";
+import { devices } from "puppeteer";
 
 export function getStorybookUrl() {
   const location = path.join(__dirname, "..", "storybook-static");
