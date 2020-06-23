@@ -17,6 +17,7 @@ const TextareaStyles = styled.div`
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
+    color: #353f41;
     padding: 0px 16px;
     margin: 16px 0px -6px 0px;
     width: 100%;
