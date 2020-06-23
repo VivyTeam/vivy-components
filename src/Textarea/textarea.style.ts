@@ -17,21 +17,18 @@ const TextareaStyles = styled.div`
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    color: #898988;
-    width: 100%;
+    padding: 8px;
+    margin: 4px;
+    width: 95%;
     min-height: 70px;
     max-height: 15em;
     background-color: #ffffff;
-    border: solid 1px #cdcdcd;
+    border: none;
     resize: vertical;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
 
   textarea:focus {
     outline: none;
-    box-shadow: 0 0 0 1px rgba(4, 212, 191, 0.2);
-    border-color: #04d4bf;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
 
   textarea::placeholder {

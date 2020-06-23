@@ -12,11 +12,16 @@ storiesOf("Textarea", module)
     <Textarea id="textarea" style={{ height: 500 }} label="With some style" />
   ))
   .add("with default value", () => (
-    <Textarea id="textarea" defaultValue="With some value" />
+    <Textarea
+      id="textarea"
+      defaultValue="With some value"
+      label="With Default Value"
+    />
   ))
   .add("with onBlur", () => (
     <Textarea
       id="textarea"
+      label="With onBlur"
       onBlur={(_e) => {
         // eslint-disable-next-line no-console
         console.log("Blur!");
@@ -26,6 +31,7 @@ storiesOf("Textarea", module)
   .add("with onChange", () => (
     <Textarea
       id="textarea"
+      label="With onChange"
       onChange={(_e) => {
         // eslint-disable-next-line no-console
         console.log(_e.target.value);
