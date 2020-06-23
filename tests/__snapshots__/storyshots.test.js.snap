@@ -20418,7 +20418,7 @@ Array [
 
 exports[`Storyshots Form with validation 1`] = `
 Array [
-  .c4 .component-child {
+  .c5 .component-child {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20438,12 +20438,12 @@ Array [
   line-height: 1em;
 }
 
-.c4 button:disabled,
-.c4 button:disabled .component-child {
+.c5 button:disabled,
+.c5 button:disabled .component-child {
   cursor: not-allowed !important;
 }
 
-.c4 button {
+.c5 button {
   padding: 0;
   border-radius: 4px;
   display: block;
@@ -20452,7 +20452,7 @@ Array [
   cursor: pointer;
 }
 
-.c4 a {
+.c5 a {
   font-family: system-ui;
   border-radius: 4px;
   display: inline-block;
@@ -20461,16 +20461,16 @@ Array [
   text-decoration: none;
 }
 
-.c4 a:focus:active,
-.c4 button:focus:active {
+.c5 a:focus:active,
+.c5 button:focus:active {
   outline: 0;
 }
 
-.c4 .component-child {
+.c5 .component-child {
   height: 40px;
 }
 
-.c4 .primary {
+.c5 .primary {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -20481,30 +20481,30 @@ Array [
   border: 0;
 }
 
-.c4 .primary i {
+.c5 .primary i {
   font-size: 1.5em;
 }
 
-.c4 .primary:hover {
+.c5 .primary:hover {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #00BFAC;
   box-shadow: 0 4px 8px 0 rgba(0,160,144,0.4);
 }
 
-.c4 .primary:active {
+.c5 .primary:active {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #28dbc9;
   box-shadow: 0 2px 4px 0 rgba(0,160,144,0.2);
 }
 
-.c4 .primary:disabled {
+.c5 .primary:disabled {
   background-color: #E0E0E0;
   box-shadow: none;
 }
 
-.c4 .secondary {
+.c5 .secondary {
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;
   transition: color 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -20515,28 +20515,83 @@ Array [
   color: #353F41;
 }
 
-.c4 .secondary i {
+.c5 .secondary i {
   font-size: 1.4em;
 }
 
-.c4 .secondary:hover {
+.c5 .secondary:hover {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c4 .secondary:active {
+.c5 .secondary:active {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c4 .secondary:disabled {
+.c5 .secondary:disabled {
   border-color: #BFBFBF;
   color: #BFBFBF;
   box-shadow: none;
+}
+
+.c3 label {
+  color: #575756;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-letter-spacing: 0.3px;
+  -moz-letter-spacing: 0.3px;
+  -ms-letter-spacing: 0.3px;
+  letter-spacing: 0.3px;
+  line-height: 2.5;
+}
+
+.c3 textarea {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #353f41;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
+  width: 100%;
+  min-height: 70px;
+  max-height: 15em;
+  background-color: #ffffff;
+  border: none;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.c3 textarea:focus {
+  outline: none;
+}
+
+.c3 textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c3 textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c3 textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c3 textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.c3 .required {
+  padding-left: 10px;
+  color: #E63644;
 }
 
 .c1 {
@@ -20760,7 +20815,7 @@ Array [
   margin-right: 54px;
 }
 
-.c3 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20771,7 +20826,7 @@ Array [
   align-items: center;
 }
 
-.c3 label {
+.c4 label {
   padding: 0;
   font-size: 24px;
   font-weight: normal;
@@ -20785,21 +20840,21 @@ Array [
   cursor: pointer;
 }
 
-.c3 input[type="checkbox"] {
+.c4 input[type="checkbox"] {
   display: none;
 }
 
-.c3 input[type="checkbox"] + label:after {
+.c4 input[type="checkbox"] + label:after {
   font-family: "vivy-icons";
   content: "\\e80f";
 }
 
-.c3 input[type="checkbox"]:checked + label:after {
+.c4 input[type="checkbox"]:checked + label:after {
   font-family: "vivy-icons";
   content: "\\e810";
 }
 
-.c3 .content {
+.c4 .content {
   font-size: 16px;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
@@ -20808,7 +20863,7 @@ Array [
   letter-spacing: normal;
 }
 
-.c3 .optional {
+.c4 .optional {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.29;
@@ -20821,7 +20876,7 @@ Array [
   padding-bottom: 14px;
 }
 
-.c3 .error-feedback {
+.c4 .error-feedback {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.29;
@@ -21957,7 +22012,39 @@ Array [
               </label>
             </div>
             <div
-              className="c3"
+              className="c1"
+            >
+              <span
+                className="label"
+              >
+                Bio
+              </span>
+              <label
+                className=""
+                htmlFor="bio"
+                id="bio"
+              >
+                <div
+                  className="input-border"
+                >
+                  <div
+                    className="c3"
+                  >
+                    <textarea
+                      disabled={false}
+                      id="bio"
+                      name=""
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="Please add your Bio..."
+                      style={Object {}}
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="c4"
             >
               <input
                 id="terms"
@@ -21979,7 +22066,7 @@ Array [
               </div>
             </div>
             <div
-              className="c3"
+              className="c4"
             >
               <input
                 id="newsletter"
@@ -22006,7 +22093,7 @@ Array [
               </span>
             </div>
             <div
-              className="c4"
+              className="c5"
               height="basic"
             >
               <button
@@ -22057,7 +22144,7 @@ Array [
 
 exports[`Storyshots Form without validation 1`] = `
 Array [
-  .c2 .component-child {
+  .c3 .component-child {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22077,12 +22164,12 @@ Array [
   line-height: 1em;
 }
 
-.c2 button:disabled,
-.c2 button:disabled .component-child {
+.c3 button:disabled,
+.c3 button:disabled .component-child {
   cursor: not-allowed !important;
 }
 
-.c2 button {
+.c3 button {
   padding: 0;
   border-radius: 4px;
   display: block;
@@ -22091,7 +22178,7 @@ Array [
   cursor: pointer;
 }
 
-.c2 a {
+.c3 a {
   font-family: system-ui;
   border-radius: 4px;
   display: inline-block;
@@ -22100,16 +22187,16 @@ Array [
   text-decoration: none;
 }
 
-.c2 a:focus:active,
-.c2 button:focus:active {
+.c3 a:focus:active,
+.c3 button:focus:active {
   outline: 0;
 }
 
-.c2 .component-child {
+.c3 .component-child {
   height: 40px;
 }
 
-.c2 .primary {
+.c3 .primary {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -22120,30 +22207,30 @@ Array [
   border: 0;
 }
 
-.c2 .primary i {
+.c3 .primary i {
   font-size: 1.5em;
 }
 
-.c2 .primary:hover {
+.c3 .primary:hover {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #00BFAC;
   box-shadow: 0 4px 8px 0 rgba(0,160,144,0.4);
 }
 
-.c2 .primary:active {
+.c3 .primary:active {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #28dbc9;
   box-shadow: 0 2px 4px 0 rgba(0,160,144,0.2);
 }
 
-.c2 .primary:disabled {
+.c3 .primary:disabled {
   background-color: #E0E0E0;
   box-shadow: none;
 }
 
-.c2 .secondary {
+.c3 .secondary {
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;
   transition: color 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -22154,28 +22241,83 @@ Array [
   color: #353F41;
 }
 
-.c2 .secondary i {
+.c3 .secondary i {
   font-size: 1.4em;
 }
 
-.c2 .secondary:hover {
+.c3 .secondary:hover {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c2 .secondary:active {
+.c3 .secondary:active {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c2 .secondary:disabled {
+.c3 .secondary:disabled {
   border-color: #BFBFBF;
   color: #BFBFBF;
   box-shadow: none;
+}
+
+.c2 label {
+  color: #575756;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-letter-spacing: 0.3px;
+  -moz-letter-spacing: 0.3px;
+  -ms-letter-spacing: 0.3px;
+  letter-spacing: 0.3px;
+  line-height: 2.5;
+}
+
+.c2 textarea {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #353f41;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
+  width: 100%;
+  min-height: 70px;
+  max-height: 15em;
+  background-color: #ffffff;
+  border: none;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.c2 textarea:focus {
+  outline: none;
+}
+
+.c2 textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c2 textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c2 textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c2 textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.c2 .required {
+  padding-left: 10px;
+  color: #E63644;
 }
 
 .c1 {
@@ -23387,7 +23529,39 @@ Array [
               </label>
             </div>
             <div
-              className="c2"
+              className="c1"
+            >
+              <span
+                className="label"
+              >
+                Bio
+              </span>
+              <label
+                className=""
+                htmlFor="bio"
+                id="bio"
+              >
+                <div
+                  className="input-border"
+                >
+                  <div
+                    className="c2"
+                  >
+                    <textarea
+                      disabled={false}
+                      id="bio"
+                      name=""
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      placeholder="Please add your Bio..."
+                      style={Object {}}
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="c3"
               height="basic"
             >
               <button
@@ -78324,9 +78498,9 @@ Array [
 ]
 `;
 
-exports[`Storyshots Textarea basic 1`] = `
+exports[`Storyshots Textarea Mandatory 1`] = `
 Array [
-  .c0 label {
+  .c1 label {
   color: #575756;
   font-size: 16px;
   font-weight: 500;
@@ -78339,49 +78513,225 @@ Array [
   line-height: 2.5;
 }
 
-.c0 textarea {
+.c1 textarea {
   font-size: 18px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  color: #353f41;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
-.c0 textarea:focus {
+.c1 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
+}
+
+.c1 textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.c1 .required {
+  padding-left: 10px;
+  color: #E63644;
+}
+
+.c0 {
+  position: relative;
+  width: 100%;
+}
+
+.c0 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #353f41;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.38;
+}
+
+.c0 label.invalid input {
+  border-color: #E63644;
+  background-color: #FFE1E1;
+}
+
+.c0 .input-border {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 4px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+}
+
+.c0 .input-border:hover {
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.c0 .input-border:focus-within {
+  box-shadow: 0 0 0 2px rgba(4,212,191,0.2);
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 textarea::-webkit-input-placeholder {
+.c0 input {
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: normal;
+  color: #353f41;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  padding: 2px 16px;
+}
+
+.c0 input.masked-input {
+  font-family: monospace;
+}
+
+.c0 input.masked-input::-webkit-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::-moz-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input:-ms-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.icon-padding {
+  padding: 2px 16px 2px 54px;
+}
+
+.c0 input:focus {
+  outline: none;
+}
+
+.c0 input::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea::-moz-placeholder {
+.c0 input::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea::placeholder {
+.c0 input::placeholder {
   color: #bfbfbf;
 }
 
-.c0 .required {
-  padding-left: 10px;
+.c0 .error-feedback {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   color: #E63644;
+  margin-top: 4px;
+}
+
+.c0 .optional {
+  padding-left: 3px;
+  font-size: 14px;
+  line-height: 0.5;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #7b7b7b;
+}
+
+.c0 .label {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .icon-left {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #bfbfbf;
+  line-height: normal;
+  font-size: 24px;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 <div
@@ -78395,13 +78745,337 @@ Array [
     <div
       className="c0"
     >
-      Default
-      <textarea
-        disabled={false}
-        onInput={[Function]}
-        placeholder=""
-        style={Object {}}
-      />
+      <span
+        className="label"
+      >
+        Mandatory
+      </span>
+      <label
+        className=""
+        htmlFor="textarea"
+        id="textarea"
+      >
+        <div
+          className="input-border"
+        >
+          <div
+            className="c1"
+          >
+            <textarea
+              disabled={false}
+              id="textarea"
+              name=""
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=""
+              style={Object {}}
+            />
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": 12,
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots Textarea basic 1`] = `
+Array [
+  .c1 label {
+  color: #575756;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-letter-spacing: 0.3px;
+  -moz-letter-spacing: 0.3px;
+  -ms-letter-spacing: 0.3px;
+  letter-spacing: 0.3px;
+  line-height: 2.5;
+}
+
+.c1 textarea {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #353f41;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
+  width: 100%;
+  min-height: 70px;
+  max-height: 15em;
+  background-color: #ffffff;
+  border: none;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.c1 textarea:focus {
+  outline: none;
+}
+
+.c1 textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.c1 .required {
+  padding-left: 10px;
+  color: #E63644;
+}
+
+.c0 {
+  position: relative;
+  width: 100%;
+}
+
+.c0 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #353f41;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.38;
+}
+
+.c0 label.invalid input {
+  border-color: #E63644;
+  background-color: #FFE1E1;
+}
+
+.c0 .input-border {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 4px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+}
+
+.c0 .input-border:hover {
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.c0 .input-border:focus-within {
+  box-shadow: 0 0 0 2px rgba(4,212,191,0.2);
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+}
+
+.c0 input {
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: normal;
+  color: #353f41;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  padding: 2px 16px;
+}
+
+.c0 input.masked-input {
+  font-family: monospace;
+}
+
+.c0 input.masked-input::-webkit-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::-moz-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input:-ms-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.icon-padding {
+  padding: 2px 16px 2px 54px;
+}
+
+.c0 input:focus {
+  outline: none;
+}
+
+.c0 input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input::placeholder {
+  color: #bfbfbf;
+}
+
+.c0 .error-feedback {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #E63644;
+  margin-top: 4px;
+}
+
+.c0 .optional {
+  padding-left: 3px;
+  font-size: 14px;
+  line-height: 0.5;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #7b7b7b;
+}
+
+.c0 .label {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .icon-left {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #bfbfbf;
+  line-height: normal;
+  font-size: 24px;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="c0"
+    >
+      <span
+        className="label"
+      >
+        Default
+      </span>
+      <label
+        className=""
+        htmlFor="textarea"
+        id="textarea"
+      >
+        <div
+          className="input-border"
+        >
+          <div
+            className="c1"
+          >
+            <textarea
+              disabled={false}
+              id="textarea"
+              name=""
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=""
+              style={Object {}}
+            />
+          </div>
+        </div>
+      </label>
     </div>
   </div>,
   <button
@@ -78432,7 +79106,7 @@ Array [
 
 exports[`Storyshots Textarea disabled 1`] = `
 Array [
-  .c0 label {
+  .c1 label {
   color: #575756;
   font-size: 16px;
   font-weight: 500;
@@ -78445,49 +79119,225 @@ Array [
   line-height: 2.5;
 }
 
-.c0 textarea {
+.c1 textarea {
   font-size: 18px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  color: #353f41;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
-.c0 textarea:focus {
+.c1 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
+}
+
+.c1 textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.c1 .required {
+  padding-left: 10px;
+  color: #E63644;
+}
+
+.c0 {
+  position: relative;
+  width: 100%;
+}
+
+.c0 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #353f41;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.38;
+}
+
+.c0 label.invalid input {
+  border-color: #E63644;
+  background-color: #FFE1E1;
+}
+
+.c0 .input-border {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 4px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+}
+
+.c0 .input-border:hover {
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.c0 .input-border:focus-within {
+  box-shadow: 0 0 0 2px rgba(4,212,191,0.2);
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 textarea::-webkit-input-placeholder {
+.c0 input {
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: normal;
+  color: #353f41;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  padding: 2px 16px;
+}
+
+.c0 input.masked-input {
+  font-family: monospace;
+}
+
+.c0 input.masked-input::-webkit-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::-moz-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input:-ms-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.icon-padding {
+  padding: 2px 16px 2px 54px;
+}
+
+.c0 input:focus {
+  outline: none;
+}
+
+.c0 input::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea::-moz-placeholder {
+.c0 input::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea::placeholder {
+.c0 input::placeholder {
   color: #bfbfbf;
 }
 
-.c0 .required {
-  padding-left: 10px;
+.c0 .error-feedback {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   color: #E63644;
+  margin-top: 4px;
+}
+
+.c0 .optional {
+  padding-left: 3px;
+  font-size: 14px;
+  line-height: 0.5;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #7b7b7b;
+}
+
+.c0 .label {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .icon-left {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #bfbfbf;
+  line-height: normal;
+  font-size: 24px;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 <div
@@ -78501,13 +79351,34 @@ Array [
     <div
       className="c0"
     >
-      Disabled
-      <textarea
-        disabled={true}
-        onInput={[Function]}
-        placeholder=""
-        style={Object {}}
-      />
+      <span
+        className="label"
+      >
+        Disabled
+      </span>
+      <label
+        className=""
+        htmlFor="textarea"
+        id="textarea"
+      >
+        <div
+          className="input-border"
+        >
+          <div
+            className="c1"
+          >
+            <textarea
+              disabled={true}
+              id="textarea"
+              name=""
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=""
+              style={Object {}}
+            />
+          </div>
+        </div>
+      </label>
     </div>
   </div>,
   <button
@@ -78536,9 +79407,9 @@ Array [
 ]
 `;
 
-exports[`Storyshots Textarea required 1`] = `
+exports[`Storyshots Textarea with default value 1`] = `
 Array [
-  .c0 label {
+  .c1 label {
   color: #575756;
   font-size: 16px;
   font-weight: 500;
@@ -78551,49 +79422,225 @@ Array [
   line-height: 2.5;
 }
 
-.c0 textarea {
+.c1 textarea {
   font-size: 18px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  color: #353f41;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
-.c0 textarea:focus {
+.c1 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
+}
+
+.c1 textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.c1 .required {
+  padding-left: 10px;
+  color: #E63644;
+}
+
+.c0 {
+  position: relative;
+  width: 100%;
+}
+
+.c0 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #353f41;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.38;
+}
+
+.c0 label.invalid input {
+  border-color: #E63644;
+  background-color: #FFE1E1;
+}
+
+.c0 .input-border {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 4px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+}
+
+.c0 .input-border:hover {
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.c0 .input-border:focus-within {
+  box-shadow: 0 0 0 2px rgba(4,212,191,0.2);
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 textarea::-webkit-input-placeholder {
+.c0 input {
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: normal;
+  color: #353f41;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  padding: 2px 16px;
+}
+
+.c0 input.masked-input {
+  font-family: monospace;
+}
+
+.c0 input.masked-input::-webkit-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::-moz-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input:-ms-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.icon-padding {
+  padding: 2px 16px 2px 54px;
+}
+
+.c0 input:focus {
+  outline: none;
+}
+
+.c0 input::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea::-moz-placeholder {
+.c0 input::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea::placeholder {
+.c0 input::placeholder {
   color: #bfbfbf;
 }
 
-.c0 .required {
-  padding-left: 10px;
+.c0 .error-feedback {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   color: #E63644;
+  margin-top: 4px;
+}
+
+.c0 .optional {
+  padding-left: 3px;
+  font-size: 14px;
+  line-height: 0.5;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #7b7b7b;
+}
+
+.c0 .label {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .icon-left {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #bfbfbf;
+  line-height: normal;
+  font-size: 24px;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 <div
@@ -78607,18 +79654,641 @@ Array [
     <div
       className="c0"
     >
-      Mandatory
       <span
-        className="required"
+        className="label"
       >
-        (required)
+        With Default Value
       </span>
-      <textarea
-        disabled={false}
-        onInput={[Function]}
-        placeholder=""
-        style={Object {}}
-      />
+      <label
+        className=""
+        htmlFor="textarea"
+        id="textarea"
+      >
+        <div
+          className="input-border"
+        >
+          <div
+            className="c1"
+          >
+            <textarea
+              disabled={false}
+              id="textarea"
+              name=""
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=""
+              style={Object {}}
+              value="Happy and well-informed employees are employees who are more likely to remain loyal to your organization. By giving them access to round-the-clock online training and self-paced learning modules, they can further their professional goals and feel motivated to improve their on-the-job performance. They can also pinpoint areas they may need to work on and find out their core strengths, so that they are able to become better employees and more informed advocates for your brand."
+            />
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": 12,
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots Textarea with onBlur 1`] = `
+Array [
+  .c1 label {
+  color: #575756;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-letter-spacing: 0.3px;
+  -moz-letter-spacing: 0.3px;
+  -ms-letter-spacing: 0.3px;
+  letter-spacing: 0.3px;
+  line-height: 2.5;
+}
+
+.c1 textarea {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #353f41;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
+  width: 100%;
+  min-height: 70px;
+  max-height: 15em;
+  background-color: #ffffff;
+  border: none;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.c1 textarea:focus {
+  outline: none;
+}
+
+.c1 textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.c1 .required {
+  padding-left: 10px;
+  color: #E63644;
+}
+
+.c0 {
+  position: relative;
+  width: 100%;
+}
+
+.c0 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #353f41;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.38;
+}
+
+.c0 label.invalid input {
+  border-color: #E63644;
+  background-color: #FFE1E1;
+}
+
+.c0 .input-border {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 4px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+}
+
+.c0 .input-border:hover {
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.c0 .input-border:focus-within {
+  box-shadow: 0 0 0 2px rgba(4,212,191,0.2);
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+}
+
+.c0 input {
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: normal;
+  color: #353f41;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  padding: 2px 16px;
+}
+
+.c0 input.masked-input {
+  font-family: monospace;
+}
+
+.c0 input.masked-input::-webkit-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::-moz-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input:-ms-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.icon-padding {
+  padding: 2px 16px 2px 54px;
+}
+
+.c0 input:focus {
+  outline: none;
+}
+
+.c0 input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input::placeholder {
+  color: #bfbfbf;
+}
+
+.c0 .error-feedback {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #E63644;
+  margin-top: 4px;
+}
+
+.c0 .optional {
+  padding-left: 3px;
+  font-size: 14px;
+  line-height: 0.5;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #7b7b7b;
+}
+
+.c0 .label {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .icon-left {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #bfbfbf;
+  line-height: normal;
+  font-size: 24px;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="c0"
+    >
+      <span
+        className="label"
+      >
+        With onBlur
+      </span>
+      <label
+        className=""
+        htmlFor="textarea"
+        id="textarea"
+      >
+        <div
+          className="input-border"
+        >
+          <div
+            className="c1"
+          >
+            <textarea
+              disabled={false}
+              id="textarea"
+              name=""
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=""
+              style={Object {}}
+            />
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": 12,
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots Textarea with onChange 1`] = `
+Array [
+  .c1 label {
+  color: #575756;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-letter-spacing: 0.3px;
+  -moz-letter-spacing: 0.3px;
+  -ms-letter-spacing: 0.3px;
+  letter-spacing: 0.3px;
+  line-height: 2.5;
+}
+
+.c1 textarea {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: #353f41;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
+  width: 100%;
+  min-height: 70px;
+  max-height: 15em;
+  background-color: #ffffff;
+  border: none;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.c1 textarea:focus {
+  outline: none;
+}
+
+.c1 textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.c1 .required {
+  padding-left: 10px;
+  color: #E63644;
+}
+
+.c0 {
+  position: relative;
+  width: 100%;
+}
+
+.c0 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #353f41;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.38;
+}
+
+.c0 label.invalid input {
+  border-color: #E63644;
+  background-color: #FFE1E1;
+}
+
+.c0 .input-border {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 4px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+}
+
+.c0 .input-border:hover {
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.c0 .input-border:focus-within {
+  box-shadow: 0 0 0 2px rgba(4,212,191,0.2);
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+}
+
+.c0 input {
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: normal;
+  color: #353f41;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  padding: 2px 16px;
+}
+
+.c0 input.masked-input {
+  font-family: monospace;
+}
+
+.c0 input.masked-input::-webkit-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::-moz-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input:-ms-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.icon-padding {
+  padding: 2px 16px 2px 54px;
+}
+
+.c0 input:focus {
+  outline: none;
+}
+
+.c0 input::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input::placeholder {
+  color: #bfbfbf;
+}
+
+.c0 .error-feedback {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #E63644;
+  margin-top: 4px;
+}
+
+.c0 .optional {
+  padding-left: 3px;
+  font-size: 14px;
+  line-height: 0.5;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #7b7b7b;
+}
+
+.c0 .label {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .icon-left {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #bfbfbf;
+  line-height: normal;
+  font-size: 24px;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="c0"
+    >
+      <span
+        className="label"
+      >
+        With onChange
+      </span>
+      <label
+        className=""
+        htmlFor="textarea"
+        id="textarea"
+      >
+        <div
+          className="input-border"
+        >
+          <div
+            className="c1"
+          >
+            <textarea
+              disabled={false}
+              id="textarea"
+              name=""
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=""
+              style={Object {}}
+            />
+          </div>
+        </div>
+      </label>
     </div>
   </div>,
   <button
@@ -78649,7 +80319,7 @@ Array [
 
 exports[`Storyshots Textarea with style 1`] = `
 Array [
-  .c0 label {
+  .c1 label {
   color: #575756;
   font-size: 16px;
   font-weight: 500;
@@ -78662,49 +80332,225 @@ Array [
   line-height: 2.5;
 }
 
-.c0 textarea {
+.c1 textarea {
   font-size: 18px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  color: #353f41;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
-.c0 textarea:focus {
+.c1 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
+}
+
+.c1 textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c1 textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.c1 .required {
+  padding-left: 10px;
+  color: #E63644;
+}
+
+.c0 {
+  position: relative;
+  width: 100%;
+}
+
+.c0 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #353f41;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.38;
+}
+
+.c0 label.invalid input {
+  border-color: #E63644;
+  background-color: #FFE1E1;
+}
+
+.c0 .input-border {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 4px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+}
+
+.c0 .input-border:hover {
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.c0 .input-border:focus-within {
+  box-shadow: 0 0 0 2px rgba(4,212,191,0.2);
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 textarea::-webkit-input-placeholder {
+.c0 input {
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: normal;
+  color: #353f41;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  padding: 2px 16px;
+}
+
+.c0 input.masked-input {
+  font-family: monospace;
+}
+
+.c0 input.masked-input::-webkit-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::-moz-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input:-ms-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.icon-padding {
+  padding: 2px 16px 2px 54px;
+}
+
+.c0 input:focus {
+  outline: none;
+}
+
+.c0 input::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea::-moz-placeholder {
+.c0 input::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 textarea::placeholder {
+.c0 input::placeholder {
   color: #bfbfbf;
 }
 
-.c0 .required {
-  padding-left: 10px;
+.c0 .error-feedback {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
   color: #E63644;
+  margin-top: 4px;
+}
+
+.c0 .optional {
+  padding-left: 3px;
+  font-size: 14px;
+  line-height: 0.5;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #7b7b7b;
+}
+
+.c0 .label {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .icon-left {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #bfbfbf;
+  line-height: normal;
+  font-size: 24px;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 <div
@@ -78718,17 +80564,38 @@ Array [
     <div
       className="c0"
     >
-      With some style
-      <textarea
-        disabled={false}
-        onInput={[Function]}
-        placeholder=""
-        style={
-          Object {
-            "height": 500,
-          }
-        }
-      />
+      <span
+        className="label"
+      >
+        With some style
+      </span>
+      <label
+        className=""
+        htmlFor="textarea"
+        id="textarea"
+      >
+        <div
+          className="input-border"
+        >
+          <div
+            className="c1"
+          >
+            <textarea
+              disabled={false}
+              id="textarea"
+              name=""
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder=""
+              style={
+                Object {
+                  "height": 500,
+                }
+              }
+            />
+          </div>
+        </div>
+      </label>
     </div>
   </div>,
   <button

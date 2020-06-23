@@ -12,6 +12,7 @@ import {
   Col,
   Validation,
   InputMasked,
+  Textarea,
 } from "../src";
 
 const rules: ValidationRules = {
@@ -40,6 +41,18 @@ const rules: ValidationRules = {
       type: "string",
       required: true,
       message: "Password is required",
+    },
+    {
+      type: "string",
+      min: 5,
+      message: "Minimum characters is 5",
+    },
+  ],
+  bio: [
+    {
+      type: "string",
+      required: true,
+      message: "Bio is required",
     },
     {
       type: "string",
@@ -125,6 +138,11 @@ storiesOf("Form", module)
               placeholder="Please add your last name"
               label="Last name"
             />
+            <Textarea
+              id="bio"
+              placeholder="Please add your Bio..."
+              label="Bio"
+            />
             <Button style={{ marginTop: "4vh" }} htmlType="submit">
               Submit
             </Button>
@@ -174,6 +192,11 @@ storiesOf("Form", module)
                 id="email"
                 placeholder="Please add your e-mail"
                 label="E-mail"
+              />
+              <Textarea
+                id="bio"
+                placeholder="Please add your Bio..."
+                label="Bio"
               />
 
               <Checkbox id="terms" name="Terms and Conditions">

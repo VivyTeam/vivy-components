@@ -1,34 +1,78 @@
-import React, { FC } from "react";
+import React, { FC, CSSProperties } from "react";
 import TextareaStyles from "./textarea.style";
+import InputWrapper from "../InputWrapper";
+import { ValidationContext } from "../Forms/Validation";
+import formData from "../utils/formData";
 
 type TextareaProps = {
-  onInput?: () => {};
+  id: string;
+  name?: string;
+  defaultValue?: string;
+  iconName?: string;
+  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  validateOnChange?: boolean;
+  onBlur?: (event: React.FocusEvent<HTMLTextAreaElement>) => void;
+  validateOnBlur?: boolean;
   placeholder?: string;
   label?: string;
-  required?: boolean;
+  optional?: boolean;
   disabled?: boolean;
-  style?: {};
+  style?: CSSProperties;
 };
 
 const Textarea: FC<TextareaProps> = ({
+  id = "",
+  name = "",
+  iconName = "",
+  onChange = (_e) => {},
+  validateOnChange = false,
+  onBlur = (_e) => {},
+  validateOnBlur = false,
   label = "",
-  required = false,
+  defaultValue,
+  optional = false,
   placeholder = "",
-  onInput = () => {},
   disabled = false,
   style = {},
 }) => {
   return (
-    <TextareaStyles>
-      {label}
-      {required ? <span className="required">(required)</span> : null}
-      <textarea
-        disabled={disabled}
-        onInput={onInput}
-        placeholder={placeholder}
-        style={style}
-      />
-    </TextareaStyles>
+    <ValidationContext.Consumer>
+      {({ validate, cleanField, errors: { [id]: error } }) => (
+        <InputWrapper
+          error={error}
+          id={id}
+          iconName={iconName}
+          label={label}
+          optional={optional}
+        >
+          <TextareaStyles>
+            <textarea
+              id={id}
+              name={name}
+              value={defaultValue}
+              disabled={disabled}
+              placeholder={placeholder}
+              style={style}
+              onChange={(e) => {
+                if (validateOnChange) {
+                  validate(formData(e.target.form), e.target.id);
+                } else {
+                  cleanField(e.target.id);
+                }
+
+                onChange(e);
+              }}
+              onBlur={(e) => {
+                if (validateOnBlur) {
+                  validate(formData(e.target.form), e.target.id);
+                }
+                onBlur(e);
+              }}
+            />
+          </TextareaStyles>
+        </InputWrapper>
+      )}
+    </ValidationContext.Consumer>
   );
 };
 
