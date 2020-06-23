@@ -1,4 +1,7 @@
 import { createGlobalStyle, css } from "styled-components";
+import DefaultFont from "./DefaultFont";
+import ShadowStylesFonts from "./ShadowStyleFonts";
+
 import ie9Compat00 from "../../public/fonts/TTNorms/35C396_0_0.eot";
 import woff200 from "../../public/fonts/TTNorms/35C396_0_0.woff2";
 import woff00 from "../../public/fonts/TTNorms/35C396_0_0.woff";
@@ -34,21 +37,6 @@ import vivyIconsWoff2 from "../../public/fonts/vivy-icons/vivy-icons.woff2";
 import vivyIconsWoff from "../../public/fonts/vivy-icons/vivy-icons.woff";
 import vivyIconsTtf from "../../public/fonts/vivy-icons/vivy-icons.ttf";
 import vivyIconsSvg from "../../public/fonts/vivy-icons/vivy-icons.svg";
-
-const DefaultFont = css`
-  font-family: "Norms", sans-serif;
-`;
-
-// CSS Attributes which normally being inherited from html/body should
-// aren't used in ShadowDom. It's encapsulation prevents a natural inheritance.
-// All attributes which are also global in Web Components should be
-// added to the Shadow Styles
-export const ShadowStylesFonts = css`
-  input,
-  textarea {
-    ${DefaultFont}
-  }
-`;
 
 const Fonts = createGlobalStyle`
   @font-face {
