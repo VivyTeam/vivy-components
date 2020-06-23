@@ -3,8 +3,8 @@ import { ShadowStylesGlobal } from "../GlobalStyles";
 import { ShadowStylesFonts } from "../Fonts";
 
 const ShadowStylesWrapper = styled.div`
-    ${ShadowStylesGlobal}
-    ${ShadowStylesFonts}
+  ${ShadowStylesGlobal}
+  ${ShadowStylesFonts}
 `;
 
 export default ShadowStylesWrapper;

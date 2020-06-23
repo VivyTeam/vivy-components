@@ -3,12 +3,12 @@ import { Colors } from "..";
 
 // CSS Attributes which normally being inherited from html/body should
 // aren't used in ShadowDom. It's encapsulation prevents a natural inheritance.
-// All attributes which are also global in Web Components should be 
+// All attributes which are also global in Web Components should be
 // added to the Shadow Styles
 export const ShadowStylesGlobal = css`
   font-size: 1.6rem;
   color: ${Colors.textPrimary};
-`
+`;
 
 const GlobalStyles = createGlobalStyle`
   html{
