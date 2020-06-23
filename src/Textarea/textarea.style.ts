@@ -17,14 +17,15 @@ const TextareaStyles = styled.div`
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    padding: 8px;
-    margin: 4px;
-    width: 95%;
+    padding: 0px 16px;
+    margin: 16px 0px -6px 0px;
+    width: 100%;
     min-height: 70px;
     max-height: 15em;
     background-color: #ffffff;
     border: none;
     resize: vertical;
+    box-sizing: border-box;
   }
 
   textarea:focus {

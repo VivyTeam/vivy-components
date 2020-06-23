@@ -20557,23 +20557,19 @@ Array [
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .c3 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
-  border-color: #04d4bf;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
 .c3 textarea::-webkit-input-placeholder {
@@ -22286,23 +22282,19 @@ Array [
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .c2 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
-  border-color: #04d4bf;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
 .c2 textarea::-webkit-input-placeholder {
@@ -78524,23 +78516,19 @@ Array [
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .c1 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
-  border-color: #04d4bf;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
 .c1 textarea::-webkit-input-placeholder {
@@ -78830,23 +78818,19 @@ Array [
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .c1 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
-  border-color: #04d4bf;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
 .c1 textarea::-webkit-input-placeholder {
@@ -79136,23 +79120,19 @@ Array [
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .c1 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
-  border-color: #04d4bf;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
 .c1 textarea::-webkit-input-placeholder {
@@ -79442,23 +79422,19 @@ Array [
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .c1 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
-  border-color: #04d4bf;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
 .c1 textarea::-webkit-input-placeholder {
@@ -79675,7 +79651,7 @@ Array [
       <span
         className="label"
       >
-        
+        With Default Value
       </span>
       <label
         className=""
@@ -79696,7 +79672,7 @@ Array [
               onChange={[Function]}
               placeholder=""
               style={Object {}}
-              value="With some value"
+              value="Happy and well-informed employees are employees who are more likely to remain loyal to your organization. By giving them access to round-the-clock online training and self-paced learning modules, they can further their professional goals and feel motivated to improve their on-the-job performance. They can also pinpoint areas they may need to work on and find out their core strengths, so that they are able to become better employees and more informed advocates for your brand."
             />
           </div>
         </div>
@@ -79749,23 +79725,19 @@ Array [
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .c1 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
-  border-color: #04d4bf;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
 .c1 textarea::-webkit-input-placeholder {
@@ -79982,7 +79954,7 @@ Array [
       <span
         className="label"
       >
-        
+        With onBlur
       </span>
       <label
         className=""
@@ -80055,23 +80027,19 @@ Array [
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .c1 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
-  border-color: #04d4bf;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
 .c1 textarea::-webkit-input-placeholder {
@@ -80288,7 +80256,7 @@ Array [
       <span
         className="label"
       >
-        
+        With onChange
       </span>
       <label
         className=""
@@ -80361,23 +80329,19 @@ Array [
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  color: #898988;
+  padding: 0px 16px;
+  margin: 16px 0px -6px 0px;
   width: 100%;
   min-height: 70px;
   max-height: 15em;
   background-color: #ffffff;
-  border: solid 1px #cdcdcd;
+  border: none;
   resize: vertical;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  box-sizing: border-box;
 }
 
 .c1 textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgba(4,212,191,0.2);
-  border-color: #04d4bf;
-  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
-  transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
 .c1 textarea::-webkit-input-placeholder {

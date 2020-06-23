@@ -14,7 +14,7 @@ storiesOf("Textarea", module)
   .add("with default value", () => (
     <Textarea
       id="textarea"
-      defaultValue="With some value"
+      defaultValue="Happy and well-informed employees are employees who are more likely to remain loyal to your organization. By giving them access to round-the-clock online training and self-paced learning modules, they can further their professional goals and feel motivated to improve their on-the-job performance. They can also pinpoint areas they may need to work on and find out their core strengths, so that they are able to become better employees and more informed advocates for your brand."
       label="With Default Value"
     />
   ))
