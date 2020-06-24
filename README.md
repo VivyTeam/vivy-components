@@ -27,7 +27,9 @@ focused in scope while avoiding unrelated commits and changes.
 - Push your branch `git push origin cool.new.feature`
 - Submit a [pull request](https://github.com/VivyTeam/vivy-components/pulls) and add details about your changes
 - Add a reviewer (or ask someone in person) to go over your changes
-- If all goes well click the "Squash and Merge" button to close your PR (make sure to clean up and delete your branch)
+- When the PR is approved click the "Squash and Merge" button to close your PR (make sure to clean up and delete your branch)
+- Create a new release by following previous releases format and pick a relevant version according to the change (patch, minor, major)
+- If all goes well you should receive an email from npm that the publish went ok
 - To see your changes live (in both the lib and storybook website) make a new release via github!
 
 ## Running story book locally
