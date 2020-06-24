@@ -78,7 +78,7 @@
     "ts-loader": "^7.0.5"
   },
   "peerDependencies": {
-    "styled-components": "^4.4.1"
+    "styled-components": "^5.1.0"
   },
   "jest": {
     "projects": [
