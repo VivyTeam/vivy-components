@@ -30,6 +30,7 @@ focused in scope while avoiding unrelated commits and changes.
 - When the PR is approved click the "Squash and Merge" button to close your PR (make sure to clean up and delete your branch)
 - Create a new release by following previous releases format and pick a relevant version according to the change (patch, minor, major)
 - If all goes well you should receive an email from npm that the publish went ok
+- When there is a problem you could check the pipeline: https://app.circleci.com/pipelines/github/VivyTeam/vivy-components?branch=master
 - To see your changes live (in both the lib and storybook website) make a new release via github!
 
 ## Running story book locally
