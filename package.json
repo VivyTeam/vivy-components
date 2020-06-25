@@ -33,7 +33,7 @@
     "i18next": "^17.0.16",
     "i18next-browser-languagedetector": "^3.0.3",
     "prop-types": "^15.7.2",
-    "puppeteer": "^4.0.0",
+    "puppeteer": "^4.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-focus-lock": "^2.4.0",
