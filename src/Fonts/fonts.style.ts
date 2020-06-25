@@ -113,8 +113,6 @@ const Fonts = createGlobalStyle`
   body {
     ${DefaultFont}
   }
-
-  ${ShadowStylesFonts}
 `;
 
 export default Fonts;

@@ -6,10 +6,7 @@ import DefaultFont from "./DefaultFont";
 // All attributes which are also global in Web Components should be
 // added to the Shadow Styles
 const ShadowStylesFonts = css`
-  input,
-  textarea {
-    ${DefaultFont}
-  }
+  ${DefaultFont}
 `;
 
 export default ShadowStylesFonts;
