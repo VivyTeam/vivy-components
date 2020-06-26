@@ -14,7 +14,8 @@ const InputStyles = styled.div`
     letter-spacing: normal;
     line-height: 1.38;
 
-    &.invalid input {
+    &.invalid input,
+    &.invalid textarea {
       border-color: ${Colors.destructive};
       background-color: ${Colors.destructiveDim};
     }
@@ -39,8 +40,8 @@ const InputStyles = styled.div`
     }
   }
 
-  input {
-    height: 48px;
+  input,
+  textarea {
     background-color: transparent;
     border: none;
     font-size: 18px;
@@ -68,6 +69,19 @@ const InputStyles = styled.div`
     &::placeholder {
       color: #bfbfbf;
     }
+  }
+
+  input {
+    height: 48px;
+  }
+
+  textarea {
+    box-sizing: border-box;
+    margin-bottom: -7px;
+    min-height: 70px;
+    resize: vertical;
+    width: 100%;
+    padding: 16px;
   }
 
   .error-feedback {
