@@ -44,6 +44,7 @@ const InputStyles = styled.div`
   textarea {
     background-color: transparent;
     border: none;
+    border-radius: 4px;
     font-size: 18px;
     font-weight: normal;
     color: #353f41;
@@ -77,7 +78,7 @@ const InputStyles = styled.div`
 
   textarea {
     box-sizing: border-box;
-    margin-bottom: -7px;
+    /* margin-bottom: -7px; */
     min-height: 70px;
     resize: vertical;
     width: 100%;
