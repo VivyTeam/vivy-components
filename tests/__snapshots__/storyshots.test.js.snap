@@ -79671,6 +79671,7 @@ Array [
             className="c1"
           >
             <textarea
+              defaultValue="Happy and well-informed employees are employees who are more likely to remain loyal to your organization. By giving them access to round-the-clock online training and self-paced learning modules, they can further their professional goals and feel motivated to improve their on-the-job performance. They can also pinpoint areas they may need to work on and find out their core strengths, so that they are able to become better employees and more informed advocates for your brand."
               disabled={false}
               id="textarea"
               name=""
@@ -79678,7 +79679,6 @@ Array [
               onChange={[Function]}
               placeholder=""
               style={Object {}}
-              value="Happy and well-informed employees are employees who are more likely to remain loyal to your organization. By giving them access to round-the-clock online training and self-paced learning modules, they can further their professional goals and feel motivated to improve their on-the-job performance. They can also pinpoint areas they may need to work on and find out their core strengths, so that they are able to become better employees and more informed advocates for your brand."
             />
           </div>
         </div>
