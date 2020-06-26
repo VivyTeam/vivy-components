@@ -49,7 +49,7 @@ const Textarea: FC<TextareaProps> = ({
             <textarea
               id={id}
               name={name}
-              value={defaultValue}
+              defaultValue={defaultValue}
               disabled={disabled}
               placeholder={placeholder}
               style={style}
