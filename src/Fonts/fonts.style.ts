@@ -1,6 +1,5 @@
-import { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import DefaultFont from "./DefaultFont";
-import ShadowStylesFonts from "./ShadowStyleFonts";
 
 import ie9Compat00 from "../../public/fonts/TTNorms/35C396_0_0.eot";
 import woff200 from "../../public/fonts/TTNorms/35C396_0_0.woff2";
