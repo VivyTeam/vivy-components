@@ -25,7 +25,7 @@ type LinkProps = {
   iconName: string;
   active?: boolean;
   href: string;
-  useEvents: boolean;
+  useEvents?: boolean;
 };
 
 const Link: React.FC<LinkProps> = ({
@@ -66,7 +66,7 @@ type HeaderProps = {
   logoUrl: string;
   logoAltText: string;
   href: string;
-  useEvents: boolean;
+  useEvents?: boolean;
 };
 
 const Header: React.FC<HeaderProps> = ({
