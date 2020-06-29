@@ -78,7 +78,6 @@ const InputStyles = styled.div`
 
   textarea {
     box-sizing: border-box;
-    /* margin-bottom: -7px; */
     min-height: 70px;
     resize: vertical;
     width: 100%;
