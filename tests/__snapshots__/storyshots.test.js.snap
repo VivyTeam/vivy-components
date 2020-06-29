@@ -17396,7 +17396,8 @@ Array [
   line-height: 1.38;
 }
 
-.c1 label.invalid input {
+.c1 label.invalid input,
+.c1 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -17427,10 +17428,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c1 input {
-  height: 48px;
+.c1 input,
+.c1 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -17439,48 +17441,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c1 input.masked-input {
+.c1 input.masked-input,
+.c1 textarea.masked-input {
   font-family: monospace;
 }
 
-.c1 input.masked-input::-webkit-input-placeholder {
+.c1 input.masked-input::-webkit-input-placeholder,
+.c1 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::-moz-placeholder {
+.c1 input.masked-input::-moz-placeholder,
+.c1 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input:-ms-input-placeholder {
+.c1 input.masked-input:-ms-input-placeholder,
+.c1 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::placeholder {
+.c1 input.masked-input::placeholder,
+.c1 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.icon-padding {
+.c1 input.icon-padding,
+.c1 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c1 input:focus {
+.c1 input:focus,
+.c1 textarea:focus {
   outline: none;
 }
 
-.c1 input::-webkit-input-placeholder {
+.c1 input::-webkit-input-placeholder,
+.c1 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::-moz-placeholder {
+.c1 input::-moz-placeholder,
+.c1 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input:-ms-input-placeholder {
+.c1 input:-ms-input-placeholder,
+.c1 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::placeholder {
+.c1 input::placeholder,
+.c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input {
+  height: 48px;
+}
+
+.c1 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c1 .error-feedback {
@@ -18979,7 +19004,8 @@ Array [
   line-height: 1.38;
 }
 
-.c1 label.invalid input {
+.c1 label.invalid input,
+.c1 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -19010,10 +19036,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c1 input {
-  height: 48px;
+.c1 input,
+.c1 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -19022,48 +19049,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c1 input.masked-input {
+.c1 input.masked-input,
+.c1 textarea.masked-input {
   font-family: monospace;
 }
 
-.c1 input.masked-input::-webkit-input-placeholder {
+.c1 input.masked-input::-webkit-input-placeholder,
+.c1 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::-moz-placeholder {
+.c1 input.masked-input::-moz-placeholder,
+.c1 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input:-ms-input-placeholder {
+.c1 input.masked-input:-ms-input-placeholder,
+.c1 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::placeholder {
+.c1 input.masked-input::placeholder,
+.c1 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.icon-padding {
+.c1 input.icon-padding,
+.c1 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c1 input:focus {
+.c1 input:focus,
+.c1 textarea:focus {
   outline: none;
 }
 
-.c1 input::-webkit-input-placeholder {
+.c1 input::-webkit-input-placeholder,
+.c1 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::-moz-placeholder {
+.c1 input::-moz-placeholder,
+.c1 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input:-ms-input-placeholder {
+.c1 input:-ms-input-placeholder,
+.c1 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::placeholder {
+.c1 input::placeholder,
+.c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input {
+  height: 48px;
+}
+
+.c1 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c1 .error-feedback {
@@ -20418,7 +20468,7 @@ Array [
 
 exports[`Storyshots Form with validation 1`] = `
 Array [
-  .c5 .component-child {
+  .c4 .component-child {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20438,12 +20488,12 @@ Array [
   line-height: 1em;
 }
 
-.c5 button:disabled,
-.c5 button:disabled .component-child {
+.c4 button:disabled,
+.c4 button:disabled .component-child {
   cursor: not-allowed !important;
 }
 
-.c5 button {
+.c4 button {
   padding: 0;
   border-radius: 4px;
   display: block;
@@ -20452,7 +20502,7 @@ Array [
   cursor: pointer;
 }
 
-.c5 a {
+.c4 a {
   font-family: system-ui;
   border-radius: 4px;
   display: inline-block;
@@ -20461,16 +20511,16 @@ Array [
   text-decoration: none;
 }
 
-.c5 a:focus:active,
-.c5 button:focus:active {
+.c4 a:focus:active,
+.c4 button:focus:active {
   outline: 0;
 }
 
-.c5 .component-child {
+.c4 .component-child {
   height: 40px;
 }
 
-.c5 .primary {
+.c4 .primary {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -20481,30 +20531,30 @@ Array [
   border: 0;
 }
 
-.c5 .primary i {
+.c4 .primary i {
   font-size: 1.5em;
 }
 
-.c5 .primary:hover {
+.c4 .primary:hover {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #00BFAC;
   box-shadow: 0 4px 8px 0 rgba(0,160,144,0.4);
 }
 
-.c5 .primary:active {
+.c4 .primary:active {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #28dbc9;
   box-shadow: 0 2px 4px 0 rgba(0,160,144,0.2);
 }
 
-.c5 .primary:disabled {
+.c4 .primary:disabled {
   background-color: #E0E0E0;
   box-shadow: none;
 }
 
-.c5 .secondary {
+.c4 .secondary {
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;
   transition: color 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -20515,83 +20565,28 @@ Array [
   color: #353F41;
 }
 
-.c5 .secondary i {
+.c4 .secondary i {
   font-size: 1.4em;
 }
 
-.c5 .secondary:hover {
+.c4 .secondary:hover {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c5 .secondary:active {
+.c4 .secondary:active {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c5 .secondary:disabled {
+.c4 .secondary:disabled {
   border-color: #BFBFBF;
   color: #BFBFBF;
   box-shadow: none;
-}
-
-.c3 label {
-  color: #575756;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: 0.3px;
-  -moz-letter-spacing: 0.3px;
-  -ms-letter-spacing: 0.3px;
-  letter-spacing: 0.3px;
-  line-height: 2.5;
-}
-
-.c3 textarea {
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  color: #353f41;
-  padding: 0px 16px;
-  margin: 16px 0px -6px 0px;
-  width: 100%;
-  min-height: 70px;
-  max-height: 15em;
-  background-color: #ffffff;
-  border: none;
-  resize: vertical;
-  box-sizing: border-box;
-}
-
-.c3 textarea:focus {
-  outline: none;
-}
-
-.c3 textarea::-webkit-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c3 textarea::-moz-placeholder {
-  color: #bfbfbf;
-}
-
-.c3 textarea:-ms-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c3 textarea::placeholder {
-  color: #bfbfbf;
-}
-
-.c3 .required {
-  padding-left: 10px;
-  color: #E63644;
 }
 
 .c1 {
@@ -20617,7 +20612,8 @@ Array [
   line-height: 1.38;
 }
 
-.c1 label.invalid input {
+.c1 label.invalid input,
+.c1 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -20648,10 +20644,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c1 input {
-  height: 48px;
+.c1 input,
+.c1 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -20660,48 +20657,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c1 input.masked-input {
+.c1 input.masked-input,
+.c1 textarea.masked-input {
   font-family: monospace;
 }
 
-.c1 input.masked-input::-webkit-input-placeholder {
+.c1 input.masked-input::-webkit-input-placeholder,
+.c1 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::-moz-placeholder {
+.c1 input.masked-input::-moz-placeholder,
+.c1 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input:-ms-input-placeholder {
+.c1 input.masked-input:-ms-input-placeholder,
+.c1 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::placeholder {
+.c1 input.masked-input::placeholder,
+.c1 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.icon-padding {
+.c1 input.icon-padding,
+.c1 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c1 input:focus {
+.c1 input:focus,
+.c1 textarea:focus {
   outline: none;
 }
 
-.c1 input::-webkit-input-placeholder {
+.c1 input::-webkit-input-placeholder,
+.c1 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::-moz-placeholder {
+.c1 input::-moz-placeholder,
+.c1 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input:-ms-input-placeholder {
+.c1 input:-ms-input-placeholder,
+.c1 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::placeholder {
+.c1 input::placeholder,
+.c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input {
+  height: 48px;
+}
+
+.c1 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c1 .error-feedback {
@@ -20815,7 +20835,7 @@ Array [
   margin-right: 54px;
 }
 
-.c4 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20826,7 +20846,7 @@ Array [
   align-items: center;
 }
 
-.c4 label {
+.c3 label {
   padding: 0;
   font-size: 24px;
   font-weight: normal;
@@ -20840,21 +20860,21 @@ Array [
   cursor: pointer;
 }
 
-.c4 input[type="checkbox"] {
+.c3 input[type="checkbox"] {
   display: none;
 }
 
-.c4 input[type="checkbox"] + label:after {
+.c3 input[type="checkbox"] + label:after {
   font-family: "vivy-icons";
   content: "\\e80f";
 }
 
-.c4 input[type="checkbox"]:checked + label:after {
+.c3 input[type="checkbox"]:checked + label:after {
   font-family: "vivy-icons";
   content: "\\e810";
 }
 
-.c4 .content {
+.c3 .content {
   font-size: 16px;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
@@ -20863,7 +20883,7 @@ Array [
   letter-spacing: normal;
 }
 
-.c4 .optional {
+.c3 .optional {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.29;
@@ -20876,7 +20896,7 @@ Array [
   padding-bottom: 14px;
 }
 
-.c4 .error-feedback {
+.c3 .error-feedback {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.29;
@@ -22027,24 +22047,20 @@ Array [
                 <div
                   className="input-border"
                 >
-                  <div
-                    className="c3"
-                  >
-                    <textarea
-                      disabled={false}
-                      id="bio"
-                      name=""
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      placeholder="Please add your Bio..."
-                      style={Object {}}
-                    />
-                  </div>
+                  <textarea
+                    disabled={false}
+                    id="bio"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Please add your Bio..."
+                    style={Object {}}
+                  />
                 </div>
               </label>
             </div>
             <div
-              className="c4"
+              className="c3"
             >
               <input
                 id="terms"
@@ -22066,7 +22082,7 @@ Array [
               </div>
             </div>
             <div
-              className="c4"
+              className="c3"
             >
               <input
                 id="newsletter"
@@ -22093,7 +22109,7 @@ Array [
               </span>
             </div>
             <div
-              className="c5"
+              className="c4"
               height="basic"
             >
               <button
@@ -22144,7 +22160,7 @@ Array [
 
 exports[`Storyshots Form without validation 1`] = `
 Array [
-  .c3 .component-child {
+  .c2 .component-child {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22164,12 +22180,12 @@ Array [
   line-height: 1em;
 }
 
-.c3 button:disabled,
-.c3 button:disabled .component-child {
+.c2 button:disabled,
+.c2 button:disabled .component-child {
   cursor: not-allowed !important;
 }
 
-.c3 button {
+.c2 button {
   padding: 0;
   border-radius: 4px;
   display: block;
@@ -22178,7 +22194,7 @@ Array [
   cursor: pointer;
 }
 
-.c3 a {
+.c2 a {
   font-family: system-ui;
   border-radius: 4px;
   display: inline-block;
@@ -22187,16 +22203,16 @@ Array [
   text-decoration: none;
 }
 
-.c3 a:focus:active,
-.c3 button:focus:active {
+.c2 a:focus:active,
+.c2 button:focus:active {
   outline: 0;
 }
 
-.c3 .component-child {
+.c2 .component-child {
   height: 40px;
 }
 
-.c3 .primary {
+.c2 .primary {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -22207,30 +22223,30 @@ Array [
   border: 0;
 }
 
-.c3 .primary i {
+.c2 .primary i {
   font-size: 1.5em;
 }
 
-.c3 .primary:hover {
+.c2 .primary:hover {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #00BFAC;
   box-shadow: 0 4px 8px 0 rgba(0,160,144,0.4);
 }
 
-.c3 .primary:active {
+.c2 .primary:active {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #28dbc9;
   box-shadow: 0 2px 4px 0 rgba(0,160,144,0.2);
 }
 
-.c3 .primary:disabled {
+.c2 .primary:disabled {
   background-color: #E0E0E0;
   box-shadow: none;
 }
 
-.c3 .secondary {
+.c2 .secondary {
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;
   transition: color 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -22241,83 +22257,28 @@ Array [
   color: #353F41;
 }
 
-.c3 .secondary i {
+.c2 .secondary i {
   font-size: 1.4em;
 }
 
-.c3 .secondary:hover {
+.c2 .secondary:hover {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c3 .secondary:active {
+.c2 .secondary:active {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c3 .secondary:disabled {
+.c2 .secondary:disabled {
   border-color: #BFBFBF;
   color: #BFBFBF;
   box-shadow: none;
-}
-
-.c2 label {
-  color: #575756;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: 0.3px;
-  -moz-letter-spacing: 0.3px;
-  -ms-letter-spacing: 0.3px;
-  letter-spacing: 0.3px;
-  line-height: 2.5;
-}
-
-.c2 textarea {
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  color: #353f41;
-  padding: 0px 16px;
-  margin: 16px 0px -6px 0px;
-  width: 100%;
-  min-height: 70px;
-  max-height: 15em;
-  background-color: #ffffff;
-  border: none;
-  resize: vertical;
-  box-sizing: border-box;
-}
-
-.c2 textarea:focus {
-  outline: none;
-}
-
-.c2 textarea::-webkit-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c2 textarea::-moz-placeholder {
-  color: #bfbfbf;
-}
-
-.c2 textarea:-ms-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c2 textarea::placeholder {
-  color: #bfbfbf;
-}
-
-.c2 .required {
-  padding-left: 10px;
-  color: #E63644;
 }
 
 .c1 {
@@ -22343,7 +22304,8 @@ Array [
   line-height: 1.38;
 }
 
-.c1 label.invalid input {
+.c1 label.invalid input,
+.c1 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -22374,10 +22336,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c1 input {
-  height: 48px;
+.c1 input,
+.c1 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -22386,48 +22349,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c1 input.masked-input {
+.c1 input.masked-input,
+.c1 textarea.masked-input {
   font-family: monospace;
 }
 
-.c1 input.masked-input::-webkit-input-placeholder {
+.c1 input.masked-input::-webkit-input-placeholder,
+.c1 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::-moz-placeholder {
+.c1 input.masked-input::-moz-placeholder,
+.c1 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input:-ms-input-placeholder {
+.c1 input.masked-input:-ms-input-placeholder,
+.c1 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::placeholder {
+.c1 input.masked-input::placeholder,
+.c1 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.icon-padding {
+.c1 input.icon-padding,
+.c1 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c1 input:focus {
+.c1 input:focus,
+.c1 textarea:focus {
   outline: none;
 }
 
-.c1 input::-webkit-input-placeholder {
+.c1 input::-webkit-input-placeholder,
+.c1 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::-moz-placeholder {
+.c1 input::-moz-placeholder,
+.c1 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input:-ms-input-placeholder {
+.c1 input:-ms-input-placeholder,
+.c1 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::placeholder {
+.c1 input::placeholder,
+.c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input {
+  height: 48px;
+}
+
+.c1 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c1 .error-feedback {
@@ -23544,24 +23530,20 @@ Array [
                 <div
                   className="input-border"
                 >
-                  <div
-                    className="c2"
-                  >
-                    <textarea
-                      disabled={false}
-                      id="bio"
-                      name=""
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      placeholder="Please add your Bio..."
-                      style={Object {}}
-                    />
-                  </div>
+                  <textarea
+                    disabled={false}
+                    id="bio"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Please add your Bio..."
+                    style={Object {}}
+                  />
                 </div>
               </label>
             </div>
             <div
-              className="c3"
+              className="c2"
               height="basic"
             >
               <button
@@ -50693,7 +50675,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -50724,10 +50707,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -50736,48 +50720,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -50937,7 +50944,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -50968,10 +50976,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -50980,48 +50989,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -51192,7 +51224,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -51223,10 +51256,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -51235,48 +51269,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -51448,7 +51505,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -51479,10 +51537,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -51491,48 +51550,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -51695,7 +51777,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -51726,10 +51809,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -51738,48 +51822,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -52063,7 +52170,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -52094,10 +52202,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -52106,48 +52215,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -52331,7 +52463,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -52362,10 +52495,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -52374,48 +52508,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -52579,7 +52736,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -52610,10 +52768,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -52622,48 +52781,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -52949,7 +53131,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -52980,10 +53163,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -52992,48 +53176,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -53221,7 +53428,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -53252,10 +53460,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -53264,48 +53473,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -53479,7 +53711,8 @@ Array [
   line-height: 1.38;
 }
 
-.c1 label.invalid input {
+.c1 label.invalid input,
+.c1 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -53510,10 +53743,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c1 input {
-  height: 48px;
+.c1 input,
+.c1 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -53522,48 +53756,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c1 input.masked-input {
+.c1 input.masked-input,
+.c1 textarea.masked-input {
   font-family: monospace;
 }
 
-.c1 input.masked-input::-webkit-input-placeholder {
+.c1 input.masked-input::-webkit-input-placeholder,
+.c1 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::-moz-placeholder {
+.c1 input.masked-input::-moz-placeholder,
+.c1 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input:-ms-input-placeholder {
+.c1 input.masked-input:-ms-input-placeholder,
+.c1 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::placeholder {
+.c1 input.masked-input::placeholder,
+.c1 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.icon-padding {
+.c1 input.icon-padding,
+.c1 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c1 input:focus {
+.c1 input:focus,
+.c1 textarea:focus {
   outline: none;
 }
 
-.c1 input::-webkit-input-placeholder {
+.c1 input::-webkit-input-placeholder,
+.c1 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::-moz-placeholder {
+.c1 input::-moz-placeholder,
+.c1 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input:-ms-input-placeholder {
+.c1 input:-ms-input-placeholder,
+.c1 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::placeholder {
+.c1 input::placeholder,
+.c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input {
+  height: 48px;
+}
+
+.c1 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c1 .error-feedback {
@@ -53792,7 +54049,8 @@ Array [
   line-height: 1.38;
 }
 
-.c1 label.invalid input {
+.c1 label.invalid input,
+.c1 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -53823,10 +54081,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c1 input {
-  height: 48px;
+.c1 input,
+.c1 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -53835,48 +54094,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c1 input.masked-input {
+.c1 input.masked-input,
+.c1 textarea.masked-input {
   font-family: monospace;
 }
 
-.c1 input.masked-input::-webkit-input-placeholder {
+.c1 input.masked-input::-webkit-input-placeholder,
+.c1 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::-moz-placeholder {
+.c1 input.masked-input::-moz-placeholder,
+.c1 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input:-ms-input-placeholder {
+.c1 input.masked-input:-ms-input-placeholder,
+.c1 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::placeholder {
+.c1 input.masked-input::placeholder,
+.c1 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.icon-padding {
+.c1 input.icon-padding,
+.c1 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c1 input:focus {
+.c1 input:focus,
+.c1 textarea:focus {
   outline: none;
 }
 
-.c1 input::-webkit-input-placeholder {
+.c1 input::-webkit-input-placeholder,
+.c1 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::-moz-placeholder {
+.c1 input::-moz-placeholder,
+.c1 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input:-ms-input-placeholder {
+.c1 input:-ms-input-placeholder,
+.c1 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::placeholder {
+.c1 input::placeholder,
+.c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input {
+  height: 48px;
+}
+
+.c1 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c1 .error-feedback {
@@ -54108,7 +54390,8 @@ Array [
   line-height: 1.38;
 }
 
-.c1 label.invalid input {
+.c1 label.invalid input,
+.c1 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -54139,10 +54422,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c1 input {
-  height: 48px;
+.c1 input,
+.c1 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -54151,48 +54435,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c1 input.masked-input {
+.c1 input.masked-input,
+.c1 textarea.masked-input {
   font-family: monospace;
 }
 
-.c1 input.masked-input::-webkit-input-placeholder {
+.c1 input.masked-input::-webkit-input-placeholder,
+.c1 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::-moz-placeholder {
+.c1 input.masked-input::-moz-placeholder,
+.c1 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input:-ms-input-placeholder {
+.c1 input.masked-input:-ms-input-placeholder,
+.c1 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.masked-input::placeholder {
+.c1 input.masked-input::placeholder,
+.c1 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c1 input.icon-padding {
+.c1 input.icon-padding,
+.c1 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c1 input:focus {
+.c1 input:focus,
+.c1 textarea:focus {
   outline: none;
 }
 
-.c1 input::-webkit-input-placeholder {
+.c1 input::-webkit-input-placeholder,
+.c1 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::-moz-placeholder {
+.c1 input::-moz-placeholder,
+.c1 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input:-ms-input-placeholder {
+.c1 input:-ms-input-placeholder,
+.c1 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c1 input::placeholder {
+.c1 input::placeholder,
+.c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input {
+  height: 48px;
+}
+
+.c1 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c1 .error-feedback {
@@ -78500,62 +78807,7 @@ Array [
 
 exports[`Storyshots Textarea Mandatory 1`] = `
 Array [
-  .c1 label {
-  color: #575756;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: 0.3px;
-  -moz-letter-spacing: 0.3px;
-  -ms-letter-spacing: 0.3px;
-  letter-spacing: 0.3px;
-  line-height: 2.5;
-}
-
-.c1 textarea {
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  color: #353f41;
-  padding: 0px 16px;
-  margin: 16px 0px -6px 0px;
-  width: 100%;
-  min-height: 70px;
-  max-height: 15em;
-  background-color: #ffffff;
-  border: none;
-  resize: vertical;
-  box-sizing: border-box;
-}
-
-.c1 textarea:focus {
-  outline: none;
-}
-
-.c1 textarea::-webkit-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::-moz-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea:-ms-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::placeholder {
-  color: #bfbfbf;
-}
-
-.c1 .required {
-  padding-left: 10px;
-  color: #E63644;
-}
-
-.c0 {
+  .c0 {
   position: relative;
   width: 100%;
 }
@@ -78578,7 +78830,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -78609,10 +78862,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -78621,48 +78875,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -78758,19 +79035,15 @@ Array [
         <div
           className="input-border"
         >
-          <div
-            className="c1"
-          >
-            <textarea
-              disabled={false}
-              id="textarea"
-              name=""
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder=""
-              style={Object {}}
-            />
-          </div>
+          <textarea
+            disabled={false}
+            id="textarea"
+            name=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=""
+            style={Object {}}
+          />
         </div>
       </label>
     </div>
@@ -78803,62 +79076,7 @@ Array [
 
 exports[`Storyshots Textarea basic 1`] = `
 Array [
-  .c1 label {
-  color: #575756;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: 0.3px;
-  -moz-letter-spacing: 0.3px;
-  -ms-letter-spacing: 0.3px;
-  letter-spacing: 0.3px;
-  line-height: 2.5;
-}
-
-.c1 textarea {
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  color: #353f41;
-  padding: 0px 16px;
-  margin: 16px 0px -6px 0px;
-  width: 100%;
-  min-height: 70px;
-  max-height: 15em;
-  background-color: #ffffff;
-  border: none;
-  resize: vertical;
-  box-sizing: border-box;
-}
-
-.c1 textarea:focus {
-  outline: none;
-}
-
-.c1 textarea::-webkit-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::-moz-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea:-ms-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::placeholder {
-  color: #bfbfbf;
-}
-
-.c1 .required {
-  padding-left: 10px;
-  color: #E63644;
-}
-
-.c0 {
+  .c0 {
   position: relative;
   width: 100%;
 }
@@ -78881,7 +79099,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -78912,10 +79131,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -78924,48 +79144,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -79061,19 +79304,15 @@ Array [
         <div
           className="input-border"
         >
-          <div
-            className="c1"
-          >
-            <textarea
-              disabled={false}
-              id="textarea"
-              name=""
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder=""
-              style={Object {}}
-            />
-          </div>
+          <textarea
+            disabled={false}
+            id="textarea"
+            name=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=""
+            style={Object {}}
+          />
         </div>
       </label>
     </div>
@@ -79106,62 +79345,7 @@ Array [
 
 exports[`Storyshots Textarea disabled 1`] = `
 Array [
-  .c1 label {
-  color: #575756;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: 0.3px;
-  -moz-letter-spacing: 0.3px;
-  -ms-letter-spacing: 0.3px;
-  letter-spacing: 0.3px;
-  line-height: 2.5;
-}
-
-.c1 textarea {
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  color: #353f41;
-  padding: 0px 16px;
-  margin: 16px 0px -6px 0px;
-  width: 100%;
-  min-height: 70px;
-  max-height: 15em;
-  background-color: #ffffff;
-  border: none;
-  resize: vertical;
-  box-sizing: border-box;
-}
-
-.c1 textarea:focus {
-  outline: none;
-}
-
-.c1 textarea::-webkit-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::-moz-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea:-ms-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::placeholder {
-  color: #bfbfbf;
-}
-
-.c1 .required {
-  padding-left: 10px;
-  color: #E63644;
-}
-
-.c0 {
+  .c0 {
   position: relative;
   width: 100%;
 }
@@ -79184,7 +79368,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -79215,10 +79400,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -79227,48 +79413,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -79364,19 +79573,15 @@ Array [
         <div
           className="input-border"
         >
-          <div
-            className="c1"
-          >
-            <textarea
-              disabled={true}
-              id="textarea"
-              name=""
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder=""
-              style={Object {}}
-            />
-          </div>
+          <textarea
+            disabled={true}
+            id="textarea"
+            name=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=""
+            style={Object {}}
+          />
         </div>
       </label>
     </div>
@@ -79409,62 +79614,7 @@ Array [
 
 exports[`Storyshots Textarea with default value 1`] = `
 Array [
-  .c1 label {
-  color: #575756;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: 0.3px;
-  -moz-letter-spacing: 0.3px;
-  -ms-letter-spacing: 0.3px;
-  letter-spacing: 0.3px;
-  line-height: 2.5;
-}
-
-.c1 textarea {
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  color: #353f41;
-  padding: 0px 16px;
-  margin: 16px 0px -6px 0px;
-  width: 100%;
-  min-height: 70px;
-  max-height: 15em;
-  background-color: #ffffff;
-  border: none;
-  resize: vertical;
-  box-sizing: border-box;
-}
-
-.c1 textarea:focus {
-  outline: none;
-}
-
-.c1 textarea::-webkit-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::-moz-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea:-ms-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::placeholder {
-  color: #bfbfbf;
-}
-
-.c1 .required {
-  padding-left: 10px;
-  color: #E63644;
-}
-
-.c0 {
+  .c0 {
   position: relative;
   width: 100%;
 }
@@ -79487,7 +79637,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -79518,10 +79669,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -79530,48 +79682,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -79667,20 +79842,16 @@ Array [
         <div
           className="input-border"
         >
-          <div
-            className="c1"
-          >
-            <textarea
-              defaultValue="Happy and well-informed employees are employees who are more likely to remain loyal to your organization. By giving them access to round-the-clock online training and self-paced learning modules, they can further their professional goals and feel motivated to improve their on-the-job performance. They can also pinpoint areas they may need to work on and find out their core strengths, so that they are able to become better employees and more informed advocates for your brand."
-              disabled={false}
-              id="textarea"
-              name=""
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder=""
-              style={Object {}}
-            />
-          </div>
+          <textarea
+            defaultValue="Happy and well-informed employees are employees who are more likely to remain loyal to your organization. By giving them access to round-the-clock online training and self-paced learning modules, they can further their professional goals and feel motivated to improve their on-the-job performance. They can also pinpoint areas they may need to work on and find out their core strengths, so that they are able to become better employees and more informed advocates for your brand."
+            disabled={false}
+            id="textarea"
+            name=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=""
+            style={Object {}}
+          />
         </div>
       </label>
     </div>
@@ -79713,62 +79884,7 @@ Array [
 
 exports[`Storyshots Textarea with onBlur 1`] = `
 Array [
-  .c1 label {
-  color: #575756;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: 0.3px;
-  -moz-letter-spacing: 0.3px;
-  -ms-letter-spacing: 0.3px;
-  letter-spacing: 0.3px;
-  line-height: 2.5;
-}
-
-.c1 textarea {
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  color: #353f41;
-  padding: 0px 16px;
-  margin: 16px 0px -6px 0px;
-  width: 100%;
-  min-height: 70px;
-  max-height: 15em;
-  background-color: #ffffff;
-  border: none;
-  resize: vertical;
-  box-sizing: border-box;
-}
-
-.c1 textarea:focus {
-  outline: none;
-}
-
-.c1 textarea::-webkit-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::-moz-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea:-ms-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::placeholder {
-  color: #bfbfbf;
-}
-
-.c1 .required {
-  padding-left: 10px;
-  color: #E63644;
-}
-
-.c0 {
+  .c0 {
   position: relative;
   width: 100%;
 }
@@ -79791,7 +79907,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -79822,10 +79939,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -79834,48 +79952,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -79971,19 +80112,15 @@ Array [
         <div
           className="input-border"
         >
-          <div
-            className="c1"
-          >
-            <textarea
-              disabled={false}
-              id="textarea"
-              name=""
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder=""
-              style={Object {}}
-            />
-          </div>
+          <textarea
+            disabled={false}
+            id="textarea"
+            name=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=""
+            style={Object {}}
+          />
         </div>
       </label>
     </div>
@@ -80016,62 +80153,7 @@ Array [
 
 exports[`Storyshots Textarea with onChange 1`] = `
 Array [
-  .c1 label {
-  color: #575756;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: 0.3px;
-  -moz-letter-spacing: 0.3px;
-  -ms-letter-spacing: 0.3px;
-  letter-spacing: 0.3px;
-  line-height: 2.5;
-}
-
-.c1 textarea {
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  color: #353f41;
-  padding: 0px 16px;
-  margin: 16px 0px -6px 0px;
-  width: 100%;
-  min-height: 70px;
-  max-height: 15em;
-  background-color: #ffffff;
-  border: none;
-  resize: vertical;
-  box-sizing: border-box;
-}
-
-.c1 textarea:focus {
-  outline: none;
-}
-
-.c1 textarea::-webkit-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::-moz-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea:-ms-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::placeholder {
-  color: #bfbfbf;
-}
-
-.c1 .required {
-  padding-left: 10px;
-  color: #E63644;
-}
-
-.c0 {
+  .c0 {
   position: relative;
   width: 100%;
 }
@@ -80094,7 +80176,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -80125,10 +80208,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -80137,48 +80221,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -80274,19 +80381,15 @@ Array [
         <div
           className="input-border"
         >
-          <div
-            className="c1"
-          >
-            <textarea
-              disabled={false}
-              id="textarea"
-              name=""
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder=""
-              style={Object {}}
-            />
-          </div>
+          <textarea
+            disabled={false}
+            id="textarea"
+            name=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=""
+            style={Object {}}
+          />
         </div>
       </label>
     </div>
@@ -80319,62 +80422,7 @@ Array [
 
 exports[`Storyshots Textarea with style 1`] = `
 Array [
-  .c1 label {
-  color: #575756;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: 0.3px;
-  -moz-letter-spacing: 0.3px;
-  -ms-letter-spacing: 0.3px;
-  letter-spacing: 0.3px;
-  line-height: 2.5;
-}
-
-.c1 textarea {
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  color: #353f41;
-  padding: 0px 16px;
-  margin: 16px 0px -6px 0px;
-  width: 100%;
-  min-height: 70px;
-  max-height: 15em;
-  background-color: #ffffff;
-  border: none;
-  resize: vertical;
-  box-sizing: border-box;
-}
-
-.c1 textarea:focus {
-  outline: none;
-}
-
-.c1 textarea::-webkit-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::-moz-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea:-ms-input-placeholder {
-  color: #bfbfbf;
-}
-
-.c1 textarea::placeholder {
-  color: #bfbfbf;
-}
-
-.c1 .required {
-  padding-left: 10px;
-  color: #E63644;
-}
-
-.c0 {
+  .c0 {
   position: relative;
   width: 100%;
 }
@@ -80397,7 +80445,8 @@ Array [
   line-height: 1.38;
 }
 
-.c0 label.invalid input {
+.c0 label.invalid input,
+.c0 label.invalid textarea {
   border-color: #E63644;
   background-color: #FFE1E1;
 }
@@ -80428,10 +80477,11 @@ Array [
   transition: border-color 0.2s ease,box-shadow 0.2s ease;
 }
 
-.c0 input {
-  height: 48px;
+.c0 input,
+.c0 textarea {
   background-color: transparent;
   border: none;
+  border-radius: 4px;
   font-size: 18px;
   font-weight: normal;
   color: #353f41;
@@ -80440,48 +80490,71 @@ Array [
   padding: 2px 16px;
 }
 
-.c0 input.masked-input {
+.c0 input.masked-input,
+.c0 textarea.masked-input {
   font-family: monospace;
 }
 
-.c0 input.masked-input::-webkit-input-placeholder {
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::-moz-placeholder {
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input:-ms-input-placeholder {
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.masked-input::placeholder {
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
   font-family: "Norms",sans-serif;
 }
 
-.c0 input.icon-padding {
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
   padding: 2px 16px 2px 54px;
 }
 
-.c0 input:focus {
+.c0 input:focus,
+.c0 textarea:focus {
   outline: none;
 }
 
-.c0 input::-webkit-input-placeholder {
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::-moz-placeholder {
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input:-ms-input-placeholder {
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
   color: #bfbfbf;
 }
 
-.c0 input::placeholder {
+.c0 input::placeholder,
+.c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
 }
 
 .c0 .error-feedback {
@@ -80577,23 +80650,19 @@ Array [
         <div
           className="input-border"
         >
-          <div
-            className="c1"
-          >
-            <textarea
-              disabled={false}
-              id="textarea"
-              name=""
-              onBlur={[Function]}
-              onChange={[Function]}
-              placeholder=""
-              style={
-                Object {
-                  "height": 500,
-                }
+          <textarea
+            disabled={false}
+            id="textarea"
+            name=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=""
+            style={
+              Object {
+                "height": 500,
               }
-            />
-          </div>
+            }
+          />
         </div>
       </label>
     </div>

@@ -1,5 +1,4 @@
 import React, { FC, CSSProperties } from "react";
-import TextareaStyles from "./textarea.style";
 import InputWrapper from "../InputWrapper";
 import { ValidationContext } from "../Forms/Validation";
 import formData from "../utils/formData";
@@ -21,7 +20,7 @@ type TextareaProps = {
 };
 
 const Textarea: FC<TextareaProps> = ({
-  id = "",
+  id,
   name = "",
   iconName = "",
   onChange = (_e) => {},
@@ -45,31 +44,29 @@ const Textarea: FC<TextareaProps> = ({
           label={label}
           optional={optional}
         >
-          <TextareaStyles>
-            <textarea
-              id={id}
-              name={name}
-              defaultValue={defaultValue}
-              disabled={disabled}
-              placeholder={placeholder}
-              style={style}
-              onChange={(e) => {
-                if (validateOnChange) {
-                  validate(formData(e.target.form), e.target.id);
-                } else {
-                  cleanField(e.target.id);
-                }
+          <textarea
+            id={id}
+            name={name}
+            defaultValue={defaultValue}
+            disabled={disabled}
+            placeholder={placeholder}
+            style={style}
+            onChange={(e) => {
+              if (validateOnChange) {
+                validate(formData(e.target.form), e.target.id);
+              } else {
+                cleanField(e.target.id);
+              }
 
-                onChange(e);
-              }}
-              onBlur={(e) => {
-                if (validateOnBlur) {
-                  validate(formData(e.target.form), e.target.id);
-                }
-                onBlur(e);
-              }}
-            />
-          </TextareaStyles>
+              onChange(e);
+            }}
+            onBlur={(e) => {
+              if (validateOnBlur) {
+                validate(formData(e.target.form), e.target.id);
+              }
+              onBlur(e);
+            }}
+          />
         </InputWrapper>
       )}
     </ValidationContext.Consumer>
