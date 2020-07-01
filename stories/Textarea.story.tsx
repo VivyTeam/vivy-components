@@ -4,7 +4,14 @@ import { Textarea } from "../src/index";
 
 storiesOf("Textarea", module)
   .add("basic", () => <Textarea id="textarea" label="Default" />)
-  .add("disabled", () => <Textarea id="textarea" disabled label="Disabled" />)
+  .add("disabled", () => (
+    <Textarea
+      id="textarea"
+      disabled
+      label="Disabled"
+      defaultValue="Not allowed, sorry!"
+    />
+  ))
   .add("Mandatory", () => (
     <Textarea id="textarea" optional={false} label="Mandatory" />
   ))

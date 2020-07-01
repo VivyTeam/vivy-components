@@ -17415,7 +17415,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c1 .input-border:hover {
+.c1 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -17494,6 +17494,12 @@ Array [
 .c1 input::placeholder,
 .c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input:disabled,
+.c1 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c1 input {
@@ -18680,7 +18686,7 @@ Array [
                 id="name"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <input
                     className=""
@@ -18708,7 +18714,7 @@ Array [
                 id="code"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <input
                     autoComplete="off"
@@ -18743,7 +18749,7 @@ Array [
                   id="password"
                 >
                   <div
-                    className="input-border"
+                    className="input-border "
                   >
                     <input
                       autoComplete="password"
@@ -19023,7 +19029,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c1 .input-border:hover {
+.c1 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -19102,6 +19108,12 @@ Array [
 .c1 input::placeholder,
 .c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input:disabled,
+.c1 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c1 input {
@@ -20288,7 +20300,7 @@ Array [
                 id="name"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <input
                     className=""
@@ -20316,7 +20328,7 @@ Array [
                 id="code"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <input
                     autoComplete="off"
@@ -20351,7 +20363,7 @@ Array [
                   id="password"
                 >
                   <div
-                    className="input-border"
+                    className="input-border "
                   >
                     <input
                       autoComplete="password"
@@ -20631,7 +20643,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c1 .input-border:hover {
+.c1 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -20710,6 +20722,12 @@ Array [
 .c1 input::placeholder,
 .c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input:disabled,
+.c1 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c1 input {
@@ -21896,7 +21914,7 @@ Array [
                 id="name"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <input
                     className=""
@@ -21924,7 +21942,7 @@ Array [
                 id="lastName"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <input
                     className=""
@@ -21952,7 +21970,7 @@ Array [
                 id="code"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <input
                     autoComplete="off"
@@ -21987,7 +22005,7 @@ Array [
                   id="password"
                 >
                   <div
-                    className="input-border"
+                    className="input-border "
                   >
                     <input
                       autoComplete="password"
@@ -22017,7 +22035,7 @@ Array [
                 id="email"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <input
                     className=""
@@ -22045,7 +22063,7 @@ Array [
                 id="bio"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <textarea
                     disabled={false}
@@ -22323,7 +22341,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c1 .input-border:hover {
+.c1 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -22402,6 +22420,12 @@ Array [
 .c1 input::placeholder,
 .c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input:disabled,
+.c1 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c1 input {
@@ -23472,7 +23496,7 @@ Array [
                 id="name"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <input
                     className=""
@@ -23500,7 +23524,7 @@ Array [
                 id="lastName"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <input
                     className=""
@@ -23528,7 +23552,7 @@ Array [
                 id="bio"
               >
                 <div
-                  className="input-border"
+                  className="input-border "
                 >
                   <textarea
                     disabled={false}
@@ -50694,7 +50718,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -50773,6 +50797,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -50878,7 +50908,7 @@ Array [
         id="name"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <input
             className=""
@@ -50963,7 +50993,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -51042,6 +51072,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -51147,7 +51183,7 @@ Array [
         id="name"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <input
             className=""
@@ -51157,6 +51193,283 @@ Array [
             onBlur={[Function]}
             onChange={[Function]}
             placeholder="Enter your name"
+            type=""
+          />
+        </div>
+      </label>
+    </div>
+  </div>,
+  <button
+    className="info__show-button"
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#027ac5",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": 12,
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>,
+]
+`;
+
+exports[`Storyshots Input default value disabled 1`] = `
+Array [
+  .c0 {
+  position: relative;
+  width: 100%;
+}
+
+.c0 label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #353f41;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.38;
+}
+
+.c0 label.invalid input,
+.c0 label.invalid textarea {
+  border-color: #E63644;
+  background-color: #FFE1E1;
+}
+
+.c0 .input-border {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-radius: 4px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+}
+
+.c0 .input-border:hover:not(.disabled) {
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+}
+
+.c0 .input-border:focus-within {
+  box-shadow: 0 0 0 2px rgba(4,212,191,0.2);
+  border-color: #04d4bf;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+}
+
+.c0 input,
+.c0 textarea {
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #353f41;
+  -webkit-transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  transition: border-color 0.2s ease,box-shadow 0.2s ease;
+  padding: 2px 16px;
+}
+
+.c0 input.masked-input,
+.c0 textarea.masked-input {
+  font-family: monospace;
+}
+
+.c0 input.masked-input::-webkit-input-placeholder,
+.c0 textarea.masked-input::-webkit-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::-moz-placeholder,
+.c0 textarea.masked-input::-moz-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input:-ms-input-placeholder,
+.c0 textarea.masked-input:-ms-input-placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.masked-input::placeholder,
+.c0 textarea.masked-input::placeholder {
+  font-family: "Norms",sans-serif;
+}
+
+.c0 input.icon-padding,
+.c0 textarea.icon-padding {
+  padding: 2px 16px 2px 54px;
+}
+
+.c0 input:focus,
+.c0 textarea:focus {
+  outline: none;
+}
+
+.c0 input::-webkit-input-placeholder,
+.c0 textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input::-moz-placeholder,
+.c0 textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input:-ms-input-placeholder,
+.c0 textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input::placeholder,
+.c0 textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
+}
+
+.c0 input {
+  height: 48px;
+}
+
+.c0 textarea {
+  box-sizing: border-box;
+  min-height: 70px;
+  resize: vertical;
+  width: 100%;
+  padding: 16px;
+}
+
+.c0 .error-feedback {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.29;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #E63644;
+  margin-top: 4px;
+}
+
+.c0 .optional {
+  padding-left: 3px;
+  font-size: 14px;
+  line-height: 0.5;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  color: #7b7b7b;
+}
+
+.c0 .label {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .icon-left {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #bfbfbf;
+  line-height: normal;
+  font-size: 24px;
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+<div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="c0"
+    >
+      <span
+        className="label"
+      >
+        Your name
+      </span>
+      <label
+        className=""
+        htmlFor="name"
+        id="name"
+      >
+        <div
+          className="disabled input-border "
+        >
+          <input
+            className=""
+            defaultValue="John Doe"
+            disabled={true}
+            id="name"
+            name="default"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=""
             type=""
           />
         </div>
@@ -51243,7 +51556,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -51322,6 +51635,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -51439,7 +51758,7 @@ Array [
           </div>
         </div>
         <div
-          className="input-border"
+          className="input-border "
         >
           <input
             className="icon-padding "
@@ -51524,7 +51843,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -51603,6 +51922,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -51708,7 +52033,7 @@ Array [
         id="word-input"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <input
             className=""
@@ -51796,7 +52121,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -51875,6 +52200,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -51980,7 +52311,7 @@ Array [
         id="word-input"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <input
             className=""
@@ -52189,7 +52520,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -52268,6 +52599,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -52373,7 +52710,7 @@ Array [
         id="name"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <input
             className=""
@@ -52482,7 +52819,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -52561,6 +52898,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -52666,7 +53009,7 @@ Array [
         id="sticker"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <input
             autoComplete="off"
@@ -52755,7 +53098,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -52834,6 +53177,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -52939,7 +53288,7 @@ Array [
         id="sticker"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <input
             autoComplete="off"
@@ -53150,7 +53499,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -53229,6 +53578,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -53334,7 +53689,7 @@ Array [
         id="sticker"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <input
             autoComplete="off"
@@ -53447,7 +53802,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -53526,6 +53881,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -53631,7 +53992,7 @@ Array [
         id="sticker"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <input
             autoComplete="off"
@@ -53730,7 +54091,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c1 .input-border:hover {
+.c1 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -53809,6 +54170,12 @@ Array [
 .c1 input::placeholder,
 .c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input:disabled,
+.c1 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c1 input {
@@ -53971,7 +54338,7 @@ Array [
             </div>
           </div>
           <div
-            className="input-border"
+            className="input-border "
           >
             <input
               autoComplete="password"
@@ -54068,7 +54435,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c1 .input-border:hover {
+.c1 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -54147,6 +54514,12 @@ Array [
 .c1 input::placeholder,
 .c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input:disabled,
+.c1 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c1 input {
@@ -54297,7 +54670,7 @@ Array [
           id="name"
         >
           <div
-            className="input-border"
+            className="input-border "
           >
             <input
               autoComplete="password"
@@ -54409,7 +54782,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c1 .input-border:hover {
+.c1 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -54488,6 +54861,12 @@ Array [
 .c1 input::placeholder,
 .c1 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c1 input:disabled,
+.c1 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c1 input {
@@ -54638,7 +55017,7 @@ Array [
           id="name"
         >
           <div
-            className="input-border"
+            className="input-border "
           >
             <input
               autoComplete="password"
@@ -78849,7 +79228,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -78928,6 +79307,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -79033,7 +79418,7 @@ Array [
         id="textarea"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <textarea
             disabled={false}
@@ -79118,7 +79503,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -79197,6 +79582,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -79302,7 +79693,7 @@ Array [
         id="textarea"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <textarea
             disabled={false}
@@ -79387,7 +79778,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -79466,6 +79857,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -79571,9 +79968,10 @@ Array [
         id="textarea"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <textarea
+            defaultValue="Not allowed, sorry!"
             disabled={true}
             id="textarea"
             name=""
@@ -79656,7 +80054,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -79735,6 +80133,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -79840,7 +80244,7 @@ Array [
         id="textarea"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <textarea
             defaultValue="Happy and well-informed employees are employees who are more likely to remain loyal to your organization. By giving them access to round-the-clock online training and self-paced learning modules, they can further their professional goals and feel motivated to improve their on-the-job performance. They can also pinpoint areas they may need to work on and find out their core strengths, so that they are able to become better employees and more informed advocates for your brand."
@@ -79926,7 +80330,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -80005,6 +80409,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -80110,7 +80520,7 @@ Array [
         id="textarea"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <textarea
             disabled={false}
@@ -80195,7 +80605,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -80274,6 +80684,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -80379,7 +80795,7 @@ Array [
         id="textarea"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <textarea
             disabled={false}
@@ -80464,7 +80880,7 @@ Array [
   background-color: #ffffff;
 }
 
-.c0 .input-border:hover {
+.c0 .input-border:hover:not(.disabled) {
   border-color: #04d4bf;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
@@ -80543,6 +80959,12 @@ Array [
 .c0 input::placeholder,
 .c0 textarea::placeholder {
   color: #bfbfbf;
+}
+
+.c0 input:disabled,
+.c0 textarea:disabled {
+  background-color: #ececec;
+  cursor: not-allowed;
 }
 
 .c0 input {
@@ -80648,7 +81070,7 @@ Array [
         id="textarea"
       >
         <div
-          className="input-border"
+          className="input-border "
         >
           <textarea
             disabled={false}

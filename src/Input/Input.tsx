@@ -17,6 +17,7 @@ type InputProps = {
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   validateOnBlur?: boolean;
   rel?: LegacyRef<HTMLInputElement>;
+  disabled?: boolean;
 };
 
 const Input: FC<InputProps> = ({
@@ -32,13 +33,20 @@ const Input: FC<InputProps> = ({
   validateOnChange = true,
   onBlur = () => {},
   validateOnBlur = true,
+  disabled,
 }) => {
   const padding = classNames(["icon-padding", iconName]);
 
   return (
     <ValidationContext.Consumer>
       {({ validate, cleanField, errors: { [id]: error } }) => (
-        <InputWrapper error={error} id={id} iconName={iconName} label={label}>
+        <InputWrapper
+          error={error}
+          id={id}
+          iconName={iconName}
+          label={label}
+          disabled={disabled}
+        >
           <input
             id={id}
             name={name}
@@ -62,6 +70,7 @@ const Input: FC<InputProps> = ({
               onBlur(e);
             }}
             {...(defaultValue && { defaultValue })}
+            {...(disabled && { disabled })}
           />
         </InputWrapper>
       )}
