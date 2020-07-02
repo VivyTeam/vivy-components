@@ -28,7 +28,7 @@ const InputStyles = styled.div`
     border: solid 1px #cdcdcd;
     background-color: #ffffff;
 
-    &:hover {
+    &:hover:not(.disabled) {
       border-color: #04d4bf;
       transition: border-color 0.2s ease;
     }
@@ -69,6 +69,11 @@ const InputStyles = styled.div`
 
     &::placeholder {
       color: #bfbfbf;
+    }
+
+    &:disabled {
+      background-color: #ececec;
+      cursor: not-allowed;
     }
   }
 

@@ -45,6 +45,9 @@ storiesOf("Input", module)
       defaultValue="John Doe"
     />
   ))
+  .add("default value disabled", () => (
+    <Input label="Your name" id="name" defaultValue="John Doe" disabled />
+  ))
   .add("onChange handler", () => {
     const OnChangeExample = () => {
       const [word, onWordChange] = useState("");

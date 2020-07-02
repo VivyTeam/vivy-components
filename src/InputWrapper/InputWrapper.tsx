@@ -9,6 +9,7 @@ type InputWrapperProps = {
   optional?: boolean;
   iconName?: string;
   error?: string;
+  disabled?: boolean;
 };
 
 const InputWrapper: FC<InputWrapperProps> = ({
@@ -18,6 +19,7 @@ const InputWrapper: FC<InputWrapperProps> = ({
   optional = false,
   iconName = "",
   error = "",
+  disabled,
 }) => {
   const invalid = classNames(["invalid", error]);
 
@@ -34,7 +36,11 @@ const InputWrapper: FC<InputWrapperProps> = ({
             <Icon name={iconName} />
           </div>
         ) : null}
-        <div className="input-border">{children}</div>
+        <div
+          className={classNames(["input-border", true], ["disabled", disabled])}
+        >
+          {children}
+        </div>
         {error ? <span className="error-feedback">{error}</span> : null}
       </label>
     </Styles>
