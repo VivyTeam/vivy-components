@@ -12543,7 +12543,7 @@ Array [
   align-items: center;
 }
 
-.c0 label {
+.c3 {
   padding: 0;
   font-size: 24px;
   font-weight: normal;
@@ -12557,53 +12557,27 @@ Array [
   cursor: pointer;
 }
 
-.c0 input[type="checkbox"] {
+.c1 {
   display: none;
 }
 
-.c0 input[type="checkbox"] + label:after {
+.c1 + .c2:after {
   font-family: "vivy-icons";
   content: "\\e80f";
 }
 
-.c0 input[type="checkbox"]:checked + label:after {
+.c1:checked + .c2:after {
   font-family: "vivy-icons";
   content: "\\e810";
 }
 
-.c0 .content {
+.c4 {
   font-size: 16px;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-}
-
-.c0 .optional {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.29;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #7b7b7b;
-  padding-left: 3px;
-  padding-bottom: 14px;
-}
-
-.c0 .error-feedback {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.29;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #E63644;
-  padding-left: 3px;
-  padding-bottom: 14px;
 }
 
 <div
@@ -12618,6 +12592,7 @@ Array [
       className="c0"
     >
       <input
+        className="c1"
         id="newsletter"
         name="newsletter"
         onChange={[Function]}
@@ -12625,14 +12600,15 @@ Array [
         value=""
       />
       <label
+        className="c2 c3"
         htmlFor="newsletter"
-        id="newsletter"
       />
-      <div
-        className="content"
+      <label
+        className="c4"
+        htmlFor="newsletter"
       >
         Sign up newsletter
-      </div>
+      </label>
     </div>
   </div>,
   <button
@@ -12661,7 +12637,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Checkbox optional 1`] = `
+exports[`Storyshots Checkbox with optional label 1`] = `
 Array [
   .c0 {
   display: -webkit-box;
@@ -12674,7 +12650,7 @@ Array [
   align-items: center;
 }
 
-.c0 label {
+.c3 {
   padding: 0;
   font-size: 24px;
   font-weight: normal;
@@ -12688,21 +12664,21 @@ Array [
   cursor: pointer;
 }
 
-.c0 input[type="checkbox"] {
+.c1 {
   display: none;
 }
 
-.c0 input[type="checkbox"] + label:after {
+.c1 + .c2:after {
   font-family: "vivy-icons";
   content: "\\e80f";
 }
 
-.c0 input[type="checkbox"]:checked + label:after {
+.c1:checked + .c2:after {
   font-family: "vivy-icons";
   content: "\\e810";
 }
 
-.c0 .content {
+.c4 {
   font-size: 16px;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
@@ -12711,7 +12687,7 @@ Array [
   letter-spacing: normal;
 }
 
-.c0 .optional {
+.c5 {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.29;
@@ -12719,22 +12695,9 @@ Array [
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #7b7b7b;
   padding-left: 3px;
   padding-bottom: 14px;
-}
-
-.c0 .error-feedback {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.29;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #E63644;
-  padding-left: 3px;
-  padding-bottom: 14px;
+  color: #7B7B7B;
 }
 
 <div
@@ -12749,6 +12712,7 @@ Array [
       className="c0"
     >
       <input
+        className="c1"
         id="newsletter"
         name="newsletter"
         onChange={[Function]}
@@ -12756,19 +12720,21 @@ Array [
         value=""
       />
       <label
+        className="c2 c3"
         htmlFor="newsletter"
-        id="newsletter"
       />
-      <div
-        className="content"
+      <label
+        className="c4"
+        htmlFor="newsletter"
       >
         Sign up newsletter
-      </div>
-      <span
-        className="optional"
+      </label>
+      <label
+        className="c5"
+        htmlFor="newsletter"
       >
         *optional
-      </span>
+      </label>
     </div>
   </div>,
   <button
@@ -17252,7 +17218,7 @@ Array [
 
 exports[`Storyshots Form inactive validation on value change 1`] = `
 Array [
-  .c4 .component-child {
+  .c9 .component-child {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17272,12 +17238,12 @@ Array [
   line-height: 1em;
 }
 
-.c4 button:disabled,
-.c4 button:disabled .component-child {
+.c9 button:disabled,
+.c9 button:disabled .component-child {
   cursor: not-allowed !important;
 }
 
-.c4 button {
+.c9 button {
   padding: 0;
   border-radius: 4px;
   display: block;
@@ -17286,7 +17252,7 @@ Array [
   cursor: pointer;
 }
 
-.c4 a {
+.c9 a {
   font-family: system-ui;
   border-radius: 4px;
   display: inline-block;
@@ -17295,16 +17261,16 @@ Array [
   text-decoration: none;
 }
 
-.c4 a:focus:active,
-.c4 button:focus:active {
+.c9 a:focus:active,
+.c9 button:focus:active {
   outline: 0;
 }
 
-.c4 .component-child {
+.c9 .component-child {
   height: 40px;
 }
 
-.c4 .primary {
+.c9 .primary {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -17315,30 +17281,30 @@ Array [
   border: 0;
 }
 
-.c4 .primary i {
+.c9 .primary i {
   font-size: 1.5em;
 }
 
-.c4 .primary:hover {
+.c9 .primary:hover {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #00BFAC;
   box-shadow: 0 4px 8px 0 rgba(0,160,144,0.4);
 }
 
-.c4 .primary:active {
+.c9 .primary:active {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #28dbc9;
   box-shadow: 0 2px 4px 0 rgba(0,160,144,0.2);
 }
 
-.c4 .primary:disabled {
+.c9 .primary:disabled {
   background-color: #E0E0E0;
   box-shadow: none;
 }
 
-.c4 .secondary {
+.c9 .secondary {
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;
   transition: color 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -17349,25 +17315,25 @@ Array [
   color: #353F41;
 }
 
-.c4 .secondary i {
+.c9 .secondary i {
   font-size: 1.4em;
 }
 
-.c4 .secondary:hover {
+.c9 .secondary:hover {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c4 .secondary:active {
+.c9 .secondary:active {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c4 .secondary:disabled {
+.c9 .secondary:disabled {
   border-color: #BFBFBF;
   color: #BFBFBF;
   box-shadow: none;
@@ -17636,7 +17602,7 @@ Array [
   align-items: center;
 }
 
-.c3 label {
+.c6 {
   padding: 0;
   font-size: 24px;
   font-weight: normal;
@@ -17650,21 +17616,21 @@ Array [
   cursor: pointer;
 }
 
-.c3 input[type="checkbox"] {
+.c4 {
   display: none;
 }
 
-.c3 input[type="checkbox"] + label:after {
+.c4 + .c5:after {
   font-family: "vivy-icons";
   content: "\\e80f";
 }
 
-.c3 input[type="checkbox"]:checked + label:after {
+.c4:checked + .c5:after {
   font-family: "vivy-icons";
   content: "\\e810";
 }
 
-.c3 .content {
+.c7 {
   font-size: 16px;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
@@ -17673,7 +17639,7 @@ Array [
   letter-spacing: normal;
 }
 
-.c3 .optional {
+.c8 {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.29;
@@ -17681,22 +17647,9 @@ Array [
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #7b7b7b;
   padding-left: 3px;
   padding-bottom: 14px;
-}
-
-.c3 .error-feedback {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.29;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #E63644;
-  padding-left: 3px;
-  padding-bottom: 14px;
+  color: #7B7B7B;
 }
 
 .c0 {
@@ -18769,6 +18722,7 @@ Array [
               className="c3"
             >
               <input
+                className="c4"
                 id="terms"
                 name="Terms and Conditions"
                 onChange={[Function]}
@@ -18776,21 +18730,23 @@ Array [
                 value=""
               />
               <label
+                className="c5 c6"
                 htmlFor="terms"
-                id="terms"
               />
-              <div
-                className="content"
+              <label
+                className="c7"
+                htmlFor="terms"
               >
                 <p>
                   Terms and conditions
                 </p>
-              </div>
+              </label>
             </div>
             <div
               className="c3"
             >
               <input
+                className="c4"
                 id="newsletter"
                 name="Newsletter"
                 onChange={[Function]}
@@ -18798,24 +18754,26 @@ Array [
                 value=""
               />
               <label
+                className="c5 c6"
                 htmlFor="newsletter"
-                id="newsletter"
               />
-              <div
-                className="content"
+              <label
+                className="c7"
+                htmlFor="newsletter"
               >
                 <p>
                   Newsletter sign up
                 </p>
-              </div>
-              <span
-                className="optional"
+              </label>
+              <label
+                className="c8"
+                htmlFor="newsletter"
               >
                 *optional
-              </span>
+              </label>
             </div>
             <div
-              className="c4"
+              className="c9"
               height="basic"
             >
               <button
@@ -18866,7 +18824,7 @@ Array [
 
 exports[`Storyshots Form inactive validation on value change and on blur 1`] = `
 Array [
-  .c4 .component-child {
+  .c9 .component-child {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -18886,12 +18844,12 @@ Array [
   line-height: 1em;
 }
 
-.c4 button:disabled,
-.c4 button:disabled .component-child {
+.c9 button:disabled,
+.c9 button:disabled .component-child {
   cursor: not-allowed !important;
 }
 
-.c4 button {
+.c9 button {
   padding: 0;
   border-radius: 4px;
   display: block;
@@ -18900,7 +18858,7 @@ Array [
   cursor: pointer;
 }
 
-.c4 a {
+.c9 a {
   font-family: system-ui;
   border-radius: 4px;
   display: inline-block;
@@ -18909,16 +18867,16 @@ Array [
   text-decoration: none;
 }
 
-.c4 a:focus:active,
-.c4 button:focus:active {
+.c9 a:focus:active,
+.c9 button:focus:active {
   outline: 0;
 }
 
-.c4 .component-child {
+.c9 .component-child {
   height: 40px;
 }
 
-.c4 .primary {
+.c9 .primary {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -18929,30 +18887,30 @@ Array [
   border: 0;
 }
 
-.c4 .primary i {
+.c9 .primary i {
   font-size: 1.5em;
 }
 
-.c4 .primary:hover {
+.c9 .primary:hover {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #00BFAC;
   box-shadow: 0 4px 8px 0 rgba(0,160,144,0.4);
 }
 
-.c4 .primary:active {
+.c9 .primary:active {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #28dbc9;
   box-shadow: 0 2px 4px 0 rgba(0,160,144,0.2);
 }
 
-.c4 .primary:disabled {
+.c9 .primary:disabled {
   background-color: #E0E0E0;
   box-shadow: none;
 }
 
-.c4 .secondary {
+.c9 .secondary {
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;
   transition: color 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -18963,25 +18921,25 @@ Array [
   color: #353F41;
 }
 
-.c4 .secondary i {
+.c9 .secondary i {
   font-size: 1.4em;
 }
 
-.c4 .secondary:hover {
+.c9 .secondary:hover {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c4 .secondary:active {
+.c9 .secondary:active {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c4 .secondary:disabled {
+.c9 .secondary:disabled {
   border-color: #BFBFBF;
   color: #BFBFBF;
   box-shadow: none;
@@ -19250,7 +19208,7 @@ Array [
   align-items: center;
 }
 
-.c3 label {
+.c6 {
   padding: 0;
   font-size: 24px;
   font-weight: normal;
@@ -19264,21 +19222,21 @@ Array [
   cursor: pointer;
 }
 
-.c3 input[type="checkbox"] {
+.c4 {
   display: none;
 }
 
-.c3 input[type="checkbox"] + label:after {
+.c4 + .c5:after {
   font-family: "vivy-icons";
   content: "\\e80f";
 }
 
-.c3 input[type="checkbox"]:checked + label:after {
+.c4:checked + .c5:after {
   font-family: "vivy-icons";
   content: "\\e810";
 }
 
-.c3 .content {
+.c7 {
   font-size: 16px;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
@@ -19287,7 +19245,7 @@ Array [
   letter-spacing: normal;
 }
 
-.c3 .optional {
+.c8 {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.29;
@@ -19295,22 +19253,9 @@ Array [
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #7b7b7b;
   padding-left: 3px;
   padding-bottom: 14px;
-}
-
-.c3 .error-feedback {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.29;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #E63644;
-  padding-left: 3px;
-  padding-bottom: 14px;
+  color: #7B7B7B;
 }
 
 .c0 {
@@ -20383,6 +20328,7 @@ Array [
               className="c3"
             >
               <input
+                className="c4"
                 id="terms"
                 name="Terms and Conditions"
                 onChange={[Function]}
@@ -20390,21 +20336,23 @@ Array [
                 value=""
               />
               <label
+                className="c5 c6"
                 htmlFor="terms"
-                id="terms"
               />
-              <div
-                className="content"
+              <label
+                className="c7"
+                htmlFor="terms"
               >
                 <p>
                   Terms and conditions
                 </p>
-              </div>
+              </label>
             </div>
             <div
               className="c3"
             >
               <input
+                className="c4"
                 id="newsletter"
                 name="Newsletter"
                 onChange={[Function]}
@@ -20412,24 +20360,26 @@ Array [
                 value=""
               />
               <label
+                className="c5 c6"
                 htmlFor="newsletter"
-                id="newsletter"
               />
-              <div
-                className="content"
+              <label
+                className="c7"
+                htmlFor="newsletter"
               >
                 <p>
                   Newsletter sign up
                 </p>
-              </div>
-              <span
-                className="optional"
+              </label>
+              <label
+                className="c8"
+                htmlFor="newsletter"
               >
                 *optional
-              </span>
+              </label>
             </div>
             <div
-              className="c4"
+              className="c9"
               height="basic"
             >
               <button
@@ -20480,7 +20430,7 @@ Array [
 
 exports[`Storyshots Form with validation 1`] = `
 Array [
-  .c4 .component-child {
+  .c9 .component-child {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20500,12 +20450,12 @@ Array [
   line-height: 1em;
 }
 
-.c4 button:disabled,
-.c4 button:disabled .component-child {
+.c9 button:disabled,
+.c9 button:disabled .component-child {
   cursor: not-allowed !important;
 }
 
-.c4 button {
+.c9 button {
   padding: 0;
   border-radius: 4px;
   display: block;
@@ -20514,7 +20464,7 @@ Array [
   cursor: pointer;
 }
 
-.c4 a {
+.c9 a {
   font-family: system-ui;
   border-radius: 4px;
   display: inline-block;
@@ -20523,16 +20473,16 @@ Array [
   text-decoration: none;
 }
 
-.c4 a:focus:active,
-.c4 button:focus:active {
+.c9 a:focus:active,
+.c9 button:focus:active {
   outline: 0;
 }
 
-.c4 .component-child {
+.c9 .component-child {
   height: 40px;
 }
 
-.c4 .primary {
+.c9 .primary {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -20543,30 +20493,30 @@ Array [
   border: 0;
 }
 
-.c4 .primary i {
+.c9 .primary i {
   font-size: 1.5em;
 }
 
-.c4 .primary:hover {
+.c9 .primary:hover {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #00BFAC;
   box-shadow: 0 4px 8px 0 rgba(0,160,144,0.4);
 }
 
-.c4 .primary:active {
+.c9 .primary:active {
   -webkit-transition: box-shadow 0.2s ease,background-color 0.2s ease;
   transition: box-shadow 0.2s ease,background-color 0.2s ease;
   background-color: #28dbc9;
   box-shadow: 0 2px 4px 0 rgba(0,160,144,0.2);
 }
 
-.c4 .primary:disabled {
+.c9 .primary:disabled {
   background-color: #E0E0E0;
   box-shadow: none;
 }
 
-.c4 .secondary {
+.c9 .secondary {
   -webkit-transition: color 0.2s ease,background-color 0.2s ease;
   transition: color 0.2s ease,background-color 0.2s ease;
   width: 230px;
@@ -20577,25 +20527,25 @@ Array [
   color: #353F41;
 }
 
-.c4 .secondary i {
+.c9 .secondary i {
   font-size: 1.4em;
 }
 
-.c4 .secondary:hover {
+.c9 .secondary:hover {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c4 .secondary:active {
+.c9 .secondary:active {
   -webkit-transition: color 0.2s ease,border-color 0.2s ease;
   transition: color 0.2s ease,border-color 0.2s ease;
   color: #03D4BF;
   border-color: #03D4BF;
 }
 
-.c4 .secondary:disabled {
+.c9 .secondary:disabled {
   border-color: #BFBFBF;
   color: #BFBFBF;
   box-shadow: none;
@@ -20864,7 +20814,7 @@ Array [
   align-items: center;
 }
 
-.c3 label {
+.c6 {
   padding: 0;
   font-size: 24px;
   font-weight: normal;
@@ -20878,21 +20828,21 @@ Array [
   cursor: pointer;
 }
 
-.c3 input[type="checkbox"] {
+.c4 {
   display: none;
 }
 
-.c3 input[type="checkbox"] + label:after {
+.c4 + .c5:after {
   font-family: "vivy-icons";
   content: "\\e80f";
 }
 
-.c3 input[type="checkbox"]:checked + label:after {
+.c4:checked + .c5:after {
   font-family: "vivy-icons";
   content: "\\e810";
 }
 
-.c3 .content {
+.c7 {
   font-size: 16px;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
@@ -20901,7 +20851,7 @@ Array [
   letter-spacing: normal;
 }
 
-.c3 .optional {
+.c8 {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.29;
@@ -20909,22 +20859,9 @@ Array [
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  color: #7b7b7b;
   padding-left: 3px;
   padding-bottom: 14px;
-}
-
-.c3 .error-feedback {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.29;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  color: #E63644;
-  padding-left: 3px;
-  padding-bottom: 14px;
+  color: #7B7B7B;
 }
 
 .c0 {
@@ -22081,6 +22018,7 @@ Array [
               className="c3"
             >
               <input
+                className="c4"
                 id="terms"
                 name="Terms and Conditions"
                 onChange={[Function]}
@@ -22088,21 +22026,23 @@ Array [
                 value=""
               />
               <label
+                className="c5 c6"
                 htmlFor="terms"
-                id="terms"
               />
-              <div
-                className="content"
+              <label
+                className="c7"
+                htmlFor="terms"
               >
                 <p>
                   Terms and conditions
                 </p>
-              </div>
+              </label>
             </div>
             <div
               className="c3"
             >
               <input
+                className="c4"
                 id="newsletter"
                 name="Newsletter"
                 onChange={[Function]}
@@ -22110,24 +22050,26 @@ Array [
                 value=""
               />
               <label
+                className="c5 c6"
                 htmlFor="newsletter"
-                id="newsletter"
               />
-              <div
-                className="content"
+              <label
+                className="c7"
+                htmlFor="newsletter"
               >
                 <p>
                   Newsletter sign up
                 </p>
-              </div>
-              <span
-                className="optional"
+              </label>
+              <label
+                className="c8"
+                htmlFor="newsletter"
               >
                 *optional
-              </span>
+              </label>
             </div>
             <div
-              className="c4"
+              className="c9"
               height="basic"
             >
               <button
