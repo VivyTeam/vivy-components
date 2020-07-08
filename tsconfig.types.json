@@ -6,9 +6,9 @@
     "skipLibCheck": true,
     "preserveConstEnums": true,
     "outDir": "dist",
-    "rootDir": "./src",
+    "rootDir": ".",
     "resolveJsonModule": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "public/**/*.json"],
   "exclude": ["node_modules"]
 }
