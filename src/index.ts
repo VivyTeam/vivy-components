@@ -15,7 +15,7 @@ export { default as Textarea } from "./Textarea";
 export { default as Input } from "./Input";
 export { default as InputMasked } from "./InputMasked";
 export { default as InputPassword } from "./InputPassword";
-export { default as Checkbox } from "./Checkbox";
+export { Checkbox } from "./Checkbox";
 export { default as Form } from "./Forms";
 export { default as FormItem } from "./Forms/FormItem";
 export { default as Modal } from "./Modal";
