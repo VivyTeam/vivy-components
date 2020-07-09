@@ -12,7 +12,7 @@ export const CheckBoxWrapper = styled.div`
 
 export const CheckMark = styled.label`
   padding: 0;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: normal;
   line-height: 1.38;
   letter-spacing: normal;
@@ -34,13 +34,13 @@ export const CheckBoxInput = styled.input.attrs({ type: "checkbox" })`
 `;
 
 export const Label = styled.label`
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.38;
   letter-spacing: normal;
 `;
 
 export const MetaLabel = styled.label`
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: normal;
   line-height: 1.29;
   letter-spacing: normal;

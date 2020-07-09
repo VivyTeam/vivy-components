@@ -12545,7 +12545,7 @@ Array [
 
 .c3 {
   padding: 0;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: normal;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
@@ -12572,7 +12572,7 @@ Array [
 }
 
 .c4 {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
@@ -12652,7 +12652,7 @@ Array [
 
 .c3 {
   padding: 0;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: normal;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
@@ -12679,7 +12679,7 @@ Array [
 }
 
 .c4 {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
@@ -12688,7 +12688,7 @@ Array [
 }
 
 .c5 {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: normal;
   line-height: 1.29;
   -webkit-letter-spacing: normal;
@@ -17604,7 +17604,7 @@ Array [
 
 .c6 {
   padding: 0;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: normal;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
@@ -17631,7 +17631,7 @@ Array [
 }
 
 .c7 {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
@@ -17640,7 +17640,7 @@ Array [
 }
 
 .c8 {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: normal;
   line-height: 1.29;
   -webkit-letter-spacing: normal;
@@ -19210,7 +19210,7 @@ Array [
 
 .c6 {
   padding: 0;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: normal;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
@@ -19237,7 +19237,7 @@ Array [
 }
 
 .c7 {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
@@ -19246,7 +19246,7 @@ Array [
 }
 
 .c8 {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: normal;
   line-height: 1.29;
   -webkit-letter-spacing: normal;
@@ -20816,7 +20816,7 @@ Array [
 
 .c6 {
   padding: 0;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: normal;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
@@ -20843,7 +20843,7 @@ Array [
 }
 
 .c7 {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.38;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
@@ -20852,7 +20852,7 @@ Array [
 }
 
 .c8 {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: normal;
   line-height: 1.29;
   -webkit-letter-spacing: normal;
