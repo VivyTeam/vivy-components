@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Colors from "../Colors";
+
 import { ICON_MAPPING } from "../Icon";
 
 const checkboxEmpty = ICON_MAPPING["icon-checkbox-empty"];
