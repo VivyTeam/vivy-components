@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Colors from "../Colors";
-import mapping from "../../public/fonts/vivy-icons/iconMapping.json";
 
 const checkboxEmpty = ICON_MAPPING["icon-checkbox-empty"];
 const checkboxFilled = ICON_MAPPING["icon-checkbox-filled"];
