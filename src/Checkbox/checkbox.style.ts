@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { Colors } from "..";
+import Colors from "../Colors";
 import mapping from "../../public/fonts/vivy-icons/iconMapping.json";
 
-const checkboxEmpty = mapping["icon-checkbox-empty"];
-const checkboxFilled = mapping["icon-checkbox-filled"];
+const checkboxEmpty = ICON_MAPPING["icon-checkbox-empty"];
+const checkboxFilled = ICON_MAPPING["icon-checkbox-filled"];
 
 export const CheckBoxWrapper = styled.div`
   display: flex;
