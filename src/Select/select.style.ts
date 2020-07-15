@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ReactSelect from "react-select";
-import { Colors } from "../index";
+import Colors from "../Colors";
 
 const OverrideSelectStyles = styled(ReactSelect)`
   .react-select__indicators {
@@ -8,9 +8,8 @@ const OverrideSelectStyles = styled(ReactSelect)`
   }
 
   .react-select__value-container {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 0;
-    padding-top: 0px;
   }
 
   .react-select__value-container,
@@ -27,25 +26,25 @@ const StyledSelect = styled(OverrideSelectStyles)`
   .react-select-container,
   .react-select__control,
   .react-select__indicators {
-    height: 32px;
-    min-height: 32px;
+    height: 3.2rem;
+    min-height: 3.2rem;
   }
 
   .react-select__value-container {
-    margin-top: 2px;
+    margin-top: 0.2rem;
   }
 
   .react-select__input {
-    padding-bottom: 2px;
+    padding-bottom: 0.2px;
   }
 
   .react-select__indicators > div,
   .react-select__single-value > div {
-    margin-top: 1px;
+    margin-top: 0.1rem;
   }
 
   .react-select__indicators > div {
-    padding: 4px;
+    padding: 0.4rem;
   }
 
   .react-select__control {
