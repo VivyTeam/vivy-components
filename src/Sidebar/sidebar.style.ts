@@ -44,6 +44,11 @@ export const LinkStyles = styled.div<{ active: boolean }>`
     `}
 `;
 
+export const VivyLink = styled.div`
+  cursor: pointer;
+  height: 100%;
+`;
+
 export const ActiveIndicator = styled.div<{ active: boolean }>`
   width: 6px;
   margin-right: -6px;
