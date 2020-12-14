@@ -58,7 +58,7 @@
     "@storybook/storybook-deployer": "^2.8.6",
     "@storybook/theming": "^5.3.19",
     "@types/styled-components": "^5.1.0",
-    "@types/react-select": "^3.0.13",
+    "@types/react-select": "^3.0.28",
     "@vivy/eslint-config": "1.0.3",
     "babel-loader": "8.1.0",
     "babel-plugin-require-context-hook": "1.0.0",
