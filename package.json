@@ -30,7 +30,7 @@
     "async-validator": "^3.3.0",
     "body-scroll-lock": "^3.0.3",
     "copy-to-clipboard": "^3.3.1",
-    "i18next": "^17.0.16",
+    "i18next": "^20.2.2",
     "i18next-browser-languagedetector": "^3.0.3",
     "prop-types": "^15.7.2",
     "puppeteer": "^4.0.1",
