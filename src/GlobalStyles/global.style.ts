@@ -8,6 +8,7 @@ import Colors from "../Colors";
 export const ShadowStylesGlobal = css`
   font-size: 1.6rem;
   color: ${Colors.textPrimary};
+  box-sizing: border-box;
 `;
 
 const GlobalStyles = createGlobalStyle`
