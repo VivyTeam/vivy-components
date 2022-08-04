@@ -39,7 +39,7 @@ const ButtonStyles = styled.div<{ height: ButtonHeights }>`
 
   button {
     padding: 0;
-    border-radius: 4px;
+    border-radius: 24px;
     display: block;
     text-decoration: none;
     cursor: pointer;
